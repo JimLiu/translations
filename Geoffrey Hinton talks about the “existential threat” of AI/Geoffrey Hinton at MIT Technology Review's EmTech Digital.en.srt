@@ -32,7 +32,7 @@ us virtually.
 
 9
 00:00:36,920 --> 00:00:42,680
-Jeffrey Hinton is a professor emeritus at University of Toronto and until this week an engineering
+Geoffrey Hinton is a professor emeritus at University of Toronto and until this week an engineering
 
 10
 00:00:42,680 --> 00:00:43,680
@@ -44,7 +44,7 @@ But on Monday he announced that after 10 years he will be stepping down.
 
 12
 00:00:48,960 --> 00:00:52,280
-Jeffrey is one of the most important figures in modern AI.
+Geoffrey is one of the most important figures in modern AI.
 
 13
 00:00:52,280 --> 00:00:56,120
@@ -72,7 +72,7 @@ on which pretty much all of deep learning rests today.
 
 19
 00:01:08,120 --> 00:01:11,680
-In 2018, Jeffrey received the Turing Award,
+In 2018, Geoffrey received the Turing Award,
 
 20
 00:01:11,680 --> 00:01:14,240
@@ -96,7 +96,7 @@ it into machines will take us.
 
 25
 00:01:25,240 --> 00:01:28,240
-Jeffrey, welcome to EmTech.
+Geoffrey, welcome to EmTech.
 
 26
 00:01:28,240 --> 00:01:29,160
@@ -2893,4 +2893,3 @@ Thank you, Geoffrey. Thank you so much for joining us.
 724
 00:39:12,080 --> 00:39:22,080
 [BLANK_AUDIO]
-

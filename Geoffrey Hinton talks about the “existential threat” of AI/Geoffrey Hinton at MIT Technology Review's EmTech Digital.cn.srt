@@ -40,8 +40,8 @@ us virtually.
 
 9
 00:00:36,920 --> 00:00:42,680
-Jeffrey Hinton 是多伦多大学名誉教授，
-Jeffrey Hinton is a professor emeritus at University of Toronto and until this week an engineering
+Geoffrey Hinton 是多伦多大学名誉教授，
+Geoffrey Hinton is a professor emeritus at University of Toronto and until this week an engineering
 
 10
 00:00:42,680 --> 00:00:43,680
@@ -55,8 +55,8 @@ But on Monday he announced that after 10 years he will be stepping down.
 
 12
 00:00:48,960 --> 00:00:52,280
-Jeffrey是现代AI领域中最重要的人物之一。
-Jeffrey is one of the most important figures in modern AI.
+Geoffrey是现代AI领域中最重要的人物之一。
+Geoffrey is one of the most important figures in modern AI.
 
 13
 00:00:52,280 --> 00:00:56,120
@@ -90,8 +90,8 @@ on which pretty much all of deep learning rests today.
 
 19
 00:01:08,120 --> 00:01:11,680
-2018年，Jeffrey获得了图灵奖，
-In 2018, Jeffrey received the Turing Award,
+2018年，Geoffrey获得了图灵奖，
+In 2018, Geoffrey received the Turing Award,
 
 20
 00:01:11,680 --> 00:01:14,240
@@ -120,8 +120,8 @@ it into machines will take us.
 
 25
 00:01:25,240 --> 00:01:28,240
-Jeffrey, 欢迎来到EmTech。
-Jeffrey, welcome to EmTech.
+Geoffrey, 欢迎来到EmTech。
+Geoffrey, welcome to EmTech.
 
 26
 00:01:28,240 --> 00:01:29,160
