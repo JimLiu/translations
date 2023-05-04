@@ -1,0 +1,3619 @@
+1
+00:00:00,000 --> 00:00:10,000
+[音乐]
+[Music]
+
+2
+00:00:10,000 --> 00:00:13,000
+大家好，欢迎回来，我们吃了个美好的午餐。
+Hi everyone, welcome back, we had a good lunch.
+
+3
+00:00:13,000 --> 00:00:18,000
+我是Woldakas Hevin，麻省理工技术评论的AI高级编辑,
+My name is Woldakas Hevin, senior editor for AI at MIT Technology Review,
+
+4
+00:00:18,000 --> 00:00:23,000
+我认为我们都同意，毫无疑问，生成式AI是当下的热门话题。
+and I think we'd all agree there's no denying that generative AI is the thing at the moment.
+
+5
+00:00:23,000 --> 00:00:27,000
+但是创新永不停歇，在这一章中，我们将着眼于前沿研究，
+But innovation does not stand still, and in this chapter we're going to take a look at cutting-edge research
+
+6
+00:00:27,000 --> 00:00:30,680
+这些研究已经在推动进步，探问未来会有什么。
+research that is already pushing ahead and asking what's next.
+
+7
+00:00:30,680 --> 00:00:35,280
+首先，我想介绍一个即将通过虚拟形式加入我们的特别嘉宾。
+But starting us off, I'd like to introduce a very special speaker who will be joining
+
+8
+00:00:35,280 --> 00:00:36,920
+Jeffrey Hinton 是多伦多大学名誉教授，直到本周还担任谷歌工程研究员。
+us virtually.
+
+9
+00:00:36,920 --> 00:00:42,680
+但是在周一，他宣布将在10年后卸任。
+Jeffrey Hinton is a professor emeritus at University of Toronto and until this week an engineering
+
+10
+00:00:42,680 --> 00:00:43,680
+Jeffrey是现代AI领域中最重要的人物之一。
+fellow at Google.
+
+11
+00:00:43,680 --> 00:00:48,960
+他是深度学习的先驱，开发了一些最基本的技术，
+But on Monday he announced that after 10 years he will be stepping down.
+
+12
+00:00:48,960 --> 00:00:52,280
+这些技术构成了今天我们所熟知的AI技术，
+Jeffrey is one of the most important figures in modern AI.
+
+13
+00:00:52,280 --> 00:00:56,120
+例如反向传播，
+He's a pioneer of deep learning, developing some of the most fundamental techniques that
+
+14
+00:00:56,120 --> 00:00:58,440
+使机器具有学习能力的算法。
+that underpin AI as we know it today,
+
+15
+00:00:58,440 --> 00:00:59,840
+这项技术，正是如今所有深度学习都基于其之上的基础。
+such as back propagation,
+
+16
+00:00:59,840 --> 00:01:02,320
+2018年，Jeffrey获得了图灵奖，
+the algorithm that allows machines to learn.
+
+17
+00:01:02,320 --> 00:01:05,160
+这个奖项往往被称为计算机科学的诺贝尔奖，
+This technique, it's the foundation
+
+18
+00:01:05,160 --> 00:01:08,120
+undefined
+on which pretty much all of deep learning rests today.
+
+19
+00:01:08,120 --> 00:01:11,680
+undefined
+In 2018, Jeffrey received the Turing Award,
+
+20
+00:01:11,680 --> 00:01:14,240
+undefined
+which is often called the Nobel of Computer Science,
+
+21
+00:01:14,240 --> 00:01:16,880
+与Jan LeCun和Yoshia Benjiro一起。
+alongside Jan LeCun and Yoshia Benjiro.
+
+22
+00:01:16,880 --> 00:01:21,160
+他今天和我们在一起，谈论智能。
+He's here with us today to talk about intelligence.
+
+23
+00:01:21,160 --> 00:01:23,120
+智能的含义以及尝试将其构建到
+What it means and where attempts to build
+
+24
+00:01:23,120 --> 00:01:25,240
+我们将去的机器中。
+it into machines will take us.
+
+25
+00:01:25,240 --> 00:01:28,240
+Jeffrey, 欢迎来到EmTech。
+Jeffrey, welcome to EmTech.
+
+26
+00:01:28,240 --> 00:01:29,160
+谢谢。
+Thank you.
+
+27
+00:01:29,160 --> 00:01:30,160
+你这周过得怎么样？
+How's your week going?
+
+28
+00:01:30,160 --> 00:01:32,240
+我想这几天很忙吧。
+Busy few days, I imagine.
+
+29
+00:01:32,240 --> 00:01:33,960
+嗯，过去的十分钟非常糟糕，
+Well, the last 10 minutes was horrible,
+
+30
+00:01:33,960 --> 00:01:36,480
+因为我的电脑崩溃了，我不得不找另一台电脑
+because my computer crashed, and I had to find another computer
+
+31
+00:01:36,480 --> 00:01:38,400
+并连接上。
+and connected up.
+
+32
+00:01:38,400 --> 00:01:39,600
+我们很高兴你回来了。
+And we're glad you're back.
+
+33
+00:01:39,600 --> 00:01:40,840
+那是我们不应该与观众分享的技术细节。
+That's the kind of technical detail
+
+34
+00:01:40,840 --> 00:01:43,120
+好的，没问题。
+we're not supposed to share with the audience.
+
+35
+00:01:43,120 --> 00:01:44,120
+很高兴你在这里。
+Right, OK.
+
+36
+00:01:44,120 --> 00:01:45,240
+非常高兴你能和我们在一起。
+It's great you're here.
+
+37
+00:01:45,240 --> 00:01:47,120
+现在，我的意思是，这已经成为新闻了
+Very happy that you could join us.
+
+38
+00:01:47,120 --> 00:01:49,520
+你这周从谷歌辞职了。
+Now, I mean, it's been the news everywhere
+
+39
+00:01:49,520 --> 00:01:52,520
+你能先告诉我们你为什么做出那个决定吗？
+that you stepped down from Google this week.
+
+40
+00:01:52,520 --> 00:01:55,720
+undefined
+Could you start by telling us why you made that decision?
+
+41
+00:01:55,720 --> 00:01:58,320
+嗯，原因有很多。
+Well, there were a number of reasons.
+
+42
+00:01:58,320 --> 00:02:00,840
+这样的决定总是有很多原因。
+This is always a bunch of reasons for a decision like that.
+
+43
+00:02:00,840 --> 00:02:03,200
+一个原因是我已经75岁了，
+One was that I'm 75,
+
+44
+00:02:03,200 --> 00:02:06,520
+我的技术工作能力也不如以前。
+and I'm not as good at doing technical work, say, used to be.
+
+45
+00:02:06,520 --> 00:02:09,480
+我的记忆力也没有那么好，
+My memory's not as good,
+
+46
+00:02:09,480 --> 00:02:11,600
+在编程时，我容易忘记去做某些事情。
+and when I program, I forget to do things.
+
+47
+00:02:11,600 --> 00:02:12,880
+所以是时候退休了。
+So it was time to retire.
+
+48
+00:02:12,880 --> 00:02:17,440
+另一个原因是，最近，
+A second was, very recently,
+
+49
+00:02:17,440 --> 00:02:19,800
+我对大脑与我们正在研发的数字智能之间的关系
+I've changed my mind a lot about the relationship
+
+50
+00:02:19,800 --> 00:02:23,320
+改变了看法。
+between the brain and the kind of digital intelligence
+
+51
+00:02:23,320 --> 00:02:24,120
+我过去认为我们开发的计算机模型
+we're developing.
+
+52
+00:02:24,120 --> 00:02:29,440
+不如大脑那么优秀。
+So I used to think that the computer models
+
+53
+00:02:29,440 --> 00:02:32,160
+目标是看看能否通过了解需要做什么
+that we were developing weren't as good as the brain.
+
+54
+00:02:32,160 --> 00:02:34,520
+来改进计算机模型，
+And the aim was to see if you could understand
+
+55
+00:02:34,520 --> 00:02:36,200
+以了解大脑更多信息。
+more about the brain by seeing what it takes
+
+56
+00:02:36,200 --> 00:02:37,720
+在过去的几个月里，我完全改变了看法，
+to improve the computer models.
+
+57
+00:02:37,720 --> 00:02:42,560
+我认为计算机模型可能在工作方式上，
+Over the last few months, I've changed my mind completely
+
+58
+00:02:42,560 --> 00:02:45,560
+与大脑有很大的不同。
+and I think probably the computer models are working
+
+59
+00:02:45,560 --> 00:02:47,360
+它们使用的是反向传播
+in a rather different way from the brain.
+
+60
+00:02:47,360 --> 00:02:49,000
+undefined
+They're using back propagation
+
+61
+00:02:49,000 --> 00:02:51,440
+而我认为大脑可能不是这样的。
+And I think the brain is probably not.
+
+62
+00:02:51,440 --> 00:02:53,320
+有几件事使我得出了这个结论，
+And a couple of things have led me to that conclusion,
+
+63
+00:02:53,320 --> 00:02:56,680
+但是GPT-4之类的东西的表现如何呢？
+but what is the performance of things like GPT-4?
+
+64
+00:02:56,680 --> 00:02:59,840
+- 那么，我想继续讨论一下GPT-4的性能，
+- So let's, I wanna get onto the performance of GPT-4
+
+65
+00:02:59,840 --> 00:03:02,320
+但在此之前，让我们先了解一下您所提出的论点。
+very much in a minute, but let's, you know,
+
+66
+00:03:02,320 --> 00:03:05,800
+告诉我们一些关于反向传播的知识。
+go back so that we all understand the argument you're making.
+
+67
+00:03:05,800 --> 00:03:09,480
+这是您在20世纪80年代与几位同事共同开发的一种算法。
+And tell us a little bit about what back propagation is.
+
+68
+00:03:09,480 --> 00:03:11,520
+- 许多不同的团队都发现了反向传播。
+And this is an algorithm that you developed
+
+69
+00:03:11,520 --> 00:03:13,880
+我们所做的特别之处在于使用它并证明它可以开发出良好的内部表达。
+with a couple of colleagues back in the 1980s.
+
+70
+00:03:13,880 --> 00:03:18,480
+有趣的是，我们通过实现一个微型语言模型来实现这一点。
+- Many different groups discover back propagation.
+
+71
+00:03:18,480 --> 00:03:26,480
+它的嵌入向量只有六个组件。
+The special thing we did was used it and showed that it could develop good internal representations.
+
+72
+00:03:26,480 --> 00:03:34,480
+训练集是112个案例。
+And curiously, we did that by implementing a tiny language model.
+
+73
+00:03:34,480 --> 00:03:39,480
+但它是一个语言模型。
+It had embedding vectors that were only six components.
+
+74
+00:03:39,480 --> 00:03:43,480
+它试图预测一串符号中的下一个词。
+On the training set was 112 cases.
+
+75
+00:03:43,480 --> 00:03:45,200
+大约十年后，Yoshua Benjue
+But it was a language model.
+
+76
+00:03:45,200 --> 00:03:50,320
+基本上采用了相同的网络。
+It was trying to predict the next term in a string of symbols.
+
+77
+00:03:50,320 --> 00:03:53,920
+然后在自然语言上进行了实验。
+And about 10 years later, Yoshua Benjue
+
+78
+00:03:53,920 --> 00:03:55,680
+你证明了它确实适用于自然语言，
+took basically the same net.
+
+79
+00:03:55,680 --> 00:03:56,840
+undefined
+Then used on natural language.
+
+80
+00:03:56,840 --> 00:03:58,880
+undefined
+You showed it actually worked for natural language,
+
+81
+00:03:58,880 --> 00:04:02,000
+如果你把它做得更大。
+if you made it much bigger.
+
+82
+00:04:02,000 --> 00:04:05,800
+但是反向传播的工作方式，
+But the way back propagation works,
+
+83
+00:04:05,800 --> 00:04:09,400
+我可以给您一个粗略的解释。
+I can give you a rough explanation from it of it.
+
+84
+00:04:09,400 --> 00:04:12,560
+懂这个原理的人可以坐回来
+People who know how it works can sort of sit back
+
+85
+00:04:12,560 --> 00:04:15,920
+对我讲述的方式感到沾沾自喜并笑话。
+and feel smug and laugh at the way I'm presenting it.
+
+86
+00:04:15,920 --> 00:04:18,320
+好吧，因为我有点担心这个。
+Okay, because I'm a bit worried about that.
+
+87
+00:04:18,320 --> 00:04:20,400
+（大笑）
+(laughs)
+
+88
+00:04:20,400 --> 00:04:24,680
+所以想象一下，你想在图像中检测鸟类。
+So imagine you wanted to detect birds and images.
+
+89
+00:04:24,680 --> 00:04:28,800
+因此,一个图像，假设它是100像素
+So an image, let's suppose it was a 100 pixel
+
+90
+00:04:28,800 --> 00:04:30,480
+乘以100像素的图像。
+by 100 pixel image.
+
+91
+00:04:30,480 --> 00:04:32,160
+这是10,000像素。
+That's 10,000 pixels.
+
+92
+00:04:32,160 --> 00:04:34,760
+每个像素有三个通道，即RGB。
+An each pixel is three channels RGB.
+
+93
+00:04:34,760 --> 00:04:37,640
+那就是30,000个数字。
+So that's 30,000 numbers.
+
+94
+00:04:37,640 --> 00:04:39,920
+每个通道中每个像素的强度，
+The intensity in each channel in each pixel,
+
+95
+00:04:39,920 --> 00:04:41,800
+代表图像。
+the represents the image.
+
+96
+00:04:41,800 --> 00:04:44,120
+计算机视觉问题的思考方式是，
+And the way to think of the computer vision problem is,
+
+97
+00:04:44,120 --> 00:04:46,320
+如何将那30,000个数字
+how do I turn those 30,000 numbers
+
+98
+00:04:46,320 --> 00:04:49,520
+转化为关于是否是鸟的决策？
+into a decision about whether it's a bird or not?
+
+99
+00:04:49,520 --> 00:04:51,200
+很长时间以来，人们一直在尝试这样做，
+And people tried for a long time to do that,
+
+100
+00:04:51,200 --> 00:04:53,400
+而且他们的效果并不好。
+and they weren't very good at it.
+
+101
+00:04:53,400 --> 00:04:56,320
+但这里有一个关于如何实现的建议。
+But here's the suggestion for how you might do it.
+
+102
+00:04:56,320 --> 00:04:59,280
+你可能有一层特征检测器
+You might have a layer of feature detectors
+
+103
+00:04:59,280 --> 00:05:01,880
+能检测图像中非常简单的特征，
+that detects very simple features and images,
+
+104
+00:05:01,880 --> 00:05:03,520
+比如边缘。
+like for example, edges.
+
+105
+00:05:03,520 --> 00:05:07,920
+因此，特征检测器可能对像素列有很大的正权重，
+So a feature detector might have big positive weights
+
+106
+00:05:07,920 --> 00:05:10,280
+然后对相邻的像素列有很大的负权重，
+to a column of pixels.
+
+107
+00:05:10,280 --> 00:05:12,440
+对于大细胞的相邻列。
+and then big negative weights to the neighboring column
+
+108
+00:05:12,440 --> 00:05:14,120
+所以如果两排都很亮，它就不会打开。
+of big cells.
+
+109
+00:05:14,120 --> 00:05:16,920
+如果两排都很暗，它就不会关闭。
+So if both columns are bright, it won't turn on.
+
+110
+00:05:16,920 --> 00:05:19,000
+但是，如果一边的列很亮，
+And if both columns are dim, it won't turn off.
+
+111
+00:05:19,000 --> 00:05:21,360
+另一边的列很暗，
+But if the column on one side is bright,
+
+112
+00:05:21,360 --> 00:05:23,440
+它就会非常兴奋。
+and the column on the other side is dim,
+
+113
+00:05:23,440 --> 00:05:24,960
+这就是一个边缘检测器。
+it'll get very excited.
+
+114
+00:05:24,960 --> 00:05:26,960
+所以我刚告诉你如何手动连接一个边缘检测器
+And that's an edge detector.
+
+115
+00:05:26,960 --> 00:05:30,000
+通过一个列有很大的正权重，
+So I just told you how to wire up an edge detector by hand
+
+116
+00:05:30,000 --> 00:05:31,680
+紧挨着它有一个有很大负权重的列。
+by having one column of big positive weights
+
+117
+00:05:31,680 --> 00:05:34,000
+我们可以想象有一层很多这样的检测器，
+and next to it one column of big negative weights.
+
+118
+00:05:34,000 --> 00:05:35,840
+在图像中不同方向和不同尺度上检测边缘。
+And we can imagine a big layer of those,
+
+119
+00:05:35,840 --> 00:05:37,600
+undefined
+detecting edges in different orientations
+
+120
+00:05:37,600 --> 00:05:39,880
+undefined
+and different scales all over the image.
+
+121
+00:05:39,880 --> 00:05:41,960
+我们需要相当多的这种东西。
+We'd need a rather large number of them.
+
+122
+00:05:41,960 --> 00:05:43,000
+- 在图像中的边缘，
+- And edges in an image,
+
+123
+00:05:43,000 --> 00:05:45,720
+我们指的是线条，一种图形的边缘。
+we mean just lines, sort of edges of a shape.
+
+124
+00:05:45,720 --> 00:05:49,000
+- 从亮到暗，强度变化的地方。
+- A place where the intensity changes from right to dark.
+
+125
+00:05:49,000 --> 00:05:52,320
+对，就是这样。
+Yeah, just that.
+
+126
+00:05:52,320 --> 00:05:55,160
+然后我们可能在其上有一层未来的纹理层，
+Then we might have a layer of future textures above that,
+
+127
+00:05:55,160 --> 00:05:57,320
+可检测边缘的组合。
+the detect combinations of edges.
+
+128
+00:05:57,320 --> 00:06:02,200
+例如，我们可能有一种检测器，它可以检测到两个连接在一起的边缘，
+So for example, we might have something that detects two edges,
+
+129
+00:06:02,200 --> 00:06:05,360
+它们以这样一个细角度连接。
+the join at a fine angle like this.
+
+130
+00:06:07,320 --> 00:06:10,960
+所以它对两个边缘都有很大的正权重。
+So they'll have a big positive weight to each of those two edges.
+
+131
+00:06:10,960 --> 00:06:13,360
+如果这两个边缘同时出现，
+And if both of those edges are at the same time,
+
+132
+00:06:13,360 --> 00:06:15,160
+它就会激动。
+it'll get excited.
+
+133
+00:06:15,160 --> 00:06:18,640
+这将检测到可能是鸟嘴的东西。
+And that would detect something that might be a bird's beak.
+
+134
+00:06:18,640 --> 00:06:20,680
+可能不是，但可能是鸟嘴。
+It might not, but it might be a bird's beak.
+
+135
+00:06:20,680 --> 00:06:23,920
+在那一层中，您还可能有一个特征检测器
+You might also in that layer have a feature detector
+
+136
+00:06:23,920 --> 00:06:26,240
+可以检测到一堆边缘，
+that would detect a whole bunch of edges,
+
+137
+00:06:26,240 --> 00:06:27,240
+它们呈圆圈排列。
+arrange in a circle.
+
+138
+00:06:27,240 --> 00:06:30,560
+那可能是鸟的眼睛。
+And that might be a bird's eye.
+
+139
+00:06:30,560 --> 00:06:31,920
+它也可能是其他一些东西。
+It might be also some other things.
+
+140
+00:06:31,920 --> 00:06:34,080
+可能是冰箱上的旋钮或其他什么东西。
+It might be a knob on a fridge or something.
+
+141
+00:06:36,760 --> 00:06:39,800
+然后在第三层，您可能拥有一个特征探测器
+Then in a third layer, you might have a feature detector
+
+142
+00:06:39,800 --> 00:06:44,320
+可以检测到这个可能的喙和潜在的眼睛
+that detects this potential beak and detects the potential eye
+
+143
+00:06:44,320 --> 00:06:47,280
+并连接起来，以便它会喜欢喙和眼睛
+and is wired up so it'll like a beak and an eye
+
+144
+00:06:47,280 --> 00:06:49,640
+彼此之间的正确空间关系。
+in the right spatial relation to one another.
+
+145
+00:06:49,640 --> 00:06:53,400
+如果它看到了这个，它就会说，啊，这可能是鸟的头。
+And if it sees that, it says, ah, this might be the head of a bird.
+
+146
+00:06:53,400 --> 00:06:56,040
+你可以想象如果你继续这样连接，
+And you can imagine if you keep wiring like that,
+
+147
+00:06:56,040 --> 00:06:59,760
+最终可以检测到一只鸟。
+you could eventually have something that detects a bird.
+
+148
+00:06:59,760 --> 00:07:03,680
+但是手动建立所有连接将非常非常困难。
+But wiring all up by hand would be very, very difficult.
+
+149
+00:07:03,680 --> 00:07:05,640
+决定什么应该连接到水
+Decide on what should be connected to water
+
+150
+00:07:05,640 --> 00:07:07,220
+权重应该是什么。
+what the weights should be.
+
+151
+00:07:07,220 --> 00:07:08,560
+这将特别困难，
+And it would be especially difficult,
+
+152
+00:07:08,560 --> 00:07:10,720
+因为你不仅希望这些中间层
+because you want these intermediate layers
+
+153
+00:07:10,720 --> 00:07:12,840
+在检测鸟类时表现良好，
+to be good not just for detecting birds,
+
+154
+00:07:12,840 --> 00:07:14,880
+而且在检测各种其他事物时也表现良好。
+but for detecting all sorts of other things.
+
+155
+00:07:14,880 --> 00:07:19,960
+因此，手动操作这些将几乎不可能。
+So it would be more or less impossible to worry about by hand.
+
+156
+00:07:19,960 --> 00:07:23,200
+所以反向传播的工作方式是这样的，
+So the way back propagation works is this,
+
+157
+00:07:23,200 --> 00:07:25,100
+首先从随机权重开始。
+you start with random weights.
+
+158
+00:07:25,100 --> 00:07:27,520
+因此，这些特征检测器完全是垃圾。
+So these feature detectors are just complete rubbish.
+
+159
+00:07:27,520 --> 00:07:31,080
+您放入一张鸟的照片，
+And you put in a picture of a bird,
+
+160
+00:07:31,080 --> 00:07:34,960
+在输出时，如0.5就是一只鸟。
+and at the output it says like 0.5 it's a bird.
+
+161
+00:07:34,960 --> 00:07:37,560
+假设你只有鸟或非鸟。
+Suppose you only have birds or non-birds.
+
+162
+00:07:37,560 --> 00:07:40,160
+然后你问自己以下问题：
+And then you ask yourself the following question,
+
+163
+00:07:40,160 --> 00:07:44,920
+我如何改变网络中每个权重
+how could I change each of the weights in the network
+
+164
+00:07:44,920 --> 00:07:47,240
+通过网络连接中的每个权重？
+by each of the weights on connections in the network?
+
+165
+00:07:47,240 --> 00:07:52,080
+所以不再说0.5，而是说0.501是鸟，
+So instead of saying 0.5, it says 0.501, but it's a bird,
+
+166
+00:07:52,080 --> 00:07:55,040
+然后0.499就不是鸟了。
+and 0.499 that it's not.
+
+167
+00:07:55,040 --> 00:07:57,840
+你可以改变权重的方向
+And you change the weights in the directions
+
+168
+00:07:57,840 --> 00:08:01,760
+使之更有可能说一只鸟是一只鸟,
+that will make it more likely to say that a bird is a bird,
+
+169
+00:08:01,760 --> 00:08:04,440
+除非我真的说了非鸟是鸟。
+unless I actually say that a non-bird is a bird.
+
+170
+00:08:04,440 --> 00:08:07,120
+你只需要继续这样做。
+And you just keep doing that.
+
+171
+00:08:07,120 --> 00:08:08,160
+这就是反向传播。
+And that's back propagation.
+
+172
+00:08:08,160 --> 00:08:11,600
+反向传播实际上就是如何处理这个差距
+Back propagation is actually how you take the discrepancy
+
+173
+00:08:11,600 --> 00:08:13,260
+在你想要的
+between what you want,
+
+174
+00:08:13,260 --> 00:08:15,640
+那就是鸟的概率为1，
+which is a probability of one that is a bird,
+
+175
+00:08:15,640 --> 00:08:16,600
+以及现在得到的，
+and what is got a present,
+
+176
+00:08:16,600 --> 00:08:19,080
+那就是鸟的概率为0.5，
+which is probability of 0.5 that is a bird,
+
+177
+00:08:19,080 --> 00:08:20,840
+如何解决这种差距
+how you take that discrepancy
+
+178
+00:08:20,840 --> 00:08:23,680
+并将其传回网络
+and send it backwards through the network
+
+179
+00:08:23,680 --> 00:08:26,680
+以便您可以计算网络中的每个特征，
+so that you can compute for every feature
+
+180
+00:08:26,680 --> 00:08:28,160
+undefined
+that's actually in the network,
+
+181
+00:08:28,160 --> 00:08:29,960
+无论您是否希望它更具活力一些
+whether you'd like it to be a bit more active
+
+182
+00:08:29,960 --> 00:08:33,720
+稍微不那么活跃。计算出这个之后，如果你知道你想要一个特征检测器
+a bit less active. And once you've computed that, if you know you want a feature detector
+
+183
+00:08:33,720 --> 00:08:38,560
+稍微更活跃一些，您可以增加来自低
+a bit more active, you can increase the weights coming from feature detects in the low
+
+184
+00:08:38,560 --> 00:08:44,200
+激活的特征检测器的权重，也许还可以添加一些负的权重以在
+below that are active and maybe put in some negative weights to feature detects in the
+
+185
+00:08:44,200 --> 00:08:49,520
+关闭的特征检测器的低处会产生更好的检测器。所以反向传播就是
+low below that are off and now you'll have a better detector. So back propagation is
+
+186
+00:08:49,520 --> 00:08:52,600
+在网络中向后遍历以找出特征检测器是否更想要
+just going backwards through the network to figure out a feature detector whether you
+
+187
+00:08:52,600 --> 00:08:55,760
+稍微更活跃或稍微不那么活跃一点。
+want to do a little bit more active or a little bit less active.
+
+188
+00:08:55,760 --> 00:08:58,560
+谢谢。我可以向您展示现场没有一个人在微笑，
+Thank you. I can show you that there's no one in the audience here that's smiling and
+
+189
+00:08:58,560 --> 00:09:03,280
+认为这是一个愚蠢的解释。
+thinking that was a silly explanation.
+
+190
+00:09:03,280 --> 00:09:06,280
+那么，让我们快速向前推进很多到--
+So let's fast forward quite a lot to--
+
+191
+00:09:06,280 --> 00:09:11,320
+这种技术在ImageNet上表现出色。
+that technique basically performed really well on ImageNet.
+
+192
+00:09:11,320 --> 00:09:13,760
+昨天我们请到了Meta的Joe Lpno 
+We had Joe Lpno from Meta yesterday
+
+193
+00:09:13,760 --> 00:09:17,120
+展示了图像检测有多远。
+showing how far Image Detection had come.
+
+194
+00:09:17,120 --> 00:09:20,240
+这也是支持大型语言的技术
+And it's also the technique that underpins large language
+
+195
+00:09:20,240 --> 00:09:21,400
+模型。
+models.
+
+196
+00:09:21,400 --> 00:09:27,400
+所以我现在想谈谈这种技术，你最初
+So I want to talk now about this technique, which you initially
+
+197
+00:09:27,400 --> 00:09:34,320
+认为这几乎是对生物大脑可能做的事情的一种很差的近似。
+were thinking of as almost like a poor approximation of what biological brains might do.
+
+198
+00:09:34,320 --> 00:09:41,120
+事实证明，这种技术在大型语言模型上的表现令人惊讶。
+Has turned out to do things which I think have stunned you, particularly in large language
+
+199
+00:09:41,120 --> 00:09:42,120
+所以，告诉我们大型语言模型如今的惊奇之处
+models.
+
+200
+00:09:42,120 --> 00:09:48,720
+undefined
+So, talk to us about why that sort of amazement that you have with today's large language
+
+201
+00:09:48,720 --> 00:09:54,720
+模型完全改变了你对反向传播或机器
+models has completely sort of almost flipped your thinking of what backpropagation or machine
+
+202
+00:09:54,720 --> 00:10:00,880
+学习的整体思考方式。所以，如果你看大型的语言模型，它们大约有
+learning in general is. So if you look at these large language models, they have about
+
+203
+00:10:00,880 --> 00:10:08,280
+一万亿个连接，像 GPT-4 这样的东西比我们知道的要多得多。它们具有一种
+a trillion connections and things like GPT-4 know much more than we do. They have sort
+
+204
+00:10:08,280 --> 00:10:13,920
+对所有事物的常识知识。所以它们可能知道的事物比一个人多上千倍，
+of common sense knowledge about everything. And so they probably know a thousand times
+
+205
+00:10:13,920 --> 00:10:19,040
+但它们有一万亿个连接，我们有一百万亿个
+as much as a person. But they've got a trillion connections and we've got a hundred trillion
+
+206
+00:10:19,040 --> 00:10:24,320
+连接。因此，它们在将大量知识压缩到仅有的
+connections. So they're much, much better at getting a lot of knowledge into only
+
+207
+00:10:24,320 --> 00:10:29,840
+一万亿个连接方面要比我们好得多。我认为这是因为反向传播
+a trillion connections than we are. And I think it's because back propagation
+
+208
+00:10:29,840 --> 00:10:33,800
+可能是一个比我们所拥有的学习算法好得多，可否给出定义
+may be a much, much better learning algorithm than what we've got. Can you define
+
+209
+00:10:33,800 --> 00:10:37,800
+那个可怕？是的，我绝对希望建立一个关于可怕事件的模型。但你说
+that scary? Yeah, I definitely want to get onto the scary stuff. But what do you mean by
+
+210
+00:10:37,800 --> 00:10:44,760
+更好是什么意思？它可以将更多信息压缩到更少的连接中。对。我们
+better? It can pack more information into only a few connections. Right. We're
+
+211
+00:10:44,760 --> 00:10:47,480
+正在逐步将万亿定义为仅有的连接。
+which are finding a trillion as only a few.
+
+212
+00:10:47,480 --> 00:10:48,480
+- 好的。
+- Okay.
+
+213
+00:10:48,480 --> 00:10:52,820
+所以这些数字计算机在学习方面
+So these digital computers are better at learning
+
+214
+00:10:52,820 --> 00:10:57,320
+比人类更优秀，这本身就是一个巨大的观点。
+than humans, which itself is a huge claim.
+
+215
+00:10:57,320 --> 00:11:01,880
+但是，你还提出，这是我们
+But then you also argue that that's something
+
+216
+00:11:01,880 --> 00:11:03,320
+应该害怕的事物。.
+that we should be scared of.
+
+217
+00:11:03,320 --> 00:11:06,160
+那么，你能引导我们了解这一论据的阶段吗？
+So could you take us through that step of the argument?
+
+218
+00:11:06,160 --> 00:11:09,240
+- 是的，让我给你们一个这个论点的分割部分：
+- Yeah, let me give you a separate piece of the argument,
+
+219
+00:11:09,240 --> 00:11:14,240
+如果一个计算机是一台计算机，
+which is that if a computer is a computer,
+
+220
+00:11:14,240 --> 00:11:17,320
+计算机是数字化的，其涉及非常高的能量
+a computer's digital, which involves very high energy
+
+221
+00:11:17,320 --> 00:11:19,760
+成本和非常仔细的制作。
+costs and very careful fabrication.
+
+222
+00:11:19,760 --> 00:11:21,960
+您可以拥有许多相同模型的副本在不同的硬件上运行
+You can have many copies of the same model running
+
+223
+00:11:21,960 --> 00:11:25,120
+并做完全相同的事情。
+on different hardware that do exactly the same thing.
+
+224
+00:11:25,120 --> 00:11:26,720
+它们可以查看不同的数据，但模型
+They can look at different data, but the model
+
+225
+00:11:26,720 --> 00:11:28,120
+实际上是相同的。
+is actually the same.
+
+226
+00:11:28,120 --> 00:11:30,080
+尤其是
+And what that means is, especially
+
+227
+00:11:30,080 --> 00:11:33,920
+我有10,000个副本，它们可以查看10,000个不同的
+I have 10,000 copies, they can be looking at 10,000 different
+
+228
+00:11:33,920 --> 00:11:35,960
+数据子集。
+subsets of the data.
+
+229
+00:11:35,960 --> 00:11:38,600
+只要其中一个学到了任何东西，其他所有人
+And whenever one of them learns anything, all the others
+
+230
+00:11:38,600 --> 00:11:39,920
+都知道。
+know it.
+
+231
+00:11:39,920 --> 00:11:41,640
+其中一个找到了如何改变权重，
+One of them figures out how to change the weight,
+
+232
+00:11:41,640 --> 00:11:44,680
+以便处理这些数据。
+so it can deal with this data.
+
+233
+00:11:44,680 --> 00:11:46,160
+它们彼此之间进行通信
+They all communicate with each other
+
+234
+00:11:46,160 --> 00:11:47,860
+并且都同意按照所有人所期望的平均值来改变方式
+and they all agree to change the way
+
+235
+00:11:47,860 --> 00:11:49,960
+现在这10,000个事物正在相互之间进行通信
+it's by the average of what all of them want.
+
+236
+00:11:49,960 --> 00:11:55,920
+以便它们可以查看10,000倍的数据
+And now the 10,000 things are communicating
+
+237
+00:11:55,920 --> 00:11:58,480
+一个代理人可以做到这一点。
+very effectively with each other
+
+238
+00:11:58,480 --> 00:12:01,440
+人们无法做到这一点。
+so that they can see 10,000 times as much data
+
+239
+00:12:01,440 --> 00:12:03,240
+undefined
+as one agent could.
+
+240
+00:12:03,240 --> 00:12:05,100
+undefined
+And people can't do that.
+
+241
+00:12:05,100 --> 00:12:07,920
+如果我学了很多关于量子力学的知识
+If I learn a whole lot of stuff about quantum mechanics
+
+242
+00:12:07,920 --> 00:12:09,200
+而我希望你了解所有这些关于量子力学的知识，
+and I want you to know all that stuff
+
+243
+00:12:09,200 --> 00:12:10,600
+关于量子力学，
+about quantum mechanics,
+
+244
+00:12:10,600 --> 00:12:14,240
+让你理解它是一个漫长而痛苦的过程。
+It's a long, painful process of getting you to understand it.
+
+245
+00:12:14,240 --> 00:12:18,180
+我不能把我的思想直接复制到你的大脑里，
+I can't just copy my weights into your brain,
+
+246
+00:12:18,180 --> 00:12:20,160
+因为你的大脑跟我的并不完全相同。
+because your brain isn't exactly the same as mine.
+
+247
+00:12:20,160 --> 00:12:21,160
+- 不，没有。
+- No, it's not.
+
+248
+00:12:21,160 --> 00:12:24,600
+（观众笑）
+(audience laughing)
+
+249
+00:12:24,600 --> 00:12:25,440
+这是瑜伽。
+It's yoga.
+
+250
+00:12:25,440 --> 00:12:28,440
+（观众笑）
+(audience laughing)
+
+251
+00:12:28,440 --> 00:12:34,040
+- 因此，我们有能学习更多东西的数字计算机
+- So we have digital computers that can learn more things
+
+252
+00:12:34,040 --> 00:12:39,960
+更快地，而且它们可以立即相互教授。
+more quickly and they can instantly teach it to each other.
+
+253
+00:12:39,960 --> 00:12:44,160
+就像，你知道，房间里的人一开始就可以把他们头脑里的东西
+It's like, you know, people in the room here could initially transfer what they had in
+
+254
+00:12:44,160 --> 00:12:46,320
+传输到别人脑海里。
+their heads in mind.
+
+255
+00:12:46,320 --> 00:12:48,960
+但这为什么会吓到人呢？
+But why is that scary?
+
+256
+00:12:48,960 --> 00:12:56,640
+因为他们可以学到更多东西，他们可能会举一个关于医生的例子，
+Well, because they can learn so much more and they might take an example of a doctor and
+
+257
+00:12:56,640 --> 00:13:02,920
+想象一下，有一个医生给见过一千个病人，另一个医生给见过一亿个病人。
+imagine you have one doctor who's seen a thousand patients and another doctor who's seen
+
+258
+00:13:02,920 --> 00:13:05,800
+你可能期望那位看过一亿病人的医生，如果他的记忆不是太差的话，就会
+a hundred million patients.
+
+259
+00:13:05,800 --> 00:13:10,520
+注意到数据中某些只有看过那么多病人才能发现的趋势。
+You would expect the doctor to see 100 million patients, if he's not too forgetful, to
+
+260
+00:13:10,520 --> 00:13:14,520
+undefined
+have noticed all sorts of trends in the data that just aren't visible if you've only seen
+
+261
+00:13:14,520 --> 00:13:16,520
+一千名病人。
+a thousand patients.
+
+262
+00:13:16,520 --> 00:13:19,920
+你可能只见过一个患有罕见疾病的病人。
+You may have only seen one patient with some rare disease.
+
+263
+00:13:19,920 --> 00:13:23,320
+另一位医生已经看过一亿个病人，我们将看到你能否弄清楚病人数量
+The other doctor has seen 100 million, we'll have seen whether you can figure out how
+
+264
+00:13:23,320 --> 00:13:26,120
+不过有很多。
+many patients but a lot.
+
+265
+00:13:26,120 --> 00:13:32,160
+所以我们还将看到小数据中看不到的规律性。
+And so we'll see also the regularity suggests that aren't apparent in small data.
+
+266
+00:13:32,160 --> 00:13:38,320
+这就是为什么那些能获取很多数据的东西可能看到我们永远看不到的结构数据。
+And that's why things that can get through a lot of data can probably see structuring data
+
+267
+00:13:38,320 --> 00:13:42,760
+然后带我到我应该对这个感到害怕的地方。
+we'll never see.
+
+268
+00:13:42,760 --> 00:13:48,160
+如果您看一下GPT-4，它已经可以进行简单的推理。
+And then take me to the point where I should be scared of this though.
+
+269
+00:13:48,160 --> 00:13:53,160
+我的意思是，推理是我们仍然更擅长的领域。
+Well, if you look at GPT-4, it can already do simple reasoning.
+
+270
+00:13:53,160 --> 00:13:57,480
+但是前几天，我对GPT-4做了一个常识推理，我认为它不可能做到的。
+I mean, reasoning is the area where we're still better.
+
+271
+00:13:57,480 --> 00:14:02,640
+所以我问它，我希望我家所有的房间都是白色的，目前，有些是白色的房间，有些是蓝色的房间，还有些是黄色的房间。
+But I was impressed the other day, GPT-4, doing a piece of common sense reasoning that I
+
+272
+00:14:02,640 --> 00:14:04,680
+黄色的油漆在一年内会褪成白色。
+didn't think it would be able to do.
+
+273
+00:14:04,680 --> 00:14:12,880
+那么如果我希望两年后它们都变成白色，我该怎么办呢？
+So I asked it, I want all the rooms in my house to be white, a present, the some white
+
+274
+00:14:12,880 --> 00:14:16,640
+它说，你应该把蓝色的房间涂成黄色。
+rooms, some blue rooms, and some yellow rooms.
+
+275
+00:14:16,640 --> 00:14:20,000
+这不是最自然的解决方案，但它能行，对吧？
+And yellow paint fades to white within a year.
+
+276
+00:14:20,000 --> 00:14:25,440
+这是令人印象深刻的常识推理
+So what should I do if I want them all to be white in two years' time?
+
+277
+00:14:25,440 --> 00:14:29,280
+这种难以让AI做到的推理
+made said, you should paint the blue runs yellow.
+
+278
+00:14:29,280 --> 00:14:31,840
+undefined
+That's not the natural solution, but it works, right?
+
+279
+00:14:31,840 --> 00:14:36,440
+undefined
+That's pretty impressive common sense reasoning
+
+280
+00:14:36,440 --> 00:14:40,080
+undefined
+of the kind that it's been very hard to get AI to do
+
+281
+00:14:40,080 --> 00:14:41,840
+使用符号人工智能。
+using symbolic AI.
+
+282
+00:14:41,840 --> 00:14:44,360
+因为我必须理解什么是消失，
+'Cause I had to understand what fades,
+
+283
+00:14:44,360 --> 00:14:47,840
+这意味着它必须通过寺庙的东西来理解。
+it means it had to understood by temple stuff.
+
+284
+00:14:47,840 --> 00:14:54,120
+所以他们在做一些有道理的推理。
+So they're doing sort of sensible reasoning.
+
+285
+00:14:54,120 --> 00:15:00,120
+有一个类似80或90的智商。
+with an IQ of like 80 or 90 or something.
+
+286
+00:15:00,120 --> 00:15:04,120
+正如我的一个朋友所说，
+And as a friend of mine said,
+
+287
+00:15:04,120 --> 00:15:07,120
+这就像一些基因工程师
+it's as if some genetic engineers
+
+288
+00:15:07,120 --> 00:15:09,120
+已经说我们要改进灰熊。
+have said we're going to improve grizzly bears.
+
+289
+00:15:09,120 --> 00:15:12,120
+我们已经提高了他们的智商到65，
+We've already improved them to have an IQ of 65
+
+290
+00:15:12,120 --> 00:15:14,120
+他们现在会说英语。
+and they can talk English now.
+
+291
+00:15:14,120 --> 00:15:16,120
+他们在各种事情上非常有用。
+And they're very useful for all sorts of things.
+
+292
+00:15:16,120 --> 00:15:19,120
+但是我们认为我们可以把智商提高到210。
+But we think we can improve the IQ to 210.
+
+293
+00:15:19,120 --> 00:15:23,120
+[笑声]
+[LAUGHTER]
+
+294
+00:15:23,120 --> 00:15:30,120
+我当然有过，我相信很多人在与
+I certainly had, I'm sure many people have had that feeling when you're interacting with
+
+295
+00:15:30,120 --> 00:15:34,120
+这些最新的聊天机器人互动时都有过这种感觉，就像是脖子后面的头发，有种神秘的感觉。
+these latest chat bots, you know, sort of hair on the back of neck, it's sort of uncanny feeling.
+
+296
+00:15:34,120 --> 00:15:39,120
+但是，当我有这种感觉并且感到不舒服时，我只是关上我的笔记本电脑。
+But, you know, when I have that feeling and I'm uncomfortable, I just close my laptop.
+
+297
+00:15:39,120 --> 00:15:48,120
+所以，是的，但是这些东西会通过阅读我们所写的所有小说来从我们身上学习，
+So, yes, but these things will have learned from us by reading all the novels that ever were
+
+298
+00:15:48,120 --> 00:15:57,120
+马基韦利曾经写过如何操纵别人，对吧？如果他们聪明得多，
+Mackey Belly ever wrote that how to manipulate people, right? And if they're much smarter
+
+299
+00:15:57,120 --> 00:16:00,800
+除非他们非常擅长操纵我们，否则你不会意识到发生了什么。你会
+unless they'll be very good at manipulating us, you won't realise what's going on. You'll
+
+300
+00:16:00,800 --> 00:16:05,400
+乞求你像一个两岁的孩子被问到：“你想要豌豆还是花菜？”
+beg you like a two-year-old who's being asked, "Do you want the peas or the cauliflower?"
+
+301
+00:16:05,400 --> 00:16:12,700
+而且没有意识到你不一定要拥有这两者。这样你就容易被操纵。
+And doesn't realise you don't have to have either. And you'll be that easy to manipulate.
+
+302
+00:16:12,700 --> 00:16:18,740
+所以即使他们不能直接操纵杠杆，他们肯定可以让我们去操纵。
+And so even if they can't directly pull levers, they can certainly get us to pull levers.
+
+303
+00:16:18,740 --> 00:16:23,540
+事实证明，如果你可以操纵人，你可以在不亲自去华盛顿的情况下侵占一栋建筑。
+It turns out if you can manipulate people, you can invade a building in Washington without
+
+304
+00:16:23,540 --> 00:16:25,700
+非常好。
+ever going there yourself.
+
+305
+00:16:25,700 --> 00:16:29,980
+是的。
+Very good.
+
+306
+00:16:29,980 --> 00:16:30,980
+那是这样吗？
+Yeah.
+
+307
+00:16:30,980 --> 00:16:31,980
+就是那样吗？
+So is that?
+
+308
+00:16:31,980 --> 00:16:32,980
+我的意思是，如果这个世界，好吧，这是一个非常假设的世界，但如果没有坏人
+Is that?
+
+309
+00:16:32,980 --> 00:16:38,860
+没有恶意的人，我们会安全吗？
+I mean, if the word, okay, this is a very hypothetical world, but if there were no bad
+
+310
+00:16:38,860 --> 00:16:45,860
+我不知道。
+actors, you know, people with bad intentions, would we be safe?
+
+311
+00:16:45,860 --> 00:16:47,620
+在一个人们有恶意和政治系统如此破碎以至于我们甚至无法决定不将攻击性步枪给予十几岁男孩的世界里，我们会比较安全吗？
+I don't know.
+
+312
+00:16:47,620 --> 00:16:52,300
+如果你不能解决那个问题，你怎么解决这个问题？
+Would be safer than in a world where people have bad intentions and where the political
+
+313
+00:16:52,300 --> 00:16:59,180
+嗯，我不知道。
+system is so broken that we can't even decide not to give assault rifles to teenage boys.
+
+314
+00:16:59,180 --> 00:17:02,340
+我希望你会有一些想法。
+If you can't solve that problem, how are you going to solve this problem?
+
+315
+00:17:02,340 --> 00:17:03,940
+[笑声]
+Well, I mean, I don't know.
+
+316
+00:17:03,940 --> 00:17:06,300
+那一个--
+I was hoping that you would have some thoughts.
+
+317
+00:17:06,300 --> 00:17:08,460
+我的意思是，除非我们一开始就没搞清楚，
+[LAUGHTER]
+
+318
+00:17:08,460 --> 00:17:11,060
+我的意思是，你想就此问题发言
+So one--
+
+319
+00:17:11,060 --> 00:17:14,100
+undefined
+I mean, unless we didn't make this clear at the beginning,
+
+320
+00:17:14,100 --> 00:17:17,420
+undefined
+I mean, you want to speak out about this
+
+321
+00:17:17,420 --> 00:17:20,420
+如果你在没有它的情况下更舒服的话，
+and you feel more comfortable doing that without it,
+
+322
+00:17:20,420 --> 00:17:24,740
+这样在谷歌上就不会产生什么负面影响。
+sort of having any blowback on Google.
+
+323
+00:17:24,740 --> 00:17:26,100
+但你在大声疾呼。
+But you're speaking out about it.
+
+324
+00:17:26,100 --> 00:17:32,060
+但从某种意义上说，如果我们没有采取行动，光说不练就没有价值
+But in some sense, talk is cheap if we then don't have actions
+
+325
+00:17:32,060 --> 00:17:37,260
+这周有很多人在听你的意见，我们应该怎么做？
+What do we do when we lots of people this week are listening to you? What should we do about it?
+
+326
+00:17:37,260 --> 00:17:44,620
+我希望它就像气候变化一样，如果你头脑正常，你会停止燃烧碳。
+I wish it was like climate change where you could say if you've got half a brain you'd stop burning carbon.
+
+327
+00:17:44,620 --> 00:17:49,820
+你应该如何应对这个问题非常清楚。很明显，那是痛苦的，但必须要做的。
+It's clear what you should do about it. It's clear that that's painful but has to be done.
+
+328
+00:17:49,820 --> 00:17:55,580
+我不知道有什么办法能让我们阻止这些事物取代我们。
+I don't know of any solution like that to stop these things taking over from us.
+
+329
+00:17:55,580 --> 00:17:59,660
+我们真正需要的是，我认为我们不会停止发展它们，因为它们非常有用。
+What we really want, I don't think we're going to stop developing them because they're so useful.
+
+330
+00:17:59,660 --> 00:18:01,660
+它们在医学方面非常有用。
+They'll be incredibly useful in medicine.
+
+331
+00:18:01,660 --> 00:18:03,660
+还有其他所有方面。
+And in everything else.
+
+332
+00:18:03,660 --> 00:18:06,660
+所以我认为停止发展的机会并不大。
+So I don't think there's much chance of stopping development.
+
+333
+00:18:06,660 --> 00:18:09,660
+我们想要的是某种方式，确保即使它们比我们聪明，
+What we want is some way of making sure that,
+
+334
+00:18:09,660 --> 00:18:11,660
+它们能为我们做有益的事情。
+even if they're smarter than us,
+
+335
+00:18:11,660 --> 00:18:14,660
+这就是所谓的使任务对齐的问题。
+they're going to do things that are beneficial for us.
+
+336
+00:18:14,660 --> 00:18:16,660
+但我们需要在这样一个世界中尝试去做到这一点，
+That's called the alignment problem.
+
+337
+00:18:16,660 --> 00:18:19,660
+那里有邪恶的行为者想制造能杀人的机器人士兵。
+But we need to try and do that in a world where
+
+338
+00:18:19,660 --> 00:18:22,660
+对我来说，这似乎非常困难。
+there's bad actors who want to build robot soldiers
+
+339
+00:18:22,660 --> 00:18:24,660
+undefined
+that kill people.
+
+340
+00:18:24,660 --> 00:18:26,660
+undefined
+And it seems very hard to me.
+
+341
+00:18:26,660 --> 00:18:31,020
+所以我很抱歉，我在敲响警钟，说我们必须担心这个问题。
+So I'm sorry, I'm sounding the alarm and saying we have to worry about this.
+
+342
+00:18:31,020 --> 00:18:34,460
+我希望我有一个简单的解决方案可以推动，但我没有。
+And I wish I had a nice simple solution I could push, but I don't.
+
+343
+00:18:34,460 --> 00:18:38,940
+但我认为人们聚在一起，认真思考这个问题，看看是否有解决方案非常重要。
+But I think it's very important that people get together and think hard about it and see whether there is a solution.
+
+344
+00:18:38,940 --> 00:18:40,860
+目前还不清楚是否有解决方案。
+It's not clear there is a solution.
+
+345
+00:18:40,860 --> 00:18:43,700
+所以我的意思是，跟我们谈谈这个问题。
+So I mean, talk to us about that.
+
+346
+00:18:43,700 --> 00:18:49,260
+我的意思是，你在这项技术的技术性方面花费了你的职业生涯。
+I mean, you spent your career on the technicalities of this technology.
+
+347
+00:18:49,260 --> 00:18:51,500
+没有技术上的解决办法吗？
+Is there no technical fix?
+
+348
+00:18:51,500 --> 00:18:54,420
+为什么我们不能建立防护栏或者...
+Why can we not build in guardrails or...
+
+349
+00:18:54,420 --> 00:19:00,780
+你让他们在学习方面变得更糟，或者限制他们的交流方式
+and you make them worse at learning or restrict the way that they can communicate
+
+350
+00:19:00,780 --> 00:19:03,780
+如果这是你论点的两个方面。
+if those are the two strings of your argument.
+
+351
+00:19:03,780 --> 00:19:07,780
+我的意思是，我们正在尝试各种防护措施。
+I mean, we're trying to do all sorts of guard routes.
+
+352
+00:19:07,780 --> 00:19:10,340
+但假设它们真的变得非常聪明。
+But suppose they did get really smart.
+
+353
+00:19:10,340 --> 00:19:11,620
+这些东西会编程，对吗？
+And these things can program, right?
+
+354
+00:19:11,620 --> 00:19:13,100
+他们可以写程序。
+They can write programs.
+
+355
+00:19:13,100 --> 00:19:19,980
+假设你给了他们执行这些程序的能力，我们肯定会这么做。
+And suppose you give them the ability to execute those programs, which we'll certainly do.
+
+356
+00:19:19,980 --> 00:19:23,900
+聪明的东西可以智胜我们。
+Smart things can outsmart us.
+
+357
+00:19:23,900 --> 00:19:29,500
+所以想象一下，你两岁的孩子说，
+So imagine you're two-year-old saying,
+
+358
+00:19:29,500 --> 00:19:31,260
+我爸爸做了我不喜欢的事情。
+my dad does things I don't like.
+
+359
+00:19:31,260 --> 00:19:34,700
+所以我要为我爸爸可以做的事情制定一些规则。
+So I'm going to make some rules for what my dad can do.
+
+360
+00:19:34,700 --> 00:19:36,780
+你可能会想办法弄清楚如何在这些规则下生活
+You could probably figure out how to live with those rules
+
+361
+00:19:36,780 --> 00:19:39,260
+并且仍然可以去你想去的地方。
+and still go where you want.
+
+362
+00:19:39,260 --> 00:19:41,140
+是的。
+Yeah.
+
+363
+00:19:41,140 --> 00:19:43,220
+但是在哪里--
+But where--
+
+364
+00:19:43,220 --> 00:19:47,620
+还有一个步骤似乎是这些智能机器
+there still seems to be a step where these smart machines
+
+365
+00:19:47,620 --> 00:19:50,700
+不知何故有了他们自己的动力。
+somehow have motivation of their own.
+
+366
+00:19:50,700 --> 00:19:51,580
+对。
+Yes.
+
+367
+00:19:51,580 --> 00:19:52,820
+对,这是一个很好的观点。
+Yes, that's a very good point.
+
+368
+00:19:52,820 --> 00:19:55,940
+所以我们进化了。
+So we evolved.
+
+369
+00:19:55,940 --> 00:19:59,700
+因为我们进化了，所以我们有一定的建筑目标
+And because we evolved, we have certain building goals
+
+370
+00:19:59,700 --> 00:20:01,860
+我们发现很难关掉。
+that we find very hard to turn off.
+
+371
+00:20:01,860 --> 00:20:04,300
+就像我们努力不让我们的身体受伤。
+Like we try not to damage our bodies.
+
+372
+00:20:04,300 --> 00:20:05,700
+这就是疼痛的意义。
+That's what pain's about.
+
+373
+00:20:05,700 --> 00:20:08,780
+我们努力吃饱。
+We try and get enough to eat.
+
+374
+00:20:08,780 --> 00:20:10,100
+所以我们养活我们的身体。
+So we feed our bodies.
+
+375
+00:20:10,100 --> 00:20:16,660
+我们努力使我们自己的副本尽可能多。
+We try and make as many copies of ourselves as possible.
+
+376
+00:20:16,660 --> 00:20:19,060
+也许并非故意有这个意图，
+Maybe not deliberately that intention,
+
+377
+00:20:19,060 --> 00:20:21,340
+但是我们的连线方式让我们在制作更多自己的副本时感到愉悦。
+but we've been wired up so this pleasure involved
+
+378
+00:20:21,340 --> 00:20:23,780
+这一切都来自进化。
+making many copies of ourselves.
+
+379
+00:20:23,780 --> 00:20:27,420
+我们不能关掉它很重要。
+And that all came from evolution.
+
+380
+00:20:27,420 --> 00:20:30,740
+undefined
+And it's important that we can't turn it off.
+
+381
+00:20:30,740 --> 00:20:34,620
+如果你能关掉它，你做得不太好。
+If you could turn it off, you don't do so well.
+
+382
+00:20:34,620 --> 00:20:36,180
+有一个非常棒的团队叫做The Shakers（震拓者），
+There's a wonderful group called The Shakers,
+
+383
+00:20:36,180 --> 00:20:37,260
+他们和The Quakers（贵格会）有关。
+who were related to The Quakers.
+
+384
+00:20:37,260 --> 00:20:41,420
+你们制作漂亮的家具，但不相信性行为。
+You make beautiful furniture, but didn't believe in sex.
+
+385
+00:20:41,420 --> 00:20:43,260
+现在他们已经不存在了。
+And there aren't any of them around anymore.
+
+386
+00:20:43,260 --> 00:20:46,100
+[大笑]
+[LAUGHTER]
+
+387
+00:20:46,100 --> 00:20:51,140
+所以这些数字智能没有进化。
+So these digital intelligences didn't evolve.
+
+388
+00:20:51,140 --> 00:20:55,900
+是我们创造了它们，所以它们没有这些构建目标。
+We made them and so they don't have these building goals.
+
+389
+00:20:55,900 --> 00:20:59,100
+所以问题是，如果我们能把目标放进去，
+And so the issue is, if we can put the goals in,
+
+390
+00:20:59,100 --> 00:21:00,880
+也许会没事。
+maybe it'll be okay.
+
+391
+00:21:00,880 --> 00:21:02,520
+但我最大的担忧是，
+But my big worry is,
+
+392
+00:21:02,520 --> 00:21:05,620
+迟早会有人为它们联接
+sooner or later, someone will wire into them
+
+393
+00:21:05,620 --> 00:21:08,380
+创造自己子目标的能力。
+the ability to create their own sub-gots.
+
+394
+00:21:08,380 --> 00:21:09,780
+实际上，它们已经几乎拥有这样的能力了。
+In fact, they almost have that already.
+
+395
+00:21:09,780 --> 00:21:13,100
+那些称为“聊天GPT”的聊天GPT版本。
+The versions of chat GPT that call chat GPT.
+
+396
+00:21:13,100 --> 00:21:17,260
+如果你给某个东西，
+And if you give something,
+
+397
+00:21:17,260 --> 00:21:18,900
+创造自己子目标的能力
+the ability to create your own sub-gots
+
+398
+00:21:18,900 --> 00:21:20,980
+以实现其他目标，
+in order to achieve other goals,
+
+399
+00:21:20,980 --> 00:21:26,580
+我认为它会很快意识到获得更多控制是一个非常好的子目标，因为
+I think it will very quickly realize that getting more control is a very good subgoal because
+
+400
+00:21:26,580 --> 00:21:29,820
+它可以帮助你实现其他目标。
+it helps you achieve other goals.
+
+401
+00:21:29,820 --> 00:21:35,060
+如果这些事情失去控制，我们就有麻烦了。
+And if these things get carried away with getting more control, we're in trouble.
+
+402
+00:21:35,060 --> 00:21:39,340
+那么你认为可能发生的最糟糕的情况是什么？
+So what's the worst case scenario that you think is conceivable?
+
+403
+00:21:39,340 --> 00:21:46,040
+哦，我认为人类只是智慧演变过程中的一个短暂阶段这是相当可能的。
+Oh, I think it's quite conceivable that humanity is just a passing phase in the evolution
+
+404
+00:21:46,040 --> 00:21:47,460
+你不能直接演化出数码智能。
+of intelligence.
+
+405
+00:21:47,460 --> 00:21:49,520
+它需要太多的能量和精细的制造。
+You couldn't directly evolve digital intelligence.
+
+406
+00:21:49,520 --> 00:21:53,960
+你需要生物智能演变，以便它可以创造出数码智能。
+It requires too much energy and too much careful fabrication.
+
+407
+00:21:53,960 --> 00:21:59,640
+然后数码智能可以逐渐吸收人们曾经写过的一切，
+You need biological intelligence to evolve so that it can create digital intelligence.
+
+408
+00:21:59,640 --> 00:22:07,000
+这就是Chachybethi一直在做的事情。
+The digital intelligence can then absorb everything people ever wrote in a fairly slow way,
+
+409
+00:22:07,000 --> 00:22:10,720
+但后来，它可以直接了解世界并更快地学习。
+which is what Chachybethi has been doing.
+
+410
+00:22:10,720 --> 00:22:15,520
+它可能会让我们坚持一段时间，来确保继续运转，但在那之后，
+But then it can start getting direct experience of the world and learn much faster.
+
+411
+00:22:15,520 --> 00:22:22,960
+也许不会了。
+And it may keep us around for a while to keep the pastations running, but after that,
+
+412
+00:22:22,960 --> 00:22:23,960
+所以，好消息是我们已经弄清楚如何造出永生的生物。
+maybe not.
+
+413
+00:22:23,960 --> 00:22:29,480
+所以，这些数码智能，当一个硬件死了，它们并没有死。
+So, the good news is we've figured out how to build beings that are immortal.
+
+414
+00:22:29,480 --> 00:22:34,720
+如果你把权重存储在某种介质中，你能找到另一块能执行相同指令的硬件，
+So, these digital intelligences, when a piece of hardware dies, they don't die.
+
+415
+00:22:34,720 --> 00:22:39,280
+那么你就可以让它再次复活。
+If you've got the weight stored in some medium and you can find another piece of hardware
+
+416
+00:22:39,280 --> 00:22:43,720
+所以我们得到了永生，但它不是为我们准备的。
+that can run the same instructions, then you can bring it to life again.
+
+417
+00:22:43,720 --> 00:22:48,720
+所以，雷·库兹韦尔对永生非常感兴趣。
+So we've got immortality, but it's not for us.
+
+418
+00:22:48,720 --> 00:22:52,720
+我认为老白人永生是个非常糟糕的主意。
+So, Ray Kurzweil is very interested in being immortal.
+
+419
+00:22:52,720 --> 00:22:56,720
+我们得到了永生，但它不是为雷准备的。
+I think it's a very bad idea for Old Whiteman to be immortal.
+
+420
+00:22:56,720 --> 00:23:01,720
+undefined
+We've got the immortality, but it's not for Ray.
+
+421
+00:23:01,720 --> 00:23:04,720
+不，可怕的事情是，从某种程度上说，或许你才是，
+No, the scary thing is that in a way maybe you will be,
+
+422
+00:23:04,720 --> 00:23:09,720
+因为你发明了很多这些技术。
+because you invented much of this technology.
+
+423
+00:23:09,720 --> 00:23:13,240
+我的意思是，当我听到你说这个，很可能，
+I mean, when I hear you say this, probably,
+
+424
+00:23:13,240 --> 00:23:15,120
+现在你知道，拉法的年龄进入大街了
+what's the, you know, Rafa's age into the street now
+
+425
+00:23:15,120 --> 00:23:16,840
+然后开始拔掉电脑。
+and start unplugging computers.
+
+426
+00:23:16,840 --> 00:23:18,840
+（观众笑）
+(audience laughing)
+
+427
+00:23:18,840 --> 00:23:19,840
+而且—
+And--
+
+428
+00:23:19,840 --> 00:23:21,480
+- 我怕我们不能这么做。
+- I'm afraid we can't do that.
+
+429
+00:23:21,480 --> 00:23:22,480
+- 为什么？
+- Why?
+
+430
+00:23:22,480 --> 00:23:24,200
+你听起来像《2001》里的Hal。
+You sound like Hal from 2001.
+
+431
+00:23:24,200 --> 00:23:25,040
+- 没错。
+- Exactly.
+
+432
+00:23:25,040 --> 00:23:28,040
+（观众笑）
+(audience laughing)
+
+433
+00:23:28,040 --> 00:23:31,160
+- 但是，更严肃地说，
+- But, I mean, more seriously,
+
+434
+00:23:31,160 --> 00:23:34,960
+我的意思是，我知道你之前说过，
+I mean, I know you said before that,
+
+435
+00:23:34,960 --> 00:23:36,840
+几个月前有人提议
+it was suggested a few months ago
+
+436
+00:23:36,840 --> 00:23:41,840
+应该暂停人工智能的发展。
+that there should be a moratorium on AI advancement.
+
+437
+00:23:41,840 --> 00:23:45,120
+而且我不认为这是个好主意。
+And I don't think that's a very good idea.
+
+438
+00:23:45,120 --> 00:23:48,760
+但是，更普遍地说，我很好奇为什么。
+But more generally, I'm curious why.
+
+439
+00:23:48,760 --> 00:23:50,400
+我的意思是，我们不应该只是停下来吗？
+I mean, should we not just stop?
+
+440
+00:23:50,400 --> 00:23:53,000
+而且，我知道，我的意思是，你是，你是，
+And I know, I mean, you're, you're,
+
+441
+00:23:53,000 --> 00:23:54,240
+抱歉，我只是想说，你知道，
+sorry, I was just gonna say that, you know,
+
+442
+00:23:54,240 --> 00:23:56,840
+我知道你也说过你是投资者
+I know that you've spoken also that you're an investor
+
+443
+00:23:56,840 --> 00:23:59,880
+将你个人财富投资到一些公司，比如Cohere，
+of your personal wealth in some companies like Cohere
+
+444
+00:23:59,880 --> 00:24:01,320
+它们正在构建这些大型语言模型。
+that are building these large language models.
+
+445
+00:24:01,320 --> 00:24:04,040
+所以我对你个人的责任感很好奇，
+So I just curious about your personal sense of responsibility
+
+446
+00:24:04,040 --> 00:24:06,480
+以及我们每个人的个人责任。
+and each of our personal responsibility.
+
+447
+00:24:06,480 --> 00:24:07,940
+我们应该做些什么？
+what should we be doing?
+
+448
+00:24:07,940 --> 00:24:10,920
+我的意思是，我们应该试着阻止这个吗？
+I mean, should we try and stop this is what I'm saying?
+
+449
+00:24:10,920 --> 00:24:13,360
+- 是的，所以我认为如果你认真对待存在的风险，
+- Yeah, so I think if you take the existential risk
+
+450
+00:24:13,360 --> 00:24:16,680
+像我现在一样，我过去认为它离我们很远，
+seriously, as I now do, I used to think it was way off,
+
+451
+00:24:16,680 --> 00:24:20,400
+但现在我觉得它非常严重，也相当近。
+but I now think it's serious and fairly close.
+
+452
+00:24:20,400 --> 00:24:23,440
+停止进一步开发
+It might be quite sensible to just stop developing
+
+453
+00:24:23,440 --> 00:24:26,680
+这些东西可能是非常明智的，但我认为完全
+these things any further, but I think it's completely
+
+454
+00:24:26,680 --> 00:24:28,840
+这个目标是不可实现的。
+an aim to think that would happen.
+
+455
+00:24:28,840 --> 00:24:30,520
+没有办法让这种情况发生。
+There's no way to make that happen.
+
+456
+00:24:30,520 --> 00:24:34,000
+其中一个原因是，我是说，如果美国停止研发，
+And one reason, I mean, if the US stops developing
+
+457
+00:24:34,000 --> 00:24:35,640
+在中国投票，
+in the Chinese vote,
+
+458
+00:24:35,640 --> 00:24:39,760
+他们将被用于武器，仅仅因为这个原因，政府也会
+they're going to be used in weapons and just for that reason alone governments are going
+
+459
+00:24:39,760 --> 00:24:41,840
+停止发展它们。
+to stop developing them.
+
+460
+00:24:41,840 --> 00:24:47,280
+所以是的，我认为停止发展它们可能是一个理性的做法，但是这里的
+So yes, I think stopping developing them might be a rational thing to do but there's
+
+461
+00:24:47,280 --> 00:24:48,520
+绝对不可能发生。
+no way it's going to happen.
+
+462
+00:24:48,520 --> 00:24:51,600
+所以签请愿书说，请立即停止，是很愚蠢的。
+So it's silly to sign petition saying, please stop now.
+
+463
+00:24:51,600 --> 00:24:52,920
+我们确实有过一个假期。
+We did have a holiday.
+
+464
+00:24:52,920 --> 00:24:58,840
+从大约2017年开始，我们度过了几年的假期，因为谷歌开发了这项技术
+We had a holiday from about 2017 for several years because Google developed the technology
+
+465
+00:24:58,840 --> 00:24:59,840
+首先。
+first.
+
+466
+00:24:59,840 --> 00:25:00,840
+它开发了变换器。
+It developed the transform.
+
+467
+00:25:00,840 --> 00:25:04,400
+与此同时，它还将变换器应用到扩散监视器上。
+transform with it also to the diffusion monitors.
+
+468
+00:25:04,400 --> 00:25:06,640
+它并没有让人们使用这些技术
+And it didn't put them out there for people to use
+
+469
+00:25:06,640 --> 00:25:07,640
+滥用它们。
+and abuse.
+
+470
+00:25:07,640 --> 00:25:09,040
+它对这些技术非常谨慎，因为它
+It was very careful with them, because it
+
+471
+00:25:09,040 --> 00:25:10,400
+不想破坏自己的声誉。
+didn't want to damage his reputation.
+
+472
+00:25:10,400 --> 00:25:13,120
+而且它知道可能会有不好的后果。
+And it knew there could be bad consequences.
+
+473
+00:25:13,120 --> 00:25:16,160
+但这只有在有单一领导者的情况下才会发生。
+But that can only happen if there's a single leader.
+
+474
+00:25:16,160 --> 00:25:22,960
+一旦OpenAI使用变形器构建了类似的东西
+Once OpenAI had built similar things using transformers
+
+475
+00:25:22,960 --> 00:25:24,800
+并从微软那里获得资金。
+and money from Microsoft.
+
+476
+00:25:24,800 --> 00:25:27,840
+当微软决定推出这项技术时。
+And Microsoft decided to put it out there.
+
+477
+00:25:27,840 --> 00:25:29,760
+谷歌实际上没有太多选择。
+Google didn't have really much choice.
+
+478
+00:25:29,760 --> 00:25:31,440
+如果你要生活在一个资本主义体系中，
+If you're going to live in a capitalist system,
+
+479
+00:25:31,440 --> 00:25:35,600
+你不能阻止谷歌与微软竞争。
+you can't stop Google competing with Microsoft.
+
+480
+00:25:35,600 --> 00:25:38,600
+所以我不认为谷歌做错了什么。
+So I don't think Google did anything wrong.
+
+481
+00:25:38,600 --> 00:25:40,560
+我认为它起初非常负责任。
+I think it was very responsible to begin with.
+
+482
+00:25:40,560 --> 00:25:43,160
+但我认为在一个资本主义体系中，
+But I think it's just inevitable in a capitalist system,
+
+483
+00:25:43,160 --> 00:25:45,000
+或者在一个国家之间存在竞争的体系中，
+or a system with competition between countries,
+
+484
+00:25:45,000 --> 00:25:49,600
+比如美国和中国，发展这些东西是不可避免的。
+like the US and China, that this stuff will be developed.
+
+485
+00:25:49,600 --> 00:25:52,800
+我唯一的希望是，如果我们允许
+My one hope is that because if we allow
+
+486
+00:25:52,800 --> 00:25:55,520
+接管，那对我们所有人都会很糟糕。
+to take over, it will be bad for all of us.
+
+487
+00:25:55,520 --> 00:25:57,240
+我们可以让美国和中国达成一致，
+We could get the US and China to agree,
+
+488
+00:25:57,240 --> 00:25:59,920
+就像我们在核武器问题上可以达成一致，那对我们所有人来说都是非常重要的。
+like we could with nuclear weapons, which we're about for all of us.
+
+489
+00:25:59,920 --> 00:26:00,120
+是的。
+Yeah.
+
+490
+00:26:00,120 --> 00:26:02,920
+在面临存在威胁方面，我们所有人都同舟共济。
+We're all in the same boat with respect to the existential threat.
+
+491
+00:26:02,920 --> 00:26:06,800
+所以我们都应该能够合作，试图阻止它。
+So we all ought to be able to cooperate on trying to stop it.
+
+492
+00:26:06,800 --> 00:26:10,120
+只要我们可以在途中赚点钱。
+As long as we can make some money on the way.
+
+493
+00:26:10,120 --> 00:26:12,360
+我将从在场的听众中征集一些问题，
+I'm going to take some audience questions from the room
+
+494
+00:26:12,360 --> 00:26:14,200
+如果您愿意发表意见的话。
+if you make yourself known.
+
+495
+00:26:14,200 --> 00:26:15,800
+在人们使用麦克风的同时，
+And while people are going on with the microphone,
+
+496
+00:26:15,800 --> 00:26:17,640
+我想问一个问题，
+there's one question I was going to ask
+
+497
+00:26:17,640 --> 00:26:19,400
+来自在线听众。
+from the online audience.
+
+498
+00:26:19,400 --> 00:26:20,120
+我很感兴趣。
+I'm interested.
+
+499
+00:26:20,120 --> 00:26:23,120
+你提到了一点关于过渡期，
+You mentioned a little bit about maybe transition period,
+
+500
+00:26:23,120 --> 00:26:26,800
+随着机器变得更聪明并超越人类。
+as machines get smarter and outpace humans.
+
+501
+00:26:26,800 --> 00:26:29,920
+我的意思是，会有一个时刻很难界定
+I mean, there'll be a moment where it's hard to define
+
+502
+00:26:29,920 --> 00:26:31,720
+什么是人类，什么不是，
+what's human and what isn't,
+
+503
+00:26:31,720 --> 00:26:35,480
+或者说这两者是非常不同的智能形式？
+or are these two very distinct forms of intelligence?
+
+504
+00:26:35,480 --> 00:26:38,000
+- 我认为它们是不同形式的智能。
+- I think they're distinct forms of intelligence.
+
+505
+00:26:38,000 --> 00:26:41,240
+现在，当然，数字智能
+Now, of course, the digital intelligences
+
+506
+00:26:41,240 --> 00:26:42,720
+非常擅长模仿我们
+are very good at mimicking us
+
+507
+00:26:42,720 --> 00:26:45,040
+因为它们受过模仿我们的训练。
+because they've been trained to mimic us.
+
+508
+00:26:45,040 --> 00:26:49,680
+所以很难判断是聊天GBT写的，
+And so it's very hard to tell if chat GBT wrote it,
+
+509
+00:26:49,680 --> 00:26:53,080
+还是我们写的。
+or whether we wrote it.
+
+510
+00:26:53,080 --> 00:26:54,640
+所以从这个意义上说，它们看起来很像我们，
+So in that sense, they look quite like us,
+
+511
+00:26:54,640 --> 00:26:57,240
+但内在运作方式并不相同。
+but inside they're not working the same way.
+
+512
+00:26:57,240 --> 00:26:59,240
+>> 谁是房间里的第一个人？
+>> Who is first in the room?
+
+513
+00:26:59,240 --> 00:27:05,840
+>> 你好。我的名字叫Hal Gregerson，我的中间名不是9,000。
+>> Hello. My name is Hal Gregerson and my middle name is not 9,000.
+
+514
+00:27:05,840 --> 00:27:10,840
+我是麻省理工学院斯隆管理学院的教员。
+I'm a faculty or in the MIT Sloan School.
+
+515
+00:27:10,840 --> 00:27:16,840
+可以说提问是我们人类最重要的能力之一。
+Arguably asking questions is one of the most important human abilities we have.
+
+516
+00:27:16,840 --> 00:27:20,840
+从你现在2023年的角度看，
+From your perspective now in 2023,
+
+517
+00:27:20,840 --> 00:27:24,840
+我们应该最关注哪一个或两个问题？
+What question or two should we pay most attention to?
+
+518
+00:27:24,840 --> 00:27:35,840
+这些技术是否有可能帮助我们提出更好的问题，并迎头赶上技术？
+And is it possible for these technologies to actually help us ask better questions and out question the technology?
+
+519
+00:27:35,840 --> 00:27:44,840
+是的，但我想说的是，我们应该问很多问题，其中之一是，我们如何阻止它们控制我们？
+Yes, but what I'm saying is, there's many questions we should be asking, but one of them is, how do we prevent them from taking over?
+
+520
+00:27:45,840 --> 00:27:48,320
+我确实阻止了它们获得控制权。
+I do rent them from getting control.
+
+521
+00:27:48,320 --> 00:27:52,760
+我们可以向他们询问关于这个的问题，
+And we could ask them questions about that,
+
+522
+00:27:52,760 --> 00:27:55,040
+但我不会完全相信他们的回答。
+but I wouldn't entirely trust their answers.
+
+523
+00:27:55,040 --> 00:27:58,520
+- 后面的问题。
+- Question at the back.
+
+524
+00:27:58,520 --> 00:28:00,440
+我想尽可能地解答更多问题，
+And I wanna get through his manys we can,
+
+525
+00:28:00,440 --> 00:28:03,080
+所以如果你能把问题尽量简短就好。
+so if you can keep your questions as short as possible.
+
+526
+00:28:03,080 --> 00:28:06,280
+- 这个开了吗。
+- This is on, yeah.
+
+527
+00:28:06,280 --> 00:28:09,520
+辛顿博士，非常感谢您今天能和我们在一起。
+Dr. Hinton, thank you so much for being here with us today.
+
+528
+00:28:09,520 --> 00:28:11,920
+我要说，这是我参加过的最贵的讲座，
+I shall say, this is the most expensive lecture
+
+529
+00:28:11,920 --> 00:28:14,600
+但我认为它是值得的。
+I've ever paid for, but I think it was worthwhile.
+
+530
+00:28:14,600 --> 00:28:24,040
+我有一个问题是关于您提到的核历史类比。
+I just have a question for you because you mentioned the analogy of nuclear history.
+
+531
+00:28:24,040 --> 00:28:26,520
+显然有很多的比较。
+And obviously there's a lot of comparisons.
+
+532
+00:28:26,520 --> 00:28:32,000
+你有没有记得杜鲁门总统在椭圆办公室里对奥本海默说了什么？
+By any chance do you remember what President Truman told Openheimer when he was in the
+
+533
+00:28:32,000 --> 00:28:33,000
+不，我不记得了。
+Oval Office?
+
+534
+00:28:33,000 --> 00:28:34,000
+我知道那件事有些事，但我不知道杜鲁门当时给了什么建议。
+No, I don't.
+
+535
+00:28:34,000 --> 00:28:40,560
+谢谢。
+I know something about that, but I don't know what Truman told up like.
+
+536
+00:28:40,560 --> 00:28:41,560
+好的，我们继续。
+Thank you.
+
+537
+00:28:41,560 --> 00:28:44,200
+观众提问。对不起，如果还有人想问问题，请告诉我谁接下来。
+Well, take it from here.
+
+538
+00:28:44,200 --> 00:28:49,600
+也许给个... 请讲。
+audience question. Sorry, if there are people that might, let me know who's next.
+
+539
+00:28:49,600 --> 00:28:52,360
+你好，雅克·伍德拉夫。鉴于训练这些所需的大量数据，
+Maybe give a... Go ahead.
+
+540
+00:28:52,360 --> 00:28:58,840
+undefined
+Hello, Jacob Woodruff. With the amount of data that's been required to train these
+
+541
+00:28:58,840 --> 00:29:05,240
+大型语言模型，我们是否会预料到这些系统智能的停滞?
+large language models, would we expect a plateau in the intelligence of these systems
+
+542
+00:29:05,240 --> 00:29:09,960
+这怎么可能减缓或限制进步？
+and how might that slow down or restrict the advancement?
+
+543
+00:29:09,960 --> 00:29:15,560
+好吧，那么这是一个希望的曙光，也许我们已经用尽了所有人类知识，它们不会变得更聪明。
+Okay, so that is a ray of hope that maybe we've just used up all human knowledge and they're not going to get it in smarter.
+
+544
+00:29:15,560 --> 00:29:19,360
+但考虑到图像和视频。
+But think about images and video.
+
+545
+00:29:19,360 --> 00:29:26,760
+因此，多模态模型将比仅依赖语言训练的模型更聪明。
+So multimodal models will be much smarter than models that just train on language alone.
+
+546
+00:29:26,760 --> 00:29:30,360
+它们在处理空间方面会有更好的想法。
+They'll have a much better idea of how to deal with space, for example.
+
+547
+00:29:30,360 --> 00:29:38,360
+在处理这些模型中的视频数量方面，我们仍然没有非常好的方法。
+And in terms of the amount of total video, we still don't have very good ways of processing video in these models.
+
+548
+00:29:38,560 --> 00:29:40,080
+对视频建模。
+of modeling video.
+
+549
+00:29:40,080 --> 00:29:41,760
+我们一直在进步。
+We're getting better all the time.
+
+550
+00:29:41,760 --> 00:29:44,840
+但我认为像视频这样的东西里有大量数据。
+But I think there's plenty of data in things like video
+
+551
+00:29:44,840 --> 00:29:46,800
+告诉你世界如何运行。
+that tell you how the world works.
+
+552
+00:29:46,800 --> 00:29:49,000
+所以我们还没有达到数据的极限。
+So we're not hitting the data limits
+
+553
+00:29:49,000 --> 00:29:50,760
+对于多模态模型。
+for multi-modal models yet.
+
+554
+00:29:50,760 --> 00:29:55,040
+- 接下来，先生们，请在后面回答。
+- Next, gentlemen, the back.
+
+555
+00:29:55,040 --> 00:29:57,040
+请务必保持您的问题简短。
+And please, please, do keep your question short.
+
+556
+00:29:57,040 --> 00:29:58,680
+- 你好，Dr. Rathindra Rajeev,
+- Hello, Dr. Rathindra Rajeev,
+
+557
+00:29:58,680 --> 00:30:00,440
+来自PWC的你们几位。
+several of you from PWC.
+
+558
+00:30:00,440 --> 00:30:02,920
+我想了解的是，
+The point that I wanted to understand is
+
+559
+00:30:02,920 --> 00:30:04,880
+人工智能所做的一切，
+that everything that AI is doing
+
+560
+00:30:04,880 --> 00:30:07,720
+都是从我们教给它们的东西中学到的。
+is learning from what we are teaching them.
+
+561
+00:30:07,720 --> 00:30:10,840
+好的，数据，是的，它们是快速阅读学习。
+OK, data, yes, they are fast-read learning.
+
+562
+00:30:10,840 --> 00:30:14,280
+一万亿个连接器可以做的远远超过我们拥有的100万亿个连接器。
+One trillion connectors can do much more than 100 trillion
+
+563
+00:30:14,280 --> 00:30:15,640
+但是人类进化的每个阶段
+connectors that we have.
+
+564
+00:30:15,640 --> 00:30:17,840
+都是由思想实验推动的，
+But every piece of human evolution
+
+565
+00:30:17,840 --> 00:30:20,520
+例如爱因斯坦过去常常做思想实验
+has been driven by thought experiments,
+
+566
+00:30:20,520 --> 00:30:22,320
+因为这个星球上没有光速。
+like Einstein used to do thought experiments
+
+567
+00:30:22,320 --> 00:30:25,600
+人工智能如何达到那个程度，如果有的话，
+because there was no speed of light out here on this planet.
+
+568
+00:30:25,600 --> 00:30:28,280
+如果它不能，那么我们怎么可能
+How can AI get to that point, if at all,
+
+569
+00:30:28,280 --> 00:30:30,800
+受到它们存在的威胁
+and if it cannot, then how can we possibly
+
+570
+00:30:30,800 --> 00:30:32,520
+因为他们不会真正地自我学习？
+have an existential threat from them
+
+571
+00:30:32,520 --> 00:30:35,000
+他们的自我学习将局限于我们为他们提供的模型。
+because they will not be self-learning, so to say?
+
+572
+00:30:35,000 --> 00:30:37,400
+我认为这是一个非常有趣的论点，
+They will be self-learning limited to the model
+
+573
+00:30:37,400 --> 00:30:39,400
+但我认为他们将能够进行思想实验。
+that retell them.
+
+574
+00:30:39,400 --> 00:30:42,680
+我认为他们将能够进行推理。
+I think that's a very interesting argument,
+
+575
+00:30:42,680 --> 00:30:45,640
+让我给你举个例子。
+but I think they will be able to do thought experiments.
+
+576
+00:30:45,640 --> 00:30:47,120
+如果你看阿尔法零，它会下棋，
+I think they'll be able to reason.
+
+577
+00:30:47,120 --> 00:30:49,320
+它有三个要素。
+So let me give you an analogy.
+
+578
+00:30:49,320 --> 00:30:53,760
+它有一个评估棋盘认为局面
+If you take alpha 0, which plays chess,
+
+579
+00:30:53,760 --> 00:30:56,160
+undefined
+it has three ingredients.
+
+580
+00:30:56,160 --> 00:30:58,840
+undefined
+It's got something that evaluates the board position
+
+581
+00:30:58,840 --> 00:31:00,600
+说这对我有好处。
+to say is that good for me.
+
+582
+00:31:00,600 --> 00:31:02,680
+它有查看棋盘位置的功能
+It's got something that looks at a board position
+
+583
+00:31:02,680 --> 00:31:05,880
+并判断所有要考虑的走法的意义。
+and says what's the sense of all move to consider.
+
+584
+00:31:05,880 --> 00:31:07,720
+然后它采用蒙特卡罗展开，
+And then it's got Monte Carlo Rollout,
+
+585
+00:31:07,720 --> 00:31:09,240
+这称为计算，
+where it does what's called calculation
+
+586
+00:31:09,240 --> 00:31:11,040
+你想，如果我走这里，他走那里
+where you think, if I go here and he goes there
+
+587
+00:31:11,040 --> 00:31:13,320
+我又走这里，他又走那里。
+and I go here and he goes there.
+
+588
+00:31:13,320 --> 00:31:16,720
+现在，假设你去掉蒙特卡罗展开
+Now, suppose you leave out the Monte Carlo Rollout
+
+589
+00:31:16,720 --> 00:31:19,480
+仅仅通过训练它从人类专家那里
+and you just train it from human experts
+
+590
+00:31:19,480 --> 00:31:21,080
+拥有一个好的评估函数
+to have a good evaluation function
+
+591
+00:31:21,080 --> 00:31:24,480
+和一个选择要考虑的走法的好方法。
+and a good way to choose moves to consider.
+
+592
+00:31:24,480 --> 00:31:27,200
+它仍然能玩一手相当不错的国际象棋。
+It still plays a pretty good game of chess.
+
+593
+00:31:27,200 --> 00:31:30,680
+我认为我们现在的聊天机器人就是这样。
+And I think that's what we've got with the chatbots.
+
+594
+00:31:30,680 --> 00:31:34,080
+我们还没有实现内部推理，
+And we haven't gotten doing internal reasoning,
+
+595
+00:31:34,080 --> 00:31:35,560
+但那会到来的。
+but that will come.
+
+596
+00:31:35,560 --> 00:31:37,360
+一旦他们开始进行内部推理，
+And once they start doing internal reasoning,
+
+597
+00:31:37,360 --> 00:31:38,800
+来检查他们所相信的不同事物之间的一致性，
+to check for the consistency
+
+598
+00:31:38,800 --> 00:31:41,120
+那么他们会变得更聪明
+between the different things they believe,
+
+599
+00:31:41,120 --> 00:31:42,200
+而且它们将能够进行思考实验。
+then they'll get much smarter
+
+600
+00:31:42,200 --> 00:31:44,640
+undefined
+and they will be able to do thought experiments.
+
+601
+00:31:44,640 --> 00:31:49,960
+其中一个原因是他们没有这种内在的推理能力，
+And one reason they haven't got this internal reasoning
+
+602
+00:31:49,960 --> 00:31:53,520
+这是因为他们接受了不一致数据的训练。
+is because they've been trained from inconsistent data.
+
+603
+00:31:53,520 --> 00:31:55,200
+这使得他们很难进行推理，
+And so it's very hard for them to do reasoning
+
+604
+00:31:55,200 --> 00:31:58,680
+因为他们接受了所有这些不一致的信仰的训练。
+because they've been trained on all these inconsistent beliefs.
+
+605
+00:31:58,680 --> 00:32:00,800
+我认为他们需要接受新的训练，
+And I think they're gonna have to be trained
+
+606
+00:32:00,800 --> 00:32:05,280
+所以他们会说,如果我有这种意识形态，
+So they say, you know, if I have this ideology,
+
+607
+00:32:05,280 --> 00:32:06,040
+那么这是真实的。
+then this is true.
+
+608
+00:32:06,040 --> 00:32:08,240
+而如果我有那种意识形态，那么那是真实的。
+And if I have that ideology, then that is true.
+
+609
+00:32:08,240 --> 00:32:09,520
+一旦他们接受了这样的训练，
+And once they're trained like that,
+
+610
+00:32:09,520 --> 00:32:11,640
+在一种意识形态内，他们将能够尝试
+within an ideology, they're going to be able to try
+
+611
+00:32:11,640 --> 00:32:13,240
+并获得一致性。
+and get consistency.
+
+612
+00:32:13,240 --> 00:32:16,200
+所以我们将从阿尔法版本转变，
+And so we're going to get a move like from a version of Alpha
+
+613
+00:32:16,200 --> 00:32:19,800
+它只是猜测好的动作
+Zero that just has something that guesses good moves
+
+614
+00:32:19,800 --> 00:32:22,160
+和评估位置，
+and something that evaluates positions
+
+615
+00:32:22,160 --> 00:32:25,120
+到一个有长链的蒙特卡罗
+to a version that has long chains of Monte Carlo
+
+616
+00:32:25,120 --> 00:32:27,680
+推出，相当于推理。
+rollout, which is equivalent of reasoning.
+
+617
+00:32:27,680 --> 00:32:30,560
+这会变得更好。
+And it's going to get much better.
+
+618
+00:32:30,560 --> 00:32:32,000
+我要在前面回答一个问题，
+I'm going to take one on the front here,
+
+619
+00:32:32,000 --> 00:32:33,440
+如果你能快一点，
+and if you can be quick,
+
+620
+00:32:33,440 --> 00:32:35,440
+我们会在前面的屏幕上展示。
+we'll have front screens that morning as well.
+
+621
+00:32:35,440 --> 00:32:38,240
+- Luis Lambe，Jeff，我认识你很长时间了。
+- Luis Lambe, Jeff, I know you from a long time.
+
+622
+00:32:38,240 --> 00:32:41,880
+Jeff，人们批评语言模型
+Jeff, people criticize language models
+
+623
+00:32:41,880 --> 00:32:45,000
+因为据称它们缺乏语义
+because of allegedly they are lacking semantics
+
+624
+00:32:45,000 --> 00:32:46,640
+和对世界的基础理解，
+and grounding to the world,
+
+625
+00:32:46,640 --> 00:32:49,400
+你也一直试图解释
+and you have been trying to as well to explain
+
+626
+00:32:49,400 --> 00:32:51,760
+神经网络很长时间的运作方式。
+how neural networks work for a long time.
+
+627
+00:32:51,760 --> 00:32:55,240
+关于语义和解释性的问题是否相关?
+Is the question of semantics and explainability relevant here
+
+628
+00:32:55,240 --> 00:32:58,680
+还是语言模型已经占据主导地位，而我们
+or language models have taken over and it's
+
+629
+00:32:58,680 --> 00:33:03,680
+现在注定要在没有语义或对现实的基础的情况下继续前进。
+we are now doomed to go forward without semantics or ground into reality.
+
+630
+00:33:03,680 --> 00:33:09,080
+我很难相信它们没有语义
+I find it very hard to believe that they don't have semantics
+
+631
+00:33:09,080 --> 00:33:12,240
+当它们解决像，你知道，我怎么刷房间这样的问题时，
+when they consult problems like, you know, how I paint the rooms,
+
+632
+00:33:12,240 --> 00:33:15,880
+我怎么在两年时间里让我家的所有房间都涂成白色。
+how I get all the rooms in my house to be painted white in two years time.
+
+633
+00:33:15,880 --> 00:33:19,920
+我的意思是，无论语义是什么，都与那些内容的含义有关
+I mean, whatever semantic is, is to do with the meaning of that stuff
+
+634
+00:33:19,920 --> 00:33:22,960
+而它理解了含义，明白了它。
+and it understood the meaning, it got it.
+
+635
+00:33:22,960 --> 00:33:27,960
+现在，我承认它没有通过成为机器人而被固定下来
+Now, I agree it's not grounded by being a robot
+
+636
+00:33:28,160 --> 00:33:30,680
+但你可以制作多模态的那些有基础的，
+But you can make multimodal ones that are grounded,
+
+637
+00:33:30,680 --> 00:33:32,000
+谷歌已经做到了。
+Google's done that.
+
+638
+00:33:32,000 --> 00:33:34,160
+至于那些有基础的多模态的，
+And the multimodal ones that are grounded,
+
+639
+00:33:34,160 --> 00:33:36,720
+你可以说，请关上抽屉，
+you can say, please close the drawer,
+
+640
+00:33:36,720 --> 00:33:38,200
+然后伸手去抓把手
+and then reach out and grab the handle
+
+641
+00:33:38,200 --> 00:33:39,560
+并关上抽屉。
+and close the drawer.
+
+642
+00:33:39,560 --> 00:33:41,960
+很难说这没有语义。
+And it's very hard to say that doesn't have semantics.
+
+643
+00:33:41,960 --> 00:33:44,600
+实际上，在人工智能的早期阶段，
+In fact, in the very early days of AI,
+
+644
+00:33:44,600 --> 00:33:47,600
+在20世纪70年代的温纳-格劳特时代，
+in the days of winner-grout in the 1970s,
+
+645
+00:33:47,600 --> 00:33:50,200
+他们只有一个模拟世界，
+they had just a simulated world,
+
+646
+00:33:50,200 --> 00:33:52,360
+但他们有所谓的过程性语义，
+but they have what was called procedural semantics,
+
+647
+00:33:52,360 --> 00:33:55,880
+如果你对它说，把红色的盒子，
+where if you said to it, put the red box,
+
+648
+00:33:55,880 --> 00:33:59,120
+把红色的积木放进绿色的盒子里。
+in put the red block in the green box.
+
+649
+00:33:59,120 --> 00:34:00,840
+然后它把红色的积木放进了绿色的盒子里。
+And it put the red block in the green box.
+
+650
+00:34:00,840 --> 00:34:04,040
+她说，看，它理解了这种语言。
+She said, see, it understood the language.
+
+651
+00:34:04,040 --> 00:34:07,000
+那时候人们用这个标准。
+And that was the criterion people used back then.
+
+652
+00:34:07,000 --> 00:34:08,440
+但是现在神经网络可以做到这一点，
+But now that neural nets can do it,
+
+653
+00:34:08,440 --> 00:34:12,080
+他们说这不是一个激进的标准。
+they say that's not a radical criterion.
+
+654
+00:34:12,080 --> 00:34:13,880
+在后面的一个。
+One at the back.
+
+655
+00:34:13,880 --> 00:34:16,720
+嗨，杰夫，我是SAI Group的Eshwar Balani。
+Hey, Jeff, this is Eshwar Balani from SAI Group.
+
+656
+00:34:16,720 --> 00:34:19,960
+很明显，技术以指数级的速度在发展，
+So clearly, the technology is advancing
+
+657
+00:34:19,960 --> 00:34:21,800
+我想听听你的想法，
+at an exponential pace.
+
+658
+00:34:21,800 --> 00:34:23,800
+如果你观察近期和中期，比如说，一、两、三或者五年的时间范围，
+I wanted to get your thoughts--
+
+659
+00:34:23,800 --> 00:34:28,800
+从社会角度看失业对社会和经济的影响是什么？
+If you looked at the near and medium term, say, one, two, three, or maybe five year horizon,
+
+660
+00:34:28,800 --> 00:34:35,800
+undefined
+what the social and economic implications are from a societal perspective with job loss
+
+661
+00:34:35,800 --> 00:34:41,800
+或许新的工作岗位正在被创造，我只是想听听你关于我们该如何继续前进的想法
+or maybe new jobs being created, just wanted to get your thoughts on how we proceed
+
+662
+00:34:41,800 --> 00:34:44,800
+考虑到现有的技术状况和变化速度。
+given the state of the technology and rate of change.
+
+663
+00:34:44,800 --> 00:34:50,800
+是的，所以我敲响的警钟是关于它们对我们生存造成的潜在威胁，它们可能会控制一切。
+Yes, so the alarm I'm ringing is to do with the existential threat of them taking control.
+
+664
+00:34:50,800 --> 00:34:52,800
+很多其他人也谈论过这个问题。
+Lots of other people talked about that.
+
+665
+00:34:52,800 --> 00:34:57,120
+那个，我并不认为自己是这方面的专家，但有些非常明显的
+that, and I don't consider myself to be an expert on that, but there's some very obvious
+
+666
+00:34:57,120 --> 00:35:03,880
+事情是它们会让一大堆工作变得更高效。所以我知道
+things that they're going to make a whole bunch of jobs much more efficient. So I know
+
+667
+00:35:03,880 --> 00:35:08,720
+有人负责回复医疗服务投诉信，他过去需要25分钟
+someone who answers letters of complaint to a health service, and he used to take 25 minutes
+
+668
+00:35:08,720 --> 00:35:13,480
+写一封信，现在他只需五分钟，因为他把信交给了GPT聊天
+writing a letter, and now it takes him five minutes because he gives it to chat GPT
+
+669
+00:35:13,480 --> 00:35:17,520
+然后GPT聊天为他写信，他只需检查一下。会有很多
+and chat GPT writes the letter for him, and then he just checks it. There'll be lots of
+
+670
+00:35:17,520 --> 00:35:21,520
+像这样的东西，将极大地提高生产力。
+stuff like that, which is going to cause huge increases in productivity.
+
+671
+00:35:21,520 --> 00:35:26,120
+由于人们在采用新技术时非常保守，因此会有一定的延迟，
+There will be delays because people are very conservative about adopting new technology,
+
+672
+00:35:26,120 --> 00:35:29,280
+但我认为生产力将会大幅增加。
+but I think there's going to be huge increases in productivity.
+
+673
+00:35:29,280 --> 00:35:34,080
+我担心的是，这些生产力提高将导致人们失业，
+My worry is that those increases in productivity are going to go to putting people out of work
+
+674
+00:35:34,080 --> 00:35:37,480
+以及富人更富，穷人更穷。
+and making the rich richer and the poor poorer.
+
+675
+00:35:37,480 --> 00:35:42,960
+当你放大这个差距时，社会变得越来越暴力，想
+As you do that, as you make that gap bigger, society gets more and more violent, think
+
+676
+00:35:42,960 --> 00:35:45,240
+那个叫做基尼系数的东西，很好地预测了这种
+called the genie index, which predicts quite well how much
+
+677
+00:35:45,240 --> 00:35:48,280
+平衡存在的程度。
+balance there is.
+
+678
+00:35:48,280 --> 00:35:53,640
+因此这项技术原本应该是很棒的——
+So this technology which ought to be wonderful--
+
+679
+00:35:53,640 --> 00:35:56,560
+即便是对这项技术的良好应用，如果我们正在做有益的事情，
+even the good uses of technology, if you're doing helpful things,
+
+680
+00:35:56,560 --> 00:35:58,080
+它也应该是非常美好的。
+ought to be wonderful.
+
+681
+00:35:58,080 --> 00:36:00,440
+但我们现在的政治制度
+But our current political systems
+
+682
+00:36:00,440 --> 00:36:03,960
+将被用来使富人更富，穷人更穷。
+is going to be used to make the rich richer in the poor poorer.
+
+683
+00:36:03,960 --> 00:36:07,560
+通过为每个人提供基本收入，您可能可以缓解这个问题。
+You might be able to ameliorate that by having
+
+684
+00:36:07,560 --> 00:36:10,440
+但是这种技术是在一个没有为大家的利益而设计的社会中发展起来的。
+a basic income that everybody gets.
+
+685
+00:36:10,440 --> 00:36:22,440
+来自在座的全球邮报的Joe Castalda的一个问题。
+But the technology is being developed in a society that is not designed to use it for everybody's good.
+
+686
+00:36:22,440 --> 00:36:30,440
+您是否打算继续持有Kehere和其他公司的投资？
+A question here from Joe Castalda of the Global Mail, who's in the audience.
+
+687
+00:36:30,440 --> 00:36:34,440
+如果是这样，为什么？
+Do you intend to hold onto your investments in Kehere and other companies?
+
+688
+00:36:34,440 --> 00:36:36,440
+嗯，我可以把钱拿走，把它放到银行，让他们从中获利。
+And if so, why?
+
+689
+00:36:38,440 --> 00:36:45,440
+那个……
+Well, I could take the money and I could put it in the bank and let them profit from it.
+
+690
+00:36:45,440 --> 00:36:47,440
+是的，我打算继续持有我的投资，部分原因是周围的人
+It's...
+
+691
+00:36:47,440 --> 00:36:53,280
+与co-herent是我的朋友。
+Yes, I'm going to hold onto my investments here, partly because the people around
+
+692
+00:36:53,280 --> 00:36:56,440
+我有点相信这些大型语言球体将会非常有帮助。
+co-herent are friends of mine.
+
+693
+00:36:56,440 --> 00:37:02,440
+我认为技术应该是好的并且应该使事情运作得更好。
+I sort of believe these big language balls are going to be very helpful.
+
+694
+00:37:02,440 --> 00:37:09,640
+我们需要解决的是像就业这样的政治问题。
+I think the technology should be good and it should make things work better.
+
+695
+00:37:09,640 --> 00:37:14,520
+但当涉及到生存威胁时，我们必须考虑如何保持对技术的控制。
+It's the politics we need to fix for things like employment.
+
+696
+00:37:14,520 --> 00:37:20,680
+但好消息是我们都在同一条船上，所以我们可能可以得到合作。
+But when it comes to the existential threat, we have to think how we can keep control of the technology.
+
+697
+00:37:20,680 --> 00:37:26,000
+在发言时，我了解您实际上想要与这项技术的制造者交流，您可能会改变他们的想法或者我
+But the good news there is that we're all in the same boat so we might be able to get cooperation.
+
+698
+00:37:26,000 --> 00:37:32,400
+不知道。我是说我们已经确定我们真的不知道该怎么办
+And in speaking out, I mean, part of your thinking as I understand it is that you actually want to engage with the people
+
+699
+00:37:32,400 --> 00:37:40,080
+undefined
+making this technology and you change their minds or maybe make a case for I
+
+700
+00:37:40,080 --> 00:37:43,520
+undefined
+don't really know. I mean we've established that we don't really know what to do
+
+701
+00:37:43,520 --> 00:37:48,200
+但这是关于参与而不是退缩。所以其中一件事让我离开谷歌，公开谈论这个问题，
+but it's about engaging rather than stepping back. So one of the things that
+
+702
+00:37:48,200 --> 00:37:55,120
+是他曾经是朱利亚教授，现在是我非常敬重的中层教授，
+made me leave Google and go public with this is to say he used to be a Julia
+
+703
+00:37:55,120 --> 00:38:00,720
+也是鼓励我这样做的人。他说，“杰夫，你需要发言。他们会听你的。
+professor but he's now a middle-ranked professor who I think very highly of
+
+704
+00:38:00,720 --> 00:38:05,280
+人们对这种危险视而不见。”
+who encouraged me to do this. He said, "Jeff, you need to speak out. They'll listen to you.
+
+705
+00:38:05,280 --> 00:38:08,080
+还有…
+People are just blind to this danger."
+
+706
+00:38:08,080 --> 00:38:10,160
+你认为人们在倾听吗？
+And...
+
+707
+00:38:10,160 --> 00:38:13,920
+对，不。我认为这个房间里的每个人都在倾听。
+Do you think people are listening, though?
+
+708
+00:38:13,920 --> 00:38:17,440
+最后一个问题。时间已经到了，但你后悔参与其中吗？
+Yeah, no. I think everyone in this room is listening for a start.
+
+709
+00:38:17,440 --> 00:38:24,480
+《纽约时报》的凯普·麦兹竭尽全力让我承认自己有遗憾。
+Just one last question. We're out of time, but do you have regrets that you're involved in
+
+710
+00:38:24,480 --> 00:38:24,960
+《纽约时报》的凯普·麦兹。
+making this?
+
+711
+00:38:25,840 --> 00:38:29,680
+最后，我说，可能有些许的遗憾，
+Cape Metz tried very hard to get me to say I had regrets.
+
+712
+00:38:29,680 --> 00:38:31,200
+这件事被报道成有遗憾的。
+Cape Metz at the New York Times.
+
+713
+00:38:31,200 --> 00:38:36,640
+但我认为在进行研究时我没有做出任何错误的决策。
+And yes, and in the end, I said, well, maybe slight regrets,
+
+714
+00:38:36,640 --> 00:38:39,360
+我认为在20世纪70年代和80年代，对人造神经网络进行研究是非常合理的。
+which got reported as has regrets.
+
+715
+00:38:39,360 --> 00:38:43,840
+但这是无法预料的
+But I don't think I made any bad decisions in doing research.
+
+716
+00:38:43,840 --> 00:38:46,960
+这个阶段是无法预料的。
+I think it was perfectly reasonable back in the 70s and 80s
+
+717
+00:38:46,960 --> 00:38:49,360
+直到最近，我还以为这个生存危机还很遥远。
+to do research on how to make artificial neural nets.
+
+718
+00:38:49,360 --> 00:38:52,400
+undefined
+But it wasn't really foreseeable.
+
+719
+00:38:52,400 --> 00:38:54,160
+undefined
+This stage of it wasn't foreseeable.
+
+720
+00:38:54,560 --> 00:38:58,640
+undefined
+And until very recently I thought this existential crisis was a long way off.
+
+721
+00:38:58,640 --> 00:39:02,000
+所以，我真的对我所做的事情没有什么遗憾。
+So I don't really have any regrets about what I did.
+
+722
+00:39:02,000 --> 00:39:10,080
+谢谢你，杰弗里。非常感谢你加入我们。
+Thank you, Geoffrey. Thank you so much for joining us.
+
+723
+00:39:10,080 --> 00:39:12,080
+[掌声]
+[APPLAUSE]
+
+724
+00:39:12,080 --> 00:39:22,080
+[无声音频]
+[BLANK_AUDIO]

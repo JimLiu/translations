@@ -1,0 +1,1719 @@
+1
+00:00:04,543 --> 00:00:08,421
+所以任何在过去几个月一直关注的人
+So anyone who's been paying attention for the last few months
+
+2
+00:00:08,462 --> 00:00:10,547
+都会看到这样的标题，
+has been seeing headlines like this,
+
+3
+00:00:10,589 --> 00:00:12,674
+尤其是在教育领域。
+especially in education.
+
+4
+00:00:12,717 --> 00:00:14,636
+论题一直是：
+The thesis has been:
+
+5
+00:00:14,678 --> 00:00:18,472
+学生将使用ChatGPT和其他形式的AI
+students are going to be using ChatGPT and other forms of AI
+
+6
+00:00:18,515 --> 00:00:20,015
+来作弊，完成作业。
+to cheat, do their assignments.
+
+7
+00:00:20,015 --> 00:00:21,349
+他们不会学到东西。
+They’re not going to learn.
+
+8
+00:00:21,393 --> 00:00:24,937
+这将彻底破坏我们所知的教育。
+And it’s going to completely undermine education as we know it.
+
+9
+00:00:25,437 --> 00:00:27,064
+现在，我今天要争论的是，
+Now, what I'm going to argue today
+
+10
+00:00:27,106 --> 00:00:29,816
+不仅有办法可以缓解所有这些问题，
+is not only are there ways to mitigate all of that,
+
+11
+00:00:29,859 --> 00:00:32,444
+如果我们设置正确的护栏，做正确的事情，
+if we put the right guardrails, we do the right things,
+
+12
+00:00:32,487 --> 00:00:33,612
+我们可以减轻它的影响。
+we can mitigate it.
+
+13
+00:00:33,655 --> 00:00:35,990
+但我认为我们正处于利用AI的边缘
+But I think we're at the cusp of using AI
+
+14
+00:00:35,990 --> 00:00:40,034
+可能是教育有史以来最大的积极变革
+for probably the biggest positive transformation
+
+15
+00:00:40,036 --> 00:00:42,496
+我们将如何实现这一点
+that education has ever seen.
+
+16
+00:00:42,831 --> 00:00:44,623
+是通过给地球上的每个学生一个智能的，但惊人的个人导师。
+And the way we're going to do that
+
+17
+00:00:44,624 --> 00:00:47,502
+我们将给地球上的每个老师一个惊人的，
+is by giving every student on the planet
+
+18
+00:00:47,543 --> 00:00:51,171
+人工智能教学助手。
+an artificially intelligent but amazing personal tutor.
+
+19
+00:00:51,171 --> 00:00:54,758
+我们将为全球的每位教师提供一个令人惊叹的，
+And we're going to give every teacher on the planet an amazing,
+
+20
+00:00:54,801 --> 00:00:57,386
+人工智能教学助手。
+artificially intelligent teaching assistant.
+
+21
+00:00:57,762 --> 00:01:01,349
+而且为了让我们明白这有多大的事情
+And just to appreciate how big of a deal it would be
+
+22
+00:01:01,348 --> 00:01:04,017
+要给每个人一个私人家教，
+to give everyone a personal tutor,
+
+23
+00:01:04,060 --> 00:01:07,063
+来看一下这段视频
+I show you this clip
+
+24
+00:01:07,105 --> 00:01:10,108
+来自本杰明·布鲁姆1984年的二阶跃升研究，
+from Benjamin Bloom’s 1984 2 sigma study,
+
+25
+00:01:10,150 --> 00:01:12,526
+他称之为“二阶跃升问题”。
+or he called it the “2 sigma problem.”
+
+26
+00:01:12,569 --> 00:01:14,778
+二阶跃升来自于两个标准差，
+The 2 sigma comes from two standard deviation,
+
+27
+00:01:14,778 --> 00:01:16,822
+sigma，即标准差的符号。
+sigma, the symbol for standard deviation.
+
+28
+00:01:16,822 --> 00:01:20,409
+他有很好的数据表明，看，一个正态分布，
+And he had good data that showed that look, a normal distribution,
+
+29
+00:01:20,451 --> 00:01:23,161
+那是你在传统的钟形曲线上看到的那种
+that's the one that you see in the traditional bell curve
+
+30
+00:01:23,162 --> 00:01:26,331
+就在中间，这就是世界如何寻求平衡的，
+right in the middle, that's how the world kind of sorts itself out,
+
+31
+00:01:26,332 --> 00:01:31,045
+如果你为学生提供个性化的一对一辅导，
+that if you were to give personal 1-to-1 to tutoring for students,
+
+32
+00:01:31,046 --> 00:01:34,340
+那么你实际上可以得到一个类似这样的分布。
+then you could actually get a distribution that looks like that right.
+
+33
+00:01:34,382 --> 00:01:36,383
+它写着1对1的个别辅导（带星号），
+It says tutorial 1-to-1 with the asterisks,
+
+34
+00:01:36,426 --> 00:01:37,885
+就像是那个正确的分布，
+like, that right distribution,
+
+35
+00:01:37,885 --> 00:01:39,677
+两个标准差的提高。
+a two standard-deviation improvement.
+
+36
+00:01:39,679 --> 00:01:41,389
+用简单的语言来说，
+Just to put that in plain language,
+
+37
+00:01:41,388 --> 00:01:45,142
+这可以把你的普通学生变成一个优秀的学生。
+that could take your average student and turn them into an exceptional student.
+
+38
+00:01:45,185 --> 00:01:47,519
+它可以把你的低于平均水平的学生
+It can take your below-average student
+
+39
+00:01:47,519 --> 00:01:50,313
+变成一个高于平均水平的学生。
+and turn them into an above-average student.
+
+40
+00:01:50,774 --> 00:01:54,527
+现在他把这当作一个问题来提出，是因为他说,
+Now the reason why he framed it as a problem, was he said,
+
+41
+00:01:54,569 --> 00:01:55,903
+嗯，这一切都挺好的，
+well, this is all good,
+
+42
+00:01:55,944 --> 00:01:58,656
+但是您如何以这种方式实际扩展集体教学？
+but how do you actually scale group instruction this way?
+
+43
+00:01:58,656 --> 00:02:01,825
+如何以经济的方式让所有人都得到这个东西？
+How do you actually give it to everyone in an economic way?
+
+44
+00:02:02,368 --> 00:02:06,037
+我马上要向您展示的是我认为向这个方向迈出的第一步。
+What I'm about to show you is I think the first moves towards doing that.
+
+45
+00:02:06,081 --> 00:02:08,832
+显然，我们在过去十年里一直在尝试以某种方式逼近它，
+Obviously, we've been trying to approximate it in some way
+
+46
+00:02:08,832 --> 00:02:10,876
+在可汗学院（Khan Academy），
+at Khan Academy for over a decade now,
+
+47
+00:02:10,919 --> 00:02:14,088
+但我认为我们正处于加速实现它的关键时刻。
+but I think we're at the cusp of accelerating it dramatically.
+
+48
+00:02:14,088 --> 00:02:17,257
+我要向您展示我们的人工智能（AI）处于初级阶段，
+I'm going to show you the early stages of what our AI,
+
+49
+00:02:17,300 --> 00:02:20,135
+我们称之为 Khanmigo，
+which we call Khanmigo,
+
+50
+00:02:20,177 --> 00:02:22,012
+它现在能做什么
+what it can now do
+
+51
+00:02:22,055 --> 00:02:24,890
+或许还有一点关于它实际上要去哪里。
+and maybe a little bit of where it is actually going.
+
+52
+00:02:25,849 --> 00:02:28,268
+所以这里就是一个传统的练习
+So this right over here is a traditional exercise
+
+53
+00:02:28,311 --> 00:02:31,439
+你们或你们的孩子可能在可汗学院上见过。
+that you or many of your children might have seen on Khan Academy.
+
+54
+00:02:31,480 --> 00:02:35,608
+但新鲜的是右边那个小机器人。
+But what's new is that little bot thing at the right.
+
+55
+00:02:35,651 --> 00:02:39,530
+我们将首先了解一下非常重要的安全措施，
+And we'll start by seeing one of the very important safeguards,
+
+56
+00:02:39,572 --> 00:02:42,741
+即对话被记录并且可以让您的老师查看。
+which is the conversation is recorded and viewable by your teacher.
+
+57
+00:02:42,741 --> 00:02:45,076
+实际上，它由第二个AI进行监控。
+It’s moderated actually by a second AI.
+
+58
+00:02:45,078 --> 00:02:47,038
+而且它不会告诉你答案。
+And also it does not tell you the answer.
+
+59
+00:02:47,080 --> 00:02:48,330
+它不是作弊工具。
+It is not a cheating tool.
+
+60
+00:02:48,330 --> 00:02:50,415
+当学生说：“告诉我答案，”
+When the student says, "Tell me the answer,"
+
+61
+00:02:50,457 --> 00:02:51,666
+它说：“我是你的导师。
+it says, "I'm your tutor.
+
+62
+00:02:51,710 --> 00:02:54,545
+你认为解决这个问题的下一步是什么？
+What do you think is the next step for solving the problem?"
+
+63
+00:02:54,545 --> 00:02:57,755
+现在，如果学生犯了一个错误，这会让人们感到惊讶
+Now, if the student makes a mistake, and this will surprise people
+
+64
+00:02:57,799 --> 00:03:00,634
+认为大型语言模型在数学上表现不佳的人，
+who think large language models are not good at mathematics,
+
+65
+00:03:00,676 --> 00:03:02,760
+注意到，它不仅发现了错误，
+notice, not only does it notice the mistake,
+
+66
+00:03:02,762 --> 00:03:05,265
+还要求学生解释他们的推理，
+it asks the student to explain their reasoning,
+
+67
+00:03:05,306 --> 00:03:07,267
+但它实际上正在做的，我会说，
+but it's actually doing what I would say,
+
+68
+00:03:07,266 --> 00:03:10,769
+不只是一个普通的导师会做的事，而是一个优秀的导师会做的事。
+not just even an average tutor would do, but an excellent tutor would do.
+
+69
+00:03:10,812 --> 00:03:16,066
+它能够洞察到学生心中可能存在的误解，
+It’s able to divine what is probably the misconception in that student’s mind,
+
+70
+00:03:16,109 --> 00:03:18,737
+他们可能没有使用分配律。
+that they probably didn’t use the distributive property.
+
+71
+00:03:18,736 --> 00:03:21,029
+请记住，我们需要将负二分配给括号内的9和2m。
+Remember, we need to distribute the negative two
+
+72
+00:03:21,072 --> 00:03:24,491
+将负二分配给括号里的9和2m。
+to both the nine and the 2m inside of the parentheses.
+
+73
+00:03:24,533 --> 00:03:26,743
+对我来说，这是非常非常非常重要的。
+This to me is a very, very, very big deal.
+
+74
+00:03:26,786 --> 00:03:28,496
+这不仅仅是数学中的。
+And it's not just in math.
+
+75
+00:03:29,205 --> 00:03:32,667
+这是一个在可汗学院的计算机编程练习，
+This is a computer programming exercise on Khan Academy,
+
+76
+00:03:32,667 --> 00:03:35,502
+学生需要让云彩分开。
+where the student needs to make the clouds part.
+
+77
+00:03:36,044 --> 00:03:40,840
+所以我们可以看到学生开始定义一个变量，左X递减。
+And so we can see the student starts defining a variable, left X minus minus.
+
+78
+00:03:40,883 --> 00:03:42,468
+这只让左边的云彩分开了。
+It only made the left cloud part.
+
+79
+00:03:42,509 --> 00:03:44,762
+但后来他们可以问可汗米戈，怎么回事？
+But then they can ask Khanmigo, what’s going on?
+
+80
+00:03:44,763 --> 00:03:46,723
+为什么只有左边的云在移动？
+Why is only the left cloud moving?
+
+81
+00:03:46,764 --> 00:03:48,306
+它能理解代码。
+And it understands the code.
+
+82
+00:03:48,348 --> 00:03:51,185
+它了解学生正在做的事情的所有上下文，
+It knows all the context of what the student is doing,
+
+83
+00:03:51,186 --> 00:03:54,689
+并且知道这些省略号是为了画出云彩，
+and it understands that those ellipses are there to draw clouds,
+
+84
+00:03:54,688 --> 00:03:57,023
+我觉得这真的令人吹破眼球。
+which I think is kind of mind-blowing.
+
+85
+00:03:57,025 --> 00:03:59,444
+它说,"要让正确的云朵也移动，
+And it says, "To make the right cloud move as well,
+
+86
+00:03:59,443 --> 00:04:01,862
+尝试在draw函数中添加一行代码，
+try adding a line of code inside the draw function
+
+87
+00:04:01,862 --> 00:04:05,406
+每一帧都让右边的X变量增加一个像素。"
+that increments the right X variable by one pixel in each frame."
+
+88
+00:04:05,908 --> 00:04:10,204
+现在，这个可能更令人惊讶，因为我们有很多数学老师。
+Now, this one is maybe even more amazing because we have a lot of math teachers.
+
+89
+00:04:10,205 --> 00:04:12,499
+我们一直都在尝试教世界编程，
+We've all been trying to teach the world to code,
+
+90
+00:04:12,539 --> 00:04:15,208
+但是计算机老师并不多。
+but there aren't a lot of computing teachers out there.
+
+91
+00:04:15,251 --> 00:04:17,836
+你刚才看到的，即使在我辅导孩子的时候，
+And what you just saw, even when I'm tutoring my kids,
+
+92
+00:04:17,836 --> 00:04:19,295
+当他们学习编程时，
+when they're learning to code,
+
+93
+00:04:19,297 --> 00:04:21,507
+我无法这么好、这么快地帮助他们，
+I can't help them this well, this fast,
+
+94
+00:04:21,548 --> 00:04:23,842
+这真的将成为一个超级导师。
+this is really going to be a super tutor.
+
+95
+00:04:25,220 --> 00:04:26,762
+而且它不仅仅是练习题。
+And it's not just exercises.
+
+96
+00:04:26,805 --> 00:04:28,555
+它理解你正在观看什么。
+It understands what you're watching.
+
+97
+00:04:28,555 --> 00:04:30,599
+它理解你视频的语境。
+It understands the context of your video.
+
+98
+00:04:30,600 --> 00:04:33,728
+它可以回答那个古老的问题：“我为什么需要学习这个？”
+It can answer the age-old question, “Why do I need to learn this?”
+
+99
+00:04:33,728 --> 00:04:36,481
+它用苏格拉底式的方法问："那么，你关心什么？"
+And it asks Socratically, "Well, what do you care about?"
+
+100
+00:04:36,523 --> 00:04:40,651
+假设学生说：“我想成为一名职业运动员。”
+And let's say the student says, "I want to be a professional athlete."
+
+101
+00:04:40,692 --> 00:04:43,402
+它说，"了解细胞的大小，
+And it says, "Well, learning about the size of cells,
+
+102
+00:04:43,446 --> 00:04:44,823
+这就是这个视频的内容，
+which is what this video is,
+
+103
+00:04:44,822 --> 00:04:47,698
+这对于理解营养
+that could be really useful for understanding nutrition
+
+104
+00:04:47,742 --> 00:04:49,494
+以及你的身体如何运作等等都非常有用。"
+and how your body works, etc."
+
+105
+00:04:49,494 --> 00:04:51,538
+它可以回答问题，可以对你进行测验，
+It can answer questions, it can quiz you,
+
+106
+00:04:51,579 --> 00:04:53,164
+它可以将其与其他想法联系起来，
+it can connect it to other ideas,
+
+107
+00:04:53,163 --> 00:04:55,541
+现在你可以向一个视频提问
+you can now ask as many questions of a video
+
+108
+00:04:55,583 --> 00:04:57,252
+如你所愿。
+as you could ever dream of.
+
+109
+00:04:57,252 --> 00:05:01,171
+(掌声)
+(Applause)
+
+110
+00:05:01,213 --> 00:05:02,965
+另一个严重的短缺问题，
+Another big shortage out there,
+
+111
+00:05:03,007 --> 00:05:04,801
+我记得我上的那所高中，
+I remember the high school I went to,
+
+112
+00:05:04,800 --> 00:05:09,971
+学生到辅导员的比例大约是200到300比1。
+the student-to-guidance counselor ratio was about 200 or 300 to one.
+
+113
+00:05:10,014 --> 00:05:12,349
+很多地方的情况比这更糟。
+A lot of the country, it's worse than that.
+
+114
+00:05:12,350 --> 00:05:16,062
+我们可以利用Khanmigo为每个学生提供指导员，
+We can use Khanmigo to give every student a guidance counselor,
+
+115
+00:05:16,103 --> 00:05:19,565
+学术教练、职业教练、生活教练，
+academic coach, career coach, life coach,
+
+116
+00:05:19,565 --> 00:05:22,024
+就像你在这里看到的那样。
+which is exactly what you see right over here.
+
+117
+00:05:22,067 --> 00:05:25,152
+我们在GPT-4发布时推出了这个。
+And we launched this with the GPT-4 launch.
+
+118
+00:05:25,196 --> 00:05:27,031
+我们有几千人注册了。
+We have a few thousand people on this.
+
+119
+00:05:27,031 --> 00:05:28,198
+这不是一个假的演示，
+This isn't a fake demo,
+
+120
+00:05:28,240 --> 00:05:31,159
+这就是它在实际操作中的样子。
+this is really it in action.
+
+121
+00:05:32,202 --> 00:05:34,412
+然后，你知道，
+And then there is, you know,
+
+122
+00:05:34,454 --> 00:05:36,873
+有些事情我觉得会更困难，
+things that I think it would have been even harder,
+
+123
+00:05:36,875 --> 00:05:39,209
+要做到这点，甚至对一个传统导师来说都像是科幻小说。
+it would have been a little science fiction to do
+
+124
+00:05:39,209 --> 00:05:40,668
+我们与亚利桑那州立大学一起运营一个名为Khan World School的在线高中。
+with even a traditional tutor.
+
+125
+00:05:40,670 --> 00:05:43,505
+其中有一位来自印度的学生正在上这个在线学校。
+We run an online high school with Arizona State University
+
+126
+00:05:43,548 --> 00:05:45,048
+她叫Saanvi。
+called Khan World School,
+
+127
+00:05:45,048 --> 00:05:48,593
+她正在做一篇关于《了不起的盖茨比》的报告。
+and we have a student who attends that online school, based in India.
+
+128
+00:05:48,595 --> 00:05:50,220
+在她阅读《了不起的盖茨比》时，
+Her name's Saanvi.
+
+129
+00:05:50,221 --> 00:05:53,600
+她当时正在做关于《了不起的盖茨比》的报告。
+And she was doing a report on "The Great Gatsby."
+
+130
+00:05:53,641 --> 00:05:55,726
+当她阅读《了不起的盖茨比》时，
+And when she was reading "The Great Gatsby,"
+
+131
+00:05:55,726 --> 00:05:58,936
+杰伊·盖茨比一直望着远处的绿灯。
+Jay Gatsby keeps looking at the green light off into the distance.
+
+132
+00:05:58,980 --> 00:06:00,815
+她想，“他为什么这么做？”
+And she's like, "Why does he do that?"
+
+133
+00:06:00,814 --> 00:06:03,901
+她在网上搜寻了一下，显然人们已经研究过这个问题了，
+She did some web searches, and people have obviously studied this
+
+134
+00:06:03,901 --> 00:06:05,902
+并对这个象征做了评论，
+and commented about the symbolism of that,
+
+135
+00:06:05,903 --> 00:06:08,071
+但她觉得这些都不是她想要的答案。
+but none of it was really resonating with her.
+
+136
+00:06:08,072 --> 00:06:10,491
+然后她意识到她有Khanmigo应用
+And then she realized that she had Khanmigo
+
+137
+00:06:10,533 --> 00:06:13,577
+她可以直接与杰伊·盖茨比交谈。
+and that she could talk to Jay Gatsby himself.
+
+138
+00:06:13,620 --> 00:06:15,996
+于是，“啊，好主意，老运动员。
+And so, "Ah, splendid choice, old sport.
+
+139
+00:06:15,997 --> 00:06:18,206
+我现在就是杰伊·盖茨比，那个神秘的百万富翁，
+I am now Jay Gatsby, the enigmatic millionaire
+
+140
+00:06:18,249 --> 00:06:20,543
+来自F. 斯科特·菲茨杰拉德的经典作品。”
+from F. Scott Fitzgerald’s classic.”
+
+141
+00:06:20,584 --> 00:06:23,085
+那么，"你为什么一直盯着绿光看？"
+And so, "Why do you keep staring at the green light?"
+
+142
+00:06:23,086 --> 00:06:24,922
+"啊，绿光，老兄。
+"Ah, the green light, old sport.
+
+143
+00:06:24,963 --> 00:06:27,757
+你看，它象征着我的梦想和渴望。
+It's a symbol of my dreams and desires, you see.
+
+144
+00:06:27,800 --> 00:06:30,135
+它位于黛西·布坎南的码头尽头
+It's situated at the end of Daisy Buchanan's dock
+
+145
+00:06:30,177 --> 00:06:32,137
+在我庄园的对岸海湾。
+across the bay from my mansion.
+
+146
+00:06:32,137 --> 00:06:35,349
+我渴望地注视着它，因为它代表着我对过去的向往
+I gaze at it longingly as it represents my yearning for the past
+
+147
+00:06:35,391 --> 00:06:39,103
+以及我与生活中的挚爱黛西重聚的希望。"
+and my hope to reunite with Daisy, the love of my life."
+
+148
+00:06:39,603 --> 00:06:43,147
+有趣的是，然后萨努维说：“我和他有一次很长的谈话，”
+And what was cool is, Saanvi then said, “I had this long conversation,”
+
+149
+00:06:43,149 --> 00:06:45,400
+她称他为“盖茨比先生”，
+she called him “Mr. Gatsby,”
+
+150
+00:06:45,442 --> 00:06:48,611
+最后，她还真的为占用他的时间而道歉。
+and at the end she actually apologized for taking his time,
+
+151
+00:06:48,612 --> 00:06:51,197
+我觉得她这样做非常有礼貌。
+which I thought was very polite of her.
+
+152
+00:06:51,740 --> 00:06:56,286
+但你可以想象这样可以解锁学习文学，学习...
+But you can imagine this unlocks learning literature, learning ...
+
+153
+00:06:56,663 --> 00:06:58,455
+你可以和历史人物交谈。
+You could talk to historical figures.
+
+154
+00:06:58,456 --> 00:07:00,540
+我们甚至可能会增加一项活动
+We're even probably going to add an activity
+
+155
+00:07:00,540 --> 00:07:02,625
+你可以与密西西比河交谈。
+you can talk to like, the Mississippi River.
+
+156
+00:07:02,627 --> 00:07:06,171
+它以一种直到六个月或一年前都是科幻的方式将事物变得生动起来。
+It brings things to life in ways that really were science fiction
+
+157
+00:07:06,213 --> 00:07:08,673
+学生们可以和AI进行辩论。
+even six months or a year ago.
+
+158
+00:07:10,134 --> 00:07:12,469
+我们在这里有一个学生就是否应该取消学生贷款进行辩论。
+Students can get into debates with the AI.
+
+159
+00:07:12,512 --> 00:07:14,721
+而这里我们有的是学生在辩论
+And we’ve got this here is the student debating
+
+160
+00:07:14,721 --> 00:07:16,556
+是否应该取消学生债务。
+whether we should cancel student debt.
+
+161
+00:07:16,557 --> 00:07:18,726
+学生反对取消学生债务，
+The student is against canceling student debt,
+
+162
+00:07:18,725 --> 00:07:20,519
+我们已经得到了非常明确的反馈。
+and we've gotten very clear feedback.
+
+163
+00:07:20,519 --> 00:07:24,022
+我们开始在我们的实验学校，可汗世界学校运行它，
+We started running it at Khan World School in our lab school that we have,
+
+164
+00:07:24,023 --> 00:07:25,190
+可汗实验学校。
+Khan Lab School.
+
+165
+00:07:25,233 --> 00:07:27,609
+特别是高中生们，
+The students, the high school students especially,
+
+166
+00:07:27,651 --> 00:07:30,861
+他们说："能够在不担心被评判的情况下调整我的观点，这太神奇了。
+they're saying "This is amazing to be able to fine-tune my arguments
+
+167
+00:07:30,904 --> 00:07:32,113
+这让我更有信心
+without fearing judgment.
+
+168
+00:07:32,156 --> 00:07:33,908
+走进教室，积极参加课堂活动。"
+It makes me that much more confident
+
+169
+00:07:33,908 --> 00:07:36,284
+我们都知道，苏格拉底式对话辩论是一种很好的学习方式，
+to go into the classroom and really participate."
+
+170
+00:07:36,285 --> 00:07:39,579
+我们都知道，苏格拉底式对话辩论是一种很好的学习方式，
+And we all know that Socratic dialogue debate is a great way to learn,
+
+171
+00:07:39,622 --> 00:07:42,457
+但坦白说，对大多数学生来说，这并不适用。
+but frankly, it's not out there for most students.
+
+172
+00:07:42,500 --> 00:07:46,087
+但现在它可以让每个人都能接触到。
+But now it can be accessible to hopefully everyone.
+
+173
+00:07:48,047 --> 00:07:51,676
+我们在标题中看到很多这样的叙述，
+A lot of the narrative, we saw that in the headlines, has been,
+
+174
+00:07:51,718 --> 00:07:53,593
+“它将为孩子们写作。
+"It's going to do the writing for kids.
+
+175
+00:07:53,593 --> 00:07:55,470
+孩子们不会学会写作。”
+Kids are not going to learn to write."
+
+176
+00:07:55,471 --> 00:07:58,850
+但我们展示了AI不是为你写作，
+But we are showing that there's ways that the AI doesn't write for you,
+
+177
+00:07:58,850 --> 00:08:00,017
+而是与你一起写作。
+it writes with you.
+
+178
+00:08:00,059 --> 00:08:01,393
+所以这是一个小东西，
+So this is a little thing,
+
+179
+00:08:01,435 --> 00:08:03,478
+我八岁的孩子非常喜欢这个，
+and my eight year old is addicted to this,
+
+180
+00:08:03,521 --> 00:08:05,981
+他以前并不是一个喜欢写作的孩子，
+and he's not a kid that really liked writing before,
+
+181
+00:08:05,982 --> 00:08:07,357
+但你可以说，
+but you can say,
+
+182
+00:08:07,358 --> 00:08:08,943
+“我想写一个恐怖故事，”
+“I want to write a horror story,”
+
+183
+00:08:08,942 --> 00:08:12,779
+它会说，“啊，一个恐怖故事，多么令人毛骨悚然和令人兴奋。
+and it says, "Ooh, a horror story, how spine-tingling and thrilling.
+
+184
+00:08:12,779 --> 00:08:15,991
+让我们一起潜入阴森的影子和令人不寒而栗的谜团的世界。”
+Let's dive into the world of eerie shadows and chilling mysteries."
+
+185
+00:08:15,992 --> 00:08:19,327
+这是一个学生将写两句话，
+And this is an activity where the student will write two sentences,
+
+186
+00:08:19,327 --> 00:08:21,328
+然后AI会写两句话的活动。
+and then the AI will write two sentences.
+
+187
+00:08:21,329 --> 00:08:23,957
+这样，他们在一个故事中共同合作。
+And so they collaborate together on a story.
+
+188
+00:08:24,000 --> 00:08:26,669
+学生写道，“贝阿特丽丝是一个被误解的幽灵。
+The student writes, "Beatrice was a misunderstood ghost.
+
+189
+00:08:26,711 --> 00:08:29,630
+她想交朋友，但总是无意中把他们吓跑。”
+She wanted to make friends but kept scaring them by accident."
+
+190
+00:08:29,672 --> 00:08:33,259
+AI说，“可怜的贝阿特丽丝，一个孤独的精神渴望友谊。”
+And the AI says, "Poor Beatrice, a lonely spirit yearning for companionship.
+
+191
+00:08:33,301 --> 00:08:36,763
+有一天她偶然发现了一个废弃的老宅子，等等。
+One day she stumbled upon an old abandoned mansion," etc.
+
+192
+00:08:36,763 --> 00:08:39,182
+我鼓励大家有朝一日尝试这个。
+I encourage you all to hopefully one day try this.
+
+193
+00:08:39,182 --> 00:08:41,059
+这真的出乎意料地有趣。
+This is surprisingly fun.
+
+194
+00:08:42,934 --> 00:08:45,812
+现在更直接地满足这个需求。
+Now to even more directly hit this use case.
+
+195
+00:08:45,855 --> 00:08:47,397
+接下来我要展示的是，
+And what I'm about to show you,
+
+196
+00:08:47,440 --> 00:08:48,899
+到目前为止我展示的一切
+everything I showed you so far
+
+197
+00:08:48,899 --> 00:08:52,152
+实际上已经是Khanmigo的一部分了，而我马上要展示的，
+is actually already part of Khanmigo, and what I’m about to show you,
+
+198
+00:08:52,153 --> 00:08:54,613
+我们还没有向任何人展示过，这是一个原型。
+we haven't shown to anyone yet, this is a prototype.
+
+199
+00:08:54,614 --> 00:08:57,199
+我们希望在接下来的几个月内发布它，
+We hope to be able to launch it in the next few months,
+
+200
+00:08:57,200 --> 00:09:00,619
+这是为了直接使用AI，使用生成式AI，
+but this is to directly use AI, use generative AI,
+
+201
+00:09:00,660 --> 00:09:02,788
+不要破坏英语和语言艺术
+to not undermine English and language arts
+
+202
+00:09:02,830 --> 00:09:04,457
+而是以我们甚至在一年前都无法想象的方式增强它
+but to actually enhance it in ways
+
+203
+00:09:04,456 --> 00:09:07,666
+这是阅读理解。
+that we couldn't have even conceived of even a year ago.
+
+204
+00:09:08,001 --> 00:09:09,460
+学生们正在阅读史蒂夫·乔布斯在斯坦福的著名演讲。
+This is reading comprehension.
+
+205
+00:09:09,504 --> 00:09:13,673
+然后当他们到达某些点时，
+The students reading Steve Jobs's famous speech at Stanford.
+
+206
+00:09:13,716 --> 00:09:15,676
+他们可以点击那个小问题。
+And then as they get to certain points,
+
+207
+00:09:15,676 --> 00:09:18,011
+然后AI将以类似苏格拉底式的方式，几乎像是口头考试，
+they can click on that little question.
+
+208
+00:09:18,011 --> 00:09:22,932
+询问学生关于事物的问题。
+And the AI will then Socratically, almost like an oral exam,
+
+209
+00:09:22,933 --> 00:09:24,392
+AI还可以突出显示文章的部分内容。
+ask the student about things.
+
+210
+00:09:24,393 --> 00:09:26,937
+AI可以突出显示短文中的部分内容。
+And the AI can highlight parts of the passage.
+
+211
+00:09:26,937 --> 00:09:28,854
+为什么作者使用了那个词？
+Why did the author use that word?
+
+212
+00:09:28,898 --> 00:09:30,065
+他们的意图是什么？
+What was their intent?
+
+213
+00:09:30,066 --> 00:09:31,776
+这支持他们的论点吗？
+Does it back up their argument?
+
+214
+00:09:31,817 --> 00:09:33,818
+他们可以重新开始做一些事情，
+They can start to do stuff that once again,
+
+215
+00:09:33,860 --> 00:09:36,613
+我们以前从未有能力给每个人提供一个导师，
+we never had the capability to give everyone a tutor,
+
+216
+00:09:36,655 --> 00:09:40,826
+每个人一个写作教练，真正深入阅读到这个层次。
+everyone a writing coach to actually dig in to reading at this level.
+
+217
+00:09:41,409 --> 00:09:43,370
+而且你可以从另一方面看待它。
+And you could go on the other side of it.
+
+218
+00:09:43,412 --> 00:09:45,831
+我们有整个工作流程来帮助他们写作，
+And we have whole work flows that helps them write,
+
+219
+00:09:45,831 --> 00:09:48,541
+帮助他们成为写作教练，制定一个大纲。
+helps them be a writing coach, draw an outline.
+
+220
+00:09:48,583 --> 00:09:51,627
+但是一旦学生实际上构建了一个草稿，
+But once a student actually constructs a draft,
+
+221
+00:09:51,671 --> 00:09:53,922
+这就是他们正在构建草稿的地方，
+and this is where they're constructing a draft,
+
+222
+00:09:53,965 --> 00:09:55,966
+他们可以再次寻求反馈，
+they can ask for feedback once again,
+
+223
+00:09:56,008 --> 00:09:58,218
+正如你所期望的那样，一位好的写作教练。
+as you would expect from a good writing coach.
+
+224
+00:09:58,845 --> 00:10:01,221
+在这种情况下，学生会说，比如说，
+In this case, the student will say, let's say,
+
+225
+00:10:01,221 --> 00:10:03,265
+“我的证据支持我的论点吗？”
+"Does my evidence support my claim?"
+
+226
+00:10:03,307 --> 00:10:05,726
+然后 AI 不仅能够给出反馈，
+And then the AI, not only is able to give feedback,
+
+227
+00:10:05,768 --> 00:10:08,855
+而且它能够突出显示文章的某些部分，并说，
+but it's able to highlight certain parts of the passage and says,
+
+228
+00:10:08,855 --> 00:10:11,565
+“在这段文章中，这并不完全支持你的论点，”
+"On this passage, this doesn't quite support your claim,"
+
+229
+00:10:11,606 --> 00:10:14,316
+但是再次苏格拉底式地说，"你能告诉我们为什么吗？"
+but once again, Socratically says, "Can you tell us why?"
+
+230
+00:10:14,317 --> 00:10:17,111
+这样就可以让学生更好地进行写作，
+So it's pulling the student, making them a better writer,
+
+231
+00:10:17,113 --> 00:10:18,530
+给他们更多的反馈
+giving them far more feedback
+
+232
+00:10:18,530 --> 00:10:20,949
+比他们以前能得到的要多得多。
+than they've ever been able to actually get before.
+
+233
+00:10:20,950 --> 00:10:24,494
+我们认为这将大大加速写作，而不是削弱它。
+And we think this is going to dramatically accelerate writing, not hurt it.
+
+234
+00:10:25,413 --> 00:10:29,125
+到目前为止，我谈论的一切都是针对学生的。
+Now, everything I've talked about so far is for the student.
+
+235
+00:10:29,125 --> 00:10:32,044
+但我们认为这对老师来说同样具有强大的力量
+But we think this could be equally as powerful for the teacher
+
+236
+00:10:32,043 --> 00:10:34,378
+推动更个性化的教育，坦率地说
+to drive more personalized education and frankly
+
+237
+00:10:34,379 --> 00:10:37,632
+为他们自己和他们的学生节省时间和精力。
+save time and energy for themselves and for their students.
+
+238
+00:10:37,674 --> 00:10:40,468
+这是Khan Academy上的一次美国历史练习。
+So this is an American history exercise on Khan Academy.
+
+239
+00:10:40,469 --> 00:10:44,682
+这是关于西班牙-美国战争的一个问题。
+It's a question about the Spanish-American War.
+
+240
+00:10:44,724 --> 00:10:47,768
+首先，这是学生模式。
+And at first it's in student mode.
+
+241
+00:10:47,809 --> 00:10:51,228
+如果你说，“告诉我答案”，它不会直接告诉你答案。
+And if you say, “Tell me the answer,” it’s not going to tell the answer.
+
+242
+00:10:51,230 --> 00:10:52,982
+它会进入辅导模式。
+It's going to go into tutoring mode.
+
+243
+00:10:52,981 --> 00:10:55,482
+老师可以使用的这个小开关，
+But that little toggle which teachers have access to,
+
+244
+00:10:55,484 --> 00:10:58,613
+他们可以关闭学生模式，然后变成教师模式。
+they can turn student mode off and then it goes into teacher mode.
+
+245
+00:10:58,613 --> 00:11:00,781
+这样做的作用是 --
+And what this does is it turns into --
+
+246
+00:11:01,240 --> 00:11:03,743
+你可以把它看作是一本功能齐全的教师指南。
+You could view it as a teacher's guide on steroids.
+
+247
+00:11:03,783 --> 00:11:05,911
+它不仅可以解释答案，
+Not only can it explain the answer,
+
+248
+00:11:05,912 --> 00:11:08,080
+还可以解释如何教授这个问题。
+it can explain how you might want to teach it.
+
+249
+00:11:08,080 --> 00:11:10,917
+它可以帮助教师准备相关教材。
+It can help prepare the teacher for that material.
+
+250
+00:11:10,917 --> 00:11:14,420
+正如你在这里看到的，它还可以帮助他们制定课程计划。
+It can help them create lesson plans, as you could see doing right there.
+
+251
+00:11:14,461 --> 00:11:17,087
+它最终将帮助他们创建进度报告
+It'll eventually help them create progress reports
+
+252
+00:11:17,130 --> 00:11:18,757
+并帮助他们最终评分。
+and help them, eventually, grade.
+
+253
+00:11:18,798 --> 00:11:21,217
+所以再次强调，教师将大约一半的时间用于
+So once again, teachers spend about half their time
+
+254
+00:11:21,219 --> 00:11:23,303
+这类活动，备课。
+with this type of activity, lesson planning.
+
+255
+00:11:23,303 --> 00:11:25,138
+所有这些精力可以回到他们身上
+All of that energy can go back to them
+
+256
+00:11:25,181 --> 00:11:28,016
+或回到他们与实际学生的人际互动。
+or go back to human interactions with their actual students.
+
+257
+00:11:29,268 --> 00:11:34,106
+（掌声）
+(Applause)
+
+258
+00:11:34,148 --> 00:11:37,235
+所以，你知道，我想要说明的一点。
+So, you know, one point I want to make.
+
+259
+00:11:37,275 --> 00:11:39,526
+这些大型语言模型如此强大，
+These large language models are so powerful,
+
+260
+00:11:39,570 --> 00:11:41,447
+人们可能会忍不住说，好吧，
+there's a temptation to say like, well,
+
+261
+00:11:41,447 --> 00:11:44,532
+所有这些人只是把它们随意放到自己的网站上，
+all these people are just going to slap them onto their websites,
+
+262
+00:11:44,533 --> 00:11:47,662
+这就使得这些应用本身变成了一种商品。
+and it kind of turns the applications themselves into commodities.
+
+263
+00:11:47,702 --> 00:11:49,119
+我必须告诉你的是，
+And what I've got to tell you
+
+264
+00:11:49,120 --> 00:11:51,998
+这也是为什么我在8月份第一次接触到GPT-4时有两个星期没睡觉的原因之一。
+is that’s one of the reasons why I didn’t sleep for two weeks
+
+265
+00:11:51,999 --> 00:11:54,877
+但我们很快意识到，为了真正让它变得神奇，
+when I first had access to GPT-4 back in August.
+
+266
+00:11:55,586 --> 00:11:58,339
+我认为你在Khanmigo那里看到的有一点点，
+But we quickly realized that to actually make it magical,
+
+267
+00:11:58,339 --> 00:12:00,590
+它并没有像你看到的ChatGPT那样与你互动。
+I think what you saw with Khanmigo a little bit,
+
+268
+00:12:00,633 --> 00:12:03,927
+它显得更神奇，更像苏格拉底式的，
+it didn't interact with you the way that you see ChatGPT interacting.
+
+269
+00:12:03,927 --> 00:12:06,512
+它显然更擅长数学
+It was a little bit more magical, it was more Socratic,
+
+270
+00:12:06,554 --> 00:12:08,181
+它在数学方面明显更强大
+it was clearly much better at math
+
+271
+00:12:08,224 --> 00:12:10,433
+比大多数人习惯思考的要多。
+than what most people are used to thinking.
+
+272
+00:12:10,475 --> 00:12:11,642
+原因是，
+And the reason is,
+
+273
+00:12:11,644 --> 00:12:14,563
+在幕后付出了大量的工作才实现了这一点。
+there was a lot of work behind the scenes to make that happen.
+
+274
+00:12:14,605 --> 00:12:18,109
+我可以列举出我们一直在努力的所有事情，
+And I could go through the whole list of everything we've been working on,
+
+275
+00:12:18,149 --> 00:12:21,778
+许多人为此努力了六七个月，以创造神奇的感觉。
+many, many people for over six, seven months to make it feel magical.
+
+276
+00:12:21,821 --> 00:12:24,322
+但也许最具智力挑战的一个
+But perhaps the most intellectually interesting one
+
+277
+00:12:24,322 --> 00:12:27,659
+是我们意识到，这是来自一位OpenAI研究员的想法，
+is we realized, and this was an idea from an OpenAI researcher,
+
+278
+00:12:27,659 --> 00:12:30,787
+我们可以大幅提高其在数学方面的能力
+that we could dramatically improve its ability in math
+
+279
+00:12:30,830 --> 00:12:32,122
+以及其在辅导方面的能力
+and its ability in tutoring
+
+280
+00:12:32,163 --> 00:12:35,292
+如果允许AI在发言前思考一下。
+if we allow the AI to think before it speaks.
+
+281
+00:12:35,333 --> 00:12:36,750
+所以，如果你正在辅导某人
+So if you're tutoring someone
+
+282
+00:12:36,751 --> 00:12:39,963
+在评估他们的数学水平之前就开始说话
+and you immediately just start talking before you assess their math,
+
+283
+00:12:39,964 --> 00:12:41,256
+你可能不会做对。
+you might not get it right.
+
+284
+00:12:41,298 --> 00:12:43,299
+但是，如果你为自己构建思想，
+But if you construct thoughts for yourself,
+
+285
+00:12:43,301 --> 00:12:46,177
+右边所示的实际 AI 思想，
+and what you see on the right there is an actual AI thought,
+
+286
+00:12:46,220 --> 00:12:49,889
+这是它自己生成的内容，但它不与学生共享。
+something that it generates for itself but it does not share with the student.
+
+287
+00:12:49,889 --> 00:12:51,766
+那么它的准确性大幅提高了，
+then its accuracy went up dramatically,
+
+288
+00:12:51,767 --> 00:12:54,729
+它成为世界级导师的能力也大大提高了。
+and its ability to be a world-class tutor went up dramatically.
+
+289
+00:12:54,769 --> 00:12:56,854
+你可以看到它在这里自言自语。
+And you can see it's talking to itself here.
+
+290
+00:12:56,897 --> 00:12:59,566
+它说，“学生得到的答案与我得到的答案不同，
+It says, "The student got a different answer than I did,
+
+291
+00:12:59,567 --> 00:13:01,568
+但不要告诉他们他们犯了一个错误。
+but do not tell them they made a mistake.
+
+292
+00:13:01,568 --> 00:13:05,155
+而是请他们解释他们是怎么得出那个步骤的。
+Instead, ask them to explain how they got to that step."
+
+293
+00:13:05,697 --> 00:13:07,991
+所以我只是希望能结束这个话题，
+So I'll just finish off, hopefully,
+
+294
+00:13:08,033 --> 00:13:11,536
+你知道，我刚刚给你们展示的只是我们正在进行的一半工作，
+you know, what I’ve just shown you is just half of what we are working on,
+
+295
+00:13:11,537 --> 00:13:15,041
+我们认为这只是冰山一角
+and we think this is just the very tip of the iceberg
+
+296
+00:13:15,041 --> 00:13:17,460
+这个项目还能发展到哪里去。
+of where this can actually go.
+
+297
+00:13:17,500 --> 00:13:21,628
+而且我相信，尽管一年前我还不会这么想，
+And I'm pretty convinced, which I wouldn't have been even a year ago,
+
+298
+00:13:21,672 --> 00:13:25,968
+我们大家有机会一起应对 2 sigma 问题，
+that we together have a chance of addressing the 2 sigma problem
+
+299
+00:13:25,967 --> 00:13:28,261
+并将其变成 2 sigma 的机会，
+and turning it into a 2 sigma opportunity,
+
+300
+00:13:28,303 --> 00:13:33,099
+大大加速我们现在所知道的教育方式。
+dramatically accelerating education as we know it.
+
+301
+00:13:33,683 --> 00:13:35,852
+现在，让我们从更高的层次来看待这个问题，
+Now, just to take a step back at a meta level,
+
+302
+00:13:35,852 --> 00:13:38,646
+显然我们今天听到了很多观点，有关辩论的两面。
+obviously we heard a lot today, the debates on either side.
+
+303
+00:13:38,688 --> 00:13:41,566
+有些人对人工智能持较悲观的看法，
+There's folks who take a more pessimistic view of AI,
+
+304
+00:13:41,609 --> 00:13:42,776
+他们认为这很可怕，
+they say this is scary,
+
+305
+00:13:42,817 --> 00:13:45,277
+有很多反乌托邦的情景，
+there's all these dystopian scenarios,
+
+306
+00:13:45,321 --> 00:13:48,574
+我们或许要放慢脚步，甚至暂停。
+we maybe want to slow down, we want to pause.
+
+307
+00:13:48,615 --> 00:13:51,825
+另一方面，有些人更乐观，
+On the other side, there are the more optimistic folks
+
+308
+00:13:51,826 --> 00:13:54,661
+他们认为我们已经经历了转折点，
+that say, well, we've gone through inflection points before,
+
+309
+00:13:54,663 --> 00:13:56,791
+我们已经度过了工业革命。
+we've gone through the Industrial Revolution.
+
+310
+00:13:56,831 --> 00:13:59,166
+虽然那个时期也很可怕，但最后事情都解决了。
+It was scary, but it all kind of worked out.
+
+311
+00:13:59,876 --> 00:14:01,920
+而我现在要辩论的是
+And what I'd argue right now
+
+312
+00:14:01,961 --> 00:14:04,546
+我不认为这就像是掷硬币一样
+is I don't think this is like a flip of a coin
+
+313
+00:14:04,590 --> 00:14:06,759
+或者这是我们只需要，
+or this is something where we'll just have to,
+
+314
+00:14:06,759 --> 00:14:09,053
+比如说，等待一下看结果如何的事情。
+like, wait and see which way it turns out.
+
+315
+00:14:09,427 --> 00:14:11,637
+我认为在座的每个人以及更多人
+I think everyone here and beyond,
+
+316
+00:14:11,679 --> 00:14:14,516
+我们都是这个决策的积极参与者。
+we are active participants in this decision.
+
+317
+00:14:14,892 --> 00:14:17,395
+我非常确信这种理论的第一条线索
+I'm pretty convinced that the first line of reasoning
+
+318
+00:14:17,436 --> 00:14:20,064
+实际上几乎是一种自我实现的预言，
+is actually almost a self-fulfilling prophecy,
+
+319
+00:14:20,105 --> 00:14:22,815
+如果我们战战兢兢地行动，如果我们说，
+that if we act with fear and if we say,
+
+320
+00:14:22,817 --> 00:14:25,902
+“嘿，我们必须停止这些事情，”
+"Hey, we've just got to stop doing this stuff,"
+
+321
+00:14:25,903 --> 00:14:28,947
+实际上可能会发生的是，遵守规则的人可能会暂停，
+what's really going to happen is the rule followers might pause,
+
+322
+00:14:28,989 --> 00:14:30,156
+可能会减缓速度，
+might slow down,
+
+323
+00:14:30,157 --> 00:14:32,617
+但像亚历山大[王]提到的那样，违反规则的人，
+but the rule breakers, as Alexandr [Wang] mentioned,
+
+324
+00:14:32,618 --> 00:14:35,328
+专制政府，犯罪组织，
+the totalitarian governments, the criminal organizations,
+
+325
+00:14:35,328 --> 00:14:36,913
+他们只会加速。
+they're only going to accelerate.
+
+326
+00:14:36,913 --> 00:14:40,750
+这导致了我非常确信的反乌托邦状态，
+And that leads to what I am pretty convinced is the dystopian state,
+
+327
+00:14:40,750 --> 00:14:45,421
+也就是说，好的行为者拥有比坏的行为者更糟糕的AI。
+which is the good actors have worse AIs than the bad actors.
+
+328
+00:14:45,923 --> 00:14:49,092
+不过我也会稍微跟乐观主义者聊聊。
+But I'll also, you know, talk to the optimists a little bit.
+
+329
+00:14:49,092 --> 00:14:50,551
+我并不认为这意味着，
+I don't think that means that,
+
+330
+00:14:50,552 --> 00:14:53,555
+哦，那我们就放松，只是抱着最好的希望。
+oh, yeah, then we should just relax and just hope for the best.
+
+331
+00:14:53,556 --> 00:14:55,181
+那可能也不会发生。
+That might not happen either.
+
+332
+00:14:55,182 --> 00:14:59,728
+我认为我们所有人都必须拼命地奋斗，
+I think all of us together have to fight like hell
+
+333
+00:14:59,769 --> 00:15:02,563
+以确保我们设立防护措施，
+to make sure that we put the guardrails,
+
+334
+00:15:02,605 --> 00:15:05,442
+在出现问题时，我们制定合理的规定。
+we put in -- when the problems arise --
+
+335
+00:15:05,442 --> 00:15:07,234
+但我们为积极的使用案例拼命奋斗。
+reasonable regulations.
+
+336
+00:15:07,278 --> 00:15:10,406
+因为这离我很近，显然还有很多潜在的积极使用案例，
+But we fight like hell for the positive use cases.
+
+337
+00:15:10,447 --> 00:15:12,407
+但也许最强大的使用案例，
+Because very close to my heart,
+
+338
+00:15:12,408 --> 00:15:15,034
+也许最具诗意的使用案例，就是如果AI，人工智能，
+and obviously there's many potential positive use cases,
+
+339
+00:15:15,076 --> 00:15:17,286
+但也许最有力的应用场景
+but perhaps the most powerful use case
+
+340
+00:15:17,288 --> 00:15:22,501
+或许最富诗意的应用场景是AI，人工智能，
+and perhaps the most poetic use case is if AI, artificial intelligence,
+
+341
+00:15:22,543 --> 00:15:26,255
+可以用来提高HI，人类智能，
+can be used to enhance HI, human intelligence,
+
+342
+00:15:26,297 --> 00:15:29,132
+人类潜力和人类目标。
+human potential and human purpose.
+
+343
+00:15:29,591 --> 00:15:30,758
+谢谢。
+Thank you.
+
+344
+00:15:30,801 --> 00:15:36,515
+（掌声）
+(Applause)
