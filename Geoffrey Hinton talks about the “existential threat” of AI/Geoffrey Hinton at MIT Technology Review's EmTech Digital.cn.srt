@@ -30,72 +30,72 @@ research that is already pushing ahead and asking what's next.
 
 7
 00:00:30,680 --> 00:00:35,280
-首先，我想介绍一个即将通过虚拟形式加入我们的特别嘉宾。
+首先，我想介绍一个即将通过虚拟形式加入我们的
 But starting us off, I'd like to introduce a very special speaker who will be joining
 
 8
 00:00:35,280 --> 00:00:36,920
-Jeffrey Hinton 是多伦多大学名誉教授，直到本周还担任谷歌工程研究员。
+特别嘉宾。
 us virtually.
 
 9
 00:00:36,920 --> 00:00:42,680
-但是在周一，他宣布将在10年后卸任。
+Jeffrey Hinton 是多伦多大学名誉教授，
 Jeffrey Hinton is a professor emeritus at University of Toronto and until this week an engineering
 
 10
 00:00:42,680 --> 00:00:43,680
-Jeffrey是现代AI领域中最重要的人物之一。
+直到本周还担任谷歌工程研究员。
 fellow at Google.
 
 11
 00:00:43,680 --> 00:00:48,960
-他是深度学习的先驱，开发了一些最基本的技术，
+但是10年后在周一，他宣布将卸任。
 But on Monday he announced that after 10 years he will be stepping down.
 
 12
 00:00:48,960 --> 00:00:52,280
-这些技术构成了今天我们所熟知的AI技术，
+Jeffrey是现代AI领域中最重要的人物之一。
 Jeffrey is one of the most important figures in modern AI.
 
 13
 00:00:52,280 --> 00:00:56,120
-例如反向传播，
+他是深度学习的先驱，开发了一些最基本的技术，
 He's a pioneer of deep learning, developing some of the most fundamental techniques that
 
 14
 00:00:56,120 --> 00:00:58,440
-使机器具有学习能力的算法。
+这些技术构成了今天我们所熟知的AI技术，
 that underpin AI as we know it today,
 
 15
 00:00:58,440 --> 00:00:59,840
-这项技术，正是如今所有深度学习都基于其之上的基础。
+例如反向传播，
 such as back propagation,
 
 16
 00:00:59,840 --> 00:01:02,320
-2018年，Jeffrey获得了图灵奖，
+使机器具有学习能力的算法。
 the algorithm that allows machines to learn.
 
 17
 00:01:02,320 --> 00:01:05,160
-这个奖项往往被称为计算机科学的诺贝尔奖，
+这项技术，
 This technique, it's the foundation
 
 18
 00:01:05,160 --> 00:01:08,120
-undefined
+正是如今所有深度学习都基于其之上的基础。
 on which pretty much all of deep learning rests today.
 
 19
 00:01:08,120 --> 00:01:11,680
-undefined
+2018年，Jeffrey获得了图灵奖，
 In 2018, Jeffrey received the Turing Award,
 
 20
 00:01:11,680 --> 00:01:14,240
-undefined
+这个奖项往往被称为计算机科学的诺贝尔奖，
 which is often called the Nobel of Computer Science,
 
 21
@@ -160,42 +160,42 @@ And we're glad you're back.
 
 33
 00:01:39,600 --> 00:01:40,840
-那是我们不应该与观众分享的技术细节。
+那是我们不应该
 That's the kind of technical detail
 
 34
 00:01:40,840 --> 00:01:43,120
-好的，没问题。
+与观众分享的技术细节。
 we're not supposed to share with the audience.
 
 35
 00:01:43,120 --> 00:01:44,120
-很高兴你在这里。
+好的，没问题。
 Right, OK.
 
 36
 00:01:44,120 --> 00:01:45,240
-非常高兴你能和我们在一起。
+很高兴你在这里。
 It's great you're here.
 
 37
 00:01:45,240 --> 00:01:47,120
-现在，我的意思是，这已经成为新闻了
+非常高兴你能和我们在一起。
 Very happy that you could join us.
 
 38
 00:01:47,120 --> 00:01:49,520
-你这周从谷歌辞职了。
+现在，我的意思是，这已经成为新闻了
 Now, I mean, it's been the news everywhere
 
 39
 00:01:49,520 --> 00:01:52,520
-你能先告诉我们你为什么做出那个决定吗？
+你这周从谷歌辞职了。
 that you stepped down from Google this week.
 
 40
 00:01:52,520 --> 00:01:55,720
-undefined
+你能先告诉我们你为什么做出那个决定吗？
 Could you start by telling us why you made that decision?
 
 41
@@ -240,62 +240,62 @@ A second was, very recently,
 
 49
 00:02:17,440 --> 00:02:19,800
-我对大脑与我们正在研发的数字智能之间的关系
+我对大脑
 I've changed my mind a lot about the relationship
 
 50
 00:02:19,800 --> 00:02:23,320
-改变了看法。
+与我们正在研发的数字智能之间的关系
 between the brain and the kind of digital intelligence
 
 51
 00:02:23,320 --> 00:02:24,120
-我过去认为我们开发的计算机模型
+改变了看法。
 we're developing.
 
 52
 00:02:24,120 --> 00:02:29,440
-不如大脑那么优秀。
+我过去认为我们开发的计算机模型
 So I used to think that the computer models
 
 53
 00:02:29,440 --> 00:02:32,160
-目标是看看能否通过了解需要做什么
+不如大脑那么优秀。
 that we were developing weren't as good as the brain.
 
 54
 00:02:32,160 --> 00:02:34,520
-来改进计算机模型，
+目标是看看能否通过了解需要做什么
 And the aim was to see if you could understand
 
 55
 00:02:34,520 --> 00:02:36,200
-以了解大脑更多信息。
+来改进计算机模型，
 more about the brain by seeing what it takes
 
 56
 00:02:36,200 --> 00:02:37,720
-在过去的几个月里，我完全改变了看法，
+以了解大脑更多信息。
 to improve the computer models.
 
 57
 00:02:37,720 --> 00:02:42,560
-我认为计算机模型可能在工作方式上，
+在过去的几个月里，我完全改变了看法，
 Over the last few months, I've changed my mind completely
 
 58
 00:02:42,560 --> 00:02:45,560
-与大脑有很大的不同。
+我认为计算机模型可能在工作方式上，
 and I think probably the computer models are working
 
 59
 00:02:45,560 --> 00:02:47,360
-它们使用的是反向传播
+与大脑有很大的不同。
 in a rather different way from the brain.
 
 60
 00:02:47,360 --> 00:02:49,000
-undefined
+它们使用的是反向传播
 They're using back propagation
 
 61
@@ -320,82 +320,82 @@ but what is the performance of things like GPT-4?
 
 65
 00:02:59,840 --> 00:03:02,320
-但在此之前，让我们先了解一下您所提出的论点。
+但在此之前，
 very much in a minute, but let's, you know,
 
 66
 00:03:02,320 --> 00:03:05,800
-告诉我们一些关于反向传播的知识。
+让我们先了解一下您所提出的论点。
 go back so that we all understand the argument you're making.
 
 67
 00:03:05,800 --> 00:03:09,480
-这是您在20世纪80年代与几位同事共同开发的一种算法。
+告诉我们一些关于反向传播的知识。
 And tell us a little bit about what back propagation is.
 
 68
 00:03:09,480 --> 00:03:11,520
-- 许多不同的团队都发现了反向传播。
+这是您在20世纪80年代
 And this is an algorithm that you developed
 
 69
 00:03:11,520 --> 00:03:13,880
-我们所做的特别之处在于使用它并证明它可以开发出良好的内部表达。
+与几位同事共同开发的一种算法。
 with a couple of colleagues back in the 1980s.
 
 70
 00:03:13,880 --> 00:03:18,480
-有趣的是，我们通过实现一个微型语言模型来实现这一点。
+- 许多不同的团队都发现了反向传播。
 - Many different groups discover back propagation.
 
 71
 00:03:18,480 --> 00:03:26,480
-它的嵌入向量只有六个组件。
+我们所做的特别之处在于使用它并证明它可以开发出良好的内部表达。
 The special thing we did was used it and showed that it could develop good internal representations.
 
 72
 00:03:26,480 --> 00:03:34,480
-训练集是112个案例。
+有趣的是，我们通过实现一个微型语言模型来实现这一点。
 And curiously, we did that by implementing a tiny language model.
 
 73
 00:03:34,480 --> 00:03:39,480
-但它是一个语言模型。
+它的嵌入向量只有六个组件。
 It had embedding vectors that were only six components.
 
 74
 00:03:39,480 --> 00:03:43,480
-它试图预测一串符号中的下一个词。
+训练集是112个案例。
 On the training set was 112 cases.
 
 75
 00:03:43,480 --> 00:03:45,200
-大约十年后，Yoshua Benjue
+但它是一个语言模型。
 But it was a language model.
 
 76
 00:03:45,200 --> 00:03:50,320
-基本上采用了相同的网络。
+它试图预测一串符号中的下一个词。
 It was trying to predict the next term in a string of symbols.
 
 77
 00:03:50,320 --> 00:03:53,920
-然后在自然语言上进行了实验。
+大约十年后，Yoshua Benjue
 And about 10 years later, Yoshua Benjue
 
 78
 00:03:53,920 --> 00:03:55,680
-你证明了它确实适用于自然语言，
+基本上采用了相同的网络。
 took basically the same net.
 
 79
 00:03:55,680 --> 00:03:56,840
-undefined
+然后在自然语言上进行了实验。
 Then used on natural language.
 
 80
 00:03:56,840 --> 00:03:58,880
-undefined
+你证明了它确实适用于自然语言，
 You showed it actually worked for natural language,
 
 81
@@ -520,82 +520,82 @@ like for example, edges.
 
 105
 00:05:03,520 --> 00:05:07,920
-因此，特征检测器可能对像素列有很大的正权重，
+因此，特征检测器可能
 So a feature detector might have big positive weights
 
 106
 00:05:07,920 --> 00:05:10,280
-然后对相邻的像素列有很大的负权重，
+对像素列有很大的正权重，
 to a column of pixels.
 
 107
 00:05:10,280 --> 00:05:12,440
-对于大细胞的相邻列。
+然后对相邻的像素列有很大的负权重，
 and then big negative weights to the neighboring column
 
 108
 00:05:12,440 --> 00:05:14,120
-所以如果两排都很亮，它就不会打开。
+对于大细胞的相邻列。
 of big cells.
 
 109
 00:05:14,120 --> 00:05:16,920
-如果两排都很暗，它就不会关闭。
+所以如果两排都很亮，它就不会打开。
 So if both columns are bright, it won't turn on.
 
 110
 00:05:16,920 --> 00:05:19,000
-但是，如果一边的列很亮，
+如果两排都很暗，它就不会关闭。
 And if both columns are dim, it won't turn off.
 
 111
 00:05:19,000 --> 00:05:21,360
-另一边的列很暗，
+但是，如果一边的列很亮，
 But if the column on one side is bright,
 
 112
 00:05:21,360 --> 00:05:23,440
-它就会非常兴奋。
+另一边的列很暗，
 and the column on the other side is dim,
 
 113
 00:05:23,440 --> 00:05:24,960
-这就是一个边缘检测器。
+它就会非常兴奋。
 it'll get very excited.
 
 114
 00:05:24,960 --> 00:05:26,960
-所以我刚告诉你如何手动连接一个边缘检测器
+这就是一个边缘检测器。
 And that's an edge detector.
 
 115
 00:05:26,960 --> 00:05:30,000
-通过一个列有很大的正权重，
+所以我刚告诉你如何手动连接一个边缘检测器
 So I just told you how to wire up an edge detector by hand
 
 116
 00:05:30,000 --> 00:05:31,680
-紧挨着它有一个有很大负权重的列。
+通过一个列有很大的正权重，
 by having one column of big positive weights
 
 117
 00:05:31,680 --> 00:05:34,000
-我们可以想象有一层很多这样的检测器，
+紧挨着它有一个有很大负权重的列。
 and next to it one column of big negative weights.
 
 118
 00:05:34,000 --> 00:05:35,840
-在图像中不同方向和不同尺度上检测边缘。
+我们可以想象有一层很多这样的检测器，
 And we can imagine a big layer of those,
 
 119
 00:05:35,840 --> 00:05:37,600
-undefined
+在图像中不同方向
 detecting edges in different orientations
 
 120
 00:05:37,600 --> 00:05:39,880
-undefined
+和不同尺度上检测边缘。
 and different scales all over the image.
 
 121
@@ -890,12 +890,12 @@ and send it backwards through the network
 
 179
 00:08:23,680 --> 00:08:26,680
-以便您可以计算网络中的每个特征，
+以便您可以计算网络中
 so that you can compute for every feature
 
 180
 00:08:26,680 --> 00:08:28,160
-undefined
+的每个特征，
 that's actually in the network,
 
 181
@@ -955,7 +955,7 @@ that technique basically performed really well on ImageNet.
 
 192
 00:09:11,320 --> 00:09:13,760
-昨天我们请到了Meta的Joe Lpno 
+昨天我们请到了Meta的Joe Lpno
 We had Joe Lpno from Meta yesterday
 
 193
@@ -985,17 +985,17 @@ were thinking of as almost like a poor approximation of what biological brains m
 
 198
 00:09:34,320 --> 00:09:41,120
-事实证明，这种技术在大型语言模型上的表现令人惊讶。
+事实证明，这种技术在大型语言模型上的表现
 Has turned out to do things which I think have stunned you, particularly in large language
 
 199
 00:09:41,120 --> 00:09:42,120
-所以，告诉我们大型语言模型如今的惊奇之处
+令人惊讶。
 models.
 
 200
 00:09:42,120 --> 00:09:48,720
-undefined
+所以，告诉我们大型语言模型如今的惊奇之处
 So, talk to us about why that sort of amazement that you have with today's large language
 
 201
@@ -1165,37 +1165,37 @@ They all communicate with each other
 
 234
 00:11:46,160 --> 00:11:47,860
-并且都同意按照所有人所期望的平均值来改变方式
+并且都同意
 and they all agree to change the way
 
 235
 00:11:47,860 --> 00:11:49,960
-现在这10,000个事物正在相互之间进行通信
+按照所有人所期望的平均值来改变方式
 it's by the average of what all of them want.
 
 236
 00:11:49,960 --> 00:11:55,920
-以便它们可以查看10,000倍的数据
+现在这10,000个事物
 And now the 10,000 things are communicating
 
 237
 00:11:55,920 --> 00:11:58,480
-一个代理人可以做到这一点。
+正在相互之间进行通信
 very effectively with each other
 
 238
 00:11:58,480 --> 00:12:01,440
-人们无法做到这一点。
+以便它们可以查看10,000倍的数据
 so that they can see 10,000 times as much data
 
 239
 00:12:01,440 --> 00:12:03,240
-undefined
+一个代理人可以做到这一点。
 as one agent could.
 
 240
 00:12:03,240 --> 00:12:05,100
-undefined
+人们无法做到这一点。
 And people can't do that.
 
 241
@@ -1280,22 +1280,22 @@ Well, because they can learn so much more and they might take an example of a do
 
 257
 00:12:56,640 --> 00:13:02,920
-想象一下，有一个医生给见过一千个病人，另一个医生给见过一亿个病人。
+想象一下，有一个医生给见过一千个病人，
 imagine you have one doctor who's seen a thousand patients and another doctor who's seen
 
 258
 00:13:02,920 --> 00:13:05,800
-你可能期望那位看过一亿病人的医生，如果他的记忆不是太差的话，就会
+另一个医生给见过一亿个病人。
 a hundred million patients.
 
 259
 00:13:05,800 --> 00:13:10,520
-注意到数据中某些只有看过那么多病人才能发现的趋势。
+你可能期望那位看过一亿病人的医生，如果他的记忆不是太差的话，就会
 You would expect the doctor to see 100 million patients, if he's not too forgetful, to
 
 260
 00:13:10,520 --> 00:13:14,520
-undefined
+注意到数据中某些只有看过那么多病人才能发现的趋势。
 have noticed all sorts of trends in the data that just aren't visible if you've only seen
 
 261
@@ -1325,77 +1325,77 @@ And so we'll see also the regularity suggests that aren't apparent in small data
 
 266
 00:13:32,160 --> 00:13:38,320
-这就是为什么那些能获取很多数据的东西可能看到我们永远看不到的结构数据。
+这就是为什么那些能获取很多数据的东西可能看到
 And that's why things that can get through a lot of data can probably see structuring data
 
 267
 00:13:38,320 --> 00:13:42,760
-然后带我到我应该对这个感到害怕的地方。
+我们永远看不到的结构数据。
 we'll never see.
 
 268
 00:13:42,760 --> 00:13:48,160
-如果您看一下GPT-4，它已经可以进行简单的推理。
+然后带我到我应该对这个感到害怕的地方。
 And then take me to the point where I should be scared of this though.
 
 269
 00:13:48,160 --> 00:13:53,160
-我的意思是，推理是我们仍然更擅长的领域。
+如果您看一下GPT-4，它已经可以进行简单的推理。
 Well, if you look at GPT-4, it can already do simple reasoning.
 
 270
 00:13:53,160 --> 00:13:57,480
-但是前几天，我对GPT-4做了一个常识推理，我认为它不可能做到的。
+我的意思是，推理是我们仍然更擅长的领域。
 I mean, reasoning is the area where we're still better.
 
 271
 00:13:57,480 --> 00:14:02,640
-所以我问它，我希望我家所有的房间都是白色的，目前，有些是白色的房间，有些是蓝色的房间，还有些是黄色的房间。
+但是前几天，我对GPT-4做了一个常识推理，
 But I was impressed the other day, GPT-4, doing a piece of common sense reasoning that I
 
 272
 00:14:02,640 --> 00:14:04,680
-黄色的油漆在一年内会褪成白色。
+我认为它不可能做到的。
 didn't think it would be able to do.
 
 273
 00:14:04,680 --> 00:14:12,880
-那么如果我希望两年后它们都变成白色，我该怎么办呢？
+所以我问它，我希望我家所有的房间都是白色的，目前，有些是白色的房间，
 So I asked it, I want all the rooms in my house to be white, a present, the some white
 
 274
 00:14:12,880 --> 00:14:16,640
-它说，你应该把蓝色的房间涂成黄色。
+有些是蓝色的房间，还有些是黄色的房间。
 rooms, some blue rooms, and some yellow rooms.
 
 275
 00:14:16,640 --> 00:14:20,000
-这不是最自然的解决方案，但它能行，对吧？
+黄色的油漆在一年内会褪成白色。
 And yellow paint fades to white within a year.
 
 276
 00:14:20,000 --> 00:14:25,440
-这是令人印象深刻的常识推理
+那么如果我希望两年后它们都变成白色，我该怎么办呢？
 So what should I do if I want them all to be white in two years' time?
 
 277
 00:14:25,440 --> 00:14:29,280
-这种难以让AI做到的推理
+它说，你应该把蓝色的房间涂成黄色。
 made said, you should paint the blue runs yellow.
 
 278
 00:14:29,280 --> 00:14:31,840
-undefined
+这不是最自然的解决方案，但它能行，对吧？
 That's not the natural solution, but it works, right?
 
 279
 00:14:31,840 --> 00:14:36,440
-undefined
+这是令人印象深刻的常识推理
 That's pretty impressive common sense reasoning
 
 280
 00:14:36,440 --> 00:14:40,080
-undefined
+这种难以让AI做到的推理
 of the kind that it's been very hard to get AI to do
 
 281
@@ -1510,92 +1510,92 @@ And so even if they can't directly pull levers, they can certainly get us to pul
 
 303
 00:16:18,740 --> 00:16:23,540
-事实证明，如果你可以操纵人，你可以在不亲自去华盛顿的情况下侵占一栋建筑。
+事实证明，如果你可以操纵人，
 It turns out if you can manipulate people, you can invade a building in Washington without
 
 304
 00:16:23,540 --> 00:16:25,700
-非常好。
+你可以在不亲自去华盛顿的情况下侵占一栋建筑。
 ever going there yourself.
 
 305
 00:16:25,700 --> 00:16:29,980
-是的。
+非常好。
 Very good.
 
 306
 00:16:29,980 --> 00:16:30,980
-那是这样吗？
+是的。
 Yeah.
 
 307
 00:16:30,980 --> 00:16:31,980
-就是那样吗？
+那是这样吗？
 So is that?
 
 308
 00:16:31,980 --> 00:16:32,980
-我的意思是，如果这个世界，好吧，这是一个非常假设的世界，但如果没有坏人
+就是那样吗？
 Is that?
 
 309
 00:16:32,980 --> 00:16:38,860
-没有恶意的人，我们会安全吗？
+我的意思是，如果这个世界，好吧，这是一个非常假设的世界，但如果没有坏人
 I mean, if the word, okay, this is a very hypothetical world, but if there were no bad
 
 310
 00:16:38,860 --> 00:16:45,860
-我不知道。
+没有恶意的人，我们会安全吗？
 actors, you know, people with bad intentions, would we be safe?
 
 311
 00:16:45,860 --> 00:16:47,620
-在一个人们有恶意和政治系统如此破碎以至于我们甚至无法决定不将攻击性步枪给予十几岁男孩的世界里，我们会比较安全吗？
+我不知道。
 I don't know.
 
 312
 00:16:47,620 --> 00:16:52,300
-如果你不能解决那个问题，你怎么解决这个问题？
+我们会比较安全吗，
 Would be safer than in a world where people have bad intentions and where the political
 
 313
 00:16:52,300 --> 00:16:59,180
-嗯，我不知道。
+在一个人们有恶意和政治系统如此破碎以至于我们甚至无法决定不将攻击性步枪给予十几岁男孩的世界里？
 system is so broken that we can't even decide not to give assault rifles to teenage boys.
 
 314
 00:16:59,180 --> 00:17:02,340
-我希望你会有一些想法。
+如果你不能解决那个问题，你怎么解决这个问题？
 If you can't solve that problem, how are you going to solve this problem?
 
 315
 00:17:02,340 --> 00:17:03,940
-[笑声]
+嗯，我不知道。
 Well, I mean, I don't know.
 
 316
 00:17:03,940 --> 00:17:06,300
-那一个--
+我希望你会有一些想法。
 I was hoping that you would have some thoughts.
 
 317
 00:17:06,300 --> 00:17:08,460
-我的意思是，除非我们一开始就没搞清楚，
+[笑声]
 [LAUGHTER]
 
 318
 00:17:08,460 --> 00:17:11,060
-我的意思是，你想就此问题发言
+那一个--
 So one--
 
 319
 00:17:11,060 --> 00:17:14,100
-undefined
+我的意思是，除非我们一开始就没搞清楚，
 I mean, unless we didn't make this clear at the beginning,
 
 320
 00:17:14,100 --> 00:17:17,420
-undefined
+我的意思是，你想就此问题发言
 I mean, you want to speak out about this
 
 321
@@ -1660,42 +1660,42 @@ So I don't think there's much chance of stopping development.
 
 333
 00:18:06,660 --> 00:18:09,660
-我们想要的是某种方式，确保即使它们比我们聪明，
+我们想要的是某种方式，
 What we want is some way of making sure that,
 
 334
 00:18:09,660 --> 00:18:11,660
-它们能为我们做有益的事情。
+确保即使它们比我们聪明，
 even if they're smarter than us,
 
 335
 00:18:11,660 --> 00:18:14,660
-这就是所谓的使任务对齐的问题。
+它们能为我们做有益的事情。
 they're going to do things that are beneficial for us.
 
 336
 00:18:14,660 --> 00:18:16,660
-但我们需要在这样一个世界中尝试去做到这一点，
+这就是所谓的使任务对齐的问题。
 That's called the alignment problem.
 
 337
 00:18:16,660 --> 00:18:19,660
-那里有邪恶的行为者想制造能杀人的机器人士兵。
+但我们需要在这样一个世界中尝试去做到这一点，
 But we need to try and do that in a world where
 
 338
 00:18:19,660 --> 00:18:22,660
-对我来说，这似乎非常困难。
+那里有邪恶的行为者想
 there's bad actors who want to build robot soldiers
 
 339
 00:18:22,660 --> 00:18:24,660
-undefined
+制造能杀人的机器人士兵。
 that kill people.
 
 340
 00:18:24,660 --> 00:18:26,660
-undefined
+对我来说，这似乎非常困难。
 And it seems very hard to me.
 
 341
@@ -1880,22 +1880,22 @@ Maybe not deliberately that intention,
 
 377
 00:20:19,060 --> 00:20:21,340
-但是我们的连线方式让我们在制作更多自己的副本时感到愉悦。
+但是我们的连线方式让我们
 but we've been wired up so this pleasure involved
 
 378
 00:20:21,340 --> 00:20:23,780
-这一切都来自进化。
+在制作更多自己的副本时感到愉悦。
 making many copies of ourselves.
 
 379
 00:20:23,780 --> 00:20:27,420
-我们不能关掉它很重要。
+这一切都来自进化。
 And that all came from evolution.
 
 380
 00:20:27,420 --> 00:20:30,740
-undefined
+我们不能关掉它很重要。
 And it's important that we can't turn it off.
 
 381
@@ -2010,92 +2010,92 @@ So what's the worst case scenario that you think is conceivable?
 
 403
 00:21:39,340 --> 00:21:46,040
-哦，我认为人类只是智慧演变过程中的一个短暂阶段这是相当可能的。
+哦，我认为人类只是智慧演变过程中的一个短暂阶段
 Oh, I think it's quite conceivable that humanity is just a passing phase in the evolution
 
 404
 00:21:46,040 --> 00:21:47,460
-你不能直接演化出数码智能。
+这是相当可能的。
 of intelligence.
 
 405
 00:21:47,460 --> 00:21:49,520
-它需要太多的能量和精细的制造。
+你不能直接演化出数码智能。
 You couldn't directly evolve digital intelligence.
 
 406
 00:21:49,520 --> 00:21:53,960
-你需要生物智能演变，以便它可以创造出数码智能。
+它需要太多的能量和精细的制造。
 It requires too much energy and too much careful fabrication.
 
 407
 00:21:53,960 --> 00:21:59,640
-然后数码智能可以逐渐吸收人们曾经写过的一切，
+你需要生物智能演变，以便它可以创造出数码智能。
 You need biological intelligence to evolve so that it can create digital intelligence.
 
 408
 00:21:59,640 --> 00:22:07,000
-这就是Chachybethi一直在做的事情。
+然后数码智能可以逐渐吸收人们曾经写过的一切，
 The digital intelligence can then absorb everything people ever wrote in a fairly slow way,
 
 409
 00:22:07,000 --> 00:22:10,720
-但后来，它可以直接了解世界并更快地学习。
+这就是Chachybethi一直在做的事情。
 which is what Chachybethi has been doing.
 
 410
 00:22:10,720 --> 00:22:15,520
-它可能会让我们坚持一段时间，来确保继续运转，但在那之后，
+但后来，它可以直接了解世界并更快地学习。
 But then it can start getting direct experience of the world and learn much faster.
 
 411
 00:22:15,520 --> 00:22:22,960
-也许不会了。
+它可能会让我们坚持一段时间，来确保继续运转，但在那之后，
 And it may keep us around for a while to keep the pastations running, but after that,
 
 412
 00:22:22,960 --> 00:22:23,960
-所以，好消息是我们已经弄清楚如何造出永生的生物。
+也许不会了。
 maybe not.
 
 413
 00:22:23,960 --> 00:22:29,480
-所以，这些数码智能，当一个硬件死了，它们并没有死。
+所以，好消息是我们已经弄清楚如何造出永生的生物。
 So, the good news is we've figured out how to build beings that are immortal.
 
 414
 00:22:29,480 --> 00:22:34,720
-如果你把权重存储在某种介质中，你能找到另一块能执行相同指令的硬件，
+所以，这些数码智能，当一个硬件死了，它们并没有死。
 So, these digital intelligences, when a piece of hardware dies, they don't die.
 
 415
 00:22:34,720 --> 00:22:39,280
-那么你就可以让它再次复活。
+如果你把权重存储在某种介质中，你能找到另一块能执行相同指令的硬件，
 If you've got the weight stored in some medium and you can find another piece of hardware
 
 416
 00:22:39,280 --> 00:22:43,720
-所以我们得到了永生，但它不是为我们准备的。
+那么你就可以让它再次复活。
 that can run the same instructions, then you can bring it to life again.
 
 417
 00:22:43,720 --> 00:22:48,720
-所以，雷·库兹韦尔对永生非常感兴趣。
+所以我们得到了永生，但它不是为我们准备的。
 So we've got immortality, but it's not for us.
 
 418
 00:22:48,720 --> 00:22:52,720
-我认为老白人永生是个非常糟糕的主意。
+所以，雷·库兹韦尔对永生非常感兴趣。
 So, Ray Kurzweil is very interested in being immortal.
 
 419
 00:22:52,720 --> 00:22:56,720
-我们得到了永生，但它不是为雷准备的。
+我认为老白人永生是个非常糟糕的主意。
 I think it's a very bad idea for Old Whiteman to be immortal.
 
 420
 00:22:56,720 --> 00:23:01,720
-undefined
+我们得到了永生，但它不是为雷准备的。
 We've got the immortality, but it's not for Ray.
 
 421
@@ -2535,8 +2535,8 @@ because they've been trained to mimic us.
 
 508
 00:26:45,040 --> 00:26:49,680
-所以很难判断是聊天GBT写的，
-And so it's very hard to tell if chat GBT wrote it,
+所以很难判断是ChatGPT写的，
+And so it's very hard to tell if ChatGPT wrote it,
 
 509
 00:26:49,680 --> 00:26:53,080
@@ -2585,7 +2585,7 @@ What question or two should we pay most attention to?
 
 518
 00:27:24,840 --> 00:27:35,840
-这些技术是否有可能帮助我们提出更好的问题，并迎头赶上技术？
+这些技术是否有可能帮助我们提出更好的问题，并在技术上迎头赶上？
 And is it possible for these technologies to actually help us ask better questions and out question the technology?
 
 519
@@ -2655,52 +2655,52 @@ And obviously there's a lot of comparisons.
 
 532
 00:28:26,520 --> 00:28:32,000
-你有没有记得杜鲁门总统在椭圆办公室里对奥本海默说了什么？
+你有没有记得杜鲁门总统在椭圆办公室里对奥本海默
 By any chance do you remember what President Truman told Openheimer when he was in the
 
 533
 00:28:32,000 --> 00:28:33,000
-不，我不记得了。
+说了什么？
 Oval Office?
 
 534
 00:28:33,000 --> 00:28:34,000
-我知道那件事有些事，但我不知道杜鲁门当时给了什么建议。
+不，我不记得了。
 No, I don't.
 
 535
 00:28:34,000 --> 00:28:40,560
-谢谢。
+我知道那件事有些事，但我不知道杜鲁门当时给了什么建议。
 I know something about that, but I don't know what Truman told up like.
 
 536
 00:28:40,560 --> 00:28:41,560
-好的，我们继续。
+谢谢。
 Thank you.
 
 537
 00:28:41,560 --> 00:28:44,200
-观众提问。对不起，如果还有人想问问题，请告诉我谁接下来。
+好的，我们继续。
 Well, take it from here.
 
 538
 00:28:44,200 --> 00:28:49,600
-也许给个... 请讲。
+观众提问。对不起，如果还有人想问问题，请告诉我谁接下来。
 audience question. Sorry, if there are people that might, let me know who's next.
 
 539
 00:28:49,600 --> 00:28:52,360
-你好，雅克·伍德拉夫。鉴于训练这些所需的大量数据，
+也许给个... 请讲。
 Maybe give a... Go ahead.
 
 540
 00:28:52,360 --> 00:28:58,840
-undefined
+你好，雅克·伍德拉夫。鉴于训练大型语言模型需要大量数据，
 Hello, Jacob Woodruff. With the amount of data that's been required to train these
 
 541
 00:28:58,840 --> 00:29:05,240
-大型语言模型，我们是否会预料到这些系统智能的停滞?
+我们是否会预期到这些系统智能的发展因此停滞?
 large language models, would we expect a plateau in the intelligence of these systems
 
 542
@@ -2730,12 +2730,12 @@ They'll have a much better idea of how to deal with space, for example.
 
 547
 00:29:30,360 --> 00:29:38,360
-在处理这些模型中的视频数量方面，我们仍然没有非常好的方法。
+在处理这些模型中的视频数量方面，对视频建模
 And in terms of the amount of total video, we still don't have very good ways of processing video in these models.
 
 548
 00:29:38,560 --> 00:29:40,080
-对视频建模。
+我们仍然没有非常好的方法。
 of modeling video.
 
 549
@@ -2755,12 +2755,12 @@ that tell you how the world works.
 
 552
 00:29:46,800 --> 00:29:49,000
-所以我们还没有达到数据的极限。
+所以对于多模态模型
 So we're not hitting the data limits
 
 553
 00:29:49,000 --> 00:29:50,760
-对于多模态模型。
+我们还没有达到数据的极限。
 for multi-modal models yet.
 
 554
@@ -2805,97 +2805,97 @@ OK, data, yes, they are fast-read learning.
 
 562
 00:30:10,840 --> 00:30:14,280
-一万亿个连接器可以做的远远超过我们拥有的100万亿个连接器。
+一万亿个连接器可以做的远远超过
 One trillion connectors can do much more than 100 trillion
 
 563
 00:30:14,280 --> 00:30:15,640
-但是人类进化的每个阶段
+我们拥有的100万亿个连接器。
 connectors that we have.
 
 564
 00:30:15,640 --> 00:30:17,840
-都是由思想实验推动的，
+但是人类进化的每个阶段
 But every piece of human evolution
 
 565
 00:30:17,840 --> 00:30:20,520
-例如爱因斯坦过去常常做思想实验
+都是由思想实验推动的，
 has been driven by thought experiments,
 
 566
 00:30:20,520 --> 00:30:22,320
-因为这个星球上没有光速。
+例如爱因斯坦过去常常做思想实验
 like Einstein used to do thought experiments
 
 567
 00:30:22,320 --> 00:30:25,600
-人工智能如何达到那个程度，如果有的话，
+因为这个星球上没有光速。
 because there was no speed of light out here on this planet.
 
 568
 00:30:25,600 --> 00:30:28,280
-如果它不能，那么我们怎么可能
+人工智能如何达到那个程度，如果有的话，
 How can AI get to that point, if at all,
 
 569
 00:30:28,280 --> 00:30:30,800
-受到它们存在的威胁
+如果它不能，那么我们怎么可能
 and if it cannot, then how can we possibly
 
 570
 00:30:30,800 --> 00:30:32,520
-因为他们不会真正地自我学习？
+受到它们存在的威胁
 have an existential threat from them
 
 571
 00:30:32,520 --> 00:30:35,000
-他们的自我学习将局限于我们为他们提供的模型。
+因为他们不会真正地自我学习？
 because they will not be self-learning, so to say?
 
 572
 00:30:35,000 --> 00:30:37,400
-我认为这是一个非常有趣的论点，
+他们的自我学习将局限于
 They will be self-learning limited to the model
 
 573
 00:30:37,400 --> 00:30:39,400
-但我认为他们将能够进行思想实验。
+我们为他们提供的模型。
 that retell them.
 
 574
 00:30:39,400 --> 00:30:42,680
-我认为他们将能够进行推理。
+我认为这是一个非常有趣的论点，
 I think that's a very interesting argument,
 
 575
 00:30:42,680 --> 00:30:45,640
-让我给你举个例子。
+但我认为他们将能够进行思想实验。
 but I think they will be able to do thought experiments.
 
 576
 00:30:45,640 --> 00:30:47,120
-如果你看阿尔法零，它会下棋，
+我认为他们将能够进行推理。
 I think they'll be able to reason.
 
 577
 00:30:47,120 --> 00:30:49,320
-它有三个要素。
+让我给你举个例子。
 So let me give you an analogy.
 
 578
 00:30:49,320 --> 00:30:53,760
-它有一个评估棋盘认为局面
+如果你看阿尔法零，它会下棋，
 If you take alpha 0, which plays chess,
 
 579
 00:30:53,760 --> 00:30:56,160
-undefined
+它有三个要素。
 it has three ingredients.
 
 580
 00:30:56,160 --> 00:30:58,840
-undefined
+它有一个评估棋盘认为局面
 It's got something that evaluates the board position
 
 581
@@ -2980,22 +2980,22 @@ And once they start doing internal reasoning,
 
 597
 00:31:37,360 --> 00:31:38,800
-来检查他们所相信的不同事物之间的一致性，
+来检查
 to check for the consistency
 
 598
 00:31:38,800 --> 00:31:41,120
-那么他们会变得更聪明
+他们所相信的不同事物之间的一致性，
 between the different things they believe,
 
 599
 00:31:41,120 --> 00:31:42,200
-而且它们将能够进行思考实验。
+那么他们会变得更聪明
 then they'll get much smarter
 
 600
 00:31:42,200 --> 00:31:44,640
-undefined
+而且它们将能够进行思考实验。
 and they will be able to do thought experiments.
 
 601
@@ -3275,27 +3275,27 @@ Hey, Jeff, this is Eshwar Balani from SAI Group.
 
 656
 00:34:16,720 --> 00:34:19,960
-很明显，技术以指数级的速度在发展，
+很明显，
 So clearly, the technology is advancing
 
 657
 00:34:19,960 --> 00:34:21,800
-我想听听你的想法，
+技术以指数级的速度在发展，
 at an exponential pace.
 
 658
 00:34:21,800 --> 00:34:23,800
-如果你观察近期和中期，比如说，一、两、三或者五年的时间范围，
+我想听听你的想法，
 I wanted to get your thoughts--
 
 659
 00:34:23,800 --> 00:34:28,800
-从社会角度看失业对社会和经济的影响是什么？
+如果你观察近期和中期，比如说，一、两、三或者五年的时间范围，
 If you looked at the near and medium term, say, one, two, three, or maybe five year horizon,
 
 660
 00:34:28,800 --> 00:34:35,800
-undefined
+从社会角度看失业对社会和经济的影响是什么？
 what the social and economic implications are from a societal perspective with job loss
 
 661
@@ -3370,7 +3370,7 @@ and making the rich richer and the poor poorer.
 
 675
 00:35:37,480 --> 00:35:42,960
-当你放大这个差距时，社会变得越来越暴力，想
+当你放大这个差距时，社会变得越来越暴力，
 As you do that, as you make that gap bigger, society gets more and more violent, think
 
 676
@@ -3410,192 +3410,192 @@ is going to be used to make the rich richer in the poor poorer.
 
 683
 00:36:03,960 --> 00:36:07,560
-通过为每个人提供基本收入，您可能可以缓解这个问题。
+通过为每个人提供基本收入，
 You might be able to ameliorate that by having
 
 684
 00:36:07,560 --> 00:36:10,440
-但是这种技术是在一个没有为大家的利益而设计的社会中发展起来的。
+您可能可以缓解这个问题。
 a basic income that everybody gets.
 
 685
 00:36:10,440 --> 00:36:22,440
-来自在座的全球邮报的Joe Castalda的一个问题。
+但是这种技术是在一个没有为大家的利益而设计的社会中发展起来的。
 But the technology is being developed in a society that is not designed to use it for everybody's good.
 
 686
 00:36:22,440 --> 00:36:30,440
-您是否打算继续持有Kehere和其他公司的投资？
+来自在座的全球邮报的Joe Castalda的一个问题。
 A question here from Joe Castalda of the Global Mail, who's in the audience.
 
 687
 00:36:30,440 --> 00:36:34,440
-如果是这样，为什么？
+您是否打算继续持有Kehere和其他公司的投资？
 Do you intend to hold onto your investments in Kehere and other companies?
 
 688
 00:36:34,440 --> 00:36:36,440
-嗯，我可以把钱拿走，把它放到银行，让他们从中获利。
+如果是这样，为什么？
 And if so, why?
 
 689
 00:36:38,440 --> 00:36:45,440
-那个……
+嗯，我可以把钱拿走，把它放到银行，让他们从中获利。
 Well, I could take the money and I could put it in the bank and let them profit from it.
 
 690
 00:36:45,440 --> 00:36:47,440
-是的，我打算继续持有我的投资，部分原因是周围的人
+那个……
 It's...
 
 691
 00:36:47,440 --> 00:36:53,280
-与co-herent是我的朋友。
+是的，我打算继续持有我的投资，部分原因是周围的人
 Yes, I'm going to hold onto my investments here, partly because the people around
 
 692
 00:36:53,280 --> 00:36:56,440
-我有点相信这些大型语言球体将会非常有帮助。
+与co-herent是我的朋友。
 co-herent are friends of mine.
 
 693
 00:36:56,440 --> 00:37:02,440
-我认为技术应该是好的并且应该使事情运作得更好。
+我有点相信这些大型语言球体将会非常有帮助。
 I sort of believe these big language balls are going to be very helpful.
 
 694
 00:37:02,440 --> 00:37:09,640
-我们需要解决的是像就业这样的政治问题。
+我认为技术应该是好的并且应该使事情运作得更好。
 I think the technology should be good and it should make things work better.
 
 695
 00:37:09,640 --> 00:37:14,520
-但当涉及到生存威胁时，我们必须考虑如何保持对技术的控制。
+我们需要解决的是像就业这样的政治问题。
 It's the politics we need to fix for things like employment.
 
 696
 00:37:14,520 --> 00:37:20,680
-但好消息是我们都在同一条船上，所以我们可能可以得到合作。
+但当涉及到生存威胁时，我们必须考虑如何保持对技术的控制。
 But when it comes to the existential threat, we have to think how we can keep control of the technology.
 
 697
 00:37:20,680 --> 00:37:26,000
-在发言时，我了解您实际上想要与这项技术的制造者交流，您可能会改变他们的想法或者我
+但好消息是我们都在同一条船上，所以我们可能可以得到合作。
 But the good news there is that we're all in the same boat so we might be able to get cooperation.
 
 698
 00:37:26,000 --> 00:37:32,400
-不知道。我是说我们已经确定我们真的不知道该怎么办
+在发言时，我了解您实际上想要与这项技术的制造者交流，
 And in speaking out, I mean, part of your thinking as I understand it is that you actually want to engage with the people
 
 699
 00:37:32,400 --> 00:37:40,080
-undefined
+您可能会改变他们的想法或者我不知道。
 making this technology and you change their minds or maybe make a case for I
 
 700
 00:37:40,080 --> 00:37:43,520
-undefined
+我是说我们已经确定我们真的不知道该怎么办
 don't really know. I mean we've established that we don't really know what to do
 
 701
 00:37:43,520 --> 00:37:48,200
-但这是关于参与而不是退缩。所以其中一件事让我离开谷歌，公开谈论这个问题，
+但这是关于参与而不是退缩。
 but it's about engaging rather than stepping back. So one of the things that
 
 702
 00:37:48,200 --> 00:37:55,120
-是他曾经是朱利亚教授，现在是我非常敬重的中层教授，
+所以其中一件事让我离开谷歌，公开谈论这个问题，
 made me leave Google and go public with this is to say he used to be a Julia
 
 703
 00:37:55,120 --> 00:38:00,720
-也是鼓励我这样做的人。他说，“杰夫，你需要发言。他们会听你的。
+是他曾经是朱利亚教授，现在是我非常敬重的中层教授，
 professor but he's now a middle-ranked professor who I think very highly of
 
 704
 00:38:00,720 --> 00:38:05,280
-人们对这种危险视而不见。”
+也是鼓励我这样做的人。他说，“杰夫，你需要发言。他们会听你的。
 who encouraged me to do this. He said, "Jeff, you need to speak out. They'll listen to you.
 
 705
 00:38:05,280 --> 00:38:08,080
-还有…
+人们对这种危险视而不见。”
 People are just blind to this danger."
 
 706
 00:38:08,080 --> 00:38:10,160
-你认为人们在倾听吗？
+还有…
 And...
 
 707
 00:38:10,160 --> 00:38:13,920
-对，不。我认为这个房间里的每个人都在倾听。
+你认为人们在倾听吗？
 Do you think people are listening, though?
 
 708
 00:38:13,920 --> 00:38:17,440
-最后一个问题。时间已经到了，但你后悔参与其中吗？
+对，不。我认为这个房间里的每个人都在倾听。
 Yeah, no. I think everyone in this room is listening for a start.
 
 709
 00:38:17,440 --> 00:38:24,480
-《纽约时报》的凯普·麦兹竭尽全力让我承认自己有遗憾。
+最后一个问题。时间已经到了，
 Just one last question. We're out of time, but do you have regrets that you're involved in
 
 710
 00:38:24,480 --> 00:38:24,960
-《纽约时报》的凯普·麦兹。
+但你后悔参与其中吗？
 making this?
 
 711
 00:38:25,840 --> 00:38:29,680
-最后，我说，可能有些许的遗憾，
+《纽约时报》的凯普·麦兹竭尽全力让我承认
 Cape Metz tried very hard to get me to say I had regrets.
 
 712
 00:38:29,680 --> 00:38:31,200
-这件事被报道成有遗憾的。
+自己有遗憾。
 Cape Metz at the New York Times.
 
 713
 00:38:31,200 --> 00:38:36,640
-但我认为在进行研究时我没有做出任何错误的决策。
+最后，我说，
 And yes, and in the end, I said, well, maybe slight regrets,
 
 714
 00:38:36,640 --> 00:38:39,360
-我认为在20世纪70年代和80年代，对人造神经网络进行研究是非常合理的。
+可能有些许的遗憾，
 which got reported as has regrets.
 
 715
 00:38:39,360 --> 00:38:43,840
-但这是无法预料的
+但我认为在进行研究时我没有做出任何错误的决策。
 But I don't think I made any bad decisions in doing research.
 
 716
 00:38:43,840 --> 00:38:46,960
-这个阶段是无法预料的。
+我认为在20世纪70年代和80年代，
 I think it was perfectly reasonable back in the 70s and 80s
 
 717
 00:38:46,960 --> 00:38:49,360
-直到最近，我还以为这个生存危机还很遥远。
+对人造神经网络进行研究是非常合理的。
 to do research on how to make artificial neural nets.
 
 718
 00:38:49,360 --> 00:38:52,400
-undefined
+但这是无法预料的
 But it wasn't really foreseeable.
 
 719
 00:38:52,400 --> 00:38:54,160
-undefined
+这个阶段是无法预料的。
 This stage of it wasn't foreseeable.
 
 720
 00:38:54,560 --> 00:38:58,640
-undefined
+直到最近，我还以为这个生存危机还很遥远。
 And until very recently I thought this existential crisis was a long way off.
 
 721
@@ -3612,8 +3612,3 @@ Thank you, Geoffrey. Thank you so much for joining us.
 00:39:10,080 --> 00:39:12,080
 [掌声]
 [APPLAUSE]
-
-724
-00:39:12,080 --> 00:39:22,080
-[无声音频]
-[BLANK_AUDIO]
