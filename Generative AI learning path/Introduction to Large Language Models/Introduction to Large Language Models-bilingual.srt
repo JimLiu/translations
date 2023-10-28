@@ -1,0 +1,1409 @@
+1
+00:00:00,570 --> 00:00:04,386
+JOHN EWALD：大家好，欢迎来到大型语言模型介绍课程。
+JOHN EWALD: Hello, and welcome to Introduction to Large Language Models.
+
+3
+00:00:04,386 --> 00:00:08,158
+我是JOHN EWALD，谷歌云的培训开发人员。
+My name is John Ewald, and I'm a training developer here at Google Cloud.
+
+5
+00:00:08,160 --> 00:00:10,859
+在这门课程中，您将学习定义大型语言模型，
+In this course, you learn to define large language
+
+6
+00:00:10,859 --> 00:00:14,669
+即LLM，描述LLM的用例，
+models, or LLMs, describe LLM use cases,
+
+7
+00:00:14,669 --> 00:00:20,429
+解释提示调优（Prompt Tuning），以及介绍谷歌的Gen AI开发工具。
+explain prompt tuning, and describe Google's Gen AI development tools.
+
+9
+00:00:20,429 --> 00:00:24,419
+大型语言模型，即LLM，是深度学习的一个子集。
+Large language models, or LLMs, are a subset of deep learning.
+
+10
+00:00:24,420 --> 00:00:26,219
+想了解更多关于深度学习的信息，
+To find out more about deep learning,
+
+11
+00:00:26,219 --> 00:00:29,669
+请观看我们的生成式AI课程视频。
+see our Introduction to Generative AI course video.
+
+12
+00:00:29,670 --> 00:00:32,429
+LLMs和生成式AI相交，它们都是
+LLMs and generative AI intersect and they are
+
+13
+00:00:32,429 --> 00:00:35,399
+深度学习的一部分。
+both a part of deep learning.
+
+14
+00:00:35,399 --> 00:00:38,039
+你可能经常听到的另一个AI领域
+Another area of AI you may be hearing a lot about
+
+15
+00:00:38,039 --> 00:00:39,718
+是生成式AI。
+is generative AI.
+
+16
+00:00:39,719 --> 00:00:41,969
+这是一种能够
+This is a type of artificial intelligence that
+
+17
+00:00:41,969 --> 00:00:45,728
+生成新内容的人工智能，包括文本、图像、音频、
+can produce new content, including text, images, audio,
+
+18
+00:00:45,729 --> 00:00:48,289
+和合成数据。
+and synthetic data.
+
+19
+00:00:48,289 --> 00:00:50,648
+那么大型语言模型是什么？
+So what are large language models?
+
+20
+00:00:50,649 --> 00:00:53,979
+大型语言模型是指可以预先训练，然后进行微调
+Large language models refer to large general-purpose language
+
+21
+00:00:53,979 --> 00:00:59,020
+以适应特定目的的大型通用语言模型。
+models that can be pre-trained and then fine tuned for specific purposes.
+
+23
+00:00:59,020 --> 00:01:03,140
+什么是预训练和微调（Fine Tuned）？
+What do pre-trained and fine tuned mean?
+
+24
+00:01:03,140 --> 00:01:05,029
+想象一下训练一条狗。
+Imagine training a dog.
+
+25
+00:01:05,030 --> 00:01:07,069
+通常，你会教狗基本的命令
+Often, you train your dog basic commands
+
+26
+00:01:07,069 --> 00:01:12,779
+比如坐下、过来、趴下和待在原地。
+such as sit, come, down, and stay.
+
+27
+00:01:12,780 --> 00:01:15,750
+这些命令对日常生活来说足够了
+These commands are normally sufficient for everyday life
+
+28
+00:01:15,750 --> 00:01:19,489
+帮助你的狗成为一个好的犬类公民。
+and help your dog become a good canine citizen.
+
+29
+00:01:19,489 --> 00:01:22,489
+但是，如果你需要特殊服务犬，比如警犬、
+However, if you need a special service dog such as a police
+
+30
+00:01:22,489 --> 00:01:28,479
+导盲犬或猎犬，你需要增加特殊训练。
+dog, a guide dog, or a hunting dog, you add special trainings.
+
+31
+00:01:28,480 --> 00:01:33,279
+这个概念也适用于大型语言模型。
+The similar idea applies to large language models.
+
+32
+00:01:33,280 --> 00:01:35,489
+这些模型是为通用目的而训练的
+These models are trained for general purposes
+
+33
+00:01:35,489 --> 00:01:41,219
+解决常见的语言问题，如文本分类、问答、
+to solve common language problems such as text classification, question answering, document
+
+35
+00:01:41,219 --> 00:01:47,089
+文档摘要和跨行业的文本生成。
+summarization, and text generation across industries.
+
+36
+00:01:47,090 --> 00:01:58,789
+然后，可以使用相对较小规模的领域数据集，将模型定制来解决零售、金融、娱乐等不同领域的特定问题。
+The models can then be tailored to solve specific problems in different fields such as retail, finance, and entertainment using a relatively small size of field data sets.
+
+40
+00:01:58,790 --> 00:02:00,560
+我们进一步分解这个概念，
+Let's further break down the concept
+
+41
+00:02:00,560 --> 00:02:04,699
+将其分为大型语言模型的三个主要特点。
+into three major features of large language models.
+
+42
+00:02:04,700 --> 00:02:06,989
+大有两层含义。
+Large indicates two meanings.
+
+43
+00:02:06,989 --> 00:02:10,037
+首先是训练数据集的庞大规模，
+First is the enormous size of the training data set,
+
+44
+00:02:10,038 --> 00:02:12,649
+有时达到PB级别。
+sometimes at the petabyte scale.
+
+45
+00:02:12,650 --> 00:02:15,289
+其次，它指的是参数数量。
+Second, it refers to the parameter count.
+
+46
+00:02:15,289 --> 00:02:18,889
+在机器学习中，参数通常被称为超参数。
+In ML, parameters are often called hyperparameters.
+
+47
+00:02:18,889 --> 00:02:24,259
+参数基本上是机器从模型训练中学到的记忆和知识。
+Parameters are basically the memories and the knowledge that the machine learned from the model training.
+
+49
+00:02:24,259 --> 00:02:29,998
+参数定义了模型在解决问题（如预测文本）的技能。
+Parameters define the skill of a model in solving a problem such as predicting text.
+
+51
+00:02:30,000 --> 00:02:31,830
+通用性意味着这些模型
+General purpose means that the models
+
+52
+00:02:31,830 --> 00:02:34,439
+足以解决常见问题。
+are sufficient to solve common problems.
+
+53
+00:02:34,439 --> 00:02:36,869
+有两个原因导致了这个想法。
+Two reasons lead to this idea.
+
+54
+00:02:36,870 --> 00:02:40,019
+首先是人类语言的共性，无论
+First is the commonality of a human language regardless
+
+55
+00:02:40,020 --> 00:02:41,580
+具体任务如何。
+of the specific tasks.
+
+56
+00:02:41,580 --> 00:02:44,819
+其次是资源限制。
+And second is the resource restriction.
+
+57
+00:02:44,819 --> 00:02:47,428
+只有某些组织具备能力
+Only certain organizations have the capability
+
+58
+00:02:47,430 --> 00:02:51,209
+用大量数据集训练这种大型语言模型
+to train such large language models with huge data sets
+
+59
+00:02:51,210 --> 00:02:54,150
+和大量参数。
+and a tremendous number of parameters.
+
+60
+00:02:54,150 --> 00:02:58,869
+让他们为其他人创建基本语言模型怎么样？
+How about letting them create fundamental language models for others to use?
+
+62
+00:02:58,870 --> 00:03:02,680
+这导致了最后一点，预训练和微调，
+This leads to the last point, pre-trained and fine tuned,
+
+63
+00:03:02,680 --> 00:03:07,659
+意味着用大型数据集预训练一个通用目的的大型语言模型
+meaning to pre-train a large language model for a general purpose with a large data set
+
+65
+00:03:07,659 --> 00:03:13,699
+然后用更小的数据集为特定目标进行微调。
+and then fine tune it for specific aims with a much smaller data set.
+
+67
+00:03:13,699 --> 00:03:17,189
+使用大型语言模型的好处很明显。
+The benefits of using large language models are straightforward.
+
+69
+00:03:17,189 --> 00:03:20,879
+首先，一个模型可以应用于不同的任务。
+First, a single model can be used for different tasks.
+
+70
+00:03:20,879 --> 00:03:22,548
+这是梦想成真。
+This is a dream come true.
+
+71
+00:03:22,550 --> 00:03:27,949
+这些经过大量数据训练并生成数十亿参数的大型语言模型
+These large language models that are trained with petabytes of data and generate billions
+
+73
+00:03:27,949 --> 00:03:31,319
+足够智能，能解决不同的任务，
+of parameters are smart enough to solve different tasks,
+
+74
+00:03:31,319 --> 00:03:38,810
+包括语言翻译、句子补全、文本分类、问答等。
+including language translation, sentence completion, text classification, question answering, and more.
+
+76
+00:03:38,810 --> 00:03:42,560
+其次，当你定制大型语言模型来解决特定问题时，
+Second, large language models require minimal field training
+
+77
+00:03:42,560 --> 00:03:46,219
+它们需要的领域训练数据很少。
+data when you tailor them to solve your specific problem.
+
+78
+00:03:46,219 --> 00:03:49,009
+大型语言模型表现不错
+Large language models obtain decent performance
+
+79
+00:03:49,009 --> 00:03:51,419
+即使域训练数据很少。
+even with little domain training data.
+
+80
+00:03:51,419 --> 00:03:55,789
+换句话说，它们可用于少量样本（Few-shot）甚至零样本（Zero-shot）场景。
+In other words, they can be used for few shot or even zero-shot scenarios.
+
+82
+00:03:55,789 --> 00:03:57,619
+在机器学习中，少样本是指
+In machine learning, few shot refers
+
+83
+00:03:57,620 --> 00:03:59,870
+用最少的数据训练模型，
+to training a model with minimal data,
+
+84
+00:03:59,870 --> 00:04:02,539
+而零样本意味着模型能识别
+and zero shot implies that a model can recognize
+
+85
+00:04:02,539 --> 00:04:07,108
+在以前的训练中未明确教过的事物。
+things that have not explicitly been taught in the training before.
+
+87
+00:04:07,110 --> 00:04:09,719
+第三，大型语言模型的性能
+Third, the performance of large language models
+
+88
+00:04:09,719 --> 00:04:15,549
+随着数据和参数的增加而不断提高。
+is continuously growing when you add more data and parameters.
+
+89
+00:04:15,550 --> 00:04:17,949
+以PaLM为例。
+Let's take PaLM as an example.
+
+90
+00:04:17,949 --> 00:04:21,308
+2022年4月，谷歌发布了PaLM，
+In April 2022, Google released PaLM,
+
+91
+00:04:21,310 --> 00:04:26,050
+简称Pathways Language Model，这是一个拥有5400亿参数的模型，
+short for Pathways Language Model, a 540 billion-parameter
+
+92
+00:04:26,050 --> 00:04:31,658
+在多种语言任务中都实现了最先进的性能。
+model that achieves a state of the art performance across multiple language tasks.
+
+94
+00:04:31,660 --> 00:04:35,079
+PaLM是一个仅解码器的密集型Transformer模型，
+PaLM is a dense decoder-only transformer model.
+
+95
+00:04:35,079 --> 00:04:38,529
+它有5400亿个参数。
+It has 540 billion parameters.
+
+96
+00:04:38,529 --> 00:04:40,788
+它利用了新的路径系统，
+It leverages the new pathways system,
+
+97
+00:04:40,790 --> 00:04:47,859
+这使得谷歌能够在多个TPU V4集群上有效地训练一个模型。
+which has enabled Google to efficiently train a single model across multiple TPU V4 pods.
+
+99
+00:04:47,860 --> 00:04:50,259
+Pathway是一种新的AI架构，它可以
+Pathway is a new AI architecture that
+
+100
+00:04:50,259 --> 00:04:54,308
+同时处理多个任务，快速学习新任务，
+will handle many tasks at once, learn new tasks quickly,
+
+101
+00:04:54,310 --> 00:04:57,889
+并更好地理解世界。
+and reflect a better understanding of the world.
+
+102
+00:04:57,889 --> 00:05:01,339
+该系统使PaLM能够协调分布式
+The system enables PaLM to orchestrate distributed
+
+103
+00:05:01,339 --> 00:05:04,629
+加速器的计算。
+computation for accelerators.
+
+104
+00:05:04,629 --> 00:05:07,928
+我们之前提到过PaLM是一个Transformer模型。
+We previously mentioned that PaLM is a transformer model.
+
+105
+00:05:07,930 --> 00:05:11,479
+Transformer模型包括编码器和解码器。
+A transformer model consists of encoder and decoder.
+
+106
+00:05:11,480 --> 00:05:13,629
+编码器对输入序列进行编码，
+The encoder encodes the input sequence
+
+107
+00:05:13,629 --> 00:05:15,669
+然后将其传递给解码器，解码器
+and passes it to the decoder, which
+
+108
+00:05:15,670 --> 00:05:18,009
+学会如何解码表示，
+learns how to decode the representations
+
+109
+00:05:18,009 --> 00:05:20,959
+以完成相关任务。
+for a relevant task.
+
+110
+00:05:20,959 --> 00:05:27,050
+我们已经从传统编程发展到了神经网络和生成模型
+We've come a long away from traditional programming to neural networks to generative models.
+
+112
+00:05:27,050 --> 00:05:28,939
+在传统编程中，我们需要
+In traditional programming, we used
+
+113
+00:05:28,939 --> 00:05:32,059
+硬编码区分猫的规则，例如：
+to have to hard code the rules for distinguishing a cat--
+
+114
+00:05:32,060 --> 00:05:37,879
+类型：动物；腿：四条；耳朵：两个；毛发：有；
+type, animal; legs, four; ears, two; fur, yes;
+
+115
+00:05:37,879 --> 00:05:40,749
+喜欢：纱线，猫薄荷。
+likes yarn, catnip.
+
+116
+00:05:40,750 --> 00:05:42,790
+在神经网络浪潮中，我们
+In the wave of neural networks, we
+
+117
+00:05:42,790 --> 00:05:45,819
+可以给网络提供猫和狗的图片，然后询问，
+could give the network pictures of cats and dogs and ask,
+
+118
+00:05:45,819 --> 00:05:47,048
+这是一只猫吗？
+is this a cat?
+
+119
+00:05:47,050 --> 00:05:49,029
+它会预测出是猫。
+And it would predict a cat.
+
+120
+00:05:49,029 --> 00:05:51,969
+在生成式中，我们作为用户
+In the generative wave, we as users
+
+121
+00:05:51,970 --> 00:05:55,399
+可以生成自己的内容，无论是文本、图片、
+can generate our own content, whether it be text, images,
+
+122
+00:05:55,399 --> 00:05:57,579
+音频、视频还是其他。
+audio, video, or other.
+
+123
+00:05:57,579 --> 00:06:00,398
+例如，像PaLM或LaMDA这样的模型，
+For example, models like PaLM, or LaMDA,
+
+124
+00:06:00,399 --> 00:06:03,488
+或者用于对话应用的语言模型，
+or Language Model for Dialogue Applications,
+
+125
+00:06:03,490 --> 00:06:06,970
+从互联网的多个来源获取大量数据
+ingest very, very large data from multiple sources
+
+126
+00:06:06,970 --> 00:06:10,059
+建立基础语言模型，
+across the internet and build foundation language models
+
+127
+00:06:10,060 --> 00:06:12,910
+我们只需提问，
+we can use simply by asking a question,
+
+128
+00:06:12,910 --> 00:06:17,290
+无论是输入提示还是口头对话提示。
+whether typing it into a prompt or verbally talking into the prompt.
+
+130
+00:06:17,290 --> 00:06:19,449
+当你问它什么是猫时，它会
+So when you ask it what's a cat, it
+
+131
+00:06:19,449 --> 00:06:23,489
+告诉你它所学到的关于猫的一切。
+can give you everything it has learned about a cat.
+
+132
+00:06:23,490 --> 00:06:26,789
+我们来比较一下使用预训练模型的LLM开发
+Let's compare LLM development using pre-trained models
+
+133
+00:06:26,790 --> 00:06:29,279
+和传统的ML开发。
+with traditional ML development.
+
+134
+00:06:29,279 --> 00:06:33,069
+首先，使用LLM开发，你不需要成为专家。
+First, with LLM development, you don't need to be an expert.
+
+135
+00:06:33,069 --> 00:06:34,799
+你不需要训练样本。
+You don't need training examples.
+
+136
+00:06:34,800 --> 00:06:37,199
+也不需要训练模型。
+And there is no need to train a model.
+
+137
+00:06:37,199 --> 00:06:40,109
+你只需要考虑提示设计，即
+All you need to do is think about prompt design, which
+
+138
+00:06:40,110 --> 00:06:44,669
+创建清晰、简洁、有信息量的提示。
+is the process of creating a prompt that is clear, concise, and informative.
+
+140
+00:06:44,670 --> 00:06:48,540
+自然语言处理的重要部分。
+It is an important part of natural language processing.
+
+141
+00:06:48,540 --> 00:06:50,189
+在传统的机器学习中，你
+In traditional machine learning, you
+
+142
+00:06:50,189 --> 00:06:52,648
+需要训练样本来训练模型。
+need training examples to train a model.
+
+143
+00:06:52,649 --> 00:06:56,508
+还需要计算时间和硬件。
+You also need compute time and hardware.
+
+144
+00:06:56,509 --> 00:07:01,759
+让我们看一个文本生成用例。
+Let's take a look at an example of a text generation use case.
+
+145
+00:07:01,759 --> 00:07:05,989
+问答，或者说QA，是自然语言的一个子领域
+Question answering, or QA, is a subfield of natural language
+
+146
+00:07:05,990 --> 00:07:09,439
+处理自动回答的任务
+processing that deals with the task of automatically answering
+
+147
+00:07:09,439 --> 00:07:12,709
+用自然语言提出的问题。
+questions posed in natural language.
+
+148
+00:07:12,709 --> 00:07:16,099
+QA系统通常在大量的
+QA systems are typically trained on a large amount
+
+149
+00:07:16,100 --> 00:07:17,269
+文本和代码上进行训练。
+of text and code.
+
+150
+00:07:17,269 --> 00:07:19,889
+他们能回答各种问题，
+And they are able to answer a wide range of questions,
+
+151
+00:07:19,889 --> 00:07:23,599
+包括事实、定义和观点类问题。
+including factual, definitional, and opinion-based questions.
+
+152
+00:07:23,600 --> 00:07:26,059
+关键是需要领域知识
+The key here is that you need domain knowledge
+
+153
+00:07:26,060 --> 00:07:29,560
+来开发这些问答模型。
+to develop these question-answering models.
+
+154
+00:07:29,560 --> 00:07:32,169
+例如，需要领域知识
+For example, domain knowledge is required
+
+155
+00:07:32,170 --> 00:07:38,158
+来开发客户支持、医疗或供应链的问答模型。
+to develop a question-answering model for customer support, or health care, or supply chain.
+
+157
+00:07:38,160 --> 00:07:43,439
+使用生成式问答，模型根据上下文直接生成自由文本。
+Using generative QA, the model generates free text directly based on the context.
+
+159
+00:07:43,439 --> 00:07:47,358
+不需要领域知识。
+There is no need for domain knowledge.
+
+160
+00:07:47,360 --> 00:07:49,699
+让我们看看给Bard提出的三个问题，
+Let's look at three questions given to Bard,
+
+161
+00:07:49,699 --> 00:07:55,258
+Bard是由谷歌AI开发的大型语言模型聊天机器人。
+a large language model chat bot developed by Google AI.
+
+162
+00:07:55,259 --> 00:07:56,549
+问题一。
+Question one.
+
+163
+00:07:56,550 --> 00:07:59,309
+"今年的销售额是100,000美元。
+"This year's sales are $100,000.
+
+164
+00:07:59,310 --> 00:08:01,499
+支出是60,000美元。
+Expenses are $60,000.
+
+165
+00:08:01,500 --> 00:08:03,729
+净利润是多少？"
+How much is net profit?"
+
+166
+00:08:03,730 --> 00:08:07,660
+Bard首先分享了如何计算净利润，然后
+Bard first shares how net profit is calculated, then
+
+167
+00:08:07,660 --> 00:08:09,459
+进行计算。
+performs the calculation.
+
+168
+00:08:09,459 --> 00:08:14,128
+接着Bard给出了净利润的定义。
+Then Bard provides the definition of net profit.
+
+169
+00:08:14,129 --> 00:08:15,409
+这是另一个问题。
+Here's another question.
+
+170
+00:08:15,410 --> 00:08:18,919
+现有库存为6,000个单位。
+Inventory on hand is 6,000 units.
+
+171
+00:08:18,920 --> 00:08:21,829
+新订单需要8,000个单位。
+A new order requires 8,000 units.
+
+172
+00:08:21,829 --> 00:08:25,309
+我需要补充多少单位才能完成订单？
+How many units do I need to fill to complete the order?
+
+173
+00:08:25,310 --> 00:08:29,750
+巴德再次通过计算回答了这个问题。
+Again, Bard answers the question by performing the calculation.
+
+174
+00:08:29,750 --> 00:08:32,509
+在我们的最后一个例子中，我们有1,000个传感器
+And our last example, we have 1,000 sensors
+
+175
+00:08:32,509 --> 00:08:34,638
+分布在10个地理区域。
+in 10 geographic regions.
+
+176
+00:08:34,639 --> 00:08:38,639
+每个区域平均有多少个传感器？
+How many sensors do we have on average in each region?
+
+177
+00:08:38,639 --> 00:08:40,528
+巴德用一个例子回答了这个问题
+Bard answers the question with an example
+
+178
+00:08:40,529 --> 00:08:44,489
+解决问题的方法和一些额外的背景。
+on how to solve the problem and some additional context.
+
+179
+00:08:44,490 --> 00:08:47,980
+在我们的每个问题中，都得到了期望的回答。
+In each of our questions, a desired response was obtained.
+
+180
+00:08:47,980 --> 00:08:50,669
+这是因为提示设计（Prompt design）。
+This is due to prompt design.
+
+181
+00:08:50,669 --> 00:08:52,499
+提示设计和提示工程（Prompt Engineering）
+Prompt design and prompt engineering
+
+182
+00:08:52,500 --> 00:08:56,639
+是自然语言处理中密切相关的两个概念。
+are two closely-related concepts in natural language processing.
+
+183
+00:08:56,639 --> 00:08:58,589
+两者都涉及创建
+Both involve the process of creating
+
+184
+00:08:58,590 --> 00:09:01,440
+一个清晰、简洁、有信息量的提示。
+a prompt that is clear, concise, and informative.
+
+185
+00:09:01,440 --> 00:09:05,019
+然而，两者之间存在一些关键差异。
+However, there are some key differences between the two.
+
+186
+00:09:05,019 --> 00:09:08,318
+提示设计是创建一个提示的过程，
+Prompt design is the process of creating a prompt that
+
+187
+00:09:08,320 --> 00:09:11,649
+它针对的是这个系统正在
+is tailored to the specific task that this system is
+
+188
+00:09:11,649 --> 00:09:13,599
+执行的特定任务。
+being asked to perform.
+
+189
+00:09:13,600 --> 00:09:15,370
+例如，如果系统正在
+For example, if the system is being
+
+190
+00:09:15,370 --> 00:09:18,340
+被要求将文本从英语翻译成法语，
+asked to translate a text from English to French,
+
+191
+00:09:18,340 --> 00:09:20,469
+提示应该用英语写
+the prompt should be written in English
+
+192
+00:09:20,470 --> 00:09:24,610
+并且应该指定翻译应该用法语。
+and should specify that the translation should be in French.
+
+194
+00:09:24,610 --> 00:09:26,289
+提示工程是一个过程
+Prompt engineering is the process
+
+195
+00:09:26,289 --> 00:09:30,289
+旨在创建有助于提高性能的提示
+of creating a prompt that is designed to improve performance.
+
+197
+00:09:30,289 --> 00:09:32,958
+这可能涉及使用特定领域的知识，
+This may involve using domain-specific knowledge,
+
+198
+00:09:32,960 --> 00:09:35,200
+提供期望输出的示例，
+providing examples of the desired output,
+
+199
+00:09:35,200 --> 00:09:40,179
+或使用已知对特定系统有效的关键词。
+or using keywords that are known to be effective for the specific system.
+
+201
+00:09:40,179 --> 00:09:42,728
+提示设计是一个更通用的概念，
+Prompt design is a more general concept,
+
+202
+00:09:42,730 --> 00:09:45,789
+而提示工程则是一个更专业的概念。
+while prompt engineering is a more specialized concept.
+
+203
+00:09:45,789 --> 00:09:48,608
+提示设计至关重要，而提示工程
+Prompt design is essential, while prompt engineering
+
+204
+00:09:48,610 --> 00:09:54,909
+只对需要高度准确性或性能的系统才是必要的。
+is only necessary for systems that require a high degree of accuracy or performance.
+
+206
+00:09:54,909 --> 00:09:57,509
+有三种类型的大型语言模型，
+There are three kinds of large language models,
+
+207
+00:09:57,509 --> 00:10:00,178
+通用语言模型、指令调优、
+generic language models, instruction tuned,
+
+208
+00:10:00,179 --> 00:10:01,828
+和对话调优。
+and dialogue tuned.
+
+209
+00:10:01,830 --> 00:10:04,740
+每种都需要用不同的方式提示。
+Each needs prompting in a different way.
+
+210
+00:10:04,740 --> 00:10:07,110
+通用语言模型根据训练数据中的语言预测下一个词，
+Generic language models predict the next word
+
+211
+00:10:07,110 --> 00:10:10,289
+基于训练数据中的语言。
+based on the language in the training data.
+
+212
+00:10:10,289 --> 00:10:13,068
+这是一个通用语言模型的例子。
+This is an example of a generic language model.
+
+213
+00:10:13,070 --> 00:10:17,519
+下一个词是基于训练数据中的语言标记（Token）。
+The next word is a token based on the language in the training data.
+
+215
+00:10:17,519 --> 00:10:20,059
+在这个例子中，"the cat sat on,"
+In this example, "the cat sat on,"
+
+216
+00:10:20,059 --> 00:10:22,248
+下一个词应该是"the."。
+the next word should be "the."
+
+217
+00:10:22,250 --> 00:10:26,629
+你可以看到"the."是最可能的下一个词。
+And you can see that "the" is the most likely next word.
+
+218
+00:10:26,629 --> 00:10:30,978
+把这种类型想象成搜索中的自动补全。
+Think of this type as an autocomplete in search.
+
+219
+00:10:30,980 --> 00:10:33,200
+在指令调整中，模型被训练成
+In instruction tuned, the model is
+
+220
+00:10:33,200 --> 00:10:37,779
+根据输入的指令预测响应。
+trained to predict a response to the instructions given in the input.
+
+222
+00:10:37,779 --> 00:10:40,569
+例如，总结某某文章中的文本，
+For example, summarize a text of X,
+
+223
+00:10:40,570 --> 00:10:43,059
+以某某的风格创作一首诗，
+generate a poem in the style of X,
+
+224
+00:10:43,059 --> 00:10:48,688
+给我一个基于某某的语义相似度的关键词列表。
+give me a list of keywords based on semantic similarity for X.
+
+225
+00:10:48,690 --> 00:10:51,120
+在这个例子中，将文本分类为
+And in this example, classify the text
+
+226
+00:10:51,120 --> 00:10:54,979
+中性、消极或积极。
+into neutral, negative, or positive.
+
+227
+00:10:54,980 --> 00:11:00,999
+在对话调整中，模型被训练成通过下一个回应来进行对话。
+In dialogue tuned, the model is trained to have a dialogue by the next response.
+
+229
+00:11:01,000 --> 00:11:03,639
+对话调优模型是一种特殊情况
+Dialogue-tuned models are a special case
+
+230
+00:11:03,639 --> 00:11:06,819
+指令调优通常是将请求构建成
+of instruction tuned where requests are typically framed
+
+231
+00:11:06,820 --> 00:11:09,039
+与聊天机器人的问题。
+as questions to a chat bot.
+
+232
+00:11:09,039 --> 00:11:10,989
+对话调优预计会在
+Dialogue tuning is expected to be
+
+233
+00:11:10,990 --> 00:11:13,990
+较长的来回对话中发挥作用，
+in the context of a longer back and forth conversation,
+
+234
+00:11:13,990 --> 00:11:19,168
+通常更适合自然的类似问题的表述。
+and typically works better with natural question-like phrasings.
+
+236
+00:11:19,169 --> 00:11:21,628
+思维链推理（Chain of thought reasoning）是指观察到到的一种现象：
+Chain of thought reasoning is the observation
+
+237
+00:11:21,629 --> 00:11:24,028
+如果让模型先解释答案的原因，
+that models are better at getting the right answer when
+
+238
+00:11:24,029 --> 00:11:28,319
+更容易得出正确答案。
+they first output text that explains the reason for the answer.
+
+240
+00:11:28,320 --> 00:11:29,899
+我们来看这个问题。
+Let's look at the question.
+
+241
+00:11:29,899 --> 00:11:31,849
+罗杰有五个网球。
+Roger has five tennis balls.
+
+242
+00:11:31,850 --> 00:11:34,429
+他又买了两罐网球。
+He buys two more cans of tennis balls.
+
+243
+00:11:34,429 --> 00:11:36,679
+每罐有三个网球。
+Each can has three tennis balls.
+
+244
+00:11:36,679 --> 00:11:39,629
+现在他有多少个网球？
+How many tennis balls does he have now?
+
+245
+00:11:39,629 --> 00:11:42,869
+这个问题一开始没有回答。
+This question is posed initially with no response.
+
+246
+00:11:42,870 --> 00:11:46,360
+模型直接得出正确答案的可能性较小。
+The model is less likely to get the correct answer directly.
+
+247
+00:11:46,360 --> 00:11:49,210
+但到了第二个问题时，
+However, by the time the second question is asked,
+
+248
+00:11:49,210 --> 00:11:53,879
+输出更有可能得出正确答案。
+the output is more likely to end with the correct answer.
+
+249
+00:11:53,879 --> 00:11:57,088
+一个能做所有事的模型在实际应用中是有局限性的。
+A model that can do everything has practical limitations.
+
+250
+00:11:57,090 --> 00:12:01,359
+针对特定任务的调优可以使LLMs更可靠。
+Task-specific tuning can make LLMs more reliable.
+
+251
+00:12:01,360 --> 00:12:05,259
+Vertex AI提供针对特定任务的基础模型。
+Vertex AI provides task-specific foundation models.
+
+252
+00:12:05,259 --> 00:12:06,729
+假设你有一个用例，
+Let's say you have a use case where
+
+253
+00:12:06,730 --> 00:12:08,889
+你需要收集情绪，或者了解
+you need to gather sentiments, or how
+
+254
+00:12:08,889 --> 00:12:11,829
+你的客户对你的产品或服务的感受。
+your customers are feeling about your product or service.
+
+255
+00:12:11,830 --> 00:12:13,929
+你可以使用分类任务
+You can use the classification task
+
+256
+00:12:13,929 --> 00:12:17,038
+情感分析任务模型。
+sentiment analysis task model.
+
+257
+00:12:17,039 --> 00:12:18,569
+对于视觉任务也是一样。
+Same for vision tasks.
+
+258
+00:12:18,570 --> 00:12:21,210
+如果你需要进行占用率分析
+If you need to perform occupancy analytics,
+
+259
+00:12:21,210 --> 00:12:24,690
+那么有一个特定于你用例的任务模型。
+there is a task-specific model for your use case.
+
+260
+00:12:24,690 --> 00:12:32,109
+调优一个模型可以让你根据你希望模型执行的任务的示例来定制模型的响应。
+Tuning a model enables you to customize the model response based on examples of the task that you want the model to perform.
+
+263
+00:12:32,110 --> 00:12:34,469
+本质上，它是通过在新数据上训练模型，
+It is essentially the process of adapting a model
+
+264
+00:12:34,470 --> 00:12:37,229
+将模型适应到新的领域，
+to a new domain, or set of custom use cases,
+
+265
+00:12:37,230 --> 00:12:40,239
+或一套自定义的用例集合的过程。
+by training the model on new data.
+
+266
+00:12:40,240 --> 00:12:42,449
+例如，我们可以收集训练数据
+For example, we may collect training data
+
+267
+00:12:42,450 --> 00:12:47,509
+并针对法律或医学领域专门调整模型。
+and tune the model specifically for the legal or medical domain.
+
+269
+00:12:47,509 --> 00:12:50,839
+你还可以通过微调进一步调整模型
+You can also further tune the model by fine tuning
+
+270
+00:12:50,840 --> 00:12:52,549
+在这里你可以用自己的数据集
+where you bring your own data set
+
+271
+00:12:52,549 --> 00:12:56,659
+并通过调整LLM中的每个权重来重新训练模型。
+and retrain the model by tuning every weight in the LLM.
+
+272
+00:12:56,659 --> 00:12:59,328
+这需要大规模的训练工作，
+This requires a big training job and hosting
+
+273
+00:12:59,330 --> 00:13:01,600
+以及托管你自己微调过的模型。
+your own fine-tuned model.
+
+274
+00:13:01,600 --> 00:13:05,798
+比如，这里有一个由医疗数据训练出的医疗基础模型，
+Here's an example of a medical foundation model trained on health care data.
+
+276
+00:13:05,799 --> 00:13:12,749
+其任务包括问答，图像分析，寻找相似患者等等。
+The tasks include question answering, image analysis, finding similar patients, and so forth.
+
+278
+00:13:12,750 --> 00:13:17,509
+但是，微调的费用高昂，在许多情况下并不现实。
+Fine tuning is expensive and not realistic in many cases.
+
+279
+00:13:17,509 --> 00:13:21,528
+那么，有没有更高效的调整方法呢？
+So are there more efficient methods of tuning?
+
+280
+00:13:21,529 --> 00:13:22,339
+是的。
+Yes.
+
+281
+00:13:22,340 --> 00:13:25,759
+参数效率调整方法，或称为PETM，
+Parameter-efficient tuning methods, or PETM,
+
+282
+00:13:25,759 --> 00:13:27,888
+是在不复制模型的情况下调整大型语言模型
+are methods for tuning a large language
+
+283
+00:13:27,889 --> 00:13:31,908
+的方法，而无需复制模型。
+model on your own custom data without duplicating the model.
+
+284
+00:13:31,909 --> 00:13:34,609
+基础模型本身并没有改变，
+The base model itself is not altered.
+
+285
+00:13:34,610 --> 00:13:36,799
+只是调整了少数几层附加层，
+Instead, a small number of add-on layers
+
+286
+00:13:36,799 --> 00:13:41,529
+这些层可以在推理时交换。
+are tuned, which can be swapped in and out at inference time.
+
+287
+00:13:41,529 --> 00:13:47,498
+生成式AI工作室让你能快速探索和定制
+Generative AI Studio lets you quickly explore and customize generative AI models that you can
+
+289
+00:13:47,500 --> 00:13:50,950
+可在Google Cloud上用于你的应用的生成式AI模型。
+leverage in your applications on Google Cloud.
+
+290
+00:13:50,950 --> 00:13:58,479
+生成式AI工作室帮助开发者通过提供各种工具和资源创建和部署生成式AI模型，
+Generative AI Studio helps developers create and deploy generative AI models by providing a variety of tools and resources that
+
+293
+00:13:58,480 --> 00:14:00,100
+使得入门变得简单。
+make it easy to get started.
+
+294
+00:14:00,100 --> 00:14:03,459
+例如，它提供了预训练模型库、
+For example, there's a library of pre-trained models,
+
+295
+00:14:03,460 --> 00:14:07,359
+用于精细调整模型的工具、用于将模型部署到生产环境的工具，
+a tool for fine tuning models, a tool for deploying models
+
+296
+00:14:07,360 --> 00:14:13,278
+它提供了预训练模型库、以及供开发者分享想法和合作的社区论坛。
+to production, and a community forum for developers to share ideas and collaborate.
+
+298
+00:14:13,279 --> 00:14:15,589
+生成式AI应用构建器让你
+Generative AI App Builder lets you
+
+299
+00:14:15,590 --> 00:14:19,609
+无需编写任何代码就能创建Gen AI应用。
+create Gen AI apps without having to write any code.
+
+300
+00:14:19,610 --> 00:14:22,699
+Gen AI应用构建器具有拖放界面
+Gen AI App Builder has a drag-and-drop interface
+
+301
+00:14:22,700 --> 00:14:24,799
+使设计和构建应用变得简单，
+that makes it easy to design and build
+
+302
+00:14:24,799 --> 00:14:28,669
+一个可视化编辑器，方便创建和编辑
+apps, a visual editor that makes it easy to create and edit
+
+303
+00:14:28,669 --> 00:14:32,389
+应用内容，一个内置搜索引擎，允许用户
+app content, a built-in search engine that allows users
+
+304
+00:14:32,389 --> 00:14:34,759
+在应用内搜索信息，
+to search for information within the app,
+
+305
+00:14:34,759 --> 00:14:36,888
+以及一个会话式AI引擎，
+and a conversational AI engine that
+
+306
+00:14:36,889 --> 00:14:40,879
+允许用户使用自然语言与应用进行交互。
+allows users to interact with the app using natural language.
+
+307
+00:14:40,879 --> 00:14:44,088
+你可以创建自己的聊天机器人、数字助手、
+You can create your own chat bots, digital assistants,
+
+308
+00:14:44,090 --> 00:14:48,259
+定制搜索引擎、知识库、培训应用、
+custom search engines, knowledge bases, training applications,
+
+309
+00:14:48,259 --> 00:14:50,029
+等等。
+and more.
+
+310
+00:14:50,029 --> 00:14:52,939
+PaLM API 让你可以测试和尝试
+PaLM API lets you test and experiment
+
+311
+00:14:52,940 --> 00:14:56,999
+谷歌的大型语言模型和 Gen AI 工具。
+with Google's large language models and Gen AI tools.
+
+312
+00:14:57,000 --> 00:14:59,909
+为了使原型设计更快速、更易于使用，
+To make prototyping quick and more accessible,
+
+313
+00:14:59,909 --> 00:15:03,748
+开发者可以将 PaLM API 与 Maker Suite 集成
+developers can integrate PaLM API with Maker Suite
+
+314
+00:15:03,750 --> 00:15:08,339
+并通过图形用户界面访问 API。
+and use it to access the API using a graphical user interface.
+
+316
+00:15:08,340 --> 00:15:10,649
+该套件包括许多不同的工具，
+The suite includes a number of different tools
+
+317
+00:15:10,649 --> 00:15:14,068
+如模型训练工具、模型部署工具、
+such as a model-training tool, a model-deployment tool,
+
+318
+00:15:14,070 --> 00:15:16,480
+以及模型监控工具。
+and a model-monitoring tool.
+
+319
+00:15:16,480 --> 00:15:22,029
+模型训练工具帮助开发者用不同算法训练机器学习模型在他们的数据上。
+The model-training tool helps developers train ML models on their data using different algorithms.
+
+321
+00:15:22,029 --> 00:15:25,589
+模型部署工具帮助开发者用多种部署选项
+The model deployment tool helps developers deploy ML models
+
+322
+00:15:25,590 --> 00:15:29,740
+将机器学习模型部署到生产环境。
+to production with a number of different deployment options.
+
+323
+00:15:29,740 --> 00:15:31,929
+模型监控工具则帮助
+And the model-monitoring tool helps
+
+324
+00:15:31,929 --> 00:15:35,199
+开发者通过仪表盘和多种指标
+developers monitor the performance of their ML models
+
+325
+00:15:35,200 --> 00:15:40,480
+监控生产环境中机器学习模型的性能。
+in production using a dashboard and a number of different metrics.
+
+327
+00:15:40,480 --> 00:15:41,720
+目前就是这些。
+That's all for now.
+
+328
+00:15:41,720 --> 00:15:46,469
+感谢收看本课程，大型语言模型简介。
+Thanks for watching this course, Introduction to Large Language Models.

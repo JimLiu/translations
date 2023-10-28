@@ -1,0 +1,313 @@
+[Script Info]
+
+Title: Transformer Models and BERT Model- Overview
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.10,0:00:01.47,Secondary,,0,0,0,,Hi. I'm Sanjana
+Dialogue: 1,0:00:01.47,0:00:05.76,Secondary,,0,0,0,,Reddy, a machine learning engineer at Google's Advanced Solutions Lab.
+Dialogue: 1,0:00:06.53,0:00:10.7,Secondary,,0,0,0,,There's been a lot of excitement around generative AI and all the new
+Dialogue: 1,0:00:10.7,0:00:14.37,Secondary,,0,0,0,,advancements, including new vertex AI features that are coming up,
+Dialogue: 1,0:00:14.70,0:00:20.17,Secondary,,0,0,0,,such as Gen AI Studio, Model Garden, Gen AI API.
+Dialogue: 1,0:00:20.17,0:00:24.70,Secondary,,0,0,0,,Our objective in this short session is to give you a solid footing
+Dialogue: 1,0:00:25.0,0:00:27.73,Secondary,,0,0,0,,on some of the underlying concepts that make
+Dialogue: 1,0:00:27.73,0:00:30.3,Secondary,,0,0,0,,all the Gen AI magic possible.
+Dialogue: 1,0:00:30.90,0:00:33.67,Secondary,,0,0,0,,Today I'm going to talk about transformer
+Dialogue: 1,0:00:33.67,0:00:35.96,Secondary,,0,0,0,,models and the BERT model.
+Dialogue: 1,0:00:37.7,0:00:39.73,Secondary,,0,0,0,,Language modeling has evolved over the years.
+Dialogue: 1,0:00:40.43,0:00:44.40,Secondary,,0,0,0,,The recent breakthroughs in the past ten years include the usage
+Dialogue: 1,0:00:44.40,0:00:47.37,Secondary,,0,0,0,,of neural networks to represent text,
+Dialogue: 1,0:00:47.47,0:00:50.100,Secondary,,0,0,0,,such as Word2vec an N-grams in 2013.
+Dialogue: 1,0:00:51.80,0:00:55.83,Secondary,,0,0,0,,In 2014, the development of sequence to sequence models
+Dialogue: 1,0:00:56.20,0:00:58.47,Secondary,,0,0,0,,such as RNN's and LSTM’s
+Dialogue: 1,0:00:58.87,0:01:03.33,Secondary,,0,0,0,,helped improve the performance of ML models on NLP tasks
+Dialogue: 1,0:01:03.53,0:01:06.77,Secondary,,0,0,0,,such as translation and text classification.
+Dialogue: 1,0:01:07.50,0:01:11.63,Secondary,,0,0,0,,In 2015, the excitement came with attention mechanisms
+Dialogue: 1,0:01:12.3,0:01:14.67,Secondary,,0,0,0,,and the models built based on it, such
+Dialogue: 1,0:01:14.67,0:01:16.96,Secondary,,0,0,0,,as Transformers and the Bert model.
+Dialogue: 1,0:01:17.67,0:01:20.100,Secondary,,0,0,0,,In this presentation we'll focus on Transformers.
+Dialogue: 1,0:01:22.0,0:01:25.40,Secondary,,0,0,0,,Transformers is based on a 2017 paper
+Dialogue: 1,0:01:25.40,0:01:28.53,Secondary,,0,0,0,,named Attention As All You Need.
+Dialogue: 1,0:01:29.23,0:01:34.17,Secondary,,0,0,0,,Although all the models before Transformers were able to represent words
+Dialogue: 1,0:01:34.47,0:01:38.93,Secondary,,0,0,0,,as vectors, these vectors did not contain the context
+Dialogue: 1,0:01:39.60,0:01:42.97,Secondary,,0,0,0,,and the usage of words changes based on the context.
+Dialogue: 1,0:01:43.43,0:01:46.10,Secondary,,0,0,0,,For example, bank and river bank
+Dialogue: 1,0:01:46.23,0:01:50.47,Secondary,,0,0,0,,versus bank in bank robber might have the same vector
+Dialogue: 1,0:01:50.47,0:01:54.56,Secondary,,0,0,0,,representation before attention mechanisms came about.
+Dialogue: 1,0:01:55.13,0:01:58.23,Secondary,,0,0,0,,A transformer is an encoder decoder model
+Dialogue: 1,0:01:58.53,0:02:01.47,Secondary,,0,0,0,,that uses the attention mechanism.
+Dialogue: 1,0:02:01.47,0:02:04.7,Secondary,,0,0,0,,It can take advantage of pluralization
+Dialogue: 1,0:02:04.33,0:02:08.40,Secondary,,0,0,0,,and also process a large amount of data at the same time.
+Dialogue: 1,0:02:08.77,0:02:10.80,Secondary,,0,0,0,,because of its model architecture,
+Dialogue: 1,0:02:11.90,0:02:14.17,Secondary,,0,0,0,,attention mechanism helps improve
+Dialogue: 1,0:02:14.23,0:02:17.13,Secondary,,0,0,0,,the performance of machine translation applications.
+Dialogue: 1,0:02:17.73,0:02:20.30,Secondary,,0,0,0,,Transformer models were built using
+Dialogue: 1,0:02:20.30,0:02:22.37,Secondary,,0,0,0,,attention mechanisms at the core.
+Dialogue: 1,0:02:23.70,0:02:25.80,Secondary,,0,0,0,,A transformer model consists
+Dialogue: 1,0:02:25.87,0:02:28.7,Secondary,,0,0,0,,of encoder and decoder.
+Dialogue: 1,0:02:28.93,0:02:33.50,Secondary,,0,0,0,,The encoder encodes the input sequence and passes it to the decoder
+Dialogue: 1,0:02:34.10,0:02:39.13,Secondary,,0,0,0,,and the decoder decodes the representation for a relevant task.
+Dialogue: 1,0:02:40.27,0:02:40.100,Secondary,,0,0,0,,The encoding
+Dialogue: 1,0:02:41.0,0:02:44.70,Secondary,,0,0,0,,component is a stack of encoders of the same number.
+Dialogue: 1,0:02:45.30,0:02:47.80,Secondary,,0,0,0,,The research paper that introduced Transformers
+Dialogue: 1,0:02:47.80,0:02:50.47,Secondary,,0,0,0,,stack six encoders on top of each other.
+Dialogue: 1,0:02:51.30,0:02:53.40,Secondary,,0,0,0,,Six is not a magical number.
+Dialogue: 1,0:02:53.40,0:02:56.10,Secondary,,0,0,0,,It's just a hyperparameter.
+Dialogue: 1,0:02:56.10,0:03:00.37,Secondary,,0,0,0,,The encoders are all identical in structure, but with different weights.
+Dialogue: 1,0:03:01.3,0:03:04.93,Secondary,,0,0,0,,Each encoder can be broken down into two sub layers.
+Dialogue: 1,0:03:05.63,0:03:08.53,Secondary,,0,0,0,,The first layer is called self attention.
+Dialogue: 1,0:03:09.30,0:03:13.23,Secondary,,0,0,0,,The input of the encode are first flows through a self attention layer,
+Dialogue: 1,0:03:13.63,0:03:17.50,Secondary,,0,0,0,,which helps to encode or look at relevant parts of the words
+Dialogue: 1,0:03:17.80,0:03:21.10,Secondary,,0,0,0,,as it encodes a central word in the input sentence.
+Dialogue: 1,0:03:22.27,0:03:25.40,Secondary,,0,0,0,,And the second layer is called a feedforward layer.
+Dialogue: 1,0:03:25.93,0:03:28.40,Secondary,,0,0,0,,The output of the self attention layer is
+Dialogue: 1,0:03:28.40,0:03:30.60,Secondary,,0,0,0,,fed to the feedforward neural network.
+Dialogue: 1,0:03:31.70,0:03:35.97,Secondary,,0,0,0,,The exact same feedforward neural network is independently applied
+Dialogue: 1,0:03:36.7,0:03:37.23,Secondary,,0,0,0,,to each position.
+Dialogue: 1,0:03:38.80,0:03:40.37,Secondary,,0,0,0,,The decoder has both the
+Dialogue: 1,0:03:40.37,0:03:42.97,Secondary,,0,0,0,,self attention and the feedforward layer,
+Dialogue: 1,0:03:43.40,0:03:47.17,Secondary,,0,0,0,,but between them is the encoder decoder, attention layer
+Dialogue: 1,0:03:47.60,0:03:50.16,Secondary,,0,0,0,,that helps a decoder focus on relevant
+Dialogue: 1,0:03:50.17,0:03:53.40,Secondary,,0,0,0,,parts of the input sentence.
+Dialogue: 1,0:03:53.40,0:03:56.40,Secondary,,0,0,0,,After embedding the words in the input sequence,
+Dialogue: 1,0:03:56.40,0:04:00.27,Secondary,,0,0,0,,each of the embedding vector flows through the two layers of the encoder.
+Dialogue: 1,0:04:01.7,0:04:05.50,Secondary,,0,0,0,,The word at each position passes through a self attention process.
+Dialogue: 1,0:04:06.7,0:04:09.27,Secondary,,0,0,0,,Then it passes through a feedforward neural network,
+Dialogue: 1,0:04:09.83,0:04:14.13,Secondary,,0,0,0,,the exact same network with each vector flowing through it separately.
+Dialogue: 1,0:04:15.17,0:04:18.3,Secondary,,0,0,0,,Dependencies exist between these paths
+Dialogue: 1,0:04:18.3,0:04:21.57,Secondary,,0,0,0,,in this self attention layer.
+Dialogue: 1,0:04:21.57,0:04:25.43,Secondary,,0,0,0,,However, the feedforward layer does not have these dependencies
+Dialogue: 1,0:04:26.0,0:04:30.10,Secondary,,0,0,0,,and therefore various paths can be executed in parallel
+Dialogue: 1,0:04:30.43,0:04:33.3,Secondary,,0,0,0,,while they flow through the feedforward layer.
+Dialogue: 1,0:04:34.17,0:04:37.46,Secondary,,0,0,0,,In the self attention layer, the input embedding is
+Dialogue: 1,0:04:37.47,0:04:41.53,Secondary,,0,0,0,,broken up into query, key, and value vectors.
+Dialogue: 1,0:04:42.17,0:04:45.6,Secondary,,0,0,0,,These vectors are computed using weights
+Dialogue: 1,0:04:45.40,0:04:48.77,Secondary,,0,0,0,,that the transformer learns during the training process.
+Dialogue: 1,0:04:49.80,0:04:52.60,Secondary,,0,0,0,,All of these computations happen in parallel
+Dialogue: 1,0:04:52.60,0:04:55.30,Secondary,,0,0,0,,in the model, in the form of matrix computation.
+Dialogue: 1,0:04:56.47,0:04:58.30,Secondary,,0,0,0,,Once we have the query key
+Dialogue: 1,0:04:58.30,0:05:02.77,Secondary,,0,0,0,,and value vectors, the next step is to multiply each value
+Dialogue: 1,0:05:02.77,0:05:07.57,Secondary,,0,0,0,,vector by the soft max score in preparation to sum them up.
+Dialogue: 1,0:05:08.27,0:05:12.20,Secondary,,0,0,0,,The intention here is to keep intact the values of the words
+Dialogue: 1,0:05:12.20,0:05:15.90,Secondary,,0,0,0,,you want to focus on and leave out a irrelevant words
+Dialogue: 1,0:05:16.33,0:05:18.97,Secondary,,0,0,0,,by multiplying them by tiny numbers
+Dialogue: 1,0:05:18.97,0:05:21.63,Secondary,,0,0,0,,like 0.001, for example.
+Dialogue: 1,0:05:22.80,0:05:25.90,Secondary,,0,0,0,,Next, we have to sum up the weighted value vectors
+Dialogue: 1,0:05:26.53,0:05:31.3,Secondary,,0,0,0,,which produces the output of the self attention layer at this position.
+Dialogue: 1,0:05:31.7,0:05:34.86,Secondary,,0,0,0,,For the first word, you can send along the resulting vector
+Dialogue: 1,0:05:35.10,0:05:37.33,Secondary,,0,0,0,,to the feedforward neural network.
+Dialogue: 1,0:05:38.67,0:05:40.50,Secondary,,0,0,0,,To sum up this process of getting
+Dialogue: 1,0:05:40.50,0:05:43.83,Secondary,,0,0,0,,the final embeddings, these are the steps that we take.
+Dialogue: 1,0:05:44.83,0:05:47.37,Secondary,,0,0,0,,We start with the natural language sentence
+Dialogue: 1,0:05:48.23,0:05:50.80,Secondary,,0,0,0,,embed each word in the sentence.
+Dialogue: 1,0:05:51.90,0:05:54.33,Secondary,,0,0,0,,After that, we perform multi-headed
+Dialogue: 1,0:05:54.33,0:05:58.57,Secondary,,0,0,0,,attention eight times in this case and multiply
+Dialogue: 1,0:05:58.57,0:06:02.27,Secondary,,0,0,0,,this embedded word with the respective weighted matrices.
+Dialogue: 1,0:06:02.93,0:06:07.83,Secondary,,0,0,0,,We then calculate the attention using the resulting Q K.V.
+Dialogue: 1,0:06:08.3,0:06:09.53,Secondary,,0,0,0,,matrices.
+Dialogue: 1,0:06:09.53,0:06:14.67,Secondary,,0,0,0,,Finally, we can concatenate the matrices to produce the output matrix,
+Dialogue: 1,0:06:15.13,0:06:18.73,Secondary,,0,0,0,,which is the same dimension as the final matrix
+Dialogue: 1,0:06:18.73,0:06:21.13,Secondary,,0,0,0,,that this layer initially got.
+Dialogue: 1,0:06:22.7,0:06:25.27,Secondary,,0,0,0,,There's multiple variations of transformers out there now.
+Dialogue: 1,0:06:26.10,0:06:31.33,Secondary,,0,0,0,,Some use both the encoder and the decoder component from the original architecture.
+Dialogue: 1,0:06:31.80,0:06:35.40,Secondary,,0,0,0,,Some use only the encoder and some use only the decoder.
+Dialogue: 1,0:06:36.37,0:06:39.70,Secondary,,0,0,0,,A popular encoder only architecture is Bert.
+Dialogue: 1,0:06:40.50,0:06:43.67,Secondary,,0,0,0,,Bert is one of the trained transformer models.
+Dialogue: 1,0:06:44.27,0:06:47.90,Secondary,,0,0,0,,Bert stands for bidirectional encoder representations
+Dialogue: 1,0:06:48.0,0:06:52.63,Secondary,,0,0,0,,from transformers and was developed by Google in 2018.
+Dialogue: 1,0:06:54.37,0:06:55.23,Secondary,,0,0,0,,Since then,
+Dialogue: 1,0:06:55.23,0:06:57.90,Secondary,,0,0,0,,multiple variations of Bert have been built.
+Dialogue: 1,0:06:58.37,0:07:00.97,Secondary,,0,0,0,,Today, Bert Powers Google Search.
+Dialogue: 1,0:07:01.87,0:07:02.100,Secondary,,0,0,0,,You can see how different
+Dialogue: 1,0:07:03.0,0:07:06.67,Secondary,,0,0,0,,the results provided by Bert are for the same search query.
+Dialogue: 1,0:07:06.90,0:07:09.70,Secondary,,0,0,0,,Before and after,
+Dialogue: 1,0:07:09.77,0:07:12.10,Secondary,,0,0,0,,Bert was trained in two variations.
+Dialogue: 1,0:07:12.57,0:07:14.90,Secondary,,0,0,0,,One model contains Bert Base,
+Dialogue: 1,0:07:15.30,0:07:17.77,Secondary,,0,0,0,,which had 12 stock of Transformers
+Dialogue: 1,0:07:18.0,0:07:21.7,Secondary,,0,0,0,,with approximately 110 million
+Dialogue: 1,0:07:21.7,0:07:26.70,Secondary,,0,0,0,,parameters, and the other Bert Large with 24 layers of transformers
+Dialogue: 1,0:07:26.70,0:07:29.47,Secondary,,0,0,0,,with about 340 million parameters.
+Dialogue: 1,0:07:30.47,0:07:35.50,Secondary,,0,0,0,,The Bert model is powerful because it can handle long input context.
+Dialogue: 1,0:07:36.17,0:07:40.30,Secondary,,0,0,0,,It was trained on the entire Wikipedia corpus and books corpus.
+Dialogue: 1,0:07:41.30,0:07:44.10,Secondary,,0,0,0,,The Bert model was trained for 1 million steps.
+Dialogue: 1,0:07:44.80,0:07:47.7,Secondary,,0,0,0,,Bert is trained on different tasks,
+Dialogue: 1,0:07:47.20,0:07:49.86,Secondary,,0,0,0,,which means it has multi-task objective.
+Dialogue: 1,0:07:50.47,0:07:53.30,Secondary,,0,0,0,,This makes Bert very powerful
+Dialogue: 1,0:07:53.30,0:07:55.63,Secondary,,0,0,0,,because of the kind of tasks it was trained on.
+Dialogue: 1,0:07:55.67,0:07:59.63,Secondary,,0,0,0,,It works at both a sentence level and at a token level.
+Dialogue: 1,0:08:00.70,0:08:01.33,Secondary,,0,0,0,,These are the two
+Dialogue: 1,0:08:01.33,0:08:04.83,Secondary,,0,0,0,,different versions of Bert that were originally released.
+Dialogue: 1,0:08:05.30,0:08:08.17,Secondary,,0,0,0,,One is Bert Base, which had 12 layers,
+Dialogue: 1,0:08:08.67,0:08:11.43,Secondary,,0,0,0,,whereas Bert Large had 24 layers.
+Dialogue: 1,0:08:11.70,0:08:15.30,Secondary,,0,0,0,,And compared to the original transformer, which had six layers.
+Dialogue: 1,0:08:16.33,0:08:20.83,Secondary,,0,0,0,,The way that Bert works is that it was trained on two different tasks.
+Dialogue: 1,0:08:21.13,0:08:26.30,Secondary,,0,0,0,,Task one is called a masked language model, where the sentences are masked
+Dialogue: 1,0:08:26.60,0:08:30.63,Secondary,,0,0,0,,and the model is trained to predict the masked words.
+Dialogue: 1,0:08:31.20,0:08:34.90,Secondary,,0,0,0,,If you were to train Bert from scratch, you would have to mask
+Dialogue: 1,0:08:35.17,0:08:38.23,Secondary,,0,0,0,,a certain percentage of the words in your corpus.
+Dialogue: 1,0:08:38.80,0:08:42.23,Secondary,,0,0,0,,The recommended percentage for masking is 15%.
+Dialogue: 1,0:08:42.90,0:08:45.30,Secondary,,0,0,0,,The masking percentage achieves a balance
+Dialogue: 1,0:08:45.30,0:08:47.73,Secondary,,0,0,0,,between too little and too much masking.
+Dialogue: 1,0:08:48.37,0:08:52.33,Secondary,,0,0,0,,Too little masking makes the training process extremely expensive,
+Dialogue: 1,0:08:52.73,0:08:57.27,Secondary,,0,0,0,,and too much masking removes the context of the model requires.
+Dialogue: 1,0:08:58.13,0:09:01.73,Secondary,,0,0,0,,The second task is to predict the next sentence.
+Dialogue: 1,0:09:02.40,0:09:06.13,Secondary,,0,0,0,,For example, the model is given two sets of sentences.
+Dialogue: 1,0:09:06.60,0:09:09.70,Secondary,,0,0,0,,Bert aims to learn the relationships between sentences
+Dialogue: 1,0:09:09.70,0:09:12.83,Secondary,,0,0,0,,and predict the next sentence given the first one.
+Dialogue: 1,0:09:13.93,0:09:14.96,Secondary,,0,0,0,,For example,
+Dialogue: 1,0:09:14.97,0:09:18.7,Secondary,,0,0,0,,sentence A could be a man went to the store
+Dialogue: 1,0:09:18.43,0:09:21.86,Secondary,,0,0,0,,and sentence B is he bought a gallon of milk.
+Dialogue: 1,0:09:22.97,0:09:26.10,Secondary,,0,0,0,,Bert is responsible for classifying if sentence
+Dialogue: 1,0:09:26.10,0:09:29.73,Secondary,,0,0,0,,B is in next sentence after sentence A.
+Dialogue: 1,0:09:30.17,0:09:32.63,Secondary,,0,0,0,,This is a binary classification task.
+Dialogue: 1,0:09:33.60,0:09:38.70,Secondary,,0,0,0,,This helps Bert perform at a sentence level in order to train Bert.
+Dialogue: 1,0:09:38.90,0:09:42.3,Secondary,,0,0,0,,You need to feed three different kinds of embeddings
+Dialogue: 1,0:09:42.30,0:09:45.23,Secondary,,0,0,0,,to the model for the input sentence.
+Dialogue: 1,0:09:45.27,0:09:48.3,Secondary,,0,0,0,,You get three different embeddings token
+Dialogue: 1,0:09:48.47,0:09:50.53,Secondary,,0,0,0,,segment and position embeddings.
+Dialogue: 1,0:09:51.83,0:09:54.80,Secondary,,0,0,0,,The token embeddings is a representation
+Dialogue: 1,0:09:54.80,0:09:58.83,Secondary,,0,0,0,,of each token as an embedding in the input sentence.
+Dialogue: 1,0:09:59.40,0:10:02.3,Secondary,,0,0,0,,The words are transformed into vector
+Dialogue: 1,0:10:02.3,0:10:04.50,Secondary,,0,0,0,,representations of certain dimensions.
+Dialogue: 1,0:10:05.60,0:10:07.57,Secondary,,0,0,0,,Bert can solve NLP tasks
+Dialogue: 1,0:10:07.57,0:10:10.20,Secondary,,0,0,0,,that involve tex classification as well.
+Dialogue: 1,0:10:10.80,0:10:14.23,Secondary,,0,0,0,,An example is to classify whether two sentences say
+Dialogue: 1,0:10:14.60,0:10:18.60,Secondary,,0,0,0,,my dog is cute and he likes playing are semantically similar.
+Dialogue: 1,0:10:18.93,0:10:23.47,Secondary,,0,0,0,,The pairs of input texts are simply concatenated and fed into the model.
+Dialogue: 1,0:10:23.90,0:10:27.53,Secondary,,0,0,0,,How does Bert distinguish the input in a given pair?
+Dialogue: 1,0:10:28.3,0:10:30.83,Secondary,,0,0,0,,The answer is to use segment embeddings.
+Dialogue: 1,0:10:31.57,0:10:35.10,Secondary,,0,0,0,,There is a special token represented by SEP
+Dialogue: 1,0:10:35.60,0:10:38.83,Secondary,,0,0,0,,that separates the two different splits of the sentence.
+Dialogue: 1,0:10:39.80,0:10:41.7,Secondary,,0,0,0,,Another problem is to
+Dialogue: 1,0:10:41.7,0:10:43.67,Secondary,,0,0,0,,learn the order of the words in the sentence.
+Dialogue: 1,0:10:44.80,0:10:48.33,Secondary,,0,0,0,,As you know, Bert consists of a stack of transformers.
+Dialogue: 1,0:10:48.90,0:10:53.100,Secondary,,0,0,0,,Bert is designed to process input sequences up to a length of 512.
+Dialogue: 1,0:10:54.83,0:10:59.97,Secondary,,0,0,0,,The order of the input sequence is incorporated into the position embeddings.
+Dialogue: 1,0:11:00.40,0:11:05.57,Secondary,,0,0,0,,This allows Bert to learn a vector representation for each position.
+Dialogue: 1,0:11:06.50,0:11:09.93,Secondary,,0,0,0,,Bert can be used for different downstream tasks.
+Dialogue: 1,0:11:10.53,0:11:13.70,Secondary,,0,0,0,,Although Bert was trained on mass language modeling
+Dialogue: 1,0:11:13.70,0:11:17.60,Secondary,,0,0,0,,and single sentence classification, it can be used
+Dialogue: 1,0:11:17.70,0:11:21.90,Secondary,,0,0,0,,for popular NLP tasks like single sentence classification.
+Dialogue: 1,0:11:22.33,0:11:24.30,Secondary,,0,0,0,,Sentence Pair Classification.
+Dialogue: 1,0:11:24.30,0:11:28.23,Secondary,,0,0,0,,Question Answering and single sentence tagging tasks.
+Dialogue: 1,0:11:28.87,0:11:31.90,Secondary,,0,0,0,,Thank you for listening.
+Dialogue: 1,0:00:00.10,0:00:05.76,Default,,0,0,0,,嗨，我是Sanjana Reddy，我在谷歌的高级\N解决方案实验室担任机器学习工程师。
+Dialogue: 1,0:00:06.53,0:00:20.17,Default,,0,0,0,,最近，生成式AI以及相关的新的技术，包括即将出现\N的新的顶点AI特性，如Gen AI Studio, Model \NGarden, Gen AI API等，引起了大量的关注和热议。
+Dialogue: 1,0:00:20.17,0:00:30.3,Default,,0,0,0,,在这个简短的课程中，我们的目标是让你对构成所\N有Gen AI神奇的基本概念有一个扎实的理解。
+Dialogue: 1,0:00:30.90,0:00:35.96,Default,,0,0,0,,今天，我将要谈论的是Transformer模型和BERT模型。
+Dialogue: 1,0:00:37.7,0:00:39.73,Default,,0,0,0,,语言建模技术在过去几年中发生了很大的变化。
+Dialogue: 1,0:00:40.43,0:00:47.37,Default,,0,0,0,,过去十年的最新突破包括使用神经网络来表示文本，
+Dialogue: 1,0:00:47.47,0:00:50.100,Default,,0,0,0,,例如2013年的Word2vec和N-grams。
+Dialogue: 1,0:00:51.80,0:00:55.83,Default,,0,0,0,,2014年，序列到序列模型的发展，
+Dialogue: 1,0:00:56.20,0:00:58.47,Default,,0,0,0,,如RNN和LSTM，
+Dialogue: 1,0:00:58.87,0:01:03.33,Default,,0,0,0,,帮助提高了机器学习模型在自然语言处理任务上的性能，
+Dialogue: 1,0:01:03.53,0:01:06.77,Default,,0,0,0,,如翻译和文本分类。
+Dialogue: 1,0:01:07.50,0:01:16.96,Default,,0,0,0,,2015年，随着注意力机制的出现及其基于该机制建立的模\N型，如Transformer和Bert模型，引起了人们的关注。
+Dialogue: 1,0:01:17.67,0:01:20.100,Default,,0,0,0,,在这个课程中，我们将重点讨论Transformer。
+Dialogue: 1,0:01:22.0,0:01:28.53,Default,,0,0,0,,Transformer的基础是2017年的一篇论文，\N名为《Attention As All You Need》。
+Dialogue: 1,0:01:29.23,0:01:34.17,Default,,0,0,0,,尽管Transformer之前的所有模型都能将单词表示为向量，
+Dialogue: 1,0:01:34.47,0:01:38.93,Default,,0,0,0,,但这些向量并不包含上下文，
+Dialogue: 1,0:01:39.60,0:01:42.97,Default,,0,0,0,,而单词的使用会根据上下文而变化。
+Dialogue: 1,0:01:43.43,0:01:54.56,Default,,0,0,0,,例如，"bank"和"river bank"与"bank robber"中的\N"bank"在注意力机制出现之前可能具有相同的向量表示。
+Dialogue: 1,0:01:55.13,0:02:01.47,Default,,0,0,0,,Transformer是一个使用注意力机制的编码解码模型。
+Dialogue: 1,0:02:01.47,0:02:17.13,Default,,0,0,0,,它可以利用复数化和同时处理大量数据，因为它的模型\N架构，注意力机制有助于提高机器翻译应用的性能。
+Dialogue: 1,0:02:17.73,0:02:22.37,Default,,0,0,0,,Transformer模型是使用注意力机制为核心构建的。
+Dialogue: 1,0:02:23.70,0:02:28.7,Default,,0,0,0,,一个Transformer模型包括编码器和解码器。
+Dialogue: 1,0:02:28.93,0:02:39.13,Default,,0,0,0,,编码器对输入序列进行编码，并将其传递给解\N码器，解码器解码表示以用于相关任务。
+Dialogue: 1,0:02:40.27,0:02:44.70,Default,,0,0,0,,编码组件是一个由相同数量的编码器堆叠而成的栈。
+Dialogue: 1,0:02:45.30,0:02:50.47,Default,,0,0,0,,引入Transformer的研究论文将六个编码器堆叠在一起。
+Dialogue: 1,0:02:51.30,0:02:56.10,Default,,0,0,0,,六并不是一个神奇的数字，它只是一个超参数（Hyperparameter）。
+Dialogue: 1,0:02:56.10,0:03:00.37,Default,,0,0,0,,这些编码器在结构上都是相同的，但权重不同。
+Dialogue: 1,0:03:01.3,0:03:04.93,Default,,0,0,0,,每个编码器都可以分解成两个子层。
+Dialogue: 1,0:03:05.63,0:03:08.53,Default,,0,0,0,,第一层称为自注意力。
+Dialogue: 1,0:03:09.30,0:03:21.10,Default,,0,0,0,,编码器的输入首先流经一个自注意力层，这有助于编码或查\N看单词的相关部分，因为它编码输入句子中的中心词。
+Dialogue: 1,0:03:22.27,0:03:25.40,Default,,0,0,0,,第二层被称为前馈层。
+Dialogue: 1,0:03:25.93,0:03:30.60,Default,,0,0,0,,自注意力层的输出被送入前馈神经网络。
+Dialogue: 1,0:03:31.70,0:03:37.23,Default,,0,0,0,,相同的前馈神经网络独立应用于每个位置。
+Dialogue: 1,0:03:38.80,0:03:53.40,Default,,0,0,0,,解码器既有自注意力层，也有前馈层，但在它们之间是编码器\N解码器注意力层，帮助解码器关注输入句子的相关部分。
+Dialogue: 1,0:03:53.40,0:04:00.27,Default,,0,0,0,,在对输入序列中的单词进行嵌入（Embedding）\N后，每个嵌入向量都会流经编码器的两层。
+Dialogue: 1,0:04:01.7,0:04:05.50,Default,,0,0,0,,每个位置的单词都经过一个自注意力过程。
+Dialogue: 1,0:04:06.7,0:04:14.13,Default,,0,0,0,,然后它通过一个前馈神经网络，每个向量分别流过相同的网络。
+Dialogue: 1,0:04:15.17,0:04:21.57,Default,,0,0,0,,在这个自注意力层中，这些路径之间存在依赖关系。
+Dialogue: 1,0:04:21.57,0:04:33.3,Default,,0,0,0,,然而，前馈层没有这些依赖关系，因此各种路\N径可以在它们流经前馈层时并行执行。
+Dialogue: 1,0:04:34.17,0:04:41.53,Default,,0,0,0,,在自注意力层，输入嵌入被分解成查询向量、键向量和值向量。
+Dialogue: 1,0:04:42.17,0:04:48.77,Default,,0,0,0,,这些向量是通过Transformer在训练过程中学到的权重计算的。
+Dialogue: 1,0:04:49.80,0:04:55.30,Default,,0,0,0,,所有这些计算都是在模型中以矩阵计算的形式并行进行的。
+Dialogue: 1,0:04:56.47,0:05:07.57,Default,,0,0,0,,一旦我们有了查询键和值向量，下一步就是将每个\N值向量乘以"Softmax"分数，以便将它们加起来。
+Dialogue: 1,0:05:08.27,0:05:21.63,Default,,0,0,0,,这里的目的是保持你想要关注的单词的值不变，并通过将它\N们乘以很小的数字（例如0.001）来排除不相关的单词。
+Dialogue: 1,0:05:22.80,0:05:31.3,Default,,0,0,0,,接下来，我们需要对加权值向量求和，从而\N得到这个位置的自注意力层的输出。
+Dialogue: 1,0:05:31.7,0:05:37.33,Default,,0,0,0,,对于第一个单词，你可以将结果向量发送到前馈神经网络。
+Dialogue: 1,0:05:38.67,0:05:43.83,Default,,0,0,0,,总结一下这个过程，我们采取以下步骤来获得最终的嵌入。
+Dialogue: 1,0:05:44.83,0:05:50.80,Default,,0,0,0,,我们从自然语言句子开始，嵌入句子中的每个单词。
+Dialogue: 1,0:05:51.90,0:06:02.27,Default,,0,0,0,,然后，我们在这种情况下执行8次多头注意力，并\N将这个嵌入的单词与相应的加权矩阵相乘。
+Dialogue: 1,0:06:02.93,0:06:07.83,Default,,0,0,0,,我们首先使用结果Q K.V矩阵计算注意力。
+Dialogue: 1,0:06:08.3,0:06:18.73,Default,,0,0,0,,然后，我们可以将矩阵连接起来生成输出矩阵，这\N与该层最初获得的最终矩阵具有相同的维度。
+Dialogue: 1,0:06:18.73,0:06:21.13,Default,,0,0,0,,现在有多种Transformer的变体。
+Dialogue: 1,0:06:22.7,0:06:25.27,Default,,0,0,0,,有些使用原始架构中的编码器和解码器部分。
+Dialogue: 1,0:06:26.10,0:06:35.40,Default,,0,0,0,,有些只使用编码器，有些只使用解码器。
+Dialogue: 1,0:06:36.37,0:06:39.70,Default,,0,0,0,,一个流行的只有编码器架构是Bert。
+Dialogue: 1,0:06:40.50,0:06:43.67,Default,,0,0,0,,Bert是一种训练过的Transformer模型。
+Dialogue: 1,0:06:44.27,0:06:52.63,Default,,0,0,0,,Bert代表双向编码器表示，来自Transformer，由谷歌于2018年开发。
+Dialogue: 1,0:06:54.37,0:06:57.90,Default,,0,0,0,,从那时起，已经建立了多种Bert的变体。
+Dialogue: 1,0:06:58.37,0:07:00.97,Default,,0,0,0,,如今，Bert为谷歌搜索提供动力。
+Dialogue: 1,0:07:01.87,0:07:06.67,Default,,0,0,0,,你可以看到Bert为同一搜索查询提供的结果有多么不同。
+Dialogue: 1,0:07:06.90,0:07:12.10,Default,,0,0,0,,在此之前和之后，Bert分为两种变体进行训练。
+Dialogue: 1,0:07:12.57,0:07:21.7,Default,,0,0,0,,一个模型包含Bert Base，它有12个\NTransformer的堆栈，大约有1.1亿个参数，
+Dialogue: 1,0:07:21.7,0:07:29.47,Default,,0,0,0,,另一个是Bert Large，有24层Transformer，大约有3.4亿个参数。
+Dialogue: 1,0:07:30.47,0:07:35.50,Default,,0,0,0,,Bert模型之所以强大，是因为它可以处理长输入上下文。
+Dialogue: 1,0:07:36.17,0:07:40.30,Default,,0,0,0,,它在整个维基百科语料库和书籍语料库上进行了训练。
+Dialogue: 1,0:07:41.30,0:07:44.10,Default,,0,0,0,,Bert模型经过了100万步的训练。
+Dialogue: 1,0:07:44.80,0:07:49.86,Default,,0,0,0,,Bert在不同任务上进行了训练，这意味着它具有多任务目标。
+Dialogue: 1,0:07:50.47,0:07:55.63,Default,,0,0,0,,这使得Bert非常强大，因为它接受了各种任务的训练。
+Dialogue: 1,0:07:55.67,0:07:59.63,Default,,0,0,0,,它既可以在句子级别上工作，也可以在Token级别上工作。
+Dialogue: 1,0:08:00.70,0:08:04.83,Default,,0,0,0,,这是最初发布的两个不同版本的Bert。
+Dialogue: 1,0:08:05.30,0:08:11.43,Default,,0,0,0,,一个是Bert Base，它有12层，而Bert Large有24层。
+Dialogue: 1,0:08:11.70,0:08:15.30,Default,,0,0,0,,与原始的Transformer相比，它只有六层。
+Dialogue: 1,0:08:16.33,0:08:20.83,Default,,0,0,0,,Bert的工作方式是在两个不同的任务上进行训练。
+Dialogue: 1,0:08:21.13,0:08:30.63,Default,,0,0,0,,任务一称为掩码语言模型，其中句子被掩\N盖，模型被训练来预测被掩盖的单词。
+Dialogue: 1,0:08:31.20,0:08:38.23,Default,,0,0,0,,如果要从头开始训练Bert，你将不得不\N掩盖语料库中的一定百分比的单词。
+Dialogue: 1,0:08:38.80,0:08:42.23,Default,,0,0,0,,建议的掩盖百分比是15%。
+Dialogue: 1,0:08:42.90,0:08:47.73,Default,,0,0,0,,掩盖百分比实现了过少和过多掩盖之间的平衡。
+Dialogue: 1,0:08:48.37,0:08:57.27,Default,,0,0,0,,太少的遮罩使训练过程非常昂贵，太多\N的遮罩则去除了模型所需的上下文。
+Dialogue: 1,0:08:58.13,0:09:01.73,Default,,0,0,0,,第二个任务是预测下一句话。
+Dialogue: 1,0:09:02.40,0:09:06.13,Default,,0,0,0,,例如，模型给出了两组句子。
+Dialogue: 1,0:09:06.60,0:09:12.83,Default,,0,0,0,,Bert的目标是学习句子之间的关系，并根据第一句预测下一句。
+Dialogue: 1,0:09:13.93,0:09:21.86,Default,,0,0,0,,例如，句子A可能是一个人去了商店，句子B是他买了一加仑牛奶。
+Dialogue: 1,0:09:22.97,0:09:29.73,Default,,0,0,0,,Bert负责分类句子B是否在句子A之后的下一句。
+Dialogue: 1,0:09:30.17,0:09:32.63,Default,,0,0,0,,这是一个二分类任务。
+Dialogue: 1,0:09:33.60,0:09:38.70,Default,,0,0,0,,这帮助Bert在句子级别上表现良好，为了训练Bert，
+Dialogue: 1,0:09:38.90,0:09:45.23,Default,,0,0,0,,你需要为输入句子向模型提供三种不同类型的嵌入，
+Dialogue: 1,0:09:45.27,0:09:50.53,Default,,0,0,0,,分别是Token嵌入、段落嵌入和位置嵌入。
+Dialogue: 1,0:09:51.83,0:09:58.83,Default,,0,0,0,,Token嵌入是输入句子中每个Token的表示。
+Dialogue: 1,0:09:59.40,0:10:04.50,Default,,0,0,0,,单词被转换为特定维度的向量表示。
+Dialogue: 1,0:10:05.60,0:10:10.20,Default,,0,0,0,,Bert可以解决涉及文本分类的自然语言处理任务。
+Dialogue: 1,0:10:10.80,0:10:18.60,Default,,0,0,0,,一个例子是，对于两句话“我的狗很可爱”和“他喜欢玩\N耍”，我们需要分类这两句话在语义上是否相似。
+Dialogue: 1,0:10:18.93,0:10:23.47,Default,,0,0,0,,将输入文本对简单地连接起来并输入模型。
+Dialogue: 1,0:10:23.90,0:10:27.53,Default,,0,0,0,,那么Bert如何区分给定对中的输入呢？
+Dialogue: 1,0:10:28.3,0:10:30.83,Default,,0,0,0,,答案是使用段落嵌入。
+Dialogue: 1,0:10:31.57,0:10:38.83,Default,,0,0,0,,有一个由SEP表示的特殊标记，用于分隔句子的两个不同部分。
+Dialogue: 1,0:10:39.80,0:10:43.67,Default,,0,0,0,,另一个问题是学习句子中单词的顺序。
+Dialogue: 1,0:10:44.80,0:10:48.33,Default,,0,0,0,,众所周知，Bert由一堆Transformer组成。
+Dialogue: 1,0:10:48.90,0:10:53.100,Default,,0,0,0,,Bert设计用于处理最长为512的输入序列。
+Dialogue: 1,0:10:54.83,0:10:59.97,Default,,0,0,0,,输入序列的顺序被整合到位置嵌入中。
+Dialogue: 1,0:11:00.40,0:11:05.57,Default,,0,0,0,,这使得Bert能够为每个位置学习一个向量表示。
+Dialogue: 1,0:11:06.50,0:11:09.93,Default,,0,0,0,,Bert可用于不同的下游任务。
+Dialogue: 1,0:11:10.53,0:11:28.23,Default,,0,0,0,,尽管Bert是在大规模语言建模和单句分类上进行训练的，但它可以用\N于流行的NLP任务，如单句分类、句子对分类、问答和单句标记任务。
+Dialogue: 1,0:11:28.87,0:11:31.90,Default,,0,0,0,,感谢你的聆听。

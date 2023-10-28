@@ -1,0 +1,4314 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 0,
+            "end": 1125,
+            "text": "GWENDOLYN STRIPLING: Hello."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1125,
+            "end": 4019,
+            "text": "And welcome to Introduction to Generative AI."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 4019,
+            "end": 6689,
+            "text": "My name is Dr. Gwendolyn Stripling."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 6690,
+            "end": 9539,
+            "text": "And I am the artificial intelligence"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 9539,
+            "end": 14619,
+            "text": "technical curriculum developer here at Google Cloud."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 14619,
+            "end": 18489,
+            "text": "In this course, you learn to define generative AI,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 18489,
+            "end": 23078,
+            "text": "explain how generative AI works, describe generative AI model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 23079,
+            "end": 28388,
+            "text": "types, and describe generative AI applications."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 28390,
+            "end": 31959,
+            "text": "Generative AI is a type of artificial intelligence"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 31960,
+            "end": 36169,
+            "text": "technology that can produce various types of content,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 36170,
+            "end": 41049,
+            "text": "including text, imagery, audio, and synthetic data."
+          }
+        }
+      ],
+      "source": [
+        "GWENDOLYN STRIPLING: Hello.",
+        "And welcome to Introduction to Generative AI.",
+        "My name is Dr. Gwendolyn Stripling.",
+        "And I am the artificial intelligence",
+        "technical curriculum developer here at Google Cloud.",
+        "In this course, you learn to define generative AI,",
+        "explain how generative AI works, describe generative AI model",
+        "types, and describe generative AI applications.",
+        "Generative AI is a type of artificial intelligence",
+        "technology that can produce various types of content,",
+        "including text, imagery, audio, and synthetic data."
+      ],
+      "result": [
+        "GWENDOLYN STRIPLING：你好。",
+        "欢迎来到生成式AI入门课程。",
+        "我是Gwendolyn Stripling博士。",
+        "我是谷歌云的人工智能",
+        "技术课程开发者。",
+        "在这门课程中，您将学会定义生成式AI，",
+        "解释生成式AI的工作原理，描述生成式AI模型",
+        "类型，并描述生成式AI的应用。",
+        "生成式AI是一种人工智能",
+        "技术，可以生成各种类型的内容，",
+        "包括文本、图像、音频和合成数据。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 41049,
+            "end": 44089,
+            "text": "But what is artificial intelligence?"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 44090,
+            "end": 46030,
+            "text": "Well, since we are going to explore"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 46030,
+            "end": 48559,
+            "text": "generative artificial intelligence,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 48560,
+            "end": 51129,
+            "text": "let's provide a bit of context."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 51130,
+            "end": 53139,
+            "text": "So two very common questions asked"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 53140,
+            "end": 55809,
+            "text": "are what is artificial intelligence"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 55810,
+            "end": 60219,
+            "text": "and what is the difference between AI and machine"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 60219,
+            "end": 61479,
+            "text": "learning."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 61479,
+            "end": 65858,
+            "text": "One way to think about it is that AI is a discipline,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 65859,
+            "end": 68289,
+            "text": "like physics for example."
+          }
+        }
+      ],
+      "source": [
+        "But what is artificial intelligence?",
+        "Well, since we are going to explore",
+        "generative artificial intelligence,",
+        "let's provide a bit of context.",
+        "So two very common questions asked",
+        "are what is artificial intelligence",
+        "and what is the difference between AI and machine",
+        "learning.",
+        "One way to think about it is that AI is a discipline,",
+        "like physics for example."
+      ],
+      "result": [],
+      "status": "failed",
+      "errors": [
+        "Request failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\nTue May 16 2023 21:20:08 GMT-0500 (Central Daylight Time)"
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 68290,
+            "end": 71230,
+            "text": "AI is a branch of computer science"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 71230,
+            "end": 75009,
+            "text": "that deals with the creation of intelligence agents, which"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 75010,
+            "end": 80549,
+            "text": "are systems that can reason, and learn, and act autonomously."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 80549,
+            "end": 84688,
+            "text": "Essentially, AI has to do with the theory and methods"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 84689,
+            "end": 90189,
+            "text": "to build machines that think and act like humans."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 90189,
+            "end": 93019,
+            "text": "In this discipline, we have machine learning,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 93019,
+            "end": 95588,
+            "text": "which is a subfield of AI."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 95590,
+            "end": 100209,
+            "text": "It is a program or system that trains a model from input data."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 100209,
+            "end": 102818,
+            "text": "That trained model can make useful predictions"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 102819,
+            "end": 105879,
+            "text": "from new or never before seen data"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 105879,
+            "end": 109959,
+            "text": "drawn from the same one used to train the model."
+          }
+        }
+      ],
+      "source": [
+        "AI is a branch of computer science",
+        "that deals with the creation of intelligence agents, which",
+        "are systems that can reason, and learn, and act autonomously.",
+        "Essentially, AI has to do with the theory and methods",
+        "to build machines that think and act like humans.",
+        "In this discipline, we have machine learning,",
+        "which is a subfield of AI.",
+        "It is a program or system that trains a model from input data.",
+        "That trained model can make useful predictions",
+        "from new or never before seen data",
+        "drawn from the same one used to train the model."
+      ],
+      "result": [
+        "AI是计算机科学的一个分支",
+        "它涉及到智能代理的创建，这些代理",
+        "是可以推理、学习和自主行动的系统。",
+        "从本质上讲，AI与理论和方法有关",
+        "构建像人类一样思考和行动的机器。",
+        "在这个学科中，我们有机器学习，",
+        "它是AI的一个子领域。",
+        "这是一个从输入数据中训练模型的程序或系统。",
+        "经过训练的模型可以对",
+        "从未见过的新数据进行有用的预测，",
+        "这些数据来自于用于训练模型的相同数据。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 109959,
+            "end": 111939,
+            "text": "Machine learning gives the computer"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 111939,
+            "end": 116469,
+            "text": "the ability to learn without explicit programming."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 116469,
+            "end": 119439,
+            "text": "Two of the most common classes of machine learning models"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 119439,
+            "end": 123788,
+            "text": "are unsupervised and supervised ML models."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 123790,
+            "end": 125739,
+            "text": "The key difference between the two"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 125739,
+            "end": 129667,
+            "text": "is that, with supervised models, we have labels."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 129669,
+            "end": 134680,
+            "text": "Labeled data is data that comes with a tag like a name, a type,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 134680,
+            "end": 136240,
+            "text": "or a number."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 136240,
+            "end": 140629,
+            "text": "Unlabeled data is data that comes with no tag."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 140629,
+            "end": 143388,
+            "text": "This graph is an example of the problem"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 143389,
+            "end": 146208,
+            "text": "that a supervised model might try to solve."
+          }
+        }
+      ],
+      "source": [
+        "Machine learning gives the computer",
+        "the ability to learn without explicit programming.",
+        "Two of the most common classes of machine learning models",
+        "are unsupervised and supervised ML models.",
+        "The key difference between the two",
+        "is that, with supervised models, we have labels.",
+        "Labeled data is data that comes with a tag like a name, a type,",
+        "or a number.",
+        "Unlabeled data is data that comes with no tag.",
+        "This graph is an example of the problem",
+        "that a supervised model might try to solve."
+      ],
+      "result": [
+        "机器学习赋予计算机",
+        "在没有明确编程的情况下学习的能力。",
+        "两种最常见的机器学习模型类别",
+        "是无监督和有监督的ML模型。",
+        "两者之间的关键区别",
+        "是有监督模型具有标签。",
+        "带标签的数据是带有标签的数据，如名称、类型、",
+        "或数字。",
+        "无标签数据是没有标签的数据。",
+        "这张图是一个例子，说明了有监督模型可能尝试解决的问题。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 146210,
+            "end": 149779,
+            "text": "For example, let's say you are the owner of a restaurant."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 149780,
+            "end": 152369,
+            "text": "You have historical data of the bill amount"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 152370,
+            "end": 156139,
+            "text": "and how much different people tipped based on order type"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 156139,
+            "end": 159498,
+            "text": "and whether it was picked up or delivered."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 159500,
+            "end": 162979,
+            "text": "In supervised learning, the model learns from past examples"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 162979,
+            "end": 167238,
+            "text": "to predict future values, in this case tips."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 167240,
+            "end": 169969,
+            "text": "So here the model uses the total bill amount"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 169969,
+            "end": 174228,
+            "text": "to predict the future tip amount based on whether an order was"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 174229,
+            "end": 177019,
+            "text": "picked up or delivered."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 177020,
+            "end": 178840,
+            "text": "This is an example of the problem"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 178840,
+            "end": 182330,
+            "text": "that an unsupervised model might try to solve."
+          }
+        }
+      ],
+      "source": [
+        "For example, let's say you are the owner of a restaurant.",
+        "You have historical data of the bill amount",
+        "and how much different people tipped based on order type",
+        "and whether it was picked up or delivered.",
+        "In supervised learning, the model learns from past examples",
+        "to predict future values, in this case tips.",
+        "So here the model uses the total bill amount",
+        "to predict the future tip amount based on whether an order was",
+        "picked up or delivered.",
+        "This is an example of the problem",
+        "that an unsupervised model might try to solve."
+      ],
+      "result": [],
+      "status": "failed",
+      "errors": [
+        "Request failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\nTue May 16 2023 21:23:15 GMT-0500 (Central Daylight Time)"
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 182330,
+            "end": 185080,
+            "text": "So here you want to look at tenure and income"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 185080,
+            "end": 188050,
+            "text": "and then group or cluster employees"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 188050,
+            "end": 191169,
+            "text": "to see whether someone is on the fast track."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 191169,
+            "end": 194528,
+            "text": "Unsupervised problems are all about discovery,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 194530,
+            "end": 198939,
+            "text": "about looking at the raw data and seeing if it naturally"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 198939,
+            "end": 201749,
+            "text": "falls into groups."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 201750,
+            "end": 204649,
+            "text": "Let's get a little deeper and show this graphically"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 204650,
+            "end": 207529,
+            "text": "as understanding these concepts are"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 207530,
+            "end": 211789,
+            "text": "the foundation for your understanding of generative AI."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 211789,
+            "end": 215869,
+            "text": "In supervised learning, testing data values or x"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 215870,
+            "end": 217879,
+            "text": "are input into the model."
+          }
+        }
+      ],
+      "source": [
+        "So here you want to look at tenure and income",
+        "and then group or cluster employees",
+        "to see whether someone is on the fast track.",
+        "Unsupervised problems are all about discovery,",
+        "about looking at the raw data and seeing if it naturally",
+        "falls into groups.",
+        "Let's get a little deeper and show this graphically",
+        "as understanding these concepts are",
+        "the foundation for your understanding of generative AI.",
+        "In supervised learning, testing data values or x",
+        "are input into the model."
+      ],
+      "result": [
+        "所以在这里你想看的是工龄和收入",
+        "然后对员工进行分组或聚类",
+        "看看某个人是否在快速发展的道路上。",
+        "无监督问题都是关于发现的，",
+        "关于观察原始数据，看它是否自然地",
+        "分成几组。",
+        "让我们更深入地用图形展示这些概念，",
+        "因为理解这些概念是",
+        "你理解生成式AI的基础。",
+        "在监督学习中，测试数据值或x",
+        "被输入到模型中。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 217879,
+            "end": 222499,
+            "text": "The model outputs a prediction and compares that prediction"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 222500,
+            "end": 225859,
+            "text": "to the training data used to train the model."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 225860,
+            "end": 230749,
+            "text": "If the predicted test data values and actual training data"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 230750,
+            "end": 234379,
+            "text": "values are far apart, that's called error."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 234379,
+            "end": 236928,
+            "text": "And the model tries to reduce this error"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 236930,
+            "end": 241580,
+            "text": "until the predicted and actual values are closer together."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 241580,
+            "end": 245709,
+            "text": "This is a classic optimization problem."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 245710,
+            "end": 247409,
+            "text": "Now that we've explored the difference"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 247409,
+            "end": 250469,
+            "text": "between artificial intelligence and machine learning,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 250469,
+            "end": 253859,
+            "text": "and supervised and unsupervised learning,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 253860,
+            "end": 256528,
+            "text": "let's briefly explore where deep learning"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 256528,
+            "end": 260638,
+            "text": "fits as a subset of machine learning methods."
+          }
+        }
+      ],
+      "source": [
+        "The model outputs a prediction and compares that prediction",
+        "to the training data used to train the model.",
+        "If the predicted test data values and actual training data",
+        "values are far apart, that's called error.",
+        "And the model tries to reduce this error",
+        "until the predicted and actual values are closer together.",
+        "This is a classic optimization problem.",
+        "Now that we've explored the difference",
+        "between artificial intelligence and machine learning,",
+        "and supervised and unsupervised learning,",
+        "let's briefly explore where deep learning",
+        "fits as a subset of machine learning methods."
+      ],
+      "result": [
+        "模型输出预测并将该预测与用于训练模型的训练数据进行比较。",
+        "如果预测的测试数据值和实际训练数据值相差很大，那就叫做误差。",
+        "模型试图减少这种误差，",
+        "直到预测值和实际值更接近为止。",
+        "这是一个经典的优化问题。",
+        "现在我们已经探讨了人工智能和机器学习之间的区别，",
+        "以及监督学习和无监督学习，",
+        "让我们简要探讨深度学习在机器学习方法中的位置。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 260639,
+            "end": 262589,
+            "text": "While machine learning is a broad field that"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 262589,
+            "end": 265079,
+            "text": "encompasses many different techniques,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 265079,
+            "end": 267389,
+            "text": "deep learning is a type of machine learning"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 267389,
+            "end": 269788,
+            "text": "that uses artificial neural networks,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 269790,
+            "end": 272970,
+            "text": "allowing them to process more complex patterns than machine"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 272970,
+            "end": 274470,
+            "text": "learning."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 274470,
+            "end": 277879,
+            "text": "Artificial neural networks are inspired by the human brain."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 277879,
+            "end": 281689,
+            "text": "They are made up of many interconnected nodes or neurons"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 281689,
+            "end": 286129,
+            "text": "that can learn to perform tasks by processing data and making"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 286129,
+            "end": 287268,
+            "text": "predictions."
+          }
+        }
+      ],
+      "source": [
+        "While machine learning is a broad field that",
+        "encompasses many different techniques,",
+        "deep learning is a type of machine learning",
+        "that uses artificial neural networks,",
+        "allowing them to process more complex patterns than machine",
+        "learning.",
+        "Artificial neural networks are inspired by the human brain.",
+        "They are made up of many interconnected nodes or neurons",
+        "that can learn to perform tasks by processing data and making",
+        "predictions."
+      ],
+      "result": [
+        "虽然机器学习是一个涵盖了许多不同技术的广泛领域，",
+        "深度学习是一种使用人工神经网络的机器学习类型，",
+        "使它们能够处理比机器学习更复杂的模式。",
+        "人工神经网络受到人脑的启发。",
+        "它们由许多相互连接的节点或神经元组成，",
+        "通过处理数据和进行预测来学习执行任务。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 287269,
+            "end": 289759,
+            "text": "Deep learning models typically have many layers"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 289759,
+            "end": 292428,
+            "text": "of neurons, which allows them to learn"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 292430,
+            "end": 295879,
+            "text": "more complex patterns than traditional machine learning"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 295879,
+            "end": 296719,
+            "text": "models."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 296720,
+            "end": 300839,
+            "text": "And neural networks can use both labeled and unlabeled data."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 300839,
+            "end": 303529,
+            "text": "This is called semi-supervised learning."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 303529,
+            "end": 306259,
+            "text": "In semi-supervised learning, a neural network"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 306259,
+            "end": 309138,
+            "text": "is trained on a small amount of labeled data"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 309139,
+            "end": 312589,
+            "text": "and a large amount of unlabeled data."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 312589,
+            "end": 315198,
+            "text": "The labeled data helps the neural network"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 315199,
+            "end": 317748,
+            "text": "to learn the basic concepts of the task"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 317750,
+            "end": 320959,
+            "text": "while the unlabeled data helps the neural network"
+          }
+        }
+      ],
+      "source": [
+        "Deep learning models typically have many layers",
+        "of neurons, which allows them to learn",
+        "more complex patterns than traditional machine learning",
+        "models.",
+        "And neural networks can use both labeled and unlabeled data.",
+        "This is called semi-supervised learning.",
+        "In semi-supervised learning, a neural network",
+        "is trained on a small amount of labeled data",
+        "and a large amount of unlabeled data.",
+        "The labeled data helps the neural network",
+        "to learn the basic concepts of the task",
+        "while the unlabeled data helps the neural network"
+      ],
+      "result": [
+        "深度学习模型通常具有许多层次",
+        "的神经元，这使得它们能够学习",
+        "比传统机器学习更复杂的模式",
+        "模型。",
+        "神经网络可以使用有标签和无标签的数据。",
+        "这被称为半监督学习。",
+        "在半监督学习中，神经网络",
+        "在少量有标签数据上进行训练",
+        "和大量无标签数据。",
+        "有标签数据帮助神经网络",
+        "学习任务的基本概念",
+        "而无标签数据帮助神经网络"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 320959,
+            "end": 324539,
+            "text": "to generalize to new examples."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 324540,
+            "end": 327720,
+            "text": "Now we finally get to where generative AI"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 327720,
+            "end": 330389,
+            "text": "fits into this AI discipline."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 330389,
+            "end": 333569,
+            "text": "Gen AI is a subset of deep learning, which"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 333569,
+            "end": 336539,
+            "text": "means it uses artificial neural networks,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 336540,
+            "end": 340410,
+            "text": "can process both labeled and unlabeled data using"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 340410,
+            "end": 345899,
+            "text": "supervised, unsupervised, and semi-supervised methods."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 345899,
+            "end": 351318,
+            "text": "Large language models are also a subset of deep learning."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 351319,
+            "end": 354309,
+            "text": "Deep learning models, or machine learning models in general,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 354310,
+            "end": 359634,
+            "text": "can be divided into two types, generative and discriminative."
+          }
+        }
+      ],
+      "source": [
+        "to generalize to new examples.",
+        "Now we finally get to where generative AI",
+        "fits into this AI discipline.",
+        "Gen AI is a subset of deep learning, which",
+        "means it uses artificial neural networks,",
+        "can process both labeled and unlabeled data using",
+        "supervised, unsupervised, and semi-supervised methods.",
+        "Large language models are also a subset of deep learning.",
+        "Deep learning models, or machine learning models in general,",
+        "can be divided into two types, generative and discriminative."
+      ],
+      "result": [
+        "概括到新的例子。",
+        "现在我们终于来到了生成式AI",
+        "融入这个AI学科的地方。",
+        "生成式AI是深度学习的一个子集，这意味着它使用人工神经网络，",
+        "可以使用有监督、无监督和半监督方法处理标记和未标记的数据。",
+        "大型语言模型也是深度学习的一个子集。",
+        "深度学习模型，或者一般的机器学习模型，",
+        "可以分为两种类型，生成式和判别式。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 359634,
+            "end": 362288,
+            "text": "A discriminative model is a type of model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 362290,
+            "end": 366519,
+            "text": "that is used to classify or predict labels for data points."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 366519,
+            "end": 368079,
+            "text": "Discriminative models are typically"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 368079,
+            "end": 370958,
+            "text": "trained on a data set of labeled data points."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 370959,
+            "end": 374528,
+            "text": "And they learn the relationship between the features"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 374529,
+            "end": 377348,
+            "text": "of the data points and the labels."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 377350,
+            "end": 380479,
+            "text": "Once a discriminative model is trained,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 380480,
+            "end": 385180,
+            "text": "it can be used to predict the label for new data points."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 385180,
+            "end": 388389,
+            "text": "A generative model generates new data instances"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 388389,
+            "end": 393608,
+            "text": "based on a learned probability distribution of existing data."
+          }
+        }
+      ],
+      "source": [
+        "A discriminative model is a type of model",
+        "that is used to classify or predict labels for data points.",
+        "Discriminative models are typically",
+        "trained on a data set of labeled data points.",
+        "And they learn the relationship between the features",
+        "of the data points and the labels.",
+        "Once a discriminative model is trained,",
+        "it can be used to predict the label for new data points.",
+        "A generative model generates new data instances",
+        "based on a learned probability distribution of existing data."
+      ],
+      "result": [
+        "判别模型是一种类型的模型",
+        "用于对数据点进行分类或预测标签。",
+        "判别模型通常",
+        "在一个带标签的数据点的数据集上进行训练。",
+        "它们学习数据点的特征",
+        "和标签之间的关系。",
+        "一旦判别模型被训练好，",
+        "它可以用来预测新数据点的标签。",
+        "生成模型根据现有数据的概率分布生成新的数据实例",
+        "基于学习到的概率分布。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 393610,
+            "end": 398069,
+            "text": "Thus generative models generate new content."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 398069,
+            "end": 400258,
+            "text": "Take this example here."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 400259,
+            "end": 402989,
+            "text": "The discriminative model learns the conditional probability"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 402990,
+            "end": 405779,
+            "text": "distribution or the probability of y,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 405779,
+            "end": 410069,
+            "text": "our output, given x, our input, that this is a dog"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 410069,
+            "end": 414479,
+            "text": "and classifies it as a dog and not a cat."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 414480,
+            "end": 418259,
+            "text": "The generative model learns the joint probability distribution"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 418259,
+            "end": 422098,
+            "text": "or the probability of x and y and predicts"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 422100,
+            "end": 425249,
+            "text": "the conditional probability that this is a dog"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 425250,
+            "end": 429429,
+            "text": "and can then generate a picture of a dog."
+          }
+        }
+      ],
+      "source": [
+        "Thus generative models generate new content.",
+        "Take this example here.",
+        "The discriminative model learns the conditional probability",
+        "distribution or the probability of y,",
+        "our output, given x, our input, that this is a dog",
+        "and classifies it as a dog and not a cat.",
+        "The generative model learns the joint probability distribution",
+        "or the probability of x and y and predicts",
+        "the conditional probability that this is a dog",
+        "and can then generate a picture of a dog."
+      ],
+      "result": [
+        "因此生成模型会生成新内容。",
+        "以这个例子为例。",
+        "判别模型学习条件概率",
+        "分布或者y的概率，",
+        "我们的输出，给定x，我们的输入，这是一只狗",
+        "并将其分类为狗而不是猫。",
+        "生成模型学习联合概率分布",
+        "或者x和y的概率，并预测",
+        "这是一只狗的条件概率",
+        "然后可以生成一张狗的图片。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 429430,
+            "end": 431970,
+            "text": "So to summarize, generative models"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 431970,
+            "end": 436529,
+            "text": "can generate new data instances while discriminative models"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 436529,
+            "end": 441469,
+            "text": "discriminate between different kinds of data instances."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 441470,
+            "end": 443599,
+            "text": "The top image shows a traditional machine"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 443600,
+            "end": 445579,
+            "text": "learning model which attempts to learn"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 445579,
+            "end": 448878,
+            "text": "the relationship between the data and the label,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 448879,
+            "end": 450589,
+            "text": "or what you want to predict."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 450589,
+            "end": 453468,
+            "text": "The bottom image shows a generative AI model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 453470,
+            "end": 456979,
+            "text": "which attempts to learn patterns on content so that it"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 456980,
+            "end": 460100,
+            "text": "can generate new content."
+          }
+        }
+      ],
+      "source": [
+        "So to summarize, generative models",
+        "can generate new data instances while discriminative models",
+        "discriminate between different kinds of data instances.",
+        "The top image shows a traditional machine",
+        "learning model which attempts to learn",
+        "the relationship between the data and the label,",
+        "or what you want to predict.",
+        "The bottom image shows a generative AI model",
+        "which attempts to learn patterns on content so that it",
+        "can generate new content."
+      ],
+      "result": [
+        "所以总结一下，生成模型",
+        "可以生成新的数据实例，而判别模型",
+        "在不同类型的数据实例之间进行区分。",
+        "顶部图片展示了一个传统的机器",
+        "学习模型，试图学习",
+        "数据与标签之间的关系，",
+        "或者你想要预测的内容。",
+        "底部图片展示了一个生成性AI模型",
+        "试图学习内容上的模式，以便它",
+        "可以生成新的内容。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 460100,
+            "end": 463839,
+            "text": "A good way to distinguish what is gen AI and what is not"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 463839,
+            "end": 466368,
+            "text": "is shown in this illustration."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 466370,
+            "end": 471379,
+            "text": "It is not gen AI when the output, or y, or label is"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 471379,
+            "end": 475758,
+            "text": "a number or a class, for example spam or not spam,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 475759,
+            "end": 477619,
+            "text": "or a probability."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 477620,
+            "end": 483169,
+            "text": "It is gen AI when the output is natural language, like speech"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 483170,
+            "end": 488610,
+            "text": "or text, an image or audio, for example."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 488610,
+            "end": 492029,
+            "text": "Visualizing this mathematically would look like this."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 492029,
+            "end": 494339,
+            "text": "If you haven't seen this for a while,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 494339,
+            "end": 498898,
+            "text": "the y is equal to f of x equation calculates"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 498899,
+            "end": 503278,
+            "text": "the dependent output of a process given different inputs."
+          }
+        }
+      ],
+      "source": [
+        "A good way to distinguish what is gen AI and what is not",
+        "is shown in this illustration.",
+        "It is not gen AI when the output, or y, or label is",
+        "a number or a class, for example spam or not spam,",
+        "or a probability.",
+        "It is gen AI when the output is natural language, like speech",
+        "or text, an image or audio, for example.",
+        "Visualizing this mathematically would look like this.",
+        "If you haven't seen this for a while,",
+        "the y is equal to f of x equation calculates",
+        "the dependent output of a process given different inputs."
+      ],
+      "result": [],
+      "status": "failed",
+      "errors": [
+        "Request failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\nTue May 16 2023 21:24:17 GMT-0500 (Central Daylight Time)"
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 503279,
+            "end": 505379,
+            "text": "The y stands for the model output."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 505379,
+            "end": 509069,
+            "text": "The f embodies the function used in the calculation."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 509069,
+            "end": 513278,
+            "text": "And the x represents the input or inputs used for the formula."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 513279,
+            "end": 516658,
+            "text": "So the model output is a function of all the inputs."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 516658,
+            "end": 521398,
+            "text": "If the y is the number, like predicted sales,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 521399,
+            "end": 523439,
+            "text": "it is not gen AI."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 523440,
+            "end": 526739,
+            "text": "If y is a sentence, like define sales,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 526740,
+            "end": 531480,
+            "text": "it is generative as the question would elicit a text response."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 531480,
+            "end": 535710,
+            "text": "The response would be based on all the massive large data"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 535710,
+            "end": 539250,
+            "text": "the model was already trained on."
+          }
+        }
+      ],
+      "source": [
+        "The y stands for the model output.",
+        "The f embodies the function used in the calculation.",
+        "And the x represents the input or inputs used for the formula.",
+        "So the model output is a function of all the inputs.",
+        "If the y is the number, like predicted sales,",
+        "it is not gen AI.",
+        "If y is a sentence, like define sales,",
+        "it is generative as the question would elicit a text response.",
+        "The response would be based on all the massive large data",
+        "the model was already trained on."
+      ],
+      "result": [
+        "y 代表模型输出。",
+        "f 代表用于计算的函数。",
+        "x 代表用于公式的输入或多个输入。",
+        "所以模型输出是所有输入的函数。",
+        "如果 y 是一个数字，比如预测的销售额，",
+        "那么它不是生成 AI。",
+        "如果 y 是一个句子，比如定义销售额，",
+        "那么它是生成性的，因为问题会引发一个文本回应。",
+        "回应将基于所有大量的大数据",
+        "模型已经接受过训练。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 539250,
+            "end": 543450,
+            "text": "To summarize at a high level, the traditional, classical"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 543450,
+            "end": 545999,
+            "text": "supervised and unsupervised learning process"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 546000,
+            "end": 549929,
+            "text": "takes training code and label data to build a model."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 549929,
+            "end": 552419,
+            "text": "Depending on the use case or problem,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 552419,
+            "end": 555298,
+            "text": "the model can give you a prediction."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 555299,
+            "end": 558629,
+            "text": "It can classify something or cluster something."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 558629,
+            "end": 562439,
+            "text": "We use this example to show you how much more robust"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 562440,
+            "end": 565289,
+            "text": "the gen AI process is."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 565289,
+            "end": 569068,
+            "text": "The gen AI process can take training code, label data,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 569070,
+            "end": 571529,
+            "text": "and unlabeled data of all data types"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 571529,
+            "end": 573299,
+            "text": "and build a foundation model."
+          }
+        }
+      ],
+      "source": [
+        "To summarize at a high level, the traditional, classical",
+        "supervised and unsupervised learning process",
+        "takes training code and label data to build a model.",
+        "Depending on the use case or problem,",
+        "the model can give you a prediction.",
+        "It can classify something or cluster something.",
+        "We use this example to show you how much more robust",
+        "the gen AI process is.",
+        "The gen AI process can take training code, label data,",
+        "and unlabeled data of all data types",
+        "and build a foundation model."
+      ],
+      "result": [],
+      "status": "failed",
+      "errors": [
+        "Request failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\nTue May 16 2023 21:24:32 GMT-0500 (Central Daylight Time)"
+      ]
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 573299,
+            "end": 576419,
+            "text": "The foundation model can then generate new content."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 576419,
+            "end": 582598,
+            "text": "For example, text, code, images, audio, video, et cetera."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 582600,
+            "end": 585179,
+            "text": "We've come a long away from traditional programming"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 585179,
+            "end": 588299,
+            "text": "to neural networks to generative models."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 588299,
+            "end": 590279,
+            "text": "In traditional programming, we used"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 590279,
+            "end": 593339,
+            "text": "to have to hard code the rules for distinguishing a cat--"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 593340,
+            "end": 600389,
+            "text": "the type, animal; legs, four; ears, two; fur, yes;"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 600389,
+            "end": 603058,
+            "text": "likes yarn and catnip."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 603059,
+            "end": 605309,
+            "text": "In the wave of neural networks, we"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 605309,
+            "end": 607918,
+            "text": "could give the network pictures of cats and dogs"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 607919,
+            "end": 612768,
+            "text": "and ask is this a cat and it would predict a cat."
+          }
+        }
+      ],
+      "source": [
+        "The foundation model can then generate new content.",
+        "For example, text, code, images, audio, video, et cetera.",
+        "We've come a long away from traditional programming",
+        "to neural networks to generative models.",
+        "In traditional programming, we used",
+        "to have to hard code the rules for distinguishing a cat--",
+        "the type, animal; legs, four; ears, two; fur, yes;",
+        "likes yarn and catnip.",
+        "In the wave of neural networks, we",
+        "could give the network pictures of cats and dogs",
+        "and ask is this a cat and it would predict a cat."
+      ],
+      "result": [
+        "基础模型可以生成新的内容。",
+        "例如，文本、代码、图像、音频、视频等。",
+        "我们已经从传统编程走到了神经网络和生成模型。",
+        "在传统编程中，我们需要",
+        "硬编码区分猫的规则——",
+        "类型，动物；腿，四；耳朵，两个；毛发，有；",
+        "喜欢纱线和猫薄荷。",
+        "在神经网络的浪潮中，我们",
+        "可以给网络提供猫和狗的图片",
+        "然后询问这是不是猫，它会预测出是猫。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 612769,
+            "end": 615739,
+            "text": "In the generative wave, we as users"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 615740,
+            "end": 618769,
+            "text": "can generate our own content, whether it"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 618769,
+            "end": 623089,
+            "text": "be text, images, audio, video, et cetera, for example"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 623090,
+            "end": 626360,
+            "text": "models like PaLM or Pathways Language Model,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 626360,
+            "end": 630139,
+            "text": "or LAMBDA, Language Model for Dialogue Applications,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 630139,
+            "end": 633438,
+            "text": "ingest very, very large data from the multiple sources"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 633440,
+            "end": 636289,
+            "text": "across the internet and build foundation language"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 636289,
+            "end": 640789,
+            "text": "models we can use simply by asking a question,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 640789,
+            "end": 643729,
+            "text": "whether typing it into a prompt or verbally"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 643730,
+            "end": 645899,
+            "text": "talking into the prompt itself."
+          }
+        }
+      ],
+      "source": [
+        "In the generative wave, we as users",
+        "can generate our own content, whether it",
+        "be text, images, audio, video, et cetera, for example",
+        "models like PaLM or Pathways Language Model,",
+        "or LAMBDA, Language Model for Dialogue Applications,",
+        "ingest very, very large data from the multiple sources",
+        "across the internet and build foundation language",
+        "models we can use simply by asking a question,",
+        "whether typing it into a prompt or verbally",
+        "talking into the prompt itself."
+      ],
+      "result": [
+        "在生成波中，我们作为用户",
+        "可以生成我们自己的内容，无论是",
+        "文本、图像、音频、视频等等，例如",
+        "像PaLM或Pathways语言模型这样的模型，",
+        "或者LAMBDA，用于对话应用的语言模型，",
+        "从互联网的多个来源中摄取非常非常大的数据",
+        "建立我们可以简单地通过提问来使用的基础语言",
+        "模型，无论是将问题输入到提示中还是口头",
+        "与提示本身进行对话。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 645899,
+            "end": 648798,
+            "text": "So when you ask it what's a cat, it"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 648799,
+            "end": 652609,
+            "text": "can give you everything it has learned about a cat."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 652610,
+            "end": 655009,
+            "text": "Now we come to our formal definition."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 655009,
+            "end": 657529,
+            "text": "What is generative AI?"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 657529,
+            "end": 660019,
+            "text": "Gen AI is a type of artificial intelligence"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 660019,
+            "end": 662898,
+            "text": "that creates new content based on what it has"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 662899,
+            "end": 665149,
+            "text": "learned from existing content."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 665149,
+            "end": 667519,
+            "text": "The process of learning from existing content"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 667519,
+            "end": 670579,
+            "text": "is called training and results in the creation"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 670580,
+            "end": 673879,
+            "text": "of a statistical model when given a prompt."
+          }
+        }
+      ],
+      "source": [
+        "So when you ask it what's a cat, it",
+        "can give you everything it has learned about a cat.",
+        "Now we come to our formal definition.",
+        "What is generative AI?",
+        "Gen AI is a type of artificial intelligence",
+        "that creates new content based on what it has",
+        "learned from existing content.",
+        "The process of learning from existing content",
+        "is called training and results in the creation",
+        "of a statistical model when given a prompt."
+      ],
+      "result": [
+        "所以当你问它什么是猫时，它",
+        "可以告诉你它所了解的关于猫的一切。",
+        "现在我们来到我们的正式定义。",
+        "什么是生成式AI？",
+        "生成式AI是一种人工智能类型",
+        "根据它从现有内容中学到的知识",
+        "创造新内容。",
+        "从现有内容中学习的过程",
+        "被称为训练，并在给定提示时产生",
+        "一个统计模型。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 673879,
+            "end": 678258,
+            "text": "AI uses the model to predict what an expected response might"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 678259,
+            "end": 681979,
+            "text": "be and this generates new content."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 681980,
+            "end": 684350,
+            "text": "Essentially, it learns the underlying structure"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 684350,
+            "end": 686929,
+            "text": "of the data and can then generate"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 686929,
+            "end": 691429,
+            "text": "new samples that are similar to the data it was trained on."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 691429,
+            "end": 695869,
+            "text": "As previously mentioned, a generative language model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 695870,
+            "end": 698720,
+            "text": "can take what it has learned from the examples it's"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 698720,
+            "end": 701629,
+            "text": "been shown and create something entirely new"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 701629,
+            "end": 703399,
+            "text": "based on that information."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 703399,
+            "end": 707809,
+            "text": "Large language models are one type of generative AI"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 707809,
+            "end": 712309,
+            "text": "since they generate novel combinations of text"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 712309,
+            "end": 716179,
+            "text": "in the form of natural sounding language."
+          }
+        }
+      ],
+      "source": [
+        "AI uses the model to predict what an expected response might",
+        "be and this generates new content.",
+        "Essentially, it learns the underlying structure",
+        "of the data and can then generate",
+        "new samples that are similar to the data it was trained on.",
+        "As previously mentioned, a generative language model",
+        "can take what it has learned from the examples it's",
+        "been shown and create something entirely new",
+        "based on that information.",
+        "Large language models are one type of generative AI",
+        "since they generate novel combinations of text",
+        "in the form of natural sounding language."
+      ],
+      "result": [
+        "AI使用模型来预测预期响应可能是什么",
+        "从而生成新的内容。",
+        "本质上，它学习了数据的基本结构",
+        "然后可以生成",
+        "与其训练数据相似的新样本。",
+        "如前所述，生成性语言模型",
+        "可以从它所看到的示例中学到东西",
+        "然后根据这些信息创造出全新的东西",
+        "基于这些信息。",
+        "大型语言模型是一种生成性AI",
+        "因为它们生成了新颖的文本组合",
+        "以自然 sounding 语言的形式。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 716179,
+            "end": 719149,
+            "text": "A generative image model takes an image"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 719149,
+            "end": 724498,
+            "text": "as input and can output text, another image, or video."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 724500,
+            "end": 727339,
+            "text": "For example, under the output text,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 727340,
+            "end": 729679,
+            "text": "you can get visual question answering"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 729679,
+            "end": 734778,
+            "text": "while under output image, an image completion is generated."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 734779,
+            "end": 739309,
+            "text": "And under output video, animation is generated."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 739309,
+            "end": 742759,
+            "text": "A generative language model takes text as input"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 742759,
+            "end": 747589,
+            "text": "and can output more text, an image, audio, or decisions."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 747590,
+            "end": 749690,
+            "text": "For example, under the output text,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 749690,
+            "end": 751399,
+            "text": "question answering is generated."
+          }
+        }
+      ],
+      "source": [
+        "A generative image model takes an image",
+        "as input and can output text, another image, or video.",
+        "For example, under the output text,",
+        "you can get visual question answering",
+        "while under output image, an image completion is generated.",
+        "And under output video, animation is generated.",
+        "A generative language model takes text as input",
+        "and can output more text, an image, audio, or decisions.",
+        "For example, under the output text,",
+        "question answering is generated."
+      ],
+      "result": [
+        "生成图像模型接受图像作为输入",
+        "可以输出文本、另一个图像或视频。",
+        "例如，在输出文本下，",
+        "您可以获得视觉问题回答",
+        "而在输出图像下，生成图像补全。",
+        "在输出视频下，生成动画。",
+        "生成语言模型以文本为输入",
+        "可以输出更多文本、图像、音频或决策。",
+        "例如，在输出文本下，",
+        "生成问题回答。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 751399,
+            "end": 755738,
+            "text": "And under output image, a video is generated."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 755740,
+            "end": 758769,
+            "text": "We've stated that generative language models learn"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 758769,
+            "end": 761739,
+            "text": "about patterns and language through training data,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 761740,
+            "end": 766509,
+            "text": "then, given some text, they predict what comes next."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 766509,
+            "end": 770739,
+            "text": "Thus generative language models are pattern matching systems."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 770740,
+            "end": 774889,
+            "text": "They learn about patterns based on the data you provide."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 774889,
+            "end": 777168,
+            "text": "Here is an example."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 777169,
+            "end": 779928,
+            "text": "Based on things it's learned from its training data,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 779929,
+            "end": 783688,
+            "text": "it offers predictions of how to complete this sentence,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 783690,
+            "end": 789429,
+            "text": "I'm making a sandwich with peanut butter and jelly."
+          }
+        }
+      ],
+      "source": [
+        "And under output image, a video is generated.",
+        "We've stated that generative language models learn",
+        "about patterns and language through training data,",
+        "then, given some text, they predict what comes next.",
+        "Thus generative language models are pattern matching systems.",
+        "They learn about patterns based on the data you provide.",
+        "Here is an example.",
+        "Based on things it's learned from its training data,",
+        "it offers predictions of how to complete this sentence,",
+        "I'm making a sandwich with peanut butter and jelly."
+      ],
+      "result": [
+        "在输出图像下，生成了一个视频。",
+        "我们已经声明过，生成性语言模型通过训练数据学习",
+        "关于模式和语言的知识，",
+        "然后，给定一些文本，它们预测接下来会发生什么。",
+        "因此生成性语言模型是模式匹配系统。",
+        "它们根据您提供的数据学习关于模式的知识。",
+        "这里有一个例子。",
+        "基于它从训练数据中学到的东西，",
+        "它提供了如何完成这个句子的预测，",
+        "我正在用花生酱和果冻做三明治。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 789429,
+            "end": 792098,
+            "text": "Here is the same example using Bard,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 792100,
+            "end": 795399,
+            "text": "which is trained on a massive amount of text data"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 795399,
+            "end": 797709,
+            "text": "and is able to communicate and generate"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 797710,
+            "end": 801729,
+            "text": "humanlike text in response to a wide range of prompts"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 801730,
+            "end": 803529,
+            "text": "and questions."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 803529,
+            "end": 805848,
+            "text": "Here is another example."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 805850,
+            "end": 809049,
+            "text": "The meaning of life is--"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 809049,
+            "end": 812019,
+            "text": "and Bart gives you a contextual answer"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 812019,
+            "end": 815679,
+            "text": "and then shows the highest probability response."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 815679,
+            "end": 820329,
+            "text": "The power of generative AI comes from the use of transformers."
+          }
+        }
+      ],
+      "source": [
+        "Here is the same example using Bard,",
+        "which is trained on a massive amount of text data",
+        "and is able to communicate and generate",
+        "humanlike text in response to a wide range of prompts",
+        "and questions.",
+        "Here is another example.",
+        "The meaning of life is--",
+        "and Bart gives you a contextual answer",
+        "and then shows the highest probability response.",
+        "The power of generative AI comes from the use of transformers."
+      ],
+      "result": [
+        "这里有一个使用Bard的相同示例，",
+        "它接受大量的文本数据训练，",
+        "能够与人类沟通并生成",
+        "针对各种提示和问题的类人文本。",
+        "这是另一个例子。",
+        "生命的意义是--",
+        "然后Bart给出一个上下文相关的答案，",
+        "接着展示最高概率的回应。",
+        "生成式AI的力量来自于使用变压器。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 820330,
+            "end": 823179,
+            "text": "Transformers produced a 2018 revolution"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 823179,
+            "end": 825399,
+            "text": "in natural language processing."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 825399,
+            "end": 827948,
+            "text": "At a high level, a transformer model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 827950,
+            "end": 830629,
+            "text": "consists of an encoder and decoder."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 830629,
+            "end": 833019,
+            "text": "The encoder encodes the input sequence"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 833019,
+            "end": 835599,
+            "text": "and passes it to the decoder, which"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 835600,
+            "end": 838720,
+            "text": "learns how to decode the representation"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 838720,
+            "end": 841149,
+            "text": "for a relevant task."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 841149,
+            "end": 846339,
+            "text": "In transformers, hallucinations are words or phrases"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 846340,
+            "end": 849190,
+            "text": "that are generated by the model that"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 849190,
+            "end": 853659,
+            "text": "are often nonsensical or grammatically incorrect."
+          }
+        }
+      ],
+      "source": [
+        "Transformers produced a 2018 revolution",
+        "in natural language processing.",
+        "At a high level, a transformer model",
+        "consists of an encoder and decoder.",
+        "The encoder encodes the input sequence",
+        "and passes it to the decoder, which",
+        "learns how to decode the representation",
+        "for a relevant task.",
+        "In transformers, hallucinations are words or phrases",
+        "that are generated by the model that",
+        "are often nonsensical or grammatically incorrect."
+      ],
+      "result": [
+        "变形金刚在2018年引发了自然语言处理的革命",
+        "在较高层次上，变形金刚模型",
+        "由编码器和解码器组成。",
+        "编码器对输入序列进行编码",
+        "并将其传递给解码器，解码器",
+        "学会如何解码表示",
+        "以完成相关任务。",
+        "在变形金刚中，幻觉是由模型生成的单词或短语",
+        "它们通常是无意义的或语法不正确的。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 853659,
+            "end": 857179,
+            "text": "Hallucinations can be caused by a number of factors,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 857179,
+            "end": 861429,
+            "text": "including the model is not trained on enough data,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 861429,
+            "end": 865629,
+            "text": "or the model is trained on noisy or dirty data,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 865629,
+            "end": 869439,
+            "text": "or the model is not given enough context,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 869440,
+            "end": 873009,
+            "text": "or the model is not given enough constraints."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 873009,
+            "end": 875529,
+            "text": "Hallucinations can be a problem for transformers"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 875529,
+            "end": 880029,
+            "text": "because they can make the output text difficult to understand."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 880029,
+            "end": 881859,
+            "text": "They can also make the model more"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 881860,
+            "end": 886690,
+            "text": "likely to generate incorrect or misleading information."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 886690,
+            "end": 889809,
+            "text": "A prompt is a short piece of text"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 889809,
+            "end": 893409,
+            "text": "that is given to the large language model as input."
+          }
+        }
+      ],
+      "source": [
+        "Hallucinations can be caused by a number of factors,",
+        "including the model is not trained on enough data,",
+        "or the model is trained on noisy or dirty data,",
+        "or the model is not given enough context,",
+        "or the model is not given enough constraints.",
+        "Hallucinations can be a problem for transformers",
+        "because they can make the output text difficult to understand.",
+        "They can also make the model more",
+        "likely to generate incorrect or misleading information.",
+        "A prompt is a short piece of text",
+        "that is given to the large language model as input."
+      ],
+      "result": [
+        "幻觉可能由多种因素引起，",
+        "包括模型没有接受足够的数据训练，",
+        "或者模型接受了噪声或脏数据的训练，",
+        "或者模型没有获得足够的上下文，",
+        "或者模型没有获得足够的约束。",
+        "幻觉对变压器可能是个问题，",
+        "因为它们可能使输出文本难以理解。",
+        "它们还可能使模型更",
+        "容易产生错误或误导性的信息。",
+        "提示是一小段文本，",
+        "作为输入提供给大型语言模型。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 893409,
+            "end": 897578,
+            "text": "And it can be used to control the output of the model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 897580,
+            "end": 899320,
+            "text": "in a variety of ways."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 899320,
+            "end": 901899,
+            "text": "Prompt design is the process of creating"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 901899,
+            "end": 904988,
+            "text": "a prompt that will generate the desired output"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 904990,
+            "end": 907649,
+            "text": "from a large language model."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 907649,
+            "end": 911729,
+            "text": "As previously mentioned, gen AI depends a lot"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 911730,
+            "end": 914759,
+            "text": "on the training data that you have fed into it."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 914759,
+            "end": 918268,
+            "text": "And it analyzes the patterns and structures of the input data"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 918269,
+            "end": 920219,
+            "text": "and thus learns."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 920220,
+            "end": 923879,
+            "text": "But with access to a browser based prompt, you, the user,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 923879,
+            "end": 927419,
+            "text": "can generate your own content."
+          }
+        }
+      ],
+      "source": [
+        "And it can be used to control the output of the model",
+        "in a variety of ways.",
+        "Prompt design is the process of creating",
+        "a prompt that will generate the desired output",
+        "from a large language model.",
+        "As previously mentioned, gen AI depends a lot",
+        "on the training data that you have fed into it.",
+        "And it analyzes the patterns and structures of the input data",
+        "and thus learns.",
+        "But with access to a browser based prompt, you, the user,",
+        "can generate your own content."
+      ],
+      "result": [
+        "并且它可以用于以多种方式控制模型的输出",
+        "。",
+        "提示设计是创建的过程",
+        "一个将产生所需输出的提示",
+        "从一个大型语言模型。",
+        "如前所述，gen AI很大程度上取决于",
+        "您输入的训练数据。",
+        "它分析输入数据的模式和结构",
+        "从而学习。",
+        "但是通过访问基于浏览器的提示，您，用户，",
+        "可以生成您自己的内容。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 927419,
+            "end": 931569,
+            "text": "We've shown illustrations of the types of input based upon data."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 931570,
+            "end": 933960,
+            "text": "Here are the associated model types."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 933960,
+            "end": 935639,
+            "text": "Text-to-text."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 935639,
+            "end": 938699,
+            "text": "Text-to-text models take a natural language input"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 938700,
+            "end": 940709,
+            "text": "and produces a text output."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 940710,
+            "end": 943230,
+            "text": "These models are trained to learn the mapping"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 943230,
+            "end": 945419,
+            "text": "between a pair of text, e.g."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 945419,
+            "end": 949739,
+            "text": "for example, translation from one language to another."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 949740,
+            "end": 950939,
+            "text": "Text-to-image."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 950940,
+            "end": 954929,
+            "text": "Text-to-image models are trained on a large set of images,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 954929,
+            "end": 958288,
+            "text": "each captioned with a short text description."
+          }
+        }
+      ],
+      "source": [
+        "We've shown illustrations of the types of input based upon data.",
+        "Here are the associated model types.",
+        "Text-to-text.",
+        "Text-to-text models take a natural language input",
+        "and produces a text output.",
+        "These models are trained to learn the mapping",
+        "between a pair of text, e.g.",
+        "for example, translation from one language to another.",
+        "Text-to-image.",
+        "Text-to-image models are trained on a large set of images,",
+        "each captioned with a short text description."
+      ],
+      "result": [
+        "我们展示了基于数据的输入类型的示例。",
+        "这里是相关的模型类型。",
+        "文本到文本。",
+        "文本到文本模型接受自然语言输入",
+        "并生成文本输出。",
+        "这些模型被训练来学习映射",
+        "在一对文本之间，例如。",
+        "例如，从一种语言翻译成另一种语言。",
+        "文本到图像。",
+        "文本到图像模型在大量图像集上进行训练，",
+        "每个图像都配有简短的文本描述。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 958289,
+            "end": 961438,
+            "text": "Diffusion is one method used to achieve this."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 961440,
+            "end": 964469,
+            "text": "Text-to-video and text-to-3D."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 964470,
+            "end": 968249,
+            "text": "Text-to-video models aim to generate a video representation"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 968250,
+            "end": 969899,
+            "text": "from text input."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 969899,
+            "end": 973918,
+            "text": "The input text can be anything from a single sentence"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 973919,
+            "end": 975419,
+            "text": "to a full script."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 975419,
+            "end": 980218,
+            "text": "And the output is a video that corresponds to the input text."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 980220,
+            "end": 983789,
+            "text": "Similarly, text-to-3D models generate"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 983789,
+            "end": 988199,
+            "text": "three dimensional objects that correspond to a user's text"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 988200,
+            "end": 989609,
+            "text": "description."
+          }
+        }
+      ],
+      "source": [
+        "Diffusion is one method used to achieve this.",
+        "Text-to-video and text-to-3D.",
+        "Text-to-video models aim to generate a video representation",
+        "from text input.",
+        "The input text can be anything from a single sentence",
+        "to a full script.",
+        "And the output is a video that corresponds to the input text.",
+        "Similarly, text-to-3D models generate",
+        "three dimensional objects that correspond to a user's text",
+        "description."
+      ],
+      "result": [
+        "扩散是实现这一目标的一种方法。",
+        "文本到视频和文本到3D。",
+        "文本到视频模型旨在从文本输入生成视频表示",
+        "从文本输入。",
+        "输入文本可以是从单个句子",
+        "到完整的剧本。",
+        "输出是与输入文本相对应的视频。",
+        "类似地，文本到3D模型生成",
+        "与用户文本相对应的三维对象",
+        "描述。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 989610,
+            "end": 994909,
+            "text": "For example, this can be used in games or other 3D worlds."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 994909,
+            "end": 996499,
+            "text": "Text-to-task."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 996500,
+            "end": 1001120,
+            "text": "Text-to-task models are trained to perform a defined task"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1001120,
+            "end": 1004120,
+            "text": "or action based on text input."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1004120,
+            "end": 1006639,
+            "text": "This task can be a wide range of actions"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1006639,
+            "end": 1010898,
+            "text": "such as answering a question, performing a search,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1010899,
+            "end": 1015229,
+            "text": "making a prediction, or taking some sort of action."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1015230,
+            "end": 1018220,
+            "text": "For example, a text-to-task model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1018220,
+            "end": 1023559,
+            "text": "could be trained to navigate a web UI or make changes to a doc"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1023559,
+            "end": 1024998,
+            "text": "through the GUI."
+          }
+        }
+      ],
+      "source": [
+        "For example, this can be used in games or other 3D worlds.",
+        "Text-to-task.",
+        "Text-to-task models are trained to perform a defined task",
+        "or action based on text input.",
+        "This task can be a wide range of actions",
+        "such as answering a question, performing a search,",
+        "making a prediction, or taking some sort of action.",
+        "For example, a text-to-task model",
+        "could be trained to navigate a web UI or make changes to a doc",
+        "through the GUI."
+      ],
+      "result": [
+        "例如，这可以用于游戏或其他3D世界。",
+        "文本到任务。",
+        "文本到任务模型经过训练以执行明确定义的任务",
+        "或基于文本输入的操作。",
+        "这个任务可以是广泛的操作范围",
+        "例如回答问题、执行搜索、",
+        "进行预测或采取某种行动。",
+        "例如，一个文本到任务模型",
+        "可以被训练来导航Web UI或通过GUI对文档进行更改。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1025000,
+            "end": 1028690,
+            "text": "A foundation model is a large AI model pre-trained"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1028690,
+            "end": 1033338,
+            "text": "on a vast quantity of data designed to be adapted or fine"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1033338,
+            "end": 1037269,
+            "text": "tuned to a wide range of downstream tasks,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1037269,
+            "end": 1042309,
+            "text": "such as sentiment analysis, image captioning, and object"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1042309,
+            "end": 1043659,
+            "text": "recognition."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1043660,
+            "end": 1046240,
+            "text": "Foundation models have the potential"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1046240,
+            "end": 1049329,
+            "text": "to revolutionize many industries, including"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1049329,
+            "end": 1052659,
+            "text": "health care, finance, and customer service."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1052660,
+            "end": 1056410,
+            "text": "They can be used to detect fraud and provide"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1056410,
+            "end": 1058979,
+            "text": "personalized customer support."
+          }
+        }
+      ],
+      "source": [
+        "A foundation model is a large AI model pre-trained",
+        "on a vast quantity of data designed to be adapted or fine",
+        "tuned to a wide range of downstream tasks,",
+        "such as sentiment analysis, image captioning, and object",
+        "recognition.",
+        "Foundation models have the potential",
+        "to revolutionize many industries, including",
+        "health care, finance, and customer service.",
+        "They can be used to detect fraud and provide",
+        "personalized customer support."
+      ],
+      "result": [
+        "基础模型是一个大型AI模型预先训练",
+        "在大量数据上设计以适应或精细",
+        "调整到各种下游任务，",
+        "如情感分析、图像标注和对象",
+        "识别。",
+        "基础模型具有潜力",
+        "彻底改变许多行业，包括",
+        "医疗保健、金融和客户服务。",
+        "它们可以用来检测欺诈并提供",
+        "个性化客户支持。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1058980,
+            "end": 1061890,
+            "text": "Vertex AI offers a model garden that"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1061890,
+            "end": 1063930,
+            "text": "includes foundation models."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1063930,
+            "end": 1065880,
+            "text": "The language foundation models include"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1065880,
+            "end": 1068730,
+            "text": "PaLM API for chat and text."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1068730,
+            "end": 1072789,
+            "text": "The vision foundation models includes stable diffusion,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1072789,
+            "end": 1075898,
+            "text": "which has been shown to be effective at generating"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1075900,
+            "end": 1080329,
+            "text": "high quality images from text descriptions."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1080329,
+            "end": 1081829,
+            "text": "Let's say you have a use case where"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1081829,
+            "end": 1085248,
+            "text": "you need to gather sentiments about how your customers are"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1085250,
+            "end": 1087890,
+            "text": "feeling about your product or service."
+          }
+        }
+      ],
+      "source": [
+        "Vertex AI offers a model garden that",
+        "includes foundation models.",
+        "The language foundation models include",
+        "PaLM API for chat and text.",
+        "The vision foundation models includes stable diffusion,",
+        "which has been shown to be effective at generating",
+        "high quality images from text descriptions.",
+        "Let's say you have a use case where",
+        "you need to gather sentiments about how your customers are",
+        "feeling about your product or service."
+      ],
+      "result": [
+        "Vertex AI 提供了一个模型花园，",
+        "其中包括基础模型。",
+        "语言基础模型包括",
+        "PaLM API 用于聊天和文本。",
+        "视觉基础模型包括稳定扩散，",
+        "已被证明在根据文本描述生成",
+        "高质量图像方面非常有效。",
+        "假设您有一个用例，",
+        "您需要收集关于客户对您的产品或服务的",
+        "感受的情感。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1087890,
+            "end": 1092720,
+            "text": "You can use the classification task sentiment analysis task"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1092720,
+            "end": 1095299,
+            "text": "model for just that purpose."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1095299,
+            "end": 1099709,
+            "text": "And what if you needed to perform occupancy analytics?"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1099710,
+            "end": 1103369,
+            "text": "There is a task model for your use case."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1103369,
+            "end": 1107219,
+            "text": "Shown here are gen AI applications."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1107220,
+            "end": 1110659,
+            "text": "Let's look at an example of code generation"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1110660,
+            "end": 1114410,
+            "text": "shown in the second block under code at the top."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1114410,
+            "end": 1119359,
+            "text": "In this example, I've input a code file conversion problem,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1119359,
+            "end": 1121849,
+            "text": "converting from Python to JSON."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1121849,
+            "end": 1122719,
+            "text": "I use Bard."
+          }
+        }
+      ],
+      "source": [
+        "You can use the classification task sentiment analysis task",
+        "model for just that purpose.",
+        "And what if you needed to perform occupancy analytics?",
+        "There is a task model for your use case.",
+        "Shown here are gen AI applications.",
+        "Let's look at an example of code generation",
+        "shown in the second block under code at the top.",
+        "In this example, I've input a code file conversion problem,",
+        "converting from Python to JSON.",
+        "I use Bard."
+      ],
+      "result": [
+        "您可以使用分类任务情感分析任务",
+        "就是为了这个目的的模型。",
+        "那么，如果您需要进行占用分析呢？",
+        "有一个任务模型适用于您的用例。",
+        "这里展示的是通用人工智能应用。",
+        "让我们看一个代码生成的例子",
+        "在顶部代码下的第二个块中显示。",
+        "在这个例子中，我输入了一个代码文件转换问题，",
+        "从Python转换为JSON。",
+        "我使用Bard。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1122720,
+            "end": 1126479,
+            "text": "And I insert into the prompt box the following."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1126480,
+            "end": 1130519,
+            "text": "I have a Pandas DataFrame with two columns, one with the file"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1130519,
+            "end": 1134298,
+            "text": "name and one with the hour in which it is generated."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1134299,
+            "end": 1137419,
+            "text": "I'm trying to convert this into a JSON file"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1137420,
+            "end": 1140569,
+            "text": "in the format shown onscreen."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1140569,
+            "end": 1146719,
+            "text": "Bard returns the steps I need to do this and the code snippet."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1146720,
+            "end": 1150109,
+            "text": "And here my output is in a JSON format."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1150109,
+            "end": 1151219,
+            "text": "It gets better."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1151220,
+            "end": 1156380,
+            "text": "I happen to be using Google's free, browser-based Jupyter"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1156380,
+            "end": 1158539,
+            "text": "Notebook, known as Colab."
+          }
+        }
+      ],
+      "source": [
+        "And I insert into the prompt box the following.",
+        "I have a Pandas DataFrame with two columns, one with the file",
+        "name and one with the hour in which it is generated.",
+        "I'm trying to convert this into a JSON file",
+        "in the format shown onscreen.",
+        "Bard returns the steps I need to do this and the code snippet.",
+        "And here my output is in a JSON format.",
+        "It gets better.",
+        "I happen to be using Google's free, browser-based Jupyter",
+        "Notebook, known as Colab."
+      ],
+      "result": [
+        "我在提示框中插入以下内容。",
+        "我有一个Pandas DataFrame，有两列，一列是文件名，",
+        "另一列是生成它的小时。",
+        "我试图将其转换为JSON文件",
+        "以屏幕上显示的格式。",
+        "巴德返回我需要执行此操作的步骤和代码片段。",
+        "这里我的输出是JSON格式。",
+        "它变得更好了。",
+        "我碰巧在使用谷歌的免费、基于浏览器的Jupyter",
+        "笔记本，称为Colab。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1158539,
+            "end": 1163348,
+            "text": "And I simply export the Python code to Google's Colab."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1163349,
+            "end": 1166228,
+            "text": "To summarize, Bart code generation"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1166230,
+            "end": 1169470,
+            "text": "can help you debug your lines of source code,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1169470,
+            "end": 1171869,
+            "text": "explain your code to you line by line,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1171869,
+            "end": 1174958,
+            "text": "craft SQL queries for your database,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1174960,
+            "end": 1177940,
+            "text": "translate code from one language to another,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1177940,
+            "end": 1182970,
+            "text": "and generate documentation and tutorials for source code."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1182970,
+            "end": 1187930,
+            "text": "Generative AI Studio lets you quickly explore and customize"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1187930,
+            "end": 1191759,
+            "text": "gen AI models that you can leverage in your applications"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1191759,
+            "end": 1193079,
+            "text": "on Google Cloud."
+          }
+        }
+      ],
+      "source": [
+        "And I simply export the Python code to Google's Colab.",
+        "To summarize, Bart code generation",
+        "can help you debug your lines of source code,",
+        "explain your code to you line by line,",
+        "craft SQL queries for your database,",
+        "translate code from one language to another,",
+        "and generate documentation and tutorials for source code.",
+        "Generative AI Studio lets you quickly explore and customize",
+        "gen AI models that you can leverage in your applications",
+        "on Google Cloud."
+      ],
+      "result": [
+        "我只需将Python代码导出到谷歌的Colab。",
+        "简而言之，Bart代码生成",
+        "可以帮助您调试源代码的行，",
+        "逐行向您解释代码，",
+        "为您的数据库编写SQL查询，",
+        "将代码从一种语言翻译成另一种语言，",
+        "并为源代码生成文档和教程。",
+        "生成AI工作室让您快速浏览和自定义",
+        "您可以在谷歌云中应用的生成AI模型",
+        "。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1193079,
+            "end": 1197519,
+            "text": "Generative AI Studio helps developers create and deploy"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1197519,
+            "end": 1202679,
+            "text": "Gen AI models by providing a variety of tools and resources"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1202680,
+            "end": 1205740,
+            "text": "that make it easy to get started."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1205740,
+            "end": 1209409,
+            "text": "For example, there's a library of pre-trained models."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1209410,
+            "end": 1212229,
+            "text": "There is a tool for fine tuning models."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1212230,
+            "end": 1215489,
+            "text": "There is a tool for deploying models to production."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1215490,
+            "end": 1218339,
+            "text": "And there is a community forum for developers"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1218339,
+            "end": 1221698,
+            "text": "to share ideas and collaborate."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1221700,
+            "end": 1224459,
+            "text": "Generative AI App Builder lets you"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1224460,
+            "end": 1228450,
+            "text": "create gen AI apps without having to write any code."
+          }
+        }
+      ],
+      "source": [
+        "Generative AI Studio helps developers create and deploy",
+        "Gen AI models by providing a variety of tools and resources",
+        "that make it easy to get started.",
+        "For example, there's a library of pre-trained models.",
+        "There is a tool for fine tuning models.",
+        "There is a tool for deploying models to production.",
+        "And there is a community forum for developers",
+        "to share ideas and collaborate.",
+        "Generative AI App Builder lets you",
+        "create gen AI apps without having to write any code."
+      ],
+      "result": [
+        "生成性AI工作室帮助开发者创建和部署",
+        "Gen AI模型，提供各种工具和资源",
+        "让您轻松入门。",
+        "例如，有一个预先训练模型的库。",
+        "有一个用于微调模型的工具。",
+        "有一个将模型部署到生产环境的工具。",
+        "还有一个供开发者分享想法和协作的社区论坛。",
+        "生成性AI应用程序构建器让您",
+        "无需编写任何代码即可创建生成性AI应用。"
+      ],
+      "status": "mismatched",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1228450,
+            "end": 1231990,
+            "text": "Gen AI App Builder has a drag and drop interface"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1231990,
+            "end": 1235119,
+            "text": "that makes it easy to design and build apps."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1235119,
+            "end": 1236578,
+            "text": "It has a visual editor that makes"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1236579,
+            "end": 1239309,
+            "text": "it easy to create and edit app content."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1239309,
+            "end": 1240839,
+            "text": "It has a built-in search engine that"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1240839,
+            "end": 1243928,
+            "text": "allows users to search for information within the app."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1243930,
+            "end": 1246359,
+            "text": "And it has a conversational AI Engine"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1246359,
+            "end": 1249599,
+            "text": "that helps users to interact with the app using"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1249599,
+            "end": 1251399,
+            "text": "natural language."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1251400,
+            "end": 1255449,
+            "text": "You can create your own digital assistants, custom search"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1255450,
+            "end": 1259769,
+            "text": "engines, knowledge bases, training applications,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1259769,
+            "end": 1261949,
+            "text": "and much more."
+          }
+        }
+      ],
+      "source": [
+        "Gen AI App Builder has a drag and drop interface",
+        "that makes it easy to design and build apps.",
+        "It has a visual editor that makes",
+        "it easy to create and edit app content.",
+        "It has a built-in search engine that",
+        "allows users to search for information within the app.",
+        "And it has a conversational AI Engine",
+        "that helps users to interact with the app using",
+        "natural language.",
+        "You can create your own digital assistants, custom search",
+        "engines, knowledge bases, training applications,",
+        "and much more."
+      ],
+      "result": [
+        "Gen AI应用程序构建器具有拖放界面",
+        "使设计和构建应用程序变得简单。",
+        "它有一个可视化编辑器，使得",
+        "轻松创建和编辑应用程序内容。",
+        "它内置了一个搜索引擎，",
+        "允许用户在应用程序内搜索信息。",
+        "并且它有一个会话式AI引擎",
+        "帮助用户使用",
+        "自然语言与应用程序互动。",
+        "您可以创建自己的数字助手、自定义搜索",
+        "引擎、知识库、培训应用程序，",
+        "以及更多。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1261950,
+            "end": 1265400,
+            "text": "PaLM API lets you test and experiment"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1265400,
+            "end": 1269179,
+            "text": "with Google's large language models and gen AI tools."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1269180,
+            "end": 1271700,
+            "text": "To make prototyping quick and more accessible,"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1271700,
+            "end": 1275329,
+            "text": "developers can integrate PaLM API with Maker suite"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1275329,
+            "end": 1280519,
+            "text": "and use it to access the API using a graphical user"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1280519,
+            "end": 1281449,
+            "text": "interface."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1281450,
+            "end": 1285589,
+            "text": "The suite includes a number of different tools such as a model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1285589,
+            "end": 1289728,
+            "text": "training tool, a model deployment tool, and a model"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1289730,
+            "end": 1291649,
+            "text": "monitoring tool."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1291650,
+            "end": 1295269,
+            "text": "The model training tool helps developers train ML models"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1295269,
+            "end": 1298699,
+            "text": "on their data using different algorithms."
+          }
+        }
+      ],
+      "source": [
+        "PaLM API lets you test and experiment",
+        "with Google's large language models and gen AI tools.",
+        "To make prototyping quick and more accessible,",
+        "developers can integrate PaLM API with Maker suite",
+        "and use it to access the API using a graphical user",
+        "interface.",
+        "The suite includes a number of different tools such as a model",
+        "training tool, a model deployment tool, and a model",
+        "monitoring tool.",
+        "The model training tool helps developers train ML models",
+        "on their data using different algorithms."
+      ],
+      "result": [
+        "PaLM API允许您测试和实验",
+        "使用谷歌的大型语言模型和通用AI工具。",
+        "为了使原型设计更快速、更易于访问，",
+        "开发者可以将PaLM API与Maker套件集成",
+        "并使用它通过图形用户",
+        "界面访问API。",
+        "该套件包括许多不同的工具，如模型",
+        "训练工具、模型部署工具和模型",
+        "监控工具。",
+        "模型训练工具帮助开发者使用不同的算法",
+        "在他们的数据上训练机器学习模型。"
+      ],
+      "status": "success",
+      "errors": []
+    },
+    {
+      "items": [
+        {
+          "type": "cue",
+          "data": {
+            "start": 1298700,
+            "end": 1302650,
+            "text": "The model deployment tool helps developers deploy ML models"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1302650,
+            "end": 1308390,
+            "text": "to production with a number of different deployment options."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1308390,
+            "end": 1311749,
+            "text": "The model monitoring tool helps developers"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1311750,
+            "end": 1314509,
+            "text": "monitor the performance of their ML models"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1314509,
+            "end": 1318678,
+            "text": "in production using a dashboard and a number"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1318680,
+            "end": 1321809,
+            "text": "of different metrics."
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1321809,
+            "end": 1324499,
+            "text": "Thank you for watching our course, Introduction"
+          }
+        },
+        {
+          "type": "cue",
+          "data": {
+            "start": 1324500,
+            "end": 1327279,
+            "text": "to Generative AI."
+          }
+        }
+      ],
+      "source": [
+        "The model deployment tool helps developers deploy ML models",
+        "to production with a number of different deployment options.",
+        "The model monitoring tool helps developers",
+        "monitor the performance of their ML models",
+        "in production using a dashboard and a number",
+        "of different metrics.",
+        "Thank you for watching our course, Introduction",
+        "to Generative AI."
+      ],
+      "result": [],
+      "status": "failed",
+      "errors": [
+        "Request failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\nTue May 16 2023 21:27:40 GMT-0500 (Central Daylight Time)"
+      ]
+    }
+  ],
+  "sourcePath": "input/Introduction to Generative AI.srt",
+  "ouputBasePath": "input/Introduction to Generative AI",
+  "totalCost": 0.48162000000000005,
+  "translationPath": "input/Introduction to Generative AI/translation.json"
+}

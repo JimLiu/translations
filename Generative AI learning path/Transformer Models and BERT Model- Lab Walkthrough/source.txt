@@ -1,0 +1,184 @@
+Hi. I'm Sanjana Reddy, a machine learning
+0 engineer at Google's Advanced Solutions Lab.
+Welcome to the lab walkthrough for Transformer models and BERT model.
+In this lab walkthrough, we'll be going
+through classification using a Pre-Trained Bert model.
+You'll find the setup instructions in our GitHub repository.
+Let's get started.
+In order to work on this notebook, you'll need to log into Google Cloud,
+go into Vertex AI and click on Workbench.
+Make sure that you have a notebook created once a notebook instance
+has been created.
+Click on Open Jupyter Lab.
+Once you've followed the instructions in our GitHub repository,
+navigate to classify text with Bert
+in this notebook, we're going to learn how to load
+a Pre-Trained Bert model from TensorFlow Hub
+and build our own classification using the Pre-Trained Bert model,
+we learn how to train a Bert model by fine tuning it
+before you get started.
+Note that this notebook requires a GPU
+because the training does take quite a bit of time.
+When you open this notebook,
+there is a setup instruction in order to set up a bert kernel
+to install all the required libraries for this notebook.
+For this notebook, we're going to be using
+TensorFlow and TensorFlow Hub TensorFlow Text,
+which is required to pre process the input for the BERT model.
+You can see that I'm checking if a GPU is attached
+and I see that I have one GPU attached to this notebook.
+In this notebook we're going to train a sentiment
+analysis model to classify movie reviews as either being positive
+or negative based on the text of the review,
+we're going to be working with the IMDB data set
+that you can download from this URL.
+Once we have downloaded
+the data set, we can examine the data to see what's in it.
+We see that we have 25,000 files that belong to two classes, positive
+and negative, and we're going to be using 20,000 files
+for training and the remaining 5000 for testing.
+A sample of this dataset shows you the movie review
+over here and an associated label.
+So for the one over here, we see that the label that is associated is negative
+and the one below here it's positive.
+Once we've examined our dataset and we're happy with that, we're
+going to load a Pre-Trained BERT model from TensorFlow Hub.
+TensorFlow Hub offers multiple
+different variations of BERT models in all different sizes.
+We're going to use a small BERT for today's notebook.
+So this bert model has four different layers.
+It has 512 hidden units, and it has eight attention heads.
+For every BERT model that we load from TensorFlow Hub,
+it is associated with a corresponding pre-processing model.
+You can find the corresponding pre-processing model on TensorFlow Hub
+as well.
+We're going to examine the pre processing model.
+So we have we're going to load the pre processing model
+we see in the previous step and we pass a sample text over here.
+So we just passed.
+This is an amazing movie and we're going to examine the output.
+The pre processing model gives us multiple outputs.
+The first is the input word ID.
+The input word ID is the idea of the words
+in the tokenized sentence.
+The pre-processing model also provides
+us the masking for each word.
+Every sentence is converted into a fixed length input,
+and it masks words that are not valid.
+So once we have pre processed our input text, we can use the loaded
+bert model from TensorFlow Hub
+in this particular cell block.
+It doesn't really make any sense because we've not trained the model.
+This is just a random list of numbers at this point.
+But once you pass the pre process text into this bert model,
+you get certain embeddings.
+So in order to define our classification model,
+we start with an input layer.
+The input layer takes the raw text as input
+passes it on to the processing layer for pre-processing
+that converted into token IDs, bert IDs and mask IDs.
+The pre processed words are then passed to the Pre-Trained model.
+There is an argument here called trainable.
+Trainable here determines if you want to fine tune the Pre-Trained
+model using the new data that you're training with or not.
+In our example, we are setting trainable to true,
+which means that we're going to update the initial weights
+of the Pre-Trained model.
+Your decision to
+set this to true or false depends on two things
+whether you want to update the weights
+and second, on the size of your dataset,
+if you have a relatively small data set, it is recommended to set this to false
+so that you're not introducing noise into the pre-trained weights.
+But if you have a large enough dataset, you can set this to true.
+Once we have our pre-trained model, we pass it through a dense layer
+to get probabilities for each of our classes.
+This is what the output from the model is going to look like.
+The output is going to be a probability of whether this particular sentence is
+true, is positive or negative.
+Since we're working with a binary classification problem,
+we're going to use BinaryCrossentropy as our loss function
+and the metric to optimize for is going to be BinaryAccuracy
+for initializing
+our training by defining the optimizer.
+In our case, we're using Adam, which is a popular choice for neural network
+models.
+Once we initialize the training,
+we can start training using model dot fit.
+We can pass the train dataset and the validation dataset
+and the number of epochs that we want to train for.
+Once the model has trained, let's evaluate the performance of the model.
+So in our case we see that the model achieved an accuracy of 85%,
+which is pretty decent considering we only trained it for five epochs.
+You can potentially thwart the accuracy
+and loss over time in order to visualize the model's performance.
+0 We see that the training loss is going down
+and we could work on our validation loss a little bit.
+But for the sake of demonstration, we've only trained it
+for five epochs.
+Once you're satisfied with the model that you've trained, you can save the model
+using model dot safe model dot save export.
+So TensorFlow model to a local path.
+So the export path in this line is going to be a part
+in your notebook instance.
+Once you've saved your model, you can load it to get predictions.
+So in this example we have this is such an amazing movie.
+This movie was great.
+The movie was okay-ish, the movie was terrible.
+And we get predictions
+for each of these sentences based on the model that we have trained.
+If you would
+like to take this further and deploy your model on Vertex AI to get online
+predictions, you could take the locally saved model and export it to Vertex AI.
+in order to do this, you need to check the signature
+of the model to see how you can pass predictions to the model.
+The signature of the model shows you what is the first layer
+that is taking input.
+So once we have the locally saved model,
+we are going to push the model to Vertex’s Model Registry
+using these commands.
+In order to put the model in Vertex’s Model Registry,
+you need to ensure that you have a Google Cloud storage bucket.
+And these lines over here, let you create a bucket.
+If it doesn't already exist,
+we're going to copy the
+locally saved model using GS Utils CP
+which takes a locally saved model from the export pack
+and puts it in the Google Cloud storage bucket.
+Once the model is in the Google Cloud Storage bucket,
+we're going to upload it to Vertex AI's model registry.
+We're using the Python SDK in this case.
+So we have a platform dot model dot upload, which takes the model
+from Google Cloud Storage Bucket and puts it in the model registry.
+Once the model has been uploaded,
+we're ready to deploy the model on Vertex
+and get online predictions.
+In order to do this, we can use the Python SDK again
+so we can use uploaded model to deploy, which is a function that is going to do
+two things.
+One, it's going to create an end point, and two,
+it's going to upload the model to this particular endpoint.
+So you can see here that it's creating the endpoint,
+providing you the endpoint location.
+And then once the endpoint
+has been created, the model is deployed to this endpoint.
+This step is going to take around 5 to 10 minutes.
+When you run through your notebook.
+So just don't worry if it takes too long,
+once the model has been deployed to the endpoint, you're ready
+to get predictions from this endpoint
+so you can create an instance object.
+So using the signature of the model, we know that
+the name of the first input layer is text.
+So we're going to pass our review text to this particular key.
+We create this instances
+object that is going to be passed to the endpoint dot predictive function.
+And the endpoint our predict function is going to take this instance
+and it's going to give us predictions.
+So we can see for our first instance, I love the movie and highly recommend it.
+We have a prediction of 0.99.
+For it was an okay movie in my opinion.
+We have 84% and for I hated the movie,
+we have 2%, which means it's a negative sentiment.
+So this is how you can create a classification model from a pre-trained
+BERT model and then deploy it on Vertex to get online predictions.

@@ -1,0 +1,4279 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 3,
+            "milliseconds": 132
+          },
+          "text": "Hi. I'm Sanjana Reddy, a machine learning"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 3,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 100
+          },
+          "text": "0 engineer at Google's Advanced Solutions Lab."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 499
+          },
+          "text": "Welcome to the lab walkthrough for Transformer models and BERT model."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 699
+          },
+          "text": "In this lab walkthrough, we'll be going"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 131
+          },
+          "text": "through classification using a Pre-Trained Bert model."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 766
+          },
+          "text": "You'll find the setup instructions in our GitHub repository."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 466
+          },
+          "text": "Let's get started."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 65
+          },
+          "text": "In order to work on this notebook, you'll need to log into Google Cloud,"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 699
+          },
+          "text": "go into Vertex AI and click on Workbench."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 199
+          },
+          "text": "Make sure that you have a notebook created once a notebook instance"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 265
+          },
+          "text": "has been created."
+        }
+      ],
+      "source": [
+        "Hi. I'm Sanjana Reddy, a machine learning",
+        "0 engineer at Google's Advanced Solutions Lab.",
+        "Welcome to the lab walkthrough for Transformer models and BERT model.",
+        "In this lab walkthrough, we'll be going",
+        "through classification using a Pre-Trained Bert model.",
+        "You'll find the setup instructions in our GitHub repository.",
+        "Let's get started.",
+        "In order to work on this notebook, you'll need to log into Google Cloud,",
+        "go into Vertex AI and click on Workbench.",
+        "Make sure that you have a notebook created once a notebook instance",
+        "has been created."
+      ],
+      "result": [
+        "嗨，我是Sanjana Reddy，一名在谷歌高级解决方案实验室的机器学习工程师。",
+        "",
+        "欢迎来到Transformer模型和BERT模型的实验室演示。",
+        "在这个实验室演示中，我们将通过使用预训练的Bert模型进行分类。",
+        "",
+        "您可以在我们的GitHub仓库中找到设置说明。",
+        "让我们开始吧。",
+        "为了在这个Notebook上工作，您需要登录谷歌云，进入Vertex AI，然后点击Workbench。",
+        "",
+        "确保在Notebook实例创建后，您已经创建了一个Notebook。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "嗨，我是Sanjana Reddy，一名在谷歌高级解决方案实验室的机器学习工程师。欢迎来到Transformer模型和BERT模型的实验室演示。在这个实验室演示中，我们将通过使用预训练的Bert模型进行分类。您可以在我们的GitHub仓库中找到设置说明。让我们开始吧。为了在这个Notebook上工作，您需要登录谷歌云，进入Vertex AI，然后点击Workbench。确保在Notebook实例创建后，您已经创建了一个Notebook。",
+        "sentences": [
+          {
+            "translated": "嗨，我是Sanjana Reddy，一名在谷歌高级解决方案实验室的机器学习工程师。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "欢迎来到Transformer模型和BERT模型的实验室演示。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "在这个实验室演示中，我们将通过使用预训练的Bert模型进行分类。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "您可以在我们的GitHub仓库中找到设置说明。",
+            "indexes": [
+              5
+            ]
+          },
+          {
+            "translated": "让我们开始吧。",
+            "indexes": [
+              6
+            ]
+          },
+          {
+            "translated": "为了在这个Notebook上工作，您需要登录谷歌云，进入Vertex AI，然后点击Workbench。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "确保在Notebook实例创建后，您已经创建了一个Notebook。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 664
+          },
+          "text": "Click on Open Jupyter Lab."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 232
+          },
+          "text": "Once you've followed the instructions in our GitHub repository,"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 864
+          },
+          "text": "navigate to classify text with Bert"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 764
+          },
+          "text": "in this notebook, we're going to learn how to load"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 599
+          },
+          "text": "a Pre-Trained Bert model from TensorFlow Hub"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 832
+          },
+          "text": "and build our own classification using the Pre-Trained Bert model,"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 32
+          },
+          "text": "we learn how to train a Bert model by fine tuning it"
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 465
+          },
+          "text": "before you get started."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 9,
+            "milliseconds": 364
+          },
+          "text": "Note that this notebook requires a GPU"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 9,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 932
+          },
+          "text": "because the training does take quite a bit of time."
+        }
+      ],
+      "source": [
+        "Click on Open Jupyter Lab.",
+        "Once you've followed the instructions in our GitHub repository,",
+        "navigate to classify text with Bert",
+        "in this notebook, we're going to learn how to load",
+        "a Pre-Trained Bert model from TensorFlow Hub",
+        "and build our own classification using the Pre-Trained Bert model,",
+        "we learn how to train a Bert model by fine tuning it",
+        "before you get started.",
+        "Note that this notebook requires a GPU",
+        "because the training does take quite a bit of time."
+      ],
+      "result": [
+        "点击打开Jupyter Lab。",
+        "按照我们GitHub仓库中的说明操作后，导航到使用Bert对文本进行分类。",
+        "",
+        "在这个Notebook中，我们将学习如何从TensorFlow Hub加载一个预训练的Bert模型，并使用预训练的Bert模型构建我们自己的分类。",
+        "",
+        "",
+        "我们将学习如何通过微调来训练Bert模型。",
+        "在开始之前，请注意，这个Notebook需要一个GPU，因为训练确实需要相当长的时间。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "点击打开Jupyter Lab。按照我们GitHub仓库中的说明操作后，导航到使用Bert对文本进行分类。在这个Notebook中，我们将学习如何从TensorFlow Hub加载一个预训练的Bert模型，并使用预训练的Bert模型构建我们自己的分类。我们将学习如何通过微调来训练Bert模型。在开始之前，请注意，这个Notebook需要一个CPU，因为训练确实需要相当长的时间。",
+        "sentences": [
+          {
+            "translated": "点击打开Jupyter Lab。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "按照我们GitHub仓库中的说明操作后，导航到使用Bert对文本进行分类。",
+            "indexes": [
+              1,
+              2
+            ]
+          },
+          {
+            "translated": "在这个Notebook中，我们将学习如何从TensorFlow Hub加载一个预训练的Bert模型，并使用预训练的Bert模型构建我们自己的分类。",
+            "indexes": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "我们将学习如何通过微调来训练Bert模型。",
+            "indexes": [
+              6
+            ]
+          },
+          {
+            "translated": "在开始之前，请注意，这个Notebook需要一个CPU，因为训练确实需要相当长的时间。",
+            "indexes": [
+              7,
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 832
+          },
+          "text": "When you open this notebook,"
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 299
+          },
+          "text": "there is a setup instruction in order to set up a bert kernel"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 432
+          },
+          "text": "to install all the required libraries for this notebook."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 864
+          },
+          "text": "For this notebook, we're going to be using"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 898
+          },
+          "text": "TensorFlow and TensorFlow Hub TensorFlow Text,"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 66
+          },
+          "text": "which is required to pre process the input for the BERT model."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 465
+          },
+          "text": "You can see that I'm checking if a GPU is attached"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 42,
+            "milliseconds": 932
+          },
+          "text": "and I see that I have one GPU attached to this notebook."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 531
+          },
+          "text": "In this notebook we're going to train a sentiment"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 233
+          },
+          "text": "analysis model to classify movie reviews as either being positive"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 265
+          },
+          "text": "or negative based on the text of the review,"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 233
+          },
+          "text": "we're going to be working with the IMDB data set"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 233
+          },
+          "text": "that you can download from this URL."
+        }
+      ],
+      "source": [
+        "When you open this notebook,",
+        "there is a setup instruction in order to set up a bert kernel",
+        "to install all the required libraries for this notebook.",
+        "For this notebook, we're going to be using",
+        "TensorFlow and TensorFlow Hub TensorFlow Text,",
+        "which is required to pre process the input for the BERT model.",
+        "You can see that I'm checking if a GPU is attached",
+        "and I see that I have one GPU attached to this notebook.",
+        "In this notebook we're going to train a sentiment",
+        "analysis model to classify movie reviews as either being positive",
+        "or negative based on the text of the review,",
+        "we're going to be working with the IMDB data set",
+        "that you can download from this URL."
+      ],
+      "result": [
+        "当你打开这个Notebook时，有一个设置说明，以便设置一个bert_kernel来安装这个Notebook所需的所有库。",
+        "",
+        "",
+        "对于这个Notebook，我们将使用TensorFlow和TensorFlow Hub TensorFlow Text，这是为BERT模型预处理输入所必需的。",
+        "",
+        "",
+        "你可以看到我在检查是否有GPU连接，我发现这个Notebook有一个GPU连接。",
+        "",
+        "在这个Notebook中，我们将训练一个情感分析模型，根据评论的文本将电影评论分类为正面或负面，我们将使用IMDB数据集，你可以从这个URL下载。",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 13 vs 14, Mon Jun 26 2023 01:29:03 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": {
+        "paragraph": "当你打开这个Notebook时，有一个设置说明，以便设置一个bert内核来安装这个Notebook所需的所有库。对于这个Notebook，我们将使用TensorFlow和TensorFlow Hub TensorFlow文本，这是为BERT模型预处理输入所必需的。你可以看到我在检查是否有GPU连接，我发现这个Notebook有一个GPU连接。在这个Notebook中，我们将训练一个情感分析模型，根据评论的文本将电影评论分类为正面或负面，我们将使用IMDB数据集，你可以从这个URL下载。",
+        "sentences": [
+          {
+            "translated": "当你打开这个Notebook时，有一个设置说明，以便设置一个bert内核来安装这个Notebook所需的所有库。",
+            "indexes": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "translated": "对于这个Notebook，我们将使用TensorFlow和TensorFlow Hub TensorFlow文本，这是为BERT模型预处理输入所必需的。",
+            "indexes": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "你可以看到我在检查是否有GPU连接，我发现这个Notebook有一个GPU连接。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "在这个Notebook中，我们将训练一个情感分析模型，根据评论的文本将电影评论分类为正面或负面，我们将使用IMDB数据集，你可以从这个URL下载。",
+            "indexes": [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 5,
+            "milliseconds": 332
+          },
+          "text": "Once we have downloaded"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 5,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 9,
+            "milliseconds": 498
+          },
+          "text": "the data set, we can examine the data to see what's in it."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 165
+          },
+          "text": "We see that we have 25,000 files that belong to two classes, positive"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 64
+          },
+          "text": "and negative, and we're going to be using 20,000 files"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 300
+          },
+          "text": "for training and the remaining 5000 for testing."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 433
+          },
+          "text": "A sample of this dataset shows you the movie review"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 532
+          },
+          "text": "over here and an associated label."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 532
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 399
+          },
+          "text": "So for the one over here, we see that the label that is associated is negative"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 433
+          },
+          "text": "and the one below here it's positive."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 199
+          },
+          "text": "Once we've examined our dataset and we're happy with that, we're"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 32
+          },
+          "text": "going to load a Pre-Trained BERT model from TensorFlow Hub."
+        }
+      ],
+      "source": [
+        "Once we have downloaded",
+        "the data set, we can examine the data to see what's in it.",
+        "We see that we have 25,000 files that belong to two classes, positive",
+        "and negative, and we're going to be using 20,000 files",
+        "for training and the remaining 5000 for testing.",
+        "A sample of this dataset shows you the movie review",
+        "over here and an associated label.",
+        "So for the one over here, we see that the label that is associated is negative",
+        "and the one below here it's positive.",
+        "Once we've examined our dataset and we're happy with that, we're",
+        "going to load a Pre-Trained BERT model from TensorFlow Hub."
+      ],
+      "result": [
+        "一旦我们下载了数据集，我们可以查看数据以了解其中的内容。",
+        "",
+        "我们看到我们有25,000个文件，分为正面和负面两个类别，我们将使用20,000个文件进行训练，剩下的5000个文件进行测试。",
+        "",
+        "",
+        "这个数据集的一个样本向您展示了电影评论和相关标签。",
+        "",
+        "所以对于这里的一个，我们看到关联的标签是负面的，而下面这个是正面的。",
+        "",
+        "一旦我们检查了数据集并对其感到满意，我们将从TensorFlow Hub加载一个预训练的BERT模型。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "一旦我们下载了数据集，我们可以查看数据以了解其中的内容。我们看到我们有25,000个文件，分为正面和负面两个类别，我们将使用20,000个文件进行训练，剩下的5000个文件进行测试。这个数据集的一个样本向您展示了电影评论和相关标签。所以对于这里的一个，我们看到关联的标签是负面的，而下面这个是正面的。一旦我们检查了数据集并对其感到满意，我们将从TensorFlow Hub加载一个预训练的BERT模型。",
+        "sentences": [
+          {
+            "translated": "一旦我们下载了数据集，我们可以查看数据以了解其中的内容。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "我们看到我们有25,000个文件，分为正面和负面两个类别，我们将使用20,000个文件进行训练，剩下的5000个文件进行测试。",
+            "indexes": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "这个数据集的一个样本向您展示了电影评论和相关标签。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "所以对于这里的一个，我们看到关联的标签是负面的，而下面这个是正面的。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "一旦我们检查了数据集并对其感到满意，我们将从TensorFlow Hub加载一个预训练的BERT模型。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 765
+          },
+          "text": "TensorFlow Hub offers multiple"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 57,
+            "milliseconds": 564
+          },
+          "text": "different variations of BERT models in all different sizes."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 499
+          },
+          "text": "We're going to use a small BERT for today's notebook."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 65
+          },
+          "text": "So this bert model has four different layers."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 664
+          },
+          "text": "It has 512 hidden units, and it has eight attention heads."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 64
+          },
+          "text": "For every BERT model that we load from TensorFlow Hub,"
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 633
+          },
+          "text": "it is associated with a corresponding pre-processing model."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 98
+          },
+          "text": "You can find the corresponding pre-processing model on TensorFlow Hub"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 398
+          },
+          "text": "as well."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 599
+          },
+          "text": "We're going to examine the pre processing model."
+        }
+      ],
+      "source": [
+        "TensorFlow Hub offers multiple",
+        "different variations of BERT models in all different sizes.",
+        "We're going to use a small BERT for today's notebook.",
+        "So this bert model has four different layers.",
+        "It has 512 hidden units, and it has eight attention heads.",
+        "For every BERT model that we load from TensorFlow Hub,",
+        "it is associated with a corresponding pre-processing model.",
+        "You can find the corresponding pre-processing model on TensorFlow Hub",
+        "as well.",
+        "We're going to examine the pre processing model."
+      ],
+      "result": [
+        "TensorFlow Hub提供了多种不同大小的BERT模型。",
+        "",
+        "在今天的Notebook中，我们将使用一个小型BERT。",
+        "这个Bert模型有四个不同的层。",
+        "它有512个隐藏单元，有8个注意力头。",
+        "对于我们从TensorFlow Hub加载的每一个BERT模型，它都有一个相应的预处理模型。",
+        "",
+        "您也可以在TensorFlow Hub上找到相应的预处理模型。",
+        "",
+        "我们将研究预处理模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "TensorFlow Hub提供了多种不同大小的BERT模型。在今天的Notebook中，我们将使用一个小型BERT。这个鸟模型有四个不同的层。它有512个隐藏单元，有8个注意力头。对于我们从TensorFlow Hub加载的每一个BERT模型，它都有一个相应的预处理模型。您也可以在TensorFlow Hub上找到相应的预处理模型。我们将研究预处理模型。",
+        "sentences": [
+          {
+            "translated": "TensorFlow Hub提供了多种不同大小的BERT模型。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "在今天的Notebook中，我们将使用一个小型BERT。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "这个鸟模型有四个不同的层。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "它有512个隐藏单元，有8个注意力头。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "对于我们从TensorFlow Hub加载的每一个BERT模型，它都有一个相应的预处理模型。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "您也可以在TensorFlow Hub上找到相应的预处理模型。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "我们将研究预处理模型。",
+            "indexes": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 465
+          },
+          "text": "So we have we're going to load the pre processing model"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 299
+          },
+          "text": "we see in the previous step and we pass a sample text over here."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 233
+          },
+          "text": "So we just passed."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 600
+          },
+          "text": "This is an amazing movie and we're going to examine the output."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 164
+          },
+          "text": "The pre processing model gives us multiple outputs."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 900
+          },
+          "text": "The first is the input word ID."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 233
+          },
+          "text": "The input word ID is the idea of the words"
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 332
+          },
+          "text": "in the tokenized sentence."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 699
+          },
+          "text": "The pre-processing model also provides"
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 32
+          },
+          "text": "us the masking for each word."
+        }
+      ],
+      "source": [
+        "So we have we're going to load the pre processing model",
+        "we see in the previous step and we pass a sample text over here.",
+        "So we just passed.",
+        "This is an amazing movie and we're going to examine the output.",
+        "The pre processing model gives us multiple outputs.",
+        "The first is the input word ID.",
+        "The input word ID is the idea of the words",
+        "in the tokenized sentence.",
+        "The pre-processing model also provides",
+        "us the masking for each word."
+      ],
+      "result": [
+        "我们将加载预处理模型，就像在前面的步骤中看到的那样，并在这里传递一个示例文本。",
+        "",
+        "我们刚刚通过了。",
+        "这是一部很棒的电影，我们将检查输出。",
+        "预处理模型给我们提供了多个输出。",
+        "第一个是输入单词ID。",
+        "输入单词ID是被分词的句子（Tokenized Sentence）中单词的ID。",
+        "",
+        "预处理模型还为每个单词提供了掩码（Masking）。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "我们将加载预处理模型，就像在前面的步骤中看到的那样，并在这里传递一个示例文本。我们刚刚通过了。这是一部很棒的电影，我们将检查输出。预处理模型给我们提供了多个输出。第一个是输入单词ID。输入单词ID是标记化句子中单词的想法。预处理模型还为每个单词提供了掩码。",
+        "sentences": [
+          {
+            "translated": "我们将加载预处理模型，就像在前面的步骤中看到的那样，并在这里传递一个示例文本。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "我们刚刚通过了。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "这是一部很棒的电影，我们将检查输出。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "预处理模型给我们提供了多个输出。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "第一个是输入单词ID。",
+            "indexes": [
+              5
+            ]
+          },
+          {
+            "translated": "输入单词ID是标记化句子中单词的想法。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "预处理模型还为每个单词提供了掩码。",
+            "indexes": [
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 865
+          },
+          "text": "Every sentence is converted into a fixed length input,"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 66
+          },
+          "text": "and it masks words that are not valid."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 865
+          },
+          "text": "So once we have pre processed our input text, we can use the loaded"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 532
+          },
+          "text": "bert model from TensorFlow Hub"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 398
+          },
+          "text": "in this particular cell block."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 899
+          },
+          "text": "It doesn't really make any sense because we've not trained the model."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 198
+          },
+          "text": "This is just a random list of numbers at this point."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 398
+          },
+          "text": "But once you pass the pre process text into this bert model,"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 332
+          },
+          "text": "you get certain embeddings."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 300
+          },
+          "text": "So in order to define our classification model,"
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 399
+          },
+          "text": "we start with an input layer."
+        }
+      ],
+      "source": [
+        "Every sentence is converted into a fixed length input,",
+        "and it masks words that are not valid.",
+        "So once we have pre processed our input text, we can use the loaded",
+        "bert model from TensorFlow Hub",
+        "in this particular cell block.",
+        "It doesn't really make any sense because we've not trained the model.",
+        "This is just a random list of numbers at this point.",
+        "But once you pass the pre process text into this bert model,",
+        "you get certain embeddings.",
+        "So in order to define our classification model,",
+        "we start with an input layer."
+      ],
+      "result": [
+        "每个句子都被转换成固定长度的输入，屏蔽掉无效的词语。",
+        "",
+        "所以一旦我们预处理了输入文本，就可以在这个特定的单元格中使用从TensorFlow Hub加载的Bert模型。",
+        "",
+        "这没有什么意义，因为我们还没有训练模型。",
+        "",
+        "这只是一个随机的数字列表。",
+        "但是一旦你把预处理的文本传递给这个Bert模型，你就会得到一些嵌入（Embedding）。",
+        "",
+        "所以为了定义我们的分类模型，我们从一个输入层开始。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "每个句子都被转换成固定长度的输入，屏蔽掉无效的词语。所以一旦我们预处理了输入文本，就可以在这个特定的单元格中使用从TensorFlow Hub加载的Bert模型。这没有什么意义，因为我们还没有训练模型。这只是一个随机的数字列表。但是一旦你把预处理的文本传递给这个Bert模型，你就会得到一些嵌入。所以为了定义我们的分类模型，我们从一个输入层开始。",
+        "sentences": [
+          {
+            "translated": "每个句子都被转换成固定长度的输入，屏蔽掉无效的词语。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "所以一旦我们预处理了输入文本，就可以在这个特定的单元格中使用从TensorFlow Hub加载的Bert模型。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "这没有什么意义，因为我们还没有训练模型。",
+            "indexes": [
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "这只是一个随机的数字列表。",
+            "indexes": [
+              6
+            ]
+          },
+          {
+            "translated": "但是一旦你把预处理的文本传递给这个Bert模型，你就会得到一些嵌入。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "所以为了定义我们的分类模型，我们从一个输入层开始。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 32
+          },
+          "text": "The input layer takes the raw text as input"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 966
+          },
+          "text": "passes it on to the processing layer for pre-processing"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 699
+          },
+          "text": "that converted into token IDs, bert IDs and mask IDs."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 165
+          },
+          "text": "The pre processed words are then passed to the Pre-Trained model."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 832
+          },
+          "text": "There is an argument here called trainable."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 8,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 265
+          },
+          "text": "Trainable here determines if you want to fine tune the Pre-Trained"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 266
+          },
+          "text": "model using the new data that you're training with or not."
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 19,
+            "milliseconds": 865
+          },
+          "text": "In our example, we are setting trainable to true,"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 20,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 699
+          },
+          "text": "which means that we're going to update the initial weights"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 932
+          },
+          "text": "of the Pre-Trained model."
+        }
+      ],
+      "source": [
+        "The input layer takes the raw text as input",
+        "passes it on to the processing layer for pre-processing",
+        "that converted into token IDs, bert IDs and mask IDs.",
+        "The pre processed words are then passed to the Pre-Trained model.",
+        "There is an argument here called trainable.",
+        "Trainable here determines if you want to fine tune the Pre-Trained",
+        "model using the new data that you're training with or not.",
+        "In our example, we are setting trainable to true,",
+        "which means that we're going to update the initial weights",
+        "of the Pre-Trained model."
+      ],
+      "result": [
+        "输入层接收原始文本作为输入，将其传递给处理层进行预处理，将其转换为Token ID、Bert ID 和 Mask ID。",
+        "",
+        "",
+        "预处理后的单词然后传递给预训练模型。",
+        "这里有一个名为trainable（可训练）的参数。",
+        "可训练在这里决定了您是否希望使用您正在训练的新数据对预训练模型进行微调。",
+        "",
+        "在我们的例子中，我们将trainable设置为True，这意味着我们将更新预训练模型的初始权重。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "输入层接收原始文本作为输入，将其传递给处理层进行预处理，将其转换为令牌ID、鸟ID和掩码ID。预处理后的单词然后传递给预训练模型。这里有一个名为可训练的参数。可训练在这里决定了您是否希望使用您正在训练的新数据对预训练模型进行微调。在我们的例子中，我们将可训练设置为真，这意味着我们将更新预训练模型的初始权重。",
+        "sentences": [
+          {
+            "translated": "输入层接收原始文本作为输入，将其传递给处理层进行预处理，将其转换为令牌ID、鸟ID和掩码ID。",
+            "indexes": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "translated": "预处理后的单词然后传递给预训练模型。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "这里有一个名为可训练的参数。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "可训练在这里决定了您是否希望使用您正在训练的新数据对预训练模型进行微调。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "在我们的例子中，我们将可训练设置为真，这意味着我们将更新预训练模型的初始权重。",
+            "indexes": [
+              7,
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 26,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 665
+          },
+          "text": "Your decision to"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 665
+          },
+          "text": "set this to true or false depends on two things"
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 766
+          },
+          "text": "whether you want to update the weights"
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 36,
+            "milliseconds": 599
+          },
+          "text": "and second, on the size of your dataset,"
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 365
+          },
+          "text": "if you have a relatively small data set, it is recommended to set this to false"
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 566
+          },
+          "text": "so that you're not introducing noise into the pre-trained weights."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 665
+          },
+          "text": "But if you have a large enough dataset, you can set this to true."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 52,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 298
+          },
+          "text": "Once we have our pre-trained model, we pass it through a dense layer"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 432
+          },
+          "text": "to get probabilities for each of our classes."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 5,
+            "milliseconds": 32
+          },
+          "text": "This is what the output from the model is going to look like."
+        }
+      ],
+      "source": [
+        "Your decision to",
+        "set this to true or false depends on two things",
+        "whether you want to update the weights",
+        "and second, on the size of your dataset,",
+        "if you have a relatively small data set, it is recommended to set this to false",
+        "so that you're not introducing noise into the pre-trained weights.",
+        "But if you have a large enough dataset, you can set this to true.",
+        "Once we have our pre-trained model, we pass it through a dense layer",
+        "to get probabilities for each of our classes.",
+        "This is what the output from the model is going to look like."
+      ],
+      "result": [
+        "您将此设置为True或False的决定取决于两件事：你是否想更新权重，以及你的数据集的大小。",
+        "",
+        "",
+        "",
+        "如果您有一个相对较小的数据集，建议将此设置为False，以免在预训练权重中引入噪声。",
+        "",
+        "但是，如果您有足够大的数据集，可以将其设置为True。",
+        "一旦我们有了预训练模型，我们将其通过一个密集层，以获得每个类别的概率。",
+        "",
+        "这就是模型输出的样子。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "您将此设置为真或假的决定取决于两件事：是否要更新权重以及您的数据集大小。如果您有一个相对较小的数据集，建议将此设置为假，以免在预训练权重中引入噪声。但是，如果您有足够大的数据集，可以将其设置为真。一旦我们有了预训练模型，我们将其通过一个密集层，以获得每个类别的概率。这就是模型输出的样子。",
+        "sentences": [
+          {
+            "translated": "您将此设置为真或假的决定取决于两件事：是否要更新权重以及您的数据集大小。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "如果您有一个相对较小的数据集，建议将此设置为假，以免在预训练权重中引入噪声。",
+            "indexes": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "但是，如果您有足够大的数据集，可以将其设置为真。",
+            "indexes": [
+              5
+            ]
+          },
+          {
+            "translated": "一旦我们有了预训练模型，我们将其通过一个密集层，以获得每个类别的概率。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "这就是模型输出的样子。",
+            "indexes": [
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 5,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 733
+          },
+          "text": "The output is going to be a probability of whether this particular sentence is"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 565
+          },
+          "text": "true, is positive or negative."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 665
+          },
+          "text": "Since we're working with a binary classification problem,"
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 465
+          },
+          "text": "we're going to use BinaryCrossentropy as our loss function"
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 831
+          },
+          "text": "and the metric to optimize for is going to be BinaryAccuracy"
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 698
+          },
+          "text": "for initializing"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 32
+          },
+          "text": "our training by defining the optimizer."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 166
+          },
+          "text": "In our case, we're using Adam, which is a popular choice for neural network"
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 39,
+            "milliseconds": 998
+          },
+          "text": "models."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 931
+          },
+          "text": "Once we initialize the training,"
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 45,
+            "milliseconds": 698
+          },
+          "text": "we can start training using model dot fit."
+        }
+      ],
+      "source": [
+        "The output is going to be a probability of whether this particular sentence is",
+        "true, is positive or negative.",
+        "Since we're working with a binary classification problem,",
+        "we're going to use BinaryCrossentropy as our loss function",
+        "and the metric to optimize for is going to be BinaryAccuracy",
+        "for initializing",
+        "our training by defining the optimizer.",
+        "In our case, we're using Adam, which is a popular choice for neural network",
+        "models.",
+        "Once we initialize the training,",
+        "we can start training using model dot fit."
+      ],
+      "result": [
+        "输出将是这个特定句子是真实的、正面的还是负面的概率。",
+        "",
+        "因为我们正在处理一个二分类问题，所以我们将使用BinaryCrossentropy作为损失函数，优化的指标将是BinaryAccuracy，",
+        "",
+        "",
+        "通过定义优化器，我们开始初始化我们的训练。",
+        "",
+        "在我们的例子中，我们使用的是Adam，这是神经网络模型的热门选择。",
+        "",
+        "一旦我们初始化训练，我们可以开始使用model.fit进行训练。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "输出将是这个特定句子是真实的、正面的还是负面的概率。因为我们正在处理一个二分类问题，所以我们将使用二元交叉熵作为损失函数，优化的指标将是二元准确性，用于初始化我们的训练，通过定义优化器。在我们的例子中，我们使用的是Adam，这是神经网络模型的热门选择。一旦我们初始化训练，我们可以开始使用model.fit进行训练。",
+        "sentences": [
+          {
+            "translated": "输出将是这个特定句子是真实的、正面的还是负面的概率。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "因为我们正在处理一个二分类问题，所以我们将使用二元交叉熵作为损失函数，优化的指标将是二元准确性，用于初始化我们的训练，通过定义优化器。",
+            "indexes": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "在我们的例子中，我们使用的是Adam，这是神经网络模型的热门选择。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "一旦我们初始化训练，我们可以开始使用model.fit进行训练。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 632
+          },
+          "text": "We can pass the train dataset and the validation dataset"
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 199
+          },
+          "text": "and the number of epochs that we want to train for."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 532
+          },
+          "text": "Once the model has trained, let's evaluate the performance of the model."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 4,
+            "milliseconds": 364
+          },
+          "text": "So in our case we see that the model achieved an accuracy of 85%,"
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 4,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 8,
+            "milliseconds": 700
+          },
+          "text": "which is pretty decent considering we only trained it for five epochs."
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 13,
+            "milliseconds": 99
+          },
+          "text": "You can potentially thwart the accuracy"
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 13,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 16,
+            "milliseconds": 665
+          },
+          "text": "and loss over time in order to visualize the model's performance."
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 20,
+            "milliseconds": 100
+          },
+          "text": "0 We see that the training loss is going down"
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 24,
+            "milliseconds": 866
+          },
+          "text": "and we could work on our validation loss a little bit."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 132
+          },
+          "text": "But for the sake of demonstration, we've only trained it"
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 31,
+            "milliseconds": 499
+          },
+          "text": "for five epochs."
+        }
+      ],
+      "source": [
+        "We can pass the train dataset and the validation dataset",
+        "and the number of epochs that we want to train for.",
+        "Once the model has trained, let's evaluate the performance of the model.",
+        "So in our case we see that the model achieved an accuracy of 85%,",
+        "which is pretty decent considering we only trained it for five epochs.",
+        "You can potentially thwart the accuracy",
+        "and loss over time in order to visualize the model's performance.",
+        "0 We see that the training loss is going down",
+        "and we could work on our validation loss a little bit.",
+        "But for the sake of demonstration, we've only trained it",
+        "for five epochs."
+      ],
+      "result": [
+        "我们可以传递训练数据集和验证数据集以及我们想要训练的周期数。",
+        "",
+        "一旦模型训练完成，让我们评估模型的性能。",
+        "在我们的例子中，我们看到模型达到了85%的准确率，考虑到我们只训练了五个周期，这是相当不错的。",
+        "",
+        "您可以潜在地阻止准确性和损失随时间变化，以便可视化模型的性能。",
+        "",
+        "我们看到训练损失正在减少，我们可以稍微改进一下验证损失。",
+        "",
+        "但是为了演示，我们只训练了五个周期。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "我们可以传递训练数据集和验证数据集以及我们想要训练的周期数。一旦模型训练完成，让我们评估模型的性能。在我们的例子中，我们看到模型达到了85%的准确率，考虑到我们只训练了五个周期，这是相当不错的。您可以潜在地阻止准确性和损失随时间变化，以便可视化模型的性能。我们看到训练损失正在减少，我们可以稍微改进一下验证损失。但是为了演示，我们只训练了五个周期。",
+        "sentences": [
+          {
+            "translated": "我们可以传递训练数据集和验证数据集以及我们想要训练的周期数。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "一旦模型训练完成，让我们评估模型的性能。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "在我们的例子中，我们看到模型达到了85%的准确率，考虑到我们只训练了五个周期，这是相当不错的。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "您可以潜在地阻止准确性和损失随时间变化，以便可视化模型的性能。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "我们看到训练损失正在减少，我们可以稍微改进一下验证损失。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "但是为了演示，我们只训练了五个周期。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 31,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 432
+          },
+          "text": "Once you're satisfied with the model that you've trained, you can save the model"
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 565
+          },
+          "text": "using model dot safe model dot save export."
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 42,
+            "milliseconds": 864
+          },
+          "text": "So TensorFlow model to a local path."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 632
+          },
+          "text": "So the export path in this line is going to be a part"
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 51,
+            "milliseconds": 665
+          },
+          "text": "in your notebook instance."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 51,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 298
+          },
+          "text": "Once you've saved your model, you can load it to get predictions."
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 59,
+            "milliseconds": 766
+          },
+          "text": "So in this example we have this is such an amazing movie."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 59,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 333
+          },
+          "text": "This movie was great."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 4,
+            "milliseconds": 466
+          },
+          "text": "The movie was okay-ish, the movie was terrible."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 4,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 865
+          },
+          "text": "And we get predictions"
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 865
+          },
+          "text": "for each of these sentences based on the model that we have trained."
+        }
+      ],
+      "source": [
+        "Once you're satisfied with the model that you've trained, you can save the model",
+        "using model dot safe model dot save export.",
+        "So TensorFlow model to a local path.",
+        "So the export path in this line is going to be a part",
+        "in your notebook instance.",
+        "Once you've saved your model, you can load it to get predictions.",
+        "So in this example we have this is such an amazing movie.",
+        "This movie was great.",
+        "The movie was okay-ish, the movie was terrible.",
+        "And we get predictions",
+        "for each of these sentences based on the model that we have trained."
+      ],
+      "result": [
+        "一旦你对你训练的模型感到满意，你可以使用model.save EXPORT_PATH保存模型，将TensorFlow模型保存到本地路径。",
+        "",
+        "",
+        "因此，这行中的EXPORT_PATH将是您Notebook实例中的一部分。",
+        "",
+        "保存模型后，您可以加载它以获得预测。",
+        "在这个例子中，我们有这是一部令人惊叹的电影。",
+        "这部电影很棒。",
+        "电影还可以，电影很糟糕。",
+        "我们根据训练的模型得到每个句子的预测。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "一旦您对训练的模型感到满意，就可以使用model.dot safe model.dot save export将模型保存下来。将TensorFlow模型保存到本地路径。因此，这行中的导出路径将是您Notebook实例中的一部分。保存模型后，您可以加载它以获得预测。在这个例子中，我们有这是一部令人惊叹的电影。这部电影很棒。电影还可以，电影很糟糕。我们根据训练的模型得到每个句子的预测。",
+        "sentences": [
+          {
+            "translated": "一旦您对训练的模型感到满意，就可以使用model.dot safe model.dot save export将模型保存下来。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "将TensorFlow模型保存到本地路径。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "因此，这行中的导出路径将是您Notebook实例中的一部分。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "保存模型后，您可以加载它以获得预测。",
+            "indexes": [
+              5
+            ]
+          },
+          {
+            "translated": "在这个例子中，我们有这是一部令人惊叹的电影。",
+            "indexes": [
+              6
+            ]
+          },
+          {
+            "translated": "这部电影很棒。",
+            "indexes": [
+              7
+            ]
+          },
+          {
+            "translated": "电影还可以，电影很糟糕。",
+            "indexes": [
+              8
+            ]
+          },
+          {
+            "translated": "我们根据训练的模型得到每个句子的预测。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 12,
+            "milliseconds": 132
+          },
+          "text": "If you would"
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 12,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 532
+          },
+          "text": "like to take this further and deploy your model on Vertex AI to get online"
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 332
+          },
+          "text": "predictions, you could take the locally saved model and export it to Vertex AI."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 25,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 300
+          },
+          "text": "in order to do this, you need to check the signature"
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 800
+          },
+          "text": "of the model to see how you can pass predictions to the model."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 266
+          },
+          "text": "The signature of the model shows you what is the first layer"
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 40,
+            "milliseconds": 365
+          },
+          "text": "that is taking input."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 40,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 43,
+            "milliseconds": 199
+          },
+          "text": "So once we have the locally saved model,"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 43,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 48,
+            "milliseconds": 100
+          },
+          "text": "we are going to push the model to Vertex’s Model Registry"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 49,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 799
+          },
+          "text": "using these commands."
+        }
+      ],
+      "source": [
+        "If you would",
+        "like to take this further and deploy your model on Vertex AI to get online",
+        "predictions, you could take the locally saved model and export it to Vertex AI.",
+        "in order to do this, you need to check the signature",
+        "of the model to see how you can pass predictions to the model.",
+        "The signature of the model shows you what is the first layer",
+        "that is taking input.",
+        "So once we have the locally saved model,",
+        "we are going to push the model to Vertex’s Model Registry",
+        "using these commands."
+      ],
+      "result": [
+        "如果您想进一步部署您的模型到 Vertex AI 以获得在线预测，您可以将本地保存的模型导出到 Vertex AI。",
+        "",
+        "",
+        "为了做到这一点，您需要检查模型的签名，以了解如何将预测传递给模型。",
+        "",
+        "模型的签名会告诉您哪个是接收输入的第一层。",
+        "",
+        "所以一旦我们有了本地保存的模型，我们将使用这些命令将模型推送到 Vertex 的模型注册表。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "如果您想进一步部署您的模型到 Vertex AI 以获得在线预测，您可以将本地保存的模型导出到 Vertex AI。为了做到这一点，您需要检查模型的签名，以了解如何将预测传递给模型。模型的签名会告诉您哪个是接收输入的第一层。所以一旦我们有了本地保存的模型，我们将使用这些命令将模型推送到 Vertex 的模型注册表。",
+        "sentences": [
+          {
+            "translated": "如果您想进一步部署您的模型到 Vertex AI 以获得在线预测，您可以将本地保存的模型导出到 Vertex AI。",
+            "indexes": [
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "translated": "为了做到这一点，您需要检查模型的签名，以了解如何将预测传递给模型。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "模型的签名会告诉您哪个是接收输入的第一层。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "所以一旦我们有了本地保存的模型，我们将使用这些命令将模型推送到 Vertex 的模型注册表。",
+            "indexes": [
+              7,
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 899
+          },
+          "text": "In order to put the model in Vertex’s Model Registry,"
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 56,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 33
+          },
+          "text": "you need to ensure that you have a Google Cloud storage bucket."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 499
+          },
+          "text": "And these lines over here, let you create a bucket."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 4,
+            "milliseconds": 100
+          },
+          "text": "If it doesn't already exist,"
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 265
+          },
+          "text": "we're going to copy the"
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 10,
+            "milliseconds": 199
+          },
+          "text": "locally saved model using GS Utils CP"
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 10,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 13,
+            "milliseconds": 666
+          },
+          "text": "which takes a locally saved model from the export pack"
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 13,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 16,
+            "milliseconds": 564
+          },
+          "text": "and puts it in the Google Cloud storage bucket."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 17,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 20,
+            "milliseconds": 664
+          },
+          "text": "Once the model is in the Google Cloud Storage bucket,"
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 20,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 65
+          },
+          "text": "we're going to upload it to Vertex AI's model registry."
+        }
+      ],
+      "source": [
+        "In order to put the model in Vertex’s Model Registry,",
+        "you need to ensure that you have a Google Cloud storage bucket.",
+        "And these lines over here, let you create a bucket.",
+        "If it doesn't already exist,",
+        "we're going to copy the",
+        "locally saved model using GS Utils CP",
+        "which takes a locally saved model from the export pack",
+        "and puts it in the Google Cloud storage bucket.",
+        "Once the model is in the Google Cloud Storage bucket,",
+        "we're going to upload it to Vertex AI's model registry."
+      ],
+      "result": [
+        "要将模型放入Vertex的模型注册表中，您需要确保拥有一个Google Cloud存储桶。",
+        "",
+        "这些代码行可以让您创建一个存储桶。",
+        "如果它还不存在，我们将使用gsutils cp复制本地保存的模型，",
+        "",
+        "",
+        "它从EXPORT_PATH中获取本地保存的模型，并将其放入Google Cloud存储桶中。",
+        "",
+        "一旦模型在Google Cloud存储桶中，我们将把它上传到Vertex AI的模型注册表中。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "要将模型放入Vertex的模型注册表中，您需要确保拥有一个Google Cloud存储桶。这些代码行可以让您创建一个存储桶。如果它还不存在，我们将使用GS Utils CP复制本地保存的模型，它从导出包中获取本地保存的模型，并将其放入Google Cloud存储桶中。一旦模型在Google Cloud存储桶中，我们将把它上传到Vertex AI的模型注册表中。",
+        "sentences": [
+          {
+            "translated": "要将模型放入Vertex的模型注册表中，您需要确保拥有一个Google Cloud存储桶。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "这些代码行可以让您创建一个存储桶。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "如果它还不存在，我们将使用GS Utils CP复制本地保存的模型，",
+            "indexes": [
+              3,
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "它从导出包中获取本地保存的模型，并将其放入Google Cloud存储桶中。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "一旦模型在Google Cloud存储桶中，我们将把它上传到Vertex AI的模型注册表中。",
+            "indexes": [
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 27,
+            "milliseconds": 964
+          },
+          "text": "We're using the Python SDK in this case."
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 399
+          },
+          "text": "So we have a platform dot model dot upload, which takes the model"
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 36,
+            "milliseconds": 964
+          },
+          "text": "from Google Cloud Storage Bucket and puts it in the model registry."
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 40,
+            "milliseconds": 631
+          },
+          "text": "Once the model has been uploaded,"
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 40,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 43,
+            "milliseconds": 565
+          },
+          "text": "we're ready to deploy the model on Vertex"
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 332
+          },
+          "text": "and get online predictions."
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 599
+          },
+          "text": "In order to do this, we can use the Python SDK again"
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 56,
+            "milliseconds": 66
+          },
+          "text": "so we can use uploaded model to deploy, which is a function that is going to do"
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 56,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 56,
+            "milliseconds": 732
+          },
+          "text": "two things."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 56,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 664
+          },
+          "text": "One, it's going to create an end point, and two,"
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 666
+          },
+          "text": "it's going to upload the model to this particular endpoint."
+        }
+      ],
+      "source": [
+        "We're using the Python SDK in this case.",
+        "So we have a platform dot model dot upload, which takes the model",
+        "from Google Cloud Storage Bucket and puts it in the model registry.",
+        "Once the model has been uploaded,",
+        "we're ready to deploy the model on Vertex",
+        "and get online predictions.",
+        "In order to do this, we can use the Python SDK again",
+        "so we can use uploaded model to deploy, which is a function that is going to do",
+        "two things.",
+        "One, it's going to create an end point, and two,",
+        "it's going to upload the model to this particular endpoint."
+      ],
+      "result": [
+        "在这个例子中，我们使用Python SDK。",
+        "我们有aiplatform.model.upload，它从Google Cloud存储桶获取模型并将其放入模型注册表中。",
+        "",
+        "一旦模型上传完毕，我们就可以在Vertex上部署模型并获得在线预测。",
+        "",
+        "",
+        "为了实现这一点，我们可以再次使用Python SDK，使用已上传的模型进行部署，这是一个将执行两个操作的函数。",
+        "",
+        "",
+        "首先，它将创建一个端点（Endpoint），其次，它将把模型上传到这个特定的端点。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "在这个例子中，我们使用Python SDK。我们有一个platform.model.upload，它从Google Cloud Storage Bucket获取模型并将其放入模型注册表中。一旦模型上传完毕，我们就可以在Vertex上部署模型并获得在线预测。为了实现这一点，我们可以再次使用Python SDK，使用已上传的模型进行部署，这是一个将执行两个操作的函数。首先，它将创建一个端点，其次，它将把模型上传到这个特定的端点。",
+        "sentences": [
+          {
+            "translated": "在这个例子中，我们使用Python SDK。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "我们有一个platform.model.upload，它从Google Cloud Storage Bucket获取模型并将其放入模型注册表中。",
+            "indexes": [
+              1
+            ]
+          },
+          {
+            "translated": "一旦模型上传完毕，我们就可以在Vertex上部署模型并获得在线预测。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "为了实现这一点，我们可以再次使用Python SDK，使用已上传的模型进行部署，这是一个将执行两个操作的函数。",
+            "indexes": [
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "首先，它将创建一个端点，其次，它将把模型上传到这个特定的端点。",
+            "indexes": [
+              7,
+              8,
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 5,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 800
+          },
+          "text": "So you can see here that it's creating the endpoint,"
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 11,
+            "milliseconds": 65
+          },
+          "text": "providing you the endpoint location."
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 11,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 12,
+            "milliseconds": 166
+          },
+          "text": "And then once the endpoint"
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 12,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 15,
+            "milliseconds": 633
+          },
+          "text": "has been created, the model is deployed to this endpoint."
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 16,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 66
+          },
+          "text": "This step is going to take around 5 to 10 minutes."
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 99
+          },
+          "text": "When you run through your notebook."
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 24,
+            "milliseconds": 466
+          },
+          "text": "So just don't worry if it takes too long,"
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 25,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 29,
+            "milliseconds": 131
+          },
+          "text": "once the model has been deployed to the endpoint, you're ready"
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 29,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 31,
+            "milliseconds": 899
+          },
+          "text": "to get predictions from this endpoint"
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 35,
+            "milliseconds": 199
+          },
+          "text": "so you can create an instance object."
+        }
+      ],
+      "source": [
+        "So you can see here that it's creating the endpoint,",
+        "providing you the endpoint location.",
+        "And then once the endpoint",
+        "has been created, the model is deployed to this endpoint.",
+        "This step is going to take around 5 to 10 minutes.",
+        "When you run through your notebook.",
+        "So just don't worry if it takes too long,",
+        "once the model has been deployed to the endpoint, you're ready",
+        "to get predictions from this endpoint",
+        "so you can create an instance object."
+      ],
+      "result": [
+        "如您所见，这里创建了端点，并提供了端点位置。",
+        "",
+        "一旦端点创建完成，模型就会部署到这个端点。",
+        "",
+        "这个步骤大约需要5到10分钟。",
+        "当您在Notebook中运行时，如果花费时间较长，请不要担心。",
+        "",
+        "一旦模型部署到端点，您就可以从这个端点获取预测，然后创建一个实例对象。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "如您所见，这里创建了端点，并提供了端点位置。一旦端点创建完成，模型就会部署到这个端点。这个步骤大约需要5到10分钟。当您在Notebook中运行时，如果花费时间较长，请不要担心。一旦模型部署到端点，您就可以从这个端点获取预测，然后创建一个实例对象。",
+        "sentences": [
+          {
+            "translated": "如您所见，这里创建了端点，并提供了端点位置。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "一旦端点创建完成，模型就会部署到这个端点。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "这个步骤大约需要5到10分钟。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "当您在Notebook中运行时，如果花费时间较长，请不要担心。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "一旦模型部署到端点，您就可以从这个端点获取预测，然后创建一个实例对象。",
+            "indexes": [
+              7,
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 35,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 38,
+            "milliseconds": 332
+          },
+          "text": "So using the signature of the model, we know that"
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 38,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 665
+          },
+          "text": "the name of the first input layer is text."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 42,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 47,
+            "milliseconds": 233
+          },
+          "text": "So we're going to pass our review text to this particular key."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 49,
+            "milliseconds": 665
+          },
+          "text": "We create this instances"
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 49,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 53,
+            "milliseconds": 533
+          },
+          "text": "object that is going to be passed to the endpoint dot predictive function."
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 664
+          },
+          "text": "And the endpoint our predict function is going to take this instance"
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 332
+          },
+          "text": "and it's going to give us predictions."
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 498
+          },
+          "text": "So we can see for our first instance, I love the movie and highly recommend it."
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 8,
+            "milliseconds": 364
+          },
+          "text": "We have a prediction of 0.99."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 8,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 99
+          },
+          "text": "For it was an okay movie in my opinion."
+        }
+      ],
+      "source": [
+        "So using the signature of the model, we know that",
+        "the name of the first input layer is text.",
+        "So we're going to pass our review text to this particular key.",
+        "We create this instances",
+        "object that is going to be passed to the endpoint dot predictive function.",
+        "And the endpoint our predict function is going to take this instance",
+        "and it's going to give us predictions.",
+        "So we can see for our first instance, I love the movie and highly recommend it.",
+        "We have a prediction of 0.99.",
+        "For it was an okay movie in my opinion."
+      ],
+      "result": [
+        "根据模型的签名，我们知道第一个输入层的名称是\"text\"。",
+        "",
+        "我们将把评论文本传递给这个特定的键。",
+        "我们创建这个实例对象，它将被传递给endpoint.predict函数。",
+        "",
+        "endpoint.predict函数将接收这个实例，并给我们预测结果。",
+        "",
+        "我们可以看到，对于我们的第一个实例，我喜欢这部电影并强烈推荐它。",
+        "我们有一个0.99的预测。",
+        "对于这是一部还可以的电影，这是我的看法。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "根据模型的签名，我们知道第一个输入层的名称是文本。我们将把评论文本传递给这个特定的键。我们创建这个实例对象，它将被传递给端点的预测功能。端点的预测功能将接收这个实例，并给我们预测结果。我们可以看到，对于我们的第一个实例，我喜欢这部电影并强烈推荐它。我们有一个0.99的预测。对于这是一部还可以的电影，这是我的看法。",
+        "sentences": [
+          {
+            "translated": "根据模型的签名，我们知道第一个输入层的名称是文本。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "我们将把评论文本传递给这个特定的键。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "我们创建这个实例对象，它将被传递给端点的预测功能。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "端点的预测功能将接收这个实例，并给我们预测结果。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "我们可以看到，对于我们的第一个实例，我喜欢这部电影并强烈推荐它。",
+            "indexes": [
+              7
+            ]
+          },
+          {
+            "translated": "我们有一个0.99的预测。",
+            "indexes": [
+              8
+            ]
+          },
+          {
+            "translated": "对于这是一部还可以的电影，这是我的看法。",
+            "indexes": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 632
+          },
+          "text": "We have 84% and for I hated the movie,"
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 333
+          },
+          "text": "we have 2%, which means it's a negative sentiment."
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 765
+          },
+          "text": "So this is how you can create a classification model from a pre-trained"
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 27,
+            "milliseconds": 699
+          },
+          "text": "BERT model and then deploy it on Vertex to get online predictions."
+        }
+      ],
+      "source": [
+        "We have 84% and for I hated the movie,",
+        "we have 2%, which means it's a negative sentiment.",
+        "So this is how you can create a classification model from a pre-trained",
+        "BERT model and then deploy it on Vertex to get online predictions."
+      ],
+      "result": [
+        "我们有84%，而对于我讨厌这部电影，我们有2%，这意味着这是一种负面情绪。",
+        "",
+        "所以这就是如何从一个预先训练的BERT模型创建一个分类模型，然后将其部署到Vertex上以获得在线预测。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "我们有84%，而对于我讨厌这部电影，我们有2%，这意味着这是一种负面情绪。所以这就是如何从一个预先训练的BERT模型创建一个分类模型，然后将其部署到Vertex上以获得在线预测。",
+        "sentences": [
+          {
+            "translated": "我们有84%，而对于我讨厌这部电影，我们有2%，这意味着这是一种负面情绪。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "所以这就是如何从一个预先训练的BERT模型创建一个分类模型，然后将其部署到Vertex上以获得在线预测。",
+            "indexes": [
+              2,
+              3
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Transformer Models and BERT Model- Lab Walkthrough.srt",
+  "ouputBasePath": "input/Generative AI learning path/Transformer Models and BERT Model- Lab Walkthrough",
+  "totalCost": 0.58443,
+  "translationPath": "input/Generative AI learning path/Transformer Models and BERT Model- Lab Walkthrough/translation.json"
+}

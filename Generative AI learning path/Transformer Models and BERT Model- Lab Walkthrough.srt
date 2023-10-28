@@ -1,0 +1,852 @@
+1
+00:00:00,100 --> 00:00:03,132
+Hi. I'm Sanjana Reddy, a machine learning
+
+2
+00:00:03,133 --> 00:00:05,1000
+engineer at Google's
+Advanced Solutions Lab.
+
+3
+00:00:06,865 --> 00:00:11,499
+Welcome to the lab walkthrough
+for Transformer models and BERT model.
+
+4
+00:00:12,599 --> 00:00:14,699
+In this lab walkthrough, we'll be going
+
+5
+00:00:14,699 --> 00:00:18,131
+through classification
+using a Pre-Trained Bert model.
+
+6
+00:00:18,666 --> 00:00:21,766
+You'll find the setup instructions
+in our GitHub repository.
+
+7
+00:00:22,666 --> 00:00:24,466
+Let's get started.
+
+8
+00:00:24,500 --> 00:00:28,065
+In order to work on this notebook,
+you'll need to log into Google Cloud,
+
+9
+00:00:28,600 --> 00:00:32,699
+go into Vertex AI and click on Workbench.
+
+10
+00:00:33,732 --> 00:00:37,199
+Make sure that you have a notebook created
+once a notebook instance
+
+11
+00:00:37,200 --> 00:00:38,265
+has been created.
+
+12
+00:00:38,265 --> 00:00:41,664
+Click on Open Jupyter Lab.
+
+13
+00:00:41,665 --> 00:00:45,232
+Once you've followed the instructions
+in our GitHub repository,
+
+14
+00:00:45,432 --> 00:00:47,864
+navigate to classify text with Bert
+
+15
+00:00:48,832 --> 00:00:51,764
+in this notebook,
+we're going to learn how to load
+
+16
+00:00:51,765 --> 00:00:54,599
+a Pre-Trained Bert model
+from TensorFlow hub
+
+17
+00:00:55,332 --> 00:00:59,832
+and build our own classification
+using the Pre-Trained Bert model,
+
+18
+00:00:59,832 --> 00:01:03,032
+we learn how to train a
+Bert model by fine tuning it
+
+19
+00:01:05,099 --> 00:01:06,465
+before you get started.
+
+20
+00:01:06,465 --> 00:01:09,364
+Note that this notebook requires a CPU
+
+21
+00:01:09,865 --> 00:01:13,932
+because the training
+does take quite a bit of time.
+
+22
+00:01:14,433 --> 00:01:15,832
+When you open this notebook,
+
+23
+00:01:15,832 --> 00:01:19,299
+there is a setup instruction
+in order to set up a bert kernel
+
+24
+00:01:19,299 --> 00:01:23,432
+to install all the required libraries
+for this notebook.
+
+25
+00:01:24,799 --> 00:01:26,864
+For this notebook, we're going to be using
+
+26
+00:01:26,865 --> 00:01:30,898
+TensorFlow and TensorFlow hub
+TensorFlow text,
+
+27
+00:01:30,933 --> 00:01:35,066
+which is required to pre process
+the input for the BERT model.
+
+28
+00:01:36,632 --> 00:01:39,465
+You can see that I'm checking
+if a GPU is attached
+
+29
+00:01:39,465 --> 00:01:42,932
+and I see that I have one
+GPU attached to this notebook.
+
+30
+00:01:43,599 --> 00:01:46,531
+In this notebook
+we're going to train a sentiment
+
+31
+00:01:46,533 --> 00:01:51,233
+analysis model to classify movie reviews
+as either being positive
+
+32
+00:01:51,299 --> 00:01:54,265
+or negative
+based on the text of the review,
+
+33
+00:01:55,533 --> 00:01:58,233
+we're going to be working with
+the IMDB data set
+
+34
+00:01:58,400 --> 00:02:02,233
+that you can download from this URL.
+
+35
+00:02:03,933 --> 00:02:05,332
+Once we have downloaded
+
+36
+00:02:05,332 --> 00:02:09,498
+the data set, we can examine the data
+to see what's in it.
+
+37
+00:02:10,066 --> 00:02:15,165
+We see that we have 25,000 files
+that belong to two classes, positive
+
+38
+00:02:15,165 --> 00:02:19,064
+and negative,
+and we're going to be using 20,000 files
+
+39
+00:02:19,066 --> 00:02:24,300
+for training
+and the remaining 5000 for testing.
+
+40
+00:02:24,300 --> 00:02:28,433
+A sample of this dataset shows you
+the movie review
+
+41
+00:02:28,665 --> 00:02:31,532
+over here and an associated label.
+
+42
+00:02:31,532 --> 00:02:36,399
+So for the one over here, we see that
+the label that is associated is negative
+
+43
+00:02:37,400 --> 00:02:42,433
+and the one below here it's positive.
+
+44
+00:02:42,966 --> 00:02:46,199
+Once we've examined our dataset
+and we're happy with that, we're
+
+45
+00:02:46,199 --> 00:02:50,032
+going to load a Pre-Trained BERT model
+from TensorFlow hub.
+
+46
+00:02:51,233 --> 00:02:53,765
+TensorFlow hub offers multiple
+
+47
+00:02:53,765 --> 00:02:57,564
+different variations of BERT models
+in all different sizes.
+
+48
+00:02:58,099 --> 00:03:02,499
+We're going to use a small BERT
+for today's notebook.
+
+49
+00:03:02,500 --> 00:03:06,065
+So this bird model has four different
+layers.
+
+50
+00:03:06,432 --> 00:03:11,664
+It has 512 hidden units,
+and it has eight attention heads.
+
+51
+00:03:11,665 --> 00:03:15,064
+For every BERT model
+that we load from TensorFlow hub,
+
+52
+00:03:15,500 --> 00:03:19,633
+it is associated with a corresponding
+pre-processing model.
+
+53
+00:03:20,432 --> 00:03:24,098
+You can find the corresponding
+pre-processing model on TensorFlow hub
+
+54
+00:03:24,099 --> 00:03:28,398
+as well.
+
+55
+00:03:28,400 --> 00:03:30,599
+We're going to examine the pre
+processing model.
+
+56
+00:03:30,599 --> 00:03:33,465
+So we have we're going to load the pre
+processing model
+
+57
+00:03:33,466 --> 00:03:38,299
+we see in the previous step
+and we pass a sample text over here.
+
+58
+00:03:38,300 --> 00:03:39,233
+So we just passed.
+
+59
+00:03:39,233 --> 00:03:42,600
+This is an amazing movie
+and we're going to examine the output.
+
+60
+00:03:43,265 --> 00:03:47,164
+The pre processing model
+gives us multiple outputs.
+
+61
+00:03:47,400 --> 00:03:49,500
+The first is the input word ID.
+
+62
+00:03:50,400 --> 00:03:53,233
+The input word ID is the idea of the words
+
+63
+00:03:53,233 --> 00:03:56,332
+in the tokenized sentence.
+
+64
+00:03:56,332 --> 00:03:59,699
+The pre-processing model also provides
+
+65
+00:03:59,699 --> 00:04:02,032
+us the masking for each word.
+
+66
+00:04:02,800 --> 00:04:06,865
+Every sentence is converted
+into a fixed length input,
+
+67
+00:04:07,233 --> 00:04:14,066
+and it masks words that are not valid.
+
+68
+00:04:14,066 --> 00:04:17,865
+So once we have pre processed
+our input text, we can use the loaded
+
+69
+00:04:18,399 --> 00:04:20,532
+bird model from TensorFlow hub
+
+70
+00:04:21,632 --> 00:04:23,398
+in this particular cell block.
+
+71
+00:04:23,399 --> 00:04:26,899
+It doesn't really make any sense
+because we've not trained the model.
+
+72
+00:04:26,899 --> 00:04:30,198
+This is just a random
+list of numbers at this point.
+
+73
+00:04:30,632 --> 00:04:34,398
+But once you pass the pre process
+text into this bird model,
+
+74
+00:04:34,733 --> 00:04:41,332
+you get certain embeddings.
+
+75
+00:04:41,333 --> 00:04:44,300
+So in order to define
+our classification model,
+
+76
+00:04:44,432 --> 00:04:47,399
+we start with an input layer.
+
+77
+00:04:47,399 --> 00:04:51,032
+The input layer takes the raw text
+as input
+
+78
+00:04:51,600 --> 00:04:54,966
+passes it on to the processing layer
+for pre-processing
+
+79
+00:04:55,065 --> 00:04:59,699
+that converted into token IDs,
+bird IDs and mask IDs.
+
+80
+00:04:59,699 --> 00:05:04,165
+The pre processed words are
+then passed to the Pre-Trained model.
+
+81
+00:05:05,699 --> 00:05:07,832
+There is an argument here
+called trainable.
+
+82
+00:05:08,399 --> 00:05:12,265
+Trainable here determines
+if you want to fine tune the Pre-Trained
+
+83
+00:05:12,266 --> 00:05:16,266
+model using the new data
+that you're training with or not.
+
+84
+00:05:16,665 --> 00:05:19,865
+In our example,
+we are setting trainable to true,
+
+85
+00:05:20,533 --> 00:05:23,699
+which means that we're going to update
+the initial weights
+
+86
+00:05:23,699 --> 00:05:24,932
+of the Pre-Trained model.
+
+87
+00:05:26,065 --> 00:05:27,665
+Your decision to
+
+88
+00:05:27,665 --> 00:05:30,665
+set this to true
+or false depends on two things
+
+89
+00:05:31,500 --> 00:05:33,766
+whether you want to update the weights
+
+90
+00:05:33,966 --> 00:05:36,599
+and second, on the size of your dataset,
+
+91
+00:05:37,199 --> 00:05:42,365
+if you have a relatively small data set,
+it is recommended to set this to false
+
+92
+00:05:42,533 --> 00:05:46,566
+so that you're not introducing noise
+into the pre-trained weights.
+
+93
+00:05:47,065 --> 00:05:50,665
+But if you have a large enough dataset,
+you can set this to true.
+
+94
+00:05:52,199 --> 00:05:56,298
+Once we have our pre-trained model,
+we pass it through a dense layer
+
+95
+00:05:57,000 --> 00:06:02,432
+to get probabilities
+for each of our classes.
+
+96
+00:06:02,432 --> 00:06:05,032
+This is what the output from
+the model is going to look like.
+
+97
+00:06:05,033 --> 00:06:10,733
+The output is going to be a probability
+of whether this particular sentence is
+
+98
+00:06:10,733 --> 00:06:15,565
+true, is positive or negative.
+
+99
+00:06:15,565 --> 00:06:18,665
+Since we're working
+with a binary classification problem,
+
+100
+00:06:18,800 --> 00:06:22,465
+we're going to use binary cross entropy
+as our loss function
+
+101
+00:06:22,899 --> 00:06:26,831
+and the metric to optimize for
+is going to be binary accuracy
+
+102
+00:06:28,565 --> 00:06:29,698
+for initializing
+
+103
+00:06:29,699 --> 00:06:33,032
+our training by defining the optimizer.
+
+104
+00:06:33,033 --> 00:06:38,166
+In our case, we're using Adam, which is
+a popular choice for neural network
+
+105
+00:06:38,932 --> 00:06:39,998
+models.
+
+106
+00:06:40,899 --> 00:06:42,931
+Once we initialize the training,
+
+107
+00:06:42,932 --> 00:06:45,698
+we can start training using model dot fit.
+
+108
+00:06:46,100 --> 00:06:49,632
+We can pass the train dataset
+and the validation dataset
+
+109
+00:06:49,632 --> 00:06:55,199
+and the number of epochs
+that we want to train for.
+
+110
+00:06:55,199 --> 00:06:59,532
+Once the model has trained, let's evaluate
+the performance of the model.
+
+111
+00:06:59,565 --> 00:07:04,364
+So in our case we see that
+the model achieved an accuracy of 85%,
+
+112
+00:07:04,966 --> 00:07:08,700
+which is pretty decent considering
+we only trained it for five epochs.
+
+113
+00:07:09,899 --> 00:07:13,099
+You can potentially thwart the accuracy
+
+114
+00:07:13,100 --> 00:07:16,665
+and loss over time in order
+to visualize the model's performance.
+
+115
+00:07:17,766 --> 00:07:20,1000
+We see that
+the training loss is going down
+
+116
+00:07:21,533 --> 00:07:24,866
+and we could work on our validation
+loss a little bit.
+
+117
+00:07:25,266 --> 00:07:28,132
+But for the sake of demonstration,
+we've only trained it
+
+118
+00:07:28,132 --> 00:07:31,499
+for five epochs.
+
+119
+00:07:31,500 --> 00:07:35,432
+Once you're satisfied with the model that
+you've trained, you can save the model
+
+120
+00:07:35,966 --> 00:07:40,565
+using model dot safe
+model dot save export.
+
+121
+00:07:40,565 --> 00:07:42,864
+So TensorFlow model to a local path.
+
+122
+00:07:43,432 --> 00:07:47,632
+So the export path in this line
+is going to be a part
+
+123
+00:07:47,632 --> 00:07:51,665
+in your notebook instance.
+
+124
+00:07:51,665 --> 00:07:55,298
+Once you've saved your model,
+you can load it to get predictions.
+
+125
+00:07:55,600 --> 00:07:59,766
+So in this example we have
+this is such an amazing movie.
+
+126
+00:07:59,766 --> 00:08:01,333
+This movie was great.
+
+127
+00:08:01,333 --> 00:08:04,466
+The movie was okay-ish,
+the movie was terrible.
+
+128
+00:08:04,932 --> 00:08:05,865
+And we get predictions
+
+129
+00:08:05,865 --> 00:08:09,865
+for each of these sentences
+based on the model that we have trained.
+
+130
+00:08:11,665 --> 00:08:12,132
+If you would
+
+131
+00:08:12,132 --> 00:08:16,532
+like to take this further and deploy
+your model on Vertex AI to get online
+
+132
+00:08:16,533 --> 00:08:23,332
+predictions, you could take the locally
+saved model and export it to Vertex AI.
+
+133
+00:08:25,733 --> 00:08:28,300
+in order to do this,
+you need to check the signature
+
+134
+00:08:28,300 --> 00:08:31,800
+of the model to see how you can pass
+predictions to the model.
+
+135
+00:08:32,566 --> 00:08:36,266
+The signature of the model shows you
+what is the first layer
+
+136
+00:08:36,666 --> 00:08:40,365
+that is taking input.
+
+137
+00:08:40,365 --> 00:08:43,199
+So once we have the locally saved model,
+
+138
+00:08:43,600 --> 00:08:48,100
+we are going to push the model
+to Vertex’s Model Registry
+
+139
+00:08:49,466 --> 00:08:52,799
+using these commands.
+
+140
+00:08:52,799 --> 00:08:55,899
+In order to put the model in Vertex’s
+Model Registry,
+
+141
+00:08:56,033 --> 00:08:59,033
+you need to ensure that you have
+a Google Cloud storage bucket.
+
+142
+00:08:59,432 --> 00:09:02,499
+And these lines over here,
+let you create a bucket.
+
+143
+00:09:02,500 --> 00:09:04,100
+If it doesn't already exist,
+
+144
+00:09:05,432 --> 00:09:06,265
+we're going to copy the
+
+145
+00:09:06,265 --> 00:09:10,199
+locally saved model using GS Utils CP
+
+146
+00:09:10,700 --> 00:09:13,666
+which takes a locally saved model
+from the export pack
+
+147
+00:09:13,765 --> 00:09:16,564
+and puts it in the Google Cloud
+storage bucket.
+
+148
+00:09:17,865 --> 00:09:20,664
+Once the model is in the Google
+Cloud Storage bucket,
+
+149
+00:09:20,666 --> 00:09:24,065
+we're going to upload it to Vertex
+AI's model registry.
+
+150
+00:09:24,799 --> 00:09:27,964
+We're using the Python SDK in this case.
+
+151
+00:09:28,133 --> 00:09:32,399
+So we have a platform dot model
+dot upload, which takes the model
+
+152
+00:09:32,399 --> 00:09:36,964
+from Google Cloud Storage Bucket
+and puts it in the model registry.
+
+153
+00:09:38,732 --> 00:09:40,631
+Once the model has been uploaded,
+
+154
+00:09:40,633 --> 00:09:43,565
+we're ready to deploy the model on Vertex
+
+155
+00:09:44,000 --> 00:09:47,332
+and get online predictions.
+
+156
+00:09:47,332 --> 00:09:51,599
+In order to do this,
+we can use the Python SDK again
+
+157
+00:09:51,666 --> 00:09:56,066
+so we can use uploaded model to deploy,
+which is a function that is going to do
+
+158
+00:09:56,066 --> 00:09:56,732
+two things.
+
+159
+00:09:56,732 --> 00:10:00,664
+One, it's going to create an end point,
+and two,
+
+160
+00:10:00,666 --> 00:10:04,666
+it's going to upload the model
+to this particular endpoint.
+
+161
+00:10:05,466 --> 00:10:07,800
+So you can see here
+that it's creating the endpoint,
+
+162
+00:10:08,000 --> 00:10:11,065
+providing you the endpoint location.
+
+163
+00:10:11,066 --> 00:10:12,166
+And then once the endpoint
+
+164
+00:10:12,166 --> 00:10:15,633
+has been created,
+the model is deployed to this endpoint.
+
+165
+00:10:16,566 --> 00:10:20,066
+This step is going to take around 5
+to 10 minutes.
+
+166
+00:10:20,066 --> 00:10:22,099
+When you run through your notebook.
+
+167
+00:10:22,100 --> 00:10:24,466
+So just don't worry if it takes too long,
+
+168
+00:10:25,365 --> 00:10:29,131
+once the model has been deployed
+to the endpoint, you're ready
+
+169
+00:10:29,133 --> 00:10:31,899
+to get predictions from this endpoint
+
+170
+00:10:32,832 --> 00:10:35,199
+so you can create an instance object.
+
+171
+00:10:35,966 --> 00:10:38,332
+So using the signature of the model,
+we know that
+
+172
+00:10:38,332 --> 00:10:41,665
+the name of the first input layer is text.
+
+173
+00:10:42,100 --> 00:10:47,233
+So we're going to pass our review
+text to this particular key.
+
+174
+00:10:48,299 --> 00:10:49,665
+We create this instances
+
+175
+00:10:49,666 --> 00:10:53,533
+object that is going to be passed
+to the endpoint dot predictive function.
+
+176
+00:10:54,232 --> 00:10:57,664
+And the endpoint our predict function
+is going to take this instance
+
+177
+00:10:58,066 --> 00:11:00,332
+and it's going to give us predictions.
+
+178
+00:11:00,332 --> 00:11:04,498
+So we can see for our first instance,
+I love the movie and highly recommend it.
+
+179
+00:11:04,799 --> 00:11:08,364
+We have a prediction of 0.99.
+
+180
+00:11:08,365 --> 00:11:10,099
+For it was an okay movie in my opinion.
+
+181
+00:11:10,100 --> 00:11:13,632
+We have 84% and for I hated the movie,
+
+182
+00:11:13,633 --> 00:11:16,333
+we have 2%,
+which means it's a negative sentiment.
+
+183
+00:11:17,232 --> 00:11:21,765
+So this is how you can create
+a classification model from a pre-trained
+
+184
+00:11:21,765 --> 00:11:27,699
+BERT model and then deploy it on Vertex
+to get online predictions.
+

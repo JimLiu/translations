@@ -1,0 +1,1291 @@
+1
+00:00:00,400 --> 00:00:01,300
+Hi, everyone.
+
+2
+00:00:01,300 --> 00:00:05,633
+I'm Takumi, machine Learning engineer
+at Google Advanced Solutions Lab
+
+3
+00:00:06,865 --> 00:00:09,631
+This is the second half of the image
+captioning session.
+
+4
+00:00:10,199 --> 00:00:14,098
+If you haven't seen the first half,
+I recommend checking it out first.
+
+5
+00:00:15,733 --> 00:00:19,733
+And in this video, I'm going to walk you
+through the entire code notebook
+
+6
+00:00:19,800 --> 00:00:24,032
+to help you understand how to create
+a very simple generative model.
+
+7
+00:00:25,865 --> 00:00:27,332
+All the setup information
+
+8
+00:00:27,332 --> 00:00:29,932
+is written in the ASL GitHub repository.
+
+9
+00:00:30,899 --> 00:00:32,964
+You can find the link in the slide
+
+10
+00:00:32,966 --> 00:00:35,566
+or in the description below this video.
+
+11
+00:00:37,265 --> 00:00:38,832
+After setting up the Vertex
+
+12
+00:00:38,832 --> 00:00:42,065
+AI I work
+bench environment and clone in the repo.
+
+13
+00:00:42,066 --> 00:00:46,566
+Following the instruction
+you can find the image captioning notebook
+
+14
+00:00:46,732 --> 00:00:51,432
+under asl-ml-immersion notebooks
+
+15
+00:00:52,466 --> 00:00:55,299
+and multimodal
+
+16
+00:00:55,299 --> 00:00:56,932
+solutions.
+
+17
+00:00:57,399 --> 00:00:58,199
+Here you go.
+
+18
+00:00:58,200 --> 00:01:01,499
+You can find image captioning dot
+i Python notebook.
+
+19
+00:01:01,832 --> 00:01:03,465
+So please open this file
+
+20
+00:01:06,332 --> 00:01:07,499
+and here you can see
+
+21
+00:01:07,500 --> 00:01:11,233
+all the process and instructions
+to build and use
+
+22
+00:01:11,233 --> 00:01:14,733
+an image captioning model
+which we discussed in the previous video.
+
+23
+00:01:15,900 --> 00:01:19,500
+Let's take a look from the first cell.
+
+24
+00:01:19,500 --> 00:01:20,699
+In the first cell.
+
+25
+00:01:20,700 --> 00:01:23,632
+Of course we install all the dependencies,
+
+26
+00:01:23,965 --> 00:01:26,432
+including tensorflow keras
+
+27
+00:01:27,165 --> 00:01:30,431
+and here we can
+find TensorFlow keras layers
+
+28
+00:01:30,733 --> 00:01:34,132
+and installing order layers
+we need for image captioning model
+
+29
+00:01:34,766 --> 00:01:39,065
+including GRU, add layer, attention layer
+
+30
+00:01:39,533 --> 00:01:42,100
+or dense layer embedding layer now
+
+31
+00:01:42,332 --> 00:01:45,098
+layer normalization layer.
+
+32
+00:01:45,332 --> 00:01:48,532
+So let's run one by one
+
+33
+00:01:49,832 --> 00:01:52,498
+and in the next cell
+
+34
+00:01:54,000 --> 00:01:54,733
+we define
+
+35
+00:01:54,733 --> 00:01:58,265
+some hyper parameters,
+including vocabulary size,
+
+36
+00:01:58,266 --> 00:02:03,365
+which means how many vocabularies
+we're going to use for image captioning.
+
+37
+00:02:03,365 --> 00:02:06,432
+Or you can find a feature extractor,
+which means
+
+38
+00:02:06,433 --> 00:02:10,365
+what kind of model
+we want to use in encoder model.
+
+39
+00:02:10,900 --> 00:02:14,733
+So in this case, as we discussed
+in the previous video, we are specifying
+
+40
+00:02:14,733 --> 00:02:19,366
+inception resnet v2,
+which is very classical CNN based model
+
+41
+00:02:20,866 --> 00:02:23,099
+and all the definitions below
+
+42
+00:02:23,099 --> 00:02:26,998
+image, height, width channel
+and the feature shape is coming from
+
+43
+00:02:27,000 --> 00:02:31,799
+the definition of the inception, resnet v2
+and especially this feature shape.
+
+44
+00:02:31,832 --> 00:02:37,032
+8, 8, 1536 is the shape
+
+45
+00:02:37,032 --> 00:02:39,564
+this inception resnet v2 produce.
+
+46
+00:02:41,265 --> 00:02:43,132
+So let's define
+
+47
+00:02:43,432 --> 00:02:44,631
+in this way
+
+48
+00:02:48,566 --> 00:02:49,200
+cool.
+
+49
+00:02:49,466 --> 00:02:52,666
+So in the next cell
+we're going to load the data
+
+50
+00:02:53,400 --> 00:02:56,1000
+from tfds,
+which means TensorFlow datasets.
+
+51
+00:02:58,165 --> 00:03:00,165
+So TensorFlow datasets host this
+
+52
+00:03:00,165 --> 00:03:03,198
+caption data set in this name
+“coco captions”
+
+53
+00:03:03,199 --> 00:03:06,131
+so we can specify this name
+and the loading data.
+
+54
+00:03:07,733 --> 00:03:09,599
+And after loading data
+
+55
+00:03:09,599 --> 00:03:12,631
+we can pass some preprocessing function,
+
+56
+00:03:14,032 --> 00:03:18,165
+get image level which is defined
+here, get the image level,
+
+57
+00:03:18,199 --> 00:03:22,264
+and here we can find some preprocessing,
+very basic preprocessing,
+
+58
+00:03:23,699 --> 00:03:27,131
+including changing the size of the image
+
+59
+00:03:27,599 --> 00:03:32,565
+or the change in the scale of the image
+and returning image tensor
+
+60
+00:03:32,566 --> 00:03:37,566
+and the caption at the same time.
+
+61
+00:03:37,566 --> 00:03:39,666
+So let's run in the same way
+
+62
+00:03:40,733 --> 00:03:41,966
+and let's take a look at
+
+63
+00:03:41,966 --> 00:03:44,066
+some of the example.
+
+64
+00:03:51,765 --> 00:03:54,099
+Here we can see, for example,
+
+65
+00:03:54,099 --> 00:03:56,699
+a random example
+
+66
+00:03:56,699 --> 00:04:01,631
+and each pair of image
+and text makes sense to me.
+
+67
+00:04:01,633 --> 00:04:04,966
+So wide plate with a toasted sandwich,
+
+68
+00:04:05,500 --> 00:04:08,032
+chips and fries for this image.
+
+69
+00:04:08,332 --> 00:04:11,098
+And another caption for another image.
+
+70
+00:04:11,932 --> 00:04:13,232
+And we have a lot of image.
+
+71
+00:04:13,233 --> 00:04:17,532
+So if you want to see another example,
+you can run this cell again
+
+72
+00:04:17,533 --> 00:04:21,399
+and you will see another example.
+
+73
+00:04:21,399 --> 00:04:23,265
+So let's move on.
+
+74
+00:04:24,132 --> 00:04:26,332
+So since we have text data,
+
+75
+00:04:26,333 --> 00:04:30,600
+we need to preprocess that text data
+in kind of standard way.
+
+76
+00:04:31,533 --> 00:04:35,899
+So in this cell we add start
+
+77
+00:04:35,899 --> 00:04:41,198
+and end special tokens,
+which we discussed in the slide as well.
+
+78
+00:04:41,966 --> 00:04:47,699
+So by adding this so we can handle this
+token as a kind of special sign, this
+
+79
+00:04:47,699 --> 00:04:50,764
+start talking means the special token,
+
+80
+00:04:50,766 --> 00:04:54,133
+that means the beginning of the sentence.
+
+81
+00:04:54,766 --> 00:05:00,033
+And in the same way, the end token means
+the, the end of the sentence.
+
+82
+00:05:01,000 --> 00:05:03,333
+So we can add these things
+
+83
+00:05:03,333 --> 00:05:07,333
+in the same way
+trends stood map and pass this function.
+
+84
+00:05:07,333 --> 00:05:14,699
+They let's move on.
+
+85
+00:05:14,699 --> 00:05:17,965
+And this is a very important
+preprocessing.
+
+86
+00:05:18,466 --> 00:05:21,566
+So now we have text data, caption data.
+
+87
+00:05:22,000 --> 00:05:25,432
+So we're going to create tokenizer.
+
+88
+00:05:25,432 --> 00:05:29,098
+So by creating tokenizer,
+we can tokenize word
+
+89
+00:05:29,300 --> 00:05:32,465
+like start token or cat or dog
+
+90
+00:05:32,899 --> 00:05:35,599
+to some index.
+
+91
+00:05:35,600 --> 00:05:38,065
+In TensorFlow, it is very easy.
+
+92
+00:05:38,065 --> 00:05:41,999
+You can just use this text
+vectoralization module
+
+93
+00:05:42,800 --> 00:05:44,832
+and you can call
+
+94
+00:05:45,565 --> 00:05:48,632
+by passing all the data
+or the caption data
+
+95
+00:05:48,899 --> 00:05:51,399
+to this text vectoralization layer
+
+96
+00:05:52,699 --> 00:05:56,532
+so it takes some time around 5 minutes
+in my environments.
+
+97
+00:05:56,733 --> 00:06:01,899
+So let's wait until it finishes.
+
+98
+00:06:01,899 --> 00:06:03,399
+Now it's finished.
+
+99
+00:06:03,899 --> 00:06:07,232
+Now let's try this tokenizer either
+
+100
+00:06:07,600 --> 00:06:11,233
+by passing some sample sentence,
+
+101
+00:06:11,899 --> 00:06:15,265
+start token This is a sentence end token.
+
+102
+00:06:16,500 --> 00:06:17,632
+So now you can
+
+103
+00:06:17,632 --> 00:06:21,599
+see it is tokenized in this way.
+
+104
+00:06:21,600 --> 00:06:24,600
+And so the here
+you can find a lot of paddings
+
+105
+00:06:25,966 --> 00:06:28,566
+by changing this max caption lengths
+
+106
+00:06:29,000 --> 00:06:31,865
+you can control the lengths
+of this padding here.
+
+107
+00:06:31,865 --> 00:06:34,631
+But in this case we are specifying 64.
+
+108
+00:06:34,899 --> 00:06:37,265
+So the order of the captions
+
+109
+00:06:37,932 --> 00:06:40,698
+will be padded in this way
+
+110
+00:06:41,300 --> 00:06:47,432
+until this max caption lengths.
+
+111
+00:06:47,432 --> 00:06:49,864
+And in the same way you can see
+
+112
+00:06:51,000 --> 00:06:54,299
+the behavior of this tokenizer
+
+113
+00:06:54,300 --> 00:06:55,300
+This is very useful.
+
+114
+00:06:55,300 --> 00:07:00,833
+Once you create you can apply this
+tokenizer in different captions
+
+115
+00:07:01,165 --> 00:07:06,599
+and convert text data to the token
+at the white tokens.
+
+116
+00:07:07,899 --> 00:07:11,765
+And it's nice
+to create converters at this point.
+
+117
+00:07:12,600 --> 00:07:16,499
+So here we can find string lookup layer,
+string look up layer,
+
+118
+00:07:16,733 --> 00:07:21,899
+and the creating converter the from want
+to index and also index to want.
+
+119
+00:07:22,300 --> 00:07:25,099
+So we're going to use these modules later.
+
+120
+00:07:25,100 --> 00:07:26,466
+So this is quite useful
+
+121
+00:07:28,800 --> 00:07:31,365
+and then we can create a final data set.
+
+122
+00:07:32,432 --> 00:07:34,799
+So this is a very important part.
+
+123
+00:07:34,800 --> 00:07:36,865
+So we have trainds.
+
+124
+00:07:37,466 --> 00:07:41,533
+We're going to add additional
+create_ds function, this function
+
+125
+00:07:42,300 --> 00:07:45,432
+and as you can see, it returns image
+
+126
+00:07:45,432 --> 00:07:48,231
+tensor caption that this is the tuple
+
+127
+00:07:50,100 --> 00:07:52,366
+image tensor will go to encoder
+
+128
+00:07:52,500 --> 00:07:55,700
+and caption will go to the decoder.
+
+129
+00:07:56,466 --> 00:08:02,265
+And also we are creating Target,
+which is label.
+
+130
+00:08:02,266 --> 00:08:06,700
+And in this function you can find
+this target is created from caption
+
+131
+00:08:06,899 --> 00:08:11,432
+by the is shifting just caption
+
+132
+00:08:12,500 --> 00:08:15,100
+in the in one word.
+
+133
+00:08:16,500 --> 00:08:16,733
+Okay.
+
+134
+00:08:16,733 --> 00:08:18,600
+By doing so, we are creating
+
+135
+00:08:18,600 --> 00:08:22,899
+we're going to create a shifted caption,
+which means the next word A
+
+136
+00:08:23,432 --> 00:08:32,232
+and we're going to utilize this
+for target.
+
+137
+00:08:32,232 --> 00:08:35,332
+So let's define and apply this function
+
+138
+00:08:35,700 --> 00:08:39,365
+and create a batch in specified batch size
+
+139
+00:08:40,033 --> 00:08:43,666
+and everything is ready.
+
+140
+00:08:43,666 --> 00:08:49,732
+So let's take a look
+at some of the data set.
+
+141
+00:08:49,732 --> 00:08:50,199
+Here you go.
+
+142
+00:08:50,200 --> 00:08:55,132
+So you can find the image in this shape
+and caption in the shape
+
+143
+00:08:55,133 --> 00:08:59,1000
+and level in the same shape as caption
+because we are just shifting.
+
+144
+00:09:00,000 --> 00:09:00,432
+And no.
+
+145
+00:09:00,432 --> 00:09:04,832
+So we are padding the
+shifted part with zero value
+
+146
+00:09:06,966 --> 00:09:08,232
+looks nice.
+
+147
+00:09:08,666 --> 00:09:12,100
+So the next part is model.
+
+148
+00:09:12,100 --> 00:09:14,432
+Most of the model
+code has already explained
+
+149
+00:09:14,432 --> 00:09:17,598
+in the previous video,
+so I'm going to go through very quickly.
+
+150
+00:09:17,966 --> 00:09:22,299
+But if you are not very familiar
+with that very confident with that,
+
+151
+00:09:22,299 --> 00:09:25,231
+then you can go back to the
+the previous slide and check
+
+152
+00:09:25,566 --> 00:09:28,266
+what is going on
+inside encoder and decoder.
+
+153
+00:09:28,899 --> 00:09:30,798
+So here in this video.
+
+154
+00:09:30,799 --> 00:09:33,299
+So let's quickly run these things.
+
+155
+00:09:33,432 --> 00:09:39,299
+So this is the encoder and as you can see
+we are just in the applying inception
+
+156
+00:09:39,299 --> 00:09:43,531
+resnet V2 to image data.
+
+157
+00:09:43,533 --> 00:09:48,433
+And please note that in this case we are
+freezing the most of the parts of this cnn
+
+158
+00:09:49,200 --> 00:09:51,433
+because we don't need to be trained.
+
+159
+00:09:52,299 --> 00:09:56,632
+This model, basically this kind of the
+the backbone is pre-trained
+
+160
+00:09:56,633 --> 00:10:00,233
+by using huge dataset in this case
+image net data set.
+
+161
+00:10:00,832 --> 00:10:06,064
+So of course if you want to the train,
+fine tune again, it is possible,
+
+162
+00:10:06,566 --> 00:10:10,199
+but in this case we want to
+you just to preserve the weights
+
+163
+00:10:10,700 --> 00:10:14,566
+Pre-trained.
+
+164
+00:10:14,566 --> 00:10:17,332
+So next let's move on to the decoder.
+
+165
+00:10:18,700 --> 00:10:20,732
+It is a bit complex as we discussed,
+
+166
+00:10:20,732 --> 00:10:24,398
+and here you can find a lot of instruction
+about the attention layer
+
+167
+00:10:25,732 --> 00:10:27,799
+and also the steps of the decoder,
+
+168
+00:10:28,200 --> 00:10:32,066
+which we discussed in the previous video.
+
+169
+00:10:32,066 --> 00:10:37,066
+And here we can find a definitions
+so you can find embedding layer
+
+170
+00:10:37,432 --> 00:10:40,864
+to create
+what embedding and first GRU layer
+
+171
+00:10:41,365 --> 00:10:45,698
+and attention
+layer add layer layer normalization
+
+172
+00:10:46,166 --> 00:10:48,899
+and final dense layer.
+
+173
+00:10:48,899 --> 00:10:52,198
+So let's define in this way.
+
+174
+00:10:52,200 --> 00:10:54,865
+So model looks like this
+
+175
+00:10:55,700 --> 00:10:57,399
+embedding layer GRU
+
+176
+00:10:57,399 --> 00:11:00,232
+attention
+add layer normalization, then this.
+
+177
+00:11:01,500 --> 00:11:04,932
+And it has so many parameters
+
+178
+00:11:08,399 --> 00:11:10,365
+after defining decoder
+
+179
+00:11:10,365 --> 00:11:13,631
+and also encoder,
+we can create final model
+
+180
+00:11:14,000 --> 00:11:17,866
+TF Keras model
+and define inputs and output.
+
+181
+00:11:18,832 --> 00:11:22,231
+And as you can see, it has two inputs,
+
+182
+00:11:23,700 --> 00:11:25,765
+image inputs go to encoder
+
+183
+00:11:26,066 --> 00:11:30,766
+and word
+inputs go to the goes to the decoder
+
+184
+00:11:32,365 --> 00:11:34,199
+and output should be
+
+185
+00:11:34,200 --> 00:11:37,232
+decoder output.
+
+186
+00:11:37,232 --> 00:11:41,265
+Now model is ready,
+but before running training
+
+187
+00:11:42,399 --> 00:11:45,831
+we need to define lost function as usual.
+
+188
+00:11:45,832 --> 00:11:48,098
+So in terms of the loss,
+
+189
+00:11:48,100 --> 00:11:50,733
+our model is basically
+a classification model
+
+190
+00:11:50,932 --> 00:11:55,299
+since the decoder generate
+a lot of probabilities for each class,
+
+191
+00:11:55,533 --> 00:11:58,065
+each word class, each of vocabularies.
+
+192
+00:11:58,500 --> 00:12:02,399
+So we can use sparse categorical course
+entropy as usual
+
+193
+00:12:02,633 --> 00:12:05,732
+for the classification problem.
+
+194
+00:12:05,732 --> 00:12:08,699
+But in this case our data is padded,
+
+195
+00:12:09,000 --> 00:12:14,799
+so it has a lot of that zero values
+and a lot of the there meaningless values.
+
+196
+00:12:15,000 --> 00:12:18,365
+So we want to remove that part.
+
+197
+00:12:18,365 --> 00:12:20,732
+So in order to do so, we are defining this
+
+198
+00:12:20,732 --> 00:12:23,099
+custom loss function
+
+199
+00:12:25,200 --> 00:12:26,899
+and then everything is ready.
+
+200
+00:12:26,899 --> 00:12:30,431
+So let's compile the model
+
+201
+00:12:31,600 --> 00:12:34,066
+and we can run training.
+
+202
+00:12:34,066 --> 00:12:38,1000
+And in terms of the training,
+it takes 15 minutes, to 20 minutes
+
+203
+00:12:39,865 --> 00:12:44,099
+with one GPU,
+one T4 GPUs to train one epoch.
+
+204
+00:12:45,500 --> 00:12:46,265
+So if you want
+
+205
+00:12:46,265 --> 00:12:49,099
+to add additional epochs, it's okay.
+
+206
+00:12:49,332 --> 00:12:53,032
+You can do that and I think you can get
+the slightly better result.
+
+207
+00:12:53,600 --> 00:12:56,799
+But epoch one epoch is the enough
+
+208
+00:12:56,799 --> 00:13:00,299
+to just to check the how it works.
+
+209
+00:13:00,299 --> 00:13:03,765
+So let's just keep it as one
+and run training
+
+210
+00:13:05,666 --> 00:13:06,899
+and let's wait
+
+211
+00:13:06,899 --> 00:13:10,499
+15 to 20 minutes
+until it finished that training.
+
+212
+00:13:11,200 --> 00:13:16,499
+Now training is done,
+so let's use it for captioning,
+
+213
+00:13:16,500 --> 00:13:20,565
+but before that we need to rebuild
+the decoder for inference
+
+214
+00:13:21,000 --> 00:13:23,766
+in order to control the growth state
+manually.
+
+215
+00:13:24,033 --> 00:13:28,066
+As we talked in the previous video.
+
+216
+00:13:28,066 --> 00:13:32,665
+So in this cell,
+by re-using the trained layers,
+
+217
+00:13:32,832 --> 00:13:37,599
+we are creating a model for inference.
+
+218
+00:13:37,600 --> 00:13:41,233
+So here you can find train decoder GRU
+
+219
+00:13:41,466 --> 00:13:44,333
+train decoder attention and so on.
+
+220
+00:13:45,732 --> 00:13:49,898
+And compared
+to the train training model, we are adding
+
+221
+00:13:51,100 --> 00:13:53,600
+GRU state to its Io's.
+
+222
+00:13:55,732 --> 00:13:56,764
+For inputs,
+
+223
+00:13:56,765 --> 00:14:00,798
+we are adding GRU state inputs
+and for output we are adding
+
+224
+00:14:01,399 --> 00:14:03,999
+Jerry's state as output.
+
+225
+00:14:04,000 --> 00:14:07,000
+So by doing
+so we can control the GRU state
+
+226
+00:14:07,633 --> 00:14:10,966
+in the inference group.
+
+227
+00:14:10,966 --> 00:14:14,700
+Okay, so let's generate text with this
+
+228
+00:14:15,133 --> 00:14:17,399
+custom inference loop function.
+
+229
+00:14:18,765 --> 00:14:21,699
+We already discussed the
+what kind of the component
+
+230
+00:14:21,700 --> 00:14:26,132
+it should have in the previous video,
+but let's review very briefly.
+
+231
+00:14:27,466 --> 00:14:30,433
+So first we initialize GRU state,
+
+232
+00:14:30,466 --> 00:14:33,499
+in this case just the initialize
+with zero vector simply.
+
+233
+00:14:34,799 --> 00:14:37,098
+And then here we get image
+
+234
+00:14:37,100 --> 00:14:40,700
+and then pre process to image
+and pass it to encoder.
+
+235
+00:14:41,666 --> 00:14:44,832
+Of course, the train encoder
+
+236
+00:14:45,265 --> 00:14:47,999
+and we can get the feature image features
+
+237
+00:14:49,500 --> 00:14:51,633
+and before passing it to our decoder.
+
+238
+00:14:52,033 --> 00:14:55,500
+So we also initialize
+this, this start token
+
+239
+00:14:56,899 --> 00:14:58,999
+as the first word
+
+240
+00:14:59,533 --> 00:15:00,900
+and then
+
+241
+00:15:01,000 --> 00:15:04,565
+we are going to repeat this whole loop
+
+242
+00:15:04,566 --> 00:15:08,533
+again
+and again and generate text one by one.
+
+243
+00:15:09,232 --> 00:15:12,365
+So a step that looks like this
+coding decoder, of course,
+
+244
+00:15:13,200 --> 00:15:17,033
+and then it returns a lot of predictions
+
+245
+00:15:17,232 --> 00:15:19,764
+out of the word of the probabilities.
+
+246
+00:15:20,299 --> 00:15:25,299
+So there are so many ways
+to pick up the actual word the final word,
+
+247
+00:15:25,299 --> 00:15:29,531
+final selection from the list
+of a lot of ward probabilities.
+
+248
+00:15:29,932 --> 00:15:33,932
+But in this case we are pulling the word
+kind of stochastically
+
+249
+00:15:34,865 --> 00:15:38,832
+to introduce some randomness.
+
+250
+00:15:38,832 --> 00:15:42,199
+So it is the
+these lines of code are doing doing that
+
+251
+00:15:42,765 --> 00:15:45,064
+and eventually picking up some words
+
+252
+00:15:45,299 --> 00:15:50,098
+and the the bringing it back to the brink
+bring it back to the word
+
+253
+00:15:50,399 --> 00:15:54,298
+from the word token by using the tokenizer
+
+254
+00:15:55,600 --> 00:15:58,165
+and appending to the list.
+
+255
+00:15:58,166 --> 00:16:00,799
+So eventually we should get some captions.
+
+256
+00:16:01,100 --> 00:16:03,466
+So let's take a look at the result.
+
+257
+00:16:03,466 --> 00:16:06,166
+So defined this function and let's call it
+
+258
+00:16:10,432 --> 00:16:11,999
+so here
+
+259
+00:16:12,466 --> 00:16:17,365
+you can see a caption samples
+for this image.
+
+260
+00:16:17,365 --> 00:16:22,031
+So this sample image is located
+in this directly.
+
+261
+00:16:22,332 --> 00:16:25,699
+Just passing this for the JPEG and the
+
+262
+00:16:25,799 --> 00:16:27,799
+it returns five captions.
+
+263
+00:16:29,000 --> 00:16:33,099
+It looks like this
+a baseball player standing next to the bat
+
+264
+00:16:33,899 --> 00:16:36,564
+a catcher in a field playing baseball
+
+265
+00:16:36,832 --> 00:16:39,032
+or something like that.
+
+266
+00:16:39,832 --> 00:16:42,364
+It is not grammatically perfect,
+
+267
+00:16:42,566 --> 00:16:46,732
+but still the
+you can see it is generating the text,
+
+268
+00:16:46,732 --> 00:16:50,898
+generating multiple text
+and generating the meaningful text.
+
+269
+00:16:51,399 --> 00:16:54,599
+And also we can see our model is capturing
+
+270
+00:16:54,600 --> 00:16:57,333
+important informations like baseball
+
+271
+00:16:57,700 --> 00:16:59,999
+or catcher or
+
+272
+00:17:02,066 --> 00:17:03,399
+a man standing next
+
+273
+00:17:03,399 --> 00:17:07,365
+to another man
+or baseball field or something like that.
+
+274
+00:17:08,333 --> 00:17:10,499
+So still, it's not very
+
+275
+00:17:10,766 --> 00:17:16,432
+it's not perfect,
+but it is generating very meaningful text.
+
+276
+00:17:16,432 --> 00:17:18,632
+It's very surprising, isn't it?
+
+277
+00:17:18,633 --> 00:17:20,833
+So the model is very simple.
+
+278
+00:17:21,032 --> 00:17:25,198
+We are just stacking encoder and decoder
+and then passing the image
+
+279
+00:17:25,200 --> 00:17:29,700
+cap image data to encoder
+and the decoder generate captions
+
+280
+00:17:30,032 --> 00:17:32,931
+one by one in auto regressive way.
+
+281
+00:17:33,965 --> 00:17:36,731
+So just by stacking this
+so we can create this
+
+282
+00:17:36,732 --> 00:17:39,065
+kind of the very small generative model.
+
+283
+00:17:40,299 --> 00:17:41,099
+Okay.
+
+284
+00:17:41,099 --> 00:17:45,565
+Currently there are so many generative
+large language models out there.
+
+285
+00:17:45,566 --> 00:17:48,732
+Of course
+they have more complex and larger network
+
+286
+00:17:49,133 --> 00:17:51,266
+and train a much larger dataset.
+
+287
+00:17:52,133 --> 00:17:55,500
+But the architecture
+may look similar to this simple model.
+
+288
+00:17:56,766 --> 00:17:58,833
+Thank you so much for watching this video.
+
+289
+00:17:58,833 --> 00:18:00,599
+I hope you enjoyed.
+
+290
+00:18:00,766 --> 00:18:04,399
+If you like this presentation,
+you'll find more in our ASL
+
+291
+00:18:04,400 --> 00:18:08,400
+Github repository with 90
+plus immersion regarding notebooks
+
+292
+00:18:10,133 --> 00:18:11,732
+if you find it useful.
+
+293
+00:18:11,732 --> 00:18:14,398
+Please
+don't forget to star the repository.
+

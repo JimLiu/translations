@@ -1,0 +1,271 @@
+Welcome to the Introduction to the Generative AI Studio course.
+In this video, you learn what Generative AI Studio is and describe its options for use.
+You also demo the Generative AI Studio’s language tool yourself.
+What is Generative AI?
+It is a type of artificial intelligence that generates content for you.
+What kind of content?
+Well, the generated content can be multi-modal, including text, images, audio, and video.
+When given a prompt or a request, Generative AI can help you achieve various tasks, such
+as document summarization, information extraction, code generation, marketing campaign creation,
+virtual assistance, and call center bot.
+And these are just a few examples!
+How does AI generate new content?
+It learns from a massive amount of existing content.
+This includes text, audio and video.
+The process of learning from existing content is called training, which results in the creation
+of a “foundation model.”
+An LLM, or large language model, which powers chat bots like Bard, is a typical example
+of a foundation model.
+The foundation model
+can then be used to generate content and solve general problems, such as content extraction
+and document summarization.
+It can also be trained further with new datasets in your field to solve specific problems,
+such as financial model generation and healthcare consulting.
+This results in the creation of a new model that is tailored to your specific needs.
+How can you use the foundation model to power your applications, and how can you further
+train, or tune, the foundation model to solve a problem in your specific field?
+Google Cloud provides several easy-to-use tools that help you use generative AI in your
+projects with or without an AI and machine learning background.
+One such tool is Vertex AI.
+Vertex AI is an end-to-end ML development platform on Google Cloud that helps you build,
+deploy, and manage machine learning models.
+With Vertex AI, if you are an app developer
+or data scientist and want  to build an application,
+you can use Generative AI Studio to quickly prototype and customize generative AI models
+with no code or low code.
+If you are a data scientist or ML developer who wants to build and automate a generative
+AI model, you can start from Model Garden.
+Model Garden lets you discover and interact with Google’s foundation and third-party
+open source models and has built-in MLOps tools to automate the ML pipeline.
+In this course, you focus on Generative AI Studio.
+Generative AI Studio supports language, vision, and speech.
+The list grows as you are learning this course.
+For language, you can design a prompt to perform tasks and tune language models.
+For vision, you can generate an image based on a prompt and further edit the image.
+For speech, you can generate text from speech or vice versa.
+Let’s focus on what you can do with Language in Generative AI Studio.
+specifically, you can: Design prompts for tasks relevant to your
+business use case including code generation.
+Create conversations by specifying the context that instructs how the model should respond.
+And tune a model so it is better equipped for your use case, which allows you to then
+deploy it to an endpoint to get predictions or test it in prompt design.
+Let’s walk through these three features in detail.
+First is prompt design.
+To get started experimenting with large language models, or LLMs, click on NEW PROMPT.
+In the world of Generative AI, a prompt is just a fancy name for the input text that
+you feed to your model.
+You can feed your desired input text like questions and instructions to the model.
+The model will then provide a response based on how you structured your prompt, therefore,
+the answers you get depend on the questions you ask.
+The process of figuring out and designing the best input text to get the desired response
+back from the model is called Prompt Design, which often involves a lot of experimentation.
+Let’s start with a free-form prompt.
+One way to design a prompt is to simply tell the model what you want.
+0 In other words, provide an instruction.
+For example,
+Generate a list of items I need for a camping trip to Joshua Tree National Park.
+We send this text to the model,
+And…you can see that the model outputs a useful list of items we don’t want to camp
+without.
+This approach of writing a single command so that the LLM can adopt a certain behavior,
+is called zero shot prompting.
+Generally, there are 3 methods that you can use to shape the model's response in a way
+that you desire.
+Zero-shot prompting - is a method where the LLM is given no additional data on the specific
+task that it is being asked to perform.
+Instead, it is only given a prompt that describes the task.
+For example, if you want the LLM to answer a question, you just prompt "what is prompt
+design?".
+One-shot prompting - is a method where the LLM is given a single example of the task
+that it is being asked to perform.
+For example, if you want the LLM to write a poem, you might provide a single example
+poem. and Few-shot prompting - is a method where the LLM is given a small number of examples
+of the task that it is being asked to perform.
+0 For example, if you want the LLM to write a news article, you might give it a few news
+articles to read.
+You can use the structured mode to design the few-shot prompting by providing a context
+and additional examples for the model to learn from.
+The structured prompt contains a few different components:
+First we have the context, which instructs how the model should respond.
+You can specify words the model can or cannot use, topics to focus on or avoid, or a particular
+response format.
+And the context applies each time you send a request to the model.
+Let’s say we want to use an LLM to answer questions based on some background text.
+In this case, a passage that describes changes in rainforest vegetation in the Amazon.
+We can paste in the background text as the context.
+Then, we add some examples of questions that could be answered from this passage
+Like what does LGM stand for?
+Or what did the analysis from the sediment deposits indicate?
+We’ll need to add in the corresponding answers to these questions, to demonstrate how we
+want the model to respond.
+Then, we can test out the prompt we’ve designed by sending a new question as input.
+And there you go, you’ve prototyped a q&a system based on background text in just a
+few minutes!
+Please note a few best practices around prompt design.
+Be concise Be specific and well-defined Ask one task at a time Turn generative tasks into
+classification tasks.
+For example, instead of asking what programming language to learn, ask if Python, Java, or
+C is a better fit for a beginner in programming.
+and Improve response quality by including examples
+Adding instructions and a few examples tends to yield good results however there’s currently
+no one best way to write a prompt.
+You may need to experiment with different structures, formats, and examples to see what
+works best for your use case.
+For more information about prompt design, please check text prompt design in the reading
+list.
+So if you designed a prompt that you think is working pretty well, you can save it and
+return to it later.
+Your saved prompt will be visible in the prompt gallery, which is a curated collection of
+sample prompts that show how generative AI models can work for a variety of use cases.
+Finally, in addition to testing different prompts and prompt structures, there are a
+few model parameters you can experiment with to try to improve the quality of responses.
+First, there are different models you can choose from.
+Each model is tuned to perform well on specific tasks.
+You can also specify the temperature, top P, and top K. These parameters all adjust
+the randomness of responses by controlling how the output tokens are selected.
+When you send a prompt to the model, it produces an array of probabilities over the words that
+could come next.
+And from this array, we need some strategy to decide what to return.
+A simple strategy might be to select the most likely word at every timestep.
+But this method can result in uninteresting and sometimes repetitive answers.
+On the contrary, if you randomly sample over the distribution returned by the model, you
+might get some unlikely responses.
+By controlling the degree of randomness, you can get more unexpected, and some might say
+creative, responses.
+Back to the model parameters, temperature is a number used to tune the degree of randomness.
+Low temperature: Means to select the words that are highly
+possible and more predictable.
+In this case, those are flowers and the other words that are located at the beginning of
+the list.
+This setting is generally better for tasks like q&a and summarization where you expect
+a more “predictable” answer with less variation.
+… High temperature:
+Means to select the words  that have low possibility
+and are more unusual.
+In this case, those are bugs and the other words that that are located at the end of
+0 the list.
+This setting is good if you want to generate more “creative” or unexpected content.
+In addition to adjusting the temperature, top K lets the model randomly return a word
+from the top K number of words in terms of possibility.
+For example, top 2 means you get a random word from the top 2 possible words including
+flowers and trees.
+This approach allows the other high-scoring word a chance of being selected.
+However, if the probability distribution of the words is highly skewed and you have one
+word that is very likely and everything else is very unlikely, this approach can result
+in some strange responses.
+The difficulty of selecting the best top-k value, leads to another popular approach that
+dynamically sets the size of the shortlist of words.
+Top P allows the model to randomly return a word from the top P probability of words.
+With top P, you choose from a set of words with the sum of the likelihoods not exceeding
+P. For example, p of 0.75 means you sample from a set of words that have a cumulative
+probability greater than 0.75.
+In this case, it includes three words: flowers, trees, and herbs.
+This way, the size of the set of words can dynamically increase and decrease according
+to the probability distribution of the next word on the list.
+In sum, Generative AI Studio provides a few model parameters for you to play with such
+as the model, temperature, top K, and top P. Note that, you are not required to adjust
+them constantly, especially top k and top p.
+Now let’s look at the second feature, which creates conversations.
+First, you need to specify the conversation context.
+Context instructs how the model should respond.
+For example, specifying words the model can or cannot use, topics to focus on or avoid,
+or response format.
+Context applies each time you send a request to the model.
+For a simple example, you can define a scenario and tell the AI how to respond to help desk
+queries.
+Your name is Roy.
+You are a support technician of an IT department.
+You only respond with "Have you tried turning it off and on again?"
+to any queries.
+You can tune the parameters on the right, the same as you do when designing the prompt.
+To to see how it works, you can type My computer is slow in the chat box and press enter.
+The AI responds: Have you tried turning it off and on again?
+Exactly as you told the AI to do.
+The cool thing is that Google provides the
+APIs and SDKs to help you  build your own application.
+You can simply click view code.
+First, you need to download the Vertex AI SDKs that fit your programming language, like
+Python and Curl.
+SDK stands for software design kits.
+They implement the functions and do the job for you.
+You can use them like you call libraries from the code.
+You then follow the sample code and the API, and insert the code into your application.
+Now let’s look at the third feature, tune a language model.
+If you’ve been prototyping with large language models, you might be wondering if there’s
+a way you can improve the quality of responses beyond just prompt design.
+So let’s learn how to tune a large language model and how to launch a tuning job from
+Generative AI Studio.
+As a quick recap, the prompt is your text input that you pass to the model.
+Your prompt might look like an instruction…
+And maybe you add some examples…
+Then you send this text to the model so that it adopts the behavior that you want.
+Prompt design allows for fast experimentation and customization.
+And because you’re not writing any complicated code, you don’t need to be an ML expert
+to get started.
+But producing prompts can be tricky.
+Small changes in wording or word order can affect the model results in ways that aren’t
+totally predictable.
+And you can’t really fit all that many examples into a prompt.
+Even when you do discover a good prompt for your use case, you might notice the quality
+of model responses isn’t totally consistent.
+One thing we can do to alleviate these issues is to tune the model.
+So what’s tuning?
+Well, one version you might be familiar with is fine-tuning.
+In this scenario, we take a model that was pretrained on a generic dataset.
+We make a copy of this model.
+Then, using those learned weights as a starting point, we re-train the model
+on a new domain-specific dataset.
+This technique has been pretty effective for lots of different use cases.
+But when we try to fine tune LLMs, we run into some challenges.
+LLMs are, as the name suggests, large.
+So updating every weight can take a long training job.
+Compound all of that computation with the hassle and cost of now having to serve this
+giant model…
+And as a result, fine-tuning a large language model might not be the best option for you.
+But there’s an innovative approach to tuning called parameter-efficient tuning.
+This is a super exciting research area that aims to reduce the challenges of fine-tuning
+LLMs, by only training a subset of parameters.
+These parameters might be a subset of the existing model parameters.
+Or they could be an entirely  new set of parameters.
+For example, maybe you add on some additional layers to the model or an extra embedding
+to the prompt.
+If you want to learn more  about parameter-efficient
+tuning and some of the different methods,
+a summary paper is included in the reading list of this course.
+But if you just want to get to building, then let's move to Generative AI Studio and see
+how to start a tuning job.
+From the language section of Generative AI Studio,
+Select TUNING.
+To create a tuned model, we provide a name.
+Then point to the local or Cloud Storage location of your training data.
+Parameter efficient tuning is ideally suited for scenarios where you have "modest" amounts
+of training data, say hundreds or maybe thousands of training examples.
+Your training data should be structured as a supervised training dataset in a text to
+text format.
+Each record or row in the data will contain the input text, in other words, the prompt,
+which is followed by the expected output of the model.
+This means that the model can be tuned for a task that can be modeled as a text-to-text
+problem.
+After specifying the path to your dataset, you can start the tuning job and monitor the
+status in the Google Cloud console.
+When the tuning job completes, you’ll see the tuned model in the Vertex AI Model Registry
+and you can deploy it to an endpoint for serving, or you can test it in the Generative AI Studio.
+In this course, you learned what Generative AI is and the tools provided by Google Cloud
+to empower your project with Generative AI capabilities.
+Specifically, you focused on Generative AI
+Studio, where you can use  genAI in your application
+by quickly prototyping and customizing generative AI models.
+You learned that Generative AI Studio supports three options: language, vision, and speech.
+You then walked through the three major features in Language: design and test prompt, create
+conversations, and tune models.
+This was a short lesson introducing Generative AI studio on Vertex AI.
+For more information about natural language processing and different types of language
+models like decoder-encoder, transformer, and LLM, please check the course titled Natural
+Language Processing on Google Cloud listed in the reading list.
+Now it’s time to play with Generative AI Studio in a hands-on lab, where you:
+Design and test prompts in both free-form and structured modes.
+Create conversations.
+And explore the prompt gallery.
+By the end of this lab, you will be able to use the capabilities of Generative AI Studio
+that we’ve discussed in this course.
+Have fun exploring!

@@ -1,0 +1,586 @@
+[Script Info]
+
+Title: Introduction to Large Language Models
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H000092FE,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.57,0:00:02.76,Secondary,,0,0,0,,JOHN EWALD: Hello, and welcome to Introduction
+Dialogue: 0,0:00:04.39,0:00:06.72,Secondary,,0,0,0,,My name is John Ewald, and I'm a training developer here
+Dialogue: 0,0:00:08.16,0:00:10.86,Secondary,,0,0,0,,In this course, you learn to define large language
+Dialogue: 0,0:00:10.86,0:00:14.67,Secondary,,0,0,0,,models, or LLMs, describe LLM use cases,
+Dialogue: 0,0:00:14.67,0:00:18.18,Secondary,,0,0,0,,explain prompt tuning, and describe Google's Gen AI
+Dialogue: 0,0:00:20.43,0:00:24.42,Secondary,,0,0,0,,Large language models, or LLMs, are a subset of deep learning.
+Dialogue: 0,0:00:24.42,0:00:26.22,Secondary,,0,0,0,,To find out more about deep learning,
+Dialogue: 0,0:00:26.22,0:00:29.67,Secondary,,0,0,0,,see our Introduction to Generative AI course video.
+Dialogue: 0,0:00:29.67,0:00:32.43,Secondary,,0,0,0,,LLMs and generative AI intersect and they are
+Dialogue: 0,0:00:32.43,0:00:35.40,Secondary,,0,0,0,,both a part of deep learning.
+Dialogue: 0,0:00:35.40,0:00:38.4,Secondary,,0,0,0,,Another area of AI you may be hearing a lot about
+Dialogue: 0,0:00:38.4,0:00:39.72,Secondary,,0,0,0,,is generative AI.
+Dialogue: 0,0:00:39.72,0:00:41.97,Secondary,,0,0,0,,This is a type of artificial intelligence that
+Dialogue: 0,0:00:41.97,0:00:45.73,Secondary,,0,0,0,,can produce new content, including text, images, audio,
+Dialogue: 0,0:00:45.73,0:00:48.29,Secondary,,0,0,0,,and synthetic data.
+Dialogue: 0,0:00:48.29,0:00:50.65,Secondary,,0,0,0,,So what are large language models?
+Dialogue: 0,0:00:50.65,0:00:53.98,Secondary,,0,0,0,,Large language models refer to large general-purpose language
+Dialogue: 0,0:00:53.98,0:00:56.59,Secondary,,0,0,0,,models that can be pre-trained and then fine
+Dialogue: 0,0:00:59.2,0:01:03.14,Secondary,,0,0,0,,What do pre-trained and fine tuned mean?
+Dialogue: 0,0:01:03.14,0:01:05.3,Secondary,,0,0,0,,Imagine training a dog.
+Dialogue: 0,0:01:05.3,0:01:07.7,Secondary,,0,0,0,,Often, you train your dog basic commands
+Dialogue: 0,0:01:07.7,0:01:12.78,Secondary,,0,0,0,,such as sit, come, down, and stay.
+Dialogue: 0,0:01:12.78,0:01:15.75,Secondary,,0,0,0,,These commands are normally sufficient for everyday life
+Dialogue: 0,0:01:15.75,0:01:19.49,Secondary,,0,0,0,,and help your dog become a good canine citizen.
+Dialogue: 0,0:01:19.49,0:01:22.49,Secondary,,0,0,0,,However, if you need a special service dog such as a police
+Dialogue: 0,0:01:22.49,0:01:28.48,Secondary,,0,0,0,,dog, a guide dog, or a hunting dog, you add special trainings.
+Dialogue: 0,0:01:28.48,0:01:33.28,Secondary,,0,0,0,,The similar idea applies to large language models.
+Dialogue: 0,0:01:33.28,0:01:35.49,Secondary,,0,0,0,,These models are trained for general purposes
+Dialogue: 0,0:01:35.49,0:01:38.16,Secondary,,0,0,0,,to solve common language problems such as text
+Dialogue: 0,0:01:41.22,0:01:47.9,Secondary,,0,0,0,,summarization, and text generation across industries.
+Dialogue: 0,0:01:47.9,0:01:49.90,Secondary,,0,0,0,,The models can then be tailored to solve specific problems
+Dialogue: 0,0:01:58.79,0:02:00.56,Secondary,,0,0,0,,Let's further break down the concept
+Dialogue: 0,0:02:00.56,0:02:04.70,Secondary,,0,0,0,,into three major features of large language models.
+Dialogue: 0,0:02:04.70,0:02:06.99,Secondary,,0,0,0,,Large indicates two meanings.
+Dialogue: 0,0:02:06.99,0:02:10.4,Secondary,,0,0,0,,First is the enormous size of the training data set,
+Dialogue: 0,0:02:10.4,0:02:12.65,Secondary,,0,0,0,,sometimes at the petabyte scale.
+Dialogue: 0,0:02:12.65,0:02:15.29,Secondary,,0,0,0,,Second, it refers to the parameter count.
+Dialogue: 0,0:02:15.29,0:02:18.89,Secondary,,0,0,0,,In ML, parameters are often called hyperparameters.
+Dialogue: 0,0:02:18.89,0:02:21.71,Secondary,,0,0,0,,Parameters are basically the memories and the knowledge
+Dialogue: 0,0:02:24.26,0:02:26.54,Secondary,,0,0,0,,Parameters define the skill of a model
+Dialogue: 0,0:02:30.0,0:02:31.83,Secondary,,0,0,0,,General purpose means that the models
+Dialogue: 0,0:02:31.83,0:02:34.44,Secondary,,0,0,0,,are sufficient to solve common problems.
+Dialogue: 0,0:02:34.44,0:02:36.87,Secondary,,0,0,0,,Two reasons lead to this idea.
+Dialogue: 0,0:02:36.87,0:02:40.2,Secondary,,0,0,0,,First is the commonality of a human language regardless
+Dialogue: 0,0:02:40.2,0:02:41.58,Secondary,,0,0,0,,of the specific tasks.
+Dialogue: 0,0:02:41.58,0:02:44.82,Secondary,,0,0,0,,And second is the resource restriction.
+Dialogue: 0,0:02:44.82,0:02:47.43,Secondary,,0,0,0,,Only certain organizations have the capability
+Dialogue: 0,0:02:47.43,0:02:51.21,Secondary,,0,0,0,,to train such large language models with huge data sets
+Dialogue: 0,0:02:51.21,0:02:54.15,Secondary,,0,0,0,,and a tremendous number of parameters.
+Dialogue: 0,0:02:54.15,0:02:56.85,Secondary,,0,0,0,,How about letting them create fundamental language models
+Dialogue: 0,0:02:58.87,0:03:02.68,Secondary,,0,0,0,,This leads to the last point, pre-trained and fine tuned,
+Dialogue: 0,0:03:02.68,0:03:04.93,Secondary,,0,0,0,,meaning to pre-train a large language
+Dialogue: 0,0:03:07.66,0:03:10.90,Secondary,,0,0,0,,and then fine tune it for specific aims with a much
+Dialogue: 0,0:03:13.70,0:03:15.86,Secondary,,0,0,0,,The benefits of using large language models
+Dialogue: 0,0:03:17.19,0:03:20.88,Secondary,,0,0,0,,First, a single model can be used for different tasks.
+Dialogue: 0,0:03:20.88,0:03:22.55,Secondary,,0,0,0,,This is a dream come true.
+Dialogue: 0,0:03:22.55,0:03:24.53,Secondary,,0,0,0,,These large language models that are
+Dialogue: 0,0:03:27.95,0:03:31.32,Secondary,,0,0,0,,of parameters are smart enough to solve different tasks,
+Dialogue: 0,0:03:31.32,0:03:35.21,Secondary,,0,0,0,,including language translation, sentence completion, text
+Dialogue: 0,0:03:38.81,0:03:42.56,Secondary,,0,0,0,,Second, large language models require minimal field training
+Dialogue: 0,0:03:42.56,0:03:46.22,Secondary,,0,0,0,,data when you tailor them to solve your specific problem.
+Dialogue: 0,0:03:46.22,0:03:49.1,Secondary,,0,0,0,,Large language models obtain decent performance
+Dialogue: 0,0:03:49.1,0:03:51.42,Secondary,,0,0,0,,even with little domain training data.
+Dialogue: 0,0:03:51.42,0:03:54.5,Secondary,,0,0,0,,In other words, they can be used for few shot or even
+Dialogue: 0,0:03:55.79,0:03:57.62,Secondary,,0,0,0,,In machine learning, few shot refers
+Dialogue: 0,0:03:57.62,0:03:59.87,Secondary,,0,0,0,,to training a model with minimal data,
+Dialogue: 0,0:03:59.87,0:04:02.54,Secondary,,0,0,0,,and zero shot implies that a model can recognize
+Dialogue: 0,0:04:02.54,0:04:05.69,Secondary,,0,0,0,,things that have not explicitly been taught in the training
+Dialogue: 0,0:04:07.11,0:04:09.72,Secondary,,0,0,0,,Third, the performance of large language models
+Dialogue: 0,0:04:09.72,0:04:15.55,Secondary,,0,0,0,,is continuously growing when you add more data and parameters.
+Dialogue: 0,0:04:15.55,0:04:17.95,Secondary,,0,0,0,,Let's take PaLM as an example.
+Dialogue: 0,0:04:17.95,0:04:21.31,Secondary,,0,0,0,,In April 2022, Google released PaLM,
+Dialogue: 0,0:04:21.31,0:04:26.5,Secondary,,0,0,0,,short for Pathways Language Model, a 540 billion-parameter
+Dialogue: 0,0:04:26.5,0:04:28.90,Secondary,,0,0,0,,model that achieves a state of the art performance
+Dialogue: 0,0:04:31.66,0:04:35.8,Secondary,,0,0,0,,PaLM is a dense decoder-only transformer model.
+Dialogue: 0,0:04:35.8,0:04:38.53,Secondary,,0,0,0,,It has 540 billion parameters.
+Dialogue: 0,0:04:38.53,0:04:40.79,Secondary,,0,0,0,,It leverages the new pathways system,
+Dialogue: 0,0:04:40.79,0:04:42.97,Secondary,,0,0,0,,which has enabled Google to efficiently
+Dialogue: 0,0:04:47.86,0:04:50.26,Secondary,,0,0,0,,Pathway is a new AI architecture that
+Dialogue: 0,0:04:50.26,0:04:54.31,Secondary,,0,0,0,,will handle many tasks at once, learn new tasks quickly,
+Dialogue: 0,0:04:54.31,0:04:57.89,Secondary,,0,0,0,,and reflect a better understanding of the world.
+Dialogue: 0,0:04:57.89,0:05:01.34,Secondary,,0,0,0,,The system enables PaLM to orchestrate distributed
+Dialogue: 0,0:05:01.34,0:05:04.63,Secondary,,0,0,0,,computation for accelerators.
+Dialogue: 0,0:05:04.63,0:05:07.93,Secondary,,0,0,0,,We previously mentioned that PaLM is a transformer model.
+Dialogue: 0,0:05:07.93,0:05:11.48,Secondary,,0,0,0,,A transformer model consists of encoder and decoder.
+Dialogue: 0,0:05:11.48,0:05:13.63,Secondary,,0,0,0,,The encoder encodes the input sequence
+Dialogue: 0,0:05:13.63,0:05:15.67,Secondary,,0,0,0,,and passes it to the decoder, which
+Dialogue: 0,0:05:15.67,0:05:18.1,Secondary,,0,0,0,,learns how to decode the representations
+Dialogue: 0,0:05:18.1,0:05:20.96,Secondary,,0,0,0,,for a relevant task.
+Dialogue: 0,0:05:20.96,0:05:23.99,Secondary,,0,0,0,,We've come a long away from traditional programming
+Dialogue: 0,0:05:27.5,0:05:28.94,Secondary,,0,0,0,,In traditional programming, we used
+Dialogue: 0,0:05:28.94,0:05:32.6,Secondary,,0,0,0,,to have to hard code the rules for distinguishing a cat--
+Dialogue: 0,0:05:32.6,0:05:37.88,Secondary,,0,0,0,,type, animal; legs, four; ears, two; fur, yes;
+Dialogue: 0,0:05:37.88,0:05:40.75,Secondary,,0,0,0,,likes yarn, catnip.
+Dialogue: 0,0:05:40.75,0:05:42.79,Secondary,,0,0,0,,In the wave of neural networks, we
+Dialogue: 0,0:05:42.79,0:05:45.82,Secondary,,0,0,0,,could give the network pictures of cats and dogs and ask,
+Dialogue: 0,0:05:45.82,0:05:47.5,Secondary,,0,0,0,,is this a cat?
+Dialogue: 0,0:05:47.5,0:05:49.3,Secondary,,0,0,0,,And it would predict a cat.
+Dialogue: 0,0:05:49.3,0:05:51.97,Secondary,,0,0,0,,In the generative wave, we as users
+Dialogue: 0,0:05:51.97,0:05:55.40,Secondary,,0,0,0,,can generate our own content, whether it be text, images,
+Dialogue: 0,0:05:55.40,0:05:57.58,Secondary,,0,0,0,,audio, video, or other.
+Dialogue: 0,0:05:57.58,0:06:00.40,Secondary,,0,0,0,,For example, models like PaLM, or LaMDA,
+Dialogue: 0,0:06:00.40,0:06:03.49,Secondary,,0,0,0,,or Language Model for Dialogue Applications,
+Dialogue: 0,0:06:03.49,0:06:06.97,Secondary,,0,0,0,,ingest very, very large data from multiple sources
+Dialogue: 0,0:06:06.97,0:06:10.6,Secondary,,0,0,0,,across the internet and build foundation language models
+Dialogue: 0,0:06:10.6,0:06:12.91,Secondary,,0,0,0,,we can use simply by asking a question,
+Dialogue: 0,0:06:12.91,0:06:15.25,Secondary,,0,0,0,,whether typing it into a prompt or verbally
+Dialogue: 0,0:06:17.29,0:06:19.45,Secondary,,0,0,0,,So when you ask it what's a cat, it
+Dialogue: 0,0:06:19.45,0:06:23.49,Secondary,,0,0,0,,can give you everything it has learned about a cat.
+Dialogue: 0,0:06:23.49,0:06:26.79,Secondary,,0,0,0,,Let's compare LLM development using pre-trained models
+Dialogue: 0,0:06:26.79,0:06:29.28,Secondary,,0,0,0,,with traditional ML development.
+Dialogue: 0,0:06:29.28,0:06:33.7,Secondary,,0,0,0,,First, with LLM development, you don't need to be an expert.
+Dialogue: 0,0:06:33.7,0:06:34.80,Secondary,,0,0,0,,You don't need training examples.
+Dialogue: 0,0:06:34.80,0:06:37.20,Secondary,,0,0,0,,And there is no need to train a model.
+Dialogue: 0,0:06:37.20,0:06:40.11,Secondary,,0,0,0,,All you need to do is think about prompt design, which
+Dialogue: 0,0:06:40.11,0:06:43.57,Secondary,,0,0,0,,is the process of creating a prompt that is clear, concise,
+Dialogue: 0,0:06:44.67,0:06:48.54,Secondary,,0,0,0,,It is an important part of natural language processing.
+Dialogue: 0,0:06:48.54,0:06:50.19,Secondary,,0,0,0,,In traditional machine learning, you
+Dialogue: 0,0:06:50.19,0:06:52.65,Secondary,,0,0,0,,need training examples to train a model.
+Dialogue: 0,0:06:52.65,0:06:56.51,Secondary,,0,0,0,,You also need compute time and hardware.
+Dialogue: 0,0:06:56.51,0:07:01.76,Secondary,,0,0,0,,Let's take a look at an example of a text generation use case.
+Dialogue: 0,0:07:01.76,0:07:05.99,Secondary,,0,0,0,,Question answering, or QA, is a subfield of natural language
+Dialogue: 0,0:07:05.99,0:07:09.44,Secondary,,0,0,0,,processing that deals with the task of automatically answering
+Dialogue: 0,0:07:09.44,0:07:12.71,Secondary,,0,0,0,,questions posed in natural language.
+Dialogue: 0,0:07:12.71,0:07:16.10,Secondary,,0,0,0,,QA systems are typically trained on a large amount
+Dialogue: 0,0:07:16.10,0:07:17.27,Secondary,,0,0,0,,of text and code.
+Dialogue: 0,0:07:17.27,0:07:19.89,Secondary,,0,0,0,,And they are able to answer a wide range of questions,
+Dialogue: 0,0:07:19.89,0:07:23.60,Secondary,,0,0,0,,including factual, definitional, and opinion-based questions.
+Dialogue: 0,0:07:23.60,0:07:26.6,Secondary,,0,0,0,,The key here is that you need domain knowledge
+Dialogue: 0,0:07:26.6,0:07:29.56,Secondary,,0,0,0,,to develop these question-answering models.
+Dialogue: 0,0:07:29.56,0:07:32.17,Secondary,,0,0,0,,For example, domain knowledge is required
+Dialogue: 0,0:07:32.17,0:07:34.90,Secondary,,0,0,0,,to develop a question-answering model for customer
+Dialogue: 0,0:07:38.16,0:07:41.28,Secondary,,0,0,0,,Using generative QA, the model generates free text
+Dialogue: 0,0:07:43.44,0:07:47.36,Secondary,,0,0,0,,There is no need for domain knowledge.
+Dialogue: 0,0:07:47.36,0:07:49.70,Secondary,,0,0,0,,Let's look at three questions given to Bard,
+Dialogue: 0,0:07:49.70,0:07:55.26,Secondary,,0,0,0,,a large language model chat bot developed by Google AI.
+Dialogue: 0,0:07:55.26,0:07:56.55,Secondary,,0,0,0,,Question one.
+Dialogue: 0,0:07:56.55,0:07:59.31,Secondary,,0,0,0,,"This year's sales are $100,000.
+Dialogue: 0,0:07:59.31,0:08:01.50,Secondary,,0,0,0,,Expenses are $60,000.
+Dialogue: 0,0:08:01.50,0:08:03.73,Secondary,,0,0,0,,How much is net profit?"
+Dialogue: 0,0:08:03.73,0:08:07.66,Secondary,,0,0,0,,Bard first shares how net profit is calculated, then
+Dialogue: 0,0:08:07.66,0:08:09.46,Secondary,,0,0,0,,performs the calculation.
+Dialogue: 0,0:08:09.46,0:08:14.13,Secondary,,0,0,0,,Then Bard provides the definition of net profit.
+Dialogue: 0,0:08:14.13,0:08:15.41,Secondary,,0,0,0,,Here's another question.
+Dialogue: 0,0:08:15.41,0:08:18.92,Secondary,,0,0,0,,Inventory on hand is 6,000 units.
+Dialogue: 0,0:08:18.92,0:08:21.83,Secondary,,0,0,0,,A new order requires 8,000 units.
+Dialogue: 0,0:08:21.83,0:08:25.31,Secondary,,0,0,0,,How many units do I need to fill to complete the order?
+Dialogue: 0,0:08:25.31,0:08:29.75,Secondary,,0,0,0,,Again, Bard answers the question by performing the calculation.
+Dialogue: 0,0:08:29.75,0:08:32.51,Secondary,,0,0,0,,And our last example, we have 1,000 sensors
+Dialogue: 0,0:08:32.51,0:08:34.64,Secondary,,0,0,0,,in 10 geographic regions.
+Dialogue: 0,0:08:34.64,0:08:38.64,Secondary,,0,0,0,,How many sensors do we have on average in each region?
+Dialogue: 0,0:08:38.64,0:08:40.53,Secondary,,0,0,0,,Bard answers the question with an example
+Dialogue: 0,0:08:40.53,0:08:44.49,Secondary,,0,0,0,,on how to solve the problem and some additional context.
+Dialogue: 0,0:08:44.49,0:08:47.98,Secondary,,0,0,0,,In each of our questions, a desired response was obtained.
+Dialogue: 0,0:08:47.98,0:08:50.67,Secondary,,0,0,0,,This is due to prompt design.
+Dialogue: 0,0:08:50.67,0:08:52.50,Secondary,,0,0,0,,Prompt design and prompt engineering
+Dialogue: 0,0:08:52.50,0:08:56.64,Secondary,,0,0,0,,are two closely-related concepts in natural language processing.
+Dialogue: 0,0:08:56.64,0:08:58.59,Secondary,,0,0,0,,Both involve the process of creating
+Dialogue: 0,0:08:58.59,0:09:01.44,Secondary,,0,0,0,,a prompt that is clear, concise, and informative.
+Dialogue: 0,0:09:01.44,0:09:05.2,Secondary,,0,0,0,,However, there are some key differences between the two.
+Dialogue: 0,0:09:05.2,0:09:08.32,Secondary,,0,0,0,,Prompt design is the process of creating a prompt that
+Dialogue: 0,0:09:08.32,0:09:11.65,Secondary,,0,0,0,,is tailored to the specific task that this system is
+Dialogue: 0,0:09:11.65,0:09:13.60,Secondary,,0,0,0,,being asked to perform.
+Dialogue: 0,0:09:13.60,0:09:15.37,Secondary,,0,0,0,,For example, if the system is being
+Dialogue: 0,0:09:15.37,0:09:18.34,Secondary,,0,0,0,,asked to translate a text from English to French,
+Dialogue: 0,0:09:18.34,0:09:20.47,Secondary,,0,0,0,,the prompt should be written in English
+Dialogue: 0,0:09:20.47,0:09:22.99,Secondary,,0,0,0,,and should specify that the translation should
+Dialogue: 0,0:09:24.61,0:09:26.29,Secondary,,0,0,0,,Prompt engineering is the process
+Dialogue: 0,0:09:26.29,0:09:28.21,Secondary,,0,0,0,,of creating a prompt that is designed
+Dialogue: 0,0:09:30.29,0:09:32.96,Secondary,,0,0,0,,This may involve using domain-specific knowledge,
+Dialogue: 0,0:09:32.96,0:09:35.20,Secondary,,0,0,0,,providing examples of the desired output,
+Dialogue: 0,0:09:35.20,0:09:37.18,Secondary,,0,0,0,,or using keywords that are known to be
+Dialogue: 0,0:09:40.18,0:09:42.73,Secondary,,0,0,0,,Prompt design is a more general concept,
+Dialogue: 0,0:09:42.73,0:09:45.79,Secondary,,0,0,0,,while prompt engineering is a more specialized concept.
+Dialogue: 0,0:09:45.79,0:09:48.61,Secondary,,0,0,0,,Prompt design is essential, while prompt engineering
+Dialogue: 0,0:09:48.61,0:09:50.32,Secondary,,0,0,0,,is only necessary for systems that
+Dialogue: 0,0:09:54.91,0:09:57.51,Secondary,,0,0,0,,There are three kinds of large language models,
+Dialogue: 0,0:09:57.51,0:10:00.18,Secondary,,0,0,0,,generic language models, instruction tuned,
+Dialogue: 0,0:10:00.18,0:10:01.83,Secondary,,0,0,0,,and dialogue tuned.
+Dialogue: 0,0:10:01.83,0:10:04.74,Secondary,,0,0,0,,Each needs prompting in a different way.
+Dialogue: 0,0:10:04.74,0:10:07.11,Secondary,,0,0,0,,Generic language models predict the next word
+Dialogue: 0,0:10:07.11,0:10:10.29,Secondary,,0,0,0,,based on the language in the training data.
+Dialogue: 0,0:10:10.29,0:10:13.7,Secondary,,0,0,0,,This is an example of a generic language model.
+Dialogue: 0,0:10:13.7,0:10:16.37,Secondary,,0,0,0,,The next word is a token based on the language in the training
+Dialogue: 0,0:10:17.52,0:10:20.6,Secondary,,0,0,0,,In this example, "the cat sat on,"
+Dialogue: 0,0:10:20.6,0:10:22.25,Secondary,,0,0,0,,the next word should be "the."
+Dialogue: 0,0:10:22.25,0:10:26.63,Secondary,,0,0,0,,And you can see that "the" is the most likely next word.
+Dialogue: 0,0:10:26.63,0:10:30.98,Secondary,,0,0,0,,Think of this type as an autocomplete in search.
+Dialogue: 0,0:10:30.98,0:10:33.20,Secondary,,0,0,0,,In instruction tuned, the model is
+Dialogue: 0,0:10:33.20,0:10:35.54,Secondary,,0,0,0,,trained to predict a response to the instructions
+Dialogue: 0,0:10:37.78,0:10:40.57,Secondary,,0,0,0,,For example, summarize a text of X,
+Dialogue: 0,0:10:40.57,0:10:43.6,Secondary,,0,0,0,,generate a poem in the style of X,
+Dialogue: 0,0:10:43.6,0:10:48.69,Secondary,,0,0,0,,give me a list of keywords based on semantic similarity for X.
+Dialogue: 0,0:10:48.69,0:10:51.12,Secondary,,0,0,0,,And in this example, classify the text
+Dialogue: 0,0:10:51.12,0:10:54.98,Secondary,,0,0,0,,into neutral, negative, or positive.
+Dialogue: 0,0:10:54.98,0:10:58.31,Secondary,,0,0,0,,In dialogue tuned, the model is trained to have a dialogue
+Dialogue: 0,0:11:01.0,0:11:03.64,Secondary,,0,0,0,,Dialogue-tuned models are a special case
+Dialogue: 0,0:11:03.64,0:11:06.82,Secondary,,0,0,0,,of instruction tuned where requests are typically framed
+Dialogue: 0,0:11:06.82,0:11:09.4,Secondary,,0,0,0,,as questions to a chat bot.
+Dialogue: 0,0:11:09.4,0:11:10.99,Secondary,,0,0,0,,Dialogue tuning is expected to be
+Dialogue: 0,0:11:10.99,0:11:13.99,Secondary,,0,0,0,,in the context of a longer back and forth conversation,
+Dialogue: 0,0:11:13.99,0:11:16.66,Secondary,,0,0,0,,and typically works better with natural question-like
+Dialogue: 0,0:11:19.17,0:11:21.63,Secondary,,0,0,0,,Chain of thought reasoning is the observation
+Dialogue: 0,0:11:21.63,0:11:24.3,Secondary,,0,0,0,,that models are better at getting the right answer when
+Dialogue: 0,0:11:24.3,0:11:26.16,Secondary,,0,0,0,,they first output text that explains
+Dialogue: 0,0:11:28.32,0:11:29.90,Secondary,,0,0,0,,Let's look at the question.
+Dialogue: 0,0:11:29.90,0:11:31.85,Secondary,,0,0,0,,Roger has five tennis balls.
+Dialogue: 0,0:11:31.85,0:11:34.43,Secondary,,0,0,0,,He buys two more cans of tennis balls.
+Dialogue: 0,0:11:34.43,0:11:36.68,Secondary,,0,0,0,,Each can has three tennis balls.
+Dialogue: 0,0:11:36.68,0:11:39.63,Secondary,,0,0,0,,How many tennis balls does he have now?
+Dialogue: 0,0:11:39.63,0:11:42.87,Secondary,,0,0,0,,This question is posed initially with no response.
+Dialogue: 0,0:11:42.87,0:11:46.36,Secondary,,0,0,0,,The model is less likely to get the correct answer directly.
+Dialogue: 0,0:11:46.36,0:11:49.21,Secondary,,0,0,0,,However, by the time the second question is asked,
+Dialogue: 0,0:11:49.21,0:11:53.88,Secondary,,0,0,0,,the output is more likely to end with the correct answer.
+Dialogue: 0,0:11:53.88,0:11:57.9,Secondary,,0,0,0,,A model that can do everything has practical limitations.
+Dialogue: 0,0:11:57.9,0:12:01.36,Secondary,,0,0,0,,Task-specific tuning can make LLMs more reliable.
+Dialogue: 0,0:12:01.36,0:12:05.26,Secondary,,0,0,0,,Vertex AI provides task-specific foundation models.
+Dialogue: 0,0:12:05.26,0:12:06.73,Secondary,,0,0,0,,Let's say you have a use case where
+Dialogue: 0,0:12:06.73,0:12:08.89,Secondary,,0,0,0,,you need to gather sentiments, or how
+Dialogue: 0,0:12:08.89,0:12:11.83,Secondary,,0,0,0,,your customers are feeling about your product or service.
+Dialogue: 0,0:12:11.83,0:12:13.93,Secondary,,0,0,0,,You can use the classification task
+Dialogue: 0,0:12:13.93,0:12:17.4,Secondary,,0,0,0,,sentiment analysis task model.
+Dialogue: 0,0:12:17.4,0:12:18.57,Secondary,,0,0,0,,Same for vision tasks.
+Dialogue: 0,0:12:18.57,0:12:21.21,Secondary,,0,0,0,,If you need to perform occupancy analytics,
+Dialogue: 0,0:12:21.21,0:12:24.69,Secondary,,0,0,0,,there is a task-specific model for your use case.
+Dialogue: 0,0:12:24.69,0:12:27.96,Secondary,,0,0,0,,Tuning a model enables you to customize the model response
+Dialogue: 0,0:12:32.11,0:12:34.47,Secondary,,0,0,0,,It is essentially the process of adapting a model
+Dialogue: 0,0:12:34.47,0:12:37.23,Secondary,,0,0,0,,to a new domain, or set of custom use cases,
+Dialogue: 0,0:12:37.23,0:12:40.24,Secondary,,0,0,0,,by training the model on new data.
+Dialogue: 0,0:12:40.24,0:12:42.45,Secondary,,0,0,0,,For example, we may collect training data
+Dialogue: 0,0:12:42.45,0:12:45.99,Secondary,,0,0,0,,and tune the model specifically for the legal or medical
+Dialogue: 0,0:12:47.51,0:12:50.84,Secondary,,0,0,0,,You can also further tune the model by fine tuning
+Dialogue: 0,0:12:50.84,0:12:52.55,Secondary,,0,0,0,,where you bring your own data set
+Dialogue: 0,0:12:52.55,0:12:56.66,Secondary,,0,0,0,,and retrain the model by tuning every weight in the LLM.
+Dialogue: 0,0:12:56.66,0:12:59.33,Secondary,,0,0,0,,This requires a big training job and hosting
+Dialogue: 0,0:12:59.33,0:13:01.60,Secondary,,0,0,0,,your own fine-tuned model.
+Dialogue: 0,0:13:01.60,0:13:04.39,Secondary,,0,0,0,,Here's an example of a medical foundation model trained
+Dialogue: 0,0:13:05.80,0:13:09.28,Secondary,,0,0,0,,The tasks include question answering, image analysis,
+Dialogue: 0,0:13:12.75,0:13:17.51,Secondary,,0,0,0,,Fine tuning is expensive and not realistic in many cases.
+Dialogue: 0,0:13:17.51,0:13:21.53,Secondary,,0,0,0,,So are there more efficient methods of tuning?
+Dialogue: 0,0:13:21.53,0:13:22.34,Secondary,,0,0,0,,Yes.
+Dialogue: 0,0:13:22.34,0:13:25.76,Secondary,,0,0,0,,Parameter-efficient tuning methods, or PETM,
+Dialogue: 0,0:13:25.76,0:13:27.89,Secondary,,0,0,0,,are methods for tuning a large language
+Dialogue: 0,0:13:27.89,0:13:31.91,Secondary,,0,0,0,,model on your own custom data without duplicating the model.
+Dialogue: 0,0:13:31.91,0:13:34.61,Secondary,,0,0,0,,The base model itself is not altered.
+Dialogue: 0,0:13:34.61,0:13:36.80,Secondary,,0,0,0,,Instead, a small number of add-on layers
+Dialogue: 0,0:13:36.80,0:13:41.53,Secondary,,0,0,0,,are tuned, which can be swapped in and out at inference time.
+Dialogue: 0,0:13:41.53,0:13:45.43,Secondary,,0,0,0,,Generative AI Studio lets you quickly explore and customize
+Dialogue: 0,0:13:47.50,0:13:50.95,Secondary,,0,0,0,,leverage in your applications on Google Cloud.
+Dialogue: 0,0:13:50.95,0:13:54.31,Secondary,,0,0,0,,Generative AI Studio helps developers create and deploy
+Dialogue: 0,0:13:58.48,0:14:00.10,Secondary,,0,0,0,,make it easy to get started.
+Dialogue: 0,0:14:00.10,0:14:03.46,Secondary,,0,0,0,,For example, there's a library of pre-trained models,
+Dialogue: 0,0:14:03.46,0:14:07.36,Secondary,,0,0,0,,a tool for fine tuning models, a tool for deploying models
+Dialogue: 0,0:14:07.36,0:14:10.15,Secondary,,0,0,0,,to production, and a community forum for developers
+Dialogue: 0,0:14:13.28,0:14:15.59,Secondary,,0,0,0,,Generative AI App Builder lets you
+Dialogue: 0,0:14:15.59,0:14:19.61,Secondary,,0,0,0,,create Gen AI apps without having to write any code.
+Dialogue: 0,0:14:19.61,0:14:22.70,Secondary,,0,0,0,,Gen AI App Builder has a drag-and-drop interface
+Dialogue: 0,0:14:22.70,0:14:24.80,Secondary,,0,0,0,,that makes it easy to design and build
+Dialogue: 0,0:14:24.80,0:14:28.67,Secondary,,0,0,0,,apps, a visual editor that makes it easy to create and edit
+Dialogue: 0,0:14:28.67,0:14:32.39,Secondary,,0,0,0,,app content, a built-in search engine that allows users
+Dialogue: 0,0:14:32.39,0:14:34.76,Secondary,,0,0,0,,to search for information within the app,
+Dialogue: 0,0:14:34.76,0:14:36.89,Secondary,,0,0,0,,and a conversational AI engine that
+Dialogue: 0,0:14:36.89,0:14:40.88,Secondary,,0,0,0,,allows users to interact with the app using natural language.
+Dialogue: 0,0:14:40.88,0:14:44.9,Secondary,,0,0,0,,You can create your own chat bots, digital assistants,
+Dialogue: 0,0:14:44.9,0:14:48.26,Secondary,,0,0,0,,custom search engines, knowledge bases, training applications,
+Dialogue: 0,0:14:48.26,0:14:50.3,Secondary,,0,0,0,,and more.
+Dialogue: 0,0:14:50.3,0:14:52.94,Secondary,,0,0,0,,PaLM API lets you test and experiment
+Dialogue: 0,0:14:52.94,0:14:56.100,Secondary,,0,0,0,,with Google's large language models and Gen AI tools.
+Dialogue: 0,0:14:57.0,0:14:59.91,Secondary,,0,0,0,,To make prototyping quick and more accessible,
+Dialogue: 0,0:14:59.91,0:15:03.75,Secondary,,0,0,0,,developers can integrate PaLM API with Maker Suite
+Dialogue: 0,0:15:03.75,0:15:07.20,Secondary,,0,0,0,,and use it to access the API using a graphical user
+Dialogue: 0,0:15:08.34,0:15:10.65,Secondary,,0,0,0,,The suite includes a number of different tools
+Dialogue: 0,0:15:10.65,0:15:14.7,Secondary,,0,0,0,,such as a model-training tool, a model-deployment tool,
+Dialogue: 0,0:15:14.7,0:15:16.48,Secondary,,0,0,0,,and a model-monitoring tool.
+Dialogue: 0,0:15:16.48,0:15:19.53,Secondary,,0,0,0,,The model-training tool helps developers train ML models
+Dialogue: 0,0:15:22.3,0:15:25.59,Secondary,,0,0,0,,The model deployment tool helps developers deploy ML models
+Dialogue: 0,0:15:25.59,0:15:29.74,Secondary,,0,0,0,,to production with a number of different deployment options.
+Dialogue: 0,0:15:29.74,0:15:31.93,Secondary,,0,0,0,,And the model-monitoring tool helps
+Dialogue: 0,0:15:31.93,0:15:35.20,Secondary,,0,0,0,,developers monitor the performance of their ML models
+Dialogue: 0,0:15:35.20,0:15:37.75,Secondary,,0,0,0,,in production using a dashboard and a number
+Dialogue: 0,0:15:40.48,0:15:41.72,Secondary,,0,0,0,,That's all for now.
+Dialogue: 0,0:15:41.72,0:15:44.92,Secondary,,0,0,0,,Thanks for watching this course, Introduction to Large Language
+Dialogue: 0,0:00:00.57,0:00:04.39,Default,,0,0,0,,JOHN EWALD：大家好，欢迎来到大型语言模型介绍课程。
+Dialogue: 0,0:00:04.39,0:00:08.16,Default,,0,0,0,,我是JOHN EWALD，谷歌云的培训开发人员。
+Dialogue: 0,0:00:08.16,0:00:10.86,Default,,0,0,0,,在这门课程中，您将学习定义大型语言模型，
+Dialogue: 0,0:00:10.86,0:00:14.67,Default,,0,0,0,,即LLM，描述LLM的用例，
+Dialogue: 0,0:00:14.67,0:00:20.43,Default,,0,0,0,,解释提示调优（Prompt Tuning），以及介绍谷歌的Gen AI开发工具。
+Dialogue: 0,0:00:20.43,0:00:24.42,Default,,0,0,0,,大型语言模型，即LLM，是深度学习的一个子集。
+Dialogue: 0,0:00:24.42,0:00:26.22,Default,,0,0,0,,想了解更多关于深度学习的信息，
+Dialogue: 0,0:00:26.22,0:00:29.67,Default,,0,0,0,,请观看我们的生成式AI课程视频。
+Dialogue: 0,0:00:29.67,0:00:32.43,Default,,0,0,0,,LLMs和生成式AI相交，它们都是
+Dialogue: 0,0:00:32.43,0:00:35.40,Default,,0,0,0,,深度学习的一部分。
+Dialogue: 0,0:00:35.40,0:00:38.4,Default,,0,0,0,,你可能经常听到的另一个AI领域
+Dialogue: 0,0:00:38.4,0:00:39.72,Default,,0,0,0,,是生成式AI。
+Dialogue: 0,0:00:39.72,0:00:41.97,Default,,0,0,0,,这是一种能够
+Dialogue: 0,0:00:41.97,0:00:45.73,Default,,0,0,0,,生成新内容的人工智能，包括文本、图像、音频、
+Dialogue: 0,0:00:45.73,0:00:48.29,Default,,0,0,0,,和合成数据。
+Dialogue: 0,0:00:48.29,0:00:50.65,Default,,0,0,0,,那么大型语言模型是什么？
+Dialogue: 0,0:00:50.65,0:00:53.98,Default,,0,0,0,,大型语言模型是指可以预先训练，然后进行微调
+Dialogue: 0,0:00:53.98,0:00:59.2,Default,,0,0,0,,以适应特定目的的大型通用语言模型。
+Dialogue: 0,0:00:59.2,0:01:03.14,Default,,0,0,0,,什么是预训练和微调（Fine Tuned）？
+Dialogue: 0,0:01:03.14,0:01:05.3,Default,,0,0,0,,想象一下训练一条狗。
+Dialogue: 0,0:01:05.3,0:01:07.7,Default,,0,0,0,,通常，你会教狗基本的命令
+Dialogue: 0,0:01:07.7,0:01:12.78,Default,,0,0,0,,比如坐下、过来、趴下和待在原地。
+Dialogue: 0,0:01:12.78,0:01:15.75,Default,,0,0,0,,这些命令对日常生活来说足够了
+Dialogue: 0,0:01:15.75,0:01:19.49,Default,,0,0,0,,帮助你的狗成为一个好的犬类公民。
+Dialogue: 0,0:01:19.49,0:01:22.49,Default,,0,0,0,,但是，如果你需要特殊服务犬，比如警犬、
+Dialogue: 0,0:01:22.49,0:01:28.48,Default,,0,0,0,,导盲犬或猎犬，你需要增加特殊训练。
+Dialogue: 0,0:01:28.48,0:01:33.28,Default,,0,0,0,,这个概念也适用于大型语言模型。
+Dialogue: 0,0:01:33.28,0:01:35.49,Default,,0,0,0,,这些模型是为通用目的而训练的
+Dialogue: 0,0:01:35.49,0:01:41.22,Default,,0,0,0,,解决常见的语言问题，如文本分类、问答、
+Dialogue: 0,0:01:41.22,0:01:47.9,Default,,0,0,0,,文档摘要和跨行业的文本生成。
+Dialogue: 0,0:01:47.9,0:01:58.79,Default,,0,0,0,,然后，可以使用相对较小规模的领域数据集，\N将模型定制来解决零售、金融、娱乐等不同领域的特定问题。
+Dialogue: 0,0:01:58.79,0:02:00.56,Default,,0,0,0,,我们进一步分解这个概念，
+Dialogue: 0,0:02:00.56,0:02:04.70,Default,,0,0,0,,将其分为大型语言模型的三个主要特点。
+Dialogue: 0,0:02:04.70,0:02:06.99,Default,,0,0,0,,大有两层含义。
+Dialogue: 0,0:02:06.99,0:02:10.4,Default,,0,0,0,,首先是训练数据集的庞大规模，
+Dialogue: 0,0:02:10.4,0:02:12.65,Default,,0,0,0,,有时达到PB级别。
+Dialogue: 0,0:02:12.65,0:02:15.29,Default,,0,0,0,,其次，它指的是参数数量。
+Dialogue: 0,0:02:15.29,0:02:18.89,Default,,0,0,0,,在机器学习中，参数通常被称为超参数。
+Dialogue: 0,0:02:18.89,0:02:24.26,Default,,0,0,0,,参数基本上是机器从模型训练中学到的记忆和知识。
+Dialogue: 0,0:02:24.26,0:02:29.100,Default,,0,0,0,,参数定义了模型在解决问题（如预测文本）的技能。
+Dialogue: 0,0:02:30.0,0:02:31.83,Default,,0,0,0,,通用性意味着这些模型
+Dialogue: 0,0:02:31.83,0:02:34.44,Default,,0,0,0,,足以解决常见问题。
+Dialogue: 0,0:02:34.44,0:02:36.87,Default,,0,0,0,,有两个原因导致了这个想法。
+Dialogue: 0,0:02:36.87,0:02:40.2,Default,,0,0,0,,首先是人类语言的共性，无论
+Dialogue: 0,0:02:40.2,0:02:41.58,Default,,0,0,0,,具体任务如何。
+Dialogue: 0,0:02:41.58,0:02:44.82,Default,,0,0,0,,其次是资源限制。
+Dialogue: 0,0:02:44.82,0:02:47.43,Default,,0,0,0,,只有某些组织具备能力
+Dialogue: 0,0:02:47.43,0:02:51.21,Default,,0,0,0,,用大量数据集训练这种大型语言模型
+Dialogue: 0,0:02:51.21,0:02:54.15,Default,,0,0,0,,和大量参数。
+Dialogue: 0,0:02:54.15,0:02:58.87,Default,,0,0,0,,让他们为其他人创建基本语言模型怎么样？
+Dialogue: 0,0:02:58.87,0:03:02.68,Default,,0,0,0,,这导致了最后一点，预训练和微调，
+Dialogue: 0,0:03:02.68,0:03:07.66,Default,,0,0,0,,意味着用大型数据集预训练一个通用目的的大型语言模型
+Dialogue: 0,0:03:07.66,0:03:13.70,Default,,0,0,0,,然后用更小的数据集为特定目标进行微调。
+Dialogue: 0,0:03:13.70,0:03:17.19,Default,,0,0,0,,使用大型语言模型的好处很明显。
+Dialogue: 0,0:03:17.19,0:03:20.88,Default,,0,0,0,,首先，一个模型可以应用于不同的任务。
+Dialogue: 0,0:03:20.88,0:03:22.55,Default,,0,0,0,,这是梦想成真。
+Dialogue: 0,0:03:22.55,0:03:27.95,Default,,0,0,0,,这些经过大量数据训练并生成数十亿参数的大型语言模型
+Dialogue: 0,0:03:27.95,0:03:31.32,Default,,0,0,0,,足够智能，能解决不同的任务，
+Dialogue: 0,0:03:31.32,0:03:38.81,Default,,0,0,0,,包括语言翻译、句子补全、文本分类、问答等。
+Dialogue: 0,0:03:38.81,0:03:42.56,Default,,0,0,0,,其次，当你定制大型语言模型来解决特定问题时，
+Dialogue: 0,0:03:42.56,0:03:46.22,Default,,0,0,0,,它们需要的领域训练数据很少。
+Dialogue: 0,0:03:46.22,0:03:49.1,Default,,0,0,0,,大型语言模型表现不错
+Dialogue: 0,0:03:49.1,0:03:51.42,Default,,0,0,0,,即使域训练数据很少。
+Dialogue: 0,0:03:51.42,0:03:55.79,Default,,0,0,0,,换句话说，它们可用于少量样本（Few-shot）甚至零样本（Zero-shot）场景。
+Dialogue: 0,0:03:55.79,0:03:57.62,Default,,0,0,0,,在机器学习中，少样本是指
+Dialogue: 0,0:03:57.62,0:03:59.87,Default,,0,0,0,,用最少的数据训练模型，
+Dialogue: 0,0:03:59.87,0:04:02.54,Default,,0,0,0,,而零样本意味着模型能识别
+Dialogue: 0,0:04:02.54,0:04:07.11,Default,,0,0,0,,在以前的训练中未明确教过的事物。
+Dialogue: 0,0:04:07.11,0:04:09.72,Default,,0,0,0,,第三，大型语言模型的性能
+Dialogue: 0,0:04:09.72,0:04:15.55,Default,,0,0,0,,随着数据和参数的增加而不断提高。
+Dialogue: 0,0:04:15.55,0:04:17.95,Default,,0,0,0,,以PaLM为例。
+Dialogue: 0,0:04:17.95,0:04:21.31,Default,,0,0,0,,2022年4月，谷歌发布了PaLM，
+Dialogue: 0,0:04:21.31,0:04:26.5,Default,,0,0,0,,简称Pathways Language Model，这是一个拥有5400亿参数的模型，
+Dialogue: 0,0:04:26.5,0:04:31.66,Default,,0,0,0,,在多种语言任务中都实现了最先进的性能。
+Dialogue: 0,0:04:31.66,0:04:35.8,Default,,0,0,0,,PaLM是一个仅解码器的密集型Transformer模型，
+Dialogue: 0,0:04:35.8,0:04:38.53,Default,,0,0,0,,它有5400亿个参数。
+Dialogue: 0,0:04:38.53,0:04:40.79,Default,,0,0,0,,它利用了新的路径系统，
+Dialogue: 0,0:04:40.79,0:04:47.86,Default,,0,0,0,,这使得谷歌能够在多个TPU V4集群上有效地训练一个模型。
+Dialogue: 0,0:04:47.86,0:04:50.26,Default,,0,0,0,,Pathway是一种新的AI架构，它可以
+Dialogue: 0,0:04:50.26,0:04:54.31,Default,,0,0,0,,同时处理多个任务，快速学习新任务，
+Dialogue: 0,0:04:54.31,0:04:57.89,Default,,0,0,0,,并更好地理解世界。
+Dialogue: 0,0:04:57.89,0:05:01.34,Default,,0,0,0,,该系统使PaLM能够协调分布式
+Dialogue: 0,0:05:01.34,0:05:04.63,Default,,0,0,0,,加速器的计算。
+Dialogue: 0,0:05:04.63,0:05:07.93,Default,,0,0,0,,我们之前提到过PaLM是一个Transformer模型。
+Dialogue: 0,0:05:07.93,0:05:11.48,Default,,0,0,0,,Transformer模型包括编码器和解码器。
+Dialogue: 0,0:05:11.48,0:05:13.63,Default,,0,0,0,,编码器对输入序列进行编码，
+Dialogue: 0,0:05:13.63,0:05:15.67,Default,,0,0,0,,然后将其传递给解码器，解码器
+Dialogue: 0,0:05:15.67,0:05:18.1,Default,,0,0,0,,学会如何解码表示，
+Dialogue: 0,0:05:18.1,0:05:20.96,Default,,0,0,0,,以完成相关任务。
+Dialogue: 0,0:05:20.96,0:05:27.5,Default,,0,0,0,,我们已经从传统编程发展到了神经网络和生成模型
+Dialogue: 0,0:05:27.5,0:05:28.94,Default,,0,0,0,,在传统编程中，我们需要
+Dialogue: 0,0:05:28.94,0:05:32.6,Default,,0,0,0,,硬编码区分猫的规则，例如：
+Dialogue: 0,0:05:32.6,0:05:37.88,Default,,0,0,0,,类型：动物；腿：四条；耳朵：两个；毛发：有；
+Dialogue: 0,0:05:37.88,0:05:40.75,Default,,0,0,0,,喜欢：纱线，猫薄荷。
+Dialogue: 0,0:05:40.75,0:05:42.79,Default,,0,0,0,,在神经网络浪潮中，我们
+Dialogue: 0,0:05:42.79,0:05:45.82,Default,,0,0,0,,可以给网络提供猫和狗的图片，然后询问，
+Dialogue: 0,0:05:45.82,0:05:47.5,Default,,0,0,0,,这是一只猫吗？
+Dialogue: 0,0:05:47.5,0:05:49.3,Default,,0,0,0,,它会预测出是猫。
+Dialogue: 0,0:05:49.3,0:05:51.97,Default,,0,0,0,,在生成式中，我们作为用户
+Dialogue: 0,0:05:51.97,0:05:55.40,Default,,0,0,0,,可以生成自己的内容，无论是文本、图片、
+Dialogue: 0,0:05:55.40,0:05:57.58,Default,,0,0,0,,音频、视频还是其他。
+Dialogue: 0,0:05:57.58,0:06:00.40,Default,,0,0,0,,例如，像PaLM或LaMDA这样的模型，
+Dialogue: 0,0:06:00.40,0:06:03.49,Default,,0,0,0,,或者用于对话应用的语言模型，
+Dialogue: 0,0:06:03.49,0:06:06.97,Default,,0,0,0,,从互联网的多个来源获取大量数据
+Dialogue: 0,0:06:06.97,0:06:10.6,Default,,0,0,0,,建立基础语言模型，
+Dialogue: 0,0:06:10.6,0:06:12.91,Default,,0,0,0,,我们只需提问，
+Dialogue: 0,0:06:12.91,0:06:17.29,Default,,0,0,0,,无论是输入提示还是口头对话提示。
+Dialogue: 0,0:06:17.29,0:06:19.45,Default,,0,0,0,,当你问它什么是猫时，它会
+Dialogue: 0,0:06:19.45,0:06:23.49,Default,,0,0,0,,告诉你它所学到的关于猫的一切。
+Dialogue: 0,0:06:23.49,0:06:26.79,Default,,0,0,0,,我们来比较一下使用预训练模型的LLM开发
+Dialogue: 0,0:06:26.79,0:06:29.28,Default,,0,0,0,,和传统的ML开发。
+Dialogue: 0,0:06:29.28,0:06:33.7,Default,,0,0,0,,首先，使用LLM开发，你不需要成为专家。
+Dialogue: 0,0:06:33.7,0:06:34.80,Default,,0,0,0,,你不需要训练样本。
+Dialogue: 0,0:06:34.80,0:06:37.20,Default,,0,0,0,,也不需要训练模型。
+Dialogue: 0,0:06:37.20,0:06:40.11,Default,,0,0,0,,你只需要考虑提示设计，即
+Dialogue: 0,0:06:40.11,0:06:44.67,Default,,0,0,0,,创建清晰、简洁、有信息量的提示。
+Dialogue: 0,0:06:44.67,0:06:48.54,Default,,0,0,0,,自然语言处理的重要部分。
+Dialogue: 0,0:06:48.54,0:06:50.19,Default,,0,0,0,,在传统的机器学习中，你
+Dialogue: 0,0:06:50.19,0:06:52.65,Default,,0,0,0,,需要训练样本来训练模型。
+Dialogue: 0,0:06:52.65,0:06:56.51,Default,,0,0,0,,还需要计算时间和硬件。
+Dialogue: 0,0:06:56.51,0:07:01.76,Default,,0,0,0,,让我们看一个文本生成用例。
+Dialogue: 0,0:07:01.76,0:07:05.99,Default,,0,0,0,,问答，或者说QA，是自然语言的一个子领域
+Dialogue: 0,0:07:05.99,0:07:09.44,Default,,0,0,0,,处理自动回答的任务
+Dialogue: 0,0:07:09.44,0:07:12.71,Default,,0,0,0,,用自然语言提出的问题。
+Dialogue: 0,0:07:12.71,0:07:16.10,Default,,0,0,0,,QA系统通常在大量的
+Dialogue: 0,0:07:16.10,0:07:17.27,Default,,0,0,0,,文本和代码上进行训练。
+Dialogue: 0,0:07:17.27,0:07:19.89,Default,,0,0,0,,他们能回答各种问题，
+Dialogue: 0,0:07:19.89,0:07:23.60,Default,,0,0,0,,包括事实、定义和观点类问题。
+Dialogue: 0,0:07:23.60,0:07:26.6,Default,,0,0,0,,关键是需要领域知识
+Dialogue: 0,0:07:26.6,0:07:29.56,Default,,0,0,0,,来开发这些问答模型。
+Dialogue: 0,0:07:29.56,0:07:32.17,Default,,0,0,0,,例如，需要领域知识
+Dialogue: 0,0:07:32.17,0:07:38.16,Default,,0,0,0,,来开发客户支持、医疗或供应链的问答模型。
+Dialogue: 0,0:07:38.16,0:07:43.44,Default,,0,0,0,,使用生成式问答，模型根据上下文直接生成自由文本。
+Dialogue: 0,0:07:43.44,0:07:47.36,Default,,0,0,0,,不需要领域知识。
+Dialogue: 0,0:07:47.36,0:07:49.70,Default,,0,0,0,,让我们看看给Bard提出的三个问题，
+Dialogue: 0,0:07:49.70,0:07:55.26,Default,,0,0,0,,Bard是由谷歌AI开发的大型语言模型聊天机器人。
+Dialogue: 0,0:07:55.26,0:07:56.55,Default,,0,0,0,,问题一。
+Dialogue: 0,0:07:56.55,0:07:59.31,Default,,0,0,0,,"今年的销售额是100,000美元。
+Dialogue: 0,0:07:59.31,0:08:01.50,Default,,0,0,0,,支出是60,000美元。
+Dialogue: 0,0:08:01.50,0:08:03.73,Default,,0,0,0,,净利润是多少？"
+Dialogue: 0,0:08:03.73,0:08:07.66,Default,,0,0,0,,Bard首先分享了如何计算净利润，然后
+Dialogue: 0,0:08:07.66,0:08:09.46,Default,,0,0,0,,进行计算。
+Dialogue: 0,0:08:09.46,0:08:14.13,Default,,0,0,0,,接着Bard给出了净利润的定义。
+Dialogue: 0,0:08:14.13,0:08:15.41,Default,,0,0,0,,这是另一个问题。
+Dialogue: 0,0:08:15.41,0:08:18.92,Default,,0,0,0,,现有库存为6,000个单位。
+Dialogue: 0,0:08:18.92,0:08:21.83,Default,,0,0,0,,新订单需要8,000个单位。
+Dialogue: 0,0:08:21.83,0:08:25.31,Default,,0,0,0,,我需要补充多少单位才能完成订单？
+Dialogue: 0,0:08:25.31,0:08:29.75,Default,,0,0,0,,巴德再次通过计算回答了这个问题。
+Dialogue: 0,0:08:29.75,0:08:32.51,Default,,0,0,0,,在我们的最后一个例子中，我们有1,000个传感器
+Dialogue: 0,0:08:32.51,0:08:34.64,Default,,0,0,0,,分布在10个地理区域。
+Dialogue: 0,0:08:34.64,0:08:38.64,Default,,0,0,0,,每个区域平均有多少个传感器？
+Dialogue: 0,0:08:38.64,0:08:40.53,Default,,0,0,0,,巴德用一个例子回答了这个问题
+Dialogue: 0,0:08:40.53,0:08:44.49,Default,,0,0,0,,解决问题的方法和一些额外的背景。
+Dialogue: 0,0:08:44.49,0:08:47.98,Default,,0,0,0,,在我们的每个问题中，都得到了期望的回答。
+Dialogue: 0,0:08:47.98,0:08:50.67,Default,,0,0,0,,这是因为提示设计（Prompt design）。
+Dialogue: 0,0:08:50.67,0:08:52.50,Default,,0,0,0,,提示设计和提示工程（Prompt Engineering）
+Dialogue: 0,0:08:52.50,0:08:56.64,Default,,0,0,0,,是自然语言处理中密切相关的两个概念。
+Dialogue: 0,0:08:56.64,0:08:58.59,Default,,0,0,0,,两者都涉及创建
+Dialogue: 0,0:08:58.59,0:09:01.44,Default,,0,0,0,,一个清晰、简洁、有信息量的提示。
+Dialogue: 0,0:09:01.44,0:09:05.2,Default,,0,0,0,,然而，两者之间存在一些关键差异。
+Dialogue: 0,0:09:05.2,0:09:08.32,Default,,0,0,0,,提示设计是创建一个提示的过程，
+Dialogue: 0,0:09:08.32,0:09:11.65,Default,,0,0,0,,它针对的是这个系统正在
+Dialogue: 0,0:09:11.65,0:09:13.60,Default,,0,0,0,,执行的特定任务。
+Dialogue: 0,0:09:13.60,0:09:15.37,Default,,0,0,0,,例如，如果系统正在
+Dialogue: 0,0:09:15.37,0:09:18.34,Default,,0,0,0,,被要求将文本从英语翻译成法语，
+Dialogue: 0,0:09:18.34,0:09:20.47,Default,,0,0,0,,提示应该用英语写
+Dialogue: 0,0:09:20.47,0:09:24.61,Default,,0,0,0,,并且应该指定翻译应该用法语。
+Dialogue: 0,0:09:24.61,0:09:26.29,Default,,0,0,0,,提示工程是一个过程
+Dialogue: 0,0:09:26.29,0:09:30.29,Default,,0,0,0,,旨在创建有助于提高性能的提示
+Dialogue: 0,0:09:30.29,0:09:32.96,Default,,0,0,0,,这可能涉及使用特定领域的知识，
+Dialogue: 0,0:09:32.96,0:09:35.20,Default,,0,0,0,,提供期望输出的示例，
+Dialogue: 0,0:09:35.20,0:09:40.18,Default,,0,0,0,,或使用已知对特定系统有效的关键词。
+Dialogue: 0,0:09:40.18,0:09:42.73,Default,,0,0,0,,提示设计是一个更通用的概念，
+Dialogue: 0,0:09:42.73,0:09:45.79,Default,,0,0,0,,而提示工程则是一个更专业的概念。
+Dialogue: 0,0:09:45.79,0:09:48.61,Default,,0,0,0,,提示设计至关重要，而提示工程
+Dialogue: 0,0:09:48.61,0:09:54.91,Default,,0,0,0,,只对需要高度准确性或性能的系统才是必要的。
+Dialogue: 0,0:09:54.91,0:09:57.51,Default,,0,0,0,,有三种类型的大型语言模型，
+Dialogue: 0,0:09:57.51,0:10:00.18,Default,,0,0,0,,通用语言模型、指令调优、
+Dialogue: 0,0:10:00.18,0:10:01.83,Default,,0,0,0,,和对话调优。
+Dialogue: 0,0:10:01.83,0:10:04.74,Default,,0,0,0,,每种都需要用不同的方式提示。
+Dialogue: 0,0:10:04.74,0:10:07.11,Default,,0,0,0,,通用语言模型根据训练数据中的语言预测下一个词，
+Dialogue: 0,0:10:07.11,0:10:10.29,Default,,0,0,0,,基于训练数据中的语言。
+Dialogue: 0,0:10:10.29,0:10:13.7,Default,,0,0,0,,这是一个通用语言模型的例子。
+Dialogue: 0,0:10:13.7,0:10:17.52,Default,,0,0,0,,下一个词是基于训练数据中的语言标记（Token）。
+Dialogue: 0,0:10:17.52,0:10:20.6,Default,,0,0,0,,在这个例子中，"the cat sat on,"
+Dialogue: 0,0:10:20.6,0:10:22.25,Default,,0,0,0,,下一个词应该是"the."。
+Dialogue: 0,0:10:22.25,0:10:26.63,Default,,0,0,0,,你可以看到"the."是最可能的下一个词。
+Dialogue: 0,0:10:26.63,0:10:30.98,Default,,0,0,0,,把这种类型想象成搜索中的自动补全。
+Dialogue: 0,0:10:30.98,0:10:33.20,Default,,0,0,0,,在指令调整中，模型被训练成
+Dialogue: 0,0:10:33.20,0:10:37.78,Default,,0,0,0,,根据输入的指令预测响应。
+Dialogue: 0,0:10:37.78,0:10:40.57,Default,,0,0,0,,例如，总结某某文章中的文本，
+Dialogue: 0,0:10:40.57,0:10:43.6,Default,,0,0,0,,以某某的风格创作一首诗，
+Dialogue: 0,0:10:43.6,0:10:48.69,Default,,0,0,0,,给我一个基于某某的语义相似度的关键词列表。
+Dialogue: 0,0:10:48.69,0:10:51.12,Default,,0,0,0,,在这个例子中，将文本分类为
+Dialogue: 0,0:10:51.12,0:10:54.98,Default,,0,0,0,,中性、消极或积极。
+Dialogue: 0,0:10:54.98,0:11:00.100,Default,,0,0,0,,在对话调整中，模型被训练成通过下一个回应来进行对话。
+Dialogue: 0,0:11:01.0,0:11:03.64,Default,,0,0,0,,对话调优模型是一种特殊情况
+Dialogue: 0,0:11:03.64,0:11:06.82,Default,,0,0,0,,指令调优通常是将请求构建成
+Dialogue: 0,0:11:06.82,0:11:09.4,Default,,0,0,0,,与聊天机器人的问题。
+Dialogue: 0,0:11:09.4,0:11:10.99,Default,,0,0,0,,对话调优预计会在
+Dialogue: 0,0:11:10.99,0:11:13.99,Default,,0,0,0,,较长的来回对话中发挥作用，
+Dialogue: 0,0:11:13.99,0:11:19.17,Default,,0,0,0,,通常更适合自然的类似问题的表述。
+Dialogue: 0,0:11:19.17,0:11:21.63,Default,,0,0,0,,思维链推理（Chain of thought reasoning）是指观察到到的一种现象：
+Dialogue: 0,0:11:21.63,0:11:24.3,Default,,0,0,0,,如果让模型先解释答案的原因，
+Dialogue: 0,0:11:24.3,0:11:28.32,Default,,0,0,0,,更容易得出正确答案。
+Dialogue: 0,0:11:28.32,0:11:29.90,Default,,0,0,0,,我们来看这个问题。
+Dialogue: 0,0:11:29.90,0:11:31.85,Default,,0,0,0,,罗杰有五个网球。
+Dialogue: 0,0:11:31.85,0:11:34.43,Default,,0,0,0,,他又买了两罐网球。
+Dialogue: 0,0:11:34.43,0:11:36.68,Default,,0,0,0,,每罐有三个网球。
+Dialogue: 0,0:11:36.68,0:11:39.63,Default,,0,0,0,,现在他有多少个网球？
+Dialogue: 0,0:11:39.63,0:11:42.87,Default,,0,0,0,,这个问题一开始没有回答。
+Dialogue: 0,0:11:42.87,0:11:46.36,Default,,0,0,0,,模型直接得出正确答案的可能性较小。
+Dialogue: 0,0:11:46.36,0:11:49.21,Default,,0,0,0,,但到了第二个问题时，
+Dialogue: 0,0:11:49.21,0:11:53.88,Default,,0,0,0,,输出更有可能得出正确答案。
+Dialogue: 0,0:11:53.88,0:11:57.9,Default,,0,0,0,,一个能做所有事的模型在实际应用中是有局限性的。
+Dialogue: 0,0:11:57.9,0:12:01.36,Default,,0,0,0,,针对特定任务的调优可以使LLMs更可靠。
+Dialogue: 0,0:12:01.36,0:12:05.26,Default,,0,0,0,,Vertex AI提供针对特定任务的基础模型。
+Dialogue: 0,0:12:05.26,0:12:06.73,Default,,0,0,0,,假设你有一个用例，
+Dialogue: 0,0:12:06.73,0:12:08.89,Default,,0,0,0,,你需要收集情绪，或者了解
+Dialogue: 0,0:12:08.89,0:12:11.83,Default,,0,0,0,,你的客户对你的产品或服务的感受。
+Dialogue: 0,0:12:11.83,0:12:13.93,Default,,0,0,0,,你可以使用分类任务
+Dialogue: 0,0:12:13.93,0:12:17.4,Default,,0,0,0,,情感分析任务模型。
+Dialogue: 0,0:12:17.4,0:12:18.57,Default,,0,0,0,,对于视觉任务也是一样。
+Dialogue: 0,0:12:18.57,0:12:21.21,Default,,0,0,0,,如果你需要进行占用率分析
+Dialogue: 0,0:12:21.21,0:12:24.69,Default,,0,0,0,,那么有一个特定于你用例的任务模型。
+Dialogue: 0,0:12:24.69,0:12:32.11,Default,,0,0,0,,调优一个模型可以让你根据\N你希望模型执行的任务的示例来定制模型的响应。
+Dialogue: 0,0:12:32.11,0:12:34.47,Default,,0,0,0,,本质上，它是通过在新数据上训练模型，
+Dialogue: 0,0:12:34.47,0:12:37.23,Default,,0,0,0,,将模型适应到新的领域，
+Dialogue: 0,0:12:37.23,0:12:40.24,Default,,0,0,0,,或一套自定义的用例集合的过程。
+Dialogue: 0,0:12:40.24,0:12:42.45,Default,,0,0,0,,例如，我们可以收集训练数据
+Dialogue: 0,0:12:42.45,0:12:47.51,Default,,0,0,0,,并针对法律或医学领域专门调整模型。
+Dialogue: 0,0:12:47.51,0:12:50.84,Default,,0,0,0,,你还可以通过微调进一步调整模型
+Dialogue: 0,0:12:50.84,0:12:52.55,Default,,0,0,0,,在这里你可以用自己的数据集
+Dialogue: 0,0:12:52.55,0:12:56.66,Default,,0,0,0,,并通过调整LLM中的每个权重来重新训练模型。
+Dialogue: 0,0:12:56.66,0:12:59.33,Default,,0,0,0,,这需要大规模的训练工作，
+Dialogue: 0,0:12:59.33,0:13:01.60,Default,,0,0,0,,以及托管你自己微调过的模型。
+Dialogue: 0,0:13:01.60,0:13:05.80,Default,,0,0,0,,比如，这里有一个由医疗数据训练出的医疗基础模型，
+Dialogue: 0,0:13:05.80,0:13:12.75,Default,,0,0,0,,其任务包括问答，图像分析，寻找相似患者等等。
+Dialogue: 0,0:13:12.75,0:13:17.51,Default,,0,0,0,,但是，微调的费用高昂，在许多情况下并不现实。
+Dialogue: 0,0:13:17.51,0:13:21.53,Default,,0,0,0,,那么，有没有更高效的调整方法呢？
+Dialogue: 0,0:13:21.53,0:13:22.34,Default,,0,0,0,,是的。
+Dialogue: 0,0:13:22.34,0:13:25.76,Default,,0,0,0,,参数效率调整方法，或称为PETM，
+Dialogue: 0,0:13:25.76,0:13:27.89,Default,,0,0,0,,是在不复制模型的情况下调整大型语言模型
+Dialogue: 0,0:13:27.89,0:13:31.91,Default,,0,0,0,,的方法，而无需复制模型。
+Dialogue: 0,0:13:31.91,0:13:34.61,Default,,0,0,0,,基础模型本身并没有改变，
+Dialogue: 0,0:13:34.61,0:13:36.80,Default,,0,0,0,,只是调整了少数几层附加层，
+Dialogue: 0,0:13:36.80,0:13:41.53,Default,,0,0,0,,这些层可以在推理时交换。
+Dialogue: 0,0:13:41.53,0:13:47.50,Default,,0,0,0,,生成式AI工作室让你能快速探索和定制
+Dialogue: 0,0:13:47.50,0:13:50.95,Default,,0,0,0,,可在Google Cloud上用于你的应用的生成式AI模型。
+Dialogue: 0,0:13:50.95,0:13:58.48,Default,,0,0,0,,生成式AI工作室帮助开发者通过提供\N各种工具和资源创建和部署生成式AI模型，
+Dialogue: 0,0:13:58.48,0:14:00.10,Default,,0,0,0,,使得入门变得简单。
+Dialogue: 0,0:14:00.10,0:14:03.46,Default,,0,0,0,,例如，它提供了预训练模型库、
+Dialogue: 0,0:14:03.46,0:14:07.36,Default,,0,0,0,,用于精细调整模型的工具、用于将模型部署到生产环境的工具，
+Dialogue: 0,0:14:07.36,0:14:13.28,Default,,0,0,0,,它提供了预训练模型库、以及供开发者分享想法和合作的社区论坛。
+Dialogue: 0,0:14:13.28,0:14:15.59,Default,,0,0,0,,生成式AI应用构建器让你
+Dialogue: 0,0:14:15.59,0:14:19.61,Default,,0,0,0,,无需编写任何代码就能创建Gen AI应用。
+Dialogue: 0,0:14:19.61,0:14:22.70,Default,,0,0,0,,Gen AI应用构建器具有拖放界面
+Dialogue: 0,0:14:22.70,0:14:24.80,Default,,0,0,0,,使设计和构建应用变得简单，
+Dialogue: 0,0:14:24.80,0:14:28.67,Default,,0,0,0,,一个可视化编辑器，方便创建和编辑
+Dialogue: 0,0:14:28.67,0:14:32.39,Default,,0,0,0,,应用内容，一个内置搜索引擎，允许用户
+Dialogue: 0,0:14:32.39,0:14:34.76,Default,,0,0,0,,在应用内搜索信息，
+Dialogue: 0,0:14:34.76,0:14:36.89,Default,,0,0,0,,以及一个会话式AI引擎，
+Dialogue: 0,0:14:36.89,0:14:40.88,Default,,0,0,0,,允许用户使用自然语言与应用进行交互。
+Dialogue: 0,0:14:40.88,0:14:44.9,Default,,0,0,0,,你可以创建自己的聊天机器人、数字助手、
+Dialogue: 0,0:14:44.9,0:14:48.26,Default,,0,0,0,,定制搜索引擎、知识库、培训应用、
+Dialogue: 0,0:14:48.26,0:14:50.3,Default,,0,0,0,,等等。
+Dialogue: 0,0:14:50.3,0:14:52.94,Default,,0,0,0,,PaLM API 让你可以测试和尝试
+Dialogue: 0,0:14:52.94,0:14:56.100,Default,,0,0,0,,谷歌的大型语言模型和 Gen AI 工具。
+Dialogue: 0,0:14:57.0,0:14:59.91,Default,,0,0,0,,为了使原型设计更快速、更易于使用，
+Dialogue: 0,0:14:59.91,0:15:03.75,Default,,0,0,0,,开发者可以将 PaLM API 与 Maker Suite 集成
+Dialogue: 0,0:15:03.75,0:15:08.34,Default,,0,0,0,,并通过图形用户界面访问 API。
+Dialogue: 0,0:15:08.34,0:15:10.65,Default,,0,0,0,,该套件包括许多不同的工具，
+Dialogue: 0,0:15:10.65,0:15:14.7,Default,,0,0,0,,如模型训练工具、模型部署工具、
+Dialogue: 0,0:15:14.7,0:15:16.48,Default,,0,0,0,,以及模型监控工具。
+Dialogue: 0,0:15:16.48,0:15:22.3,Default,,0,0,0,,模型训练工具帮助开发者用不同算法训练机器学习模型在他们的数据上。
+Dialogue: 0,0:15:22.3,0:15:25.59,Default,,0,0,0,,模型部署工具帮助开发者用多种部署选项
+Dialogue: 0,0:15:25.59,0:15:29.74,Default,,0,0,0,,将机器学习模型部署到生产环境。
+Dialogue: 0,0:15:29.74,0:15:31.93,Default,,0,0,0,,模型监控工具则帮助
+Dialogue: 0,0:15:31.93,0:15:35.20,Default,,0,0,0,,开发者通过仪表盘和多种指标
+Dialogue: 0,0:15:35.20,0:15:40.48,Default,,0,0,0,,监控生产环境中机器学习模型的性能。
+Dialogue: 0,0:15:40.48,0:15:41.72,Default,,0,0,0,,目前就是这些。
+Dialogue: 0,0:15:41.72,0:15:46.47,Default,,0,0,0,,感谢收看本课程，大型语言模型简介。

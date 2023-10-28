@@ -1,0 +1,853 @@
+1
+00:00:01,199 --> 00:00:02,165
+Hi everyone.
+
+2
+00:00:02,165 --> 00:00:06,698
+I am Takumi, machine learning engineer
+at Google Advanced Solutions.
+
+3
+00:00:06,700 --> 00:00:09,099
+Love.
+
+4
+00:00:09,099 --> 00:00:12,299
+Currently a lot of people are talking
+about generative AI
+
+5
+00:00:12,333 --> 00:00:14,999
+and its new advancement,
+
+6
+00:00:15,000 --> 00:00:18,932
+and as some of you may know,
+Google and Google Cloud
+
+7
+00:00:19,065 --> 00:00:23,199
+also released so many generative
+AI related new products
+
+8
+00:00:23,300 --> 00:00:26,666
+and features.
+
+9
+00:00:26,666 --> 00:00:30,733
+But in this video series,
+our goal is not to create a state
+
+10
+00:00:30,733 --> 00:00:34,200
+of our generative AIS, nor to introduce
+
+11
+00:00:34,200 --> 00:00:37,200
+Google Cloud new products.
+
+12
+00:00:37,200 --> 00:00:42,299
+Instead, we will explain what kind
+of technology has walking behind them.
+
+13
+00:00:43,665 --> 00:00:46,964
+And especially in this video,
+I'm going to talk about
+
+14
+00:00:47,432 --> 00:00:50,765
+how to actually create
+a very simple generative model,
+
+15
+00:00:51,299 --> 00:00:55,364
+image captioning model
+by using a technologies
+
+16
+00:00:55,399 --> 00:01:00,198
+like encoder decoder
+attention mechanism and a bit transformer.
+
+17
+00:01:01,200 --> 00:01:03,666
+If you're not very familiar
+with these concepts,
+
+18
+00:01:04,233 --> 00:01:07,099
+I recommend checking other videos,
+talking about them
+
+19
+00:01:07,099 --> 00:01:10,664
+before this.
+
+20
+00:01:10,665 --> 00:01:10,965
+Okay.
+
+21
+00:01:10,965 --> 00:01:15,498
+So if you're ready, let's talk about image
+captioning tasks and data
+
+22
+00:01:15,500 --> 00:01:20,533
+set out first,
+we're going to use this kind of dataset.
+
+23
+00:01:21,099 --> 00:01:24,898
+As you can see, there are a lot of
+pairs of images and text data
+
+24
+00:01:26,200 --> 00:01:29,099
+and our goal is to build and train a model
+
+25
+00:01:29,400 --> 00:01:33,499
+that can generate these kind of takes
+captions based on images,
+
+26
+00:01:34,132 --> 00:01:38,665
+and we'll make it happen
+by building this kind of model.
+
+27
+00:01:38,665 --> 00:01:44,599
+As you can see, it is kind of encoder
+decoder model, but in this case, encode
+
+28
+00:01:44,599 --> 00:01:50,964
+and decoder handle different
+modality of data, which is image and text.
+
+29
+00:01:50,965 --> 00:01:56,298
+So we pass the images to encoder at first
+and it extract information
+
+30
+00:01:56,299 --> 00:02:00,731
+from the images
+and create some feature vectors.
+
+31
+00:02:00,733 --> 00:02:03,966
+And then the vectors are passed
+to the decoder
+
+32
+00:02:04,533 --> 00:02:08,632
+which actually build the captions
+by generating was one by one.
+
+33
+00:02:09,599 --> 00:02:11,965
+So this encoder part is easy.
+
+34
+00:02:11,966 --> 00:02:16,065
+You can use any kinds of image backbone
+like resonant
+
+35
+00:02:16,233 --> 00:02:20,099
+efficient net or vision transformer.
+
+36
+00:02:20,099 --> 00:02:24,599
+What we want to do here is to extract
+features by using that kind of backbones.
+
+37
+00:02:25,566 --> 00:02:29,699
+So code
+is very simple too, in terms of the code,
+
+38
+00:02:29,699 --> 00:02:32,998
+we're going to see the entire notebook
+example in the next video.
+
+39
+00:02:33,466 --> 00:02:36,199
+So here, let's just focus on
+some important
+
+40
+00:02:36,199 --> 00:02:39,299
+lines.
+
+41
+00:02:39,300 --> 00:02:43,399
+As you can see, we are using
+classical inception version of V2 here
+
+42
+00:02:44,332 --> 00:02:47,231
+from Carousel Applications.
+
+43
+00:02:47,233 --> 00:02:52,500
+But again,
+this can be any image backbones.
+
+44
+00:02:52,500 --> 00:02:55,266
+So the next part
+that the quarter is a bit complex.
+
+45
+00:02:56,165 --> 00:03:00,599
+So let's take a look very carefully.
+
+46
+00:03:00,599 --> 00:03:03,299
+So this is the entire architecture
+of the decoder.
+
+47
+00:03:04,400 --> 00:03:06,699
+It it gets was one by one
+
+48
+00:03:06,699 --> 00:03:10,165
+and makes the information of wires
+and images
+
+49
+00:03:10,199 --> 00:03:12,764
+which is coming from the encoder output
+
+50
+00:03:14,133 --> 00:03:17,899
+and tried to predict the next wires.
+
+51
+00:03:17,900 --> 00:03:21,465
+So this decoder itself
+is in kind of iterative operation.
+
+52
+00:03:21,900 --> 00:03:25,565
+So by calling it again and again
+or to regress fully,
+
+53
+00:03:26,165 --> 00:03:28,732
+we can eventually generate six captions.
+
+54
+00:03:29,900 --> 00:03:30,566
+There are so many
+
+55
+00:03:30,566 --> 00:03:34,932
+variations for this decoder design,
+but here we build transformer
+
+56
+00:03:34,932 --> 00:03:39,098
+like architecture,
+although we still use are in energy R2.
+
+57
+00:03:40,765 --> 00:03:45,298
+So let's zoom into each component.
+
+58
+00:03:45,300 --> 00:03:48,332
+The first embedding layer creates
+word embeddings,
+
+59
+00:03:48,866 --> 00:03:51,800
+which was discussed in other videos
+
+60
+00:03:51,800 --> 00:03:56,099
+and we are passing it to grill layer.
+
+61
+00:03:56,099 --> 00:03:57,965
+If you forgot what you are your guess.
+
+62
+00:03:57,966 --> 00:04:00,533
+It's a variation
+of recurrent neural network
+
+63
+00:04:00,800 --> 00:04:03,599
+or you can call r in n
+
+64
+00:04:03,599 --> 00:04:05,932
+r n n takes inputs and updates
+
+65
+00:04:05,932 --> 00:04:08,731
+its internal states and generate output.
+
+66
+00:04:09,599 --> 00:04:14,065
+So by passing sequential data
+like text data, it keeps two sequential
+
+67
+00:04:14,066 --> 00:04:14,665
+dependencies.
+
+68
+00:04:14,665 --> 00:04:17,564
+These from previous
+inputs like previous was
+
+69
+00:04:18,932 --> 00:04:21,731
+that grow output goes to attention layer
+
+70
+00:04:22,132 --> 00:04:24,898
+which mixes
+the information of texts and image
+
+71
+00:04:26,100 --> 00:04:27,966
+in TensorFlow chorus, we can use
+
+72
+00:04:27,966 --> 00:04:31,033
+predefined layers
+in the same way as other layers.
+
+73
+00:04:32,165 --> 00:04:34,032
+There are multiple implementations,
+
+74
+00:04:34,033 --> 00:04:38,100
+but here we simply use F
+cross layers attention.
+
+75
+00:04:39,300 --> 00:04:44,165
+But if you want to use more transformer
+like architecture, you can know. So
+
+76
+00:04:44,165 --> 00:04:47,765
+the pick up tf cross layers most attention
+
+77
+00:04:48,165 --> 00:04:50,532
+which uses multiple attention heads.
+
+78
+00:04:51,600 --> 00:04:54,933
+You can simply switch and use it in
+almost the same way.
+
+79
+00:04:56,266 --> 00:05:00,165
+Inside our attention layer,
+it looks like this as you may
+
+80
+00:05:00,165 --> 00:05:03,765
+have already seen in another video
+about attention mechanism.
+
+81
+00:05:04,800 --> 00:05:06,1000
+But the unique thing here is it pays
+
+82
+00:05:07,000 --> 00:05:10,233
+attention to image feature from text data
+
+83
+00:05:11,699 --> 00:05:14,465
+by doing so, it can calculate attention
+
+84
+00:05:14,466 --> 00:05:16,833
+score by mixing both information.
+
+85
+00:05:18,600 --> 00:05:19,899
+Going back to code,
+
+86
+00:05:19,899 --> 00:05:23,099
+you can see this
+attention layer takes two inputs
+
+87
+00:05:24,000 --> 00:05:26,833
+Geri output and encoder output.
+
+88
+00:05:28,565 --> 00:05:32,399
+Internally, group
+output is used as attention
+
+89
+00:05:32,399 --> 00:05:36,599
+query and key and encoder output as value.
+
+90
+00:05:38,165 --> 00:05:40,865
+The last components are add layer
+
+91
+00:05:41,199 --> 00:05:43,364
+and layer normalization layer
+
+92
+00:05:44,932 --> 00:05:45,799
+at layer.
+
+93
+00:05:45,800 --> 00:05:48,500
+Just add two same shift vectors.
+
+94
+00:05:50,100 --> 00:05:53,865
+As you can see here,
+the group output as passed to attention
+
+95
+00:05:53,865 --> 00:05:58,299
+layer as we discussed
+and to this ad layer directly,
+
+96
+00:05:59,800 --> 00:06:01,932
+these two flows are eventually
+
+97
+00:06:01,932 --> 00:06:04,765
+marched in this other layer.
+
+98
+00:06:05,000 --> 00:06:06,500
+This kind of architecture
+
+99
+00:06:06,500 --> 00:06:10,732
+is called skip connection,
+which has been a very popular
+
+100
+00:06:10,766 --> 00:06:14,200
+deep neural network
+design pattern since Resonant.
+
+101
+00:06:15,333 --> 00:06:20,600
+So it is also called residual connection.
+
+102
+00:06:20,600 --> 00:06:25,733
+This skip connection is very useful,
+especially when you want to design
+
+103
+00:06:25,733 --> 00:06:29,300
+a very deep neural network and it is also
+
+104
+00:06:29,300 --> 00:06:32,166
+used in the transformer.
+
+105
+00:06:32,500 --> 00:06:35,600
+With this
+now we could build an entire decoder,
+
+106
+00:06:36,333 --> 00:06:39,599
+so we are ready to train the encoder
+decoder image
+
+107
+00:06:39,600 --> 00:06:42,499
+captioning model
+using the captioning dataset.
+
+108
+00:06:43,399 --> 00:06:47,932
+We will see how it works
+in the next video.
+
+109
+00:06:47,932 --> 00:06:50,331
+But before moving on to the next one,
+
+110
+00:06:50,699 --> 00:06:53,731
+I want to explain a bit
+more about inference phase
+
+111
+00:06:54,100 --> 00:06:57,566
+where we can actually generate captions
+for obviously images
+
+112
+00:06:58,300 --> 00:07:00,699
+because this process
+may look a bit complex
+
+113
+00:07:02,533 --> 00:07:02,766
+here.
+
+114
+00:07:02,766 --> 00:07:05,899
+We can see
+three steps and we're going to implement
+
+115
+00:07:05,899 --> 00:07:08,499
+these steps in a custom inference
+function,
+
+116
+00:07:10,000 --> 00:07:13,200
+the number one,
+and generate the initial state
+
+117
+00:07:13,500 --> 00:07:16,432
+and create a star token
+
+118
+00:07:16,432 --> 00:07:17,865
+in training phase.
+
+119
+00:07:17,865 --> 00:07:20,599
+TensorFlow chorus can automatically handle
+
+120
+00:07:21,065 --> 00:07:23,698
+a state for each sequence,
+
+121
+00:07:23,699 --> 00:07:27,865
+but in this inference phase,
+since we design our own custom function,
+
+122
+00:07:28,266 --> 00:07:31,500
+we need to write a logic to deal with it
+explicitly.
+
+123
+00:07:33,266 --> 00:07:35,699
+So at the beginning of each captioning
+
+124
+00:07:35,699 --> 00:07:38,498
+we explicitly initialize the state
+
+125
+00:07:38,500 --> 00:07:40,500
+with some value
+
+126
+00:07:41,800 --> 00:07:43,432
+and at the same time
+
+127
+00:07:43,432 --> 00:07:46,565
+remember our decoder
+is an auto regressive function.
+
+128
+00:07:47,466 --> 00:07:51,232
+But since we haven't get
+any wider prediction yet at the beginning
+
+129
+00:07:51,233 --> 00:07:56,632
+of the inference we start talking,
+which is a special token.
+
+130
+00:07:56,632 --> 00:08:00,232
+That means the beginning of a sentence
+
+131
+00:08:00,733 --> 00:08:02,165
+number 2%
+
+132
+00:08:02,165 --> 00:08:06,665
+input image to the encoder and instruct
+the feature vector as we discussed
+
+133
+00:08:07,233 --> 00:08:10,233
+and number three passed a vector
+
+134
+00:08:10,233 --> 00:08:15,633
+to this time decoder and generate
+a caption word in the for loop
+
+135
+00:08:16,065 --> 00:08:18,598
+until it returns and token
+
+136
+00:08:19,065 --> 00:08:23,465
+or it reads to max caption lengths,
+which is just a hyper parameter
+
+137
+00:08:23,899 --> 00:08:27,064
+specifying some number like 264.
+
+138
+00:08:27,699 --> 00:08:31,665
+And in this full loop
+we define all the procedures of caption
+
+139
+00:08:31,665 --> 00:08:35,532
+generation
+by calling the decoder also aggressively
+
+140
+00:08:37,166 --> 00:08:38,299
+and token is a
+
+141
+00:08:38,299 --> 00:08:41,499
+special token two,
+which means to end of the sequence.
+
+142
+00:08:42,265 --> 00:08:44,999
+So when our decoder generate this token,
+
+143
+00:08:45,265 --> 00:08:48,164
+we can finish this full loop
+
+144
+00:08:48,166 --> 00:08:51,633
+or you can go out of the loop
+when the lengths of the caption
+
+145
+00:08:51,633 --> 00:08:56,133
+rigid, some number max capsule lengths.
+
+146
+00:08:56,133 --> 00:08:58,200
+Let's take a look at the code one by one.
+
+147
+00:08:59,832 --> 00:09:01,965
+In the first step we initialize
+
+148
+00:09:02,000 --> 00:09:06,065
+two things Jerry a state and start token.
+
+149
+00:09:06,066 --> 00:09:10,665
+In this case, Jerry's state
+is simply initialized with zero vectors
+
+150
+00:09:11,765 --> 00:09:13,931
+n which says start tokens
+
+151
+00:09:13,932 --> 00:09:16,299
+as the first input word for the decoder
+
+152
+00:09:18,066 --> 00:09:22,365
+in terms of the bar to index function
+used here, I'm going to explain
+
+153
+00:09:22,365 --> 00:09:27,599
+in the next video, but it basically is
+just tokenized awards to our token,
+
+154
+00:09:28,100 --> 00:09:30,600
+which is the standard text
+pre-processing technique.
+
+155
+00:09:31,865 --> 00:09:32,399
+In the next
+
+156
+00:09:32,399 --> 00:09:35,265
+step, we pre process to input image habit
+
+157
+00:09:35,633 --> 00:09:37,866
+and pass it to the encoder we train.
+
+158
+00:09:39,399 --> 00:09:41,464
+In terms of the image pre-processing,
+
+159
+00:09:42,133 --> 00:09:46,732
+it reads in decode JPEG in the first line
+and resize it
+
+160
+00:09:47,365 --> 00:09:49,965
+from any arbitrarily resolutions
+
+161
+00:09:49,966 --> 00:09:53,166
+to specific resolution
+
+162
+00:09:53,166 --> 00:09:57,033
+and it changes to scale from 0
+
+163
+00:09:57,033 --> 00:10:00,432
+to 255 two 0 to 1 in the third line
+
+164
+00:10:01,932 --> 00:10:05,331
+and the last phase decoder for loop.
+
+165
+00:10:05,332 --> 00:10:06,364
+It is a bit complex.
+
+166
+00:10:06,365 --> 00:10:10,765
+So I will explain in the next video
+more in detail with the actual code.
+
+167
+00:10:11,533 --> 00:10:14,432
+But the main thing here
+is to call the decoder
+
+168
+00:10:14,432 --> 00:10:17,698
+by passing the three things.
+
+169
+00:10:17,700 --> 00:10:20,333
+Decode inputs means decoder inputs,
+
+170
+00:10:21,000 --> 00:10:24,932
+which should have a wire token
+predicted in the previous iteration.
+
+171
+00:10:26,133 --> 00:10:31,299
+And as we talked, if it is the first
+iteration, this would be the start token
+
+172
+00:10:34,399 --> 00:10:35,165
+of state
+
+173
+00:10:35,166 --> 00:10:37,266
+is the current of state we discussed.
+
+174
+00:10:37,932 --> 00:10:41,331
+And please note
+that the recorder of this output,
+
+175
+00:10:41,399 --> 00:10:44,599
+the updated Jerry's state
+
+176
+00:10:45,365 --> 00:10:47,732
+and last but not least features.
+
+177
+00:10:48,500 --> 00:10:52,565
+This is the image feature
+we extracted with the encoder.
+
+178
+00:10:52,566 --> 00:10:58,799
+By passing them we can get the actual
+next var the prediction.
+
+179
+00:10:58,799 --> 00:11:03,031
+This is a very simple text
+generation model from images,
+
+180
+00:11:03,666 --> 00:11:06,565
+but this kind of iteration is very similar
+
+181
+00:11:06,932 --> 00:11:10,132
+even in very large language
+generation models
+
+182
+00:11:10,432 --> 00:11:13,464
+like Google Board,
+
+183
+00:11:13,466 --> 00:11:17,433
+they basically predict
+the next Var, also rigorously in this way,
+
+184
+00:11:17,865 --> 00:11:22,365
+one by one based on some information
+and learned knowledge,
+
+185
+00:11:22,732 --> 00:11:25,664
+which is embedded
+in the huge number of parameters.
+
+186
+00:11:27,066 --> 00:11:30,900
+In the next video, I will walk you
+through the entire notebook
+
+187
+00:11:31,566 --> 00:11:34,265
+and then we will check
+what kind of captions
+
+188
+00:11:34,265 --> 00:11:37,865
+this model can generate.
+
+189
+00:11:37,865 --> 00:11:42,732
+Thank you so much for watching
+and see you in the next video.
+

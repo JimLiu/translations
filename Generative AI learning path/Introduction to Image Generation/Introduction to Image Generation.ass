@@ -1,0 +1,235 @@
+[Script Info]
+
+Title: Introduction to Image Generation
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 0,0:00:00.43,0:00:05.71,Secondary,,0,0,0,,Hi, my name is Kyle Steckler, and I'm a machine learning engineer on the Advanced Solutions Lab team at Google Cloud.
+Dialogue: 0,0:00:05.71,0:00:10.47,Secondary,,0,0,0,,In this talk, we're going to dive into an introduction to image generation.
+Dialogue: 0,0:00:10.47,0:00:14.11,Secondary,,0,0,0,,Specifically, I'll provide an introduction to diffusion models,
+Dialogue: 0,0:00:14.12,0:00:19.92,Secondary,,0,0,0,,a family of models that have recently shown tremendous promise in the image generation space.
+Dialogue: 0,0:00:19.92,0:00:23.13,Secondary,,0,0,0,,With that said, image generation has long been a field of interest,
+Dialogue: 0,0:00:23.13,0:00:26.16,Secondary,,0,0,0,,and there are many interesting approaches that you may have heard about.
+Dialogue: 0,0:00:27.60,0:00:31.11,Secondary,,0,0,0,,Now, while many approaches have been implemented for image generation,
+Dialogue: 0,0:00:31.12,0:00:36.91,Secondary,,0,0,0,,some of the more promising ones over time have been model families such as variational autoencoders,
+Dialogue: 0,0:00:36.91,0:00:39.44,Secondary,,0,0,0,,which encode images to a compressed size
+Dialogue: 0,0:00:39.44,0:00:44.67,Secondary,,0,0,0,,and then decode back to the original size while learning the distribution of the data itself.
+Dialogue: 0,0:00:46.4,0:00:50.54,Secondary,,0,0,0,,Generative adversarial models, or GANs, have also been quite popular.
+Dialogue: 0,0:00:50.54,0:00:51.84,Secondary,,0,0,0,,These models are really interesting.
+Dialogue: 0,0:00:51.84,0:00:55.50,Secondary,,0,0,0,,They actually pit two neural networks against each other.
+Dialogue: 0,0:00:55.50,0:00:58.51,Secondary,,0,0,0,,One neural network, the generator, creates images,
+Dialogue: 0,0:00:58.61,0:01:03.21,Secondary,,0,0,0,,and the other neural network, the discriminator, predicts if the image is real or fake.
+Dialogue: 0,0:01:03.75,0:01:08.69,Secondary,,0,0,0,,Over time, the discriminator gets better and better at distinguishing between real and fake,
+Dialogue: 0,0:01:08.70,0:01:12.55,Secondary,,0,0,0,,and the generator gets better and better at creating real-looking fakes.
+Dialogue: 0,0:01:12.55,0:01:14.18,Secondary,,0,0,0,,You may have heard the term deepfakes before.
+Dialogue: 0,0:01:15.32,0:01:17.58,Secondary,,0,0,0,,And lastly, autoregressive models.
+Dialogue: 0,0:01:17.58,0:01:22.19,Secondary,,0,0,0,,These things generate images by treating an image as a sequence of pixels.
+Dialogue: 0,0:01:22.19,0:01:25.63,Secondary,,0,0,0,,And the modern approach with autoregressive models actually draws
+Dialogue: 0,0:01:30.90,0:01:31.58,Secondary,,0,0,0,,Very interesting.
+Dialogue: 0,0:01:32.56,0:01:35.28,Secondary,,0,0,0,,Now in this talk, this is really going to be the focus.
+Dialogue: 0,0:01:35.28,0:01:38.73,Secondary,,0,0,0,,And this is one of the newer image generation model families.
+Dialogue: 0,0:01:38.73,0:01:41.27,Secondary,,0,0,0,,And that is diffusion models.
+Dialogue: 0,0:01:41.27,0:01:46.79,Secondary,,0,0,0,,Diffusion models draw their inspiration from physics, specifically thermodynamics.
+Dialogue: 0,0:01:46.79,0:01:51.45,Secondary,,0,0,0,,And while they were first really introduced for image generation in 2015,
+Dialogue: 0,0:01:51.65,0:01:54.77,Secondary,,0,0,0,,it took a few years for the idea to really take off.
+Dialogue: 0,0:01:55.68,0:01:59.46,Secondary,,0,0,0,,Within the last few years though, 2020 up until now,
+Dialogue: 0,0:01:59.46,0:02:04.57,Secondary,,0,0,0,,we have seen a massive increase of diffusion models in both the research space
+Dialogue: 0,0:02:09.8,0:02:15.15,Secondary,,0,0,0,,Diffusion models underpin many of the state-of-the-art image generation systems that you may be familiar with today.
+Dialogue: 0,0:02:16.34,0:02:20.60,Secondary,,0,0,0,,Diffusion models show promise across a number of different use cases.
+Dialogue: 0,0:02:20.60,0:02:25.99,Secondary,,0,0,0,,Unconditioned diffusion models, where models have no additional input or instruction,
+Dialogue: 0,0:02:26.3,0:02:31.89,Secondary,,0,0,0,,can be trained from images of a specific thing, such as faces, as you can see on the slide here,
+Dialogue: 0,0:02:31.89,0:02:35.63,Secondary,,0,0,0,,and it will learn to generate new images of that thing.
+Dialogue: 0,0:02:35.63,0:02:39.54,Secondary,,0,0,0,,Another example of unconditioned generation is super resolution,
+Dialogue: 0,0:02:39.74,0:02:43.2,Secondary,,0,0,0,,which is really powerful in enhancing low-quality images.
+Dialogue: 0,0:02:43.98,0:02:46.69,Secondary,,0,0,0,,We also have conditioned generation models,
+Dialogue: 0,0:02:46.89,0:02:51.99,Secondary,,0,0,0,,and these give us things like text-to-image, where we can generate an image from a text prompt,
+Dialogue: 0,0:02:52.0,0:02:59.28,Secondary,,0,0,0,,and other things like image-inpainting and text-guided image-to-image, where we can remove or add things.
+Dialogue: 0,0:02:59.28,0:03:02.8,Secondary,,0,0,0,,We can edit the image itself.
+Dialogue: 0,0:03:02.8,0:03:09.47,Secondary,,0,0,0,,Now, let's take a little bit of a deeper dive into diffusion models and talk about how do these things actually work.
+Dialogue: 0,0:03:10.88,0:03:12.64,Secondary,,0,0,0,,As noted on the slide here,
+Dialogue: 0,0:03:12.64,0:03:24.17,Secondary,,0,0,0,,the essential idea is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process.
+Dialogue: 0,0:03:24.17,0:03:29.65,Secondary,,0,0,0,,Really, this is going to be adding noise iteratively to an image.
+Dialogue: 0,0:03:29.65,0:03:35.0,Secondary,,0,0,0,,We then learn a reverse diffusion process that restores structure in the data,
+Dialogue: 0,0:03:35.20,0:03:39.81,Secondary,,0,0,0,,yielding a highly flexible and tractable generative model of the data.
+Dialogue: 0,0:03:40.82,0:03:44.91,Secondary,,0,0,0,,In other words, we can add noise to an image iteratively,
+Dialogue: 0,0:03:45.4,0:03:53.68,Secondary,,0,0,0,,and we can then train a model that learns how to denoise an image, thus generating novel images.
+Dialogue: 0,0:03:53.68,0:04:01.86,Secondary,,0,0,0,,So the goal here is that we want to have this model learn to denoise, to remove noise.
+Dialogue: 0,0:04:01.86,0:04:08.31,Secondary,,0,0,0,,And in that aspect then, we could start here on the left of the slide, we could start from pure noise,
+Dialogue: 0,0:04:09.48,0:04:14.95,Secondary,,0,0,0,,And from that pure noise, we could have a model that will be able to synthesize a novel image.
+Dialogue: 0,0:04:15.83,0:04:21.66,Secondary,,0,0,0,,Now, I know that there's a bit of math notation on this slide, so let's break it down just a little bit.
+Dialogue: 0,0:04:21.66,0:04:24.90,Secondary,,0,0,0,,We start with a large data set of images.
+Dialogue: 0,0:04:24.90,0:04:29.94,Secondary,,0,0,0,,But let's just take a single image here, shown on the right-hand side.
+Dialogue: 0,0:04:29.94,0:04:41.99,Secondary,,0,0,0,,Well, we can start this forward diffusion process, and we can go from x0, the initial image, to x1, the initial image with a little bit of noise added to it.
+Dialogue: 0,0:04:42.67,0:04:50.33,Secondary,,0,0,0,,And we can do this over and over again, iteratively adding more and more noise to the initial image.
+Dialogue: 0,0:04:50.33,0:04:55.40,Secondary,,0,0,0,,Now this distribution we call q, and it only depends on the previous step.
+Dialogue: 0,0:04:55.40,0:05:04.52,Secondary,,0,0,0,,So if we do this over and over, iteratively adding more noise, we need to think about how many times do we perform that operation.
+Dialogue: 0,0:05:04.52,0:05:06.93,Secondary,,0,0,0,,And the initial research paper did this 1,000 times.
+Dialogue: 0,0:05:08.65,0:05:17.4,Secondary,,0,0,0,,So ideally, with that number being high enough, 1000, by the end of it, we should reach a state of pure noise.
+Dialogue: 0,0:05:17.4,0:05:23.42,Secondary,,0,0,0,,And so by this point, all structure in the initial image is completely gone.
+Dialogue: 0,0:05:23.42,0:05:25.22,Secondary,,0,0,0,,We're just looking at pure noise.
+Dialogue: 0,0:05:25.22,0:05:28.18,Secondary,,0,0,0,,Now, obviously, that's kind of the easy part.
+Dialogue: 0,0:05:28.18,0:05:30.29,Secondary,,0,0,0,,It's not too difficult to perform q.
+Dialogue: 0,0:05:31.25,0:05:33.54,Secondary,,0,0,0,,to iteratively add more and more noise,
+Dialogue: 0,0:05:33.54,0:05:40.69,Secondary,,0,0,0,,the challenging part is how do we go from a noisy image to a slightly less noisy image.
+Dialogue: 0,0:05:40.69,0:05:44.83,Secondary,,0,0,0,,And so this we'll refer to as the reverse diffusion process.
+Dialogue: 0,0:05:44.83,0:05:53.59,Secondary,,0,0,0,,And at this stage, every step of the way, every step that we add noise, we also learn the reverse diffusion process.
+Dialogue: 0,0:05:54.43,0:06:00.46,Secondary,,0,0,0,,That is, we train a machine learning model that takes in as input the noisy image
+Dialogue: 0,0:06:00.46,0:06:04.54,Secondary,,0,0,0,,and predicts the noise that's been added to it.
+Dialogue: 0,0:06:04.54,0:06:08.90,Secondary,,0,0,0,,Now let's look at that from a slightly different angle.
+Dialogue: 0,0:06:08.90,0:06:12.74,Secondary,,0,0,0,,We can visualize a single training step of the model here.
+Dialogue: 0,0:06:12.74,0:06:19.89,Secondary,,0,0,0,,So we have our initial image x on the left and we sample at a time step to create a noisy image.
+Dialogue: 0,0:06:20.87,0:06:26.53,Secondary,,0,0,0,,We then send that through our denoising model with the goal of predicting the noise.
+Dialogue: 0,0:06:26.53,0:06:30.48,Secondary,,0,0,0,,So the output of the model is the predicted noise.
+Dialogue: 0,0:06:30.48,0:06:32.60,Secondary,,0,0,0,,But we just added the noise to this image.
+Dialogue: 0,0:06:32.60,0:06:33.88,Secondary,,0,0,0,,We know what it is.
+Dialogue: 0,0:06:33.88,0:06:35.66,Secondary,,0,0,0,,So we can actually compare that.
+Dialogue: 0,0:06:35.66,0:06:41.66,Secondary,,0,0,0,,We can see what is the difference between the model's predicted noise and the actual noise that we added.
+Dialogue: 0,0:06:42.51,0:06:50.80,Secondary,,0,0,0,,Now this model is trained similar to most machine learning models that you might be familiar with to minimize that difference.
+Dialogue: 0,0:06:50.80,0:06:59.73,Secondary,,0,0,0,,And over time, after seeing enough examples, this model gets very, very good at removing noise from images.
+Dialogue: 0,0:06:59.73,0:07:01.21,Secondary,,0,0,0,,And now for the fun part.
+Dialogue: 0,0:07:01.21,0:07:06.1,Secondary,,0,0,0,,This is where it gets really cool as we need to think about once we train this model,
+Dialogue: 0,0:07:06.21,0:07:07.93,Secondary,,0,0,0,,how do we generate images with it?
+Dialogue: 0,0:07:08.72,0:07:10.66,Secondary,,0,0,0,,Well, it's actually fairly intuitive.
+Dialogue: 0,0:07:10.66,0:07:19.7,Secondary,,0,0,0,,We can just start with pure absolute noise and send that noise through our model that is trained.
+Dialogue: 0,0:07:19.7,0:07:25.6,Secondary,,0,0,0,,We then take the output, the predicted noise, and subtract it from the initial noise.
+Dialogue: 0,0:07:25.6,0:07:30.18,Secondary,,0,0,0,,And if we do that over and over and over again, we end up with a generated image.
+Dialogue: 0,0:07:31.65,0:07:33.0,Secondary,,0,0,0,,Another way to think about this is that
+Dialogue: 0,0:07:33.0,0:07:39.5,Secondary,,0,0,0,,the model is able to learn the real data distribution of images that it's seen
+Dialogue: 0,0:07:39.25,0:07:44.78,Secondary,,0,0,0,,and then sample from that learned distribution to create new novel images.
+Dialogue: 0,0:07:44.78,0:07:45.22,Secondary,,0,0,0,,Very cool.
+Dialogue: 0,0:07:46.58,0:07:53.23,Secondary,,0,0,0,,As I'm sure we're all aware, there have been many advances in this space in just the last few years.
+Dialogue: 0,0:07:53.23,0:08:00.50,Secondary,,0,0,0,,And while many of the exciting new technologies on Vertex AI for image generation are underpinned with diffusion models,
+Dialogue: 0,0:08:00.51,0:08:04.73,Secondary,,0,0,0,,lots of work has been done to generate images faster and with more control.
+Dialogue: 0,0:08:05.49,0:08:10.51,Secondary,,0,0,0,,Hopefully now, after taking a little bit of a look under the covers into how diffusion models work,
+Dialogue: 0,0:08:10.52,0:08:17.70,Secondary,,0,0,0,,you have a bit better intuition as to what's actually going on with these really new, innovative model types.
+Dialogue: 0,0:08:18.18,0:08:26.43,Secondary,,0,0,0,,We've also seen wonderful results combining the power of diffusion models with the power of LLMs, or large language models,
+Dialogue: 0,0:08:26.57,0:08:33.57,Secondary,,0,0,0,,that can really enable us to create context-aware, photorealistic images from a text prompt.
+Dialogue: 0,0:08:34.50,0:08:38.33,Secondary,,0,0,0,,One great example of this is Imagen from Google Research.
+Dialogue: 0,0:08:38.33,0:08:42.40,Secondary,,0,0,0,,While it's a bit more complicated than what we've talked through in this session,
+Dialogue: 0,0:08:42.40,0:08:49.61,Secondary,,0,0,0,,you can see that at its core, it's a composition of an LLM and a few diffusion-based models.
+Dialogue: 0,0:08:49.61,0:08:51.47,Secondary,,0,0,0,,This is a really exciting space,
+Dialogue: 0,0:08:51.47,0:08:58.18,Secondary,,0,0,0,,and I'm thrilled to see this wonderful technology make its way into enterprise-grade products on Vertex AI.
+Dialogue: 0,0:08:58.18,0:08:58.92,Secondary,,0,0,0,,Thanks for listening.
+Dialogue: 0,0:00:00.43,0:00:05.71,Default,,0,0,0,,嗨，我叫Kyle Steckler，我是Google Cloud高\N级解决方案实验室团队的机器学习工程师。
+Dialogue: 0,0:00:05.71,0:00:10.47,Default,,0,0,0,,在这次演讲中，我们将深入介绍图像生成的入门知识。
+Dialogue: 0,0:00:10.47,0:00:14.11,Default,,0,0,0,,具体来说，我将介绍扩散模型，
+Dialogue: 0,0:00:14.12,0:00:19.92,Default,,0,0,0,,这是近期在图像生成领域表现出巨大潜力的一类模型。
+Dialogue: 0,0:00:19.92,0:00:23.13,Default,,0,0,0,,话虽如此，图像生成一直是一个颇受关注的领域，
+Dialogue: 0,0:00:23.13,0:00:26.16,Default,,0,0,0,,你可能听说过许多有趣的方法。
+Dialogue: 0,0:00:27.60,0:00:31.11,Default,,0,0,0,,现在，虽然已经实施了许多图像生成的方法，
+Dialogue: 0,0:00:31.12,0:00:36.91,Default,,0,0,0,,但随着时间的推移，最有前景的一些方法已经\N被模型家族所采用，比如变分自编码器，
+Dialogue: 0,0:00:36.91,0:00:39.44,Default,,0,0,0,,它们将图像编码到一个压缩的大小，
+Dialogue: 0,0:00:39.44,0:00:44.67,Default,,0,0,0,,然后解码回原始大小，同时学习数据本身的分布。
+Dialogue: 0,0:00:46.4,0:00:50.54,Default,,0,0,0,,生成对抗模型，或者说GANs，也非常受欢迎。
+Dialogue: 0,0:00:50.54,0:00:51.84,Default,,0,0,0,,这些模型真的很有趣。
+Dialogue: 0,0:00:51.84,0:00:55.50,Default,,0,0,0,,它们实际上是让两个神经网络相互对抗。
+Dialogue: 0,0:00:55.50,0:00:58.51,Default,,0,0,0,,一个神经网络（生成器）创建图像，
+Dialogue: 0,0:00:58.61,0:01:03.21,Default,,0,0,0,,另一个神经网络（鉴别器）预测图像是真是假。
+Dialogue: 0,0:01:03.75,0:01:08.69,Default,,0,0,0,,随着时间的推移，鉴别器在区分真假方面越来越好，
+Dialogue: 0,0:01:08.70,0:01:12.55,Default,,0,0,0,,生成器在创造逼真的假图像方面也越来越好。
+Dialogue: 0,0:01:12.55,0:01:14.18,Default,,0,0,0,,你可能听说过“深度伪造(Deepfake)”这个术语。
+Dialogue: 0,0:01:15.32,0:01:17.58,Default,,0,0,0,,最后，自回归模型。
+Dialogue: 0,0:01:17.58,0:01:22.19,Default,,0,0,0,,这些模型将图像视为像素序列来生成。
+Dialogue: 0,0:01:22.19,0:01:30.90,Default,,0,0,0,,现代的自回归模型实际上从大型语言模型\N(LLMs)处理文本的方式中汲取了大量灵感。
+Dialogue: 0,0:01:30.90,0:01:31.58,Default,,0,0,0,,非常有趣。
+Dialogue: 0,0:01:32.56,0:01:35.28,Default,,0,0,0,,在这次讲座中，这就是我们真正要关注的内容。
+Dialogue: 0,0:01:35.28,0:01:38.73,Default,,0,0,0,,这是较新的图像生成模型家族之一。
+Dialogue: 0,0:01:38.73,0:01:41.27,Default,,0,0,0,,那就是扩散模型。
+Dialogue: 0,0:01:41.27,0:01:46.79,Default,,0,0,0,,扩散模型的灵感来源于物理学，特别是热力学。
+Dialogue: 0,0:01:46.79,0:01:51.45,Default,,0,0,0,,虽然它们最初是在2015年为图像生成引入的，
+Dialogue: 0,0:01:51.65,0:01:54.77,Default,,0,0,0,,但这个想法真正流行起来还是花了好几年时间。
+Dialogue: 0,0:01:55.68,0:01:59.46,Default,,0,0,0,,然而，在过去的几年里，从2020年到现在，
+Dialogue: 0,0:01:59.46,0:02:09.8,Default,,0,0,0,,我们在研究领域和现今的工业领域，都看到了扩散模型的大量增长。
+Dialogue: 0,0:02:09.8,0:02:15.15,Default,,0,0,0,,可能你熟悉的许多最先进的图像生成系统都是由扩散模型支持的。
+Dialogue: 0,0:02:16.34,0:02:20.60,Default,,0,0,0,,扩散模型在许多不同的使用场景中都展现出了潜力。
+Dialogue: 0,0:02:20.60,0:02:25.99,Default,,0,0,0,,无条件的扩散模型，即模型没有额外的输入或指令，
+Dialogue: 0,0:02:26.3,0:02:31.89,Default,,0,0,0,,可以从特定事物的图像中进行训练，比如\N你可以在这里的幻灯片中看到的脸，
+Dialogue: 0,0:02:31.89,0:02:35.63,Default,,0,0,0,,它将学习生成新的图像。
+Dialogue: 0,0:02:35.63,0:02:39.54,Default,,0,0,0,,无条件生成的另一个例子是超分辨率，
+Dialogue: 0,0:02:39.74,0:02:43.2,Default,,0,0,0,,它在提高低质量图像的清晰度方面非常强大。
+Dialogue: 0,0:02:43.98,0:02:46.69,Default,,0,0,0,,还有条件生成模型，
+Dialogue: 0,0:02:46.89,0:02:51.99,Default,,0,0,0,,这些模型为我们提供了像从文本提示\N（Prompt）生成图像的文本到图像，
+Dialogue: 0,0:02:52.0,0:02:59.28,Default,,0,0,0,,还有其他像图像修复和文本引导的图像到图像\N等功能，我们可以在图像上删除或添加内容。
+Dialogue: 0,0:02:59.28,0:03:02.8,Default,,0,0,0,,我们可以编辑图像本身。
+Dialogue: 0,0:03:02.8,0:03:09.47,Default,,0,0,0,,现在，让我们更深入地探讨一下扩散模型\N，看看这些东西到底是如何工作的。
+Dialogue: 0,0:03:10.88,0:03:12.64,Default,,0,0,0,,如幻灯片上所示，
+Dialogue: 0,0:03:12.64,0:03:24.17,Default,,0,0,0,,基本的思想是通过迭代的前向扩散过程，系\N统地、慢慢地破坏数据分布中的结构。
+Dialogue: 0,0:03:24.17,0:03:29.65,Default,,0,0,0,,实际上，这将是对图像进行迭代噪声添加。
+Dialogue: 0,0:03:29.65,0:03:35.0,Default,,0,0,0,,然后我们学习一个反向扩散过程，恢复数据中的结构，
+Dialogue: 0,0:03:35.20,0:03:39.81,Default,,0,0,0,,产生一个高度灵活且易于处理的数据生成模型。
+Dialogue: 0,0:03:40.82,0:03:44.91,Default,,0,0,0,,换句话说，我们可以迭代地向图像添加噪声，
+Dialogue: 0,0:03:45.4,0:03:53.68,Default,,0,0,0,,然后我们可以训练一个模型，学习如何去噪图像，从而生成新的图像。
+Dialogue: 0,0:03:53.68,0:04:01.86,Default,,0,0,0,,因此，我们的目标是让这个模型学会去噪，去除噪声。
+Dialogue: 0,0:04:01.86,0:04:08.31,Default,,0,0,0,,那么从这个角度来看，我们可以从幻灯\N片的左边开始，从纯粹的噪声开始，
+Dialogue: 0,0:04:09.48,0:04:14.95,Default,,0,0,0,,从这个纯粹的噪声中，我们可以有一个模型能够合成一个新的图像。
+Dialogue: 0,0:04:15.83,0:04:21.66,Default,,0,0,0,,我知道这个幻灯片上有一些数学符号，所以让我稍微解释一下。
+Dialogue: 0,0:04:21.66,0:04:24.90,Default,,0,0,0,,我们从一个大型的图像数据集开始。
+Dialogue: 0,0:04:24.90,0:04:29.94,Default,,0,0,0,,但是让我们只选取一个图像，就像这里右边显示的那样。
+Dialogue: 0,0:04:29.94,0:04:41.99,Default,,0,0,0,,好的，我们可以开始这个前向扩散过程，我们可以从\Nx0（初始图像）到x1（加入一点噪声的初始图像）。
+Dialogue: 0,0:04:42.67,0:04:50.33,Default,,0,0,0,,我们可以一次又一次地做这个过程，反复向初始图像添加更多的噪声。
+Dialogue: 0,0:04:50.33,0:04:55.40,Default,,0,0,0,,我们称这个分布为q，它只依赖于前一步。
+Dialogue: 0,0:04:55.40,0:05:04.52,Default,,0,0,0,,所以如果我们一次又一次地加入更多的噪声，\N我们需要思考我们要执行多少次这个操作。
+Dialogue: 0,0:05:04.52,0:05:06.93,Default,,0,0,0,,而最初的研究论文做了1000次。
+Dialogue: 0,0:05:08.65,0:05:17.4,Default,,0,0,0,,理想情况下，如果这个数字足够高，比如1000\N，到最后，我们应该达到纯噪声的状态。
+Dialogue: 0,0:05:17.4,0:05:23.42,Default,,0,0,0,,到这个时候，初始图像中的所有结构都完全消失了。
+Dialogue: 0,0:05:23.42,0:05:25.22,Default,,0,0,0,,我们只看到纯噪声。
+Dialogue: 0,0:05:25.22,0:05:28.18,Default,,0,0,0,,显然，这是相对容易的部分。
+Dialogue: 0,0:05:28.18,0:05:30.29,Default,,0,0,0,,执行q并不太困难，
+Dialogue: 0,0:05:31.25,0:05:33.54,Default,,0,0,0,,只是逐步增加更多的噪声，
+Dialogue: 0,0:05:33.54,0:05:40.69,Default,,0,0,0,,困难的部分是我们如何从一个噪声图像\N转变为一个稍微噪声较少的图像。
+Dialogue: 0,0:05:40.69,0:05:44.83,Default,,0,0,0,,我们将这个过程称为反向扩散过程。
+Dialogue: 0,0:05:44.83,0:05:53.59,Default,,0,0,0,,在这个阶段，我们每一步都要添加噪声\N，我们也都要学习反向扩散过程。
+Dialogue: 0,0:05:54.43,0:06:00.46,Default,,0,0,0,,也就是说，我们训练一个机器学习模型，输入噪声图像，
+Dialogue: 0,0:06:00.46,0:06:04.54,Default,,0,0,0,,并预测已经加入到图像中的噪声。
+Dialogue: 0,0:06:04.54,0:06:08.90,Default,,0,0,0,,现在让我们从一个稍微不同的角度来看待这个问题。
+Dialogue: 0,0:06:08.90,0:06:12.74,Default,,0,0,0,,我们可以在这里可视化模型的单个训练步骤。
+Dialogue: 0,0:06:12.74,0:06:19.89,Default,,0,0,0,,所以我们在左边有初始图像x，并且在一\N个时间步骤中生成一个噪声图像。
+Dialogue: 0,0:06:20.87,0:06:26.53,Default,,0,0,0,,然后我们将其输入我们的去噪模型，目标是预测噪声。
+Dialogue: 0,0:06:26.53,0:06:30.48,Default,,0,0,0,,所以模型的输出就是预测的噪声。
+Dialogue: 0,0:06:30.48,0:06:32.60,Default,,0,0,0,,但我们刚刚向这个图像添加了噪声。
+Dialogue: 0,0:06:32.60,0:06:33.88,Default,,0,0,0,,我们知道它是什么。
+Dialogue: 0,0:06:33.88,0:06:35.66,Default,,0,0,0,,我们实际上可以比较一下。
+Dialogue: 0,0:06:35.66,0:06:41.66,Default,,0,0,0,,我们可以看看模型预测的噪声和我们实际添加的噪声之间的区别。
+Dialogue: 0,0:06:42.51,0:06:50.80,Default,,0,0,0,,这个模型的训练方式类似于你可能熟悉的大多\N数机器学习模型，目标是最小化那个差异。
+Dialogue: 0,0:06:50.80,0:06:59.73,Default,,0,0,0,,随着时间的推移，看过足够多的例子后，这个模\N型在去除图像噪声方面变得非常非常好。
+Dialogue: 0,0:06:59.73,0:07:01.21,Default,,0,0,0,,现在来到有趣的部分。
+Dialogue: 0,0:07:01.21,0:07:06.1,Default,,0,0,0,,这是真正酷的地方，我们需要思考一旦我们训练了这个模型，
+Dialogue: 0,0:07:06.21,0:07:07.93,Default,,0,0,0,,我们如何用它生成图像？
+Dialogue: 0,0:07:08.72,0:07:10.66,Default,,0,0,0,,实际上，这是非常直观的。
+Dialogue: 0,0:07:10.66,0:07:19.7,Default,,0,0,0,,我们可以从纯粹的绝对噪声开始，然后\N将这个噪声送入我们训练过的模型。
+Dialogue: 0,0:07:19.7,0:07:25.6,Default,,0,0,0,,然后我们取出输出，预测的噪声，并从初始噪声中减去它。
+Dialogue: 0,0:07:25.6,0:07:30.18,Default,,0,0,0,,如果我们一次又一次地这样做，我们最终会得到一个生成的图像。
+Dialogue: 0,0:07:31.65,0:07:33.0,Default,,0,0,0,,另一种思考方式是，
+Dialogue: 0,0:07:33.0,0:07:39.5,Default,,0,0,0,,模型能够学习到它所看到的图像的真实数据分布，
+Dialogue: 0,0:07:39.25,0:07:44.78,Default,,0,0,0,,然后从那个学习到的分布中采样，创建新的、独特的图像。
+Dialogue: 0,0:07:44.78,0:07:45.22,Default,,0,0,0,,非常酷！
+Dialogue: 0,0:07:46.58,0:07:53.23,Default,,0,0,0,,我相信我们都知道，在过去的几年里，这个领域有了许多进展。
+Dialogue: 0,0:07:53.23,0:08:00.50,Default,,0,0,0,,尽管在 Vertex AI 中，许多令人兴奋的新\N图像生成技术都是以扩散模型为基础，
+Dialogue: 0,0:08:00.51,0:08:04.73,Default,,0,0,0,,但我们已经做了大量的工作，使得图像生成更快，控制更精确。
+Dialogue: 0,0:08:05.49,0:08:10.51,Default,,0,0,0,,希望现在，经过简单了解扩散模型如何工作的介绍后，
+Dialogue: 0,0:08:10.52,0:08:17.70,Default,,0,0,0,,你对这些真正新颖、创新的模型类型有更好的理解。
+Dialogue: 0,0:08:18.18,0:08:26.43,Default,,0,0,0,,我们也看到，将扩散模型的力量与大型语言模型\N（LLM）的力量相结合，可以带来出色的结果，
+Dialogue: 0,0:08:26.57,0:08:33.57,Default,,0,0,0,,真正让我们能够根据文本提示（Prompt）生成\N具有上下文感知的、照片级真实的图像。
+Dialogue: 0,0:08:34.50,0:08:38.33,Default,,0,0,0,,Google Research 的 Imagen 就是一个很好的例子。
+Dialogue: 0,0:08:38.33,0:08:42.40,Default,,0,0,0,,虽然这比我们在这个环节中讨论的内容要复杂一些，
+Dialogue: 0,0:08:42.40,0:08:49.61,Default,,0,0,0,,但你可以看到，它的核心是一个大型语言\N模型和几个基于扩散的模型的组合。
+Dialogue: 0,0:08:49.61,0:08:51.47,Default,,0,0,0,,这是一个非常令人兴奋的领域，
+Dialogue: 0,0:08:51.47,0:08:58.18,Default,,0,0,0,,我很高兴看到这项出色的技术正在被整\N合进 Vertex AI 的企业级产品中。
+Dialogue: 0,0:08:58.18,0:08:58.92,Default,,0,0,0,,感谢你的聆听！

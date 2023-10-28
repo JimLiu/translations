@@ -1,0 +1,432 @@
+1
+00:00:00,428 --> 00:00:05,711
+Hi, my name is Kyle Steckler, and I'm a machine learning engineer on the Advanced Solutions Lab team at Google Cloud.
+
+2
+00:00:05,711 --> 00:00:10,474
+In this talk, we're going to dive into an introduction to image generation.
+
+3
+00:00:10,474 --> 00:00:14,114
+Specifically, I'll provide an introduction to diffusion models,
+
+4
+00:00:14,115 --> 00:00:19,919
+a family of models that have recently shown tremendous promise in the image generation space.
+
+5
+00:00:19,919 --> 00:00:23,128
+With that said, image generation has long been a field of interest,
+
+6
+00:00:23,129 --> 00:00:26,163
+and there are many interesting approaches that you may have heard about.
+
+7
+00:00:27,598 --> 00:00:31,114
+Now, while many approaches have been implemented for image generation,
+
+8
+00:00:31,115 --> 00:00:36,909
+some of the more promising ones over time have been model families such as variational autoencoders,
+
+9
+00:00:36,910 --> 00:00:39,443
+which encode images to a compressed size
+
+10
+00:00:39,444 --> 00:00:44,672
+and then decode back to the original size while learning the distribution of the data itself.
+
+11
+00:00:46,039 --> 00:00:50,542
+Generative adversarial models, or GANs, have also been quite popular.
+
+12
+00:00:50,542 --> 00:00:51,842
+These models are really interesting.
+
+13
+00:00:51,842 --> 00:00:55,504
+They actually pit two neural networks against each other.
+
+14
+00:00:55,504 --> 00:00:58,513
+One neural network, the generator, creates images,
+
+15
+00:00:58,614 --> 00:01:03,214
+and the other neural network, the discriminator, predicts if the image is real or fake.
+
+16
+00:01:03,749 --> 00:01:08,688
+Over time, the discriminator gets better and better at distinguishing between real and fake,
+
+17
+00:01:08,700 --> 00:01:12,554
+and the generator gets better and better at creating real-looking fakes.
+
+18
+00:01:12,554 --> 00:01:14,175
+You may have heard the term deepfakes before.
+
+19
+00:01:15,316 --> 00:01:17,579
+And lastly, autoregressive models.
+
+20
+00:01:17,579 --> 00:01:22,186
+These things generate images by treating an image as a sequence of pixels.
+
+21
+00:01:22,186 --> 00:01:25,629
+And the modern approach with autoregressive models actually draws
+
+22
+00:01:25,630 --> 00:01:30,898
+much of its inspiration from how LLMs, or large language models, handle text.
+
+23
+00:01:30,898 --> 00:01:31,579
+Very interesting.
+
+24
+00:01:32,563 --> 00:01:35,284
+Now in this talk, this is really going to be the focus.
+
+25
+00:01:35,284 --> 00:01:38,725
+And this is one of the newer image generation model families.
+
+26
+00:01:38,725 --> 00:01:41,266
+And that is diffusion models.
+
+27
+00:01:41,266 --> 00:01:46,787
+Diffusion models draw their inspiration from physics, specifically thermodynamics.
+
+28
+00:01:46,787 --> 00:01:51,449
+And while they were first really introduced for image generation in 2015,
+
+29
+00:01:51,649 --> 00:01:54,770
+it took a few years for the idea to really take off.
+
+30
+00:01:55,679 --> 00:01:59,457
+Within the last few years though, 2020 up until now,
+
+31
+00:01:59,458 --> 00:02:04,571
+we have seen a massive increase of diffusion models in both the research space
+
+32
+00:02:04,800 --> 00:02:09,083
+and now today in the industry space as well.
+
+33
+00:02:09,083 --> 00:02:15,145
+Diffusion models underpin many of the state-of-the-art image generation systems that you may be familiar with today.
+
+34
+00:02:16,337 --> 00:02:20,601
+Diffusion models show promise across a number of different use cases.
+
+35
+00:02:20,601 --> 00:02:25,992
+Unconditioned diffusion models, where models have no additional input or instruction,
+
+36
+00:02:26,029 --> 00:02:31,886
+can be trained from images of a specific thing, such as faces, as you can see on the slide here,
+
+37
+00:02:31,887 --> 00:02:35,633
+and it will learn to generate new images of that thing.
+
+38
+00:02:35,633 --> 00:02:39,540
+Another example of unconditioned generation is super resolution,
+
+39
+00:02:39,740 --> 00:02:43,019
+which is really powerful in enhancing low-quality images.
+
+40
+00:02:43,975 --> 00:02:46,692
+We also have conditioned generation models,
+
+41
+00:02:46,892 --> 00:02:51,986
+and these give us things like text-to-image, where we can generate an image from a text prompt,
+
+42
+00:02:52,000 --> 00:02:59,281
+and other things like image-inpainting and text-guided image-to-image, where we can remove or add things.
+
+43
+00:02:59,281 --> 00:03:02,082
+We can edit the image itself.
+
+44
+00:03:02,082 --> 00:03:09,465
+Now, let's take a little bit of a deeper dive into diffusion models and talk about how do these things actually work.
+
+45
+00:03:10,880 --> 00:03:12,643
+As noted on the slide here,
+
+46
+00:03:12,644 --> 00:03:24,165
+the essential idea is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process.
+
+47
+00:03:24,165 --> 00:03:29,646
+Really, this is going to be adding noise iteratively to an image.
+
+48
+00:03:29,646 --> 00:03:35,003
+We then learn a reverse diffusion process that restores structure in the data,
+
+49
+00:03:35,203 --> 00:03:39,810
+yielding a highly flexible and tractable generative model of the data.
+
+50
+00:03:40,817 --> 00:03:44,914
+In other words, we can add noise to an image iteratively,
+
+51
+00:03:45,043 --> 00:03:53,681
+and we can then train a model that learns how to denoise an image, thus generating novel images.
+
+52
+00:03:53,681 --> 00:04:01,863
+So the goal here is that we want to have this model learn to denoise, to remove noise.
+
+53
+00:04:01,863 --> 00:04:08,305
+And in that aspect then, we could start here on the left of the slide, we could start from pure noise,
+
+54
+00:04:09,480 --> 00:04:14,945
+And from that pure noise, we could have a model that will be able to synthesize a novel image.
+
+55
+00:04:15,832 --> 00:04:21,655
+Now, I know that there's a bit of math notation on this slide, so let's break it down just a little bit.
+
+56
+00:04:21,655 --> 00:04:24,897
+We start with a large data set of images.
+
+57
+00:04:24,897 --> 00:04:29,940
+But let's just take a single image here, shown on the right-hand side.
+
+58
+00:04:29,940 --> 00:04:41,987
+Well, we can start this forward diffusion process, and we can go from x0, the initial image, to x1, the initial image with a little bit of noise added to it.
+
+59
+00:04:42,667 --> 00:04:50,333
+And we can do this over and over again, iteratively adding more and more noise to the initial image.
+
+60
+00:04:50,333 --> 00:04:55,397
+Now this distribution we call Q, and it only depends on the previous step.
+
+61
+00:04:55,397 --> 00:05:04,524
+So if we do this over and over, iteratively adding more noise, we need to think about how many times do we perform that operation.
+
+62
+00:05:04,524 --> 00:05:06,926
+And the initial research paper did this 1,000 times.
+
+63
+00:05:08,647 --> 00:05:17,035
+So ideally, with that number being high enough, 1000, by the end of it, we should reach a state of pure noise.
+
+64
+00:05:17,035 --> 00:05:23,420
+And so by this point, all structure in the initial image is completely gone.
+
+65
+00:05:23,420 --> 00:05:25,222
+We're just looking at pure noise.
+
+66
+00:05:25,222 --> 00:05:28,184
+Now, obviously, that's kind of the easy part.
+
+67
+00:05:28,184 --> 00:05:30,286
+It's not too difficult to perform Q.
+
+68
+00:05:31,247 --> 00:05:33,543
+to iteratively add more and more noise,
+
+69
+00:05:33,544 --> 00:05:40,689
+the challenging part is how do we go from a noisy image to a slightly less noisy image.
+
+70
+00:05:40,689 --> 00:05:44,830
+And so this we'll refer to as the reverse diffusion process.
+
+71
+00:05:44,830 --> 00:05:53,592
+And at this stage, every step of the way, every step that we add noise, we also learn the reverse diffusion process.
+
+72
+00:05:54,433 --> 00:06:00,457
+That is, we train a machine learning model that takes in as input the noisy image
+
+73
+00:06:00,458 --> 00:06:04,539
+and predicts the noise that's been added to it.
+
+74
+00:06:04,539 --> 00:06:08,901
+Now let's look at that from a slightly different angle.
+
+75
+00:06:08,901 --> 00:06:12,743
+We can visualize a single training step of the model here.
+
+76
+00:06:12,743 --> 00:06:19,887
+So we have our initial image x on the left and we sample at a time step to create a noisy image.
+
+77
+00:06:20,873 --> 00:06:26,534
+We then send that through our denoising model with the goal of predicting the noise.
+
+78
+00:06:26,534 --> 00:06:30,475
+So the output of the model is the predicted noise.
+
+79
+00:06:30,475 --> 00:06:32,596
+But we just added the noise to this image.
+
+80
+00:06:32,596 --> 00:06:33,876
+We know what it is.
+
+81
+00:06:33,876 --> 00:06:35,656
+So we can actually compare that.
+
+82
+00:06:35,656 --> 00:06:41,658
+We can see what is the difference between the model's predicted noise and the actual noise that we added.
+
+83
+00:06:42,510 --> 00:06:50,797
+Now this model is trained similar to most machine learning models that you might be familiar with to minimize that difference.
+
+84
+00:06:50,797 --> 00:06:59,725
+And over time, after seeing enough examples, this model gets very, very good at removing noise from images.
+
+85
+00:06:59,725 --> 00:07:01,206
+And now for the fun part.
+
+86
+00:07:01,206 --> 00:07:06,010
+This is where it gets really cool as we need to think about once we train this model,
+
+87
+00:07:06,210 --> 00:07:07,932
+how do we generate images with it?
+
+88
+00:07:08,720 --> 00:07:10,662
+Well, it's actually fairly intuitive.
+
+89
+00:07:10,662 --> 00:07:19,072
+We can just start with pure absolute noise and send that noise through our model that is trained.
+
+90
+00:07:19,072 --> 00:07:25,058
+We then take the output, the predicted noise, and subtract it from the initial noise.
+
+91
+00:07:25,058 --> 00:07:30,184
+And if we do that over and over and over again, we end up with a generated image.
+
+92
+00:07:31,650 --> 00:07:33,000
+Another way to think about this is that
+
+93
+00:07:33,001 --> 00:07:39,045
+the model is able to learn the real data distribution of images that it's seen
+
+94
+00:07:39,245 --> 00:07:44,779
+and then sample from that learned distribution to create new novel images.
+
+95
+00:07:44,780 --> 00:07:45,220
+Very cool.
+
+96
+00:07:46,584 --> 00:07:53,232
+As I'm sure we're all aware, there have been many advances in this space in just the last few years.
+
+97
+00:07:53,232 --> 00:08:00,504
+And while many of the exciting new technologies on Vertex AI for image generation are underpinned with diffusion models,
+
+98
+00:08:00,505 --> 00:08:04,726
+lots of work has been done to generate images faster and with more control.
+
+99
+00:08:05,487 --> 00:08:10,514
+Hopefully now, after taking a little bit of a look under the covers into how diffusion models work,
+
+100
+00:08:10,515 --> 00:08:17,700
+you have a bit better intuition as to what's actually going on with these really new, innovative model types.
+
+101
+00:08:18,175 --> 00:08:26,429
+We've also seen wonderful results combining the power of diffusion models with the power of LLMs, or large language models,
+
+102
+00:08:26,571 --> 00:08:33,565
+that can really enable us to create context-aware, photorealistic images from a text prompt.
+
+103
+00:08:34,502 --> 00:08:38,325
+One great example of this is Imogen from Google Research.
+
+104
+00:08:38,325 --> 00:08:42,400
+While it's a bit more complicated than what we've talked through in this session,
+
+105
+00:08:42,401 --> 00:08:49,613
+you can see that at its core, it's a composition of an LLM and a few diffusion-based models.
+
+106
+00:08:49,613 --> 00:08:51,471
+This is a really exciting space,
+
+107
+00:08:51,472 --> 00:08:58,178
+and I'm thrilled to see this wonderful technology make its way into enterprise-grade products on Vertex AI.
+
+108
+00:08:58,178 --> 00:08:58,919
+Thanks for listening.
+

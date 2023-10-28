@@ -1,0 +1,1590 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 330
+          },
+          "text": "Hello, and welcome to an Introduction to Responsible AI."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 330
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 189
+          },
+          "text": "This course will help you:"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 190
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "text": "Understand why Google has put AI principles in place."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 618
+          },
+          "text": "Identify the need for a responsible AI practice within an organization."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 618
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 629
+          },
+          "text": "Recognize that decisions made at all stages of a project have an impact on responsible AI."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 629
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 598
+          },
+          "text": "And, recognize that organizations can design AI to fit their own business needs and values."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 359
+          },
+          "text": "Many of us already have daily interactions with artificial intelligence (or AI),"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 359
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 679
+          },
+          "text": "from predictions for traffic and weather, to recommendations for TV shows you might like to watch next."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 49
+          },
+          "text": "As AI becomes more common, many technologies that aren’t AI-enabled may start to seem inadequate."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 49
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 529
+          },
+          "text": "Now, AI systems are enabling computers to see, understand, and interact with the world"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 530
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 320
+          },
+          "text": "in ways that were unimaginable just a decade ago."
+        }
+      ],
+      "source": [
+        "Hello, and welcome to an Introduction to Responsible AI.",
+        "This course will help you:",
+        "Understand why Google has put AI principles in place.",
+        "Identify the need for a responsible AI practice within an organization.",
+        "Recognize that decisions made at all stages of a project have an impact on responsible AI.",
+        "And, recognize that organizations can design AI to fit their own business needs and values.",
+        "Many of us already have daily interactions with artificial intelligence (or AI),",
+        "from predictions for traffic and weather, to recommendations for TV shows you might like to watch next.",
+        "As AI becomes more common, many technologies that aren’t AI-enabled may start to seem inadequate.",
+        "Now, AI systems are enabling computers to see, understand, and interact with the world",
+        "in ways that were unimaginable just a decade ago."
+      ],
+      "result": [
+        "大家好，欢迎来到《负责任的人工智能入门》。",
+        "这门课程将帮助你：",
+        "了解为什么谷歌制定了AI原则。",
+        "认识到一个组织内负责任AI实践的必要性。",
+        "意识到项目各个阶段的决策对负责任AI的影响。",
+        "并且，认识到组织可以根据自己的业务需求和价值观设计AI。",
+        "我们中的许多人已经与人工智能（或AI）进行了日常互动，",
+        "从交通和天气的预测，到可能喜欢观看的电视节目的推荐。",
+        "随着AI变得越来越普遍，许多没集成AI的技术可能开始显得不够好。",
+        "现在，AI系统使计算机能够以前所未有的方式看到、理解和与世界互动。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 299
+          },
+          "text": "And these systems are developing at an extraordinary pace."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 579
+          },
+          "text": "Yet despite these remarkable advancements, AI is not infallible."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 579
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 629
+          },
+          "text": "Developing responsible AI requires an understanding of the possible issues, limitations, or unintended consequences."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 630
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 114
+          },
+          "text": "Technology is a reflection of what exists in society, so without good practices,"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 115
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 158
+          },
+          "text": "AI may replicate existing issues or bias, and amplify them."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 659
+          },
+          "text": "But there is not a universal definition of “responsible AI,” nor is there a simple"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 659
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 489
+          },
+          "text": "checklist or formula that defines how responsible AI practices should be implemented."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 489
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 948
+          },
+          "text": "Instead, organizations are developing their own AI principles, that reflect their mission and values."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 950
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 868
+          },
+          "text": "While these principles are unique to every organization, if you look for common themes,"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 868
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 298
+          },
+          "text": "you find a consistent set of ideas across transparency, fairness, accountability, and privacy."
+        }
+      ],
+      "source": [
+        "And these systems are developing at an extraordinary pace.",
+        "Yet despite these remarkable advancements, AI is not infallible.",
+        "Developing responsible AI requires an understanding of the possible issues, limitations, or unintended consequences.",
+        "Technology is a reflection of what exists in society, so without good practices,",
+        "AI may replicate existing issues or bias, and amplify them.",
+        "But there is not a universal definition of “responsible AI,” nor is there a simple",
+        "checklist or formula that defines how responsible AI practices should be implemented.",
+        "Instead, organizations are developing their own AI principles, that reflect their mission and values.",
+        "While these principles are unique to every organization, if you look for common themes,",
+        "you find a consistent set of ideas across transparency, fairness, accountability, and privacy."
+      ],
+      "result": [
+        "这些系统正在以惊人的速度发展。",
+        "尽管有这些显著的进步，但AI并非万无一失。",
+        "负责任的AI开发需要了解可能的问题、局限性或意外后果。",
+        "技术是社会现象的反映，没有良好的实践，",
+        "AI可能复制现有的问题或偏见，并放大它们。",
+        "但是，并没有一个关于“负责任的AI”的通用定义，也没有一个简单的",
+        "清单或公式来定义如何实施负责任的AI实践。",
+        "相反，各个组织正在制定自己的AI原则，反映了他们的使命和价值观。",
+        "虽然这些原则因组织而异，但如果寻找共同点，",
+        "你会发现透明度、公平性、问责制和隐私方面有一致的观念。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 729
+          },
+          "text": "At Google, our approach to responsible AI is rooted in a commitment to strive towards AI that is built for everyone,"
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 730
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 598
+          },
+          "text": "that it is accountable and safe, that respects privacy, and that is driven by scientific excellence."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 598
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 989
+          },
+          "text": "We’ve developed our own AI principles, practices, governance processes, and tools that together embody our values and guide our approach to responsible AI."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 389
+          },
+          "text": "We’ve incorporated responsibility by design into our products, and even more importantly, our organization."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 389
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 489
+          },
+          "text": "Like many companies, we use our AI principles as a framework to guide responsible decision making."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 689
+          },
+          "text": "We all have a role to play in how responsible AI is applied."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 689
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 55,
+            "milliseconds": 299
+          },
+          "text": "Whatever stage in the AI process you are involved with, from design to deployment or application, the decisions you make have an impact."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 55,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 598
+          },
+          "text": "Therefore, it's important that you too have a defined and repeatable process for using AI responsibly."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 598
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 269
+          },
+          "text": "There is a common misconception with artificial intelligence that machines play the central decision-making role."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 269
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 870
+          },
+          "text": "In reality, it’s people who design and build these machines and decide how they are used."
+        }
+      ],
+      "source": [
+        "At Google, our approach to responsible AI is rooted in a commitment to strive towards AI that is built for everyone,",
+        "that it is accountable and safe, that respects privacy, and that is driven by scientific excellence.",
+        "We’ve developed our own AI principles, practices, governance processes, and tools that together embody our values and guide our approach to responsible AI.",
+        "We’ve incorporated responsibility by design into our products, and even more importantly, our organization.",
+        "Like many companies, we use our AI principles as a framework to guide responsible decision making.",
+        "We all have a role to play in how responsible AI is applied.",
+        "Whatever stage in the AI process you are involved with, from design to deployment or application, the decisions you make have an impact.",
+        "Therefore, it's important that you too have a defined and repeatable process for using AI responsibly.",
+        "There is a common misconception with artificial intelligence that machines play the central decision-making role.",
+        "In reality, it’s people who design and build these machines and decide how they are used."
+      ],
+      "result": [
+        "在谷歌，我们负责任的AI方法植根于致力于为每个人构建AI的承诺，",
+        "它要有责任感、安全，尊重隐私，并以科学卓越为驱动。",
+        "我们制定了自己的AI原则、实践、治理流程和工具，\\N共同体现了我们的价值观，指导我们负责任地使用AI。",
+        "我们将责任设计融入了产品，更重要的是，融入了我们的组织。",
+        "像许多公司一样，我们使用AI原则作为指导负责任决策的框架。",
+        "我们都在负责任地应用AI方面有作用。",
+        "无论您参与AI过程的哪个阶段，从设计\\N到部署或应用，您所做的决策都会产生影响。",
+        "因此，您也需要有明确且可重复的负责任使用AI的流程。",
+        "关于人工智能的一个普遍误解是，机器在决策中起着核心作用。",
+        "实际上，设计和构建这些机器以及决定如何使用它们的是人。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 870
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 39
+          },
+          "text": "People are involved in each aspect of AI development.They collect or create the data that the model is trained on."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 817
+          },
+          "text": "They control the deployment of the AI and how it is applied in a given context."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 818
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 39
+          },
+          "text": "Essentially, human decisions are threaded throughout our technology products."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 568
+          },
+          "text": "And every time a person makes a decision, they are actually making a choice based on their own values."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 568
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 829
+          },
+          "text": "Whether it's the decision to use generative AI to solve a problem,"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 830
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 449
+          },
+          "text": "as opposed to other methods, or anywhere throughout the machine learning lifecycle, that person introduces their own set of values."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 449
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 19
+          },
+          "text": "This means that every decision point requires consideration and evaluation to ensure"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 979
+          },
+          "text": "that choices have been made responsibly from concept through deployment and maintenance."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 979
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 739
+          },
+          "text": "Because there’s potential to impact many areas of society– not to mention people’s daily lives– it's important to develop these technologies with ethics in mind."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 350
+          },
+          "text": "Responsible AI doesn’t mean to focus only on the obviously controversial use cases."
+        }
+      ],
+      "source": [
+        "People are involved in each aspect of AI development.They collect or create the data that the model is trained on.",
+        "They control the deployment of the AI and how it is applied in a given context.",
+        "Essentially, human decisions are threaded throughout our technology products.",
+        "And every time a person makes a decision, they are actually making a choice based on their own values.",
+        "Whether it's the decision to use generative AI to solve a problem,",
+        "as opposed to other methods, or anywhere throughout the machine learning lifecycle, that person introduces their own set of values.",
+        "This means that every decision point requires consideration and evaluation to ensure",
+        "that choices have been made responsibly from concept through deployment and maintenance.",
+        "Because there’s potential to impact many areas of society– not to mention people’s daily lives– it's important to develop these technologies with ethics in mind.",
+        "Responsible AI doesn’t mean to focus only on the obviously controversial use cases."
+      ],
+      "result": [
+        "人们参与到AI开发的每个方面。他们收集或创建模型训练所需的数据。",
+        "他们控制AI的部署以及在特定场景中的应用。",
+        "从本质上讲，人类决策贯穿于我们的技术产品中。",
+        "每当一个人做出决策时，他们实际上是根据自己的价值观做出选择。",
+        "无论是决定使用生成式AI来解决问题，",
+        "还是在整个机器学习生命周期中的\\N其他方法，那个人都会引入自己的价值观。",
+        "这意味着每个决策点都需要考虑和评估，以确保",
+        "从概念到部署和维护，选择都是负责任的。",
+        "因为这些技术有可能影响到社会的许多领域，更不用说\\N人们的日常生活了，所以在开发这些技术时要牢记道德。",
+        "负责任的AI并不意味着只关注明显有争议的用例。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 350
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 439
+          },
+          "text": "Without responsible AI practices, even seemingly innocuous AI use cases, or those with good intent, could still cause ethical issues or unintended outcomes, or not be as beneficial as they could be."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 850
+          },
+          "text": "Ethics and responsibility are important, not least because they represent the right thing to do, but also because they can guide AI design to be more beneficial for people's lives."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 379
+          },
+          "text": "At Google, we’ve learned that building responsibility into any AI deployment makes better models and builds trust with our customers and our customers’ customers."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 308
+          },
+          "text": "If at any point that trust is broken, we run the risk of AI deployments being stalled,"
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 310
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 369
+          },
+          "text": "unsuccessful, or at worst, harmful to stakeholders those products affect."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 370
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 680
+          },
+          "text": "This all fits into our belief at Google that responsible AI equals successful AI."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 39
+          },
+          "text": "We make our product and business decisions around AI through a series of assessments and reviews."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 809
+          },
+          "text": "These instill rigor and consistency in our approach across product areas and geographies."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 810
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 600
+          },
+          "text": "These assessments and reviews begin with ensuring that any project aligns with our AI Principles."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 39,
+            "milliseconds": 538
+          },
+          "text": "While AI Principles help ground a group in shared commitments, not everyone will agree with every decision made on how products should be designed responsibly."
+        }
+      ],
+      "source": [
+        "Without responsible AI practices, even seemingly innocuous AI use cases, or those with good intent, could still cause ethical issues or unintended outcomes, or not be as beneficial as they could be.",
+        "Ethics and responsibility are important, not least because they represent the right thing to do, but also because they can guide AI design to be more beneficial for people's lives.",
+        "At Google, we’ve learned that building responsibility into any AI deployment makes better models and builds trust with our customers and our customers’ customers.",
+        "If at any point that trust is broken, we run the risk of AI deployments being stalled,",
+        "unsuccessful, or at worst, harmful to stakeholders those products affect.",
+        "This all fits into our belief at Google that responsible AI equals successful AI.",
+        "We make our product and business decisions around AI through a series of assessments and reviews.",
+        "These instill rigor and consistency in our approach across product areas and geographies.",
+        "These assessments and reviews begin with ensuring that any project aligns with our AI Principles.",
+        "While AI Principles help ground a group in shared commitments, not everyone will agree with every decision made on how products should be designed responsibly."
+      ],
+      "result": [
+        "没有负责任的AI实践，即使看似无害的AI\\N应用案例，或者那些出于好意的案例，仍然可能导致\\N道德问题或意外后果，或者没有达到它们可能的最大效益。",
+        "道德和责任很重要，不仅因为它们代表了正确的事情，\\N而且因为它们可以指导AI设计，使人们的生活更有益。",
+        "在谷歌，我们了解到，在任何AI部署中建立责任感\\N可以使模型更好，并与我们的客户和客户的客户建立信任。",
+        "如果在任何时候信任破裂，我们就有可能使AI部署停滞不前，",
+        "不成功，或者在最坏的情况下，对受影响的利益相关者造成伤害。",
+        "这都符合我们在谷歌的信念，即负责任的AI等于成功的AI。",
+        "我们通过一系列评估和审查来做出关于AI的产品和业务决策。",
+        "这些评估和审查确保了我们在产品领域\\N和地理区域的方法的严谨性和一致性。",
+        "这些评估和审查从确保任何项目与我们的AI原则保持一致开始。",
+        "虽然AI原则有助于团队在共同承诺方面保持一致，\\N但并非每个人都会同意关于如何负责任地设计产品的每个决策。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 39,
+            "milliseconds": 538
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 839
+          },
+          "text": "This is why it's important to develop robust processes that people can trust, so even if they don't agree with the end decision, they trust the process that drove the decision."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 718
+          },
+          "text": "In June 2018, we announced seven AI principles to guide our work."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 69
+          },
+          "text": "These are concrete standards that actively govern our research and product development and affect our business decisions."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 5,
+            "milliseconds": 657
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 686
+          },
+          "text": "Here’s an overview of each one:"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 429
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 118
+          },
+          "text": "1. AI should be socially beneficial."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 24,
+            "milliseconds": 571
+          },
+          "text": "Any project should take into account a broad range of social and economic factors and will proceed only where we believe that the overall likely benefits substantially exceed the foreseeable risks and downsides."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 214
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 30,
+            "milliseconds": 578
+          },
+          "text": "2. AI should avoid creating or reinforcing unfair bias."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 30,
+            "milliseconds": 579
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 49
+          },
+          "text": "We seek to avoid unjust effects on people, particularly those related to sensitive characteristics such as race, ethnicity, gender, nationality, income, sexual orientation, ability, and political or religious belief."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 560
+          },
+          "text": "3."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 660
+          },
+          "text": "AI should be built and tested for safety."
+        }
+      ],
+      "source": [
+        "This is why it's important to develop robust processes that people can trust, so even if they don't agree with the end decision, they trust the process that drove the decision.",
+        "In June 2018, we announced seven AI principles to guide our work.",
+        "These are concrete standards that actively govern our research and product development and affect our business decisions.",
+        "Here’s an overview of each one:",
+        "1. AI should be socially beneficial.",
+        "Any project should take into account a broad range of social and economic factors and will proceed only where we believe that the overall likely benefits substantially exceed the foreseeable risks and downsides.",
+        "2. AI should avoid creating or reinforcing unfair bias.",
+        "We seek to avoid unjust effects on people, particularly those related to sensitive characteristics such as race, ethnicity, gender, nationality, income, sexual orientation, ability, and political or religious belief.",
+        "3.",
+        "AI should be built and tested for safety."
+      ],
+      "result": [
+        "这就是为什么我们要建立可靠的流程让人们信任，\\N即使他们不同意最终决定，也会信任作出决定的过程。",
+        "2018年6月，我们公布了七项AI原则来指导我们的工作。",
+        "这些具体标准积极地指导我们的研究\\N和产品开发，并影响我们的业务决策。",
+        "以下是每个原则的概述：",
+        "1. AI应具有社会效益。",
+        "任何项目都应考虑广泛的社会和经济因素，只有在我们认为总体\\N可能的收益明显超过可预见的风险和缺点时，才会继续进行。",
+        "2. AI应避免产生或加强不公平的偏见。",
+        "我们努力避免对人们产生不公正的影响，\\N特别是与种族、民族、性别、国籍、收入、性取向、\\N能力以及政治或宗教信仰等敏感特征相关的影响。",
+        "3. AI应该在安全方面进行构建和测试。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 957
+          },
+          "text": "We will continue to develop and apply strong safety and security practices to avoid unintended results that create risks of harm."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 4,
+            "milliseconds": 749
+          },
+          "text": "4. AI should be accountable to people."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 4,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 680
+          },
+          "text": "We will design AI systems that provide appropriate opportunities for feedback, relevant explanations, and appeal."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 13,
+            "milliseconds": 171
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 299
+          },
+          "text": "5. AI should incorporate privacy design principles."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 23,
+            "milliseconds": 589
+          },
+          "text": "We will give opportunity for notice and consent, encourage architectures with privacy safeguards,"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 23,
+            "milliseconds": 589
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 739
+          },
+          "text": "and provide appropriate transparency and control over the use of data."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 779
+          },
+          "text": "6. AI should uphold high standards of scientific excellence."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 779
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 838
+          },
+          "text": "We will work with a range of stakeholders to promote thoughtful leadership in this area,"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 42,
+            "milliseconds": 287
+          },
+          "text": "drawing on scientifically rigorous and multidisciplinary approaches."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 42,
+            "milliseconds": 288
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 360
+          },
+          "text": "And we will responsibly share AI knowledge by publishing educational materials, best practices, and research that enable more people to develop useful AI applications."
+        }
+      ],
+      "source": [
+        "We will continue to develop and apply strong safety and security practices to avoid unintended results that create risks of harm.",
+        "4. AI should be accountable to people.",
+        "We will design AI systems that provide appropriate opportunities for feedback, relevant explanations, and appeal.",
+        "5. AI should incorporate privacy design principles.",
+        "We will give opportunity for notice and consent, encourage architectures with privacy safeguards,",
+        "and provide appropriate transparency and control over the use of data.",
+        "6. AI should uphold high standards of scientific excellence.",
+        "We will work with a range of stakeholders to promote thoughtful leadership in this area,",
+        "drawing on scientifically rigorous and multidisciplinary approaches.",
+        "And we will responsibly share AI knowledge by publishing educational materials, best practices, and research that enable more people to develop useful AI applications."
+      ],
+      "result": [
+        "我们将继续发展并应用强大的安全保障措施，\\N以避免产生可能导致伤害的意外结果。",
+        "4. AI应对人类负责。",
+        "我们将设计提供适当反馈、相关解释和申诉机会的AI系统。",
+        "5. AI应融入隐私设计原则。",
+        "我们将提供通知和同意的机会，鼓励具有隐私保护的架构，",
+        "并在数据使用方面提供适当的透明度和控制。",
+        "6. AI应维护高科学水平。",
+        "我们将与各方利益相关者合作，推动这一领域的深思熟虑的领导力，",
+        "运用科学严谨和多学科方法。",
+        "我们将负责任地分享AI知识，发布教育材料、\\N最佳实践和研究，使更多人能够开发有用的AI应用。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 58,
+            "milliseconds": 938
+          },
+          "text": "7. AI should be made available for uses that accord with these principles."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 58,
+            "milliseconds": 939
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 658
+          },
+          "text": "Many technologies have multiple uses, so we’ll work to limit potentially harmful or abusive applications."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 658
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 728
+          },
+          "text": "In addition to these seven principles, there are certain AI applications we will not pursue."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 728
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 21,
+            "milliseconds": 970
+          },
+          "text": "We will not design or deploy AI in these four application areas: Technologies that cause or are likely to cause overall harm."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 21,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 30,
+            "milliseconds": 149
+          },
+          "text": "Weapons or other technologies whose principal purpose or implementation is to cause or directly facilitate injury to people."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 30,
+            "milliseconds": 149
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 35,
+            "milliseconds": 299
+          },
+          "text": "Technologies that gather or use information for surveillance that violates internationally accepted norms."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 35,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 379
+          },
+          "text": "And technologies whose purpose contravenes widely accepted principles of international law and human rights."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 837
+          },
+          "text": "Establishing principles was a starting point, rather than an end."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 599
+          },
+          "text": "What remains true is that our AI Principles rarely give us direct answers to our questions on how to build our products."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 989
+          },
+          "text": "They don’t—and shouldn’t—allow us to sidestep hard conversations."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 4,
+            "milliseconds": 200
+          },
+          "text": "They are a foundation that establishes what we stand for, what we build,"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 4,
+            "milliseconds": 201
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 719
+          },
+          "text": "and why we build it, and they are core to the success of our enterprise AI offerings."
+        }
+      ],
+      "source": [
+        "7. AI should be made available for uses that accord with these principles.",
+        "Many technologies have multiple uses, so we’ll work to limit potentially harmful or abusive applications.",
+        "In addition to these seven principles, there are certain AI applications we will not pursue.",
+        "We will not design or deploy AI in these four application areas: Technologies that cause or are likely to cause overall harm.",
+        "Weapons or other technologies whose principal purpose or implementation is to cause or directly facilitate injury to people.",
+        "Technologies that gather or use information for surveillance that violates internationally accepted norms.",
+        "And technologies whose purpose contravenes widely accepted principles of international law and human rights.",
+        "Establishing principles was a starting point, rather than an end.",
+        "What remains true is that our AI Principles rarely give us direct answers to our questions on how to build our products.",
+        "They don’t—and shouldn’t—allow us to sidestep hard conversations.",
+        "They are a foundation that establishes what we stand for, what we build,",
+        "and why we build it, and they are core to the success of our enterprise AI offerings."
+      ],
+      "result": [
+        "7. AI应遵循这些原则进行开发。",
+        "许多技术有多种用途，我们将努力限制可能有害或滥用的应用。",
+        "除了这七个原则外，我们还有一些AI应用不会开发。",
+        "我们不会设计或部署以下四个应用领域的AI：\\N可能导致或很可能导致整体伤害的技术。",
+        "主要目的或实施是导致或直接促成人员受伤的武器或其他技术。",
+        "收集或使用违反国际公认准则的监控信息的技术。",
+        "以及违反国际法和人权广泛接受原则的技术。",
+        "制定原则是一个起点，而不是终点。",
+        "我们的AI原则很少能直接回答我们关于如何构建产品的问题。",
+        "它们不会（也不应该）让我们回避艰难的对话。",
+        "它们是我们立场、我们构建的基础，",
+        "以及为什么我们要构建它，它们是我们企业AI产品成功的核心。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Introduction to Responsible AI.srt",
+  "ouputBasePath": "input/Generative AI learning path/Introduction to Responsible AI",
+  "totalCost": 0.23739,
+  "translationPath": "input/Generative AI learning path/Introduction to Responsible AI/translation.json"
+}

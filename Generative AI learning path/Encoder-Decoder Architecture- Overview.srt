@@ -1,0 +1,495 @@
+1
+00:00:00,269 --> 00:00:02,269
+Hello everybody, my name Benoit Dherin.
+
+2
+00:00:02,270 --> 00:00:06,710
+I am machine learning engineer at the Google
+Advanced Solutions Lab.
+
+3
+00:00:06,710 --> 00:00:10,621
+If you want to know more about the Advanced
+Solutions Lab, please follow the link in the
+
+4
+00:00:10,621 --> 00:00:11,848
+description box below.
+
+5
+00:00:11,849 --> 00:00:17,618
+There is lots of excitement currently around
+Generative AI and new advancements including
+
+6
+00:00:17,618 --> 00:00:24,379
+new Vertex AI features such as (GenAI Studio,
+Model Garden, Gen AI API ).
+
+7
+00:00:24,379 --> 00:00:29,129
+Our objective in these short courses is to
+give you a solid footing on some of the underlying
+
+8
+00:00:29,129 --> 00:00:32,379
+concepts that make all the GenAI magic possible.
+
+9
+00:00:32,380 --> 00:00:37,950
+Today, I am going to talk about the encoder-decoder
+architecture, which is at the core of large
+
+10
+00:00:37,950 --> 00:00:39,450
+language models.
+
+11
+00:00:39,450 --> 00:00:41,929
+We will start with a brief overview of the
+architecture.
+
+12
+00:00:41,929 --> 00:00:45,458
+Then I’ll go over how we train these models.
+
+13
+00:00:45,460 --> 00:00:51,919
+And at last, we will see how to produce text
+from a trained model at serving time.
+
+14
+00:00:51,920 --> 00:00:56,448
+To begin with, the encoder-decoder architecture
+is a sequence-to-sequence architecture.
+
+15
+00:00:56,448 --> 00:01:03,518
+This means it takes, say, a sequence of words
+as input, like the sentence in english “The
+
+16
+00:01:03,518 --> 00:01:04,608
+cat ate the mouse”
+
+17
+00:01:04,609 --> 00:01:11,818
+and it outputs, say, the translation in French
+“Le chat a mange la souris” The encoder-decoder
+
+18
+00:01:11,819 --> 00:01:18,078
+architecture is machine that consumes sequences
+and spits out sequences.
+
+19
+00:01:18,079 --> 00:01:23,088
+Another input example is the sequence of words
+forming the prompt sent to a large language
+
+20
+00:01:23,090 --> 00:01:24,090
+model.
+
+21
+00:01:24,090 --> 00:01:29,349
+Then the output is the response of the large
+language model to this prompt.
+
+22
+00:01:29,349 --> 00:01:32,328
+Now we know what a encoder-decoder architecture
+does.
+
+23
+00:01:32,328 --> 00:01:34,969
+But how does it do it?
+
+24
+00:01:34,969 --> 00:01:39,598
+Typically, the encoder-decoder architecture
+has two stages.
+
+25
+00:01:39,599 --> 00:01:45,969
+First, an encoder stage that produces a vector
+representation of the input sentence.
+
+26
+00:01:45,969 --> 00:01:51,318
+Then this encoder stage is followed by a decoder
+stage that creates the sequence output .
+
+27
+00:01:51,319 --> 00:01:57,219
+Both the encoder and the decoder can be implemented
+with different internal architectures.
+
+28
+00:01:57,219 --> 00:02:01,839
+The internal mechanism can be a recurrent
+neural network as shown in this slide or a
+
+29
+00:02:01,840 --> 00:02:06,239
+more complex transformer block
+as in the case of the super powerful language
+
+30
+00:02:06,239 --> 00:02:07,918
+models we see nowadays.
+
+31
+00:02:07,920 --> 00:02:14,150
+A recurrent neural network encoder takes each
+token in the input sequence one at a time,
+
+32
+00:02:14,150 --> 00:02:21,848
+and produces a state representing this token
+as well as the previously ingested tokens
+
+33
+00:02:21,848 --> 00:02:28,788
+Then this state in used in the next encoding
+step as input along with the next token to
+
+34
+00:02:28,789 --> 00:02:31,219
+produce the next state.
+
+35
+00:02:31,219 --> 00:02:38,127
+Once you are done ingesting all the the input
+tokens into the RNN, you output a vector that
+
+36
+00:02:38,128 --> 00:02:39,749
+represents the full input sentence.
+
+37
+00:02:39,750 --> 00:02:42,049
+That’s it for the encoder.
+
+38
+00:02:42,050 --> 00:02:44,1000
+What about the decoder part?
+
+39
+00:02:45,000 --> 00:02:51,378
+The decoder takes the vector representation
+of the input sentence and produces an output
+
+40
+00:02:51,378 --> 00:02:54,548
+sentence from that representation.
+
+41
+00:02:54,550 --> 00:03:00,550
+In the case of a RNN decoder it does it in
+steps, decoding the output one token at a
+
+42
+00:03:00,550 --> 00:03:05,509
+time using the current state and what has
+been decoded so far.
+
+43
+00:03:05,509 --> 00:03:11,699
+Okay, now that we have a high level understanding
+of the encoder-decoder architecture, how do
+
+44
+00:03:11,699 --> 00:03:13,078
+we train it?
+
+45
+00:03:13,080 --> 00:03:15,930
+That’s the training phase.
+
+46
+00:03:15,930 --> 00:03:21,068
+To train a model, you need a dataset, that
+is a collection of input/ouput pairs that
+
+47
+00:03:21,068 --> 00:03:24,119
+you want your model to imitate.
+
+48
+00:03:24,120 --> 00:03:30,360
+You can then feed this dataset to the model,
+which will correct its weights during training
+
+49
+00:03:30,360 --> 00:03:36,719
+on the basis of the error it produces on a
+given input in the dataset.
+
+50
+00:03:36,719 --> 00:03:42,778
+This error is essentially the difference between
+what the neural network generates given an
+
+51
+00:03:42,780 --> 00:03:48,150
+input sequence and the true output sequence
+you have in your dataset.
+
+52
+00:03:48,150 --> 00:03:49,150
+Okay.
+
+53
+00:03:49,150 --> 00:03:52,188
+But then how do you produce this dataset?
+
+54
+00:03:52,188 --> 00:03:57,699
+In the case of the encoder-decoder architecture
+this is more complicated than for typical
+
+55
+00:03:57,699 --> 00:03:59,608
+predictive models.
+
+56
+00:03:59,610 --> 00:04:03,400
+First of all you need a collection of input
+and output texts.
+
+57
+00:04:03,400 --> 00:04:08,959
+In the case of translation that would be sentence
+pairs where one sentence is in the source
+
+58
+00:04:08,959 --> 00:04:12,539
+language and the other is in the target language.
+
+59
+00:04:12,539 --> 00:04:17,447
+You’ll feed the source language sentence
+to the encoder and then compute the error
+
+60
+00:04:17,449 --> 00:04:21,740
+between what the decoder generates and the
+actual translation.
+
+61
+00:04:21,740 --> 00:04:24,199
+However, there is a catch.
+
+62
+00:04:24,199 --> 00:04:27,769
+The decoder also needs it own input at training
+time!
+
+63
+00:04:27,769 --> 00:04:33,849
+You’ll need to give the decoder the correct
+previous translated token as input to generate
+
+64
+00:04:33,850 --> 00:04:38,970
+the next token rather than what the decoder
+has generated so far.
+
+65
+00:04:38,970 --> 00:04:46,089
+This method of training is called teacher
+forcing, because you force the decoder to
+
+66
+00:04:46,089 --> 00:04:50,468
+generate the next token from the correct previous
+token.
+
+67
+00:04:50,470 --> 00:04:56,910
+This means that in your code you’ll have
+to prepare two input sentences, the original
+
+68
+00:04:56,910 --> 00:05:03,189
+one fed to the encoder, and also the original
+one shifted to the left that you’ll feed
+
+69
+00:05:03,189 --> 00:05:05,289
+to the decoder.
+
+70
+00:05:05,290 --> 00:05:10,689
+Another subtle point is that the decoder generates
+at each step only the probability that each
+
+71
+00:05:10,689 --> 00:05:14,599
+token in your vocabulary is the next one.
+
+72
+00:05:14,600 --> 00:05:17,139
+Using these probabilities, you’ll have to
+select a word.
+
+73
+00:05:17,139 --> 00:05:19,879
+And there are several approaches for that.
+
+74
+00:05:19,879 --> 00:05:24,848
+The simplest one, called greedy search, is
+to generate the token that has the highest
+
+75
+00:05:24,850 --> 00:05:25,850
+probability.
+
+76
+00:05:25,850 --> 00:05:31,379
+A better approach that produces better results
+is called beam search.
+
+77
+00:05:31,379 --> 00:05:37,409
+In that case you use the probabilities generated
+by the decoder to evaluate the probability
+
+78
+00:05:37,410 --> 00:05:41,929
+of sentence chunks rather than individual
+words.
+
+79
+00:05:41,930 --> 00:05:46,259
+And you keep at each step the most likely
+generated chunk.
+
+80
+00:05:46,259 --> 00:05:48,439
+That’s how training is done.
+
+81
+00:05:48,439 --> 00:05:51,209
+Now let’s move onto serving.
+
+82
+00:05:51,209 --> 00:05:58,768
+After training, at serving time, when you
+want to say generate a new translation or
+
+83
+00:05:58,769 --> 00:06:04,078
+a new response to a prompt,
+You’ll start by feeding the encoder representation
+
+84
+00:06:04,079 --> 00:06:09,769
+of the prompt to the decoder along with a
+special token like “GO”
+
+85
+00:06:09,769 --> 00:06:14,347
+This will prompt the decoder to generate the
+first word.
+
+86
+00:06:14,348 --> 00:06:19,088
+Let’s see in more detail what happens during
+the generation stage.
+
+87
+00:06:19,089 --> 00:06:25,257
+First of all the start token needs to be represented
+by a vector using an embedding layer.
+
+88
+00:06:25,259 --> 00:06:32,850
+Then the recurrent layer will update the previous
+state produced by the encoder into a new state.
+
+89
+00:06:32,850 --> 00:06:40,029
+This state will be passed to a dense softmax
+layer to produce the word probabilities Finally
+
+90
+00:06:40,029 --> 00:06:45,149
+the word is generated by taking the highest
+probability token with greedy search or the
+
+91
+00:06:45,149 --> 00:06:48,129
+highest probability chunk with beam search.
+
+92
+00:06:48,129 --> 00:06:51,478
+At this point you repeat this procedure for
+the second word to be generated.
+
+93
+00:06:51,478 --> 00:06:56,529
+And for the third word Until you're done!
+
+94
+00:06:56,529 --> 00:06:58,839
+So what’s next?
+
+95
+00:06:58,839 --> 00:06:59,839
+Well.
+
+96
+00:06:59,839 --> 00:07:03,678
+The difference between the architecture we
+just learned about and the ones in the large
+
+97
+00:07:03,680 --> 00:07:09,370
+language models is what goes inside of the
+encoder and decoder blocks.
+
+98
+00:07:09,370 --> 00:07:15,948
+The simple RRN network is replaced by transformer
+blocks which is an architecture discovered
+
+99
+00:07:15,949 --> 00:07:21,160
+here at Google and which is based on the attention
+mechanism.
+
+100
+00:07:21,160 --> 00:07:25,499
+If you are interested in knowing more about
+these topics, we have two more overview courses
+
+101
+00:07:25,500 --> 00:07:32,899
+in that series: Attention Mechanism: Overview,
+and Transformer Models and BERT Model: Overview.
+
+102
+00:07:32,899 --> 00:07:38,328
+Also, if you liked this the course today,
+have a look at Encoder-Decoder Architecture:
+
+103
+00:07:38,329 --> 00:07:42,819
+Lab Walkthrough Where I’ll show you how
+to generate poetry in code using the concepts
+
+104
+00:07:42,819 --> 00:07:45,519
+we have seen in this overview.
+
+105
+00:07:45,519 --> 00:07:46,817
+Thanks for your time!
+
+106
+00:07:46,819 --> 00:07:47,490
+Have a great day!
+

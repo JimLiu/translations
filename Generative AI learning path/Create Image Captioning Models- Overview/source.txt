@@ -1,0 +1,189 @@
+Hi everyone.
+I am Takumi, machine learning engineer at Google Advanced Solutions Lab.
+
+Currently a lot of people are talking about generative AI
+and its new advancement,
+and as some of you may know, Google and Google Cloud
+also released so many generative AI related new products
+and features.
+But in this video series, our goal is not to create a state
+of our generative AIS, nor to introduce
+Google Cloud new products.
+Instead, we will explain what kind of technology has walking behind them.
+And especially in this video, I'm going to talk about
+how to actually create a very simple generative model,
+image captioning model by using a technologies
+like encoder decoder attention mechanism and a bit transformer.
+If you're not very familiar with these concepts,
+I recommend checking other videos, talking about them
+before this.
+Okay.
+So if you're ready, let's talk about image captioning tasks and data
+set out first, we're going to use this kind of dataset.
+As you can see, there are a lot of pairs of images and text data
+and our goal is to build and train a model
+that can generate these kind of takes captions based on images,
+and we'll make it happen by building this kind of model.
+As you can see, it is kind of encoder decoder model, but in this case, encode
+and decoder handle different modality of data, which is image and text.
+So we pass the images to encoder at first and it extract information
+from the images and create some feature vectors.
+And then the vectors are passed to the decoder
+which actually build the captions by generating was one by one.
+So this encoder part is easy.
+You can use any kinds of image backbone like resonant
+efficient net or vision transformer.
+What we want to do here is to extract features by using that kind of backbones.
+So code is very simple too, in terms of the code,
+we're going to see the entire notebook example in the next video.
+So here, let's just focus on some important
+lines.
+As you can see, we are using classical inception version of V2 here
+from Carousel Applications.
+But again, this can be any image backbones.
+So the next part that the quarter is a bit complex.
+So let's take a look very carefully.
+So this is the entire architecture of the decoder.
+It it gets was one by one
+and makes the information of wires and images
+which is coming from the encoder output
+and tried to predict the next wires.
+So this decoder itself is in kind of iterative operation.
+So by calling it again and again or to regress fully,
+we can eventually generate six captions.
+There are so many
+variations for this decoder design, but here we build transformer
+like architecture, although we still use are in RNN GUR.
+So let's zoom into each component.
+The first embedding layer creates word embeddings,
+which was discussed in other videos
+and we are passing it to GUR layer.
+If you forgot what you are your guess.
+It's a variation of recurrent neural network
+or you can call r in n
+r n n takes inputs and updates
+its internal states and generate output.
+So by passing sequential data like text data, it keeps two sequential
+dependencies.
+These from previous inputs like previous was
+that grow output goes to attention layer
+which mixes the information of texts and image
+in TensorFlow Keras, we can use
+predefined layers in the same way as other layers.
+There are multiple implementations,
+but here we simply use F cross layers attention.
+But if you want to use more transformer like architecture, you can know. So
+the pick up tf cross layers most attention
+which uses multiple attention heads.
+You can simply switch and use it in almost the same way.
+Inside our attention layer, it looks like this as you may
+have already seen in another video about attention mechanism.
+0 But the unique thing here is it pays
+attention to image feature from text data
+by doing so, it can calculate attention
+score by mixing both information.
+Going back to code,
+you can see this attention layer takes two inputs
+gru_ouput and encoder output.
+Internally, GRU ouput is used as attention
+query and key and encoder output as value.
+The last components are add layer
+and layer normalization layer
+at layer.
+Just add two same shift vectors.
+As you can see here, the GRU ouput as passed to attention
+layer as we discussed and to this ad layer directly,
+these two flows are eventually
+marched in this other layer.
+This kind of architecture
+is called skip connection, which has been a very popular
+deep neural network design pattern since Resonant.
+So it is also called residual connection.
+This skip connection is very useful, especially when you want to design
+a very deep neural network and it is also
+used in the transformer.
+With this now we could build an entire decoder,
+so we are ready to train the encoder decoder image
+captioning model using the captioning dataset.
+We will see how it works in the next video.
+But before moving on to the next one,
+I want to explain a bit more about inference phase
+where we can actually generate captions for obviously images
+because this process may look a bit complex
+here.
+We can see three steps and we're going to implement
+these steps in a custom inference function,
+the number one, and generate the initial state
+and create a star token
+in training phase.
+TensorFlow Keras can automatically handle
+a state for each sequence,
+but in this inference phase, since we design our own custom function,
+we need to write a logic to deal with it explicitly.
+So at the beginning of each captioning
+we explicitly initialize the GRU state
+with some value
+and at the same time
+remember our decoder is an auto regressive function.
+But since we haven't get any wider prediction yet at the beginning
+of the inference we start talking, which is a special token.
+That means the beginning of a sentence
+number 2%
+input image to the encoder and instruct the feature vector as we discussed
+and number three passed a vector
+to this time decoder and generate a caption word in the for loop
+until it returns and token
+or it reads to max caption lengths, which is just a hyper parameter
+specifying some number like 264.
+And in this full loop we define all the procedures of caption
+generation by calling the decoder also aggressively
+and token is a
+special token two, which means to end of the sequence.
+So when our decoder generate this token,
+we can finish this full loop
+or you can go out of the loop when the lengths of the caption
+rigid, some number max capsule lengths.
+Let's take a look at the code one by one.
+In the first step we initialize
+two things GRU state and start token.
+In this case, GRU state is simply initialized with zero vectors
+n which says start tokens
+as the first input word for the decoder
+in terms of the word_to_index function used here, I'm going to explain
+in the next video, but it basically is just tokenized awards to our token,
+which is the standard text pre-processing technique.
+In the next
+step, we pre process to input image habit
+and pass it to the encoder we train.
+In terms of the image pre-processing,
+it reads in decode JPEG in the first line and resize it
+from any arbitrarily resolutions
+to specific resolution
+and it changes to scale from 0
+to 255 two 0 to 1 in the third line
+and the last phase decoder for loop.
+It is a bit complex.
+So I will explain in the next video more in detail with the actual code.
+But the main thing here is to call the decoder
+by passing the three things.
+Decode inputs means decoder inputs,
+which should have a wire token predicted in the previous iteration.
+And as we talked, if it is the first iteration, this would be the start token
+of state
+is the current of state we discussed.
+And please note that the recorder of this output,
+the updated GRU state
+and last but not least features.
+This is the image feature we extracted with the encoder.
+By passing them we can get the actual next var the prediction.
+This is a very simple text generation model from images,
+but this kind of iteration is very similar
+even in very large language generation models
+like Google Board,
+they basically predict the next Var, also rigorously in this way,
+one by one based on some information and learned knowledge,
+which is embedded in the huge number of parameters.
+In the next video, I will walk you through the entire notebook
+and then we will check what kind of captions
+this model can generate.
+Thank you so much for watching and see you in the next video.

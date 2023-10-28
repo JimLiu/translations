@@ -1,0 +1,389 @@
+1
+00:00:00,269 --> 00:00:02,269
+大家好，我叫Benoit Dherin。
+Hello everybody, my name Benoit Dherin.
+
+2
+00:00:02,270 --> 00:00:06,710
+我是谷歌高级解决方案实验室的机器学习工程师。
+I am machine learning engineer at the Google Advanced Solutions Lab.
+
+3
+00:00:06,710 --> 00:00:11,848
+如果你想了解更多关于高级解决方案实验室的信息，请点击下面的描述框中的链接。
+If you want to know more about the Advanced Solutions Lab, please follow the link in the description box below.
+
+5
+00:00:11,849 --> 00:00:24,379
+目前，围绕生成性AI以及包括新的Vertex AI特性（如GenAI Studio、Model Garden、Gen AI API）在内的新进展，大家都非常兴奋。
+There is lots of excitement currently around Generative AI and new advancements including new Vertex AI features such as (GenAI Studio, Model Garden, Gen AI API ).
+
+7
+00:00:24,379 --> 00:00:32,379
+我们在这些短期课程中的目标是让你对生成式AI的一些基本概念有一个扎实的了解。
+Our objective in these short courses is to give you a solid footing on some of the underlying concepts that make all the GenAI magic possible.
+
+9
+00:00:32,380 --> 00:00:39,450
+今天，我将讲解编码器-解码器架构，这是大语言模型的核心。
+Today, I am going to talk about the encoder-decoder architecture, which is at the core of large language models.
+
+11
+00:00:39,450 --> 00:00:41,929
+首先，我们将简要介绍架构。
+We will start with a brief overview of the architecture.
+
+12
+00:00:41,929 --> 00:00:45,458
+然后我会讲解如何训练这些模型。
+Then I’ll go over how we train these models.
+
+13
+00:00:45,460 --> 00:00:51,919
+最后，我们将了解如何在服务时间从训练好的模型生成文本。
+And at last, we will see how to produce text from a trained model at serving time.
+
+14
+00:00:51,920 --> 00:00:56,448
+首先，编码器-解码器架构是一种序列到序列的架构。
+To begin with, the encoder-decoder architecture is a sequence-to-sequence architecture.
+
+15
+00:00:56,448 --> 00:01:04,608
+这意味着它接受一系列单词作为输入，例如英语句子“The cat ate the mouse”
+This means it takes, say, a sequence of words as input, like the sentence in english “The cat ate the mouse”
+
+17
+00:01:04,609 --> 00:01:11,818
+然后输出，例如法语翻译“Le chat a mange la souris”。
+and it outputs, say, the translation in French “Le chat a mange la souris” The encoder-decoder
+
+18
+00:01:11,819 --> 00:01:18,078
+编码器-解码器架构是一种消耗序列并输出序列的机器。
+architecture is machine that consumes sequences and spits out sequences.
+
+19
+00:01:18,079 --> 00:01:24,090
+另一个输入示例是形成发送给大语言模型的Prompt的单词序列。
+Another input example is the sequence of words forming the prompt sent to a large language model.
+
+21
+00:01:24,090 --> 00:01:29,349
+然后输出就是大语言模型对这个Prompt的回应。
+Then the output is the response of the large language model to this prompt.
+
+22
+00:01:29,349 --> 00:01:32,328
+现在我们知道编码器-解码器架构的作用了。
+Now we know what a encoder-decoder architecture does.
+
+23
+00:01:32,328 --> 00:01:34,969
+但是它是如何实现的呢？
+But how does it do it?
+
+24
+00:01:34,969 --> 00:01:39,598
+通常，编码器-解码器架构分为两个阶段。
+Typically, the encoder-decoder architecture has two stages.
+
+25
+00:01:39,599 --> 00:01:45,969
+首先是编码器阶段，生成输入句子的向量表示。
+First, an encoder stage that produces a vector representation of the input sentence.
+
+26
+00:01:45,969 --> 00:01:51,318
+然后是解码器阶段，生成序列输出。
+Then this encoder stage is followed by a decoder stage that creates the sequence output .
+
+27
+00:01:51,319 --> 00:01:57,219
+编码器和解码器都可以用不同的内部架构实现。
+Both the encoder and the decoder can be implemented with different internal architectures.
+
+28
+00:01:57,219 --> 00:02:01,839
+内部机制可以是这个幻灯片中展示的循环神经网络，或者
+The internal mechanism can be a recurrent neural network as shown in this slide or a
+
+29
+00:02:01,840 --> 00:02:07,918
+更复杂的Transformer模块，就像我们现在看到的超强大的语言模型一样。
+more complex transformer block as in the case of the super powerful language models we see nowadays.
+
+31
+00:02:07,920 --> 00:02:14,150
+循环神经网络编码器一次处理输入序列中的一个Token，
+A recurrent neural network encoder takes each token in the input sequence one at a time,
+
+32
+00:02:14,150 --> 00:02:21,848
+并生成一个状态，这个状态代表了这个Token以及之前处理过的Token。
+and produces a state representing this token as well as the previously ingested tokens
+
+33
+00:02:21,848 --> 00:02:28,788
+然后将此状态与下一个Token一起用作下一编码步骤的输入，
+Then this state in used in the next encoding step as input along with the next token to
+
+34
+00:02:28,789 --> 00:02:31,219
+生成下一个状态。
+produce the next state.
+
+35
+00:02:31,219 --> 00:02:39,749
+一旦你完成了将所有的输入Token输入到循环神经网络（RNN）中，输出一个表示整个输入句子的向量。
+Once you are done ingesting all the the input tokens into the Recurrent Neural Networks (RNN), you output a vector that represents the full input sentence.
+
+37
+00:02:39,750 --> 00:02:42,049
+这就是编码器的全部内容。
+That’s it for the encoder.
+
+38
+00:02:42,050 --> 00:02:44,100
+那解码器部分呢？
+What about the decoder part?
+
+39
+00:02:45,000 --> 00:02:54,548
+解码器接收输入句子的向量表示，并从该表示中生成输出句子。
+The decoder takes the vector representation of the input sentence and produces an output sentence from that representation.
+
+41
+00:02:54,550 --> 00:03:00,550
+在RNN解码器中，它是分步进行的，
+In the case of a RNN decoder it does it in steps, decoding the output one token at a
+
+42
+00:03:00,550 --> 00:03:05,509
+利用当前状态和已解码的内容逐个解码输出Token。
+time using the current state and what has been decoded so far.
+
+43
+00:03:05,509 --> 00:03:13,078
+好了，现在我们对编码器-解码器架构有了高层次的理解，那我们如何训练它呢？
+Okay, now that we have a high level understanding of the encoder-decoder architecture, how do we train it?
+
+45
+00:03:13,080 --> 00:03:15,930
+这就是训练阶段。
+That’s the training phase.
+
+46
+00:03:15,930 --> 00:03:24,119
+要训练一个模型，你需要一个数据集，也就是你希望你的模型模仿的输入/输出对的集合。
+To train a model, you need a dataset, that is a collection of input/ouput pairs that you want your model to imitate.
+
+48
+00:03:24,120 --> 00:03:30,360
+然后，你可以将这个数据集提供给模型，模型在训练过程中
+You can then feed this dataset to the model, which will correct its weights during training
+
+49
+00:03:30,360 --> 00:03:36,719
+会根据它在数据集中给定输入产生的错误来修正它的权重。
+on the basis of the error it produces on a given input in the dataset.
+
+50
+00:03:36,719 --> 00:03:48,150
+这个误差本质上是神经网络在给定输入序列时产生的输出与数据集中真实输出序列之间的差异。
+This error is essentially the difference between what the neural network generates given an input sequence and the true output sequence you have in your dataset.
+
+52
+00:03:48,150 --> 00:03:49,150
+好的。
+Okay.
+
+53
+00:03:49,150 --> 00:03:52,188
+那么如何生成这个数据集呢？
+But then how do you produce this dataset?
+
+54
+00:03:52,188 --> 00:03:59,608
+在编码器-解码器架构中，这比典型的预测模型更复杂。
+In the case of the encoder-decoder architecture this is more complicated than for typical predictive models.
+
+56
+00:03:59,610 --> 00:04:03,400
+首先，你需要一组输入和输出文本。
+First of all you need a collection of input and output texts.
+
+57
+00:04:03,400 --> 00:04:12,539
+对应到翻译的例子，那就是一个句子对，一个句子是源语言，另一个是目标语言。
+In the case of translation that would be sentence pairs where one sentence is in the source language and the other is in the target language.
+
+59
+00:04:12,539 --> 00:04:21,740
+你将源语言句子输入编码器，然后计算解码器生成的内容和实际翻译之间的错误。
+You’ll feed the source language sentence to the encoder and then compute the error between what the decoder generates and the actual translation.
+
+61
+00:04:21,740 --> 00:04:24,199
+然而，这里有个问题。
+However, there is a catch.
+
+62
+00:04:24,199 --> 00:04:27,769
+解码器在训练时也需要自己的输入！
+The decoder also needs it own input at training time!
+
+63
+00:04:27,769 --> 00:04:38,970
+你需要给解码器正确的前一个翻译Token作为输入来生成下一个Token，而不是到目前为止解码器生成的内容。
+You’ll need to give the decoder the correct previous translated token as input to generate the next token rather than what the decoder has generated so far.
+
+65
+00:04:38,970 --> 00:04:50,468
+这种训练方法被称为教师强制，因为你强迫解码器从正确的前一个Token生成下一个Token。
+This method of training is called teacher forcing, because you force the decoder to generate the next token from the correct previous token.
+
+67
+00:04:50,470 --> 00:05:05,289
+这意味着在你的代码中，你需要准备两个输入句子，一个是原始的输入给编码器的句子，还有一个是你将提供给解码器的向左移动的原始句子。
+This means that in your code you’ll have to prepare two input sentences, the original one fed to the encoder, and also the original one shifted to the left that you’ll feed to the decoder.
+
+70
+00:05:05,290 --> 00:05:14,599
+另一个微妙之处是，解码器在每一步只生成每个词汇表中的Token是下一个Token的概率。
+Another subtle point is that the decoder generates at each step only the probability that each token in your vocabulary is the next one.
+
+72
+00:05:14,600 --> 00:05:17,139
+根据这些概率，你需要选择一个词。
+Using these probabilities, you’ll have to select a word.
+
+73
+00:05:17,139 --> 00:05:19,879
+有几种方法可以做到这一点。
+And there are several approaches for that.
+
+74
+00:05:19,879 --> 00:05:25,850
+最简单的一种，称为贪婪搜索，是生成概率最高的Token。
+The simplest one, called greedy search, is to generate the token that has the highest probability.
+
+76
+00:05:25,850 --> 00:05:31,379
+一种效果更好的方法叫做集束搜索（Beam Search）。
+A better approach that produces better results is called beam search.
+
+77
+00:05:31,379 --> 00:05:41,929
+在这种情况下，你用解码器生成的概率来评估句子块的概率，而不是单个词。
+In that case you use the probabilities generated by the decoder to evaluate the probability of sentence chunks rather than individual words.
+
+79
+00:05:41,930 --> 00:05:46,259
+并且你在每个步骤中保留最可能生成的块。
+And you keep at each step the most likely generated chunk.
+
+80
+00:05:46,259 --> 00:05:48,439
+这就是训练的方式。
+That’s how training is done.
+
+81
+00:05:48,439 --> 00:05:51,209
+现在让我们转向服务。
+Now let’s move onto serving.
+
+82
+00:05:51,209 --> 00:06:09,769
+在训练后，当你想生成新的翻译或对某个Prompt的新回应时，你会首先将Prompt的编码器表示连同像“GO”这样的特殊Token一起输入到解码器中。
+After training, at serving time, when you want to say generate a new translation or a new response to a prompt, You’ll start by feeding the encoder representation of the prompt to the decoder along with a special token like “GO”
+
+85
+00:06:09,769 --> 00:06:14,347
+这会促使解码器生成第一个单词。
+This will prompt the decoder to generate the first word.
+
+86
+00:06:14,348 --> 00:06:19,088
+让我们更详细地了解生成阶段发生了什么。
+Let’s see in more detail what happens during the generation stage.
+
+87
+00:06:19,089 --> 00:06:25,257
+首先，开始Token需要通过嵌入层表示为一个向量。
+First of all the start token needs to be represented by a vector using an embedding layer.
+
+88
+00:06:25,259 --> 00:06:32,850
+然后，循环层将会更新编码器生成的先前状态，使其成为新的状态。
+Then the recurrent layer will update the previous state produced by the encoder into a new state.
+
+89
+00:06:32,850 --> 00:06:40,029
+这个状态将被传递到一个密集的 softmax 层来产生单词概率。最后
+This state will be passed to a dense softmax layer to produce the word probabilities Finally
+
+90
+00:06:40,029 --> 00:06:48,129
+通过贪婪搜索或者束搜索取概率最高的Token或者最高概率的块来生成词语。
+the word is generated by taking the highest probability token with greedy search or the highest probability chunk with beam search.
+
+92
+00:06:48,129 --> 00:06:51,478
+在这个阶段，你需要为生成的第二个单词重复这个过程。
+At this point you repeat this procedure for the second word to be generated.
+
+93
+00:06:51,478 --> 00:06:56,529
+然后是第三个单词，直到完成！
+And for the third word Until you're done!
+
+94
+00:06:56,529 --> 00:06:58,839
+接下来是什么呢？
+So what’s next?
+
+95
+00:06:58,839 --> 00:06:59,839
+嗯。
+Well.
+
+96
+00:06:59,839 --> 00:07:09,370
+我们刚刚学习的架构和大型语言模型中的架构之间的差异在于编码器和解码器块中的内容。
+The difference between the architecture we just learned about and the ones in the large language models is what goes inside of the encoder and decoder blocks.
+
+98
+00:07:09,370 --> 00:07:21,160
+简单的RRN网络被替换为Transformer模块，这是一种在Google发现的基于注意力机制的架构。
+The simple RRN network is replaced by transformer blocks which is an architecture discovered here at Google and which is based on the attention mechanism.
+
+100
+00:07:21,160 --> 00:07:25,499
+如果你对这些话题感兴趣，我们还有另外两门概述课程：
+If you are interested in knowing more about these topics, we have two more overview courses
+
+101
+00:07:25,500 --> 00:07:32,899
+“注意力机制：概述”，以及“Transformer模型和BERT模型：概述”。
+in that series: Attention Mechanism: Overview, and Transformer Models and BERT Model: Overview.
+
+102
+00:07:32,899 --> 00:07:38,328
+另外，如果你喜欢今天的课程，请看“编码器-解码器架构：实验演示”，
+Also, if you liked this the course today, have a look at Encoder-Decoder Architecture:
+
+103
+00:07:38,329 --> 00:07:45,519
+在那里，我将向你展示如何使用我们在这节课中学到的概念来在代码中生成诗歌。
+Lab Walkthrough Where I’ll show you how to generate poetry in code using the concepts we have seen in this overview.
+
+105
+00:07:45,519 --> 00:07:46,817
+感谢你的时间！
+Thanks for your time!
+
+106
+00:07:46,819 --> 00:07:47,490
+祝你有美好的一天！
+Have a great day!

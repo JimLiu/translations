@@ -1,0 +1,2039 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 269
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 2,
+            "milliseconds": 269
+          },
+          "text": "Hello everybody, my name Benoit Dherin."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 2,
+            "milliseconds": 270
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 710
+          },
+          "text": "I am machine learning engineer at the Google Advanced Solutions Lab."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 710
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 621
+          },
+          "text": "If you want to know more about the Advanced Solutions Lab, please follow the link in the"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 621
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 848
+          },
+          "text": "description box below."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 849
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 618
+          },
+          "text": "There is lots of excitement currently around Generative AI and new advancements including"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 618
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 379
+          },
+          "text": "new Vertex AI features such as (GenAI Studio, Model Garden, Gen AI API )."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 129
+          },
+          "text": "Our objective in these short courses is to give you a solid footing on some of the underlying"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 129
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 379
+          },
+          "text": "concepts that make all the GenAI magic possible."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 950
+          },
+          "text": "Today, I am going to talk about the encoder-decoder architecture, which is at the core of large"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 950
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 450
+          },
+          "text": "language models."
+        }
+      ],
+      "source": [
+        "Hello everybody, my name Benoit Dherin.",
+        "I am machine learning engineer at the Google Advanced Solutions Lab.",
+        "If you want to know more about the Advanced Solutions Lab, please follow the link in the",
+        "description box below.",
+        "There is lots of excitement currently around Generative AI and new advancements including",
+        "new Vertex AI features such as (GenAI Studio, Model Garden, Gen AI API ).",
+        "Our objective in these short courses is to give you a solid footing on some of the underlying",
+        "concepts that make all the GenAI magic possible.",
+        "Today, I am going to talk about the encoder-decoder architecture, which is at the core of large",
+        "language models."
+      ],
+      "result": [
+        "大家好，我叫Benoit Dherin。",
+        "我是谷歌高级解决方案实验室的机器学习工程师。",
+        "如果你想了解更多关于高级解决方案实验室的信息，请点击下面的描述框中的链接。",
+        "",
+        "目前，围绕生成性AI以及包括新的Vertex AI特性（如GenAI Studio、Model Garden、Gen AI API）在内的新进展，大家都非常兴奋。",
+        "",
+        "我们在这些短期课程中的目标是让你对生成式AI的一些基本概念有一个扎实的了解。",
+        "",
+        "今天，我将讲解编码器-解码器架构，这是大语言模型的核心。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 450
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 929
+          },
+          "text": "We will start with a brief overview of the architecture."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 929
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 458
+          },
+          "text": "Then I’ll go over how we train these models."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 919
+          },
+          "text": "And at last, we will see how to produce text from a trained model at serving time."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 448
+          },
+          "text": "To begin with, the encoder-decoder architecture is a sequence-to-sequence architecture."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 448
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 518
+          },
+          "text": "This means it takes, say, a sequence of words as input, like the sentence in english “The"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 518
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 608
+          },
+          "text": "cat ate the mouse”"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 609
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 818
+          },
+          "text": "and it outputs, say, the translation in French “Le chat a mange la souris” The encoder-decoder"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 78
+          },
+          "text": "architecture is machine that consumes sequences and spits out sequences."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 79
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 88
+          },
+          "text": "Another input example is the sequence of words forming the prompt sent to a large language"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 90
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 90
+          },
+          "text": "model."
+        }
+      ],
+      "source": [
+        "We will start with a brief overview of the architecture.",
+        "Then I’ll go over how we train these models.",
+        "And at last, we will see how to produce text from a trained model at serving time.",
+        "To begin with, the encoder-decoder architecture is a sequence-to-sequence architecture.",
+        "This means it takes, say, a sequence of words as input, like the sentence in english “The",
+        "cat ate the mouse”",
+        "and it outputs, say, the translation in French “Le chat a mange la souris” The encoder-decoder",
+        "architecture is machine that consumes sequences and spits out sequences.",
+        "Another input example is the sequence of words forming the prompt sent to a large language",
+        "model."
+      ],
+      "result": [
+        "首先，我们将简要介绍架构。",
+        "然后我会讲解如何训练这些模型。",
+        "最后，我们将了解如何在服务时间从训练好的模型生成文本。",
+        "首先，编码器-解码器架构是一种序列到序列的架构。",
+        "这意味着它接受一系列单词作为输入，例如英语句子“The cat ate the mouse”",
+        "",
+        "然后输出，例如法语翻译“Le chat a mange la souris”。",
+        "编码器-解码器架构是一种消耗序列并输出序列的机器。",
+        "另一个输入示例是形成发送给大语言模型的Prompt的单词序列。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 90
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 29,
+            "milliseconds": 349
+          },
+          "text": "Then the output is the response of the large language model to this prompt."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 29,
+            "milliseconds": 349
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 328
+          },
+          "text": "Now we know what a encoder-decoder architecture does."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 328
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 969
+          },
+          "text": "But how does it do it?"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 969
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 598
+          },
+          "text": "Typically, the encoder-decoder architecture has two stages."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 969
+          },
+          "text": "First, an encoder stage that produces a vector representation of the input sentence."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 969
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 318
+          },
+          "text": "Then this encoder stage is followed by a decoder stage that creates the sequence output ."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 319
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 57,
+            "milliseconds": 219
+          },
+          "text": "Both the encoder and the decoder can be implemented with different internal architectures."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 57,
+            "milliseconds": 219
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 839
+          },
+          "text": "The internal mechanism can be a recurrent neural network as shown in this slide or a"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 239
+          },
+          "text": "more complex transformer block as in the case of the super powerful language"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 239
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 918
+          },
+          "text": "models we see nowadays."
+        }
+      ],
+      "source": [
+        "Then the output is the response of the large language model to this prompt.",
+        "Now we know what a encoder-decoder architecture does.",
+        "But how does it do it?",
+        "Typically, the encoder-decoder architecture has two stages.",
+        "First, an encoder stage that produces a vector representation of the input sentence.",
+        "Then this encoder stage is followed by a decoder stage that creates the sequence output .",
+        "Both the encoder and the decoder can be implemented with different internal architectures.",
+        "The internal mechanism can be a recurrent neural network as shown in this slide or a",
+        "more complex transformer block as in the case of the super powerful language",
+        "models we see nowadays."
+      ],
+      "result": [
+        "然后输出就是大语言模型对这个Prompt的回应。",
+        "现在我们知道编码器-解码器架构的作用了。",
+        "但是它是如何实现的呢？",
+        "通常，编码器-解码器架构分为两个阶段。",
+        "首先是编码器阶段，生成输入句子的向量表示。",
+        "然后是解码器阶段，生成序列输出。",
+        "编码器和解码器都可以用不同的内部架构实现。",
+        "内部机制可以是这个幻灯片中展示的循环神经网络，或者",
+        "更复杂的Transformer模块，就像我们现在看到的超强大的语言模型一样。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 150
+          },
+          "text": "A recurrent neural network encoder takes each token in the input sequence one at a time,"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 150
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 848
+          },
+          "text": "and produces a state representing this token as well as the previously ingested tokens"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 848
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 788
+          },
+          "text": "Then this state in used in the next encoding step as input along with the next token to"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 789
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 219
+          },
+          "text": "produce the next state."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 219
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 38,
+            "milliseconds": 127
+          },
+          "text": "Once you are done ingesting all the the input tokens into the Recurrent Neural Networks (RNN), you output a vector that"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 38,
+            "milliseconds": 128
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 749
+          },
+          "text": "represents the full input sentence."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 49
+          },
+          "text": "That’s it for the encoder."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 100
+          },
+          "text": "What about the decoder part?"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 378
+          },
+          "text": "The decoder takes the vector representation of the input sentence and produces an output"
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 378
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 548
+          },
+          "text": "sentence from that representation."
+        }
+      ],
+      "source": [
+        "A recurrent neural network encoder takes each token in the input sequence one at a time,",
+        "and produces a state representing this token as well as the previously ingested tokens",
+        "Then this state in used in the next encoding step as input along with the next token to",
+        "produce the next state.",
+        "Once you are done ingesting all the the input tokens into the RNN, you output a vector that",
+        "represents the full input sentence.",
+        "That’s it for the encoder.",
+        "0 What about the decoder part?",
+        "The decoder takes the vector representation of the input sentence and produces an output",
+        "sentence from that representation."
+      ],
+      "result": [
+        "循环神经网络编码器一次处理输入序列中的一个Token，",
+        "并生成一个状态，这个状态代表了这个Token以及之前处理过的Token。",
+        "然后将此状态与下一个Token一起用作下一编码步骤的输入，",
+        "生成下一个状态。",
+        "一旦你完成了将所有的输入Token输入到循环神经网络（RNN）中，输出一个表示整个输入句子的向量。",
+        "",
+        "这就是编码器的全部内容。",
+        "那解码器部分呢？",
+        "解码器接收输入句子的向量表示，并从该表示中生成输出句子。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 550
+          },
+          "text": "In the case of a RNN decoder it does it in steps, decoding the output one token at a"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 509
+          },
+          "text": "time using the current state and what has been decoded so far."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 509
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 699
+          },
+          "text": "Okay, now that we have a high level understanding of the encoder-decoder architecture, how do"
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 78
+          },
+          "text": "we train it?"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 930
+          },
+          "text": "That’s the training phase."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 930
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 68
+          },
+          "text": "To train a model, you need a dataset, that is a collection of input/ouput pairs that"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 68
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 119
+          },
+          "text": "you want your model to imitate."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 360
+          },
+          "text": "You can then feed this dataset to the model, which will correct its weights during training"
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 719
+          },
+          "text": "on the basis of the error it produces on a given input in the dataset."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 719
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 778
+          },
+          "text": "This error is essentially the difference between what the neural network generates given an"
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 150
+          },
+          "text": "input sequence and the true output sequence you have in your dataset."
+        }
+      ],
+      "source": [
+        "In the case of a RNN decoder it does it in steps, decoding the output one token at a",
+        "time using the current state and what has been decoded so far.",
+        "Okay, now that we have a high level understanding of the encoder-decoder architecture, how do",
+        "we train it?",
+        "That’s the training phase.",
+        "To train a model, you need a dataset, that is a collection of input/ouput pairs that",
+        "you want your model to imitate.",
+        "You can then feed this dataset to the model, which will correct its weights during training",
+        "on the basis of the error it produces on a given input in the dataset.",
+        "This error is essentially the difference between what the neural network generates given an",
+        "input sequence and the true output sequence you have in your dataset."
+      ],
+      "result": [
+        "在RNN解码器中，它是分步进行的，",
+        "利用当前状态和已解码的内容逐个解码输出Token。",
+        "好了，现在我们对编码器-解码器架构有了高层次的理解，那我们如何训练它呢？",
+        "",
+        "这就是训练阶段。",
+        "要训练一个模型，你需要一个数据集，也就是你希望你的模型模仿的输入/输出对的集合。",
+        "",
+        "然后，你可以将这个数据集提供给模型，模型在训练过程中",
+        "会根据它在数据集中给定输入产生的错误来修正它的权重。",
+        "这个误差本质上是神经网络在给定输入序列时产生的输出与数据集中真实输出序列之间的差异。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 150
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 150
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 150
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 188
+          },
+          "text": "But then how do you produce this dataset?"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 188
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 699
+          },
+          "text": "In the case of the encoder-decoder architecture this is more complicated than for typical"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 608
+          },
+          "text": "predictive models."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 610
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 400
+          },
+          "text": "First of all you need a collection of input and output texts."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 959
+          },
+          "text": "In the case of translation that would be sentence pairs where one sentence is in the source"
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 959
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 539
+          },
+          "text": "language and the other is in the target language."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 447
+          },
+          "text": "You’ll feed the source language sentence to the encoder and then compute the error"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 449
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 740
+          },
+          "text": "between what the decoder generates and the actual translation."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 199
+          },
+          "text": "However, there is a catch."
+        }
+      ],
+      "source": [
+        "Okay.",
+        "But then how do you produce this dataset?",
+        "In the case of the encoder-decoder architecture this is more complicated than for typical",
+        "predictive models.",
+        "First of all you need a collection of input and output texts.",
+        "In the case of translation that would be sentence pairs where one sentence is in the source",
+        "language and the other is in the target language.",
+        "You’ll feed the source language sentence to the encoder and then compute the error",
+        "between what the decoder generates and the actual translation.",
+        "However, there is a catch."
+      ],
+      "result": [
+        "好的。",
+        "那么如何生成这个数据集呢？",
+        "在编码器-解码器架构中，这比典型的预测模型更复杂。",
+        "",
+        "首先，你需要一组输入和输出文本。",
+        "对应到翻译的例子，那就是一个句子对，一个句子是源语言，另一个是目标语言。",
+        "",
+        "你将源语言句子输入编码器，然后计算解码器生成的内容和实际翻译之间的错误。",
+        "",
+        "然而，这里有个问题。"
+      ],
+      "status": "success",
+      "errors": [
+        "Tue Jun 13 2023 11:43:12 GMT-0500 (Central Daylight Time)\nRequest failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:523:35)\n    at endReadableNT (node:internal/streams/readable:1367:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 769
+          },
+          "text": "The decoder also needs it own input at training time!"
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 769
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 849
+          },
+          "text": "You’ll need to give the decoder the correct previous translated token as input to generate"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 970
+          },
+          "text": "the next token rather than what the decoder has generated so far."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 89
+          },
+          "text": "This method of training is called teacher forcing, because you force the decoder to"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 89
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 468
+          },
+          "text": "generate the next token from the correct previous token."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 470
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 56,
+            "milliseconds": 910
+          },
+          "text": "This means that in your code you’ll have to prepare two input sentences, the original"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 56,
+            "milliseconds": 910
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 189
+          },
+          "text": "one fed to the encoder, and also the original one shifted to the left that you’ll feed"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 189
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 289
+          },
+          "text": "to the decoder."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 689
+          },
+          "text": "Another subtle point is that the decoder generates at each step only the probability that each"
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 689
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 599
+          },
+          "text": "token in your vocabulary is the next one."
+        }
+      ],
+      "source": [
+        "The decoder also needs it own input at training time!",
+        "You’ll need to give the decoder the correct previous translated token as input to generate",
+        "the next token rather than what the decoder has generated so far.",
+        "This method of training is called teacher forcing, because you force the decoder to",
+        "generate the next token from the correct previous token.",
+        "This means that in your code you’ll have to prepare two input sentences, the original",
+        "one fed to the encoder, and also the original one shifted to the left that you’ll feed",
+        "to the decoder.",
+        "Another subtle point is that the decoder generates at each step only the probability that each",
+        "token in your vocabulary is the next one."
+      ],
+      "result": [
+        "解码器在训练时也需要自己的输入！",
+        "你需要给解码器正确的前一个翻译Token作为输入来生成下一个Token，而不是到目前为止解码器生成的内容。",
+        "",
+        "这种训练方法被称为教师强制，因为你强迫解码器从正确的前一个Token生成下一个Token。",
+        "",
+        "这意味着在你的代码中，你需要准备两个输入句子，一个是原始的输入给编码器的句子，还有一个是你将提供给解码器的向左移动的原始句子。",
+        "",
+        "",
+        "另一个微妙之处是，解码器在每一步只生成每个词汇表中的Token是下一个Token的概率。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 139
+          },
+          "text": "Using these probabilities, you’ll have to select a word."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 19,
+            "milliseconds": 879
+          },
+          "text": "And there are several approaches for that."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 19,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 848
+          },
+          "text": "The simplest one, called greedy search, is to generate the token that has the highest"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 850
+          },
+          "text": "probability."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 379
+          },
+          "text": "A better approach that produces better results is called beam search."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 409
+          },
+          "text": "In that case you use the probabilities generated by the decoder to evaluate the probability"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 410
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 929
+          },
+          "text": "of sentence chunks rather than individual words."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 930
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 259
+          },
+          "text": "And you keep at each step the most likely generated chunk."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 439
+          },
+          "text": "That’s how training is done."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 209
+          },
+          "text": "Now let’s move onto serving."
+        }
+      ],
+      "source": [
+        "Using these probabilities, you’ll have to select a word.",
+        "And there are several approaches for that.",
+        "The simplest one, called greedy search, is to generate the token that has the highest",
+        "probability.",
+        "A better approach that produces better results is called beam search.",
+        "In that case you use the probabilities generated by the decoder to evaluate the probability",
+        "of sentence chunks rather than individual words.",
+        "And you keep at each step the most likely generated chunk.",
+        "That’s how training is done.",
+        "Now let’s move onto serving."
+      ],
+      "result": [
+        "根据这些概率，你需要选择一个词。",
+        "有几种方法可以做到这一点。",
+        "最简单的一种，称为贪婪搜索，是生成概率最高的Token。",
+        "",
+        "一种效果更好的方法叫做集束搜索（Beam Search）。",
+        "在这种情况下，你用解码器生成的概率来评估句子块的概率，而不是单个词。",
+        "",
+        "并且你在每个步骤中保留最可能生成的块。",
+        "这就是训练的方式。",
+        "现在让我们进入服务阶段。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 209
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 768
+          },
+          "text": "After training, at serving time, when you want to say generate a new translation or"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 769
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 78
+          },
+          "text": "a new response to a prompt, You’ll start by feeding the encoder representation"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 79
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 769
+          },
+          "text": "of the prompt to the decoder along with a special token like “GO”"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 769
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 347
+          },
+          "text": "This will prompt the decoder to generate the first word."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 348
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 19,
+            "milliseconds": 88
+          },
+          "text": "Let’s see in more detail what happens during the generation stage."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 19,
+            "milliseconds": 89
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 257
+          },
+          "text": "First of all the start token needs to be represented by a vector using an embedding layer."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 850
+          },
+          "text": "Then the recurrent layer will update the previous state produced by the encoder into a new state."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 29
+          },
+          "text": "This state will be passed to a dense softmax layer to produce the word probabilities Finally"
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 29
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 45,
+            "milliseconds": 149
+          },
+          "text": "the word is generated by taking the highest probability token with greedy search or the"
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 45,
+            "milliseconds": 149
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 129
+          },
+          "text": "highest probability chunk with beam search."
+        }
+      ],
+      "source": [
+        "After training, at serving time, when you want to say generate a new translation or",
+        "a new response to a prompt, You’ll start by feeding the encoder representation",
+        "of the prompt to the decoder along with a special token like “GO”",
+        "This will prompt the decoder to generate the first word.",
+        "Let’s see in more detail what happens during the generation stage.",
+        "First of all the start token needs to be represented by a vector using an embedding layer.",
+        "Then the recurrent layer will update the previous state produced by the encoder into a new state.",
+        "This state will be passed to a dense softmax layer to produce the word probabilities Finally",
+        "the word is generated by taking the highest probability token with greedy search or the",
+        "highest probability chunk with beam search."
+      ],
+      "result": [
+        "在训练后，当你想生成新的翻译或对某个Prompt的新回应时，你会首先将Prompt的编码器表示连同像“GO”这样的特殊Token一起输入到解码器中。",
+        "",
+        "",
+        "这会促使解码器生成第一个单词。",
+        "让我们更详细地了解生成阶段发生了什么。",
+        "首先，开始Token需要通过嵌入层表示为一个向量。",
+        "然后，循环层将会更新编码器生成的先前状态，使其成为新的状态。",
+        "这个状态将被传递到一个密集的 softmax 层来产生单词概率。最后",
+        "通过贪婪搜索或者束搜索取概率最高的Token或者最高概率的块来生成词语。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 129
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 478
+          },
+          "text": "At this point you repeat this procedure for the second word to be generated."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 478
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 529
+          },
+          "text": "And for the third word Until you're done!"
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 839
+          },
+          "text": "So what’s next?"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 839
+          },
+          "text": "Well."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 3,
+            "milliseconds": 678
+          },
+          "text": "The difference between the architecture we just learned about and the ones in the large"
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 3,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 370
+          },
+          "text": "language models is what goes inside of the encoder and decoder blocks."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 370
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 948
+          },
+          "text": "The simple RRN network is replaced by transformer blocks which is an architecture discovered"
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 949
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 160
+          },
+          "text": "here at Google and which is based on the attention mechanism."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 499
+          },
+          "text": "If you are interested in knowing more about these topics, we have two more overview courses"
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 899
+          },
+          "text": "in that series: Attention Mechanism: Overview, and Transformer Models and BERT Model: Overview."
+        }
+      ],
+      "source": [
+        "At this point you repeat this procedure for the second word to be generated.",
+        "And for the third word Until you're done!",
+        "So what’s next?",
+        "Well.",
+        "The difference between the architecture we just learned about and the ones in the large",
+        "language models is what goes inside of the encoder and decoder blocks.",
+        "The simple RRN network is replaced by transformer blocks which is an architecture discovered",
+        "here at Google and which is based on the attention mechanism.",
+        "If you are interested in knowing more about these topics, we have two more overview courses",
+        "in that series: Attention Mechanism: Overview, and Transformer Models and BERT Model: Overview."
+      ],
+      "result": [
+        "在这个阶段，你需要为生成的第二个单词重复这个过程。",
+        "然后是第三个单词，直到完成！",
+        "接下来是什么呢？",
+        "嗯。",
+        "我们刚刚学习的架构和大型语言模型中的架构之间的差异在于编码器和解码器块中的内容。",
+        "",
+        "简单的RRN网络被替换为Transformer模块，这是一种在Google发现的基于注意力机制的架构。",
+        "",
+        "如果你对这些话题感兴趣，我们还有另外两门概述课程：",
+        "“注意力机制：概述”，以及“Transformer模型和BERT模型：概述”。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 328
+          },
+          "text": "Also, if you liked this the course today, have a look at Encoder-Decoder Architecture:"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 329
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 42,
+            "milliseconds": 819
+          },
+          "text": "Lab Walkthrough Where I’ll show you how to generate poetry in code using the concepts"
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 42,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 519
+          },
+          "text": "we have seen in this overview."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 519
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 817
+          },
+          "text": "Thanks for your time!"
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 490
+          },
+          "text": "Have a great day!"
+        }
+      ],
+      "source": [
+        "Also, if you liked this the course today, have a look at Encoder-Decoder Architecture:",
+        "Lab Walkthrough Where I’ll show you how to generate poetry in code using the concepts",
+        "we have seen in this overview.",
+        "Thanks for your time!",
+        "Have a great day!"
+      ],
+      "result": [
+        "另外，如果你喜欢今天的课程，请看“编码器-解码器架构：实验演示”，",
+        "在那里，我将向你展示如何使用我们在这节课中学到的概念来在代码中生成诗歌。",
+        "",
+        "感谢你的时间！",
+        "祝你有美好的一天！"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Encoder-Decoder Architecture- Overview.srt",
+  "ouputBasePath": "input/Generative AI learning path/Encoder-Decoder Architecture- Overview",
+  "totalCost": 0.22283999999999998,
+  "translationPath": "input/Generative AI learning path/Encoder-Decoder Architecture- Overview/translation.json"
+}

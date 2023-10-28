@@ -1,0 +1,529 @@
+1
+00:00:00,428 --> 00:00:05,711
+嗨，我叫Kyle Steckler，我是Google Cloud高级解决方案实验室团队的机器学习工程师。
+Hi, my name is Kyle Steckler, and I'm a machine learning engineer on the Advanced Solutions Lab team at Google Cloud.
+
+2
+00:00:05,711 --> 00:00:10,474
+在这次演讲中，我们将深入介绍图像生成的入门知识。
+In this talk, we're going to dive into an introduction to image generation.
+
+3
+00:00:10,474 --> 00:00:14,114
+具体来说，我将介绍扩散模型，
+Specifically, I'll provide an introduction to diffusion models,
+
+4
+00:00:14,115 --> 00:00:19,919
+这是近期在图像生成领域表现出巨大潜力的一类模型。
+a family of models that have recently shown tremendous promise in the image generation space.
+
+5
+00:00:19,919 --> 00:00:23,128
+话虽如此，图像生成一直是一个颇受关注的领域，
+With that said, image generation has long been a field of interest,
+
+6
+00:00:23,129 --> 00:00:26,163
+你可能听说过许多有趣的方法。
+and there are many interesting approaches that you may have heard about.
+
+7
+00:00:27,598 --> 00:00:31,114
+现在，虽然已经实施了许多图像生成的方法，
+Now, while many approaches have been implemented for image generation,
+
+8
+00:00:31,115 --> 00:00:36,909
+但随着时间的推移，最有前景的一些方法已经被模型家族所采用，比如变分自编码器，
+some of the more promising ones over time have been model families such as variational autoencoders,
+
+9
+00:00:36,910 --> 00:00:39,443
+它们将图像编码到一个压缩的大小，
+which encode images to a compressed size
+
+10
+00:00:39,444 --> 00:00:44,672
+然后解码回原始大小，同时学习数据本身的分布。
+and then decode back to the original size while learning the distribution of the data itself.
+
+11
+00:00:46,039 --> 00:00:50,542
+生成对抗模型，或者说GANs，也非常受欢迎。
+Generative adversarial models, or GANs, have also been quite popular.
+
+12
+00:00:50,542 --> 00:00:51,842
+这些模型真的很有趣。
+These models are really interesting.
+
+13
+00:00:51,842 --> 00:00:55,504
+它们实际上是让两个神经网络相互对抗。
+They actually pit two neural networks against each other.
+
+14
+00:00:55,504 --> 00:00:58,513
+一个神经网络（生成器）创建图像，
+One neural network, the generator, creates images,
+
+15
+00:00:58,614 --> 00:01:03,214
+另一个神经网络（鉴别器）预测图像是真是假。
+and the other neural network, the discriminator, predicts if the image is real or fake.
+
+16
+00:01:03,749 --> 00:01:08,688
+随着时间的推移，鉴别器在区分真假方面越来越好，
+Over time, the discriminator gets better and better at distinguishing between real and fake,
+
+17
+00:01:08,700 --> 00:01:12,554
+生成器在创造逼真的假图像方面也越来越好。
+and the generator gets better and better at creating real-looking fakes.
+
+18
+00:01:12,554 --> 00:01:14,175
+你可能听说过“深度伪造(Deepfake)”这个术语。
+You may have heard the term deepfakes before.
+
+19
+00:01:15,316 --> 00:01:17,579
+最后，自回归模型。
+And lastly, autoregressive models.
+
+20
+00:01:17,579 --> 00:01:22,186
+这些模型将图像视为像素序列来生成。
+These things generate images by treating an image as a sequence of pixels.
+
+21
+00:01:22,186 --> 00:01:30,898
+现代的自回归模型实际上从大型语言模型(LLMs)处理文本的方式中汲取了大量灵感。
+And the modern approach with autoregressive models actually draws much of its inspiration from how LLMs, or large language models, handle text.
+
+23
+00:01:30,898 --> 00:01:31,579
+非常有趣。
+Very interesting.
+
+24
+00:01:32,563 --> 00:01:35,284
+在这次讲座中，这就是我们真正要关注的内容。
+Now in this talk, this is really going to be the focus.
+
+25
+00:01:35,284 --> 00:01:38,725
+这是较新的图像生成模型家族之一。
+And this is one of the newer image generation model families.
+
+26
+00:01:38,725 --> 00:01:41,266
+那就是扩散模型。
+And that is diffusion models.
+
+27
+00:01:41,266 --> 00:01:46,787
+扩散模型的灵感来源于物理学，特别是热力学。
+Diffusion models draw their inspiration from physics, specifically thermodynamics.
+
+28
+00:01:46,787 --> 00:01:51,449
+虽然它们最初是在2015年为图像生成引入的，
+And while they were first really introduced for image generation in 2015,
+
+29
+00:01:51,649 --> 00:01:54,770
+但这个想法真正流行起来还是花了好几年时间。
+it took a few years for the idea to really take off.
+
+30
+00:01:55,679 --> 00:01:59,457
+然而，在过去的几年里，从2020年到现在，
+Within the last few years though, 2020 up until now,
+
+31
+00:01:59,458 --> 00:02:09,083
+我们在研究领域和现今的工业领域，都看到了扩散模型的大量增长。
+we have seen a massive increase of diffusion models in both the research space and now today in the industry space as well.
+
+33
+00:02:09,083 --> 00:02:15,145
+可能你熟悉的许多最先进的图像生成系统都是由扩散模型支持的。
+Diffusion models underpin many of the state-of-the-art image generation systems that you may be familiar with today.
+
+34
+00:02:16,337 --> 00:02:20,601
+扩散模型在许多不同的使用场景中都展现出了潜力。
+Diffusion models show promise across a number of different use cases.
+
+35
+00:02:20,601 --> 00:02:25,992
+无条件的扩散模型，即模型没有额外的输入或指令，
+Unconditioned diffusion models, where models have no additional input or instruction,
+
+36
+00:02:26,029 --> 00:02:31,886
+可以从特定事物的图像中进行训练，比如你可以在这里的幻灯片中看到的脸，
+can be trained from images of a specific thing, such as faces, as you can see on the slide here,
+
+37
+00:02:31,887 --> 00:02:35,633
+它将学习生成新的图像。
+and it will learn to generate new images of that thing.
+
+38
+00:02:35,633 --> 00:02:39,540
+无条件生成的另一个例子是超分辨率，
+Another example of unconditioned generation is super resolution,
+
+39
+00:02:39,740 --> 00:02:43,019
+它在提高低质量图像的清晰度方面非常强大。
+which is really powerful in enhancing low-quality images.
+
+40
+00:02:43,975 --> 00:02:46,692
+还有条件生成模型，
+We also have conditioned generation models,
+
+41
+00:02:46,892 --> 00:02:51,986
+这些模型为我们提供了像从文本提示（Prompt）生成图像的文本到图像，
+and these give us things like text-to-image, where we can generate an image from a text prompt,
+
+42
+00:02:52,000 --> 00:02:59,281
+还有其他像图像修复和文本引导的图像到图像等功能，我们可以在图像上删除或添加内容。
+and other things like image-inpainting and text-guided image-to-image, where we can remove or add things.
+
+43
+00:02:59,281 --> 00:03:02,082
+我们可以编辑图像本身。
+We can edit the image itself.
+
+44
+00:03:02,082 --> 00:03:09,465
+现在，让我们更深入地探讨一下扩散模型，看看这些东西到底是如何工作的。
+Now, let's take a little bit of a deeper dive into diffusion models and talk about how do these things actually work.
+
+45
+00:03:10,880 --> 00:03:12,643
+如幻灯片上所示，
+As noted on the slide here,
+
+46
+00:03:12,644 --> 00:03:24,165
+基本的思想是通过迭代的前向扩散过程，系统地、慢慢地破坏数据分布中的结构。
+the essential idea is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process.
+
+47
+00:03:24,165 --> 00:03:29,646
+实际上，这将是对图像进行迭代噪声添加。
+Really, this is going to be adding noise iteratively to an image.
+
+48
+00:03:29,646 --> 00:03:35,003
+然后我们学习一个反向扩散过程，恢复数据中的结构，
+We then learn a reverse diffusion process that restores structure in the data,
+
+49
+00:03:35,203 --> 00:03:39,810
+产生一个高度灵活且易于处理的数据生成模型。
+yielding a highly flexible and tractable generative model of the data.
+
+50
+00:03:40,817 --> 00:03:44,914
+换句话说，我们可以迭代地向图像添加噪声，
+In other words, we can add noise to an image iteratively,
+
+51
+00:03:45,043 --> 00:03:53,681
+然后我们可以训练一个模型，学习如何去噪图像，从而生成新的图像。
+and we can then train a model that learns how to denoise an image, thus generating novel images.
+
+52
+00:03:53,681 --> 00:04:01,863
+因此，我们的目标是让这个模型学会去噪，去除噪声。
+So the goal here is that we want to have this model learn to denoise, to remove noise.
+
+53
+00:04:01,863 --> 00:04:08,305
+那么从这个角度来看，我们可以从幻灯片的左边开始，从纯粹的噪声开始，
+And in that aspect then, we could start here on the left of the slide, we could start from pure noise,
+
+54
+00:04:09,480 --> 00:04:14,945
+从这个纯粹的噪声中，我们可以有一个模型能够合成一个新的图像。
+And from that pure noise, we could have a model that will be able to synthesize a novel image.
+
+55
+00:04:15,832 --> 00:04:21,655
+我知道这个幻灯片上有一些数学符号，所以让我稍微解释一下。
+Now, I know that there's a bit of math notation on this slide, so let's break it down just a little bit.
+
+56
+00:04:21,655 --> 00:04:24,897
+我们从一个大型的图像数据集开始。
+We start with a large data set of images.
+
+57
+00:04:24,897 --> 00:04:29,940
+但是让我们只选取一个图像，就像这里右边显示的那样。
+But let's just take a single image here, shown on the right-hand side.
+
+58
+00:04:29,940 --> 00:04:41,987
+好的，我们可以开始这个前向扩散过程，我们可以从x0（初始图像）到x1（加入一点噪声的初始图像）。
+Well, we can start this forward diffusion process, and we can go from x0, the initial image, to x1, the initial image with a little bit of noise added to it.
+
+59
+00:04:42,667 --> 00:04:50,333
+我们可以一次又一次地做这个过程，反复向初始图像添加更多的噪声。
+And we can do this over and over again, iteratively adding more and more noise to the initial image.
+
+60
+00:04:50,333 --> 00:04:55,397
+我们称这个分布为q，它只依赖于前一步。
+Now this distribution we call q, and it only depends on the previous step.
+
+61
+00:04:55,397 --> 00:05:04,524
+所以如果我们一次又一次地加入更多的噪声，我们需要思考我们要执行多少次这个操作。
+So if we do this over and over, iteratively adding more noise, we need to think about how many times do we perform that operation.
+
+62
+00:05:04,524 --> 00:05:06,926
+而最初的研究论文做了1000次。
+And the initial research paper did this 1,000 times.
+
+63
+00:05:08,647 --> 00:05:17,035
+理想情况下，如果这个数字足够高，比如1000，到最后，我们应该达到纯噪声的状态。
+So ideally, with that number being high enough, 1000, by the end of it, we should reach a state of pure noise.
+
+64
+00:05:17,035 --> 00:05:23,420
+到这个时候，初始图像中的所有结构都完全消失了。
+And so by this point, all structure in the initial image is completely gone.
+
+65
+00:05:23,420 --> 00:05:25,222
+我们只看到纯噪声。
+We're just looking at pure noise.
+
+66
+00:05:25,222 --> 00:05:28,184
+显然，这是相对容易的部分。
+Now, obviously, that's kind of the easy part.
+
+67
+00:05:28,184 --> 00:05:30,286
+执行q并不太困难，
+It's not too difficult to perform q.
+
+68
+00:05:31,247 --> 00:05:33,543
+只是逐步增加更多的噪声，
+to iteratively add more and more noise,
+
+69
+00:05:33,544 --> 00:05:40,689
+困难的部分是我们如何从一个噪声图像转变为一个稍微噪声较少的图像。
+the challenging part is how do we go from a noisy image to a slightly less noisy image.
+
+70
+00:05:40,689 --> 00:05:44,830
+我们将这个过程称为反向扩散过程。
+And so this we'll refer to as the reverse diffusion process.
+
+71
+00:05:44,830 --> 00:05:53,592
+在这个阶段，我们每一步都要添加噪声，我们也都要学习反向扩散过程。
+And at this stage, every step of the way, every step that we add noise, we also learn the reverse diffusion process.
+
+72
+00:05:54,433 --> 00:06:00,457
+也就是说，我们训练一个机器学习模型，输入噪声图像，
+That is, we train a machine learning model that takes in as input the noisy image
+
+73
+00:06:00,458 --> 00:06:04,539
+并预测已经加入到图像中的噪声。
+and predicts the noise that's been added to it.
+
+74
+00:06:04,539 --> 00:06:08,901
+现在让我们从一个稍微不同的角度来看待这个问题。
+Now let's look at that from a slightly different angle.
+
+75
+00:06:08,901 --> 00:06:12,743
+我们可以在这里可视化模型的单个训练步骤。
+We can visualize a single training step of the model here.
+
+76
+00:06:12,743 --> 00:06:19,887
+所以我们在左边有初始图像x，并且在一个时间步骤中生成一个噪声图像。
+So we have our initial image x on the left and we sample at a time step to create a noisy image.
+
+77
+00:06:20,873 --> 00:06:26,534
+然后我们将其输入我们的去噪模型，目标是预测噪声。
+We then send that through our denoising model with the goal of predicting the noise.
+
+78
+00:06:26,534 --> 00:06:30,475
+所以模型的输出就是预测的噪声。
+So the output of the model is the predicted noise.
+
+79
+00:06:30,475 --> 00:06:32,596
+但我们刚刚向这个图像添加了噪声。
+But we just added the noise to this image.
+
+80
+00:06:32,596 --> 00:06:33,876
+我们知道它是什么。
+We know what it is.
+
+81
+00:06:33,876 --> 00:06:35,656
+我们实际上可以比较一下。
+So we can actually compare that.
+
+82
+00:06:35,656 --> 00:06:41,658
+我们可以看看模型预测的噪声和我们实际添加的噪声之间的区别。
+We can see what is the difference between the model's predicted noise and the actual noise that we added.
+
+83
+00:06:42,510 --> 00:06:50,797
+这个模型的训练方式类似于你可能熟悉的大多数机器学习模型，目标是最小化那个差异。
+Now this model is trained similar to most machine learning models that you might be familiar with to minimize that difference.
+
+84
+00:06:50,797 --> 00:06:59,725
+随着时间的推移，看过足够多的例子后，这个模型在去除图像噪声方面变得非常非常好。
+And over time, after seeing enough examples, this model gets very, very good at removing noise from images.
+
+85
+00:06:59,725 --> 00:07:01,206
+现在来到有趣的部分。
+And now for the fun part.
+
+86
+00:07:01,206 --> 00:07:06,010
+这是真正酷的地方，我们需要思考一旦我们训练了这个模型，
+This is where it gets really cool as we need to think about once we train this model,
+
+87
+00:07:06,210 --> 00:07:07,932
+我们如何用它生成图像？
+how do we generate images with it?
+
+88
+00:07:08,720 --> 00:07:10,662
+实际上，这是非常直观的。
+Well, it's actually fairly intuitive.
+
+89
+00:07:10,662 --> 00:07:19,072
+我们可以从纯粹的绝对噪声开始，然后将这个噪声送入我们训练过的模型。
+We can just start with pure absolute noise and send that noise through our model that is trained.
+
+90
+00:07:19,072 --> 00:07:25,058
+然后我们取出输出，预测的噪声，并从初始噪声中减去它。
+We then take the output, the predicted noise, and subtract it from the initial noise.
+
+91
+00:07:25,058 --> 00:07:30,184
+如果我们一次又一次地这样做，我们最终会得到一个生成的图像。
+And if we do that over and over and over again, we end up with a generated image.
+
+92
+00:07:31,650 --> 00:07:33,000
+另一种思考方式是，
+Another way to think about this is that
+
+93
+00:07:33,001 --> 00:07:39,045
+模型能够学习到它所看到的图像的真实数据分布，
+the model is able to learn the real data distribution of images that it's seen
+
+94
+00:07:39,245 --> 00:07:44,779
+然后从那个学习到的分布中采样，创建新的、独特的图像。
+and then sample from that learned distribution to create new novel images.
+
+95
+00:07:44,780 --> 00:07:45,220
+非常酷！
+Very cool.
+
+96
+00:07:46,584 --> 00:07:53,232
+我相信我们都知道，在过去的几年里，这个领域有了许多进展。
+As I'm sure we're all aware, there have been many advances in this space in just the last few years.
+
+97
+00:07:53,232 --> 00:08:00,504
+尽管在 Vertex AI 中，许多令人兴奋的新图像生成技术都是以扩散模型为基础，
+And while many of the exciting new technologies on Vertex AI for image generation are underpinned with diffusion models,
+
+98
+00:08:00,505 --> 00:08:04,726
+但我们已经做了大量的工作，使得图像生成更快，控制更精确。
+lots of work has been done to generate images faster and with more control.
+
+99
+00:08:05,487 --> 00:08:10,514
+希望现在，经过简单了解扩散模型如何工作的介绍后，
+Hopefully now, after taking a little bit of a look under the covers into how diffusion models work,
+
+100
+00:08:10,515 --> 00:08:17,700
+你对这些真正新颖、创新的模型类型有更好的理解。
+you have a bit better intuition as to what's actually going on with these really new, innovative model types.
+
+101
+00:08:18,175 --> 00:08:26,429
+我们也看到，将扩散模型的力量与大型语言模型（LLM）的力量相结合，可以带来出色的结果，
+We've also seen wonderful results combining the power of diffusion models with the power of LLMs, or large language models,
+
+102
+00:08:26,571 --> 00:08:33,565
+真正让我们能够根据文本提示（Prompt）生成具有上下文感知的、照片级真实的图像。
+that can really enable us to create context-aware, photorealistic images from a text prompt.
+
+103
+00:08:34,502 --> 00:08:38,325
+Google Research 的 Imagen 就是一个很好的例子。
+One great example of this is Imagen from Google Research.
+
+104
+00:08:38,325 --> 00:08:42,400
+虽然这比我们在这个环节中讨论的内容要复杂一些，
+While it's a bit more complicated than what we've talked through in this session,
+
+105
+00:08:42,401 --> 00:08:49,613
+但你可以看到，它的核心是一个大型语言模型和几个基于扩散的模型的组合。
+you can see that at its core, it's a composition of an LLM and a few diffusion-based models.
+
+106
+00:08:49,613 --> 00:08:51,471
+这是一个非常令人兴奋的领域，
+This is a really exciting space,
+
+107
+00:08:51,472 --> 00:08:58,178
+我很高兴看到这项出色的技术正在被整合进 Vertex AI 的企业级产品中。
+and I'm thrilled to see this wonderful technology make its way into enterprise-grade products on Vertex AI.
+
+108
+00:08:58,178 --> 00:08:58,919
+感谢你的聆听！
+Thanks for listening.

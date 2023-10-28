@@ -1,0 +1,6260 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 570
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 2,
+            "milliseconds": 759
+          },
+          "text": "JOHN EWALD: Hello, and welcome to Introduction"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 2,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 386
+          },
+          "text": "to Large Language Models."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 386
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 719
+          },
+          "text": "My name is John Ewald, and I'm a training developer here"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 719
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 158
+          },
+          "text": "at Google Cloud."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 859
+          },
+          "text": "In this course, you learn to define large language"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 859
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 669
+          },
+          "text": "models, or LLMs, describe LLM use cases,"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 669
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 178
+          },
+          "text": "explain prompt tuning, and describe Google's Gen AI"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 429
+          },
+          "text": "development tools."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 429
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 419
+          },
+          "text": "Large language models, or LLMs, are a subset of deep learning."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 219
+          },
+          "text": "To find out more about deep learning,"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 219
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 669
+          },
+          "text": "see our Introduction to Generative AI course video."
+        }
+      ],
+      "source": [
+        "JOHN EWALD: Hello, and welcome to Introduction",
+        "to Large Language Models.",
+        "My name is John Ewald, and I'm a training developer here",
+        "at Google Cloud.",
+        "In this course, you learn to define large language",
+        "models, or LLMs, describe LLM use cases,",
+        "explain prompt tuning, and describe Google's Gen AI",
+        "development tools.",
+        "Large language models, or LLMs, are a subset of deep learning.",
+        "To find out more about deep learning,",
+        "see our Introduction to Generative AI course video."
+      ],
+      "result": [
+        "JOHN EWALD：大家好，欢迎来到大型语言模型介绍课程。",
+        "",
+        "我是JOHN EWALD，谷歌云的培训开发人员。",
+        "",
+        "在这门课程中，您将学习定义大型语言模型，",
+        "即LLM，描述LLM的用例，",
+        "解释提示调优（Prompt Tuning），以及介绍谷歌的Gen AI开发工具。",
+        "",
+        "大型语言模型，即LLM，是深度学习的一个子集。",
+        "想了解更多关于深度学习的信息，",
+        "请观看我们的生成式AI课程视频。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 670
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 429
+          },
+          "text": "LLMs and generative AI intersect and they are"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 429
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 399
+          },
+          "text": "both a part of deep learning."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 39
+          },
+          "text": "Another area of AI you may be hearing a lot about"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 718
+          },
+          "text": "is generative AI."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 719
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 969
+          },
+          "text": "This is a type of artificial intelligence that"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 969
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 728
+          },
+          "text": "can produce new content, including text, images, audio,"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 729
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 289
+          },
+          "text": "and synthetic data."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 648
+          },
+          "text": "So what are large language models?"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 649
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 979
+          },
+          "text": "Large language models refer to large general-purpose language"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 979
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 588
+          },
+          "text": "models that can be pre-trained and then fine"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 590
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 20
+          },
+          "text": "tuned for specific purposes."
+        }
+      ],
+      "source": [
+        "LLMs and generative AI intersect and they are",
+        "both a part of deep learning.",
+        "Another area of AI you may be hearing a lot about",
+        "is generative AI.",
+        "This is a type of artificial intelligence that",
+        "can produce new content, including text, images, audio,",
+        "and synthetic data.",
+        "So what are large language models?",
+        "Large language models refer to large general-purpose language",
+        "models that can be pre-trained and then fine",
+        "tuned for specific purposes."
+      ],
+      "result": [
+        "LLMs和生成式AI相交，它们都是",
+        "深度学习的一部分。",
+        "你可能经常听到的另一个AI领域",
+        "是生成式AI。",
+        "这是一种能够",
+        "生成新内容的人工智能，包括文本、图像、音频、",
+        "和合成数据。",
+        "那么大型语言模型是什么？",
+        "大型语言模型是指可以预先训练，然后进行微调",
+        "以适应特定目的的大型通用语言模型。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 140
+          },
+          "text": "What do pre-trained and fine tuned mean?"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 29
+          },
+          "text": "Imagine training a dog."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 30
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 69
+          },
+          "text": "Often, you train your dog basic commands"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 69
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 779
+          },
+          "text": "such as sit, come, down, and stay."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 750
+          },
+          "text": "These commands are normally sufficient for everyday life"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 489
+          },
+          "text": "and help your dog become a good canine citizen."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 489
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 489
+          },
+          "text": "However, if you need a special service dog such as a police"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 489
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 479
+          },
+          "text": "dog, a guide dog, or a hunting dog, you add special trainings."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 279
+          },
+          "text": "The similar idea applies to large language models."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 489
+          },
+          "text": "These models are trained for general purposes"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 489
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 158
+          },
+          "text": "to solve common language problems such as text"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 219
+          },
+          "text": "classification, question answering, document"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 219
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 89
+          },
+          "text": "summarization, and text generation across industries."
+        }
+      ],
+      "source": [
+        "What do pre-trained and fine tuned mean?",
+        "Imagine training a dog.",
+        "Often, you train your dog basic commands",
+        "such as sit, come, down, and stay.",
+        "These commands are normally sufficient for everyday life",
+        "and help your dog become a good canine citizen.",
+        "However, if you need a special service dog such as a police",
+        "dog, a guide dog, or a hunting dog, you add special trainings.",
+        "The similar idea applies to large language models.",
+        "These models are trained for general purposes",
+        "to solve common language problems such as text",
+        "classification, question answering, document",
+        "summarization, and text generation across industries."
+      ],
+      "result": [
+        "什么是预训练和微调（Fine Tuned）？",
+        "想象一下训练一条狗。",
+        "通常，你会教狗基本的命令",
+        "比如坐下、过来、趴下和待在原地。",
+        "这些命令对日常生活来说足够了",
+        "帮助你的狗成为一个好的犬类公民。",
+        "但是，如果你需要特殊服务犬，比如警犬、",
+        "导盲犬或猎犬，你需要增加特殊训练。",
+        "这个概念也适用于大型语言模型。",
+        "这些模型是为通用目的而训练的",
+        "解决常见的语言问题，如文本分类、问答、",
+        "",
+        "文档摘要和跨行业的文本生成。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 90
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 900
+          },
+          "text": "The models can then be tailored to solve specific problems"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 750
+          },
+          "text": "in different fields such as retail, finance,"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 259
+          },
+          "text": "and entertainment using a relatively small size of field"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 789
+          },
+          "text": "data sets."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 790
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 560
+          },
+          "text": "Let's further break down the concept"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 699
+          },
+          "text": "into three major features of large language models."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 989
+          },
+          "text": "Large indicates two meanings."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 989
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 37
+          },
+          "text": "First is the enormous size of the training data set,"
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 38
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 649
+          },
+          "text": "sometimes at the petabyte scale."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 650
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 289
+          },
+          "text": "Second, it refers to the parameter count."
+        }
+      ],
+      "source": [
+        "The models can then be tailored to solve specific problems",
+        "in different fields such as retail, finance,",
+        "and entertainment using a relatively small size of field",
+        "data sets.",
+        "Let's further break down the concept",
+        "into three major features of large language models.",
+        "Large indicates two meanings.",
+        "First is the enormous size of the training data set,",
+        "sometimes at the petabyte scale.",
+        "Second, it refers to the parameter count."
+      ],
+      "result": [
+        "然后，可以使用相对较小规模的领域数据集，\\N将模型定制来解决零售、金融、娱乐等不同领域的特定问题。",
+        "",
+        "",
+        "",
+        "我们进一步分解这个概念，",
+        "将其分为大型语言模型的三个主要特点。",
+        "大有两层含义。",
+        "首先是训练数据集的庞大规模，",
+        "有时达到PB级别。",
+        "其次，它指的是参数数量。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 889
+          },
+          "text": "In ML, parameters are often called hyperparameters."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 708
+          },
+          "text": "Parameters are basically the memories and the knowledge"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 710
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 259
+          },
+          "text": "that the machine learned from the model training."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 538
+          },
+          "text": "Parameters define the skill of a model"
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 998
+          },
+          "text": "in solving a problem such as predicting text."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 830
+          },
+          "text": "General purpose means that the models"
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 830
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 439
+          },
+          "text": "are sufficient to solve common problems."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 869
+          },
+          "text": "Two reasons lead to this idea."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 870
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 19
+          },
+          "text": "First is the commonality of a human language regardless"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 580
+          },
+          "text": "of the specific tasks."
+        }
+      ],
+      "source": [
+        "In ML, parameters are often called hyperparameters.",
+        "Parameters are basically the memories and the knowledge",
+        "that the machine learned from the model training.",
+        "Parameters define the skill of a model",
+        "in solving a problem such as predicting text.",
+        "General purpose means that the models",
+        "are sufficient to solve common problems.",
+        "Two reasons lead to this idea.",
+        "First is the commonality of a human language regardless",
+        "of the specific tasks."
+      ],
+      "result": [
+        "在机器学习中，参数通常被称为超参数。",
+        "参数基本上是机器从模型训练中学到的记忆和知识。",
+        "",
+        "参数定义了模型在解决问题（如预测文本）的技能。",
+        "",
+        "通用性意味着这些模型",
+        "足以解决常见问题。",
+        "有两个原因导致了这个想法。",
+        "首先是人类语言的共性，无论",
+        "具体任务如何。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 819
+          },
+          "text": "And second is the resource restriction."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 428
+          },
+          "text": "Only certain organizations have the capability"
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 430
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 209
+          },
+          "text": "to train such large language models with huge data sets"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 150
+          },
+          "text": "and a tremendous number of parameters."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 150
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 849
+          },
+          "text": "How about letting them create fundamental language models"
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 849
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 869
+          },
+          "text": "for others to use?"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 870
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 680
+          },
+          "text": "This leads to the last point, pre-trained and fine tuned,"
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 930
+          },
+          "text": "meaning to pre-train a large language"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 930
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 659
+          },
+          "text": "model for a general purpose with a large data set"
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 659
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 899
+          },
+          "text": "and then fine tune it for specific aims with a much"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 699
+          },
+          "text": "smaller data set."
+        }
+      ],
+      "source": [
+        "And second is the resource restriction.",
+        "Only certain organizations have the capability",
+        "to train such large language models with huge data sets",
+        "and a tremendous number of parameters.",
+        "How about letting them create fundamental language models",
+        "for others to use?",
+        "This leads to the last point, pre-trained and fine tuned,",
+        "meaning to pre-train a large language",
+        "model for a general purpose with a large data set",
+        "and then fine tune it for specific aims with a much",
+        "smaller data set."
+      ],
+      "result": [
+        "其次是资源限制。",
+        "只有某些组织具备能力",
+        "用大量数据集训练这种大型语言模型",
+        "和大量参数。",
+        "让他们为其他人创建基本语言模型怎么样？",
+        "",
+        "这导致了最后一点，预训练和微调，",
+        "意味着用大型数据集预训练一个通用目的的大型语言模型",
+        "",
+        "然后用更小的数据集为特定目标进行微调。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 859
+          },
+          "text": "The benefits of using large language models"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 189
+          },
+          "text": "are straightforward."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 189
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 879
+          },
+          "text": "First, a single model can be used for different tasks."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 548
+          },
+          "text": "This is a dream come true."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 530
+          },
+          "text": "These large language models that are"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 530
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 949
+          },
+          "text": "trained with petabytes of data and generate billions"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 949
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 319
+          },
+          "text": "of parameters are smart enough to solve different tasks,"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 319
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 209
+          },
+          "text": "including language translation, sentence completion, text"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 810
+          },
+          "text": "classification, question answering, and more."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 810
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 560
+          },
+          "text": "Second, large language models require minimal field training"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 219
+          },
+          "text": "data when you tailor them to solve your specific problem."
+        }
+      ],
+      "source": [
+        "The benefits of using large language models",
+        "are straightforward.",
+        "First, a single model can be used for different tasks.",
+        "This is a dream come true.",
+        "These large language models that are",
+        "trained with petabytes of data and generate billions",
+        "of parameters are smart enough to solve different tasks,",
+        "including language translation, sentence completion, text",
+        "classification, question answering, and more.",
+        "Second, large language models require minimal field training",
+        "data when you tailor them to solve your specific problem."
+      ],
+      "result": [
+        "使用大型语言模型的好处很明显。",
+        "",
+        "首先，一个模型可以应用于不同的任务。",
+        "这是梦想成真。",
+        "这些经过大量数据训练并生成数十亿参数的大型语言模型",
+        "",
+        "足够智能，能解决不同的任务，",
+        "包括语言翻译、句子补全、文本分类、问答等。",
+        "",
+        "其次，当你定制大型语言模型来解决特定问题时，",
+        "它们需要的领域训练数据很少。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 219
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 9
+          },
+          "text": "Large language models obtain decent performance"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 9
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 419
+          },
+          "text": "even with little domain training data."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 419
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 48
+          },
+          "text": "In other words, they can be used for few shot or even"
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 789
+          },
+          "text": "zero-shot scenarios."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 789
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 619
+          },
+          "text": "In machine learning, few shot refers"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 870
+          },
+          "text": "to training a model with minimal data,"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 870
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 539
+          },
+          "text": "and zero shot implies that a model can recognize"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 688
+          },
+          "text": "things that have not explicitly been taught in the training"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 689
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 108
+          },
+          "text": "before."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 719
+          },
+          "text": "Third, the performance of large language models"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 719
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 549
+          },
+          "text": "is continuously growing when you add more data and parameters."
+        }
+      ],
+      "source": [
+        "Large language models obtain decent performance",
+        "even with little domain training data.",
+        "In other words, they can be used for few shot or even",
+        "zero-shot scenarios.",
+        "In machine learning, few shot refers",
+        "to training a model with minimal data,",
+        "and zero shot implies that a model can recognize",
+        "things that have not explicitly been taught in the training",
+        "before.",
+        "Third, the performance of large language models",
+        "is continuously growing when you add more data and parameters."
+      ],
+      "result": [
+        "大型语言模型表现不错",
+        "即使域训练数据很少。",
+        "换句话说，它们可用于少量样本（Few-shot）甚至零样本（Zero-shot）场景。",
+        "",
+        "在机器学习中，少样本是指",
+        "用最少的数据训练模型，",
+        "而零样本意味着模型能识别",
+        "在以前的训练中未明确教过的事物。",
+        "",
+        "第三，大型语言模型的性能",
+        "随着数据和参数的增加而不断提高。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 949
+          },
+          "text": "Let's take PaLM as an example."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 949
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 308
+          },
+          "text": "In April 2022, Google released PaLM,"
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 310
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 50
+          },
+          "text": "short for Pathways Language Model, a 540 billion-parameter"
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 899
+          },
+          "text": "model that achieves a state of the art performance"
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 31,
+            "milliseconds": 658
+          },
+          "text": "across multiple language tasks."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 31,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 79
+          },
+          "text": "PaLM is a dense decoder-only transformer model."
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 79
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 529
+          },
+          "text": "It has 540 billion parameters."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 788
+          },
+          "text": "It leverages the new pathways system,"
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 790
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 970
+          },
+          "text": "which has enabled Google to efficiently"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 859
+          },
+          "text": "train a single model across multiple TPU V4 pods."
+        }
+      ],
+      "source": [
+        "Let's take PaLM as an example.",
+        "In April 2022, Google released PaLM,",
+        "short for Pathways Language Model, a 540 billion-parameter",
+        "model that achieves a state of the art performance",
+        "across multiple language tasks.",
+        "PaLM is a dense decoder-only transformer model.",
+        "It has 540 billion parameters.",
+        "It leverages the new pathways system,",
+        "which has enabled Google to efficiently",
+        "train a single model across multiple TPU V4 pods."
+      ],
+      "result": [
+        "以PaLM为例。",
+        "2022年4月，谷歌发布了PaLM，",
+        "简称Pathways Language Model，这是一个拥有5400亿参数的模型，",
+        "在多种语言任务中都实现了最先进的性能。",
+        "",
+        "PaLM是一个仅解码器的密集型Transformer模型，",
+        "它有5400亿个参数。",
+        "它利用了新的路径系统，",
+        "这使得谷歌能够在多个TPU V4集群上有效地训练一个模型。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 259
+          },
+          "text": "Pathway is a new AI architecture that"
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 308
+          },
+          "text": "will handle many tasks at once, learn new tasks quickly,"
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 310
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 889
+          },
+          "text": "and reflect a better understanding of the world."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 339
+          },
+          "text": "The system enables PaLM to orchestrate distributed"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 339
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 629
+          },
+          "text": "computation for accelerators."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 629
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 928
+          },
+          "text": "We previously mentioned that PaLM is a transformer model."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 930
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 11,
+            "milliseconds": 479
+          },
+          "text": "A transformer model consists of encoder and decoder."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 11,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 13,
+            "milliseconds": 629
+          },
+          "text": "The encoder encodes the input sequence"
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 13,
+            "milliseconds": 629
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 669
+          },
+          "text": "and passes it to the decoder, which"
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 670
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 9
+          },
+          "text": "learns how to decode the representations"
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 9
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 20,
+            "milliseconds": 959
+          },
+          "text": "for a relevant task."
+        }
+      ],
+      "source": [
+        "Pathway is a new AI architecture that",
+        "will handle many tasks at once, learn new tasks quickly,",
+        "and reflect a better understanding of the world.",
+        "The system enables PaLM to orchestrate distributed",
+        "computation for accelerators.",
+        "We previously mentioned that PaLM is a transformer model.",
+        "A transformer model consists of encoder and decoder.",
+        "The encoder encodes the input sequence",
+        "and passes it to the decoder, which",
+        "learns how to decode the representations",
+        "for a relevant task."
+      ],
+      "result": [
+        "Pathway是一种新的AI架构，它可以",
+        "同时处理多个任务，快速学习新任务，",
+        "并更好地理解世界。",
+        "该系统使PaLM能够协调分布式",
+        "加速器的计算。",
+        "我们之前提到过PaLM是一个Transformer模型。",
+        "Transformer模型包括编码器和解码器。",
+        "编码器对输入序列进行编码，",
+        "然后将其传递给解码器，解码器",
+        "学会如何解码表示，",
+        "以完成相关任务。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 20,
+            "milliseconds": 959
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 988
+          },
+          "text": "We've come a long away from traditional programming"
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 50
+          },
+          "text": "to neural networks to generative models."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 939
+          },
+          "text": "In traditional programming, we used"
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 939
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 59
+          },
+          "text": "to have to hard code the rules for distinguishing a cat--"
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 879
+          },
+          "text": "type, animal; legs, four; ears, two; fur, yes;"
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 749
+          },
+          "text": "likes yarn, catnip."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 790
+          },
+          "text": "In the wave of neural networks, we"
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 790
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 819
+          },
+          "text": "could give the network pictures of cats and dogs and ask,"
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 48
+          },
+          "text": "is this a cat?"
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 49,
+            "milliseconds": 29
+          },
+          "text": "And it would predict a cat."
+        }
+      ],
+      "source": [
+        "We've come a long away from traditional programming",
+        "to neural networks to generative models.",
+        "In traditional programming, we used",
+        "to have to hard code the rules for distinguishing a cat--",
+        "type, animal; legs, four; ears, two; fur, yes;",
+        "likes yarn, catnip.",
+        "In the wave of neural networks, we",
+        "could give the network pictures of cats and dogs and ask,",
+        "is this a cat?",
+        "And it would predict a cat."
+      ],
+      "result": [
+        "我们已经从传统编程发展到了神经网络和生成模型",
+        "",
+        "在传统编程中，我们需要",
+        "硬编码区分猫的规则，例如：",
+        "类型：动物；腿：四条；耳朵：两个；毛发：有；",
+        "喜欢：纱线，猫薄荷。",
+        "在神经网络浪潮中，我们",
+        "可以给网络提供猫和狗的图片，然后询问，",
+        "这是一只猫吗？",
+        "它会预测出是猫。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 49,
+            "milliseconds": 29
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 969
+          },
+          "text": "In the generative wave, we as users"
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 55,
+            "milliseconds": 399
+          },
+          "text": "can generate our own content, whether it be text, images,"
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 55,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 579
+          },
+          "text": "audio, video, or other."
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 579
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 398
+          },
+          "text": "For example, models like PaLM, or LaMDA,"
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 488
+          },
+          "text": "or Language Model for Dialogue Applications,"
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 970
+          },
+          "text": "ingest very, very large data from multiple sources"
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 59
+          },
+          "text": "across the internet and build foundation language models"
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 910
+          },
+          "text": "we can use simply by asking a question,"
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 910
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 249
+          },
+          "text": "whether typing it into a prompt or verbally"
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 250
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 17,
+            "milliseconds": 290
+          },
+          "text": "talking into the prompt."
+        }
+      ],
+      "source": [
+        "In the generative wave, we as users",
+        "can generate our own content, whether it be text, images,",
+        "audio, video, or other.",
+        "For example, models like PaLM, or LaMDA,",
+        "or Language Model for Dialogue Applications,",
+        "ingest very, very large data from multiple sources",
+        "across the internet and build foundation language models",
+        "we can use simply by asking a question,",
+        "whether typing it into a prompt or verbally",
+        "talking into the prompt."
+      ],
+      "result": [
+        "在生成式中，我们作为用户",
+        "可以生成自己的内容，无论是文本、图片、",
+        "音频、视频还是其他。",
+        "例如，像PaLM或LaMDA这样的模型，",
+        "或者用于对话应用的语言模型，",
+        "从互联网的多个来源获取大量数据",
+        "建立基础语言模型，",
+        "我们只需提问，",
+        "无论是输入提示还是口头对话提示。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 17,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 19,
+            "milliseconds": 449
+          },
+          "text": "So when you ask it what's a cat, it"
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 19,
+            "milliseconds": 449
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 489
+          },
+          "text": "can give you everything it has learned about a cat."
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 789
+          },
+          "text": "Let's compare LLM development using pre-trained models"
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 790
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 279
+          },
+          "text": "with traditional ML development."
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 69
+          },
+          "text": "First, with LLM development, you don't need to be an expert."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 69
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 799
+          },
+          "text": "You don't need training examples."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 37,
+            "milliseconds": 199
+          },
+          "text": "And there is no need to train a model."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 37,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 109
+          },
+          "text": "All you need to do is think about prompt design, which"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 569
+          },
+          "text": "is the process of creating a prompt that is clear, concise,"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 569
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 669
+          },
+          "text": "and informative."
+        }
+      ],
+      "source": [
+        "So when you ask it what's a cat, it",
+        "can give you everything it has learned about a cat.",
+        "Let's compare LLM development using pre-trained models",
+        "with traditional ML development.",
+        "First, with LLM development, you don't need to be an expert.",
+        "You don't need training examples.",
+        "And there is no need to train a model.",
+        "All you need to do is think about prompt design, which",
+        "is the process of creating a prompt that is clear, concise,",
+        "and informative."
+      ],
+      "result": [
+        "当你问它什么是猫时，它会",
+        "告诉你它所学到的关于猫的一切。",
+        "我们来比较一下使用预训练模型的LLM开发",
+        "和传统的ML开发。",
+        "首先，使用LLM开发，你不需要成为专家。",
+        "你不需要训练样本。",
+        "也不需要训练模型。",
+        "你只需要考虑提示设计，即",
+        "创建清晰、简洁、有信息量的提示。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 670
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 540
+          },
+          "text": "It is an important part of natural language processing."
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 50,
+            "milliseconds": 189
+          },
+          "text": "In traditional machine learning, you"
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 50,
+            "milliseconds": 189
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 648
+          },
+          "text": "need training examples to train a model."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 649
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 508
+          },
+          "text": "You also need compute time and hardware."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 509
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 759
+          },
+          "text": "Let's take a look at an example of a text generation use case."
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 989
+          },
+          "text": "Question answering, or QA, is a subfield of natural language"
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 439
+          },
+          "text": "processing that deals with the task of automatically answering"
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 709
+          },
+          "text": "questions posed in natural language."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 709
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 16,
+            "milliseconds": 99
+          },
+          "text": "QA systems are typically trained on a large amount"
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 16,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 269
+          },
+          "text": "of text and code."
+        }
+      ],
+      "source": [
+        "It is an important part of natural language processing.",
+        "In traditional machine learning, you",
+        "need training examples to train a model.",
+        "You also need compute time and hardware.",
+        "Let's take a look at an example of a text generation use case.",
+        "Question answering, or QA, is a subfield of natural language",
+        "processing that deals with the task of automatically answering",
+        "questions posed in natural language.",
+        "QA systems are typically trained on a large amount",
+        "of text and code."
+      ],
+      "result": [
+        "自然语言处理的重要部分。",
+        "在传统的机器学习中，你",
+        "需要训练样本来训练模型。",
+        "还需要计算时间和硬件。",
+        "让我们看一个文本生成用例。",
+        "问答，或者说QA，是自然语言的一个子领域",
+        "处理自动回答的任务",
+        "用自然语言提出的问题。",
+        "QA系统通常在大量的",
+        "文本和代码上进行训练。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 269
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 19,
+            "milliseconds": 889
+          },
+          "text": "And they are able to answer a wide range of questions,"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 19,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 23,
+            "milliseconds": 599
+          },
+          "text": "including factual, definitional, and opinion-based questions."
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 23,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 26,
+            "milliseconds": 59
+          },
+          "text": "The key here is that you need domain knowledge"
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 26,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 29,
+            "milliseconds": 560
+          },
+          "text": "to develop these question-answering models."
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 29,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 169
+          },
+          "text": "For example, domain knowledge is required"
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 170
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 899
+          },
+          "text": "to develop a question-answering model for customer"
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 158
+          },
+          "text": "support, or health care, or supply chain."
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 279
+          },
+          "text": "Using generative QA, the model generates free text"
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 439
+          },
+          "text": "directly based on the context."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 358
+          },
+          "text": "There is no need for domain knowledge."
+        }
+      ],
+      "source": [
+        "And they are able to answer a wide range of questions,",
+        "including factual, definitional, and opinion-based questions.",
+        "The key here is that you need domain knowledge",
+        "to develop these question-answering models.",
+        "For example, domain knowledge is required",
+        "to develop a question-answering model for customer",
+        "support, or health care, or supply chain.",
+        "Using generative QA, the model generates free text",
+        "directly based on the context.",
+        "There is no need for domain knowledge."
+      ],
+      "result": [
+        "他们能回答各种问题，",
+        "包括事实、定义和观点类问题。",
+        "关键是需要领域知识",
+        "来开发这些问答模型。",
+        "例如，需要领域知识",
+        "来开发客户支持、医疗或供应链的问答模型。",
+        "",
+        "使用生成式问答，模型根据上下文直接生成自由文本。",
+        "",
+        "不需要领域知识。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 49,
+            "milliseconds": 699
+          },
+          "text": "Let's look at three questions given to Bard,"
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 49,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 258
+          },
+          "text": "a large language model chat bot developed by Google AI."
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 549
+          },
+          "text": "Question one."
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 59,
+            "milliseconds": 309
+          },
+          "text": "\"This year's sales are $100,000."
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 59,
+            "milliseconds": 310
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 499
+          },
+          "text": "Expenses are $60,000."
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 729
+          },
+          "text": "How much is net profit?\""
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 730
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 660
+          },
+          "text": "Bard first shares how net profit is calculated, then"
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 459
+          },
+          "text": "performs the calculation."
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 459
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 14,
+            "milliseconds": 128
+          },
+          "text": "Then Bard provides the definition of net profit."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 14,
+            "milliseconds": 129
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 409
+          },
+          "text": "Here's another question."
+        }
+      ],
+      "source": [
+        "Let's look at three questions given to Bard,",
+        "a large language model chat bot developed by Google AI.",
+        "Question one.",
+        "\"This year's sales are $100,000.",
+        "Expenses are $60,000.",
+        "How much is net profit?\"",
+        "Bard first shares how net profit is calculated, then",
+        "performs the calculation.",
+        "Then Bard provides the definition of net profit.",
+        "Here's another question."
+      ],
+      "result": [
+        "让我们看看给Bard提出的三个问题，",
+        "Bard是由谷歌AI开发的大型语言模型聊天机器人。",
+        "问题一。",
+        "\"今年的销售额是100,000美元。",
+        "支出是60,000美元。",
+        "净利润是多少？\"",
+        "Bard首先分享了如何计算净利润，然后",
+        "进行计算。",
+        "接着Bard给出了净利润的定义。",
+        "这是另一个问题。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 410
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 919
+          },
+          "text": "Inventory on hand is 6,000 units."
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 21,
+            "milliseconds": 829
+          },
+          "text": "A new order requires 8,000 units."
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 21,
+            "milliseconds": 829
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 25,
+            "milliseconds": 309
+          },
+          "text": "How many units do I need to fill to complete the order?"
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 25,
+            "milliseconds": 310
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 29,
+            "milliseconds": 750
+          },
+          "text": "Again, Bard answers the question by performing the calculation."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 29,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 509
+          },
+          "text": "And our last example, we have 1,000 sensors"
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 509
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 34,
+            "milliseconds": 638
+          },
+          "text": "in 10 geographic regions."
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 34,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 639
+          },
+          "text": "How many sensors do we have on average in each region?"
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 40,
+            "milliseconds": 528
+          },
+          "text": "Bard answers the question with an example"
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 40,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 44,
+            "milliseconds": 489
+          },
+          "text": "on how to solve the problem and some additional context."
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 44,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 980
+          },
+          "text": "In each of our questions, a desired response was obtained."
+        }
+      ],
+      "source": [
+        "Inventory on hand is 6,000 units.",
+        "A new order requires 8,000 units.",
+        "How many units do I need to fill to complete the order?",
+        "Again, Bard answers the question by performing the calculation.",
+        "And our last example, we have 1,000 sensors",
+        "in 10 geographic regions.",
+        "How many sensors do we have on average in each region?",
+        "Bard answers the question with an example",
+        "on how to solve the problem and some additional context.",
+        "In each of our questions, a desired response was obtained."
+      ],
+      "result": [
+        "现有库存为6,000个单位。",
+        "新订单需要8,000个单位。",
+        "我需要补充多少单位才能完成订单？",
+        "巴德再次通过计算回答了这个问题。",
+        "在我们的最后一个例子中，我们有1,000个传感器",
+        "分布在10个地理区域。",
+        "每个区域平均有多少个传感器？",
+        "巴德用一个例子回答了这个问题",
+        "解决问题的方法和一些额外的背景。",
+        "在我们的每个问题中，都得到了期望的回答。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 669
+          },
+          "text": "This is due to prompt design."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 669
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 499
+          },
+          "text": "Prompt design and prompt engineering"
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 56,
+            "milliseconds": 639
+          },
+          "text": "are two closely-related concepts in natural language processing."
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 56,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 589
+          },
+          "text": "Both involve the process of creating"
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 590
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 440
+          },
+          "text": "a prompt that is clear, concise, and informative."
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 19
+          },
+          "text": "However, there are some key differences between the two."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 318
+          },
+          "text": "Prompt design is the process of creating a prompt that"
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 11,
+            "milliseconds": 649
+          },
+          "text": "is tailored to the specific task that this system is"
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 11,
+            "milliseconds": 649
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 13,
+            "milliseconds": 599
+          },
+          "text": "being asked to perform."
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 13,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 15,
+            "milliseconds": 370
+          },
+          "text": "For example, if the system is being"
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 15,
+            "milliseconds": 370
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 340
+          },
+          "text": "asked to translate a text from English to French,"
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 20,
+            "milliseconds": 469
+          },
+          "text": "the prompt should be written in English"
+        },
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 20,
+            "milliseconds": 470
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 22,
+            "milliseconds": 990
+          },
+          "text": "and should specify that the translation should"
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 22,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 610
+          },
+          "text": "be in French."
+        }
+      ],
+      "source": [
+        "This is due to prompt design.",
+        "Prompt design and prompt engineering",
+        "are two closely-related concepts in natural language processing.",
+        "Both involve the process of creating",
+        "a prompt that is clear, concise, and informative.",
+        "However, there are some key differences between the two.",
+        "Prompt design is the process of creating a prompt that",
+        "is tailored to the specific task that this system is",
+        "being asked to perform.",
+        "For example, if the system is being",
+        "asked to translate a text from English to French,",
+        "the prompt should be written in English",
+        "and should specify that the translation should",
+        "be in French."
+      ],
+      "result": [
+        "这是因为提示设计（Prompt design）。",
+        "提示设计和提示工程（Prompt Engineering）",
+        "是自然语言处理中密切相关的两个概念。",
+        "两者都涉及创建",
+        "一个清晰、简洁、有信息量的提示。",
+        "然而，两者之间存在一些关键差异。",
+        "提示设计是创建一个提示的过程，",
+        "它针对的是这个系统正在",
+        "执行的特定任务。",
+        "例如，如果系统正在",
+        "被要求将文本从英语翻译成法语，",
+        "提示应该用英语写",
+        "并且应该指定翻译应该用法语。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 610
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 289
+          },
+          "text": "Prompt engineering is the process"
+        },
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 208
+          },
+          "text": "of creating a prompt that is designed"
+        },
+        {
+          "id": "196",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 289
+          },
+          "text": "to improve performance."
+        },
+        {
+          "id": "197",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 958
+          },
+          "text": "This may involve using domain-specific knowledge,"
+        },
+        {
+          "id": "198",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 35,
+            "milliseconds": 200
+          },
+          "text": "providing examples of the desired output,"
+        },
+        {
+          "id": "199",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 35,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 37,
+            "milliseconds": 179
+          },
+          "text": "or using keywords that are known to be"
+        },
+        {
+          "id": "200",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 37,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 40,
+            "milliseconds": 179
+          },
+          "text": "effective for the specific system."
+        },
+        {
+          "id": "201",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 40,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 728
+          },
+          "text": "Prompt design is a more general concept,"
+        },
+        {
+          "id": "202",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 730
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 45,
+            "milliseconds": 789
+          },
+          "text": "while prompt engineering is a more specialized concept."
+        },
+        {
+          "id": "203",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 45,
+            "milliseconds": 789
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 608
+          },
+          "text": "Prompt design is essential, while prompt engineering"
+        },
+        {
+          "id": "204",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 610
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 50,
+            "milliseconds": 320
+          },
+          "text": "is only necessary for systems that"
+        },
+        {
+          "id": "205",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 50,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 909
+          },
+          "text": "require a high degree of accuracy or performance."
+        }
+      ],
+      "source": [
+        "Prompt engineering is the process",
+        "of creating a prompt that is designed",
+        "to improve performance.",
+        "This may involve using domain-specific knowledge,",
+        "providing examples of the desired output,",
+        "or using keywords that are known to be",
+        "effective for the specific system.",
+        "Prompt design is a more general concept,",
+        "while prompt engineering is a more specialized concept.",
+        "Prompt design is essential, while prompt engineering",
+        "is only necessary for systems that",
+        "require a high degree of accuracy or performance."
+      ],
+      "result": [
+        "提示工程是一个过程",
+        "旨在创建有助于提高性能的提示",
+        "",
+        "这可能涉及使用特定领域的知识，",
+        "提供期望输出的示例，",
+        "或使用已知对特定系统有效的关键词。",
+        "",
+        "提示设计是一个更通用的概念，",
+        "而提示工程则是一个更专业的概念。",
+        "提示设计至关重要，而提示工程",
+        "只对需要高度准确性或性能的系统才是必要的。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "206",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 909
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 509
+          },
+          "text": "There are three kinds of large language models,"
+        },
+        {
+          "id": "207",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 509
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 178
+          },
+          "text": "generic language models, instruction tuned,"
+        },
+        {
+          "id": "208",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 828
+          },
+          "text": "and dialogue tuned."
+        },
+        {
+          "id": "209",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 830
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 740
+          },
+          "text": "Each needs prompting in a different way."
+        },
+        {
+          "id": "210",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 110
+          },
+          "text": "Generic language models predict the next word"
+        },
+        {
+          "id": "211",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 289
+          },
+          "text": "based on the language in the training data."
+        },
+        {
+          "id": "212",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 13,
+            "milliseconds": 68
+          },
+          "text": "This is an example of a generic language model."
+        },
+        {
+          "id": "213",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 13,
+            "milliseconds": 70
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 16,
+            "milliseconds": 369
+          },
+          "text": "The next word is a token based on the language in the training"
+        },
+        {
+          "id": "214",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 16,
+            "milliseconds": 370
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 519
+          },
+          "text": "data."
+        },
+        {
+          "id": "215",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 519
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 59
+          },
+          "text": "In this example, \"the cat sat on,\""
+        },
+        {
+          "id": "216",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 59
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 248
+          },
+          "text": "the next word should be \"the.\""
+        },
+        {
+          "id": "217",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 250
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 26,
+            "milliseconds": 629
+          },
+          "text": "And you can see that \"the\" is the most likely next word."
+        }
+      ],
+      "source": [
+        "There are three kinds of large language models,",
+        "generic language models, instruction tuned,",
+        "and dialogue tuned.",
+        "Each needs prompting in a different way.",
+        "Generic language models predict the next word",
+        "based on the language in the training data.",
+        "This is an example of a generic language model.",
+        "The next word is a token based on the language in the training",
+        "data.",
+        "In this example, \"the cat sat on,\"",
+        "the next word should be \"the.\"",
+        "And you can see that \"the\" is the most likely next word."
+      ],
+      "result": [
+        "有三种类型的大型语言模型，",
+        "通用语言模型、指令调优、",
+        "和对话调优。",
+        "每种都需要用不同的方式提示。",
+        "通用语言模型根据训练数据中的语言预测下一个词，",
+        "基于训练数据中的语言。",
+        "这是一个通用语言模型的例子。",
+        "下一个词是基于训练数据中的语言标记（Token）。",
+        "",
+        "在这个例子中，\"the cat sat on,\"",
+        "下一个词应该是\"the.\"。",
+        "你可以看到\"the.\"是最可能的下一个词。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "218",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 26,
+            "milliseconds": 629
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 30,
+            "milliseconds": 978
+          },
+          "text": "Think of this type as an autocomplete in search."
+        },
+        {
+          "id": "219",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 30,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 200
+          },
+          "text": "In instruction tuned, the model is"
+        },
+        {
+          "id": "220",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 35,
+            "milliseconds": 539
+          },
+          "text": "trained to predict a response to the instructions"
+        },
+        {
+          "id": "221",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 35,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 779
+          },
+          "text": "given in the input."
+        },
+        {
+          "id": "222",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 779
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 569
+          },
+          "text": "For example, summarize a text of X,"
+        },
+        {
+          "id": "223",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 570
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 43,
+            "milliseconds": 59
+          },
+          "text": "generate a poem in the style of X,"
+        },
+        {
+          "id": "224",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 43,
+            "milliseconds": 59
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 688
+          },
+          "text": "give me a list of keywords based on semantic similarity for X."
+        },
+        {
+          "id": "225",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 690
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 120
+          },
+          "text": "And in this example, classify the text"
+        },
+        {
+          "id": "226",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 979
+          },
+          "text": "into neutral, negative, or positive."
+        },
+        {
+          "id": "227",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 309
+          },
+          "text": "In dialogue tuned, the model is trained to have a dialogue"
+        },
+        {
+          "id": "228",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 309
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 999
+          },
+          "text": "by the next response."
+        }
+      ],
+      "source": [
+        "Think of this type as an autocomplete in search.",
+        "In instruction tuned, the model is",
+        "trained to predict a response to the instructions",
+        "given in the input.",
+        "For example, summarize a text of X,",
+        "generate a poem in the style of X,",
+        "give me a list of keywords based on semantic similarity for X.",
+        "And in this example, classify the text",
+        "into neutral, negative, or positive.",
+        "In dialogue tuned, the model is trained to have a dialogue",
+        "by the next response."
+      ],
+      "result": [
+        "把这种类型想象成搜索中的自动补全。",
+        "在指令调整中，模型被训练成",
+        "根据输入的指令预测响应。",
+        "",
+        "例如，总结某某文章中的文本，",
+        "以某某的风格创作一首诗，",
+        "给我一个基于某某的语义相似度的关键词列表。",
+        "在这个例子中，将文本分类为",
+        "中性、消极或积极。",
+        "在对话调整中，模型被训练成通过下一个回应来进行对话。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "229",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 3,
+            "milliseconds": 639
+          },
+          "text": "Dialogue-tuned models are a special case"
+        },
+        {
+          "id": "230",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 3,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 6,
+            "milliseconds": 819
+          },
+          "text": "of instruction tuned where requests are typically framed"
+        },
+        {
+          "id": "231",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 6,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 39
+          },
+          "text": "as questions to a chat bot."
+        },
+        {
+          "id": "232",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 989
+          },
+          "text": "Dialogue tuning is expected to be"
+        },
+        {
+          "id": "233",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 990
+          },
+          "text": "in the context of a longer back and forth conversation,"
+        },
+        {
+          "id": "234",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 659
+          },
+          "text": "and typically works better with natural question-like"
+        },
+        {
+          "id": "235",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 659
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 168
+          },
+          "text": "phrasings."
+        },
+        {
+          "id": "236",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 169
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 628
+          },
+          "text": "Chain of thought reasoning is the observation"
+        },
+        {
+          "id": "237",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 629
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 28
+          },
+          "text": "that models are better at getting the right answer when"
+        },
+        {
+          "id": "238",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 29
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 26,
+            "milliseconds": 158
+          },
+          "text": "they first output text that explains"
+        },
+        {
+          "id": "239",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 26,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 28,
+            "milliseconds": 319
+          },
+          "text": "the reason for the answer."
+        }
+      ],
+      "source": [
+        "Dialogue-tuned models are a special case",
+        "of instruction tuned where requests are typically framed",
+        "as questions to a chat bot.",
+        "Dialogue tuning is expected to be",
+        "in the context of a longer back and forth conversation,",
+        "and typically works better with natural question-like",
+        "phrasings.",
+        "Chain of thought reasoning is the observation",
+        "that models are better at getting the right answer when",
+        "they first output text that explains",
+        "the reason for the answer."
+      ],
+      "result": [
+        "对话调优模型是一种特殊情况",
+        "指令调优通常是将请求构建成",
+        "与聊天机器人的问题。",
+        "对话调优预计会在",
+        "较长的来回对话中发挥作用，",
+        "通常更适合自然的类似问题的表述。",
+        "",
+        "思维链推理（Chain of thought reasoning）是指观察到到的一种现象：",
+        "如果让模型先解释答案的原因，",
+        "更容易得出正确答案。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "240",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 28,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 899
+          },
+          "text": "Let's look at the question."
+        },
+        {
+          "id": "241",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 31,
+            "milliseconds": 849
+          },
+          "text": "Roger has five tennis balls."
+        },
+        {
+          "id": "242",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 31,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 34,
+            "milliseconds": 429
+          },
+          "text": "He buys two more cans of tennis balls."
+        },
+        {
+          "id": "243",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 34,
+            "milliseconds": 429
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 36,
+            "milliseconds": 679
+          },
+          "text": "Each can has three tennis balls."
+        },
+        {
+          "id": "244",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 36,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 629
+          },
+          "text": "How many tennis balls does he have now?"
+        },
+        {
+          "id": "245",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 629
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 42,
+            "milliseconds": 869
+          },
+          "text": "This question is posed initially with no response."
+        },
+        {
+          "id": "246",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 42,
+            "milliseconds": 870
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 46,
+            "milliseconds": 360
+          },
+          "text": "The model is less likely to get the correct answer directly."
+        },
+        {
+          "id": "247",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 46,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 49,
+            "milliseconds": 210
+          },
+          "text": "However, by the time the second question is asked,"
+        },
+        {
+          "id": "248",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 49,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 879
+          },
+          "text": "the output is more likely to end with the correct answer."
+        },
+        {
+          "id": "249",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 57,
+            "milliseconds": 88
+          },
+          "text": "A model that can do everything has practical limitations."
+        }
+      ],
+      "source": [
+        "Let's look at the question.",
+        "Roger has five tennis balls.",
+        "He buys two more cans of tennis balls.",
+        "Each can has three tennis balls.",
+        "How many tennis balls does he have now?",
+        "This question is posed initially with no response.",
+        "The model is less likely to get the correct answer directly.",
+        "However, by the time the second question is asked,",
+        "the output is more likely to end with the correct answer.",
+        "A model that can do everything has practical limitations."
+      ],
+      "result": [
+        "我们来看这个问题。",
+        "罗杰有五个网球。",
+        "他又买了两罐网球。",
+        "每罐有三个网球。",
+        "现在他有多少个网球？",
+        "这个问题一开始没有回答。",
+        "模型直接得出正确答案的可能性较小。",
+        "但到了第二个问题时，",
+        "输出更有可能得出正确答案。",
+        "一个能做所有事的模型在实际应用中是有局限性的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "250",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 57,
+            "milliseconds": 90
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 1,
+            "milliseconds": 359
+          },
+          "text": "Task-specific tuning can make LLMs more reliable."
+        },
+        {
+          "id": "251",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 1,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 259
+          },
+          "text": "Vertex AI provides task-specific foundation models."
+        },
+        {
+          "id": "252",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 729
+          },
+          "text": "Let's say you have a use case where"
+        },
+        {
+          "id": "253",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 730
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 8,
+            "milliseconds": 889
+          },
+          "text": "you need to gather sentiments, or how"
+        },
+        {
+          "id": "254",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 8,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 11,
+            "milliseconds": 829
+          },
+          "text": "your customers are feeling about your product or service."
+        },
+        {
+          "id": "255",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 11,
+            "milliseconds": 830
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 929
+          },
+          "text": "You can use the classification task"
+        },
+        {
+          "id": "256",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 929
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 38
+          },
+          "text": "sentiment analysis task model."
+        },
+        {
+          "id": "257",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 18,
+            "milliseconds": 569
+          },
+          "text": "Same for vision tasks."
+        },
+        {
+          "id": "258",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 18,
+            "milliseconds": 570
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 21,
+            "milliseconds": 210
+          },
+          "text": "If you need to perform occupancy analytics,"
+        },
+        {
+          "id": "259",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 21,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 24,
+            "milliseconds": 690
+          },
+          "text": "there is a task-specific model for your use case."
+        }
+      ],
+      "source": [
+        "Task-specific tuning can make LLMs more reliable.",
+        "Vertex AI provides task-specific foundation models.",
+        "Let's say you have a use case where",
+        "you need to gather sentiments, or how",
+        "your customers are feeling about your product or service.",
+        "You can use the classification task",
+        "sentiment analysis task model.",
+        "Same for vision tasks.",
+        "If you need to perform occupancy analytics,",
+        "there is a task-specific model for your use case."
+      ],
+      "result": [
+        "针对特定任务的调优可以使LLMs更可靠。",
+        "Vertex AI提供针对特定任务的基础模型。",
+        "假设你有一个用例，",
+        "你需要收集情绪，或者了解",
+        "你的客户对你的产品或服务的感受。",
+        "你可以使用分类任务",
+        "情感分析任务模型。",
+        "对于视觉任务也是一样。",
+        "如果你需要进行占用率分析",
+        "那么有一个特定于你用例的任务模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "260",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 24,
+            "milliseconds": 690
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 27,
+            "milliseconds": 960
+          },
+          "text": "Tuning a model enables you to customize the model response"
+        },
+        {
+          "id": "261",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 27,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 30,
+            "milliseconds": 210
+          },
+          "text": "based on examples of the task that you"
+        },
+        {
+          "id": "262",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 30,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 32,
+            "milliseconds": 109
+          },
+          "text": "want the model to perform."
+        },
+        {
+          "id": "263",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 32,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 469
+          },
+          "text": "It is essentially the process of adapting a model"
+        },
+        {
+          "id": "264",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 470
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 37,
+            "milliseconds": 229
+          },
+          "text": "to a new domain, or set of custom use cases,"
+        },
+        {
+          "id": "265",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 37,
+            "milliseconds": 230
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 40,
+            "milliseconds": 239
+          },
+          "text": "by training the model on new data."
+        },
+        {
+          "id": "266",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 40,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 449
+          },
+          "text": "For example, we may collect training data"
+        },
+        {
+          "id": "267",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 450
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 45,
+            "milliseconds": 990
+          },
+          "text": "and tune the model specifically for the legal or medical"
+        },
+        {
+          "id": "268",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 45,
+            "milliseconds": 990
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 509
+          },
+          "text": "domain."
+        },
+        {
+          "id": "269",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 509
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 839
+          },
+          "text": "You can also further tune the model by fine tuning"
+        },
+        {
+          "id": "270",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 52,
+            "milliseconds": 549
+          },
+          "text": "where you bring your own data set"
+        },
+        {
+          "id": "271",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 52,
+            "milliseconds": 549
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 659
+          },
+          "text": "and retrain the model by tuning every weight in the LLM."
+        }
+      ],
+      "source": [
+        "Tuning a model enables you to customize the model response",
+        "based on examples of the task that you",
+        "want the model to perform.",
+        "It is essentially the process of adapting a model",
+        "to a new domain, or set of custom use cases,",
+        "by training the model on new data.",
+        "For example, we may collect training data",
+        "and tune the model specifically for the legal or medical",
+        "domain.",
+        "You can also further tune the model by fine tuning",
+        "where you bring your own data set",
+        "and retrain the model by tuning every weight in the LLM."
+      ],
+      "result": [
+        "调优一个模型可以让你根据\\N你希望模型执行的任务的示例来定制模型的响应。",
+        "",
+        "",
+        "本质上，它是通过在新数据上训练模型，",
+        "将模型适应到新的领域，",
+        "或一套自定义的用例集合的过程。",
+        "例如，我们可以收集训练数据",
+        "并针对法律或医学领域专门调整模型。",
+        "",
+        "你还可以通过微调进一步调整模型",
+        "在这里你可以用自己的数据集",
+        "并通过调整LLM中的每个权重来重新训练模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "272",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 659
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 59,
+            "milliseconds": 328
+          },
+          "text": "This requires a big training job and hosting"
+        },
+        {
+          "id": "273",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 59,
+            "milliseconds": 330
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 1,
+            "milliseconds": 600
+          },
+          "text": "your own fine-tuned model."
+        },
+        {
+          "id": "274",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 1,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 4,
+            "milliseconds": 389
+          },
+          "text": "Here's an example of a medical foundation model trained"
+        },
+        {
+          "id": "275",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 4,
+            "milliseconds": 389
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 5,
+            "milliseconds": 798
+          },
+          "text": "on health care data."
+        },
+        {
+          "id": "276",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 5,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 9,
+            "milliseconds": 279
+          },
+          "text": "The tasks include question answering, image analysis,"
+        },
+        {
+          "id": "277",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 9,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 12,
+            "milliseconds": 749
+          },
+          "text": "finding similar patients, and so forth."
+        },
+        {
+          "id": "278",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 12,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 17,
+            "milliseconds": 509
+          },
+          "text": "Fine tuning is expensive and not realistic in many cases."
+        },
+        {
+          "id": "279",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 17,
+            "milliseconds": 509
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 21,
+            "milliseconds": 528
+          },
+          "text": "So are there more efficient methods of tuning?"
+        },
+        {
+          "id": "280",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 21,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 22,
+            "milliseconds": 339
+          },
+          "text": "Yes."
+        },
+        {
+          "id": "281",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 22,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 25,
+            "milliseconds": 759
+          },
+          "text": "Parameter-efficient tuning methods, or PETM,"
+        },
+        {
+          "id": "282",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 25,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 27,
+            "milliseconds": 888
+          },
+          "text": "are methods for tuning a large language"
+        },
+        {
+          "id": "283",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 27,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 908
+          },
+          "text": "model on your own custom data without duplicating the model."
+        }
+      ],
+      "source": [
+        "This requires a big training job and hosting",
+        "your own fine-tuned model.",
+        "Here's an example of a medical foundation model trained",
+        "on health care data.",
+        "The tasks include question answering, image analysis,",
+        "finding similar patients, and so forth.",
+        "Fine tuning is expensive and not realistic in many cases.",
+        "So are there more efficient methods of tuning?",
+        "Yes.",
+        "Parameter-efficient tuning methods, or PETM,",
+        "are methods for tuning a large language",
+        "model on your own custom data without duplicating the model."
+      ],
+      "result": [
+        "这需要大规模的训练工作，",
+        "以及托管你自己微调过的模型。",
+        "比如，这里有一个由医疗数据训练出的医疗基础模型，",
+        "",
+        "其任务包括问答，图像分析，寻找相似患者等等。",
+        "",
+        "但是，微调的费用高昂，在许多情况下并不现实。",
+        "那么，有没有更高效的调整方法呢？",
+        "是的。",
+        "参数效率调整方法，或称为PETM，",
+        "是在不复制模型的情况下调整大型语言模型",
+        "的方法，而无需复制模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "284",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 909
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 34,
+            "milliseconds": 609
+          },
+          "text": "The base model itself is not altered."
+        },
+        {
+          "id": "285",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 34,
+            "milliseconds": 610
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 799
+          },
+          "text": "Instead, a small number of add-on layers"
+        },
+        {
+          "id": "286",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 41,
+            "milliseconds": 529
+          },
+          "text": "are tuned, which can be swapped in and out at inference time."
+        },
+        {
+          "id": "287",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 41,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 428
+          },
+          "text": "Generative AI Studio lets you quickly explore and customize"
+        },
+        {
+          "id": "288",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 429
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 47,
+            "milliseconds": 498
+          },
+          "text": "generative AI models that you can"
+        },
+        {
+          "id": "289",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 47,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 950
+          },
+          "text": "leverage in your applications on Google Cloud."
+        },
+        {
+          "id": "290",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 950
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 309
+          },
+          "text": "Generative AI Studio helps developers create and deploy"
+        },
+        {
+          "id": "291",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 309
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 56,
+            "milliseconds": 588
+          },
+          "text": "generative AI models by providing"
+        },
+        {
+          "id": "292",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 56,
+            "milliseconds": 590
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 58,
+            "milliseconds": 479
+          },
+          "text": "a variety of tools and resources that"
+        },
+        {
+          "id": "293",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 58,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 0,
+            "milliseconds": 100
+          },
+          "text": "make it easy to get started."
+        }
+      ],
+      "source": [
+        "The base model itself is not altered.",
+        "Instead, a small number of add-on layers",
+        "are tuned, which can be swapped in and out at inference time.",
+        "Generative AI Studio lets you quickly explore and customize",
+        "generative AI models that you can",
+        "leverage in your applications on Google Cloud.",
+        "Generative AI Studio helps developers create and deploy",
+        "generative AI models by providing",
+        "a variety of tools and resources that",
+        "make it easy to get started."
+      ],
+      "result": [
+        "基础模型本身并没有改变，",
+        "只是调整了少数几层附加层，",
+        "这些层可以在推理时交换。",
+        "生成式AI工作室让你能快速探索和定制",
+        "",
+        "可在Google Cloud上用于你的应用的生成式AI模型。",
+        "生成式AI工作室帮助开发者通过提供\\N各种工具和资源创建和部署生成式AI模型，",
+        "",
+        "",
+        "使得入门变得简单。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "294",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 0,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 459
+          },
+          "text": "For example, there's a library of pre-trained models,"
+        },
+        {
+          "id": "295",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 7,
+            "milliseconds": 359
+          },
+          "text": "a tool for fine tuning models, a tool for deploying models"
+        },
+        {
+          "id": "296",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 7,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 149
+          },
+          "text": "to production, and a community forum for developers"
+        },
+        {
+          "id": "297",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 149
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 13,
+            "milliseconds": 278
+          },
+          "text": "to share ideas and collaborate."
+        },
+        {
+          "id": "298",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 13,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 15,
+            "milliseconds": 589
+          },
+          "text": "Generative AI App Builder lets you"
+        },
+        {
+          "id": "299",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 15,
+            "milliseconds": 590
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 19,
+            "milliseconds": 609
+          },
+          "text": "create Gen AI apps without having to write any code."
+        },
+        {
+          "id": "300",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 19,
+            "milliseconds": 610
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 22,
+            "milliseconds": 699
+          },
+          "text": "Gen AI App Builder has a drag-and-drop interface"
+        },
+        {
+          "id": "301",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 22,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 24,
+            "milliseconds": 799
+          },
+          "text": "that makes it easy to design and build"
+        },
+        {
+          "id": "302",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 24,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 28,
+            "milliseconds": 669
+          },
+          "text": "apps, a visual editor that makes it easy to create and edit"
+        },
+        {
+          "id": "303",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 28,
+            "milliseconds": 669
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 389
+          },
+          "text": "app content, a built-in search engine that allows users"
+        },
+        {
+          "id": "304",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 389
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 34,
+            "milliseconds": 759
+          },
+          "text": "to search for information within the app,"
+        },
+        {
+          "id": "305",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 34,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 888
+          },
+          "text": "and a conversational AI engine that"
+        },
+        {
+          "id": "306",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 879
+          },
+          "text": "allows users to interact with the app using natural language."
+        }
+      ],
+      "source": [
+        "For example, there's a library of pre-trained models,",
+        "a tool for fine tuning models, a tool for deploying models",
+        "to production, and a community forum for developers",
+        "to share ideas and collaborate.",
+        "Generative AI App Builder lets you",
+        "create Gen AI apps without having to write any code.",
+        "Gen AI App Builder has a drag-and-drop interface",
+        "that makes it easy to design and build",
+        "apps, a visual editor that makes it easy to create and edit",
+        "app content, a built-in search engine that allows users",
+        "to search for information within the app,",
+        "and a conversational AI engine that",
+        "allows users to interact with the app using natural language."
+      ],
+      "result": [
+        "例如，它提供了预训练模型库、",
+        "用于精细调整模型的工具、用于将模型部署到生产环境的工具，",
+        "它提供了预训练模型库、以及供开发者分享想法和合作的社区论坛。",
+        "",
+        "生成式AI应用构建器让你",
+        "无需编写任何代码就能创建Gen AI应用。",
+        "Gen AI应用构建器具有拖放界面",
+        "使设计和构建应用变得简单，",
+        "一个可视化编辑器，方便创建和编辑",
+        "应用内容，一个内置搜索引擎，允许用户",
+        "在应用内搜索信息，",
+        "以及一个会话式AI引擎，",
+        "允许用户使用自然语言与应用进行交互。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "307",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 44,
+            "milliseconds": 88
+          },
+          "text": "You can create your own chat bots, digital assistants,"
+        },
+        {
+          "id": "308",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 44,
+            "milliseconds": 90
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 48,
+            "milliseconds": 259
+          },
+          "text": "custom search engines, knowledge bases, training applications,"
+        },
+        {
+          "id": "309",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 48,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 50,
+            "milliseconds": 29
+          },
+          "text": "and more."
+        },
+        {
+          "id": "310",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 50,
+            "milliseconds": 29
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 52,
+            "milliseconds": 939
+          },
+          "text": "PaLM API lets you test and experiment"
+        },
+        {
+          "id": "311",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 52,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 56,
+            "milliseconds": 999
+          },
+          "text": "with Google's large language models and Gen AI tools."
+        },
+        {
+          "id": "312",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 59,
+            "milliseconds": 909
+          },
+          "text": "To make prototyping quick and more accessible,"
+        },
+        {
+          "id": "313",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 59,
+            "milliseconds": 909
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 3,
+            "milliseconds": 748
+          },
+          "text": "developers can integrate PaLM API with Maker Suite"
+        },
+        {
+          "id": "314",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 3,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 200
+          },
+          "text": "and use it to access the API using a graphical user"
+        },
+        {
+          "id": "315",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 8,
+            "milliseconds": 339
+          },
+          "text": "interface."
+        },
+        {
+          "id": "316",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 8,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 649
+          },
+          "text": "The suite includes a number of different tools"
+        },
+        {
+          "id": "317",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 649
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 14,
+            "milliseconds": 68
+          },
+          "text": "such as a model-training tool, a model-deployment tool,"
+        },
+        {
+          "id": "318",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 14,
+            "milliseconds": 70
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 16,
+            "milliseconds": 480
+          },
+          "text": "and a model-monitoring tool."
+        }
+      ],
+      "source": [
+        "You can create your own chat bots, digital assistants,",
+        "custom search engines, knowledge bases, training applications,",
+        "and more.",
+        "PaLM API lets you test and experiment",
+        "with Google's large language models and Gen AI tools.",
+        "To make prototyping quick and more accessible,",
+        "developers can integrate PaLM API with Maker Suite",
+        "and use it to access the API using a graphical user",
+        "interface.",
+        "The suite includes a number of different tools",
+        "such as a model-training tool, a model-deployment tool,",
+        "and a model-monitoring tool."
+      ],
+      "result": [
+        "你可以创建自己的聊天机器人、数字助手、",
+        "定制搜索引擎、知识库、培训应用、",
+        "等等。",
+        "PaLM API 让你可以测试和尝试",
+        "谷歌的大型语言模型和 Gen AI 工具。",
+        "为了使原型设计更快速、更易于使用，",
+        "开发者可以将 PaLM API 与 Maker Suite 集成",
+        "并通过图形用户界面访问 API。",
+        "",
+        "该套件包括许多不同的工具，",
+        "如模型训练工具、模型部署工具、",
+        "以及模型监控工具。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "319",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 16,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 529
+          },
+          "text": "The model-training tool helps developers train ML models"
+        },
+        {
+          "id": "320",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 22,
+            "milliseconds": 29
+          },
+          "text": "on their data using different algorithms."
+        },
+        {
+          "id": "321",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 22,
+            "milliseconds": 29
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 25,
+            "milliseconds": 589
+          },
+          "text": "The model deployment tool helps developers deploy ML models"
+        },
+        {
+          "id": "322",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 25,
+            "milliseconds": 590
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 740
+          },
+          "text": "to production with a number of different deployment options."
+        },
+        {
+          "id": "323",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 31,
+            "milliseconds": 929
+          },
+          "text": "And the model-monitoring tool helps"
+        },
+        {
+          "id": "324",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 31,
+            "milliseconds": 929
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 35,
+            "milliseconds": 199
+          },
+          "text": "developers monitor the performance of their ML models"
+        },
+        {
+          "id": "325",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 35,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 37,
+            "milliseconds": 749
+          },
+          "text": "in production using a dashboard and a number"
+        },
+        {
+          "id": "326",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 37,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 40,
+            "milliseconds": 480
+          },
+          "text": "of different metrics."
+        },
+        {
+          "id": "327",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 40,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 41,
+            "milliseconds": 720
+          },
+          "text": "That's all for now."
+        },
+        {
+          "id": "328",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 41,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 44,
+            "milliseconds": 919
+          },
+          "text": "Thanks for watching this course, Introduction to Large Language"
+        },
+        {
+          "id": "329",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 44,
+            "milliseconds": 919
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 46,
+            "milliseconds": 469
+          },
+          "text": "Models."
+        }
+      ],
+      "source": [
+        "The model-training tool helps developers train ML models",
+        "on their data using different algorithms.",
+        "The model deployment tool helps developers deploy ML models",
+        "to production with a number of different deployment options.",
+        "And the model-monitoring tool helps",
+        "developers monitor the performance of their ML models",
+        "in production using a dashboard and a number",
+        "of different metrics.",
+        "That's all for now.",
+        "Thanks for watching this course, Introduction to Large Language",
+        "Models."
+      ],
+      "result": [
+        "模型训练工具帮助开发者用不同算法训练机器学习模型在他们的数据上。",
+        "",
+        "模型部署工具帮助开发者用多种部署选项",
+        "将机器学习模型部署到生产环境。",
+        "模型监控工具则帮助",
+        "开发者通过仪表盘和多种指标",
+        "监控生产环境中机器学习模型的性能。",
+        "",
+        "目前就是这些。",
+        "感谢收看本课程，大型语言模型简介。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Introduction to Large Language Models.srt",
+  "ouputBasePath": "input/Introduction to Large Language Models",
+  "totalCost": 0.52287,
+  "translationPath": "input/Introduction to Large Language Models/translation.json"
+}

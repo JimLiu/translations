@@ -1,0 +1,6051 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 300
+          },
+          "text": "Hi, everyone."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 633
+          },
+          "text": "I'm Takumi, machine Learning engineer at Google Advanced Solutions Lab"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 631
+          },
+          "text": "This is the second half of the image captioning session."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 98
+          },
+          "text": "If you haven't seen the first half, I recommend checking it out first."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 15,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 733
+          },
+          "text": "And in this video, I'm going to walk you through the entire code notebook"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 32
+          },
+          "text": "to help you understand how to create a very simple generative model."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 332
+          },
+          "text": "All the setup information"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 932
+          },
+          "text": "is written in the ASL GitHub repository."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 964
+          },
+          "text": "You can find the link in the slide"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 566
+          },
+          "text": "or in the description below this video."
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 832
+          },
+          "text": "After setting up the Vertex"
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 65
+          },
+          "text": "AI I work bench environment and clone in the repo."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 566
+          },
+          "text": "Following the instruction you can find the image captioning notebook"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 432
+          },
+          "text": "under asl-ml-immersion notebooks"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 299
+          },
+          "text": "and multimodal"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 932
+          },
+          "text": "solutions."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 199
+          },
+          "text": "Here you go."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 499
+          },
+          "text": "You can find image captioning dot i Python notebook."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 465
+          },
+          "text": "So please open this file"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 499
+          },
+          "text": "and here you can see"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 233
+          },
+          "text": "all the process and instructions to build and use"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 733
+          },
+          "text": "an image captioning model which we discussed in the previous video."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "text": "Let's take a look from the first cell."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 699
+          },
+          "text": "In the first cell."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 632
+          },
+          "text": "Of course we install all the dependencies,"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 965
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 432
+          },
+          "text": "including tensorflow keras"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 431
+          },
+          "text": "and here we can find TensorFlow keras layers"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 132
+          },
+          "text": "and installing order layers we need for image captioning model"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 65
+          },
+          "text": "including GRU, add layer, attention layer"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 42,
+            "milliseconds": 100
+          },
+          "text": "or dense layer embedding layer now"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 42,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 98
+          },
+          "text": "layer normalization layer."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 48,
+            "milliseconds": 532
+          },
+          "text": "So let's run one by one"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 498
+          },
+          "text": "and in the next cell"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 733
+          },
+          "text": "we define"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 265
+          },
+          "text": "some hyper parameters, including vocabulary size,"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 365
+          },
+          "text": "which means how many vocabularies we're going to use for image captioning."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 432
+          },
+          "text": "Or you can find a feature extractor, which means"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 365
+          },
+          "text": "what kind of model we want to use in encoder model."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 733
+          },
+          "text": "So in this case, as we discussed in the previous video, we are specifying"
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 366
+          },
+          "text": "inception resnet v2, which is very classical CNN based model"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 866
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 99
+          },
+          "text": "and all the definitions below"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 998
+          },
+          "text": "image, height, width channel and the feature shape is coming from"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 799
+          },
+          "text": "the definition of the inception, resnet v2 and especially this feature shape."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 32
+          },
+          "text": "8, 8, 1536 is the shape"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 564
+          },
+          "text": "this inception resnet v2 produce."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 132
+          },
+          "text": "So let's define"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 631
+          },
+          "text": "in this way"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 200
+          },
+          "text": "cool."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 666
+          },
+          "text": "So in the next cell we're going to load the data"
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 100
+          },
+          "text": "0 from tfds, which means TensorFlow datasets."
+        }
+      ],
+      "source": [
+        "Hi, everyone.",
+        "I'm Takumi, machine Learning engineer at Google Advanced Solutions Lab",
+        "This is the second half of the image captioning session.",
+        "If you haven't seen the first half, I recommend checking it out first.",
+        "And in this video, I'm going to walk you through the entire code notebook",
+        "to help you understand how to create a very simple generative model.",
+        "All the setup information",
+        "is written in the ASL GitHub repository.",
+        "You can find the link in the slide",
+        "or in the description below this video.",
+        "After setting up the Vertex",
+        "AI I work bench environment and clone in the repo.",
+        "Following the instruction you can find the image captioning notebook",
+        "under asl-ml-immersion notebooks",
+        "and multimodal",
+        "solutions.",
+        "Here you go.",
+        "You can find image captioning dot i Python notebook.",
+        "So please open this file",
+        "and here you can see",
+        "all the process and instructions to build and use",
+        "an image captioning model which we discussed in the previous video.",
+        "Let's take a look from the first cell.",
+        "In the first cell.",
+        "Of course we install all the dependencies,",
+        "including tensorflow keras",
+        "and here we can find TensorFlow keras layers",
+        "and installing order layers we need for image captioning model",
+        "including GRU, add layer, attention layer",
+        "or dense layer embedding layer now",
+        "layer normalization layer.",
+        "So let's run one by one",
+        "and in the next cell",
+        "we define",
+        "some hyper parameters, including vocabulary size,",
+        "which means how many vocabularies we're going to use for image captioning.",
+        "Or you can find a feature extractor, which means",
+        "what kind of model we want to use in encoder model.",
+        "So in this case, as we discussed in the previous video, we are specifying",
+        "inception resnet v2, which is very classical CNN based model",
+        "and all the definitions below",
+        "image, height, width channel and the feature shape is coming from",
+        "the definition of the inception, resnet v2 and especially this feature shape.",
+        "8, 8, 1536 is the shape",
+        "this inception resnet v2 produce.",
+        "So let's define",
+        "in this way",
+        "cool.",
+        "So in the next cell we're going to load the data",
+        "0 from tfds, which means TensorFlow datasets."
+      ],
+      "result": [
+        "大家好，我是\\NGoogle Advanced Solutions Lab\\N的机器学习工程师，Takumi。",
+        "",
+        "这是图像标注课程的后半部分。",
+        "如果你还没看过前半部分，我建议你先看一下。",
+        "在这个视频中，我将带你详细介绍整个代码Notebook，帮助你理解如何创建一个非常简单的生成模型。",
+        "",
+        "所有的设置信息都写在ASL的GitHub Repo里。",
+        "",
+        "你可以在幻灯片中或者这个视频的描述下面找到链接。",
+        "",
+        "设置好Vertex AI工作台环境并clone Repo后，",
+        "",
+        "按照说明你可以找到图像标注Notebook，它位于\"asl-ml-immersion/notebooks/multi_modal/solutions\"下面。",
+        "",
+        "",
+        "",
+        "看，这里就是图像标注的.ipynb文件。",
+        "",
+        "所以请打开这个文件，在这里你可以看到所有的流程和指示来构建和使用图像标注模型，这些我们在上一个视频中已经讨论过了。",
+        "",
+        "",
+        "",
+        "让我们从第一个单元格开始看起。",
+        "在第一个单元格里，我们自然要安装所有的依赖，包括tensorflow和keras。",
+        "",
+        "",
+        "在这里，我们可以找到tensorflow.keras.layers，",
+        "并安装我们需要的所有图像标注模型的layers，",
+        "包括GRU、Add层、Attention层、Dense层、Embedding层和LayerNormalization层。",
+        "",
+        "",
+        "让我们逐一运行。",
+        "在下一个单元格里，我们定义了一些超参数，包括词汇表大小，",
+        "",
+        "",
+        "这意味着我们将使用多少个词汇来进行图像标注。",
+        "或者你可以找到一个特征提取器，这意味着我们想要在编码器模型中使用什么样的模型。",
+        "",
+        "所以在这种情况下，正如我们在之前的视频中讨论的，我们指定的是InceptionResNetV2，这是一个非常经典的基于CNN的模型。",
+        "",
+        "所有下面的定义，包括图像、高度、宽度通道和特征形状都来自InceptionResNetV2的定义，特别是这个特征形状。",
+        "",
+        "",
+        "8, 8, 1536就是InceptionResNetV2输出的形状。",
+        "",
+        "那我们就按照这种方式定义吧。",
+        "",
+        "酷，",
+        "在下一个单元格中，我们将从tfds加载数据，也就是TensorFlow数据集。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "sources": [
+            "Hi, everyone.",
+            "I'm Takumi, machine Learning engineer at Google Advanced Solutions Lab"
+          ],
+          "translated": "大家好，我是谷歌高级解决方案实验室的机器学习工程师Takumi。"
+        },
+        {
+          "sources": [
+            "This is the second half of the image captioning session.",
+            "If you haven't seen the first half, I recommend checking it out first."
+          ],
+          "translated": "这是图像标注课程的后半部分。如果你还没看过前半部分，我建议你先看一下。"
+        },
+        {
+          "sources": [
+            "And in this video, I'm going to walk you through the entire code notebook",
+            "to help you understand how to create a very simple generative model."
+          ],
+          "translated": "在这个视频中，我将带领大家浏览整个代码Notebook，帮助你了解如何创建一个非常简单的生成模型。"
+        },
+        {
+          "sources": [
+            "All the setup information",
+            "is written in the ASL GitHub repository.",
+            "You can find the link in the slide",
+            "or in the description below this video."
+          ],
+          "translated": "所有的设置信息都写在ASL GitHub Repo里。你可以在幻灯片中找到链接，或者在这个视频下面的描述中找到。"
+        },
+        {
+          "sources": [
+            "After setting up the Vertex",
+            "AI I work bench environment and clone in the repo.",
+            "Following the instruction you can find the image captioning notebook",
+            "under asl-ml-immersion notebooks",
+            "and multimodal",
+            "solutions."
+          ],
+          "translated": "在设置了Vertex AI工作台环境并克隆仓库之后，按照说明，你可以在asl-ml-immersionNotebook和多模态解决方案下找到图像标注Notebook。"
+        },
+        {
+          "sources": [
+            "Here you go.",
+            "You can find image captioning dot i Python notebook.",
+            "So please open this file",
+            "and here you can see",
+            "all the process and instructions to build and use",
+            "an image captioning model which we discussed in the previous video."
+          ],
+          "translated": "就在这里。你可以找到图像标注的iPythonNotebook。请打开这个文件，在这里你可以看到我们在之前的视频中讨论过的构建和使用图像标注模型的所有过程和说明。"
+        },
+        {
+          "sources": [
+            "Let's take a look from the first cell.",
+            "In the first cell.",
+            "Of course we install all the dependencies,",
+            "including tensorflow keras",
+            "and here we can find TensorFlow keras layers",
+            "and installing order layers we need for image captioning model",
+            "including GRU, add layer, attention layer",
+            "or dense layer embedding layer now",
+            "layer normalization layer."
+          ],
+          "translated": "让我们从第一个单元格开始看起。在第一个单元格中，我们当然要安装所有依赖项，包括tensorflow keras，这里我们可以找到TensorFlow keras层，以及为图像标注模型安装所需的其他层，包括GRU、添加层、注意力层、密集层嵌入层和层归一化层。"
+        },
+        {
+          "sources": [
+            "So let's run one by one",
+            "and in the next cell",
+            "we define",
+            "some hyper parameters, including vocabulary size,",
+            "which means how many vocabularies we're going to use for image captioning.",
+            "Or you can find a feature extractor, which means",
+            "what kind of model we want to use in encoder model.",
+            "So in this case, as we discussed in the previous video, we are specifying",
+            "inception resnet v2, which is very classical CNN based model",
+            "and all the definitions below",
+            "image, height, width channel and the feature shape is coming from",
+            "the definition of the inception, resnet v2 and especially this feature shape.",
+            "8, 8, 1536 is the shape",
+            "this inception resnet v2 produce.",
+            "So let's define",
+            "in this way",
+            "cool."
+          ],
+          "translated": "那么让我们一个接一个地运行，在下一个单元格中，我们定义了一些超参数，包括词汇表大小，这意味着我们将使用多少词汇进行图像标注。或者你可以找到一个特征提取器，这意味着我们想在编码器模型中使用什么样的模型。所以在这种情况下，正如我们在之前的视频中讨论的，我们指定的是inception resnet v2，这是一个非常经典的基于CNN的模型，所有下面的定义，包括图像、高度、宽度通道和特征形状都来自inception resnet v2的定义，特别是这个特征形状。8, 8, 1536是这个inception resnet v2产生的形状。那么让我们以这种方式定义，很酷。"
+        },
+        {
+          "sources": [
+            "So in the next cell we're going to load the data",
+            "0 from tfds, which means TensorFlow datasets."
+          ],
+          "translated": "所以下一个单元格我们将从tfds加载数据，这意味着TensorFlow数据集。"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 165
+          },
+          "text": "So TensorFlow datasets host this"
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 198
+          },
+          "text": "caption data set in this name “coco captions”"
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 131
+          },
+          "text": "so we can specify this name and the loading data."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 599
+          },
+          "text": "And after loading data"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 631
+          },
+          "text": "we can pass some preprocessing function,"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 18,
+            "milliseconds": 165
+          },
+          "text": "get image level which is defined here, get the image level,"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 18,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 264
+          },
+          "text": "and here we can find some preprocessing, very basic preprocessing,"
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 131
+          },
+          "text": "including changing the size of the image"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 565
+          },
+          "text": "or the change in the scale of the image and returning image tensor"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 566
+          },
+          "text": "and the caption at the same time."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 666
+          },
+          "text": "So let's run in the same way"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 966
+          },
+          "text": "and let's take a look at"
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 44,
+            "milliseconds": 66
+          },
+          "text": "some of the example."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 99
+          },
+          "text": "Here we can see, for example,"
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 699
+          },
+          "text": "a random example"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 631
+          },
+          "text": "and each pair of image and text makes sense to me."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 966
+          },
+          "text": "So wide plate with a toasted sandwich,"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 32
+          },
+          "text": "chips and fries for this image."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 98
+          },
+          "text": "And another caption for another image."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 232
+          },
+          "text": "And we have a lot of image."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 532
+          },
+          "text": "So if you want to see another example, you can run this cell again"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 399
+          },
+          "text": "and you will see another example."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 265
+          },
+          "text": "So let's move on."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 332
+          },
+          "text": "So since we have text data,"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 600
+          },
+          "text": "we need to preprocess that text data in kind of standard way."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 31,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 899
+          },
+          "text": "So in this cell we add start"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 198
+          },
+          "text": "and end special tokens, which we discussed in the slide as well."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 699
+          },
+          "text": "So by adding this so we can handle this token as a kind of special sign, this"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 764
+          },
+          "text": "start talking means the special token,"
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 133
+          },
+          "text": "that means the beginning of the sentence."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 33
+          },
+          "text": "And in the same way, the end token means the, the end of the sentence."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 333
+          },
+          "text": "So we can add these things"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 333
+          },
+          "text": "in the same way trainds.map and pass this function."
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 699
+          },
+          "text": "They let's move on."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 965
+          },
+          "text": "And this is a very important preprocessing."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 566
+          },
+          "text": "So now we have text data, caption data."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 432
+          },
+          "text": "So we're going to create tokenizer."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 98
+          },
+          "text": "So by creating tokenizer, we can tokenize word"
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 465
+          },
+          "text": "like start token or cat or dog"
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 599
+          },
+          "text": "to some index."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 38,
+            "milliseconds": 65
+          },
+          "text": "In TensorFlow, it is very easy."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 38,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 999
+          },
+          "text": "You can just use this text vectoralization module"
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 44,
+            "milliseconds": 832
+          },
+          "text": "and you can call"
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 632
+          },
+          "text": "by passing all the data or the caption data"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 399
+          },
+          "text": "to this text vectoralization layer"
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 52,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 532
+          },
+          "text": "so it takes some time around 5 minutes in my environments."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 899
+          },
+          "text": "So let's wait until it finishes."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 399
+          },
+          "text": "Now it's finished."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 232
+          },
+          "text": "Now let's try this tokenizer either"
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 11,
+            "milliseconds": 233
+          },
+          "text": "by passing some sample sentence,"
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 11,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 265
+          },
+          "text": "start token This is a sentence end token."
+        }
+      ],
+      "source": [
+        "So TensorFlow datasets host this",
+        "caption data set in this name “coco captions”",
+        "so we can specify this name and the loading data.",
+        "And after loading data",
+        "we can pass some preprocessing function,",
+        "get image level which is defined here, get the image level,",
+        "and here we can find some preprocessing, very basic preprocessing,",
+        "including changing the size of the image",
+        "or the change in the scale of the image and returning image tensor",
+        "and the caption at the same time.",
+        "So let's run in the same way",
+        "and let's take a look at",
+        "some of the example.",
+        "Here we can see, for example,",
+        "a random example",
+        "and each pair of image and text makes sense to me.",
+        "So wide plate with a toasted sandwich,",
+        "chips and fries for this image.",
+        "And another caption for another image.",
+        "And we have a lot of image.",
+        "So if you want to see another example, you can run this cell again",
+        "and you will see another example.",
+        "So let's move on.",
+        "So since we have text data,",
+        "we need to preprocess that text data in kind of standard way.",
+        "So in this cell we add start",
+        "and end special tokens, which we discussed in the slide as well.",
+        "So by adding this so we can handle this token as a kind of special sign, this",
+        "start talking means the special token,",
+        "that means the beginning of the sentence.",
+        "And in the same way, the end token means the, the end of the sentence.",
+        "So we can add these things",
+        "in the same way trainds.map and pass this function.",
+        "They let's move on.",
+        "And this is a very important preprocessing.",
+        "So now we have text data, caption data.",
+        "So we're going to create tokenizer.",
+        "So by creating tokenizer, we can tokenize word",
+        "like start token or cat or dog",
+        "to some index.",
+        "In TensorFlow, it is very easy.",
+        "You can just use this text vectoralization module",
+        "and you can call",
+        "by passing all the data or the caption data",
+        "to this text vectoralization layer",
+        "so it takes some time around 5 minutes in my environments.",
+        "So let's wait until it finishes.",
+        "Now it's finished.",
+        "Now let's try this tokenizer either",
+        "by passing some sample sentence,",
+        "start token This is a sentence end token."
+      ],
+      "result": [
+        "所以 TensorFlow 数据集以“coco_captions”这个名字托管这个标注数据集",
+        "",
+        "所以我们可以指定这个名字来加载数据。",
+        "加载数据后，我们可以传递一些预处理函数，",
+        "",
+        "比如获取图像级别，这在这里定义了，获取图像级别。",
+        "在这里我们可以找到一些非常基础的预处理，包括改变图像的大小或者图像的比例，并返回图像张量和文字说明同时。",
+        "",
+        "",
+        "",
+        "所以让我们按照相同的方式运行。",
+        "让我们看一些例子。",
+        "",
+        "这里我们可以看到，例如，一个随机的例子，每一对图像和文本对我来说都是有意义的。",
+        "",
+        "",
+        "例如，这个图像的标注是“一个装有烤三明治、薯片和炸薯条的宽盘子”，以及另一个图像的标注。",
+        "",
+        "",
+        "我们有很多图像。如果你想看另一个例子，你可以再运行这个单元格，你会看到另一个例子。",
+        "",
+        "",
+        "那么让我们继续。",
+        "由于我们有文本数据，我们需要以一种标准的方式预处理那些文本数据。",
+        "",
+        "在这个单元格里，我们添加了开始和结束的特殊标记，这也是我们在幻灯片里讨论过的。",
+        "",
+        "通过添加这些，我们可以把这个标记处理成一种特殊的符号，这个开始标记意味着句子的开始。",
+        "",
+        "",
+        "同样，结束标记意味着句子的结束。",
+        "我们可以用一个函数来添加开始标记和结束标记，并将这个函数传入trainds.map。",
+        "",
+        "让我们继续。",
+        "这是一个非常重要的预处理。",
+        "现在我们有了文本数据，标注数据。",
+        "所以我们要创建分词器。",
+        "通过创建分词器，我们可以将像开始标记、猫、狗这样的词进行分词到某个索引。",
+        "",
+        "",
+        "在 TensorFlow 中，这非常简单。",
+        "你可以只用这个TextVectorization模块，然后通过传递所有的数据或标注数据到这个TextVectorization层，",
+        "",
+        "",
+        "",
+        "这需要一些时间，在我的环境中大约需要5分钟。",
+        "让我们等待它完成。",
+        "现在已经完成。",
+        "现在，让我们尝试一下这个分词器，通过传递一些样本句子，“<start> This is a sentence <end>”。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "sources": [
+            "So TensorFlow datasets host this",
+            "caption data set in this name “coco captions”"
+          ],
+          "translated": "所以 TensorFlow 数据集以“coco captions”这个名字托管这个字幕数据集"
+        },
+        {
+          "sources": [
+            "so we can specify this name and the loading data.",
+            "And after loading data"
+          ],
+          "translated": "所以我们可以指定这个名字并加载数据。加载数据后"
+        },
+        {
+          "sources": [
+            "we can pass some preprocessing function,",
+            "get image level which is defined here, get the image level,"
+          ],
+          "translated": "我们可以传递一些预处理函数，获取这里定义的图像级别，获取图像级别，"
+        },
+        {
+          "sources": [
+            "and here we can find some preprocessing, very basic preprocessing,",
+            "including changing the size of the image",
+            "or the change in the scale of the image and returning image tensor",
+            "and the caption at the same time."
+          ],
+          "translated": "在这里我们可以找到一些预处理，非常基本的预处理，包括改变图像的大小或者改变图像的比例并返回图像张量和字幕。"
+        },
+        {
+          "sources": [
+            "So let's run in the same way",
+            "and let's take a look at",
+            "some of the example."
+          ],
+          "translated": "那么让我们以相同的方式运行，并看一下一些示例。"
+        },
+        {
+          "sources": [
+            "Here we can see, for example,",
+            "a random example",
+            "and each pair of image and text makes sense to me."
+          ],
+          "translated": "例如，在这里我们可以看到一个随机示例，每对图像和文本对我来说都是有意义的。"
+        },
+        {
+          "sources": [
+            "So wide plate with a toasted sandwich,",
+            "chips and fries for this image.",
+            "And another caption for another image."
+          ],
+          "translated": "所以这张图片是一个装有烤三明治、薯片和炸薯条的宽盘子。另一张图片的另一个字幕。"
+        },
+        {
+          "sources": [
+            "And we have a lot of image.",
+            "So if you want to see another example, you can run this cell again",
+            "and you will see another example."
+          ],
+          "translated": "我们有很多图片。所以如果你想看另一个例子，你可以再次运行这个单元格，你会看到另一个例子。"
+        },
+        {
+          "sources": [
+            "So let's move on.",
+            "So since we have text data,",
+            "we need to preprocess that text data in kind of standard way."
+          ],
+          "translated": "那么让我们继续。因为我们有文本数据，我们需要以某种标准方式预处理这些文本数据。"
+        },
+        {
+          "sources": [
+            "So in this cell we add start",
+            "and end special tokens, which we discussed in the slide as well."
+          ],
+          "translated": "所以在这个单元格中，我们添加了开始和结束特殊标记，这也是我们在幻灯片中讨论过的。"
+        },
+        {
+          "sources": [
+            "So by adding this so we can handle this token as a kind of special sign, this",
+            "start talking means the special token,",
+            "that means the beginning of the sentence.",
+            "And in the same way, the end token means the, the end of the sentence."
+          ],
+          "translated": "通过添加这个，我们可以把这个标记当作一种特殊符号来处理，这个开始标记意味着特殊标记，也就是句子的开头。同样地，结束标记意味着句子的结尾。"
+        },
+        {
+          "sources": [
+            "So we can add these things",
+            "in the same way trainds.map and pass this function."
+          ],
+          "translated": "所以我们可以以相同的方式添加这些东西，然后传递这个函数。"
+        },
+        {
+          "sources": [
+            "They let's move on.",
+            "And this is a very important preprocessing."
+          ],
+          "translated": "让我们继续。这是一个非常重要的预处理。"
+        },
+        {
+          "sources": [
+            "So now we have text data, caption data.",
+            "So we're going to create tokenizer."
+          ],
+          "translated": "现在我们有了文本数据、字幕数据。所以我们要创建分词器。"
+        },
+        {
+          "sources": [
+            "So by creating tokenizer, we can tokenize word",
+            "like start token or cat or dog",
+            "to some index."
+          ],
+          "translated": "通过创建分词器，我们可以将词汇，如开始标记、猫或狗等分词为某个索引。"
+        },
+        {
+          "sources": [
+            "In TensorFlow, it is very easy.",
+            "You can just use this text vectoralization module",
+            "and you can call",
+            "by passing all the data or the caption data",
+            "to this text vectoralization layer",
+            "so it takes some time around 5 minutes in my environments.",
+            "So let's wait until it finishes."
+          ],
+          "translated": "在 TensorFlow 中，这非常简单。你只需要使用这个文本向量化模块，通过传递所有数据或字幕数据到这个文本向量化层，所以在我的环境中需要大约5分钟的时间。让我们等待它完成。"
+        },
+        {
+          "sources": [
+            "Now it's finished.",
+            "Now let's try this tokenizer either",
+            "by passing some sample sentence,",
+            "start token This is a sentence end token."
+          ],
+          "translated": "现在已经完成。现在让我们尝试这个分词器，通过传递一些示例句子，开始标记这是一个句子结束标记。"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 17,
+            "milliseconds": 632
+          },
+          "text": "So now you can"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 17,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 599
+          },
+          "text": "see it is tokenized in this way."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 24,
+            "milliseconds": 600
+          },
+          "text": "And so the here you can find a lot of paddings"
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 566
+          },
+          "text": "by changing this max caption lengths"
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 31,
+            "milliseconds": 865
+          },
+          "text": "you can control the lengths of this padding here."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 31,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 631
+          },
+          "text": "But in this case we are specifying 64."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 37,
+            "milliseconds": 265
+          },
+          "text": "So the order of the captions"
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 37,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 698
+          },
+          "text": "will be padded in this way"
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 41,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 432
+          },
+          "text": "until this max caption lengths."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 864
+          },
+          "text": "And in the same way you can see"
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 54,
+            "milliseconds": 299
+          },
+          "text": "the behavior of this tokenizer"
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 54,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 300
+          },
+          "text": "This is very useful."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 0,
+            "milliseconds": 833
+          },
+          "text": "Once you create you can apply this tokenizer in different captions"
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 599
+          },
+          "text": "and convert text data to the token at the white tokens."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 11,
+            "milliseconds": 765
+          },
+          "text": "And it's nice to create converters at this point."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 16,
+            "milliseconds": 499
+          },
+          "text": "So here we can find string lookup layer, string look up layer,"
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 16,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 899
+          },
+          "text": "and the creating converter the from want to index and also index to want."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 22,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 99
+          },
+          "text": "So we're going to use these modules later."
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 26,
+            "milliseconds": 466
+          },
+          "text": "So this is quite useful"
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 31,
+            "milliseconds": 365
+          },
+          "text": "and then we can create a final data set."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 799
+          },
+          "text": "So this is a very important part."
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 36,
+            "milliseconds": 865
+          },
+          "text": "So we have trainds."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 533
+          },
+          "text": "We're going to add additional create_ds function, this function"
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 42,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 432
+          },
+          "text": "and as you can see, it returns image"
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 48,
+            "milliseconds": 231
+          },
+          "text": "tensor caption that this is the tuple"
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 50,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 366
+          },
+          "text": "image tensor will go to encoder"
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 700
+          },
+          "text": "and caption will go to the decoder."
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 2,
+            "milliseconds": 265
+          },
+          "text": "And also we are creating Target, which is label."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 2,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 6,
+            "milliseconds": 700
+          },
+          "text": "And in this function you can find this target is created from caption"
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 6,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 432
+          },
+          "text": "by the is shifting just caption"
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 12,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 100
+          },
+          "text": "in the in one word."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 733
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 600
+          },
+          "text": "By doing so, we are creating"
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 22,
+            "milliseconds": 899
+          },
+          "text": "we're going to create a shifted caption, which means the next word A"
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 232
+          },
+          "text": "and we're going to utilize this for target."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 35,
+            "milliseconds": 332
+          },
+          "text": "So let's define and apply this function"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 35,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 365
+          },
+          "text": "and create a batch in specified batch size"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 40,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 43,
+            "milliseconds": 666
+          },
+          "text": "and everything is ready."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 43,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 49,
+            "milliseconds": 732
+          },
+          "text": "So let's take a look at some of the data set."
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 49,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 199
+          },
+          "text": "Here you go."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 132
+          },
+          "text": "So you can find the image in this shape and caption in the shape"
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 100
+          },
+          "text": "0 and level in the same shape as caption because we are just shifting."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 0,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 0,
+            "milliseconds": 432
+          },
+          "text": "And no."
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 0,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 4,
+            "milliseconds": 832
+          },
+          "text": "So we are padding the shifted part with zero value"
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 232
+          },
+          "text": "looks nice."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 12,
+            "milliseconds": 100
+          },
+          "text": "So the next part is model."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 12,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 14,
+            "milliseconds": 432
+          },
+          "text": "Most of the model code has already explained"
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 14,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 17,
+            "milliseconds": 598
+          },
+          "text": "in the previous video, so I'm going to go through very quickly."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 17,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 22,
+            "milliseconds": 299
+          },
+          "text": "But if you are not very familiar with that very confident with that,"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 22,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 25,
+            "milliseconds": 231
+          },
+          "text": "then you can go back to the the previous slide and check"
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 25,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 266
+          },
+          "text": "what is going on inside encoder and decoder."
+        }
+      ],
+      "source": [
+        "So now you can",
+        "see it is tokenized in this way.",
+        "And so the here you can find a lot of paddings",
+        "by changing this max caption lengths",
+        "you can control the lengths of this padding here.",
+        "But in this case we are specifying 64.",
+        "So the order of the captions",
+        "will be padded in this way",
+        "until this max caption lengths.",
+        "And in the same way you can see",
+        "the behavior of this tokenizer",
+        "This is very useful.",
+        "Once you create you can apply this tokenizer in different captions",
+        "and convert text data to the token at the white tokens.",
+        "And it's nice to create converters at this point.",
+        "So here we can find string lookup layer, string look up layer,",
+        "and the creating converter the from want to index and also index to want.",
+        "So we're going to use these modules later.",
+        "So this is quite useful",
+        "and then we can create a final data set.",
+        "So this is a very important part.",
+        "So we have trainds.",
+        "We're going to add additional create_ds function, this function",
+        "and as you can see, it returns image",
+        "tensor caption that this is the tuple",
+        "image tensor will go to encoder",
+        "and caption will go to the decoder.",
+        "And also we are creating Target, which is label.",
+        "And in this function you can find this target is created from caption",
+        "by the is shifting just caption",
+        "in the in one word.",
+        "Okay.",
+        "By doing so, we are creating",
+        "we're going to create a shifted caption, which means the next word A",
+        "and we're going to utilize this for target.",
+        "So let's define and apply this function",
+        "and create a batch in specified batch size",
+        "and everything is ready.",
+        "So let's take a look at some of the data set.",
+        "Here you go.",
+        "So you can find the image in this shape and caption in the shape",
+        "0 and level in the same shape as caption because we are just shifting.",
+        "And no.",
+        "So we are padding the shifted part with zero value",
+        "looks nice.",
+        "So the next part is model.",
+        "Most of the model code has already explained",
+        "in the previous video, so I'm going to go through very quickly.",
+        "But if you are not very familiar with that very confident with that,",
+        "then you can go back to the the previous slide and check",
+        "what is going on inside encoder and decoder."
+      ],
+      "result": [
+        "所以现在你可以看到，它是以这种方式被分词的。",
+        "",
+        "你可以在这里找到很多的填充，通过改变这个最大标注长度（MAX_CAPTION_LEN），你可以控制这个填充的长度。",
+        "",
+        "",
+        "但在这个案例中，我们指定的是64。",
+        "所以所有的标注都将以这种方式被填充，直到达到这个最大标注长度。",
+        "",
+        "",
+        "同样，你可以看到这个分词器的行为，这非常有用。",
+        "",
+        "",
+        "一旦你创建了分词器，你可以在不同的标注中应用这个分词器，并将文本数据转化为适当的标记。",
+        "",
+        "在此时创建转换器是非常好的。",
+        "所以在这里，我们可以找到StringLookup层，并且创建了转换器，从词到索引，还有从索引到词。",
+        "",
+        "我们稍后将使用这些模块。",
+        "所以这非常有用，然后我们可以创建最终的数据集。",
+        "",
+        "这是一个非常重要的部分。",
+        "我们有trainds。",
+        "我们要添加额外的create_ds_fn函数，这个函数，",
+        "如你所见，它返回img_tensor、caption，这是一个元组，img_tensor将进入编码器，caption将进入解码器。",
+        "",
+        "",
+        "",
+        "同时，我们还创建了target，即标签。",
+        "在这个函数中，你可以发现这个target是从caption中创建的，只需将caption移动一个单词。",
+        "",
+        "",
+        "好的。",
+        "通过这样做，我们将创建一个移位的caption，也就是下一个单词，并且我们将用这个作为target。",
+        "",
+        "",
+        "所以让我们定义并应用这个函数，并创建一个批处理指定批处理大小，一切都已经准备就绪。",
+        "",
+        "",
+        "那么让我们看一些数据集。",
+        "给你。",
+        "你可以看到Image shape、Caption shape，以及与Caption相同的Label shape，因为我们只是做了移位。",
+        "",
+        "",
+        "所以我们用零值填充了移位部分，看起来不错。",
+        "",
+        "接下来是模型。",
+        "大部分模型代码已经在之前的视频中解释过了，所以我会很快地过一遍。",
+        "",
+        "但是，如果你对此不是很熟悉或者不是很有信心，",
+        "那么你可以回到之前的幻灯片，查看编码器和解码器内部发生了什么。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "sources": [
+            "So now you can",
+            "see it is tokenized in this way."
+          ],
+          "translated": "所以现在你可以看到它是以这种方式进行标记化的。"
+        },
+        {
+          "sources": [
+            "And so the here you can find a lot of paddings",
+            "by changing this max caption lengths",
+            "you can control the lengths of this padding here.",
+            "But in this case we are specifying 64."
+          ],
+          "translated": "在这里，你可以通过改变最大标题长度来找到很多填充，你可以控制这里的填充长度。但在这种情况下，我们指定的是64。"
+        },
+        {
+          "sources": [
+            "So the order of the captions",
+            "will be padded in this way",
+            "until this max caption lengths."
+          ],
+          "translated": "所以标题的顺序会以这种方式填充，直到达到最大标题长度。"
+        },
+        {
+          "sources": [
+            "And in the same way you can see",
+            "the behavior of this tokenizer",
+            "This is very useful."
+          ],
+          "translated": "同样的方式，你可以看到这个分词器的行为，这非常有用。"
+        },
+        {
+          "sources": [
+            "Once you create you can apply this tokenizer in different captions",
+            "and convert text data to the token at the white tokens.",
+            "And it's nice to create converters at this point."
+          ],
+          "translated": "一旦你创建了，你可以在不同的标题中应用这个分词器，并将文本数据转换为白色标记。在这个时候创建转换器是很好的。"
+        },
+        {
+          "sources": [
+            "So here we can find string lookup layer, string look up layer,",
+            "and the creating converter the from want to index and also index to want.",
+            "So we're going to use these modules later."
+          ],
+          "translated": "所以在这里我们可以找到StringLookup层，StringLookup层，以及创建转换器，从想要的索引到索引。所以我们稍后会使用这些模块。"
+        },
+        {
+          "sources": [
+            "So this is quite useful",
+            "and then we can create a final data set.",
+            "So this is a very important part."
+          ],
+          "translated": "所以这非常有用，然后我们可以创建一个最终的数据集。这是一个非常重要的部分。"
+        },
+        {
+          "sources": [
+            "So we have trainds.",
+            "We're going to add additional create_ds function, this function",
+            "and as you can see, it returns image",
+            "tensor caption that this is the tuple",
+            "image tensor will go to encoder",
+            "and caption will go to the decoder."
+          ],
+          "translated": "所以我们有训练数据。我们将添加额外的create_ds函数，这个函数，如你所见，它返回图像张量标题，这是一个元组，图像张量将进入编码器，标题将进入解码器。"
+        },
+        {
+          "sources": [
+            "And also we are creating Target, which is label.",
+            "And in this function you can find this target is created from caption",
+            "by the is shifting just caption",
+            "in the in one word.",
+            "Okay."
+          ],
+          "translated": "我们还创建了目标，即标签。在这个函数中，你可以发现这个目标是从标题中创建的，只需将标题移动一个单词。好的。"
+        },
+        {
+          "sources": [
+            "By doing so, we are creating",
+            "we're going to create a shifted caption, which means the next word A",
+            "and we're going to utilize this for target."
+          ],
+          "translated": "通过这样做，我们将创建一个移位的标题，这意味着下一个单词A，我们将利用这个作为目标。"
+        },
+        {
+          "sources": [
+            "So let's define and apply this function",
+            "and create a batch in specified batch size",
+            "and everything is ready.",
+            "So let's take a look at some of the data set.",
+            "Here you go."
+          ],
+          "translated": "所以让我们定义并应用这个函数，创建一个指定批量大小的批次，一切都准备好了。那么让我们看一下数据集的一部分。给你。"
+        },
+        {
+          "sources": [
+            "So you can find the image in this shape and caption in the shape",
+            "0 and level in the same shape as caption because we are just shifting.",
+            "And no."
+          ],
+          "translated": "所以你可以发现图像和标题的形状是这样的，0和级别与标题的形状相同，因为我们只是在移动。并且没有。"
+        },
+        {
+          "sources": [
+            "So we are padding the shifted part with zero value",
+            "looks nice.",
+            "So the next part is model."
+          ],
+          "translated": "所以我们用零值填充移位部分，看起来不错。接下来是模型。"
+        },
+        {
+          "sources": [
+            "Most of the model code has already explained",
+            "in the previous video, so I'm going to go through very quickly.",
+            "But if you are not very familiar with that very confident with that,",
+            "then you can go back to the the previous slide and check",
+            "what is going on inside encoder and decoder."
+          ],
+          "translated": "大部分模型代码已经在之前的视频中解释过了，所以我会很快地过一遍。但是，如果你对此不是很熟悉或者不是很有信心，那么你可以回到之前的幻灯片，查看编码器和解码器内部发生了什么。"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 798
+          },
+          "text": "So here in this video."
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 33,
+            "milliseconds": 299
+          },
+          "text": "So let's quickly run these things."
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 33,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 39,
+            "milliseconds": 299
+          },
+          "text": "So this is the encoder and as you can see we are just in the applying inception"
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 39,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 43,
+            "milliseconds": 531
+          },
+          "text": "resnet V2 to image data."
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 43,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 433
+          },
+          "text": "And please note that in this case we are freezing the most of the parts of this cnn"
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 49,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 433
+          },
+          "text": "because we don't need to be trained."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 56,
+            "milliseconds": 632
+          },
+          "text": "This model, basically this kind of the the backbone is pre-trained"
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 56,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 233
+          },
+          "text": "by using huge dataset in this case image net data set."
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 6,
+            "milliseconds": 64
+          },
+          "text": "So of course if you want to the train, fine tune again, it is possible,"
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 6,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 199
+          },
+          "text": "but in this case we want to you just to preserve the weights"
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 14,
+            "milliseconds": 566
+          },
+          "text": "Pre-trained."
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 14,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 332
+          },
+          "text": "So next let's move on to the decoder."
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 18,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 732
+          },
+          "text": "It is a bit complex as we discussed,"
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 24,
+            "milliseconds": 398
+          },
+          "text": "and here you can find a lot of instruction about the attention layer"
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 25,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 27,
+            "milliseconds": 799
+          },
+          "text": "and also the steps of the decoder,"
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 66
+          },
+          "text": "which we discussed in the previous video."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 66
+          },
+          "text": "And here we can find a definitions so you can find embedding layer"
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 864
+          },
+          "text": "to create what embedding and first GRU layer"
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 45,
+            "milliseconds": 698
+          },
+          "text": "and attention layer add layer layer normalization"
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 46,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 899
+          },
+          "text": "and final dense layer."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 52,
+            "milliseconds": 198
+          },
+          "text": "So let's define in this way."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 52,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 865
+          },
+          "text": "So model looks like this"
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 55,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 399
+          },
+          "text": "embedding layer GRU"
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 232
+          },
+          "text": "attention add layer normalization, then this."
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 1,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 932
+          },
+          "text": "And it has so many parameters"
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 8,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 365
+          },
+          "text": "after defining decoder"
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 631
+          },
+          "text": "and also encoder, we can create final model"
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 14,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 866
+          },
+          "text": "TF Keras model and define inputs and output."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 18,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 231
+          },
+          "text": "And as you can see, it has two inputs,"
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 23,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 25,
+            "milliseconds": 765
+          },
+          "text": "image inputs go to encoder"
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 26,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 30,
+            "milliseconds": 766
+          },
+          "text": "and word inputs go to the goes to the decoder"
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 34,
+            "milliseconds": 199
+          },
+          "text": "and output should be"
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 34,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 232
+          },
+          "text": "decoder output."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 41,
+            "milliseconds": 265
+          },
+          "text": "Now model is ready, but before running training"
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 42,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 45,
+            "milliseconds": 831
+          },
+          "text": "we need to define lost function as usual."
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 45,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 48,
+            "milliseconds": 98
+          },
+          "text": "So in terms of the loss,"
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 48,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 50,
+            "milliseconds": 733
+          },
+          "text": "our model is basically a classification model"
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 50,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 55,
+            "milliseconds": 299
+          },
+          "text": "since the decoder generate a lot of probabilities for each class,"
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 55,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 65
+          },
+          "text": "each word class, each of vocabularies."
+        },
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 2,
+            "milliseconds": 399
+          },
+          "text": "So we can use sparse categorical course entropy as usual"
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 2,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 732
+          },
+          "text": "for the classification problem."
+        },
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 8,
+            "milliseconds": 699
+          },
+          "text": "But in this case our data is padded,"
+        },
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 9,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 14,
+            "milliseconds": 799
+          },
+          "text": "so it has a lot of that zero values and a lot of the there meaningless values."
+        },
+        {
+          "id": "196",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 18,
+            "milliseconds": 365
+          },
+          "text": "So we want to remove that part."
+        },
+        {
+          "id": "197",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 18,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 20,
+            "milliseconds": 732
+          },
+          "text": "So in order to do so, we are defining this"
+        },
+        {
+          "id": "198",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 20,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 23,
+            "milliseconds": 99
+          },
+          "text": "custom loss function"
+        },
+        {
+          "id": "199",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 26,
+            "milliseconds": 899
+          },
+          "text": "and then everything is ready."
+        },
+        {
+          "id": "200",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 26,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 30,
+            "milliseconds": 431
+          },
+          "text": "So let's compile the model"
+        },
+        {
+          "id": "201",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 31,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 66
+          },
+          "text": "and we can run training."
+        },
+        {
+          "id": "202",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 38,
+            "milliseconds": 100
+          },
+          "text": "0 And in terms of the training, it takes 15 minutes, to 20 minutes"
+        },
+        {
+          "id": "203",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 39,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 99
+          },
+          "text": "with one GPU, one T4 GPUs to train one epoch."
+        }
+      ],
+      "source": [
+        "So here in this video.",
+        "So let's quickly run these things.",
+        "So this is the encoder and as you can see we are just in the applying inception",
+        "resnet V2 to image data.",
+        "And please note that in this case we are freezing the most of the parts of this cnn",
+        "because we don't need to be trained.",
+        "This model, basically this kind of the the backbone is pre-trained",
+        "by using huge dataset in this case image net data set.",
+        "So of course if you want to the train, fine tune again, it is possible,",
+        "but in this case we want to you just to preserve the weights",
+        "Pre-trained.",
+        "So next let's move on to the decoder.",
+        "It is a bit complex as we discussed,",
+        "and here you can find a lot of instruction about the attention layer",
+        "and also the steps of the decoder,",
+        "which we discussed in the previous video.",
+        "And here we can find a definitions so you can find embedding layer",
+        "to create what embedding and first GRU layer",
+        "and attention layer add layer layer normalization",
+        "and final dense layer.",
+        "So let's define in this way.",
+        "So model looks like this",
+        "embedding layer GRU",
+        "attention add layer normalization, then this.",
+        "And it has so many parameters",
+        "after defining decoder",
+        "and also encoder, we can create final model",
+        "TF Keras model and define inputs and output.",
+        "And as you can see, it has two inputs,",
+        "image inputs go to encoder",
+        "and word inputs go to the goes to the decoder",
+        "and output should be",
+        "decoder output.",
+        "Now model is ready, but before running training",
+        "we need to define lost function as usual.",
+        "So in terms of the loss,",
+        "our model is basically a classification model",
+        "since the decoder generate a lot of probabilities for each class,",
+        "each word class, each of vocabularies.",
+        "So we can use sparse categorical course entropy as usual",
+        "for the classification problem.",
+        "But in this case our data is padded,",
+        "so it has a lot of that zero values and a lot of the there meaningless values.",
+        "So we want to remove that part.",
+        "So in order to do so, we are defining this",
+        "custom loss function",
+        "and then everything is ready.",
+        "So let's compile the model",
+        "and we can run training.",
+        "0 And in terms of the training, it takes 15 minutes, to 20 minutes",
+        "with one GPU, one T4 GPUs to train one epoch."
+      ],
+      "result": [
+        "在这个视频里，我们来快速运行这些东西。",
+        "",
+        "这是编码器，你可以看到我们只是将inception_resnet_v2应用到图像数据上。",
+        "",
+        "请注意，在这种情况下，我们冻结了这个卷积神经网络（CNN）的大部分内容，因为我们不需要训练。",
+        "",
+        "这个模型基本上是使用大型数据集（在这种情况下是 ImageNet 数据集）预先训练的。",
+        "",
+        "当然，如果你想要再次进行微调，那是可能的，但在这种情况下，我们只想保留预训练的权重。",
+        "",
+        "",
+        "接下来让我们继续讨论解码器。",
+        "正如我们讨论的，它有点复杂。",
+        "在这里，您可以找到关于注意力层的许多说明，以及我们在上一个视频中讨论过的解码器的步骤。",
+        "",
+        "",
+        "在这里，我们可以找到一些定义，你可以找到Embedding层来创建Embedding和第一个GRU层，然后是Attention层、Add层、LayerNormalization层和最后的Dense层。",
+        "",
+        "",
+        "",
+        "让我们按这种方式定义。",
+        "模型看起来是这样的，Embedding层，GRU，Attention，Add，LayerNormalization，然后是Dense。",
+        "",
+        "",
+        "它有很多参数，在定义解码器和编码器之后，我们可以创建最终的 TF Keras 模型，并定义输入和输出。",
+        "",
+        "",
+        "",
+        "你可以看到，它有两个输入，image_input进入编码器，word_input进入解码器，输出应该是decoder_output。",
+        "",
+        "",
+        "",
+        "",
+        "现在模型已经准备好了，但在运行训练之前，我们需要像往常一样定义损失函数。",
+        "",
+        "在损失方面，我们的模型基本上是一个分类模型，因为解码器为每个类别、每个单词类别、每个词汇生成了很多概率。",
+        "",
+        "",
+        "",
+        "所以我们可以像往常一样使用SparseCategoricalCrossentropy来解决分类问题。",
+        "",
+        "但在这种情况下，我们的数据是填充的，所以它有很多零值和很多没有意义的值。",
+        "",
+        "所以我们想要去掉那部分。",
+        "为了做到这一点，我们正在定义这个自定义损失函数，然后一切都已经准备就绪。",
+        "",
+        "",
+        "让我们编译模型，然后可以运行训练。",
+        "",
+        "在训练方面，使用一块T4 GPU进行一轮训练需要 15 到 20 分钟。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "sources": [
+            "So here in this video.",
+            "So let's quickly run these things."
+          ],
+          "translated": "在这个视频里，我们来快速运行这些东西。"
+        },
+        {
+          "sources": [
+            "So this is the encoder and as you can see we are just in the applying inception",
+            "resnet V2 to image data."
+          ],
+          "translated": "这就是编码器，如您所见，我们正在将 Inception-ResNet V2 应用于图像数据。"
+        },
+        {
+          "sources": [
+            "And please note that in this case we are freezing the most of the parts of this cnn",
+            "because we don't need to be trained.",
+            "This model, basically this kind of the the backbone is pre-trained",
+            "by using huge dataset in this case image net data set."
+          ],
+          "translated": "请注意，在这种情况下，我们冻结了这个卷积神经网络的大部分部分，因为我们不需要训练。这个模型基本上是使用大型数据集（在这种情况下是 ImageNet 数据集）预先训练的。"
+        },
+        {
+          "sources": [
+            "So of course if you want to the train, fine tune again, it is possible,",
+            "but in this case we want to you just to preserve the weights",
+            "Pre-trained."
+          ],
+          "translated": "当然，如果您想要再次进行训练和微调，是可以的，但在这种情况下，我们只想保留预训练的权重。"
+        },
+        {
+          "sources": [
+            "So next let's move on to the decoder.",
+            "It is a bit complex as we discussed,"
+          ],
+          "translated": "接下来让我们继续讨论解码器。正如我们讨论的，它有点复杂。"
+        },
+        {
+          "sources": [
+            "and here you can find a lot of instruction about the attention layer",
+            "and also the steps of the decoder,",
+            "which we discussed in the previous video."
+          ],
+          "translated": "在这里，您可以找到关于Attention层的许多说明，以及我们在上一个视频中讨论过的解码器的步骤。"
+        },
+        {
+          "sources": [
+            "And here we can find a definitions so you can find embedding layer",
+            "to create what embedding and first GRU layer",
+            "and attention layer add layer layer normalization",
+            "and final dense layer.",
+            "So let's define in this way."
+          ],
+          "translated": "在这里，我们可以找到一些定义，您可以找到嵌入层来创建嵌入和第一个 GRU 层，然后是Attention层、添加层、层归一化和最后的密集层。让我们按这种方式定义。"
+        },
+        {
+          "sources": [
+            "So model looks like this",
+            "embedding layer GRU",
+            "attention add layer normalization, then this.",
+            "And it has so many parameters"
+          ],
+          "translated": "所以模型看起来是这样的：嵌入层 GRU、注意力层、添加层归一化，然后是这个。它有很多参数。"
+        },
+        {
+          "sources": [
+            "after defining decoder",
+            "and also encoder, we can create final model",
+            "TF Keras model and define inputs and output."
+          ],
+          "translated": "在定义解码器和编码器之后，我们可以创建最终的 TF Keras 模型，并定义输入和输出。"
+        },
+        {
+          "sources": [
+            "And as you can see, it has two inputs,",
+            "image inputs go to encoder",
+            "and word inputs go to the goes to the decoder",
+            "and output should be",
+            "decoder output."
+          ],
+          "translated": "如您所见，它有两个输入，图像输入进入编码器，单词输入进入解码器，输出应该是解码器输出。"
+        },
+        {
+          "sources": [
+            "Now model is ready, but before running training",
+            "we need to define lost function as usual."
+          ],
+          "translated": "现在模型已经准备好了，但在运行训练之前，我们需要像往常一样定义损失函数。"
+        },
+        {
+          "sources": [
+            "So in terms of the loss,",
+            "our model is basically a classification model",
+            "since the decoder generate a lot of probabilities for each class,",
+            "each word class, each of vocabularies."
+          ],
+          "translated": "在损失方面，我们的模型基本上是一个分类模型，因为解码器为每个类别、每个单词类别、每个词汇生成了很多概率。"
+        },
+        {
+          "sources": [
+            "So we can use sparse categorical course entropy as usual",
+            "for the classification problem.",
+            "But in this case our data is padded,",
+            "so it has a lot of that zero values and a lot of the there meaningless values.",
+            "So we want to remove that part."
+          ],
+          "translated": "所以我们可以像往常一样使用SparseCategoricalCrossentropy来解决分类问题。但在这种情况下，我们的数据是填充的，所以它有很多零值和很多无意义的值。所以我们想要去掉那部分。"
+        },
+        {
+          "sources": [
+            "So in order to do so, we are defining this",
+            "custom loss function",
+            "and then everything is ready.",
+            "So let's compile the model",
+            "and we can run training."
+          ],
+          "translated": "为了做到这一点，我们定义了这个自定义损失函数，然后一切都准备好了。让我们编译模型，然后可以运行训练。"
+        },
+        {
+          "sources": [
+            "0 And in terms of the training, it takes 15 minutes, to 20 minutes",
+            "with one GPU, one T4 GPUs to train one epoch."
+          ],
+          "translated": "在训练方面，使用一块 GPU（一块 T4 GPU）进行一轮训练需要 15 到 20 分钟。"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "204",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 45,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 46,
+            "milliseconds": 265
+          },
+          "text": "So if you want"
+        },
+        {
+          "id": "205",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 46,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 49,
+            "milliseconds": 99
+          },
+          "text": "to add additional epochs, it's okay."
+        },
+        {
+          "id": "206",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 49,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 53,
+            "milliseconds": 32
+          },
+          "text": "You can do that and I think you can get the slightly better result."
+        },
+        {
+          "id": "207",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 53,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 799
+          },
+          "text": "But epoch one epoch is the enough"
+        },
+        {
+          "id": "208",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 299
+          },
+          "text": "to just to check the how it works."
+        },
+        {
+          "id": "209",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 3,
+            "milliseconds": 765
+          },
+          "text": "So let's just keep it as one and run training"
+        },
+        {
+          "id": "210",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 5,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 899
+          },
+          "text": "and let's wait"
+        },
+        {
+          "id": "211",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 10,
+            "milliseconds": 499
+          },
+          "text": "15 to 20 minutes until it finished that training."
+        },
+        {
+          "id": "212",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 11,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 499
+          },
+          "text": "Now training is done, so let's use it for captioning,"
+        },
+        {
+          "id": "213",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 20,
+            "milliseconds": 565
+          },
+          "text": "but before that we need to rebuild the decoder for inference"
+        },
+        {
+          "id": "214",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 23,
+            "milliseconds": 766
+          },
+          "text": "in order to control the growth state manually."
+        },
+        {
+          "id": "215",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 28,
+            "milliseconds": 66
+          },
+          "text": "As we talked in the previous video."
+        },
+        {
+          "id": "216",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 28,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 32,
+            "milliseconds": 665
+          },
+          "text": "So in this cell, by re-using the trained layers,"
+        },
+        {
+          "id": "217",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 32,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 37,
+            "milliseconds": 599
+          },
+          "text": "we are creating a model for inference."
+        },
+        {
+          "id": "218",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 37,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 41,
+            "milliseconds": 233
+          },
+          "text": "So here you can find train decoder GRU"
+        },
+        {
+          "id": "219",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 41,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 44,
+            "milliseconds": 333
+          },
+          "text": "train decoder attention and so on."
+        },
+        {
+          "id": "220",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 49,
+            "milliseconds": 898
+          },
+          "text": "And compared to the train training model, we are adding"
+        },
+        {
+          "id": "221",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 51,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 53,
+            "milliseconds": 600
+          },
+          "text": "GRU state to its Io's."
+        },
+        {
+          "id": "222",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 55,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 56,
+            "milliseconds": 764
+          },
+          "text": "For inputs,"
+        },
+        {
+          "id": "223",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 56,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 0,
+            "milliseconds": 798
+          },
+          "text": "we are adding GRU state inputs and for output we are adding"
+        },
+        {
+          "id": "224",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 1,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 999
+          },
+          "text": "GRU state as output."
+        },
+        {
+          "id": "225",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "So by doing so we can control the GRU state"
+        },
+        {
+          "id": "226",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 7,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 966
+          },
+          "text": "in the inference group."
+        },
+        {
+          "id": "227",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 700
+          },
+          "text": "Okay, so let's generate text with this"
+        },
+        {
+          "id": "228",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 15,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 17,
+            "milliseconds": 399
+          },
+          "text": "custom inference loop function."
+        },
+        {
+          "id": "229",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 21,
+            "milliseconds": 699
+          },
+          "text": "We already discussed the what kind of the component"
+        },
+        {
+          "id": "230",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 21,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 26,
+            "milliseconds": 132
+          },
+          "text": "it should have in the previous video, but let's review very briefly."
+        },
+        {
+          "id": "231",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 27,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 30,
+            "milliseconds": 433
+          },
+          "text": "So first we initialize GRU state,"
+        },
+        {
+          "id": "232",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 30,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 33,
+            "milliseconds": 499
+          },
+          "text": "in this case just the initialize with zero vector simply."
+        },
+        {
+          "id": "233",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 34,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 37,
+            "milliseconds": 98
+          },
+          "text": "And then here we get image"
+        },
+        {
+          "id": "234",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 37,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 700
+          },
+          "text": "and then pre process to image and pass it to encoder."
+        },
+        {
+          "id": "235",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 41,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 44,
+            "milliseconds": 832
+          },
+          "text": "Of course, the train encoder"
+        },
+        {
+          "id": "236",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 45,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 47,
+            "milliseconds": 999
+          },
+          "text": "and we can get the feature image features"
+        },
+        {
+          "id": "237",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 51,
+            "milliseconds": 633
+          },
+          "text": "and before passing it to our decoder."
+        },
+        {
+          "id": "238",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 52,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 55,
+            "milliseconds": 500
+          },
+          "text": "So we also initialize this, this start token"
+        },
+        {
+          "id": "239",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 56,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 58,
+            "milliseconds": 999
+          },
+          "text": "as the first word"
+        },
+        {
+          "id": "240",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 59,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 0,
+            "milliseconds": 900
+          },
+          "text": "and then"
+        },
+        {
+          "id": "241",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 4,
+            "milliseconds": 565
+          },
+          "text": "we are going to repeat this whole loop"
+        },
+        {
+          "id": "242",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 4,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 8,
+            "milliseconds": 533
+          },
+          "text": "again and again and generate text one by one."
+        },
+        {
+          "id": "243",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 9,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 12,
+            "milliseconds": 365
+          },
+          "text": "So a step that looks like this coding decoder, of course,"
+        },
+        {
+          "id": "244",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 13,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 17,
+            "milliseconds": 33
+          },
+          "text": "and then it returns a lot of predictions"
+        },
+        {
+          "id": "245",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 17,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 764
+          },
+          "text": "out of the word of the probabilities."
+        },
+        {
+          "id": "246",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 20,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 25,
+            "milliseconds": 299
+          },
+          "text": "So there are so many ways to pick up the actual word the final word,"
+        },
+        {
+          "id": "247",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 25,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 531
+          },
+          "text": "final selection from the list of a lot of ward probabilities."
+        },
+        {
+          "id": "248",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 33,
+            "milliseconds": 932
+          },
+          "text": "But in this case we are pulling the word kind of stochastically"
+        },
+        {
+          "id": "249",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 34,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 38,
+            "milliseconds": 832
+          },
+          "text": "to introduce some randomness."
+        },
+        {
+          "id": "250",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 38,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 42,
+            "milliseconds": 199
+          },
+          "text": "So it is the these lines of code are doing doing that"
+        },
+        {
+          "id": "251",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 42,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 45,
+            "milliseconds": 64
+          },
+          "text": "and eventually picking up some words"
+        },
+        {
+          "id": "252",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 45,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 50,
+            "milliseconds": 98
+          },
+          "text": "and the the bringing it back to the brink bring it back to the word"
+        },
+        {
+          "id": "253",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 50,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 54,
+            "milliseconds": 298
+          },
+          "text": "from the word token by using the tokenizer"
+        },
+        {
+          "id": "254",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 55,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 58,
+            "milliseconds": 165
+          },
+          "text": "and appending to the list."
+        }
+      ],
+      "source": [
+        "So if you want",
+        "to add additional epochs, it's okay.",
+        "You can do that and I think you can get the slightly better result.",
+        "But epoch one epoch is the enough",
+        "to just to check the how it works.",
+        "So let's just keep it as one and run training",
+        "and let's wait",
+        "15 to 20 minutes until it finished that training.",
+        "Now training is done, so let's use it for captioning,",
+        "but before that we need to rebuild the decoder for inference",
+        "in order to control the growth state manually.",
+        "As we talked in the previous video.",
+        "So in this cell, by re-using the trained layers,",
+        "we are creating a model for inference.",
+        "So here you can find train decoder GRU",
+        "train decoder attention and so on.",
+        "And compared to the train training model, we are adding",
+        "GRU state to its Io's.",
+        "For inputs,",
+        "we are adding GRU state inputs and for output we are adding",
+        "GRU as output.",
+        "So by doing so we can control the GRU state",
+        "in the inference group.",
+        "Okay, so let's generate text with this",
+        "custom inference loop function.",
+        "We already discussed the what kind of the component",
+        "it should have in the previous video, but let's review very briefly.",
+        "So first we initialize GRU state,",
+        "in this case just the initialize with zero vector simply.",
+        "And then here we get image",
+        "and then pre process to image and pass it to encoder.",
+        "Of course, the train encoder",
+        "and we can get the feature image features",
+        "and before passing it to our decoder.",
+        "So we also initialize this, this start token",
+        "as the first word",
+        "and then",
+        "we are going to repeat this whole loop",
+        "again and again and generate text one by one.",
+        "So a step that looks like this coding decoder, of course,",
+        "and then it returns a lot of predictions",
+        "out of the word of the probabilities.",
+        "So there are so many ways to pick up the actual word the final word,",
+        "final selection from the list of a lot of ward probabilities.",
+        "But in this case we are pulling the word kind of stochastically",
+        "to introduce some randomness.",
+        "So it is the these lines of code are doing doing that",
+        "and eventually picking up some words",
+        "and the the bringing it back to the brink bring it back to the word",
+        "from the word token by using the tokenizer",
+        "and appending to the list."
+      ],
+      "result": [
+        "所以，如果你想增加额外的轮次，这是可以的。",
+        "",
+        "你可以这样做，我认为你可以得到稍微好一点的结果。",
+        "但是一个轮次就足够了，只是为了检查它是如何工作的。",
+        "",
+        "所以让我们保持一个轮次并进行训练，等待15到20分钟，直到训练完成。",
+        "",
+        "",
+        "现在训练已经完成，所以让我们用它生成图片的文字说明，但在此之前，我们需要为推理重建解码器，以便手动控制增长状态。",
+        "",
+        "",
+        "正如我们在之前的视频中讨论的。",
+        "所以在这个单元格中，通过重用训练过的层，我们正在创建一个用于推理的模型。",
+        "",
+        "所以这里你可以找到训练decoder_gru，训练decoder_attention等。",
+        "",
+        "与训练模型相比，我们添加GRU状态到输入输出。",
+        "",
+        "对于输入，我们添加gru_state_input，对于输出，我们添加gru_state作为输出。",
+        "",
+        "",
+        "这样，我们可以在推理过程中控制GRU状态。",
+        "",
+        "好的，让我们用这个自定义推理循环函数生成文本。",
+        "",
+        "我们已经在之前的视频中讨论了它应该具有哪些组件，但让我们简要回顾一下。",
+        "",
+        "首先，我们初始化GRU状态，这种情况下只是简单地用零向量初始化。",
+        "",
+        "然后这里我们获取图像，再对图像进行预处理并将其传递给编码器，当然，是训练的编码器。",
+        "",
+        "",
+        "我们可以获得图像特征.",
+        "然后在将其传递给我们的解码器之前,",
+        "所以我们也初始化这个，这个开始标记作为第一个词.",
+        "",
+        "然后我们将重复这个整个循环，一次又一次地生成文本。",
+        "",
+        "",
+        "所以步骤看起来是这样的，编码解码器，当然，然后它返回很多预测的词的概率。",
+        "",
+        "",
+        "所以有很多方法可以从词概率的列表中挑选出实际的词，最后的词，最后的选择。",
+        "",
+        "但在这种情况下，我们是以某种随机方式挑选词，以引入一些随机性。",
+        "",
+        "这些代码行正在执行此操作，最终选择一些单词，",
+        "",
+        "然后使用分词器将它们从单词Token还原回单词，并追加到列表中。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "sources": [
+            "So if you want",
+            "to add additional epochs, it's okay."
+          ],
+          "translated": "所以，如果你想增加额外的轮次，这是可以的。"
+        },
+        {
+          "sources": [
+            "You can do that and I think you can get the slightly better result.",
+            "But epoch one epoch is the enough",
+            "to just to check the how it works."
+          ],
+          "translated": "你可以这样做，我认为你可以得到稍微好一点的结果。但是一个轮次就足够了，只是为了检查它是如何工作的。"
+        },
+        {
+          "sources": [
+            "So let's just keep it as one and run training",
+            "and let's wait",
+            "15 to 20 minutes until it finished that training."
+          ],
+          "translated": "所以让我们保持一个轮次并进行训练，等待15到20分钟，直到训练完成。"
+        },
+        {
+          "sources": [
+            "Now training is done, so let's use it for captioning,",
+            "but before that we need to rebuild the decoder for inference",
+            "in order to control the growth state manually.",
+            "As we talked in the previous video."
+          ],
+          "translated": "现在训练已经完成，让我们用它来做字幕，但在此之前，我们需要为推理重建解码器，以便手动控制增长状态。正如我们在之前的视频中讨论的。"
+        },
+        {
+          "sources": [
+            "So in this cell, by re-using the trained layers,",
+            "we are creating a model for inference.",
+            "So here you can find train decoder GRU",
+            "train decoder attention and so on."
+          ],
+          "translated": "所以在这个单元格中，通过重复使用训练过的层，我们正在创建一个用于推理的模型。所以在这里你可以找到训练解码器GRU、训练解码器注意力等。"
+        },
+        {
+          "sources": [
+            "And compared to the train training model, we are adding",
+            "GRU state to its Io's.",
+            "For inputs,",
+            "we are adding GRU state inputs and for output we are adding",
+            "GRU state as output."
+          ],
+          "translated": "与训练模型相比，我们在添加GRU状态到其Io's。对于输入，我们添加GRU状态输入，对于输出，我们添加Jerry的状态作为输出。"
+        },
+        {
+          "sources": [
+            "So by doing so we can control the GRU state",
+            "in the inference group."
+          ],
+          "translated": "这样我们就可以控制推理组中的GRU状态。"
+        },
+        {
+          "sources": [
+            "Okay, so let's generate text with this",
+            "custom inference loop function.",
+            "We already discussed the what kind of the component",
+            "it should have in the previous video, but let's review very briefly."
+          ],
+          "translated": "好的，让我们用这个自定义推理循环函数生成文本。我们已经在之前的视频中讨论了它应该具有哪些组件，但让我们简要回顾一下。"
+        },
+        {
+          "sources": [
+            "So first we initialize GRU state,",
+            "in this case just the initialize with zero vector simply.",
+            "And then here we get image",
+            "and then pre process to image and pass it to encoder.",
+            "Of course, the train encoder",
+            "and we can get the feature image features",
+            "and before passing it to our decoder."
+          ],
+          "translated": "首先我们初始化GRU状态，在这种情况下只需用零向量初始化。然后我们获取图像，然后对图像进行预处理并将其传递给编码器。当然，训练编码器，我们可以获得特征图像特征，在传递给解码器之前。"
+        },
+        {
+          "sources": [
+            "So we also initialize this, this start token",
+            "as the first word",
+            "and then",
+            "we are going to repeat this whole loop",
+            "again and again and generate text one by one."
+          ],
+          "translated": "所以我们也初始化这个，这个开始标记作为第一个单词，然后我们将重复这个整个循环，一次又一次地生成文本。"
+        },
+        {
+          "sources": [
+            "So a step that looks like this coding decoder, of course,",
+            "and then it returns a lot of predictions",
+            "out of the word of the probabilities.",
+            "So there are so many ways to pick up the actual word the final word,",
+            "final selection from the list of a lot of ward probabilities.",
+            "But in this case we are pulling the word kind of stochastically",
+            "to introduce some randomness.",
+            "So it is the these lines of code are doing doing that",
+            "and eventually picking up some words",
+            "and the the bringing it back to the brink bring it back to the word",
+            "from the word token by using the tokenizer",
+            "and appending to the list."
+          ],
+          "translated": "所以一个看起来像这样的编码解码器的步骤，当然，然后它返回很多预测，从单词的概率中。所以有很多方法可以从很多词概率的列表中挑选实际的最后一个词、最后的选择。但在这种情况下，我们以随机的方式拉出单词，引入一些随机性。所以这些代码行在做这个，最终挑选出一些单词，然后把它带回到边缘，用分词器把它带回到单词，从单词标记中，并附加到列表中。"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "255",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 58,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 0,
+            "milliseconds": 799
+          },
+          "text": "So eventually we should get some captions."
+        },
+        {
+          "id": "256",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 1,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 3,
+            "milliseconds": 466
+          },
+          "text": "So let's take a look at the result."
+        },
+        {
+          "id": "257",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 3,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 6,
+            "milliseconds": 166
+          },
+          "text": "So defined this function and let's call it"
+        },
+        {
+          "id": "258",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 10,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 11,
+            "milliseconds": 999
+          },
+          "text": "so here"
+        },
+        {
+          "id": "259",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 12,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 17,
+            "milliseconds": 365
+          },
+          "text": "you can see a caption samples for this image."
+        },
+        {
+          "id": "260",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 17,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 22,
+            "milliseconds": 31
+          },
+          "text": "So this sample image is located in this directly."
+        },
+        {
+          "id": "261",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 22,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 25,
+            "milliseconds": 699
+          },
+          "text": "Just passing this for the JPEG and the"
+        },
+        {
+          "id": "262",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 25,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 27,
+            "milliseconds": 799
+          },
+          "text": "it returns five captions."
+        },
+        {
+          "id": "263",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 29,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 33,
+            "milliseconds": 99
+          },
+          "text": "It looks like this a baseball player standing next to the bat"
+        },
+        {
+          "id": "264",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 33,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 36,
+            "milliseconds": 564
+          },
+          "text": "a catcher in a field playing baseball"
+        },
+        {
+          "id": "265",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 36,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 39,
+            "milliseconds": 32
+          },
+          "text": "or something like that."
+        },
+        {
+          "id": "266",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 39,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 42,
+            "milliseconds": 364
+          },
+          "text": "It is not grammatically perfect,"
+        },
+        {
+          "id": "267",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 42,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 46,
+            "milliseconds": 732
+          },
+          "text": "but still the you can see it is generating the text,"
+        },
+        {
+          "id": "268",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 46,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 50,
+            "milliseconds": 898
+          },
+          "text": "generating multiple text and generating the meaningful text."
+        },
+        {
+          "id": "269",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 51,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 54,
+            "milliseconds": 599
+          },
+          "text": "And also we can see our model is capturing"
+        },
+        {
+          "id": "270",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 54,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 57,
+            "milliseconds": 333
+          },
+          "text": "important informations like baseball"
+        },
+        {
+          "id": "271",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 57,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 59,
+            "milliseconds": 999
+          },
+          "text": "or catcher or"
+        },
+        {
+          "id": "272",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 2,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 3,
+            "milliseconds": 399
+          },
+          "text": "a man standing next"
+        },
+        {
+          "id": "273",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 3,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 7,
+            "milliseconds": 365
+          },
+          "text": "to another man or baseball field or something like that."
+        },
+        {
+          "id": "274",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 8,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 10,
+            "milliseconds": 499
+          },
+          "text": "So still, it's not very"
+        },
+        {
+          "id": "275",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 10,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 16,
+            "milliseconds": 432
+          },
+          "text": "it's not perfect, but it is generating very meaningful text."
+        },
+        {
+          "id": "276",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 16,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 18,
+            "milliseconds": 632
+          },
+          "text": "It's very surprising, isn't it?"
+        },
+        {
+          "id": "277",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 18,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 20,
+            "milliseconds": 833
+          },
+          "text": "So the model is very simple."
+        },
+        {
+          "id": "278",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 21,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 25,
+            "milliseconds": 198
+          },
+          "text": "We are just stacking encoder and decoder and then passing the image"
+        },
+        {
+          "id": "279",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 25,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 29,
+            "milliseconds": 700
+          },
+          "text": "cap image data to encoder and the decoder generate captions"
+        },
+        {
+          "id": "280",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 30,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 32,
+            "milliseconds": 931
+          },
+          "text": "one by one in auto regressive way."
+        },
+        {
+          "id": "281",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 33,
+            "milliseconds": 965
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 36,
+            "milliseconds": 731
+          },
+          "text": "So just by stacking this so we can create this"
+        },
+        {
+          "id": "282",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 36,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 39,
+            "milliseconds": 65
+          },
+          "text": "kind of the very small generative model."
+        },
+        {
+          "id": "283",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 40,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 41,
+            "milliseconds": 99
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "284",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 41,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 45,
+            "milliseconds": 565
+          },
+          "text": "Currently there are so many generative large language models out there."
+        },
+        {
+          "id": "285",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 45,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 48,
+            "milliseconds": 732
+          },
+          "text": "Of course they have more complex and larger network"
+        },
+        {
+          "id": "286",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 49,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 51,
+            "milliseconds": 266
+          },
+          "text": "and train a much larger dataset."
+        },
+        {
+          "id": "287",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 52,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 55,
+            "milliseconds": 500
+          },
+          "text": "But the architecture may look similar to this simple model."
+        },
+        {
+          "id": "288",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 56,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 58,
+            "milliseconds": 833
+          },
+          "text": "Thank you so much for watching this video."
+        },
+        {
+          "id": "289",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 58,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 0,
+            "milliseconds": 599
+          },
+          "text": "I hope you enjoyed."
+        },
+        {
+          "id": "290",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 0,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 4,
+            "milliseconds": 399
+          },
+          "text": "If you like this presentation, you'll find more in our ASL"
+        },
+        {
+          "id": "291",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 4,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 8,
+            "milliseconds": 400
+          },
+          "text": "Github repository with 90 plus immersion regarding notebooks"
+        },
+        {
+          "id": "292",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 10,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 11,
+            "milliseconds": 732
+          },
+          "text": "if you find it useful."
+        },
+        {
+          "id": "293",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 11,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 14,
+            "milliseconds": 398
+          },
+          "text": "Please don't forget to star the repository."
+        }
+      ],
+      "source": [
+        "So eventually we should get some captions.",
+        "So let's take a look at the result.",
+        "So defined this function and let's call it",
+        "so here",
+        "you can see a caption samples for this image.",
+        "So this sample image is located in this directly.",
+        "Just passing this for the JPEG and the",
+        "it returns five captions.",
+        "It looks like this a baseball player standing next to the bat",
+        "a catcher in a field playing baseball",
+        "or something like that.",
+        "It is not grammatically perfect,",
+        "but still the you can see it is generating the text,",
+        "generating multiple text and generating the meaningful text.",
+        "And also we can see our model is capturing",
+        "important informations like baseball",
+        "or catcher or",
+        "a man standing next",
+        "to another man or baseball field or something like that.",
+        "So still, it's not very",
+        "it's not perfect, but it is generating very meaningful text.",
+        "It's very surprising, isn't it?",
+        "So the model is very simple.",
+        "We are just stacking encoder and decoder and then passing the image",
+        "cap image data to encoder and the decoder generate captions",
+        "one by one in auto regressive way.",
+        "So just by stacking this so we can create this",
+        "kind of the very small generative model.",
+        "Okay.",
+        "Currently there are so many generative large language models out there.",
+        "Of course they have more complex and larger network",
+        "and train a much larger dataset.",
+        "But the architecture may look similar to this simple model.",
+        "Thank you so much for watching this video.",
+        "I hope you enjoyed.",
+        "If you like this presentation, you'll find more in our ASL",
+        "Github repository with 90 plus immersion regarding notebooks",
+        "if you find it useful.",
+        "Please don't forget to star the repository."
+      ],
+      "result": [
+        "所以最后我们应该得到一些图片的文字说明。",
+        "让我们看看结果。",
+        "定义了这个函数，然后调用它。",
+        "在这里，你可以看到这张图片的文字说明样本。",
+        "",
+        "这个样本图片位于这个目录中。",
+        "只需传递JPEG和它返回五条文字说明。",
+        "",
+        "看起来像是一个棒球运动员站在球棒旁边一个接球员在棒球场上打棒球，或者类似的东西。",
+        "",
+        "",
+        "虽然语法不完美，",
+        "但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。",
+        "",
+        "我们还可以看到我们的模型捕捉到了重要的信息，如棒球、接球员或一个人站在另一个人旁边，或棒球场之类的。",
+        "",
+        "",
+        "",
+        "",
+        "虽然不是很完美，但它确实在生成非常有意义的文本。",
+        "",
+        "令人惊讶，不是吗？",
+        "这个模型非常简单。",
+        "我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成图像的文字说明。",
+        "",
+        "",
+        "通过堆叠编码器和解码器，我们可以创建这种非常小的生成模型。",
+        "",
+        "好的。",
+        "目前市面上有很多生成性的大语言模型。",
+        "当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。",
+        "",
+        "但是，这个简单模型的架构可能与它们类似。",
+        "非常感谢观看这个视频。",
+        "希望你喜欢。",
+        "如果你喜欢这个演示，你可以在我们的ASL Github Repo中找到90多个机器学习相关的Notebooks，",
+        "",
+        "如果你觉得有用，请不要忘记给GitHub Repo加星。",
+        ""
+      ],
+      "output": [
+        {
+          "sources": [
+            "So eventually we should get some captions.",
+            "So let's take a look at the result.",
+            "So defined this function and let's call it"
+          ],
+          "translated": "首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。"
+        },
+        {
+          "sources": [
+            "so here",
+            "you can see a caption samples for this image.",
+            "So this sample image is located in this directly."
+          ],
+          "translated": "在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。"
+        },
+        {
+          "sources": [
+            "Just passing this for the JPEG and the",
+            "it returns five captions.",
+            "It looks like this a baseball player standing next to the bat"
+          ],
+          "translated": "只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边"
+        },
+        {
+          "sources": [
+            "a catcher in a field playing baseball",
+            "or something like that.",
+            "It is not grammatically perfect,"
+          ],
+          "translated": "一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，"
+        },
+        {
+          "sources": [
+            "but still the you can see it is generating the text,",
+            "generating multiple text and generating the meaningful text.",
+            "And also we can see our model is capturing"
+          ],
+          "translated": "但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。我们还可以看到我们的模型捕捉到了"
+        },
+        {
+          "sources": [
+            "important informations like baseball",
+            "or catcher or",
+            "a man standing next",
+            "to another man or baseball field or something like that."
+          ],
+          "translated": "重要的信息，如棒球、接球员或一个人站在另一个人旁边的棒球场等等。"
+        },
+        {
+          "sources": [
+            "So still, it's not very",
+            "it's not perfect, but it is generating very meaningful text.",
+            "It's very surprising, isn't it?"
+          ],
+          "translated": "虽然不是很完美，但它确实在生成非常有意义的文本。令人惊讶，不是吗？"
+        },
+        {
+          "sources": [
+            "So the model is very simple.",
+            "We are just stacking encoder and decoder and then passing the image",
+            "cap image data to encoder and the decoder generate captions"
+          ],
+          "translated": "这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。"
+        },
+        {
+          "sources": [
+            "one by one in auto regressive way.",
+            "So just by stacking this so we can create this",
+            "kind of the very small generative model.",
+            "Okay."
+          ],
+          "translated": "通过堆叠这些，我们可以创建这种非常小的生成模型。好的。"
+        },
+        {
+          "sources": [
+            "Currently there are so many generative large language models out there.",
+            "Of course they have more complex and larger network",
+            "and train a much larger dataset."
+          ],
+          "translated": "目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。"
+        },
+        {
+          "sources": [
+            "But the architecture may look similar to this simple model.",
+            "Thank you so much for watching this video.",
+            "I hope you enjoyed."
+          ],
+          "translated": "但是，这个简单模型的架构可能与它们类似。非常感谢观看这个视频。希望你喜欢。"
+        },
+        {
+          "sources": [
+            "If you like this presentation, you'll find more in our ASL",
+            "Github repository with 90 plus immersion regarding notebooks",
+            "if you find it useful."
+          ],
+          "translated": "如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到90多个沉浸式Notebook，如果你觉得有用，"
+        },
+        {
+          "sources": [
+            "Please don't forget to star the repository."
+          ],
+          "translated": "请不要忘记给仓库加星。"
+        }
+      ],
+      "status": "success",
+      "errors": [
+        "Mon Jun 26 2023 19:29:02 GMT-0500 (Central Daylight Time)\nResponse is not a valid JSON. \n首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边，一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，但仍然可以看出它在生成文本，生成多个文本并生成有意义的文本。此外，我们还可以看到我们的模型捕捉到了重要的信息，如棒球、接球员或一个男人站在另一个男人旁边，或者棒球场之类的东西。所以虽然不是很完美，但它确实在生成非常有意义的文本。这很令人惊讶，不是吗？这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。通过堆叠这样，我们可以创建这种非常小的生成模型。好的。目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。但是，这个简单模型的架构可能与它们类似。非常感谢您观看这个视频。希望您喜欢。如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到更多关于90多个沉浸式Notebook的内容，如果你觉得有用的话。请不要忘记给仓库加星。\nError: Response is not a valid JSON. \n首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边，一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，但仍然可以看出它在生成文本，生成多个文本并生成有意义的文本。此外，我们还可以看到我们的模型捕捉到了重要的信息，如棒球、接球员或一个男人站在另一个男人旁边，或者棒球场之类的东西。所以虽然不是很完美，但它确实在生成非常有意义的文本。这很令人惊讶，不是吗？这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。通过堆叠这样，我们可以创建这种非常小的生成模型。好的。目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。但是，这个简单模型的架构可能与它们类似。非常感谢您观看这个视频。希望您喜欢。如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到更多关于90多个沉浸式Notebook的内容，如果你觉得有用的话。请不要忘记给仓库加星。\n    at translateByGroupSentences (/Users/junminliu/GitHub/subtitle-translator/src/openai.ts:214:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at translateChunkBySentences (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:23:40)\n    at startThread (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:99:11)\n    at async Promise.all (index 0)\n    at translate (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:119:3)\n    at main (/Users/junminliu/GitHub/subtitle-translator/src/main.ts:45:31)",
+        "Mon Jun 26 2023 19:32:13 GMT-0500 (Central Daylight Time)\nResponse is not a valid JSON. \n首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边，一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。我们还可以看到我们的模型捕捉到了重要的信息，如棒球、接球员或一个人站在另一个人旁边的棒球场等等。虽然不是很完美，但它确实在生成非常有意义的文本。令人惊讶，不是吗？这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。通过堆叠这些，我们可以创建这种非常小的生成模型。好的。目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。但是，这个简单模型的架构可能与它们类似。非常感谢观看这个视频。希望你喜欢。如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到90多个沉浸式Notebook，如果你觉得有用，请不要忘记给仓库加星。\n\n[\n{\n  \"sources\": [\"So eventually we should get some captions.\",\"So let's take a look at the result.\",\"So defined this function and let's call it\"],\n  \"translated\": \"首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。\"\n},\n{\n  \"sources\": [\"so here\",\"you can see a caption samples for this image.\",\"So this sample image is located in this directly.\"],\n  \"translated\": \"在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。\"\n},\n{\n  \"sources\": [\"Just passing this for the JPEG and the\",\"it returns five captions.\",\"It looks like this a baseball player standing next to the bat\"],\n  \"translated\": \"只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边\"\n},\n{\n  \"sources\": [\"a catcher in a field playing baseball\",\"or something like that.\",\"It is not grammatically perfect,\"],\n  \"translated\": \"一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，\"\n},\n{\n  \"sources\": [\"but still the you can see it is generating the text,\",\"generating multiple text and generating the meaningful text.\",\"And also we can see our model is capturing\"],\n  \"translated\": \"但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。我们还可以看到我们的模型捕捉到了\"\n},\n{\n  \"sources\": [\"important informations like baseball\",\"or catcher or\",\"a man standing next\",\"to another man or baseball field or something like that.\"],\n  \"translated\": \"重要的信息，如棒球、接球员或一个人站在另一个人旁边的棒球场等等。\"\n},\n{\n  \"sources\": [\"So still, it's not very\",\"it's not perfect, but it is generating very meaningful text.\",\"It's very surprising, isn't it?\"],\n  \"translated\": \"虽然不是很完美，但它确实在生成非常有意义的文本。令人惊讶，不是吗？\"\n},\n{\n  \"sources\": [\"So the model is very simple.\",\"We are just stacking encoder and decoder and then passing the image\",\"cap image data to encoder and the decoder generate captions\"],\n  \"translated\": \"这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。\"\n},\n{\n  \"sources\": [\"one by one in auto regressive way.\",\"So just by stacking this so we can create this\",\"kind of the very small generative model.\",\"Okay.\"],\n  \"translated\": \"通过堆叠这些，我们可以创建这种非常小的生成模型。好的。\"\n},\n{\n  \"sources\": [\"Currently there are so many generative large language models out there.\",\"Of course they have more complex and larger network\",\"and train a much larger dataset.\"],\n  \"translated\": \"目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。\"\n},\n{\n  \"sources\": [\"But the architecture may look similar to this simple model.\",\"Thank you so much for watching this video.\",\"I hope you enjoyed.\"],\n  \"translated\": \"但是，这个简单模型的架构可能与它们类似。非常感谢观看这个视频。希望你喜欢。\"\n},\n{\n  \"sources\": [\"If you like this presentation, you'll find more in our ASL\",\"Github repository with 90 plus immersion regarding notebooks\",\"if you find it useful.\"],\n  \"translated\": \"如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到90多个沉浸式Notebook，如果你觉得有用，\"\n},\n{\n  \"sources\": [\"Please don't forget to star the repository.\"],\n  \"translated\": \"请不要忘记给仓库加星。\"\n}\n]\nError: Response is not a valid JSON. \n首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边，一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。我们还可以看到我们的模型捕捉到了重要的信息，如棒球、接球员或一个人站在另一个人旁边的棒球场等等。虽然不是很完美，但它确实在生成非常有意义的文本。令人惊讶，不是吗？这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。通过堆叠这些，我们可以创建这种非常小的生成模型。好的。目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。但是，这个简单模型的架构可能与它们类似。非常感谢观看这个视频。希望你喜欢。如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到90多个沉浸式Notebook，如果你觉得有用，请不要忘记给仓库加星。\n\n[\n{\n  \"sources\": [\"So eventually we should get some captions.\",\"So let's take a look at the result.\",\"So defined this function and let's call it\"],\n  \"translated\": \"首先，我们应该得到一些字幕。让我们看看结果。定义了这个函数，然后调用它。\"\n},\n{\n  \"sources\": [\"so here\",\"you can see a caption samples for this image.\",\"So this sample image is located in this directly.\"],\n  \"translated\": \"在这里，你可以看到这张图片的字幕样本。这个样本图片位于这个目录中。\"\n},\n{\n  \"sources\": [\"Just passing this for the JPEG and the\",\"it returns five captions.\",\"It looks like this a baseball player standing next to the bat\"],\n  \"translated\": \"只需传递JPEG和它返回五个字幕。看起来像是一个棒球运动员站在球棒旁边\"\n},\n{\n  \"sources\": [\"a catcher in a field playing baseball\",\"or something like that.\",\"It is not grammatically perfect,\"],\n  \"translated\": \"一个接球员在场地上打棒球，或者类似的东西。虽然语法不完美，\"\n},\n{\n  \"sources\": [\"but still the you can see it is generating the text,\",\"generating multiple text and generating the meaningful text.\",\"And also we can see our model is capturing\"],\n  \"translated\": \"但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。我们还可以看到我们的模型捕捉到了\"\n},\n{\n  \"sources\": [\"important informations like baseball\",\"or catcher or\",\"a man standing next\",\"to another man or baseball field or something like that.\"],\n  \"translated\": \"重要的信息，如棒球、接球员或一个人站在另一个人旁边的棒球场等等。\"\n},\n{\n  \"sources\": [\"So still, it's not very\",\"it's not perfect, but it is generating very meaningful text.\",\"It's very surprising, isn't it?\"],\n  \"translated\": \"虽然不是很完美，但它确实在生成非常有意义的文本。令人惊讶，不是吗？\"\n},\n{\n  \"sources\": [\"So the model is very simple.\",\"We are just stacking encoder and decoder and then passing the image\",\"cap image data to encoder and the decoder generate captions\"],\n  \"translated\": \"这个模型非常简单。我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成字幕。\"\n},\n{\n  \"sources\": [\"one by one in auto regressive way.\",\"So just by stacking this so we can create this\",\"kind of the very small generative model.\",\"Okay.\"],\n  \"translated\": \"通过堆叠这些，我们可以创建这种非常小的生成模型。好的。\"\n},\n{\n  \"sources\": [\"Currently there are so many generative large language models out there.\",\"Of course they have more complex and larger network\",\"and train a much larger dataset.\"],\n  \"translated\": \"目前市面上有很多生成性的大型语言模型。当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。\"\n},\n{\n  \"sources\": [\"But the architecture may look similar to this simple model.\",\"Thank you so much for watching this video.\",\"I hope you enjoyed.\"],\n  \"translated\": \"但是，这个简单模型的架构可能与它们类似。非常感谢观看这个视频。希望你喜欢。\"\n},\n{\n  \"sources\": [\"If you like this presentation, you'll find more in our ASL\",\"Github repository with 90 plus immersion regarding notebooks\",\"if you find it useful.\"],\n  \"translated\": \"如果你喜欢这个演示，你可以在我们的ASL Github仓库中找到90多个沉浸式Notebook，如果你觉得有用，\"\n},\n{\n  \"sources\": [\"Please don't forget to star the repository.\"],\n  \"translated\": \"请不要忘记给仓库加星。\"\n}\n]\n    at translateByGroupSentences (/Users/junminliu/GitHub/subtitle-translator/src/openai.ts:214:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at translateChunkBySentences (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:23:40)\n    at startThread (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:99:11)\n    at async Promise.all (index 0)\n    at translate (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:119:3)\n    at main (/Users/junminliu/GitHub/subtitle-translator/src/main.ts:45:31)"
+      ],
+      "mismatched": true
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Create Image Captioning Models- Lab Walkthrough.srt",
+  "ouputBasePath": "input/Generative AI learning path/Create Image Captioning Models- Lab Walkthrough",
+  "totalCost": 0.49971,
+  "translationPath": "input/Generative AI learning path/Create Image Captioning Models- Lab Walkthrough/translation.json"
+}

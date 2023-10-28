@@ -1,0 +1,463 @@
+[Script Info]
+
+Title: Create Image Captioning Models- Lab Walkthrough
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.40,0:00:01.30,Secondary,,0,0,0,,Hi, everyone.
+Dialogue: 1,0:00:01.30,0:00:05.63,Secondary,,0,0,0,,I'm Takumi, machine Learning engineer at Google Advanced Solutions Lab
+Dialogue: 1,0:00:06.87,0:00:09.63,Secondary,,0,0,0,,This is the second half of the image captioning session.
+Dialogue: 1,0:00:10.20,0:00:14.10,Secondary,,0,0,0,,If you haven't seen the first half, I recommend checking it out first.
+Dialogue: 1,0:00:15.73,0:00:19.73,Secondary,,0,0,0,,And in this video, I'm going to walk you through the entire code notebook
+Dialogue: 1,0:00:19.80,0:00:24.3,Secondary,,0,0,0,,to help you understand how to create a very simple generative model.
+Dialogue: 1,0:00:25.87,0:00:27.33,Secondary,,0,0,0,,All the setup information
+Dialogue: 1,0:00:27.33,0:00:29.93,Secondary,,0,0,0,,is written in the ASL GitHub repository.
+Dialogue: 1,0:00:30.90,0:00:32.96,Secondary,,0,0,0,,You can find the link in the slide
+Dialogue: 1,0:00:32.97,0:00:35.57,Secondary,,0,0,0,,or in the description below this video.
+Dialogue: 1,0:00:37.27,0:00:38.83,Secondary,,0,0,0,,After setting up the Vertex
+Dialogue: 1,0:00:38.83,0:00:42.7,Secondary,,0,0,0,,AI I work bench environment and clone in the repo.
+Dialogue: 1,0:00:42.7,0:00:46.57,Secondary,,0,0,0,,Following the instruction you can find the image captioning notebook
+Dialogue: 1,0:00:46.73,0:00:51.43,Secondary,,0,0,0,,under asl-ml-immersion notebooks
+Dialogue: 1,0:00:52.47,0:00:55.30,Secondary,,0,0,0,,and multimodal
+Dialogue: 1,0:00:55.30,0:00:56.93,Secondary,,0,0,0,,solutions.
+Dialogue: 1,0:00:57.40,0:00:58.20,Secondary,,0,0,0,,Here you go.
+Dialogue: 1,0:00:58.20,0:01:01.50,Secondary,,0,0,0,,You can find image captioning dot i Python notebook.
+Dialogue: 1,0:01:01.83,0:01:03.47,Secondary,,0,0,0,,So please open this file
+Dialogue: 1,0:01:06.33,0:01:07.50,Secondary,,0,0,0,,and here you can see
+Dialogue: 1,0:01:07.50,0:01:11.23,Secondary,,0,0,0,,all the process and instructions to build and use
+Dialogue: 1,0:01:11.23,0:01:14.73,Secondary,,0,0,0,,an image captioning model which we discussed in the previous video.
+Dialogue: 1,0:01:15.90,0:01:19.50,Secondary,,0,0,0,,Let's take a look from the first cell.
+Dialogue: 1,0:01:19.50,0:01:20.70,Secondary,,0,0,0,,In the first cell.
+Dialogue: 1,0:01:20.70,0:01:23.63,Secondary,,0,0,0,,Of course we install all the dependencies,
+Dialogue: 1,0:01:23.97,0:01:26.43,Secondary,,0,0,0,,including tensorflow keras
+Dialogue: 1,0:01:27.17,0:01:30.43,Secondary,,0,0,0,,and here we can find TensorFlow keras layers
+Dialogue: 1,0:01:30.73,0:01:34.13,Secondary,,0,0,0,,and installing order layers we need for image captioning model
+Dialogue: 1,0:01:34.77,0:01:39.7,Secondary,,0,0,0,,including GRU, add layer, attention layer
+Dialogue: 1,0:01:39.53,0:01:42.10,Secondary,,0,0,0,,or dense layer embedding layer now
+Dialogue: 1,0:01:42.33,0:01:45.10,Secondary,,0,0,0,,layer normalization layer.
+Dialogue: 1,0:01:45.33,0:01:48.53,Secondary,,0,0,0,,So let's run one by one
+Dialogue: 1,0:01:49.83,0:01:52.50,Secondary,,0,0,0,,and in the next cell
+Dialogue: 1,0:01:54.0,0:01:54.73,Secondary,,0,0,0,,we define
+Dialogue: 1,0:01:54.73,0:01:58.27,Secondary,,0,0,0,,some hyper parameters, including vocabulary size,
+Dialogue: 1,0:01:58.27,0:02:03.37,Secondary,,0,0,0,,which means how many vocabularies we're going to use for image captioning.
+Dialogue: 1,0:02:03.37,0:02:06.43,Secondary,,0,0,0,,Or you can find a feature extractor, which means
+Dialogue: 1,0:02:06.43,0:02:10.37,Secondary,,0,0,0,,what kind of model we want to use in encoder model.
+Dialogue: 1,0:02:10.90,0:02:14.73,Secondary,,0,0,0,,So in this case, as we discussed in the previous video, we are specifying
+Dialogue: 1,0:02:14.73,0:02:19.37,Secondary,,0,0,0,,inception resnet v2, which is very classical CNN based model
+Dialogue: 1,0:02:20.87,0:02:23.10,Secondary,,0,0,0,,and all the definitions below
+Dialogue: 1,0:02:23.10,0:02:26.100,Secondary,,0,0,0,,image, height, width channel and the feature shape is coming from
+Dialogue: 1,0:02:27.0,0:02:31.80,Secondary,,0,0,0,,the definition of the inception, resnet v2 and especially this feature shape.
+Dialogue: 1,0:02:31.83,0:02:37.3,Secondary,,0,0,0,,8, 8, 1536 is the shape
+Dialogue: 1,0:02:37.3,0:02:39.56,Secondary,,0,0,0,,this inception resnet v2 produce.
+Dialogue: 1,0:02:41.27,0:02:43.13,Secondary,,0,0,0,,So let's define
+Dialogue: 1,0:02:43.43,0:02:44.63,Secondary,,0,0,0,,in this way
+Dialogue: 1,0:02:48.57,0:02:49.20,Secondary,,0,0,0,,cool.
+Dialogue: 1,0:02:49.47,0:02:52.67,Secondary,,0,0,0,,So in the next cell we're going to load the data
+Dialogue: 1,0:02:53.40,0:02:56.10,Secondary,,0,0,0,,0 from tfds, which means TensorFlow datasets.
+Dialogue: 1,0:02:58.17,0:03:00.17,Secondary,,0,0,0,,So TensorFlow datasets host this
+Dialogue: 1,0:03:00.17,0:03:03.20,Secondary,,0,0,0,,caption data set in this name “coco captions”
+Dialogue: 1,0:03:03.20,0:03:06.13,Secondary,,0,0,0,,so we can specify this name and the loading data.
+Dialogue: 1,0:03:07.73,0:03:09.60,Secondary,,0,0,0,,And after loading data
+Dialogue: 1,0:03:09.60,0:03:12.63,Secondary,,0,0,0,,we can pass some preprocessing function,
+Dialogue: 1,0:03:14.3,0:03:18.17,Secondary,,0,0,0,,get image level which is defined here, get the image level,
+Dialogue: 1,0:03:18.20,0:03:22.26,Secondary,,0,0,0,,and here we can find some preprocessing, very basic preprocessing,
+Dialogue: 1,0:03:23.70,0:03:27.13,Secondary,,0,0,0,,including changing the size of the image
+Dialogue: 1,0:03:27.60,0:03:32.57,Secondary,,0,0,0,,or the change in the scale of the image and returning image tensor
+Dialogue: 1,0:03:32.57,0:03:37.57,Secondary,,0,0,0,,and the caption at the same time.
+Dialogue: 1,0:03:37.57,0:03:39.67,Secondary,,0,0,0,,So let's run in the same way
+Dialogue: 1,0:03:40.73,0:03:41.97,Secondary,,0,0,0,,and let's take a look at
+Dialogue: 1,0:03:41.97,0:03:44.7,Secondary,,0,0,0,,some of the example.
+Dialogue: 1,0:03:51.77,0:03:54.10,Secondary,,0,0,0,,Here we can see, for example,
+Dialogue: 1,0:03:54.10,0:03:56.70,Secondary,,0,0,0,,a random example
+Dialogue: 1,0:03:56.70,0:04:01.63,Secondary,,0,0,0,,and each pair of image and text makes sense to me.
+Dialogue: 1,0:04:01.63,0:04:04.97,Secondary,,0,0,0,,So wide plate with a toasted sandwich,
+Dialogue: 1,0:04:05.50,0:04:08.3,Secondary,,0,0,0,,chips and fries for this image.
+Dialogue: 1,0:04:08.33,0:04:11.10,Secondary,,0,0,0,,And another caption for another image.
+Dialogue: 1,0:04:11.93,0:04:13.23,Secondary,,0,0,0,,And we have a lot of image.
+Dialogue: 1,0:04:13.23,0:04:17.53,Secondary,,0,0,0,,So if you want to see another example, you can run this cell again
+Dialogue: 1,0:04:17.53,0:04:21.40,Secondary,,0,0,0,,and you will see another example.
+Dialogue: 1,0:04:21.40,0:04:23.27,Secondary,,0,0,0,,So let's move on.
+Dialogue: 1,0:04:24.13,0:04:26.33,Secondary,,0,0,0,,So since we have text data,
+Dialogue: 1,0:04:26.33,0:04:30.60,Secondary,,0,0,0,,we need to preprocess that text data in kind of standard way.
+Dialogue: 1,0:04:31.53,0:04:35.90,Secondary,,0,0,0,,So in this cell we add start
+Dialogue: 1,0:04:35.90,0:04:41.20,Secondary,,0,0,0,,and end special tokens, which we discussed in the slide as well.
+Dialogue: 1,0:04:41.97,0:04:47.70,Secondary,,0,0,0,,So by adding this so we can handle this token as a kind of special sign, this
+Dialogue: 1,0:04:47.70,0:04:50.76,Secondary,,0,0,0,,start talking means the special token,
+Dialogue: 1,0:04:50.77,0:04:54.13,Secondary,,0,0,0,,that means the beginning of the sentence.
+Dialogue: 1,0:04:54.77,0:05:00.3,Secondary,,0,0,0,,And in the same way, the end token means the, the end of the sentence.
+Dialogue: 1,0:05:01.0,0:05:03.33,Secondary,,0,0,0,,So we can add these things
+Dialogue: 1,0:05:03.33,0:05:07.33,Secondary,,0,0,0,,in the same way trainds.map and pass this function.
+Dialogue: 1,0:05:07.33,0:05:14.70,Secondary,,0,0,0,,They let's move on.
+Dialogue: 1,0:05:14.70,0:05:17.97,Secondary,,0,0,0,,And this is a very important preprocessing.
+Dialogue: 1,0:05:18.47,0:05:21.57,Secondary,,0,0,0,,So now we have text data, caption data.
+Dialogue: 1,0:05:22.0,0:05:25.43,Secondary,,0,0,0,,So we're going to create tokenizer.
+Dialogue: 1,0:05:25.43,0:05:29.10,Secondary,,0,0,0,,So by creating tokenizer, we can tokenize word
+Dialogue: 1,0:05:29.30,0:05:32.47,Secondary,,0,0,0,,like start token or cat or dog
+Dialogue: 1,0:05:32.90,0:05:35.60,Secondary,,0,0,0,,to some index.
+Dialogue: 1,0:05:35.60,0:05:38.7,Secondary,,0,0,0,,In TensorFlow, it is very easy.
+Dialogue: 1,0:05:38.7,0:05:41.100,Secondary,,0,0,0,,You can just use this text vectoralization module
+Dialogue: 1,0:05:42.80,0:05:44.83,Secondary,,0,0,0,,and you can call
+Dialogue: 1,0:05:45.57,0:05:48.63,Secondary,,0,0,0,,by passing all the data or the caption data
+Dialogue: 1,0:05:48.90,0:05:51.40,Secondary,,0,0,0,,to this text vectoralization layer
+Dialogue: 1,0:05:52.70,0:05:56.53,Secondary,,0,0,0,,so it takes some time around 5 minutes in my environments.
+Dialogue: 1,0:05:56.73,0:06:01.90,Secondary,,0,0,0,,So let's wait until it finishes.
+Dialogue: 1,0:06:01.90,0:06:03.40,Secondary,,0,0,0,,Now it's finished.
+Dialogue: 1,0:06:03.90,0:06:07.23,Secondary,,0,0,0,,Now let's try this tokenizer either
+Dialogue: 1,0:06:07.60,0:06:11.23,Secondary,,0,0,0,,by passing some sample sentence,
+Dialogue: 1,0:06:11.90,0:06:15.27,Secondary,,0,0,0,,start token This is a sentence end token.
+Dialogue: 1,0:06:16.50,0:06:17.63,Secondary,,0,0,0,,So now you can
+Dialogue: 1,0:06:17.63,0:06:21.60,Secondary,,0,0,0,,see it is tokenized in this way.
+Dialogue: 1,0:06:21.60,0:06:24.60,Secondary,,0,0,0,,And so the here you can find a lot of paddings
+Dialogue: 1,0:06:25.97,0:06:28.57,Secondary,,0,0,0,,by changing this max caption lengths
+Dialogue: 1,0:06:29.0,0:06:31.87,Secondary,,0,0,0,,you can control the lengths of this padding here.
+Dialogue: 1,0:06:31.87,0:06:34.63,Secondary,,0,0,0,,But in this case we are specifying 64.
+Dialogue: 1,0:06:34.90,0:06:37.27,Secondary,,0,0,0,,So the order of the captions
+Dialogue: 1,0:06:37.93,0:06:40.70,Secondary,,0,0,0,,will be padded in this way
+Dialogue: 1,0:06:41.30,0:06:47.43,Secondary,,0,0,0,,until this max caption lengths.
+Dialogue: 1,0:06:47.43,0:06:49.86,Secondary,,0,0,0,,And in the same way you can see
+Dialogue: 1,0:06:51.0,0:06:54.30,Secondary,,0,0,0,,the behavior of this tokenizer
+Dialogue: 1,0:06:54.30,0:06:55.30,Secondary,,0,0,0,,This is very useful.
+Dialogue: 1,0:06:55.30,0:07:00.83,Secondary,,0,0,0,,Once you create you can apply this tokenizer in different captions
+Dialogue: 1,0:07:01.17,0:07:06.60,Secondary,,0,0,0,,and convert text data to the token at the white tokens.
+Dialogue: 1,0:07:07.90,0:07:11.77,Secondary,,0,0,0,,And it's nice to create converters at this point.
+Dialogue: 1,0:07:12.60,0:07:16.50,Secondary,,0,0,0,,So here we can find string lookup layer, string look up layer,
+Dialogue: 1,0:07:16.73,0:07:21.90,Secondary,,0,0,0,,and the creating converter the from want to index and also index to want.
+Dialogue: 1,0:07:22.30,0:07:25.10,Secondary,,0,0,0,,So we're going to use these modules later.
+Dialogue: 1,0:07:25.10,0:07:26.47,Secondary,,0,0,0,,So this is quite useful
+Dialogue: 1,0:07:28.80,0:07:31.37,Secondary,,0,0,0,,and then we can create a final data set.
+Dialogue: 1,0:07:32.43,0:07:34.80,Secondary,,0,0,0,,So this is a very important part.
+Dialogue: 1,0:07:34.80,0:07:36.87,Secondary,,0,0,0,,So we have trainds.
+Dialogue: 1,0:07:37.47,0:07:41.53,Secondary,,0,0,0,,We're going to add additional create_ds function, this function
+Dialogue: 1,0:07:42.30,0:07:45.43,Secondary,,0,0,0,,and as you can see, it returns image
+Dialogue: 1,0:07:45.43,0:07:48.23,Secondary,,0,0,0,,tensor caption that this is the tuple
+Dialogue: 1,0:07:50.10,0:07:52.37,Secondary,,0,0,0,,image tensor will go to encoder
+Dialogue: 1,0:07:52.50,0:07:55.70,Secondary,,0,0,0,,and caption will go to the decoder.
+Dialogue: 1,0:07:56.47,0:08:02.27,Secondary,,0,0,0,,And also we are creating Target, which is label.
+Dialogue: 1,0:08:02.27,0:08:06.70,Secondary,,0,0,0,,And in this function you can find this target is created from caption
+Dialogue: 1,0:08:06.90,0:08:11.43,Secondary,,0,0,0,,by the is shifting just caption
+Dialogue: 1,0:08:12.50,0:08:15.10,Secondary,,0,0,0,,in the in one word.
+Dialogue: 1,0:08:16.50,0:08:16.73,Secondary,,0,0,0,,Okay.
+Dialogue: 1,0:08:16.73,0:08:18.60,Secondary,,0,0,0,,By doing so, we are creating
+Dialogue: 1,0:08:18.60,0:08:22.90,Secondary,,0,0,0,,we're going to create a shifted caption, which means the next word A
+Dialogue: 1,0:08:23.43,0:08:32.23,Secondary,,0,0,0,,and we're going to utilize this for target.
+Dialogue: 1,0:08:32.23,0:08:35.33,Secondary,,0,0,0,,So let's define and apply this function
+Dialogue: 1,0:08:35.70,0:08:39.37,Secondary,,0,0,0,,and create a batch in specified batch size
+Dialogue: 1,0:08:40.3,0:08:43.67,Secondary,,0,0,0,,and everything is ready.
+Dialogue: 1,0:08:43.67,0:08:49.73,Secondary,,0,0,0,,So let's take a look at some of the data set.
+Dialogue: 1,0:08:49.73,0:08:50.20,Secondary,,0,0,0,,Here you go.
+Dialogue: 1,0:08:50.20,0:08:55.13,Secondary,,0,0,0,,So you can find the image in this shape and caption in the shape
+Dialogue: 1,0:08:55.13,0:08:59.10,Secondary,,0,0,0,,0 and level in the same shape as caption because we are just shifting.
+Dialogue: 1,0:09:00.0,0:09:00.43,Secondary,,0,0,0,,And no.
+Dialogue: 1,0:09:00.43,0:09:04.83,Secondary,,0,0,0,,So we are padding the shifted part with zero value
+Dialogue: 1,0:09:06.97,0:09:08.23,Secondary,,0,0,0,,looks nice.
+Dialogue: 1,0:09:08.67,0:09:12.10,Secondary,,0,0,0,,So the next part is model.
+Dialogue: 1,0:09:12.10,0:09:14.43,Secondary,,0,0,0,,Most of the model code has already explained
+Dialogue: 1,0:09:14.43,0:09:17.60,Secondary,,0,0,0,,in the previous video, so I'm going to go through very quickly.
+Dialogue: 1,0:09:17.97,0:09:22.30,Secondary,,0,0,0,,But if you are not very familiar with that very confident with that,
+Dialogue: 1,0:09:22.30,0:09:25.23,Secondary,,0,0,0,,then you can go back to the the previous slide and check
+Dialogue: 1,0:09:25.57,0:09:28.27,Secondary,,0,0,0,,what is going on inside encoder and decoder.
+Dialogue: 1,0:09:28.90,0:09:30.80,Secondary,,0,0,0,,So here in this video.
+Dialogue: 1,0:09:30.80,0:09:33.30,Secondary,,0,0,0,,So let's quickly run these things.
+Dialogue: 1,0:09:33.43,0:09:39.30,Secondary,,0,0,0,,So this is the encoder and as you can see we are just in the applying inception
+Dialogue: 1,0:09:39.30,0:09:43.53,Secondary,,0,0,0,,resnet V2 to image data.
+Dialogue: 1,0:09:43.53,0:09:48.43,Secondary,,0,0,0,,And please note that in this case we are freezing the most of the parts of this cnn
+Dialogue: 1,0:09:49.20,0:09:51.43,Secondary,,0,0,0,,because we don't need to be trained.
+Dialogue: 1,0:09:52.30,0:09:56.63,Secondary,,0,0,0,,This model, basically this kind of the the backbone is pre-trained
+Dialogue: 1,0:09:56.63,0:10:00.23,Secondary,,0,0,0,,by using huge dataset in this case image net data set.
+Dialogue: 1,0:10:00.83,0:10:06.6,Secondary,,0,0,0,,So of course if you want to the train, fine tune again, it is possible,
+Dialogue: 1,0:10:06.57,0:10:10.20,Secondary,,0,0,0,,but in this case we want to you just to preserve the weights
+Dialogue: 1,0:10:10.70,0:10:14.57,Secondary,,0,0,0,,Pre-trained.
+Dialogue: 1,0:10:14.57,0:10:17.33,Secondary,,0,0,0,,So next let's move on to the decoder.
+Dialogue: 1,0:10:18.70,0:10:20.73,Secondary,,0,0,0,,It is a bit complex as we discussed,
+Dialogue: 1,0:10:20.73,0:10:24.40,Secondary,,0,0,0,,and here you can find a lot of instruction about the attention layer
+Dialogue: 1,0:10:25.73,0:10:27.80,Secondary,,0,0,0,,and also the steps of the decoder,
+Dialogue: 1,0:10:28.20,0:10:32.7,Secondary,,0,0,0,,which we discussed in the previous video.
+Dialogue: 1,0:10:32.7,0:10:37.7,Secondary,,0,0,0,,And here we can find a definitions so you can find embedding layer
+Dialogue: 1,0:10:37.43,0:10:40.86,Secondary,,0,0,0,,to create what embedding and first GRU layer
+Dialogue: 1,0:10:41.37,0:10:45.70,Secondary,,0,0,0,,and attention layer add layer layer normalization
+Dialogue: 1,0:10:46.17,0:10:48.90,Secondary,,0,0,0,,and final dense layer.
+Dialogue: 1,0:10:48.90,0:10:52.20,Secondary,,0,0,0,,So let's define in this way.
+Dialogue: 1,0:10:52.20,0:10:54.87,Secondary,,0,0,0,,So model looks like this
+Dialogue: 1,0:10:55.70,0:10:57.40,Secondary,,0,0,0,,embedding layer GRU
+Dialogue: 1,0:10:57.40,0:11:00.23,Secondary,,0,0,0,,attention add layer normalization, then this.
+Dialogue: 1,0:11:01.50,0:11:04.93,Secondary,,0,0,0,,And it has so many parameters
+Dialogue: 1,0:11:08.40,0:11:10.37,Secondary,,0,0,0,,after defining decoder
+Dialogue: 1,0:11:10.37,0:11:13.63,Secondary,,0,0,0,,and also encoder, we can create final model
+Dialogue: 1,0:11:14.0,0:11:17.87,Secondary,,0,0,0,,TF Keras model and define inputs and output.
+Dialogue: 1,0:11:18.83,0:11:22.23,Secondary,,0,0,0,,And as you can see, it has two inputs,
+Dialogue: 1,0:11:23.70,0:11:25.77,Secondary,,0,0,0,,image inputs go to encoder
+Dialogue: 1,0:11:26.7,0:11:30.77,Secondary,,0,0,0,,and word inputs go to the goes to the decoder
+Dialogue: 1,0:11:32.37,0:11:34.20,Secondary,,0,0,0,,and output should be
+Dialogue: 1,0:11:34.20,0:11:37.23,Secondary,,0,0,0,,decoder output.
+Dialogue: 1,0:11:37.23,0:11:41.27,Secondary,,0,0,0,,Now model is ready, but before running training
+Dialogue: 1,0:11:42.40,0:11:45.83,Secondary,,0,0,0,,we need to define lost function as usual.
+Dialogue: 1,0:11:45.83,0:11:48.10,Secondary,,0,0,0,,So in terms of the loss,
+Dialogue: 1,0:11:48.10,0:11:50.73,Secondary,,0,0,0,,our model is basically a classification model
+Dialogue: 1,0:11:50.93,0:11:55.30,Secondary,,0,0,0,,since the decoder generate a lot of probabilities for each class,
+Dialogue: 1,0:11:55.53,0:11:58.7,Secondary,,0,0,0,,each word class, each of vocabularies.
+Dialogue: 1,0:11:58.50,0:12:02.40,Secondary,,0,0,0,,So we can use sparse categorical course entropy as usual
+Dialogue: 1,0:12:02.63,0:12:05.73,Secondary,,0,0,0,,for the classification problem.
+Dialogue: 1,0:12:05.73,0:12:08.70,Secondary,,0,0,0,,But in this case our data is padded,
+Dialogue: 1,0:12:09.0,0:12:14.80,Secondary,,0,0,0,,so it has a lot of that zero values and a lot of the there meaningless values.
+Dialogue: 1,0:12:15.0,0:12:18.37,Secondary,,0,0,0,,So we want to remove that part.
+Dialogue: 1,0:12:18.37,0:12:20.73,Secondary,,0,0,0,,So in order to do so, we are defining this
+Dialogue: 1,0:12:20.73,0:12:23.10,Secondary,,0,0,0,,custom loss function
+Dialogue: 1,0:12:25.20,0:12:26.90,Secondary,,0,0,0,,and then everything is ready.
+Dialogue: 1,0:12:26.90,0:12:30.43,Secondary,,0,0,0,,So let's compile the model
+Dialogue: 1,0:12:31.60,0:12:34.7,Secondary,,0,0,0,,and we can run training.
+Dialogue: 1,0:12:34.7,0:12:38.10,Secondary,,0,0,0,,0 And in terms of the training, it takes 15 minutes, to 20 minutes
+Dialogue: 1,0:12:39.87,0:12:44.10,Secondary,,0,0,0,,with one GPU, one T4 GPUs to train one epoch.
+Dialogue: 1,0:12:45.50,0:12:46.27,Secondary,,0,0,0,,So if you want
+Dialogue: 1,0:12:46.27,0:12:49.10,Secondary,,0,0,0,,to add additional epochs, it's okay.
+Dialogue: 1,0:12:49.33,0:12:53.3,Secondary,,0,0,0,,You can do that and I think you can get the slightly better result.
+Dialogue: 1,0:12:53.60,0:12:56.80,Secondary,,0,0,0,,But epoch one epoch is the enough
+Dialogue: 1,0:12:56.80,0:13:00.30,Secondary,,0,0,0,,to just to check the how it works.
+Dialogue: 1,0:13:00.30,0:13:03.77,Secondary,,0,0,0,,So let's just keep it as one and run training
+Dialogue: 1,0:13:05.67,0:13:06.90,Secondary,,0,0,0,,and let's wait
+Dialogue: 1,0:13:06.90,0:13:10.50,Secondary,,0,0,0,,15 to 20 minutes until it finished that training.
+Dialogue: 1,0:13:11.20,0:13:16.50,Secondary,,0,0,0,,Now training is done, so let's use it for captioning,
+Dialogue: 1,0:13:16.50,0:13:20.57,Secondary,,0,0,0,,but before that we need to rebuild the decoder for inference
+Dialogue: 1,0:13:21.0,0:13:23.77,Secondary,,0,0,0,,in order to control the growth state manually.
+Dialogue: 1,0:13:24.3,0:13:28.7,Secondary,,0,0,0,,As we talked in the previous video.
+Dialogue: 1,0:13:28.7,0:13:32.67,Secondary,,0,0,0,,So in this cell, by re-using the trained layers,
+Dialogue: 1,0:13:32.83,0:13:37.60,Secondary,,0,0,0,,we are creating a model for inference.
+Dialogue: 1,0:13:37.60,0:13:41.23,Secondary,,0,0,0,,So here you can find train decoder GRU
+Dialogue: 1,0:13:41.47,0:13:44.33,Secondary,,0,0,0,,train decoder attention and so on.
+Dialogue: 1,0:13:45.73,0:13:49.90,Secondary,,0,0,0,,And compared to the train training model, we are adding
+Dialogue: 1,0:13:51.10,0:13:53.60,Secondary,,0,0,0,,GRU state to its Io's.
+Dialogue: 1,0:13:55.73,0:13:56.76,Secondary,,0,0,0,,For inputs,
+Dialogue: 1,0:13:56.77,0:14:00.80,Secondary,,0,0,0,,we are adding GRU state inputs and for output we are adding
+Dialogue: 1,0:14:01.40,0:14:03.100,Secondary,,0,0,0,,GRU state as output.
+Dialogue: 1,0:14:04.0,0:14:07.0,Secondary,,0,0,0,,So by doing so we can control the GRU state
+Dialogue: 1,0:14:07.63,0:14:10.97,Secondary,,0,0,0,,in the inference group.
+Dialogue: 1,0:14:10.97,0:14:14.70,Secondary,,0,0,0,,Okay, so let's generate text with this
+Dialogue: 1,0:14:15.13,0:14:17.40,Secondary,,0,0,0,,custom inference loop function.
+Dialogue: 1,0:14:18.77,0:14:21.70,Secondary,,0,0,0,,We already discussed the what kind of the component
+Dialogue: 1,0:14:21.70,0:14:26.13,Secondary,,0,0,0,,it should have in the previous video, but let's review very briefly.
+Dialogue: 1,0:14:27.47,0:14:30.43,Secondary,,0,0,0,,So first we initialize GRU state,
+Dialogue: 1,0:14:30.47,0:14:33.50,Secondary,,0,0,0,,in this case just the initialize with zero vector simply.
+Dialogue: 1,0:14:34.80,0:14:37.10,Secondary,,0,0,0,,And then here we get image
+Dialogue: 1,0:14:37.10,0:14:40.70,Secondary,,0,0,0,,and then pre process to image and pass it to encoder.
+Dialogue: 1,0:14:41.67,0:14:44.83,Secondary,,0,0,0,,Of course, the train encoder
+Dialogue: 1,0:14:45.27,0:14:47.100,Secondary,,0,0,0,,and we can get the feature image features
+Dialogue: 1,0:14:49.50,0:14:51.63,Secondary,,0,0,0,,and before passing it to our decoder.
+Dialogue: 1,0:14:52.3,0:14:55.50,Secondary,,0,0,0,,So we also initialize this, this start token
+Dialogue: 1,0:14:56.90,0:14:58.100,Secondary,,0,0,0,,as the first word
+Dialogue: 1,0:14:59.53,0:15:00.90,Secondary,,0,0,0,,and then
+Dialogue: 1,0:15:01.0,0:15:04.57,Secondary,,0,0,0,,we are going to repeat this whole loop
+Dialogue: 1,0:15:04.57,0:15:08.53,Secondary,,0,0,0,,again and again and generate text one by one.
+Dialogue: 1,0:15:09.23,0:15:12.37,Secondary,,0,0,0,,So a step that looks like this coding decoder, of course,
+Dialogue: 1,0:15:13.20,0:15:17.3,Secondary,,0,0,0,,and then it returns a lot of predictions
+Dialogue: 1,0:15:17.23,0:15:19.76,Secondary,,0,0,0,,out of the word of the probabilities.
+Dialogue: 1,0:15:20.30,0:15:25.30,Secondary,,0,0,0,,So there are so many ways to pick up the actual word the final word,
+Dialogue: 1,0:15:25.30,0:15:29.53,Secondary,,0,0,0,,final selection from the list of a lot of ward probabilities.
+Dialogue: 1,0:15:29.93,0:15:33.93,Secondary,,0,0,0,,But in this case we are pulling the word kind of stochastically
+Dialogue: 1,0:15:34.87,0:15:38.83,Secondary,,0,0,0,,to introduce some randomness.
+Dialogue: 1,0:15:38.83,0:15:42.20,Secondary,,0,0,0,,So it is the these lines of code are doing doing that
+Dialogue: 1,0:15:42.77,0:15:45.6,Secondary,,0,0,0,,and eventually picking up some words
+Dialogue: 1,0:15:45.30,0:15:50.10,Secondary,,0,0,0,,and the the bringing it back to the brink bring it back to the word
+Dialogue: 1,0:15:50.40,0:15:54.30,Secondary,,0,0,0,,from the word token by using the tokenizer
+Dialogue: 1,0:15:55.60,0:15:58.17,Secondary,,0,0,0,,and appending to the list.
+Dialogue: 1,0:15:58.17,0:16:00.80,Secondary,,0,0,0,,So eventually we should get some captions.
+Dialogue: 1,0:16:01.10,0:16:03.47,Secondary,,0,0,0,,So let's take a look at the result.
+Dialogue: 1,0:16:03.47,0:16:06.17,Secondary,,0,0,0,,So defined this function and let's call it
+Dialogue: 1,0:16:10.43,0:16:11.100,Secondary,,0,0,0,,so here
+Dialogue: 1,0:16:12.47,0:16:17.37,Secondary,,0,0,0,,you can see a caption samples for this image.
+Dialogue: 1,0:16:17.37,0:16:22.3,Secondary,,0,0,0,,So this sample image is located in this directly.
+Dialogue: 1,0:16:22.33,0:16:25.70,Secondary,,0,0,0,,Just passing this for the JPEG and the
+Dialogue: 1,0:16:25.80,0:16:27.80,Secondary,,0,0,0,,it returns five captions.
+Dialogue: 1,0:16:29.0,0:16:33.10,Secondary,,0,0,0,,It looks like this a baseball player standing next to the bat
+Dialogue: 1,0:16:33.90,0:16:36.56,Secondary,,0,0,0,,a catcher in a field playing baseball
+Dialogue: 1,0:16:36.83,0:16:39.3,Secondary,,0,0,0,,or something like that.
+Dialogue: 1,0:16:39.83,0:16:42.36,Secondary,,0,0,0,,It is not grammatically perfect,
+Dialogue: 1,0:16:42.57,0:16:46.73,Secondary,,0,0,0,,but still the you can see it is generating the text,
+Dialogue: 1,0:16:46.73,0:16:50.90,Secondary,,0,0,0,,generating multiple text and generating the meaningful text.
+Dialogue: 1,0:16:51.40,0:16:54.60,Secondary,,0,0,0,,And also we can see our model is capturing
+Dialogue: 1,0:16:54.60,0:16:57.33,Secondary,,0,0,0,,important informations like baseball
+Dialogue: 1,0:16:57.70,0:16:59.100,Secondary,,0,0,0,,or catcher or
+Dialogue: 1,0:17:02.7,0:17:03.40,Secondary,,0,0,0,,a man standing next
+Dialogue: 1,0:17:03.40,0:17:07.37,Secondary,,0,0,0,,to another man or baseball field or something like that.
+Dialogue: 1,0:17:08.33,0:17:10.50,Secondary,,0,0,0,,So still, it's not very
+Dialogue: 1,0:17:10.77,0:17:16.43,Secondary,,0,0,0,,it's not perfect, but it is generating very meaningful text.
+Dialogue: 1,0:17:16.43,0:17:18.63,Secondary,,0,0,0,,It's very surprising, isn't it?
+Dialogue: 1,0:17:18.63,0:17:20.83,Secondary,,0,0,0,,So the model is very simple.
+Dialogue: 1,0:17:21.3,0:17:25.20,Secondary,,0,0,0,,We are just stacking encoder and decoder and then passing the image
+Dialogue: 1,0:17:25.20,0:17:29.70,Secondary,,0,0,0,,cap image data to encoder and the decoder generate captions
+Dialogue: 1,0:17:30.3,0:17:32.93,Secondary,,0,0,0,,one by one in auto regressive way.
+Dialogue: 1,0:17:33.97,0:17:36.73,Secondary,,0,0,0,,So just by stacking this so we can create this
+Dialogue: 1,0:17:36.73,0:17:39.7,Secondary,,0,0,0,,kind of the very small generative model.
+Dialogue: 1,0:17:40.30,0:17:41.10,Secondary,,0,0,0,,Okay.
+Dialogue: 1,0:17:41.10,0:17:45.57,Secondary,,0,0,0,,Currently there are so many generative large language models out there.
+Dialogue: 1,0:17:45.57,0:17:48.73,Secondary,,0,0,0,,Of course they have more complex and larger network
+Dialogue: 1,0:17:49.13,0:17:51.27,Secondary,,0,0,0,,and train a much larger dataset.
+Dialogue: 1,0:17:52.13,0:17:55.50,Secondary,,0,0,0,,But the architecture may look similar to this simple model.
+Dialogue: 1,0:17:56.77,0:17:58.83,Secondary,,0,0,0,,Thank you so much for watching this video.
+Dialogue: 1,0:17:58.83,0:18:00.60,Secondary,,0,0,0,,I hope you enjoyed.
+Dialogue: 1,0:18:00.77,0:18:04.40,Secondary,,0,0,0,,If you like this presentation, you'll find more in our ASL
+Dialogue: 1,0:18:04.40,0:18:08.40,Secondary,,0,0,0,,Github repository with 90 plus immersion regarding notebooks
+Dialogue: 1,0:18:10.13,0:18:11.73,Secondary,,0,0,0,,if you find it useful.
+Dialogue: 1,0:18:11.73,0:18:14.40,Secondary,,0,0,0,,Please don't forget to star the repository.
+Dialogue: 1,0:00:00.40,0:00:05.63,Default,,0,0,0,,大家好，我是\NGoogle Advanced Solutions Lab\N的机器学习工程师，Takumi。
+Dialogue: 1,0:00:06.87,0:00:09.63,Default,,0,0,0,,这是图像标注课程的后半部分。
+Dialogue: 1,0:00:10.20,0:00:14.10,Default,,0,0,0,,如果你还没看过前半部分，我建议你先看一下。
+Dialogue: 1,0:00:15.73,0:00:24.3,Default,,0,0,0,,在这个视频中，我将带你详细介绍整个代码Notebook，\N帮助你理解如何创建一个非常简单的生成模型。
+Dialogue: 1,0:00:25.87,0:00:29.93,Default,,0,0,0,,所有的设置信息都写在ASL的GitHub Repo里。
+Dialogue: 1,0:00:30.90,0:00:35.57,Default,,0,0,0,,你可以在幻灯片中或者这个视频的描述下面找到链接。
+Dialogue: 1,0:00:37.27,0:00:42.7,Default,,0,0,0,,设置好Vertex AI工作台环境并clone Repo后，
+Dialogue: 1,0:00:42.7,0:00:56.93,Default,,0,0,0,,按照说明你可以找到图像标注Notebook，它位于"asl-ml-\Nimmersion/notebooks/multi_modal/solutions"下面。
+Dialogue: 1,0:00:57.40,0:01:01.50,Default,,0,0,0,,看，这里就是图像标注的.ipynb文件。
+Dialogue: 1,0:01:01.83,0:01:14.73,Default,,0,0,0,,所以请打开这个文件，在这里你可以看到所有的流程和指示来构建\N和使用图像标注模型，这些我们在上一个视频中已经讨论过了。
+Dialogue: 1,0:01:15.90,0:01:19.50,Default,,0,0,0,,让我们从第一个单元格开始看起。
+Dialogue: 1,0:01:19.50,0:01:26.43,Default,,0,0,0,,在第一个单元格里，我们自然要安装所\N有的依赖，包括tensorflow和keras。
+Dialogue: 1,0:01:27.17,0:01:30.43,Default,,0,0,0,,在这里，我们可以找到tensorflow.keras.layers，
+Dialogue: 1,0:01:30.73,0:01:34.13,Default,,0,0,0,,并安装我们需要的所有图像标注模型的layers，
+Dialogue: 1,0:01:34.77,0:01:45.10,Default,,0,0,0,,包括GRU、Add层、Attention层、Dense层、\NEmbedding层和LayerNormalization层。
+Dialogue: 1,0:01:45.33,0:01:48.53,Default,,0,0,0,,让我们逐一运行。
+Dialogue: 1,0:01:49.83,0:01:58.27,Default,,0,0,0,,在下一个单元格里，我们定义了一些超参数，包括词汇表大小，
+Dialogue: 1,0:01:58.27,0:02:03.37,Default,,0,0,0,,这意味着我们将使用多少个词汇来进行图像标注。
+Dialogue: 1,0:02:03.37,0:02:10.37,Default,,0,0,0,,或者你可以找到一个特征提取器，这意味着我\N们想要在编码器模型中使用什么样的模型。
+Dialogue: 1,0:02:10.90,0:02:19.37,Default,,0,0,0,,所以在这种情况下，正如我们在之前的视频中讨论的，我们指定的\N是InceptionResNetV2，这是一个非常经典的基于CNN的模型。
+Dialogue: 1,0:02:20.87,0:02:31.80,Default,,0,0,0,,所有下面的定义，包括图像、高度、宽度通道和特征形状都\N来自InceptionResNetV2的定义，特别是这个特征形状。
+Dialogue: 1,0:02:31.83,0:02:39.56,Default,,0,0,0,,8, 8, 1536就是InceptionResNetV2输出的形状。
+Dialogue: 1,0:02:41.27,0:02:44.63,Default,,0,0,0,,那我们就按照这种方式定义吧。
+Dialogue: 1,0:02:48.57,0:02:49.20,Default,,0,0,0,,酷，
+Dialogue: 1,0:02:49.47,0:02:56.10,Default,,0,0,0,,在下一个单元格中，我们将从tfds加载\N数据，也就是TensorFlow数据集。
+Dialogue: 1,0:02:58.17,0:03:03.20,Default,,0,0,0,,所以 TensorFlow 数据集以\N“coco_captions”这个名字托管这个标注\N数据集
+Dialogue: 1,0:03:03.20,0:03:06.13,Default,,0,0,0,,所以我们可以指定这个名字来加载数据。
+Dialogue: 1,0:03:07.73,0:03:12.63,Default,,0,0,0,,加载数据后，我们可以传递一些预处理函数，
+Dialogue: 1,0:03:14.3,0:03:18.17,Default,,0,0,0,,比如获取图像级别，这在这里定义了，获取图像级别。
+Dialogue: 1,0:03:18.20,0:03:37.57,Default,,0,0,0,,在这里我们可以找到一些非常基础的预处理，包括改变图像的\N大小或者图像的比例，并返回图像张量和文字说明同时。
+Dialogue: 1,0:03:37.57,0:03:39.67,Default,,0,0,0,,所以让我们按照相同的方式运行。
+Dialogue: 1,0:03:40.73,0:03:44.7,Default,,0,0,0,,让我们看一些例子。
+Dialogue: 1,0:03:51.77,0:04:01.63,Default,,0,0,0,,这里我们可以看到，例如，一个随机的例子，每\N一对图像和文本对我来说都是有意义的。
+Dialogue: 1,0:04:01.63,0:04:11.10,Default,,0,0,0,,例如，这个图像的标注是“一个装有烤三明治、薯片\N和炸薯条的宽盘子”，以及另一个图像的标注。
+Dialogue: 1,0:04:11.93,0:04:21.40,Default,,0,0,0,,我们有很多图像。如果你想看另一个例子，你可\N以再运行这个单元格，你会看到另一个例子。
+Dialogue: 1,0:04:21.40,0:04:23.27,Default,,0,0,0,,那么让我们继续。
+Dialogue: 1,0:04:24.13,0:04:30.60,Default,,0,0,0,,由于我们有文本数据，我们需要以一种\N标准的方式预处理那些文本数据。
+Dialogue: 1,0:04:31.53,0:04:41.20,Default,,0,0,0,,在这个单元格里，我们添加了开始和结束的特\N殊标记，这也是我们在幻灯片里讨论过的。
+Dialogue: 1,0:04:41.97,0:04:54.13,Default,,0,0,0,,通过添加这些，我们可以把这个标记处理成一种特\N殊的符号，这个开始标记意味着句子的开始。
+Dialogue: 1,0:04:54.77,0:05:00.3,Default,,0,0,0,,同样，结束标记意味着句子的结束。
+Dialogue: 1,0:05:01.0,0:05:07.33,Default,,0,0,0,,我们可以用一个函数来添加开始标记和结束\N标记，并将这个函数传入trainds.map。
+Dialogue: 1,0:05:07.33,0:05:14.70,Default,,0,0,0,,让我们继续。
+Dialogue: 1,0:05:14.70,0:05:17.97,Default,,0,0,0,,这是一个非常重要的预处理。
+Dialogue: 1,0:05:18.47,0:05:21.57,Default,,0,0,0,,现在我们有了文本数据，标注数据。
+Dialogue: 1,0:05:22.0,0:05:25.43,Default,,0,0,0,,所以我们要创建分词器。
+Dialogue: 1,0:05:25.43,0:05:35.60,Default,,0,0,0,,通过创建分词器，我们可以将像开始标记、\N猫、狗这样的词进行分词到某个索引。
+Dialogue: 1,0:05:35.60,0:05:38.7,Default,,0,0,0,,在 TensorFlow 中，这非常简单。
+Dialogue: 1,0:05:38.7,0:05:51.40,Default,,0,0,0,,你可以只用这个TextVectorization模块，然后通过传递\N所有的数据或标注数据到这个TextVectorization层，
+Dialogue: 1,0:05:52.70,0:05:56.53,Default,,0,0,0,,这需要一些时间，在我的环境中大约需要5分钟。
+Dialogue: 1,0:05:56.73,0:06:01.90,Default,,0,0,0,,让我们等待它完成。
+Dialogue: 1,0:06:01.90,0:06:03.40,Default,,0,0,0,,现在已经完成。
+Dialogue: 1,0:06:03.90,0:06:15.27,Default,,0,0,0,,现在，让我们尝试一下这个分词器，通过传递一些样\N本句子，“<start> This is a sentence <end>”。
+Dialogue: 1,0:06:16.50,0:06:21.60,Default,,0,0,0,,所以现在你可以看到，它是以这种方式被分词的。
+Dialogue: 1,0:06:21.60,0:06:31.87,Default,,0,0,0,,你可以在这里找到很多的填充，通过改变这个最大标注长\N度（MAX_CAPTION_LEN），你可以控制这个填充的长度。
+Dialogue: 1,0:06:31.87,0:06:34.63,Default,,0,0,0,,但在这个案例中，我们指定的是64。
+Dialogue: 1,0:06:34.90,0:06:47.43,Default,,0,0,0,,所以所有的标注都将以这种方式被填充，直到达到这个最大标注长度。
+Dialogue: 1,0:06:47.43,0:06:55.30,Default,,0,0,0,,同样，你可以看到这个分词器的行为，这非常有用。
+Dialogue: 1,0:06:55.30,0:07:06.60,Default,,0,0,0,,一旦你创建了分词器，你可以在不同的标注中应用\N这个分词器，并将文本数据转化为适当的标记。
+Dialogue: 1,0:07:07.90,0:07:11.77,Default,,0,0,0,,在此时创建转换器是非常好的。
+Dialogue: 1,0:07:12.60,0:07:21.90,Default,,0,0,0,,所以在这里，我们可以找到StringLookup层，并且\N创建了转换器，从词到索引，还有从索引到词。
+Dialogue: 1,0:07:22.30,0:07:25.10,Default,,0,0,0,,我们稍后将使用这些模块。
+Dialogue: 1,0:07:25.10,0:07:31.37,Default,,0,0,0,,所以这非常有用，然后我们可以创建最终的数据集。
+Dialogue: 1,0:07:32.43,0:07:34.80,Default,,0,0,0,,这是一个非常重要的部分。
+Dialogue: 1,0:07:34.80,0:07:36.87,Default,,0,0,0,,我们有trainds。
+Dialogue: 1,0:07:37.47,0:07:41.53,Default,,0,0,0,,我们要添加额外的create_ds_fn函数，这个函数，
+Dialogue: 1,0:07:42.30,0:07:55.70,Default,,0,0,0,,如你所见，它返回img_tensor、caption，这是一个元组，\Nimg_tensor将进入编码器，caption将进入解码器。
+Dialogue: 1,0:07:56.47,0:08:02.27,Default,,0,0,0,,同时，我们还创建了target，即标签。
+Dialogue: 1,0:08:02.27,0:08:15.10,Default,,0,0,0,,在这个函数中，你可以发现这个target是从\Ncaption中创建的，只需将caption移动一个单词。
+Dialogue: 1,0:08:16.50,0:08:16.73,Default,,0,0,0,,好的。
+Dialogue: 1,0:08:16.73,0:08:32.23,Default,,0,0,0,,通过这样做，我们将创建一个移位的caption，也就\N是下一个单词，并且我们将用这个作为target。
+Dialogue: 1,0:08:32.23,0:08:43.67,Default,,0,0,0,,所以让我们定义并应用这个函数，并创建一个批\N处理指定批处理大小，一切都已经准备就绪。
+Dialogue: 1,0:08:43.67,0:08:49.73,Default,,0,0,0,,那么让我们看一些数据集。
+Dialogue: 1,0:08:49.73,0:08:50.20,Default,,0,0,0,,给你。
+Dialogue: 1,0:08:50.20,0:09:00.43,Default,,0,0,0,,你可以看到Image shape、Caption shape，以及与\NCaption相同的Label shape，因为我们只是做了移位。
+Dialogue: 1,0:09:00.43,0:09:08.23,Default,,0,0,0,,所以我们用零值填充了移位部分，看起来不错。
+Dialogue: 1,0:09:08.67,0:09:12.10,Default,,0,0,0,,接下来是模型。
+Dialogue: 1,0:09:12.10,0:09:17.60,Default,,0,0,0,,大部分模型代码已经在之前的视频中\N解释过了，所以我会很快地过一遍。
+Dialogue: 1,0:09:17.97,0:09:22.30,Default,,0,0,0,,但是，如果你对此不是很熟悉或者不是很有信心，
+Dialogue: 1,0:09:22.30,0:09:28.27,Default,,0,0,0,,那么你可以回到之前的幻灯片，查看编码器和解码器内部发生了什么。
+Dialogue: 1,0:09:28.90,0:09:33.30,Default,,0,0,0,,在这个视频里，我们来快速运行这些东西。
+Dialogue: 1,0:09:33.43,0:09:43.53,Default,,0,0,0,,这是编码器，你可以看到我们只是将\Ninception_resnet_v2应用到图像数据上。
+Dialogue: 1,0:09:43.53,0:09:51.43,Default,,0,0,0,,请注意，在这种情况下，我们冻结了这个卷积神经网\N络（CNN）的大部分内容，因为我们不需要训练。
+Dialogue: 1,0:09:52.30,0:10:00.23,Default,,0,0,0,,这个模型基本上是使用大型数据集（在这种情\N况下是 ImageNet 数据集）预先训练的。
+Dialogue: 1,0:10:00.83,0:10:14.57,Default,,0,0,0,,当然，如果你想要再次进行微调，那是可能的，但\N在这种情况下，我们只想保留预训练的权重。
+Dialogue: 1,0:10:14.57,0:10:17.33,Default,,0,0,0,,接下来让我们继续讨论解码器。
+Dialogue: 1,0:10:18.70,0:10:20.73,Default,,0,0,0,,正如我们讨论的，它有点复杂。
+Dialogue: 1,0:10:20.73,0:10:32.7,Default,,0,0,0,,在这里，您可以找到关于注意力层的许多说明，以及\N我们在上一个视频中讨论过的解码器的步骤。
+Dialogue: 1,0:10:32.7,0:10:48.90,Default,,0,0,0,,在这里，我们可以找到一些定义，你可以找到Embedding\N层来创建Embedding和第一个GRU层，然后是Attention层\N、Add层、LayerNormalization层和最后的Dense层。
+Dialogue: 1,0:10:48.90,0:10:52.20,Default,,0,0,0,,让我们按这种方式定义。
+Dialogue: 1,0:10:52.20,0:11:00.23,Default,,0,0,0,,模型看起来是这样的，Embedding层，GRU，\NAttention，Add，LayerNormalization，然后是\NDense。
+Dialogue: 1,0:11:01.50,0:11:17.87,Default,,0,0,0,,它有很多参数，在定义解码器和编码器之后，我们可以\N创建最终的 TF Keras 模型，并定义输入和输出。
+Dialogue: 1,0:11:18.83,0:11:37.23,Default,,0,0,0,,你可以看到，它有两个输入，image_input进入编码器，\Nword_input进入解码器，输出应该是decoder_output。
+Dialogue: 1,0:11:37.23,0:11:45.83,Default,,0,0,0,,现在模型已经准备好了，但在运行训练之前\N，我们需要像往常一样定义损失函数。
+Dialogue: 1,0:11:45.83,0:11:58.7,Default,,0,0,0,,在损失方面，我们的模型基本上是一个分类模型，因为解码器\N为每个类别、每个单词类别、每个词汇生成了很多概率。
+Dialogue: 1,0:11:58.50,0:12:05.73,Default,,0,0,0,,所以我们可以像往常一样使用\NSparseCategoricalCrossentropy来解决分\N类问题。
+Dialogue: 1,0:12:05.73,0:12:14.80,Default,,0,0,0,,但在这种情况下，我们的数据是填充的，所\N以它有很多零值和很多没有意义的值。
+Dialogue: 1,0:12:15.0,0:12:18.37,Default,,0,0,0,,所以我们想要去掉那部分。
+Dialogue: 1,0:12:18.37,0:12:26.90,Default,,0,0,0,,为了做到这一点，我们正在定义这个自定义\N损失函数，然后一切都已经准备就绪。
+Dialogue: 1,0:12:26.90,0:12:34.7,Default,,0,0,0,,让我们编译模型，然后可以运行训练。
+Dialogue: 1,0:12:34.7,0:12:44.10,Default,,0,0,0,,在训练方面，使用一块T4 GPU进行一轮训练需要 15 到 20 分钟。
+Dialogue: 1,0:12:45.50,0:12:49.10,Default,,0,0,0,,所以，如果你想增加额外的轮次，这是可以的。
+Dialogue: 1,0:12:49.33,0:12:53.3,Default,,0,0,0,,你可以这样做，我认为你可以得到稍微好一点的结果。
+Dialogue: 1,0:12:53.60,0:13:00.30,Default,,0,0,0,,但是一个轮次就足够了，只是为了检查它是如何工作的。
+Dialogue: 1,0:13:00.30,0:13:10.50,Default,,0,0,0,,所以让我们保持一个轮次并进行训练，\N等待15到20分钟，直到训练完成。
+Dialogue: 1,0:13:11.20,0:13:23.77,Default,,0,0,0,,现在训练已经完成，所以让我们用它生成图片的文字说明，但在此\N之前，我们需要为推理重建解码器，以便手动控制增长状态。
+Dialogue: 1,0:13:24.3,0:13:28.7,Default,,0,0,0,,正如我们在之前的视频中讨论的。
+Dialogue: 1,0:13:28.7,0:13:37.60,Default,,0,0,0,,所以在这个单元格中，通过重用训练过的层\N，我们正在创建一个用于推理的模型。
+Dialogue: 1,0:13:37.60,0:13:44.33,Default,,0,0,0,,所以这里你可以找到训练decoder_gru，训练decoder_attention等。
+Dialogue: 1,0:13:45.73,0:13:53.60,Default,,0,0,0,,与训练模型相比，我们添加GRU状态到输入输出。
+Dialogue: 1,0:13:55.73,0:14:03.100,Default,,0,0,0,,对于输入，我们添加gru_state_input，对\N于输出，我们添加gru_state作为输出。
+Dialogue: 1,0:14:04.0,0:14:10.97,Default,,0,0,0,,这样，我们可以在推理过程中控制GRU状态。
+Dialogue: 1,0:14:10.97,0:14:17.40,Default,,0,0,0,,好的，让我们用这个自定义推理循环函数生成文本。
+Dialogue: 1,0:14:18.77,0:14:26.13,Default,,0,0,0,,我们已经在之前的视频中讨论了它应该具\N有哪些组件，但让我们简要回顾一下。
+Dialogue: 1,0:14:27.47,0:14:33.50,Default,,0,0,0,,首先，我们初始化GRU状态，这种情况下只是简单地用零向量初始化。
+Dialogue: 1,0:14:34.80,0:14:44.83,Default,,0,0,0,,然后这里我们获取图像，再对图像进行预处理并\N将其传递给编码器，当然，是训练的编码器。
+Dialogue: 1,0:14:45.27,0:14:47.100,Default,,0,0,0,,我们可以获得图像特征.
+Dialogue: 1,0:14:49.50,0:14:51.63,Default,,0,0,0,,然后在将其传递给我们的解码器之前,
+Dialogue: 1,0:14:52.3,0:14:58.100,Default,,0,0,0,,所以我们也初始化这个，这个开始标记作为第一个词.
+Dialogue: 1,0:14:59.53,0:15:08.53,Default,,0,0,0,,然后我们将重复这个整个循环，一次又一次地生成文本。
+Dialogue: 1,0:15:09.23,0:15:19.76,Default,,0,0,0,,所以步骤看起来是这样的，编码解码器，当\N然，然后它返回很多预测的词的概率。
+Dialogue: 1,0:15:20.30,0:15:29.53,Default,,0,0,0,,所以有很多方法可以从词概率的列表中挑\N选出实际的词，最后的词，最后的选择。
+Dialogue: 1,0:15:29.93,0:15:38.83,Default,,0,0,0,,但在这种情况下，我们是以某种随机方式挑选词，以引入一些随机性。
+Dialogue: 1,0:15:38.83,0:15:45.6,Default,,0,0,0,,这些代码行正在执行此操作，最终选择一些单词，
+Dialogue: 1,0:15:45.30,0:15:58.17,Default,,0,0,0,,然后使用分词器将它们从单词Token还原回单词，并追加到列表中。
+Dialogue: 1,0:15:58.17,0:16:00.80,Default,,0,0,0,,所以最后我们应该得到一些图片的文字说明。
+Dialogue: 1,0:16:01.10,0:16:03.47,Default,,0,0,0,,让我们看看结果。
+Dialogue: 1,0:16:03.47,0:16:06.17,Default,,0,0,0,,定义了这个函数，然后调用它。
+Dialogue: 1,0:16:10.43,0:16:17.37,Default,,0,0,0,,在这里，你可以看到这张图片的文字说明样本。
+Dialogue: 1,0:16:17.37,0:16:22.3,Default,,0,0,0,,这个样本图片位于这个目录中。
+Dialogue: 1,0:16:22.33,0:16:27.80,Default,,0,0,0,,只需传递JPEG和它返回五条文字说明。
+Dialogue: 1,0:16:29.0,0:16:39.3,Default,,0,0,0,,看起来像是一个棒球运动员站在球棒旁边一个\N接球员在棒球场上打棒球，或者类似的东西。
+Dialogue: 1,0:16:39.83,0:16:42.36,Default,,0,0,0,,虽然语法不完美，
+Dialogue: 1,0:16:42.57,0:16:50.90,Default,,0,0,0,,但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。
+Dialogue: 1,0:16:51.40,0:17:07.37,Default,,0,0,0,,我们还可以看到我们的模型捕捉到了重要的信息，如棒球、\N接球员或一个人站在另一个人旁边，或棒球场之类的。
+Dialogue: 1,0:17:08.33,0:17:16.43,Default,,0,0,0,,虽然不是很完美，但它确实在生成非常有意义的文本。
+Dialogue: 1,0:17:16.43,0:17:18.63,Default,,0,0,0,,令人惊讶，不是吗？
+Dialogue: 1,0:17:18.63,0:17:20.83,Default,,0,0,0,,这个模型非常简单。
+Dialogue: 1,0:17:21.3,0:17:32.93,Default,,0,0,0,,我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给\N编码器，解码器以自回归的方式逐个生成图像的文字说明。
+Dialogue: 1,0:17:33.97,0:17:39.7,Default,,0,0,0,,通过堆叠编码器和解码器，我们可以创建这种非常小的生成模型。
+Dialogue: 1,0:17:40.30,0:17:41.10,Default,,0,0,0,,好的。
+Dialogue: 1,0:17:41.10,0:17:45.57,Default,,0,0,0,,目前市面上有很多生成性的大语言模型。
+Dialogue: 1,0:17:45.57,0:17:51.27,Default,,0,0,0,,当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。
+Dialogue: 1,0:17:52.13,0:17:55.50,Default,,0,0,0,,但是，这个简单模型的架构可能与它们类似。
+Dialogue: 1,0:17:56.77,0:17:58.83,Default,,0,0,0,,非常感谢观看这个视频。
+Dialogue: 1,0:17:58.83,0:18:00.60,Default,,0,0,0,,希望你喜欢。
+Dialogue: 1,0:18:00.77,0:18:08.40,Default,,0,0,0,,如果你喜欢这个演示，你可以在我们的ASL Github \NRepo中找到90多个机器学习相关的Notebooks，
+Dialogue: 1,0:18:10.13,0:18:14.40,Default,,0,0,0,,如果你觉得有用，请不要忘记给GitHub Repo加星。

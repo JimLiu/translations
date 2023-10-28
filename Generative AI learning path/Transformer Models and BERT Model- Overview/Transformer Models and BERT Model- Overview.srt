@@ -1,0 +1,747 @@
+1
+00:00:00,100 --> 00:00:01,465
+Hi. I'm Sanjana
+
+2
+00:00:01,465 --> 00:00:05,764
+Reddy, a machine learning engineer at Google's Advanced Solutions Lab.
+
+3
+00:00:06,533 --> 00:00:10,065
+There's been a lot of excitement around generative AI and all the new
+
+4
+00:00:10,066 --> 00:00:14,365
+advancements, including new vertex AI features that are coming up,
+
+5
+00:00:14,699 --> 00:00:20,165
+such as Gen AI Studio, Model Garden, Gen AI API.
+
+6
+00:00:20,166 --> 00:00:24,699
+Our objective in this short session is to give you a solid footing
+
+7
+00:00:25,000 --> 00:00:27,733
+on some of the underlying concepts that make
+
+8
+00:00:27,733 --> 00:00:30,032
+all the Gen AI magic possible.
+
+9
+00:00:30,899 --> 00:00:33,665
+Today I'm going to talk about transformer
+
+10
+00:00:33,665 --> 00:00:35,964
+models and the BERT model.
+
+11
+00:00:37,066 --> 00:00:39,732
+Language modeling has evolved over the years.
+
+12
+00:00:40,432 --> 00:00:44,399
+The recent breakthroughs in the past ten years include the usage
+
+13
+00:00:44,399 --> 00:00:47,365
+of neural networks to represent text,
+
+14
+00:00:47,466 --> 00:00:50,999
+such as Word2vec an N-grams in 2013.
+
+15
+00:00:51,799 --> 00:00:55,832
+In 2014, the development of sequence to sequence models
+
+16
+00:00:56,200 --> 00:00:58,466
+such as RNN's and LSTM’s
+
+17
+00:00:58,865 --> 00:01:03,331
+helped improve the performance of ML models on NLP tasks
+
+18
+00:01:03,533 --> 00:01:06,766
+such as translation and text classification.
+
+19
+00:01:07,500 --> 00:01:11,633
+In 2015, the excitement came with attention mechanisms
+
+20
+00:01:12,033 --> 00:01:14,665
+and the models built based on it, such
+
+21
+00:01:14,665 --> 00:01:16,964
+as Transformers and the Bert model.
+
+22
+00:01:17,665 --> 00:01:20,999
+In this presentation we'll focus on Transformers.
+
+23
+00:01:22,000 --> 00:01:25,399
+Transformers is based on a 2017 paper
+
+24
+00:01:25,400 --> 00:01:28,533
+named Attention As All You Need.
+
+25
+00:01:29,233 --> 00:01:34,165
+Although all the models before Transformers were able to represent words
+
+26
+00:01:34,465 --> 00:01:38,931
+as vectors, these vectors did not contain the context
+
+27
+00:01:39,599 --> 00:01:42,965
+and the usage of words changes based on the context.
+
+28
+00:01:43,433 --> 00:01:46,099
+For example, bank and river bank
+
+29
+00:01:46,233 --> 00:01:50,465
+versus bank in bank robber might have the same vector
+
+30
+00:01:50,465 --> 00:01:54,564
+representation before attention mechanisms came about.
+
+31
+00:01:55,132 --> 00:01:58,232
+A transformer is an encoder decoder model
+
+32
+00:01:58,533 --> 00:02:01,465
+that uses the attention mechanism.
+
+33
+00:02:01,465 --> 00:02:04,065
+It can take advantage of pluralization
+
+34
+00:02:04,332 --> 00:02:08,399
+and also process a large amount of data at the same time.
+
+35
+00:02:08,765 --> 00:02:10,798
+because of its model architecture,
+
+36
+00:02:11,900 --> 00:02:14,166
+attention mechanism helps improve
+
+37
+00:02:14,233 --> 00:02:17,132
+the performance of machine translation applications.
+
+38
+00:02:17,733 --> 00:02:20,300
+Transformer models were built using
+
+39
+00:02:20,300 --> 00:02:22,365
+attention mechanisms at the core.
+
+40
+00:02:23,699 --> 00:02:25,799
+A transformer model consists
+
+41
+00:02:25,866 --> 00:02:28,066
+of encoder and decoder.
+
+42
+00:02:28,932 --> 00:02:33,499
+The encoder encodes the input sequence and passes it to the decoder
+
+43
+00:02:34,099 --> 00:02:39,132
+and the decoder decodes the representation for a relevant task.
+
+44
+00:02:40,265 --> 00:02:40,999
+The encoding
+
+45
+00:02:41,000 --> 00:02:44,700
+component is a stack of encoders of the same number.
+
+46
+00:02:45,300 --> 00:02:47,800
+The research paper that introduced Transformers
+
+47
+00:02:47,800 --> 00:02:50,465
+stack six encoders on top of each other.
+
+48
+00:02:51,300 --> 00:02:53,400
+Six is not a magical number.
+
+49
+00:02:53,400 --> 00:02:56,099
+It's just a hyperparameter.
+
+50
+00:02:56,099 --> 00:03:00,365
+The encoders are all identical in structure, but with different weights.
+
+51
+00:03:01,032 --> 00:03:04,931
+Each encoder can be broken down into two sub layers.
+
+52
+00:03:05,633 --> 00:03:08,532
+The first layer is called self attention.
+
+53
+00:03:09,300 --> 00:03:13,232
+The input of the encode are first flows through a self attention layer,
+
+54
+00:03:13,633 --> 00:03:17,500
+which helps to encode or look at relevant parts of the words
+
+55
+00:03:17,800 --> 00:03:21,099
+as it encodes a central word in the input sentence.
+
+56
+00:03:22,265 --> 00:03:25,398
+And the second layer is called a feedforward layer.
+
+57
+00:03:25,932 --> 00:03:28,399
+The output of the self attention layer is
+
+58
+00:03:28,400 --> 00:03:30,600
+fed to the feedforward neural network.
+
+59
+00:03:31,699 --> 00:03:35,965
+The exact same feedforward neural network is independently applied
+
+60
+00:03:36,066 --> 00:03:37,233
+to each position.
+
+61
+00:03:38,800 --> 00:03:40,366
+The decoder has both the
+
+62
+00:03:40,366 --> 00:03:42,966
+self attention and the feedforward layer,
+
+63
+00:03:43,400 --> 00:03:47,166
+but between them is the encoder decoder, attention layer
+
+64
+00:03:47,599 --> 00:03:50,164
+that helps a decoder focus on relevant
+
+65
+00:03:50,165 --> 00:03:53,399
+parts of the input sentence.
+
+66
+00:03:53,400 --> 00:03:56,400
+After embedding the words in the input sequence,
+
+67
+00:03:56,400 --> 00:04:00,266
+each of the embedding vector flows through the two layers of the encoder.
+
+68
+00:04:01,066 --> 00:04:05,500
+The word at each position passes through a self attention process.
+
+69
+00:04:06,066 --> 00:04:09,266
+Then it passes through a feedforward neural network,
+
+70
+00:04:09,832 --> 00:04:14,131
+the exact same network with each vector flowing through it separately.
+
+71
+00:04:15,165 --> 00:04:18,032
+Dependencies exist between these paths
+
+72
+00:04:18,033 --> 00:04:21,565
+in this self attention layer.
+
+73
+00:04:21,565 --> 00:04:25,432
+However, the feedforward layer does not have these dependencies
+
+74
+00:04:26,000 --> 00:04:30,099
+and therefore various paths can be executed in parallel
+
+75
+00:04:30,432 --> 00:04:33,032
+while they flow through the feedforward layer.
+
+76
+00:04:34,165 --> 00:04:37,464
+In the self attention layer, the input embedding is
+
+77
+00:04:37,466 --> 00:04:41,533
+broken up into query, key, and value vectors.
+
+78
+00:04:42,165 --> 00:04:45,064
+These vectors are computed using weights
+
+79
+00:04:45,399 --> 00:04:48,765
+that the transformer learns during the training process.
+
+80
+00:04:49,800 --> 00:04:52,599
+All of these computations happen in parallel
+
+81
+00:04:52,600 --> 00:04:55,300
+in the model, in the form of matrix computation.
+
+82
+00:04:56,466 --> 00:04:58,300
+Once we have the query key
+
+83
+00:04:58,300 --> 00:05:02,766
+and value vectors, the next step is to multiply each value
+
+84
+00:05:02,766 --> 00:05:07,565
+vector by the soft max score in preparation to sum them up.
+
+85
+00:05:08,266 --> 00:05:12,199
+The intention here is to keep intact the values of the words
+
+86
+00:05:12,199 --> 00:05:15,899
+you want to focus on and leave out a irrelevant words
+
+87
+00:05:16,333 --> 00:05:18,966
+by multiplying them by tiny numbers
+
+88
+00:05:18,966 --> 00:05:21,632
+like 0.001, for example.
+
+89
+00:05:22,800 --> 00:05:25,900
+Next, we have to sum up the weighted value vectors
+
+90
+00:05:26,533 --> 00:05:31,033
+which produces the output of the self attention layer at this position.
+
+91
+00:05:31,065 --> 00:05:34,864
+For the first word, you can send along the resulting vector
+
+92
+00:05:35,100 --> 00:05:37,333
+to the feedforward neural network.
+
+93
+00:05:38,665 --> 00:05:40,499
+To sum up this process of getting
+
+94
+00:05:40,500 --> 00:05:43,833
+the final embeddings, these are the steps that we take.
+
+95
+00:05:44,833 --> 00:05:47,365
+We start with the natural language sentence
+
+96
+00:05:48,233 --> 00:05:50,800
+embed each word in the sentence.
+
+97
+00:05:51,899 --> 00:05:54,331
+After that, we perform multi-headed
+
+98
+00:05:54,333 --> 00:05:58,565
+attention eight times in this case and multiply
+
+99
+00:05:58,565 --> 00:06:02,265
+this embedded word with the respective weighted matrices.
+
+100
+00:06:02,932 --> 00:06:07,832
+We then calculate the attention using the resulting Q K.V.
+
+101
+00:06:08,033 --> 00:06:09,533
+matrices.
+
+102
+00:06:09,533 --> 00:06:14,666
+Finally, we can concatenate the matrices to produce the output matrix,
+
+103
+00:06:15,132 --> 00:06:18,732
+which is the same dimension as the final matrix
+
+104
+00:06:18,733 --> 00:06:21,132
+that this layer initially got.
+
+105
+00:06:22,065 --> 00:06:25,265
+There's multiple variations of transformers out there now.
+
+106
+00:06:26,100 --> 00:06:31,332
+Some use both the encoder and the decoder component from the original architecture.
+
+107
+00:06:31,800 --> 00:06:35,400
+Some use only the encoder and some use only the decoder.
+
+108
+00:06:36,365 --> 00:06:39,699
+A popular encoder only architecture is Bert.
+
+109
+00:06:40,500 --> 00:06:43,665
+Bert is one of the trained transformer models.
+
+110
+00:06:44,266 --> 00:06:47,899
+Bert stands for bidirectional encoder representations
+
+111
+00:06:48,000 --> 00:06:52,633
+from transformers and was developed by Google in 2018.
+
+112
+00:06:54,365 --> 00:06:55,232
+Since then,
+
+113
+00:06:55,233 --> 00:06:57,899
+multiple variations of Bert have been built.
+
+114
+00:06:58,365 --> 00:07:00,965
+Today, Bert Powers Google Search.
+
+115
+00:07:01,865 --> 00:07:02,998
+You can see how different
+
+116
+00:07:03,000 --> 00:07:06,665
+the results provided by Bert are for the same search query.
+
+117
+00:07:06,899 --> 00:07:09,698
+Before and after,
+
+118
+00:07:09,766 --> 00:07:12,100
+Bert was trained in two variations.
+
+119
+00:07:12,565 --> 00:07:14,899
+One model contains Bert Base,
+
+120
+00:07:15,300 --> 00:07:17,766
+which had 12 stock of Transformers
+
+121
+00:07:18,000 --> 00:07:21,065
+with approximately 110 million
+
+122
+00:07:21,065 --> 00:07:26,699
+parameters, and the other Bert Large with 24 layers of transformers
+
+123
+00:07:26,699 --> 00:07:29,465
+with about 340 million parameters.
+
+124
+00:07:30,466 --> 00:07:35,499
+The Bert model is powerful because it can handle long input context.
+
+125
+00:07:36,165 --> 00:07:40,299
+It was trained on the entire Wikipedia corpus and books corpus.
+
+126
+00:07:41,300 --> 00:07:44,099
+The Bert model was trained for 1 million steps.
+
+127
+00:07:44,800 --> 00:07:47,066
+Bert is trained on different tasks,
+
+128
+00:07:47,199 --> 00:07:49,864
+which means it has multi-task objective.
+
+129
+00:07:50,466 --> 00:07:53,300
+This makes Bert very powerful
+
+130
+00:07:53,300 --> 00:07:55,633
+because of the kind of tasks it was trained on.
+
+131
+00:07:55,665 --> 00:07:59,632
+It works at both a sentence level and at a token level.
+
+132
+00:08:00,699 --> 00:08:01,332
+These are the two
+
+133
+00:08:01,333 --> 00:08:04,833
+different versions of Bert that were originally released.
+
+134
+00:08:05,300 --> 00:08:08,166
+One is Bert Base, which had 12 layers,
+
+135
+00:08:08,665 --> 00:08:11,431
+whereas Bert Large had 24 layers.
+
+136
+00:08:11,699 --> 00:08:15,299
+And compared to the original transformer, which had six layers.
+
+137
+00:08:16,333 --> 00:08:20,833
+The way that Bert works is that it was trained on two different tasks.
+
+138
+00:08:21,132 --> 00:08:26,298
+Task one is called a masked language model, where the sentences are masked
+
+139
+00:08:26,600 --> 00:08:30,633
+and the model is trained to predict the masked words.
+
+140
+00:08:31,199 --> 00:08:34,899
+If you were to train Bert from scratch, you would have to mask
+
+141
+00:08:35,166 --> 00:08:38,233
+a certain percentage of the words in your corpus.
+
+142
+00:08:38,799 --> 00:08:42,231
+The recommended percentage for masking is 15%.
+
+143
+00:08:42,899 --> 00:08:45,298
+The masking percentage achieves a balance
+
+144
+00:08:45,299 --> 00:08:47,731
+between too little and too much masking.
+
+145
+00:08:48,365 --> 00:08:52,332
+Too little masking makes the training process extremely expensive,
+
+146
+00:08:52,732 --> 00:08:57,265
+and too much masking removes the context of the model requires.
+
+147
+00:08:58,133 --> 00:09:01,733
+The second task is to predict the next sentence.
+
+148
+00:09:02,399 --> 00:09:06,132
+For example, the model is given two sets of sentences.
+
+149
+00:09:06,600 --> 00:09:09,700
+Bert aims to learn the relationships between sentences
+
+150
+00:09:09,700 --> 00:09:12,833
+and predict the next sentence given the first one.
+
+151
+00:09:13,932 --> 00:09:14,964
+For example,
+
+152
+00:09:14,966 --> 00:09:18,066
+sentence A could be a man went to the store
+
+153
+00:09:18,432 --> 00:09:21,864
+and sentence B is he bought a gallon of milk.
+
+154
+00:09:22,966 --> 00:09:26,099
+Bert is responsible for classifying if sentence
+
+155
+00:09:26,100 --> 00:09:29,733
+B is in next sentence after sentence A.
+
+156
+00:09:30,166 --> 00:09:32,633
+This is a binary classification task.
+
+157
+00:09:33,600 --> 00:09:38,699
+This helps Bert perform at a sentence level in order to train Bert.
+
+158
+00:09:38,899 --> 00:09:42,032
+You need to feed three different kinds of embeddings
+
+159
+00:09:42,299 --> 00:09:45,231
+to the model for the input sentence.
+
+160
+00:09:45,265 --> 00:09:48,031
+You get three different embeddings token
+
+161
+00:09:48,466 --> 00:09:50,533
+segment and position embeddings.
+
+162
+00:09:51,832 --> 00:09:54,799
+The token embeddings is a representation
+
+163
+00:09:54,799 --> 00:09:58,832
+of each token as an embedding in the input sentence.
+
+164
+00:09:59,399 --> 00:10:02,032
+The words are transformed into vector
+
+165
+00:10:02,033 --> 00:10:04,500
+representations of certain dimensions.
+
+166
+00:10:05,600 --> 00:10:07,566
+Bert can solve NLP tasks
+
+167
+00:10:07,566 --> 00:10:10,199
+that involve tex classification as well.
+
+168
+00:10:10,799 --> 00:10:14,231
+An example is to classify whether two sentences say
+
+169
+00:10:14,600 --> 00:10:18,600
+my dog is cute and he likes playing are semantically similar.
+
+170
+00:10:18,932 --> 00:10:23,465
+The pairs of input texts are simply concatenated and fed into the model.
+
+171
+00:10:23,899 --> 00:10:27,532
+How does Bert distinguish the input in a given pair?
+
+172
+00:10:28,033 --> 00:10:30,832
+The answer is to use segment embeddings.
+
+173
+00:10:31,566 --> 00:10:35,099
+There is a special token represented by SEP
+
+174
+00:10:35,600 --> 00:10:38,833
+that separates the two different splits of the sentence.
+
+175
+00:10:39,799 --> 00:10:41,065
+Another problem is to
+
+176
+00:10:41,066 --> 00:10:43,666
+learn the order of the words in the sentence.
+
+177
+00:10:44,799 --> 00:10:48,331
+As you know, Bert consists of a stack of transformers.
+
+178
+00:10:48,899 --> 00:10:53,998
+Bert is designed to process input sequences up to a length of 512.
+
+179
+00:10:54,832 --> 00:10:59,965
+The order of the input sequence is incorporated into the position embeddings.
+
+180
+00:11:00,399 --> 00:11:05,565
+This allows Bert to learn a vector representation for each position.
+
+181
+00:11:06,500 --> 00:11:09,932
+Bert can be used for different downstream tasks.
+
+182
+00:11:10,533 --> 00:11:13,699
+Although Bert was trained on mass language modeling
+
+183
+00:11:13,700 --> 00:11:17,599
+and single sentence classification, it can be used
+
+184
+00:11:17,700 --> 00:11:21,900
+for popular NLP tasks like single sentence classification.
+
+185
+00:11:22,332 --> 00:11:24,299
+Sentence Pair Classification.
+
+186
+00:11:24,299 --> 00:11:28,231
+Question Answering and single sentence tagging tasks.
+
+187
+00:11:28,865 --> 00:11:31,898
+Thank you for listening.

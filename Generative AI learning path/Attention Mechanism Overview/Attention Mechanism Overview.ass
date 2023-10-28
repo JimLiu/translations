@@ -1,0 +1,171 @@
+[Script Info]
+
+Title: Attention Mechanism Overview
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.3,0:00:01.87,Secondary,,0,0,0,,Hi. I'm Sanjana Reddy,
+Dialogue: 1,0:00:01.87,0:00:05.30,Secondary,,0,0,0,,a machine learning engineer at Google's Advanced Solutions Lab.
+Dialogue: 1,0:00:06.0,0:00:08.77,Secondary,,0,0,0,,There's a lot of excitement currently around generative
+Dialogue: 1,0:00:08.97,0:00:12.93,Secondary,,0,0,0,,AI and new advancements, including new vertex AI features
+Dialogue: 1,0:00:13.27,0:00:17.73,Secondary,,0,0,0,,such as Gen AI, Studio Model Garden, Gen AI API.
+Dialogue: 1,0:00:18.17,0:00:22.33,Secondary,,0,0,0,,Our objective in this short session is to give you a solid footing
+Dialogue: 1,0:00:22.67,0:00:27.43,Secondary,,0,0,0,,on some of the underlying concepts that make all the Gen AI magic possible.
+Dialogue: 1,0:00:28.17,0:00:31.83,Secondary,,0,0,0,,Today I'm going to talk about the attention mechanism
+Dialogue: 1,0:00:32.0,0:00:37.43,Secondary,,0,0,0,,that is behind all the transformer models and which is core to the LEM models.
+Dialogue: 1,0:00:38.40,0:00:41.0,Secondary,,0,0,0,,Let's say you want to translate in English sentence
+Dialogue: 1,0:00:41.3,0:00:44.83,Secondary,,0,0,0,,the cat ate the mouse to French.
+Dialogue: 1,0:00:44.90,0:00:47.3,Secondary,,0,0,0,,You could use an encoder decoder.
+Dialogue: 1,0:00:47.43,0:00:51.37,Secondary,,0,0,0,,This is a popular model that is used to translate sentences.
+Dialogue: 1,0:00:51.97,0:00:55.53,Secondary,,0,0,0,,The encoder decoder takes one word at a time
+Dialogue: 1,0:00:55.53,0:00:57.70,Secondary,,0,0,0,,and translates it at each time step.
+Dialogue: 1,0:00:58.27,0:01:02.7,Secondary,,0,0,0,,However, sometimes the words in the source language
+Dialogue: 1,0:01:02.7,0:01:05.23,Secondary,,0,0,0,,do not align with the words in the target language.
+Dialogue: 1,0:01:05.63,0:01:07.13,Secondary,,0,0,0,,Here's an example.
+Dialogue: 1,0:01:07.13,0:01:10.10,Secondary,,0,0,0,,Take the sentence Black cat ate the mouse.
+Dialogue: 1,0:01:10.67,0:01:13.83,Secondary,,0,0,0,,In this example, the first English word is black.
+Dialogue: 1,0:01:14.43,0:01:16.50,Secondary,,0,0,0,,However, in the translation,
+Dialogue: 1,0:01:16.50,0:01:21.30,Secondary,,0,0,0,,the first French word is chat, which means cat in English.
+Dialogue: 1,0:01:21.87,0:01:24.93,Secondary,,0,0,0,,So how can you train a model to focus more on
+Dialogue: 1,0:01:24.93,0:01:27.63,Secondary,,0,0,0,,the word cat instead of the word black?
+Dialogue: 1,0:01:27.93,0:01:31.70,Secondary,,0,0,0,,Add the first time step to improve the translation.
+Dialogue: 1,0:01:31.73,0:01:36.67,Secondary,,0,0,0,,You can add what is called the attention mechanism to the encoder decoder.
+Dialogue: 1,0:01:37.47,0:01:41.33,Secondary,,0,0,0,,Attention mechanism is a technique that allows the neural network
+Dialogue: 1,0:01:41.47,0:01:45.10,Secondary,,0,0,0,,to focus on specific parts of an input sequence.
+Dialogue: 1,0:01:45.93,0:01:50.50,Secondary,,0,0,0,,This is done by assigning weights to different parts of the input sequence
+Dialogue: 1,0:01:50.83,0:01:54.90,Secondary,,0,0,0,,with the most important parts receiving the highest weights.
+Dialogue: 1,0:01:55.77,0:02:00.17,Secondary,,0,0,0,,This is what a traditional RNN based encoder decoder looks like.
+Dialogue: 1,0:02:00.77,0:02:03.70,Secondary,,0,0,0,,The model takes one word at a time as input
+Dialogue: 1,0:02:04.27,0:02:08.43,Secondary,,0,0,0,,updates the hidden state and passes it on to the next time step.
+Dialogue: 1,0:02:09.93,0:02:11.17,Secondary,,0,0,0,,In the end,
+Dialogue: 1,0:02:11.17,0:02:14.77,Secondary,,0,0,0,,only the final hidden state is passed on to the decoder.
+Dialogue: 1,0:02:15.93,0:02:19.10,Secondary,,0,0,0,,The decoder works with the final hidden state
+Dialogue: 1,0:02:19.40,0:02:23.47,Secondary,,0,0,0,,for processing and translates it to the target language.
+Dialogue: 1,0:02:24.43,0:02:27.70,Secondary,,0,0,0,,An attention model differs from the traditional sequence
+Dialogue: 1,0:02:27.70,0:02:29.70,Secondary,,0,0,0,,to sequence model in two ways.
+Dialogue: 1,0:02:30.33,0:02:34.73,Secondary,,0,0,0,,First, the encoder passes a lot more data to the decoder.
+Dialogue: 1,0:02:35.40,0:02:39.10,Secondary,,0,0,0,,So instead of just passing the final hidden state number
+Dialogue: 1,0:02:39.10,0:02:42.53,Secondary,,0,0,0,,three to the decoder, the encoder passes
+Dialogue: 1,0:02:42.53,0:02:45.0,Secondary,,0,0,0,,all the hidden states from each time step.
+Dialogue: 1,0:02:46.3,0:02:48.53,Secondary,,0,0,0,,This gives the decoder more context
+Dialogue: 1,0:02:48.73,0:02:50.97,Secondary,,0,0,0,,beyond just the final hidden state.
+Dialogue: 1,0:02:51.67,0:02:56.40,Secondary,,0,0,0,,The decoder uses all the hidden state information to translate the sentence.
+Dialogue: 1,0:02:56.80,0:03:01.17,Secondary,,0,0,0,,The second change that the attention mechanism brings is adding
+Dialogue: 1,0:03:01.17,0:03:05.50,Secondary,,0,0,0,,an extra step to the attention decoder before producing its output.
+Dialogue: 1,0:03:06.60,0:03:08.60,Secondary,,0,0,0,,Let's take a look at what these steps are
+Dialogue: 1,0:03:10.13,0:03:10.73,Secondary,,0,0,0,,to focus
+Dialogue: 1,0:03:10.73,0:03:13.43,Secondary,,0,0,0,,only on the most relevant parts of the input.
+Dialogue: 1,0:03:13.80,0:03:17.10,Secondary,,0,0,0,,The decoder does the following.
+Dialogue: 1,0:03:17.10,0:03:21.93,Secondary,,0,0,0,,First, it looks at the set of encoder states that it has received.
+Dialogue: 1,0:03:22.93,0:03:25.57,Secondary,,0,0,0,,Each encoder Hidden State is associated
+Dialogue: 1,0:03:25.57,0:03:28.27,Secondary,,0,0,0,,with a certain word in the input sentence.
+Dialogue: 1,0:03:28.73,0:03:31.53,Secondary,,0,0,0,,Second, it gives each hidden state a score.
+Dialogue: 1,0:03:32.40,0:03:35.57,Secondary,,0,0,0,,Third in multiplies each hidden state by its
+Dialogue: 1,0:03:35.57,0:03:38.70,Secondary,,0,0,0,,soft-max score as shown here.
+Dialogue: 1,0:03:38.70,0:03:42.53,Secondary,,0,0,0,,Thus amplifying hidden states with the highest scores
+Dialogue: 1,0:03:43.13,0:03:46.33,Secondary,,0,0,0,,and downsizing hidden states with low scores.
+Dialogue: 1,0:03:47.13,0:03:49.57,Secondary,,0,0,0,,If we connect all of these pieces together,
+Dialogue: 1,0:03:49.80,0:03:52.50,Secondary,,0,0,0,,we're going to see how the Attention Network works.
+Dialogue: 1,0:03:53.3,0:03:57.27,Secondary,,0,0,0,,Before moving on, let's define some of the notations on this slide.
+Dialogue: 1,0:03:57.93,0:04:01.77,Secondary,,0,0,0,,Alpha here represents the attention rate at each time step.
+Dialogue: 1,0:04:02.37,0:04:05.67,Secondary,,0,0,0,,H represents the hidden state of the encoder RNN
+Dialogue: 1,0:04:05.67,0:04:09.0,Secondary,,0,0,0,,at each time step h subscript
+Dialogue: 1,0:04:09.0,0:04:12.47,Secondary,,0,0,0,,B represents the hidden state of the decoder
+Dialogue: 1,0:04:12.47,0:04:16.83,Secondary,,0,0,0,,RNN at each time step. With the attention mechanism
+Dialogue: 1,0:04:17.0,0:04:21.13,Secondary,,0,0,0,,the inversion of the Black Cat translation is clearly visible
+Dialogue: 1,0:04:21.13,0:04:24.17,Secondary,,0,0,0,,in the attention diagram and ate
+Dialogue: 1,0:04:24.53,0:04:27.0,Secondary,,0,0,0,,translates as two words, a mange,
+Dialogue: 1,0:04:27.27,0:04:30.33,Secondary,,0,0,0,,in French. We can see the attention network
+Dialogue: 1,0:04:30.37,0:04:33.93,Secondary,,0,0,0,,staying focused on the word ate for two time steps.
+Dialogue: 1,0:04:34.93,0:04:35.93,Secondary,,0,0,0,,During the attention
+Dialogue: 1,0:04:35.93,0:04:40.73,Secondary,,0,0,0,,step we use the encoder hidden states and the H4 vector
+Dialogue: 1,0:04:40.73,0:04:45.10,Secondary,,0,0,0,,to calculate a context vector a four for this time step.
+Dialogue: 1,0:04:45.67,0:04:48.13,Secondary,,0,0,0,,This is the weighted sum.
+Dialogue: 1,0:04:48.13,0:04:50.40,Secondary,,0,0,0,,We then concatenate H4
+Dialogue: 1,0:04:50.40,0:04:52.97,Secondary,,0,0,0,,and a 4 into one vector.
+Dialogue: 1,0:04:54.0,0:04:58.30,Secondary,,0,0,0,,This concatenated vector is passed through a feedforward neural network.
+Dialogue: 1,0:04:58.73,0:05:00.83,Secondary,,0,0,0,,One train jointly with the model
+Dialogue: 1,0:05:01.40,0:05:04.17,Secondary,,0,0,0,,to predict the next work.
+Dialogue: 1,0:05:04.17,0:05:06.77,Secondary,,0,0,0,,The output of the feedforward neural network
+Dialogue: 1,0:05:06.90,0:05:10.0,Secondary,,0,0,0,,indicates the output word of this time step.
+Dialogue: 1,0:05:10.50,0:05:14.53,Secondary,,0,0,0,,This process continues till the end of sentence token
+Dialogue: 1,0:05:14.53,0:05:17.17,Secondary,,0,0,0,,is generated by the decoder.
+Dialogue: 1,0:05:17.17,0:05:20.67,Secondary,,0,0,0,,This is how you can use an attention mechanism to improve
+Dialogue: 1,0:05:20.67,0:05:24.47,Secondary,,0,0,0,,the performance of a traditional encoder decoder architecture.
+Dialogue: 1,0:05:25.23,0:05:28.30,Secondary,,0,0,0,,Thank you so much for listening.
+Dialogue: 1,0:00:00.3,0:00:01.87,Default,,0,0,0,,嗨，我是Sanjana Reddy，
+Dialogue: 1,0:00:01.87,0:00:05.30,Default,,0,0,0,,我在谷歌高级解决方案实验室担任机器学习工程师。
+Dialogue: 1,0:00:06.0,0:00:12.93,Default,,0,0,0,,最近，生成式AI和相关的新技术引起了大\N家的关注，包括新的Vertex AI功能，
+Dialogue: 1,0:00:13.27,0:00:17.73,Default,,0,0,0,,如Gen AI、Studio Model Garden、Gen AI API等。
+Dialogue: 1,0:00:18.17,0:00:27.43,Default,,0,0,0,,在这个简短的课程中，我们的目标是让您能了解Gen \NAI背后的一些基本概念，打下一个坚实的基础。
+Dialogue: 1,0:00:28.17,0:00:31.83,Default,,0,0,0,,今天我要谈谈注意力机制，
+Dialogue: 1,0:00:32.0,0:00:37.43,Default,,0,0,0,,它是所有Transformer模型背后推动力，也是LEM模型的核心。
+Dialogue: 1,0:00:38.40,0:00:44.83,Default,,0,0,0,,假设您想把英语句子“the cat ate the mouse”翻译成法语。
+Dialogue: 1,0:00:44.90,0:00:47.3,Default,,0,0,0,,你可以使用编码器解码器。
+Dialogue: 1,0:00:47.43,0:00:51.37,Default,,0,0,0,,这是一种常用的翻译句子的模型。
+Dialogue: 1,0:00:51.97,0:00:55.53,Default,,0,0,0,,编码解码器每次只处理一个单词，
+Dialogue: 1,0:00:55.53,0:00:57.70,Default,,0,0,0,,然后在每个时间步骤进行翻译。
+Dialogue: 1,0:00:58.27,0:01:05.23,Default,,0,0,0,,然而，有时源语言中的单词并不对应目标语言中的单词。
+Dialogue: 1,0:01:05.63,0:01:07.13,Default,,0,0,0,,这里有一个例子。
+Dialogue: 1,0:01:07.13,0:01:10.10,Default,,0,0,0,,这个句子是“Black cat ate the mouse”。
+Dialogue: 1,0:01:10.67,0:01:13.83,Default,,0,0,0,,在这个例子中，英文中的第一个词是“black”，
+Dialogue: 1,0:01:14.43,0:01:16.50,Default,,0,0,0,,但在翻译成法文的时候，
+Dialogue: 1,0:01:16.50,0:01:21.30,Default,,0,0,0,,第一个词是“chat”，意思是英文中的“cat”。
+Dialogue: 1,0:01:21.87,0:01:31.70,Default,,0,0,0,,那么如何训练一个模型，让它在第一步时更多地关注“cat”\N这个词，而不是“black”这个词，以提高翻译的准确度呢？
+Dialogue: 1,0:01:31.73,0:01:36.67,Default,,0,0,0,,你可以在编码解码器中加入所谓的注意力机制。
+Dialogue: 1,0:01:37.47,0:01:45.10,Default,,0,0,0,,注意力机制是一种让神经网络能够专注于输入序列特定部分的技术，
+Dialogue: 1,0:01:45.93,0:01:50.50,Default,,0,0,0,,它通过为输入序列的不同部分分配权重来实现，
+Dialogue: 1,0:01:50.83,0:01:54.90,Default,,0,0,0,,最重要的部分会获得最高的权重。
+Dialogue: 1,0:01:55.77,0:02:00.17,Default,,0,0,0,,传统的基于RNN的编码解码器看起来是这样的：
+Dialogue: 1,0:02:00.77,0:02:03.70,Default,,0,0,0,,模型一次接收一个单词作为输入，
+Dialogue: 1,0:02:04.27,0:02:08.43,Default,,0,0,0,,更新隐藏状态，并将其传递到下一个时间步骤。
+Dialogue: 1,0:02:09.93,0:02:14.77,Default,,0,0,0,,在结束时，只有最后的隐藏状态会传递给解码器。
+Dialogue: 1,0:02:15.93,0:02:23.47,Default,,0,0,0,,解码器使用最后的隐藏状态进行处理，并将其翻译为目标语言。
+Dialogue: 1,0:02:24.43,0:02:29.70,Default,,0,0,0,,注意力模型与传统的序列到序列模型在两个方面有所不同。
+Dialogue: 1,0:02:30.33,0:02:34.73,Default,,0,0,0,,首先，编码器向解码器传递更多的数据。
+Dialogue: 1,0:02:35.40,0:02:45.0,Default,,0,0,0,,所以，编码器不只是将最后的隐藏状态3传递给解码器，它\N会将每个时间步骤的所有隐藏状态都传递给解码器。
+Dialogue: 1,0:02:46.3,0:02:50.97,Default,,0,0,0,,这让解码器在只有最后隐藏状态的基础上获得了更多的上下文信息。
+Dialogue: 1,0:02:51.67,0:02:56.40,Default,,0,0,0,,解码器使用所有隐藏状态的信息来翻译句子。
+Dialogue: 1,0:02:56.80,0:03:05.50,Default,,0,0,0,,注意力机制带来的第二个变化是，在产生输出之\N前，注意力解码器增加了一个额外的步骤。
+Dialogue: 1,0:03:06.60,0:03:13.43,Default,,0,0,0,,让我们看看这些步骤是怎么让解码器只关注输入中最相关的部分的。
+Dialogue: 1,0:03:13.80,0:03:17.10,Default,,0,0,0,,解码器执行以下操作：
+Dialogue: 1,0:03:17.10,0:03:21.93,Default,,0,0,0,,首先，它会观察到它收到的编码器状态集合，
+Dialogue: 1,0:03:22.93,0:03:28.27,Default,,0,0,0,,每个编码器的隐藏状态都与输入句子中的某个词有关。
+Dialogue: 1,0:03:28.73,0:03:31.53,Default,,0,0,0,,其次，它会给每个隐藏状态一个分数。
+Dialogue: 1,0:03:32.40,0:03:38.70,Default,,0,0,0,,然后，它会将每个隐藏状态乘以它的softmax分数，如图所示。
+Dialogue: 1,0:03:38.70,0:03:46.33,Default,,0,0,0,,这样就可以增强得分高的隐藏状态，降低得分低的隐藏状态。
+Dialogue: 1,0:03:47.13,0:03:52.50,Default,,0,0,0,,如果我们把所有这些元素都连接起来，我们\N就可以看到注意力网络是如何工作的。
+Dialogue: 1,0:03:53.3,0:03:57.27,Default,,0,0,0,,我们继续之前，让我们来定义一下这个幻灯片上的一些符号。
+Dialogue: 1,0:03:57.93,0:04:01.77,Default,,0,0,0,,这里的α表示每个时间步骤的注意力率，
+Dialogue: 1,0:04:02.37,0:04:09.0,Default,,0,0,0,,H表示编码器RNN在每个时间步骤的隐藏状态，
+Dialogue: 1,0:04:09.0,0:04:12.47,Default,,0,0,0,,H下标b表示解码器RNN在
+Dialogue: 1,0:04:12.47,0:04:16.83,Default,,0,0,0,,每个时间步骤的隐藏状态。有了注意力机制
+Dialogue: 1,0:04:17.0,0:04:24.17,Default,,0,0,0,,"Black Cat"的翻译倒置就在注意力图中清晰可见，
+Dialogue: 1,0:04:24.53,0:04:27.0,Default,,0,0,0,,而"ate"在法语中翻译为两个词，"a mange"。
+Dialogue: 1,0:04:27.27,0:04:33.93,Default,,0,0,0,,我们可以看到注意力网络在两个时间步骤内都集中在"ate"这个词上。
+Dialogue: 1,0:04:34.93,0:04:45.10,Default,,0,0,0,,在注意力步骤中，我们使用编码器隐藏状态和H4\N向量来计算这个时间步骤的上下文向量a4，
+Dialogue: 1,0:04:45.67,0:04:48.13,Default,,0,0,0,,这是一个加权和。
+Dialogue: 1,0:04:48.13,0:04:52.97,Default,,0,0,0,,然后，我们将H4和a4合并成一个向量。
+Dialogue: 1,0:04:54.0,0:04:58.30,Default,,0,0,0,,这个合并的向量被送入一个前馈神经网络中，
+Dialogue: 1,0:04:58.73,0:05:04.17,Default,,0,0,0,,与模型一起训练，以预测下一个词。
+Dialogue: 1,0:05:04.17,0:05:10.0,Default,,0,0,0,,这个前馈神经网络的输出代表了这个时间步骤的输出词。
+Dialogue: 1,0:05:10.50,0:05:17.17,Default,,0,0,0,,这个过程会一直持续，直到解码器生成句子结束的标记。
+Dialogue: 1,0:05:17.17,0:05:24.47,Default,,0,0,0,,这就是你可以如何使用注意力机制来提\N高传统编码解码架构性能的方式。
+Dialogue: 1,0:05:25.23,0:05:28.30,Default,,0,0,0,,非常感谢你的聆听。

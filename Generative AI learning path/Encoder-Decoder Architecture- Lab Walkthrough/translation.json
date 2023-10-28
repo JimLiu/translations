@@ -1,0 +1,6478 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 399
+          },
+          "text": "Hello, everybody!"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 999
+          },
+          "text": "My name is Benoit"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 2,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 432
+          },
+          "text": "Dherin, a machine learning engineer at Google's Advanced Solutions Lab."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 299
+          },
+          "text": "If you want to know more about what the Advanced Solutions Lab is, please"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 266
+          },
+          "text": "follow the link below in the description box."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 532
+          },
+          "text": "There is lots of excitement currently around generative AI and new advancements,"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 666
+          },
+          "text": "including new Vertex AI features such as GenAI"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 266
+          },
+          "text": "Studio, Model Garden, GenAI API."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 399
+          },
+          "text": "Our objective in this short session is to give you a solid footing"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 798
+          },
+          "text": "on some of the underlying concepts that make all the Gen AI magic possible."
+        }
+      ],
+      "source": [
+        "Hello, everybody!",
+        "My name is Benoit",
+        "Dherin, a machine learning engineer at Google's Advanced Solutions Lab.",
+        "If you want to know more about what the Advanced Solutions Lab is, please",
+        "follow the link below in the description box.",
+        "There is lots of excitement currently around generative AI and new advancements,",
+        "including new Vertex AI features such as GenAI",
+        "Studio, Model Garden, GenAI API.",
+        "Our objective in this short session is to give you a solid footing",
+        "on some of the underlying concepts that make all the Gen AI magic possible."
+      ],
+      "result": [
+        "大家好！我是Google Advanced Solutions Lab的机器学习工程师Benoit Dherin。",
+        "",
+        "",
+        "如果你想了解更多关于Advanced Solutions Lab的信息，请点击描述框下方的链接。",
+        "",
+        "围绕着生成性AI和相关的新技术取得了令人兴奋的进展，例如像新的Vertex AI特性如GenAI Studio，Model Garden，GenAI API等。",
+        "",
+        "",
+        "在这个简短的课程中，我们的目标是帮助你了解一些生成式AI的基本概念。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 799
+          },
+          "text": "Today, I’ll go over the code that’s complementary"
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 432
+          },
+          "text": "to the “Encoder-Decoder Architecture Overview” course in the same series."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 532
+          },
+          "text": "We will see together how to build a poetry generator"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 599
+          },
+          "text": "from scratch using the encoder-decoder architecture."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 66
+          },
+          "text": "Using the angular decoder architecture"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 964
+          },
+          "text": "you’d find to set up instructions in our GitHub repository."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 766
+          },
+          "text": "Okay, let's now have a look at the code."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 831
+          },
+          "text": "To access our lab, go in the asl-ml-immersion folder."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 65
+          },
+          "text": "Then the notebooks folder."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 432
+          },
+          "text": "Then the text_models folder."
+        }
+      ],
+      "source": [
+        "Today, I’ll go over the code that’s complementary",
+        "to the “Encoder-Decoder Architecture Overview” course in the same series.",
+        "We will see together how to build a poetry generator",
+        "from scratch using the encoder-decoder architecture.",
+        "Using the angular decoder architecture",
+        "you’d find to set up instructions in our GitHub repository.",
+        "Okay, let's now have a look at the code.",
+        "To access our lab, go in the asl-ml-immersion folder.",
+        "Then the notebooks folder.",
+        "Then the text_models folder."
+      ],
+      "result": [
+        "今天，我将讲解与同一系列的“编码器-解码器架构概述”课程相辅助的代码。",
+        "",
+        "我们将一起学习如何从头开始使用编码器-解码器架构建立一个诗歌生成器，",
+        "",
+        "",
+        "你可以在我们的GitHub Repo找到设置指南。",
+        "好的，现在让我们看一下代码。",
+        "要访问我们的Lab，请进入asl-ml-immersion文件夹。",
+        "然后是notebooks文件夹。",
+        "然后是text_models文件夹。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 10,
+            "milliseconds": 466
+          },
+          "text": "And in the solutions from there you'll find the text generation notebook."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 10,
+            "milliseconds": 965
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 16,
+            "milliseconds": 332
+          },
+          "text": "That's the lab that we'll cover today."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 32
+          },
+          "text": "In this lab we will implement a character based text generator"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 100
+          },
+          "text": "based on the encoder decoder architecture."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 465
+          },
+          "text": "Character based means that the tokens consumed"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 664
+          },
+          "text": "and generated by the network are characters and not words."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 965
+          },
+          "text": "We will use plays as a data set."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 32
+          },
+          "text": "They have a special structure"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 132
+          },
+          "text": "which are that of people talking with each other."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 432
+          },
+          "text": "And here you see an example of a piece of text"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 66
+          },
+          "text": "that has been generated by the trained neural network."
+        }
+      ],
+      "source": [
+        "And in the solutions from there you'll find the text generation notebook.",
+        "That's the lab that we'll cover today.",
+        "In this lab we will implement a character based text generator",
+        "based on the encoder decoder architecture.",
+        "Character based means that the tokens consumed",
+        "and generated by the network are characters and not words.",
+        "We will use plays as a data set.",
+        "They have a special structure",
+        "which are that of people talking with each other.",
+        "And here you see an example of a piece of text",
+        "that has been generated by the trained neural network."
+      ],
+      "result": [
+        "在solutions文件夹里你会找到text_generation的Notebook，",
+        "这就是我们今天要讲的实验。",
+        "在这个实验中，我们将基于编码器解码器架构实现一个基于字符的文本生成器。",
+        "",
+        "基于字符意味着网络消耗和生成的Token是字符而不是单词。",
+        "",
+        "我们将使用剧本作为数据集。",
+        "它们有特殊的结构，就像人们在彼此对话。",
+        "",
+        "你在这里看到的是一个由训练过的神经网络生成的文本示例，",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 11 vs 8, Wed Jun 14 2023 01:55:14 GMT-0500 (Central Daylight Time)",
+        "在那里的解决方案中，你会找到文本生成的笔记本。\n这就是我们今天要讲的实验。\n在这个实验中，我们将实现一个基于编码器解码器架构的字符级文本生成器。\n字符级意味着网络消耗和生成的Token是字符，而不是单词。\n我们将使用剧本作为数据集。\n它们有一种特殊的结构，\n就是人们互相交谈的结构。\n这里你可以看到一个由训练过的神经网络生成的文本片段的例子。"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 500
+          },
+          "text": "When the sentences are not necessarily making sense"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 500
+          },
+          "text": "nor are grammatically correct."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 965
+          },
+          "text": "This is remarkable in many ways."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 965
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 665
+          },
+          "text": "First of all, remember, it's character based."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 799
+          },
+          "text": "So it means that it learns to predict only the most probable characters."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 65
+          },
+          "text": "Despite that, it was able to learn pretty well"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 133
+          },
+          "text": "The notion of words separated by blank spaces."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 965
+          },
+          "text": "And also the basic structure of a play with the characters talking to each other."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 432
+          },
+          "text": "So going"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 65
+          },
+          "text": "of what is a very small network, as you will see, it's based on the rnn"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 100
+          },
+          "text": "0 and architecture and only trained for 30 epochs in the vertex"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 733
+          },
+          "text": "air workbench, which is a pretty fast training time."
+        }
+      ],
+      "source": [
+        "When the sentences are not necessarily making sense",
+        "nor are grammatically correct.",
+        "This is remarkable in many ways.",
+        "First of all, remember, it's character based.",
+        "So it means that it learns to predict only the most probable characters.",
+        "Despite that, it was able to learn pretty well",
+        "The notion of words separated by blank spaces.",
+        "And also the basic structure of a play with the characters talking to each other.",
+        "So going",
+        "of what is a very small network, as you will see, it's based on the rnn",
+        "0 and architecture and only trained for 30 epochs in the vertex",
+        "air workbench, which is a pretty fast training time."
+      ],
+      "result": [
+        "即使这些句子没有必然的意义，",
+        "也不一定符合语法规则，",
+        "但仍然有很多值得注意的地方。",
+        "首先，记住，它是基于字符的。",
+        "所以它只学习预测最可能的字符。",
+        "尽管如此，它还是学得很好",
+        "像单词被空格分开的概念，",
+        "以及剧本的基本结构，角色彼此对话。",
+        "所以继续",
+        "你将看到的这个非常小的网络是基于RNN 0架构的，并且只在Vertex AIr工作台上训练了30个周期，这是一个非常快的训练时间。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 33
+          },
+          "text": "So let's look at the code now."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 365
+          },
+          "text": "So the first thing is to import the libraries that we need."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 198
+          },
+          "text": "In particular, we could or encoder decoder architecture"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 132
+          },
+          "text": "using TensorFlow Keras to impart that."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 299
+          },
+          "text": "Then we download our data set"
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 99
+          },
+          "text": "using tf.keras.utils.get_file."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 498
+          },
+          "text": "So now the dataset is on disk and we just need to load it into a variable called text."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 832
+          },
+          "text": "So the text variable now contains the whole string representing"
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 18,
+            "milliseconds": 665
+          },
+          "text": "all the all the plays in that Shakespeare dataset."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 66
+          },
+          "text": "Can I have a quick look at what it is?"
+        }
+      ],
+      "source": [
+        "So let's look at the code now.",
+        "So the first thing is to import the libraries that we need.",
+        "In particular, we could or encoder decoder architecture",
+        "using TensorFlow Keras to impart that.",
+        "Then we download our data set",
+        "using tf.keras.utils.get_file.",
+        "So now the dataset is on disk and we just need to load it into a variable called text.",
+        "So the text variable now contains the whole string representing",
+        "all the all the plays in that Shakespeare dataset.",
+        "Can I have a quick look at what it is?"
+      ],
+      "result": [
+        "那么现在我们来看看代码。",
+        "首先要导入我们需要的库。",
+        "特别是，我们可以使用TensorFlow Keras来导入编码器解码器架构。",
+        "",
+        "然后我们下载数据集",
+        "使用tf.keras.utils.get_file。",
+        "现在数据集已经在磁盘上，我们只需要将其加载到变量text中。",
+        "这个text变量现在包含了代表整个莎士比亚剧本数据集的整个字符串。",
+        "",
+        "我可以快速看看它是什么吗？"
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 10 vs 9, Wed Jun 14 2023 01:58:04 GMT-0500 (Central Daylight Time)",
+        "现在让我们看看代码。\n首先要导入我们需要的库。\n特别是，我们可以使用TensorFlow Keras导入编码器解码器架构。\n然后我们下载我们的数据集\n使用tf.keras.utils.get_file。\n现在数据集已经在硬盘上，我们只需要将其加载到变量called text中。\n现在，文本变量包含了代表\n所有莎士比亚数据集中的所有剧本的整个字符串。\n我可以快速看看它是什么吗？"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 399
+          },
+          "text": "And you see if we printed the first 250 characters."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 133
+          },
+          "text": "You have the first citizens speaking to"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 731
+          },
+          "text": "everybody and everybody else is speaking"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 34,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 233
+          },
+          "text": "to the first citizen."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 32
+          },
+          "text": "The cell computes the number of unique characters that we have in that"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 44,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 699
+          },
+          "text": "in the text dataset, and we see that we have"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 64
+          },
+          "text": "65 unique characters, right?"
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 631
+          },
+          "text": "These characters would be the tokens that the neural network will consume"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 199
+          },
+          "text": "during training and will generating during this service."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 232
+          },
+          "text": "So the first step here"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 899
+          },
+          "text": "now is to vectorize the text."
+        }
+      ],
+      "source": [
+        "And you see if we printed the first 250 characters.",
+        "You have the first citizens speaking to",
+        "everybody and everybody else is speaking",
+        "to the first citizen.",
+        "The cell computes the number of unique characters that we have in that",
+        "in the text dataset, and we see that we have",
+        "65 unique characters, right?",
+        "These characters would be the tokens that the neural network will consume",
+        "during training and will generating during this service.",
+        "So the first step here",
+        "now is to vectorize the text."
+      ],
+      "result": [
+        "你会看到，如果我们打印出前250个字符，",
+        "有第一位公民对所有人说话，然后所有人对第一位公民说话。",
+        "",
+        "",
+        "这个单元计算我们在文本数据集中有多少唯一的字符，我们看到我们有65个唯一的字符，对吧？",
+        "",
+        "",
+        "这些字符将是神经网络在训练和生成过程中将消耗的Token。",
+        "",
+        "现在的第一步是对文本进行向量化。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 932
+          },
+          "text": "What do we mean by that?"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 132
+          },
+          "text": "It means that first of all,"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 365
+          },
+          "text": "we will need to extract"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 898
+          },
+          "text": "from the actual string sequence of characters, which we can do"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 22,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 198
+          },
+          "text": "with TensorFlow by using tf.strings.unicode_split."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 399
+          },
+          "text": "So now, for example, texts"
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 400
+          },
+          "text": "here are transformed into a list"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 531
+          },
+          "text": "of sequences of characters."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 39,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 932
+          },
+          "text": "A neural network cannot consume immediately."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 865
+          },
+          "text": "The characters."
+        }
+      ],
+      "source": [
+        "What do we mean by that?",
+        "It means that first of all,",
+        "we will need to extract",
+        "from the actual string sequence of characters, which we can do",
+        "with TensorFlow by using tf.strings.unicode_split.",
+        "So now, for example, texts",
+        "here are transformed into a list",
+        "of sequences of characters.",
+        "A neural network cannot consume immediately.",
+        "The characters."
+      ],
+      "result": [
+        "向量化是什么意思呢？",
+        "这意味着我们首先需要从实际的字符串序列中提取出字符序列，",
+        "",
+        "我们可以用TensorFlow的tf.strings.unicode_split来做到这一点。",
+        "",
+        "以现在，例如，文本在这里被转换成了字符序列的列表。",
+        "",
+        "",
+        "神经网络不能直接消耗字符，我们需要将它转换成数字。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 898
+          },
+          "text": "We need to transform that into numbers."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 45,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 399
+          },
+          "text": "So we need to simply map each of the characters to a given"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 799
+          },
+          "text": "id. For that we have the"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 56,
+            "milliseconds": 233
+          },
+          "text": "tf.keras.layers.StringLookup"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 798
+          },
+          "text": "to which you just need to pass to"
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 2,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 499
+          },
+          "text": "the list of your vocabulary."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 8,
+            "milliseconds": 233
+          },
+          "text": "The 65 unique character that we have in our corpus"
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 400
+          },
+          "text": "and that we produce a layer that when passed the characters"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 532
+          },
+          "text": "will produce corresponding ids."
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 100
+          },
+          "text": "So within that, that layer you have a mapping that has been generated"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 932
+          },
+          "text": "between the characters and the"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 899
+          },
+          "text": "id. To get the inverse mapping,"
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 632
+          },
+          "text": "you use the same layer of string lookup"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 733
+          },
+          "text": "with the exact same vocabulary that you retrieve"
+        }
+      ],
+      "source": [
+        "We need to transform that into numbers.",
+        "So we need to simply map each of the characters to a given",
+        "id. For that we have the",
+        "tf.keras.layers.StringLookup",
+        "to which you just need to pass to",
+        "the list of your vocabulary.",
+        "The 65 unique character that we have in our corpus",
+        "and that we produce a layer that when passed the characters",
+        "will produce corresponding ids.",
+        "So within that, that layer you have a mapping that has been generated",
+        "between the characters and the",
+        "id. To get the inverse mapping,",
+        "you use the same layer of string lookup",
+        "with the exact same vocabulary that you retrieve"
+      ],
+      "result": [
+        "",
+        "所以我们需要简单地将每个字符映射到一个给定的id。",
+        "为此我们有tf.keras.layers.StringLookup，你只需要将你的词汇表列表传给它。",
+        "",
+        "",
+        "",
+        "我们在语料库中有的65个唯一字符，然后我们生成一个层，当传入字符时，它会产生相应的id。",
+        "",
+        "",
+        "在那个层中，你有一个已经生成的字符和id之间的映射。",
+        "",
+        "要获得反向映射，你使用相同的字符串查找层，使用从第一层获取的相同的词汇表。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 300
+          },
+          "text": "from the first of the year by using get vocabulary."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 299
+          },
+          "text": "But you set that parameter to be true, invert, equal equal true,"
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 600
+          },
+          "text": "and that will compute the invert mapping, which is the mapping from"
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 200
+          },
+          "text": "id to chars"
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 699
+          },
+          "text": "Right."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 998
+          },
+          "text": "And indeed, if you pass to this mapping"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 233
+          },
+          "text": "sequence of ID’s, the ID’s,"
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 865
+          },
+          "text": "it gives you back"
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 465
+          },
+          "text": "the corresponding characters."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 632
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 599
+          },
+          "text": "Using the mapping that start in the memory of this layer."
+        }
+      ],
+      "source": [
+        "from the first of the year by using get vocabulary.",
+        "But you set that parameter to be true, invert, equal equal true,",
+        "and that will compute the invert mapping, which is the mapping from",
+        "id to chars",
+        "Right.",
+        "And indeed, if you pass to this mapping",
+        "sequence of ID’s, the ID’s,",
+        "it gives you back",
+        "the corresponding characters.",
+        "Using the mapping that start in the memory of this layer."
+      ],
+      "result": [
+        "",
+        "但你将参数设置为真，invert等于True，",
+        "那将计算反向映射，即从id到字符的映射。",
+        "",
+        "",
+        "实际上，如果你传递一系列ID给这个映射，它会给你返回对应的字符，",
+        "",
+        "",
+        "",
+        "使用在这个层的内存中存储的映射。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 11,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 233
+          },
+          "text": "So that's that."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 899
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 631
+          },
+          "text": "Now let's that's been the dataset that we will train our neural network with."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 464
+          },
+          "text": "For that we are using the"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 24,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 27,
+            "milliseconds": 32
+          },
+          "text": "tf.data.Dataset API,"
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 30,
+            "milliseconds": 133
+          },
+          "text": "which has this nice method"
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 30,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 133
+          },
+          "text": "from tons of slices"
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 799
+          },
+          "text": "which will convert."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 39,
+            "milliseconds": 865
+          },
+          "text": "That answer of instance represents or whole corpus of text of plays"
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 965
+          },
+          "text": "as id it will store that into it to have data data sets."
+        }
+      ],
+      "source": [
+        "So that's that.",
+        "Okay.",
+        "Now let's that's been the dataset that we will train our neural network with.",
+        "For that we are using the",
+        "tf.data.Dataset API,",
+        "which has this nice method",
+        "from tons of slices",
+        "which will convert.",
+        "That answer of instance represents or whole corpus of text of plays",
+        "as id it will store that into it to have data data sets."
+      ],
+      "result": [
+        "就是这样。",
+        "好的。",
+        "现在我们来准备我们将用来训练神经网络的数据集。",
+        "我们使用了tf.data.Dataset API，它有一个很好的方法叫做“from_tensor_slices”，",
+        "",
+        "",
+        "",
+        "",
+        "它将把一个实例数组，代表我们的整个剧本文本语料库的id，转化为一个TF data数据集。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 164
+          },
+          "text": "So at this point, the elements of these datasets"
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "text": "are just the individual characters."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 53,
+            "milliseconds": 899
+          },
+          "text": "So that's not great for us."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 53,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 57,
+            "milliseconds": 932
+          },
+          "text": "But we want to feed our neural network with our sequences"
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 499
+          },
+          "text": "of the same length but not just one character."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 3,
+            "milliseconds": 432
+          },
+          "text": "We need to predict the next character. So"
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 764
+          },
+          "text": "but luckily the"
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 11,
+            "milliseconds": 266
+          },
+          "text": "dataset API has this nice function batch that will do exactly that for us."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 11,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 14,
+            "milliseconds": 399
+          },
+          "text": "So if we pass, if we invoke the batch"
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 14,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 700
+          },
+          "text": "method on our ID dataset,"
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 18,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 199
+          },
+          "text": "to which we pass a given sequence length,"
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 26,
+            "milliseconds": 399
+          },
+          "text": "which we said to be 100 here, now the elements,"
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 700
+          },
+          "text": "the data points that are stored in our dataset"
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 499
+          },
+          "text": "are no longer characters, but the sequences of"
+        }
+      ],
+      "source": [
+        "So at this point, the elements of these datasets",
+        "are just the individual characters.",
+        "So that's not great for us.",
+        "But we want to feed our neural network with our sequences",
+        "of the same length but not just one character.",
+        "We need to predict the next character. So",
+        "but luckily the",
+        "dataset API has this nice function batch that will do exactly that for us.",
+        "So if we pass, if we invoke the batch",
+        "method on our ID dataset,",
+        "to which we pass a given sequence length,",
+        "which we said to be 100 here, now the elements,",
+        "the data points that are stored in our dataset",
+        "are no longer characters, but the sequences of"
+      ],
+      "result": [
+        "此刻，这些数据集的元素仅仅是单个字符。",
+        "",
+        "这对我们来说并不理想。",
+        "我们想要给我们的神经网络提供的是等长的序列，而不仅仅是一个字符。",
+        "",
+        "我们需要预测下一个字符。",
+        "但幸运的是，",
+        "数据集API有一个很好的功能叫做“batch”，它能完美地为我们做到这一点。",
+        "所以如果我们在我们的ID数据集上调用“batch”方法，",
+        "",
+        "并传递一个给定的序列长度（这里我们设定为100），",
+        "",
+        "那么存储在我们的数据集中的数据点就不再是字符，而是100个字符的序列。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 665
+          },
+          "text": "100 characters."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 564
+          },
+          "text": "So here you see an example."
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 132
+          },
+          "text": "If we take just one element, they are no longer characters,"
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 733
+          },
+          "text": "but sequences of hundreds of their character IDs"
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 50,
+            "milliseconds": 100
+          },
+          "text": "0 you want not characters, but character IDs."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 54,
+            "milliseconds": 631
+          },
+          "text": "Okay, it's"
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 54,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 57,
+            "milliseconds": 698
+          },
+          "text": "not completely we are not completely done here."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 58,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 832
+          },
+          "text": "We still need to create"
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 2,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 499
+          },
+          "text": "the input sequences that we were going to pass to the decoder"
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 832
+          },
+          "text": "and also the sequences that we want to predict."
+        }
+      ],
+      "source": [
+        "100 characters.",
+        "So here you see an example.",
+        "If we take just one element, they are no longer characters,",
+        "but sequences of hundreds of their character IDs",
+        "0 you want not characters, but character IDs.",
+        "Okay, it's",
+        "not completely we are not completely done here.",
+        "We still need to create",
+        "the input sequences that we were going to pass to the decoder",
+        "and also the sequences that we want to predict."
+      ],
+      "result": [
+        "",
+        "这里有一个例子。",
+        "如果我们只取一个元素，那么它们不再是字符，而是百位的字符ID序列，",
+        "",
+        "你需要的不是字符，而是字符ID。",
+        "好的，我们还没完全完成。",
+        "",
+        "我们仍然需要创建我们将传给解码器的输入序列，以及我们想要预测的序列。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 599
+          },
+          "text": "Right?"
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 13,
+            "milliseconds": 300
+          },
+          "text": "And what are the sequences that are just the sequences of the next character"
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 13,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 565
+          },
+          "text": "in the input sequence?"
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 65
+          },
+          "text": "So for instance, here, if we have the sequence TensorFlow"
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 20,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 398
+          },
+          "text": "and the sequence TensorFlow at the beginning,"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 24,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 565
+          },
+          "text": "then the input sequence we can do from"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 364
+          },
+          "text": "it is tens-or-flow, We know the W"
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 232
+          },
+          "text": "and the target sequence that we want to predict"
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 66
+          },
+          "text": "is the same sequence, but just shifted by one"
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 932
+          },
+          "text": "on the right, so ensor-low and"
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 898
+          },
+          "text": "you see that E is the next character for Ring T"
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 48,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 699
+          },
+          "text": "and is the next there for E, etc."
+        }
+      ],
+      "source": [
+        "Right?",
+        "And what are the sequences that are just the sequences of the next character",
+        "in the input sequence?",
+        "So for instance, here, if we have the sequence TensorFlow",
+        "and the sequence TensorFlow at the beginning,",
+        "then the input sequence we can do from",
+        "it is tens-or-flow, We know the W",
+        "and the target sequence that we want to predict",
+        "is the same sequence, but just shifted by one",
+        "on the right, so ensor-low and",
+        "you see that E is the next character for Ring T",
+        "and is the next there for E, etc."
+      ],
+      "result": [
+        "对吧？",
+        "那么，这些序列是什么呢？它们只是输入序列中下一个字符的序列。",
+        "",
+        "例如，如果我们有序列TensorFlow",
+        "并且在开始时有序列TensorFlow，",
+        "在序列的开头，我们能从中得到的输入序列是\"Tens-or-flow\"（省略了最后一个W），",
+        "",
+        "我们想要预测的目标序列是相同的序列，但是向右移动一位，",
+        "",
+        "所以是\"ensor-flow\"，",
+        "你可以看到E是T的下一个字符，N是E的下一个字符，等等。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 53,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 366
+          },
+          "text": "So basically this little function does exactly that."
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 666
+          },
+          "text": "It takes an original sequence, creates"
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 3,
+            "milliseconds": 599
+          },
+          "text": "an input sequence from that by just truncating that sequence"
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 3,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 100
+          },
+          "text": "0 removing the last character and that just the target sequence is created"
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 15,
+            "milliseconds": 133
+          },
+          "text": "by started at starting add the first character."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 15,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 431
+          },
+          "text": "So how we do that, we just map"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 19,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 23,
+            "milliseconds": 331
+          },
+          "text": "the split input target function to our sequence dataset."
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 25,
+            "milliseconds": 400
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 27,
+            "milliseconds": 599
+          },
+          "text": "And it's already does it."
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 27,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 29,
+            "milliseconds": 166
+          },
+          "text": "Now let's see how to build the model."
+        }
+      ],
+      "source": [
+        "So basically this little function does exactly that.",
+        "It takes an original sequence, creates",
+        "an input sequence from that by just truncating that sequence",
+        "0 removing the last character and that just the target sequence is created",
+        "by started at starting add the first character.",
+        "So how we do that, we just map",
+        "the split input target function to our sequence dataset.",
+        "Okay.",
+        "And it's already does it.",
+        "Now let's see how to build the model."
+      ],
+      "result": [
+        "基本上，这个小函数就是实现这一功能的，",
+        "它接受一个原始序列，通过截断这个序列（去掉最后一个字符）创建一个输入序列，目标序列则是从第一个字符开始创建的。",
+        "",
+        "",
+        "",
+        "我们怎么做呢？我们只需将这个分割输入目标函数映射到我们的序列数据集即可。",
+        "",
+        "好的。",
+        "这样就完成了。",
+        "现在让我们看看如何构建模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 34,
+            "milliseconds": 399
+          },
+          "text": "First off, we set a number of variables"
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 36,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 40,
+            "milliseconds": 599
+          },
+          "text": "the vocabulary size, the size of the vectors."
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 40,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 46,
+            "milliseconds": 66
+          },
+          "text": "We want to represent the characters will I think That would be 256"
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 46,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 49,
+            "milliseconds": 732
+          },
+          "text": "and a number of neurons or recurrent layer we'd have."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 799
+          },
+          "text": "For the model itself."
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 831
+          },
+          "text": "It's a relatively simple model."
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 55,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 499
+          },
+          "text": "We create it by using the Keras subclass API."
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 3,
+            "milliseconds": 932
+          },
+          "text": "We create just a new class called MyModel"
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 99
+          },
+          "text": "and we subclass here"
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 731
+          },
+          "text": "from tf.keras.Model."
+        }
+      ],
+      "source": [
+        "First off, we set a number of variables",
+        "the vocabulary size, the size of the vectors.",
+        "We want to represent the characters will I think That would be 256",
+        "and a number of neurons or recurrent layer we'd have.",
+        "For the model itself.",
+        "It's a relatively simple model.",
+        "We create it by using the Keras subclass API.",
+        "We create just a new class called MyModel",
+        "and we subclass here",
+        "from tf.keras.Model."
+      ],
+      "result": [
+        "首先，我们设置一些变量：",
+        "词汇表大小，我们希望表示字符的向量的大小（我认为应该是256），",
+        "",
+        "以及我们的循环层的神经元数量。",
+        "对于模型本身。",
+        "这是一个相对简单的模型。",
+        "我们通过使用Keras子类API来创建它。",
+        "我们创建了一个新的叫做\"MyModel\"的类，并从tf.keras.Model中子类化。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 11,
+            "milliseconds": 699
+          },
+          "text": "When you do that you only have to"
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 13,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 233
+          },
+          "text": "override two functions, the constructor and the call function."
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 865
+          },
+          "text": "So let's see what each of these function does."
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 26,
+            "milliseconds": 132
+          },
+          "text": "The first function takes essentially the hyper parameters of your model,"
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 26,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 29,
+            "milliseconds": 133
+          },
+          "text": "the vocabulary size, the embedding dimension, the number of neuron"
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 29,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 299
+          },
+          "text": "that number of neurons for your recurrent layer,"
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 38,
+            "milliseconds": 899
+          },
+          "text": "and it just constricts the layers you will need and store them"
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 39,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 45,
+            "milliseconds": 864
+          },
+          "text": "as variables of the class."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 45,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 46,
+            "milliseconds": 565
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 47,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 49,
+            "milliseconds": 332
+          },
+          "text": "Now really"
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 49,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 931
+          },
+          "text": "how these layers are connected,"
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 55,
+            "milliseconds": 464
+          },
+          "text": "all that is specified in the call function,"
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 55,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 700
+          },
+          "text": "the architecture of your network, if you will."
+        }
+      ],
+      "source": [
+        "When you do that you only have to",
+        "override two functions, the constructor and the call function.",
+        "So let's see what each of these function does.",
+        "The first function takes essentially the hyper parameters of your model,",
+        "the vocabulary size, the embedding dimension, the number of neuron",
+        "that number of neurons for your recurrent layer,",
+        "and it just constricts the layers you will need and store them",
+        "as variables of the class.",
+        "Okay.",
+        "Now really",
+        "how these layers are connected,",
+        "all that is specified in the call function,",
+        "the architecture of your network, if you will."
+      ],
+      "result": [
+        "当你这样做的时候，你只需要覆盖两个函数，构造函数和调用函数。",
+        "",
+        "那么让我们看看这两个函数分别做什么。",
+        "第一个函数主要接收模型的超参数，",
+        "即词汇表大小，嵌入维度，神经元数量，",
+        "",
+        "然后它只是构建你需要的层并将它们存储为类的变量。",
+        "",
+        "好的。",
+        "而这些层是如何连接的，",
+        "",
+        "所有这些都在调用函数中指定，也就是你的网络架构。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 799
+          },
+          "text": "If you want."
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 2,
+            "milliseconds": 499
+          },
+          "text": "Let's see where to the body does. Here."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 7,
+            "milliseconds": 766
+          },
+          "text": "Take the input which are sequences of ids representing the characters."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 8,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 400
+          },
+          "text": "We have a first layer that we'll create for each of the"
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 14,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 331
+          },
+          "text": "inits a vector representing that."
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 32
+          },
+          "text": "So that's the training layer."
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 732
+          },
+          "text": "So as the training progresses, this vector is representing the characters."
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 27,
+            "milliseconds": 199
+          },
+          "text": "We'll start to be more and more meaningful."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 27,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 699
+          },
+          "text": "At least that's the idea."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 33,
+            "milliseconds": 466
+          },
+          "text": "Then these static representations of the characters"
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 33,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 36,
+            "milliseconds": 599
+          },
+          "text": "is passed to the recurrent layer that we'll somehow"
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 898
+          },
+          "text": "modify these for representation"
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 45,
+            "milliseconds": 65
+          },
+          "text": "according to the context of what I've seen with what has been seen"
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 45,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 49,
+            "milliseconds": 99
+          },
+          "text": "previously and generate a state of"
+        }
+      ],
+      "source": [
+        "If you want.",
+        "Let's see where to the body does. Here.",
+        "Take the input which are sequences of ids representing the characters.",
+        "We have a first layer that we'll create for each of the",
+        "inits a vector representing that.",
+        "So that's the training layer.",
+        "So as the training progresses, this vector is representing the characters.",
+        "We'll start to be more and more meaningful.",
+        "At least that's the idea.",
+        "Then these static representations of the characters",
+        "is passed to the recurrent layer that we'll somehow",
+        "modify these for representation",
+        "according to the context of what I've seen with what has been seen",
+        "previously and generate a state of"
+      ],
+      "result": [
+        "如果你想的话。",
+        "让我们看看这个函数主要做什么。",
+        "它接收输入，也就是代表字符的id序列。",
+        "我们有一个第一层，它会为每一个输入创建一个代表那个输入的向量，也就是训练层。",
+        "",
+        "",
+        "随着训练的进行，这些代表字符的向量将开始变得越来越有意义，",
+        "",
+        "至少这是我们的想法。",
+        "然后，这些静态的字符表示被传递给循环层，它会根据之前看到的内容的上下文来修改这些表示，",
+        "",
+        "",
+        "并生成一个代表之前看到的内容的状态，这将在下一步被重用。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 49,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 52,
+            "milliseconds": 32
+          },
+          "text": "what is seen previously, that would be a reuse in the next step."
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 52,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 55,
+            "milliseconds": 732
+          },
+          "text": "Finally, we pass the output of the"
+        },
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 57,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 59,
+            "milliseconds": 933
+          },
+          "text": "recurrent layer to a dense layer that will output"
+        },
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 0,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 3,
+            "milliseconds": 600
+          },
+          "text": "as many numbers that we as we have in our vocabulary,"
+        },
+        {
+          "id": "196",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 932
+          },
+          "text": "which means one"
+        },
+        {
+          "id": "197",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 9,
+            "milliseconds": 98
+          },
+          "text": "score for each"
+        },
+        {
+          "id": "198",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 9,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 765
+          },
+          "text": "of the possible 65 characters and the score"
+        },
+        {
+          "id": "199",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 98
+          },
+          "text": "represent the probability of the character"
+        },
+        {
+          "id": "200",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 20,
+            "milliseconds": 265
+          },
+          "text": "being the next one."
+        },
+        {
+          "id": "201",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 20,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 22,
+            "milliseconds": 765
+          },
+          "text": "So that's all that the model does."
+        }
+      ],
+      "source": [
+        "what is seen previously, that would be a reuse in the next step.",
+        "Finally, we pass the output of the",
+        "recurrent layer to a dense layer that will output",
+        "as many numbers that we as we have in our vocabulary,",
+        "which means one",
+        "score for each",
+        "of the possible 65 characters and the score",
+        "represent the probability of the character",
+        "being the next one.",
+        "So that's all that the model does."
+      ],
+      "result": [
+        "",
+        "最后，我们将循环层的输出传递给一个密集层，它将输出与我们的词汇表中的数量相同的数，",
+        "",
+        "",
+        "也就是每一个可能的65个字符的一个分数，这个分数代表字符是下一个字符的概率。",
+        "",
+        "",
+        "",
+        "",
+        "这就是模型做的所有事情。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "202",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 23,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 29,
+            "milliseconds": 398
+          },
+          "text": "Then we instantiated."
+        },
+        {
+          "id": "203",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 29,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 33,
+            "milliseconds": 132
+          },
+          "text": "Once we have done that, we can look at the structure of the model"
+        },
+        {
+          "id": "204",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 33,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 37,
+            "milliseconds": 332
+          },
+          "text": "using model summary, and you see here you have the I'm building the year,"
+        },
+        {
+          "id": "205",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 37,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 41,
+            "milliseconds": 532
+          },
+          "text": "the recurrently year and the dust layer that we just encoded"
+        },
+        {
+          "id": "206",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 631
+          },
+          "text": "implemented in our, in our model"
+        },
+        {
+          "id": "207",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 48,
+            "milliseconds": 232
+          },
+          "text": "does that."
+        },
+        {
+          "id": "208",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 48,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 49,
+            "milliseconds": 865
+          },
+          "text": "So let's train the model."
+        },
+        {
+          "id": "209",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 49,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 53,
+            "milliseconds": 631
+          },
+          "text": "Before we train the model, we need a loss and that's the loss function"
+        },
+        {
+          "id": "210",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 53,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 58,
+            "milliseconds": 232
+          },
+          "text": "that we compared the output of the model with the truth, right?"
+        },
+        {
+          "id": "211",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 58,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 3,
+            "milliseconds": 332
+          },
+          "text": "Since that's essentially a classification problem with many classes"
+        },
+        {
+          "id": "212",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 4,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 599
+          },
+          "text": "and the classes being"
+        },
+        {
+          "id": "213",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 9,
+            "milliseconds": 600
+          },
+          "text": "each of the possible characters to be the next,"
+        },
+        {
+          "id": "214",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 10,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 14,
+            "milliseconds": 65
+          },
+          "text": "the loss would be the SparseCategoricalCrossentropy loss."
+        }
+      ],
+      "source": [
+        "Then we instantiated.",
+        "Once we have done that, we can look at the structure of the model",
+        "using model summary, and you see here you have the I'm building the year,",
+        "the recurrently year and the dust layer that we just encoded",
+        "implemented in our, in our model",
+        "does that.",
+        "So let's train the model.",
+        "Before we train the model, we need a loss and that's the loss function",
+        "that we compared the output of the model with the truth, right?",
+        "Since that's essentially a classification problem with many classes",
+        "and the classes being",
+        "each of the possible characters to be the next,",
+        "the loss would be the SparseCategoricalCrossentropy loss."
+      ],
+      "result": [
+        "首先，我们实例化了模型。",
+        "有了模型后，我们可以通过使用模型摘要来查看模型的结构。",
+        "你会看到我们刚刚在模型中实现的嵌入层、循环层和密集层。",
+        "",
+        "",
+        "就是这样。",
+        "接下来，我们要训练模型。",
+        "在训练模型之前，我们需要一个损失函数，",
+        "我们将用它来比较模型的输出和真实结果。",
+        "由于我们的问题本质上是一个多类分类问题，",
+        "类别就是可能的下一个字符，所以我们会使用损失函数SparseCategoricalCrossentropy。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "215",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 14,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 18,
+            "milliseconds": 565
+          },
+          "text": "And also because the neural network"
+        },
+        {
+          "id": "216",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 19,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 65
+          },
+          "text": "output, the logits are not directly the probability we configure this loss"
+        },
+        {
+          "id": "217",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 27,
+            "milliseconds": 865
+          },
+          "text": "to be computed not from the probability scores,"
+        },
+        {
+          "id": "218",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 27,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 30,
+            "milliseconds": 299
+          },
+          "text": "but from the logits scores."
+        },
+        {
+          "id": "219",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 999
+          },
+          "text": "Okay,"
+        },
+        {
+          "id": "220",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 32,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 299
+          },
+          "text": "once we have the loss, we can combine our model,"
+        },
+        {
+          "id": "221",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 41,
+            "milliseconds": 731
+          },
+          "text": "which means that basically we tied to it a loss and also an optimizer."
+        },
+        {
+          "id": "222",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 41,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 44,
+            "milliseconds": 632
+          },
+          "text": "And that will update the weights during training"
+        },
+        {
+          "id": "223",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 44,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 47,
+            "milliseconds": 699
+          },
+          "text": "to decrease the loss as much as possible."
+        },
+        {
+          "id": "224",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 48,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 49,
+            "milliseconds": 766
+          },
+          "text": "Basically, it"
+        },
+        {
+          "id": "225",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 53,
+            "milliseconds": 565
+          },
+          "text": "then here we have a little bit of a callback that we will use"
+        },
+        {
+          "id": "226",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 57,
+            "milliseconds": 832
+          },
+          "text": "and that will save the weights during training,"
+        },
+        {
+          "id": "227",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 57,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 0,
+            "milliseconds": 532
+          },
+          "text": "which is a useful"
+        },
+        {
+          "id": "228",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 1,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 1,
+            "milliseconds": 865
+          },
+          "text": "item."
+        }
+      ],
+      "source": [
+        "And also because the neural network",
+        "output, the logits are not directly the probability we configure this loss",
+        "to be computed not from the probability scores,",
+        "but from the logits scores.",
+        "Okay,",
+        "once we have the loss, we can combine our model,",
+        "which means that basically we tied to it a loss and also an optimizer.",
+        "And that will update the weights during training",
+        "to decrease the loss as much as possible.",
+        "Basically, it",
+        "then here we have a little bit of a callback that we will use",
+        "and that will save the weights during training,",
+        "which is a useful",
+        "item."
+      ],
+      "result": [
+        "由于神经网络的输出（对数）并不直接对应概率，",
+        "",
+        "我们将损失函数配置为从对数分数而不是概率分数计算。",
+        "",
+        "好的，",
+        "有了损失函数后，我们可以编译模型，",
+        "也就是为模型附加损失函数和优化器。",
+        "优化器将在训练过程中更新权重，尽可能地减少损失。",
+        "",
+        "此外，我们还设置了一个在训练过程中保存权重的回调函数，这是一个很有用的工具。",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 14 vs 13, Wed Jun 14 2023 02:02:39 GMT-0500 (Central Daylight Time)",
+        "还有因为神经网络\n的输出，逻辑值并不直接等于我们配置的损失概率\n而是从逻辑值得分中计算。\n好的，\n一旦我们有了损失，我们就可以组合我们的模型，\n这意味着我们基本上将损失和优化器绑定到它上。\n这将在训练过程中更新权重\n以尽可能减少损失。\n基本上，它\n然后这里我们有一个我们将使用的回调\n这将在训练过程中保存权重，\n这是一个有用的\n项目。"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "229",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 1,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 565
+          },
+          "text": "And we are all set up now to start the training."
+        },
+        {
+          "id": "230",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 700
+          },
+          "text": "So we do a model.fit on the data set."
+        },
+        {
+          "id": "231",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 13,
+            "milliseconds": 833
+          },
+          "text": "We choose a number of epochs we want to be trained on."
+        },
+        {
+          "id": "232",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 599
+          },
+          "text": "An epoch is a full pass on the data set."
+        },
+        {
+          "id": "233",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 22,
+            "milliseconds": 800
+          },
+          "text": "So here we we have a look at ten, ten times"
+        },
+        {
+          "id": "234",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 23,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 26,
+            "milliseconds": 999
+          },
+          "text": "the corpus of plays we have in our text vector"
+        },
+        {
+          "id": "235",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 27,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 30,
+            "milliseconds": 598
+          },
+          "text": "and we give the callback to make sure"
+        },
+        {
+          "id": "236",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 30,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 35,
+            "milliseconds": 32
+          },
+          "text": "that the weights are saved during the the training,"
+        },
+        {
+          "id": "237",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 37,
+            "milliseconds": 66
+          },
+          "text": "that's it."
+        },
+        {
+          "id": "238",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 37,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 39,
+            "milliseconds": 765
+          },
+          "text": "So that's relatively simple. We train them my data."
+        }
+      ],
+      "source": [
+        "And we are all set up now to start the training.",
+        "So we do a model.fit on the data set.",
+        "We choose a number of epochs we want to be trained on.",
+        "An epoch is a full pass on the data set.",
+        "So here we we have a look at ten, ten times",
+        "the corpus of plays we have in our text vector",
+        "and we give the callback to make sure",
+        "that the weights are saved during the the training,",
+        "that's it.",
+        "So that's relatively simple. We train them my data."
+      ],
+      "result": [
+        "至此，我们已经准备好开始训练了。",
+        "我们对数据集执行model.fit，选择想要训练的轮次。",
+        "",
+        "一轮是对数据集的一次完整遍历。",
+        "在这里，我们将数据集遍历了十次，",
+        "",
+        "并在训练过程中使用回调函数确保权重被保存。",
+        "",
+        "就是这样。",
+        "这个过程相对简单。我们用数据训练模型，"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "239",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 39,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 42,
+            "milliseconds": 499
+          },
+          "text": "We have a train model now what do we do with it?"
+        },
+        {
+          "id": "240",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 42,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 45,
+            "milliseconds": 632
+          },
+          "text": "And that's a bit of a complication in the"
+        },
+        {
+          "id": "241",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 45,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 46,
+            "milliseconds": 232
+          },
+          "text": "encoder."
+        },
+        {
+          "id": "242",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 46,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 998
+          },
+          "text": "Decoder architecture is that you cannot through the immediately use your model,"
+        },
+        {
+          "id": "243",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 50,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 55,
+            "milliseconds": 332
+          },
+          "text": "you need to write a sort of a decoding function that's here"
+        },
+        {
+          "id": "244",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 55,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 58,
+            "milliseconds": 632
+          },
+          "text": "that will decode the generated text"
+        },
+        {
+          "id": "245",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 59,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 2,
+            "milliseconds": 98
+          },
+          "text": "a step at a time using the trained model."
+        },
+        {
+          "id": "246",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 3,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 3,
+            "milliseconds": 865
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "247",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 3,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 6,
+            "milliseconds": 699
+          },
+          "text": "So here in this case, we chose to"
+        },
+        {
+          "id": "248",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 964
+          },
+          "text": "implement this decoding function"
+        },
+        {
+          "id": "249",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 12,
+            "milliseconds": 500
+          },
+          "text": "as a Keras model."
+        }
+      ],
+      "source": [
+        "We have a train model now what do we do with it?",
+        "And that's a bit of a complication in the",
+        "encoder.",
+        "Decoder architecture is that you cannot through the immediately use your model,",
+        "you need to write a sort of a decoding function that's here",
+        "that will decode the generated text",
+        "a step at a time using the trained model.",
+        "Okay.",
+        "So here in this case, we chose to",
+        "implement this decoding function",
+        "as a Keras model."
+      ],
+      "result": [
+        "现在我们有了训练好的模型，接下来我们该怎么做呢？",
+        "在编码器-解码器架构中，你不能直接使用你的模型，你需要编写一个解码函数来一步步解码生成的文本。",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "好的。",
+        "在这个例子中，我们选择将解码函数作为一个Keras模型实现。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "250",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 12,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 15,
+            "milliseconds": 966
+          },
+          "text": "So we subclass from the tf.keras.Model."
+        },
+        {
+          "id": "251",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 15,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 132
+          },
+          "text": "The main method"
+        },
+        {
+          "id": "252",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 21,
+            "milliseconds": 733
+          },
+          "text": "in that model is to generate one step."
+        },
+        {
+          "id": "253",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 22,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 25,
+            "milliseconds": 232
+          },
+          "text": "It's a quick look to what it does,"
+        },
+        {
+          "id": "254",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 25,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 28,
+            "milliseconds": 966
+          },
+          "text": "so it takes the inputs so the input can be"
+        },
+        {
+          "id": "255",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 33,
+            "milliseconds": 733
+          },
+          "text": "to prompt the initial prompt initial the sequence of character you want to"
+        },
+        {
+          "id": "256",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 34,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 37,
+            "milliseconds": 198
+          },
+          "text": "the encoder-decoder model to"
+        },
+        {
+          "id": "257",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 37,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 40,
+            "milliseconds": 265
+          },
+          "text": "complete, to predict, to generate new new characters."
+        },
+        {
+          "id": "258",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 41,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 43,
+            "milliseconds": 300
+          },
+          "text": "So you bypass the input it"
+        },
+        {
+          "id": "259",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 44,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 47,
+            "milliseconds": 265
+          },
+          "text": "transform that text into a sequence of character,"
+        },
+        {
+          "id": "260",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 47,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 50,
+            "milliseconds": 999
+          },
+          "text": "and then the sequence of characters into a sequence of ids."
+        }
+      ],
+      "source": [
+        "So we subclass from the tf.keras.Model.",
+        "The main method",
+        "in that model is to generate one step.",
+        "It's a quick look to what it does,",
+        "so it takes the inputs so the input can be",
+        "to prompt the initial prompt initial the sequence of character you want to",
+        "the encoder-decoder model to",
+        "complete, to predict, to generate new new characters.",
+        "So you bypass the input it",
+        "transform that text into a sequence of character,",
+        "and then the sequence of characters into a sequence of ids."
+      ],
+      "result": [
+        "我们从tf.keras.Model子类化。",
+        "模型中的主要方法是生成一步。",
+        "",
+        "这个方法接收输入，即你希望编码器-解码器模型完成、预测、生成新字符的初始字符序列。",
+        "",
+        "",
+        "",
+        "",
+        "然后，它将这段文本转换为一串字符，然后再转换为一串id。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "261",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 51,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 53,
+            "milliseconds": 100
+          },
+          "text": "Using the ids_from_chars."
+        },
+        {
+          "id": "262",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 53,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 57,
+            "milliseconds": 465
+          },
+          "text": "Here we have a setup previously, and then we call our model"
+        },
+        {
+          "id": "263",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 57,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 0,
+            "milliseconds": 866
+          },
+          "text": "or encoder-decoder model that has been previously trained."
+        },
+        {
+          "id": "264",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 1,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 2,
+            "milliseconds": 699
+          },
+          "text": "And what does it do?"
+        },
+        {
+          "id": "265",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 2,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 5,
+            "milliseconds": 865
+          },
+          "text": "It takes this input of ids and"
+        },
+        {
+          "id": "266",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 7,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 9,
+            "milliseconds": 965
+          },
+          "text": "output the predicted logits."
+        },
+        {
+          "id": "267",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 9,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 14,
+            "milliseconds": 400
+          },
+          "text": "So this calls for the most probable token the most probable character in this case,"
+        },
+        {
+          "id": "268",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 14,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 18,
+            "milliseconds": 100
+          },
+          "text": "0 along with the state that summarizes what has been seen previously."
+        },
+        {
+          "id": "269",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 20,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 25,
+            "milliseconds": 799
+          },
+          "text": "From the predicted logits, we can compute, we can select"
+        },
+        {
+          "id": "270",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 26,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 30,
+            "milliseconds": 499
+          },
+          "text": "the most likely tokens or characters."
+        }
+      ],
+      "source": [
+        "Using the ids_from_chars.",
+        "Here we have a setup previously, and then we call our model",
+        "or encoder-decoder model that has been previously trained.",
+        "And what does it do?",
+        "It takes this input of ids and",
+        "output the predicted logits.",
+        "So this calls for the most probable token the most probable character in this case,",
+        "0 along with the state that summarizes what has been seen previously.",
+        "From the predicted logits, we can compute, we can select",
+        "the most likely tokens or characters."
+      ],
+      "result": [
+        "使用了ids_from_chars方法。",
+        "这里我们之前有一个设置，然后我们调用我们的模型",
+        "或者之前训练过的编码器-解码器模型。",
+        "它做什么呢？",
+        "它会接收id输入并输出预测的对数。",
+        "",
+        "这个对数对应了最可能的Token，也就是最可能的字符，",
+        "以及一个总结前面看到的内容的状态。",
+        "从预测的对数中，我们可以选择最可能的Token或字符。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "271",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 30,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 34,
+            "milliseconds": 199
+          },
+          "text": "But before doing that there is a little bit of a trick,"
+        },
+        {
+          "id": "272",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 34,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 38,
+            "milliseconds": 965
+          },
+          "text": "which is that we divide the logits by a temperature, by a number."
+        },
+        {
+          "id": "273",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 39,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 43,
+            "milliseconds": 699
+          },
+          "text": "So basically if the temperature is one, nothing happens."
+        },
+        {
+          "id": "274",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 43,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 49,
+            "milliseconds": 365
+          },
+          "text": "But if the temperature is very high,"
+        },
+        {
+          "id": "275",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 49,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 52,
+            "milliseconds": 699
+          },
+          "text": "what it will do, it will makes the scores"
+        },
+        {
+          "id": "276",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 53,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 56,
+            "milliseconds": 799
+          },
+          "text": "associated to each of the token to be predictive."
+        },
+        {
+          "id": "277",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 56,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 0,
+            "milliseconds": 632
+          },
+          "text": "Next will be relatively similar, close to zero."
+        },
+        {
+          "id": "278",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 2,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 4,
+            "milliseconds": 799
+          },
+          "text": "This means that actually"
+        },
+        {
+          "id": "279",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 4,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 9,
+            "milliseconds": 164
+          },
+          "text": "this token would be more and more likely to be chosen, right?"
+        },
+        {
+          "id": "280",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 9,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 14,
+            "milliseconds": 531
+          },
+          "text": "So there would be more variety, more a more stuff can be predicted"
+        },
+        {
+          "id": "281",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 14,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 16,
+            "milliseconds": 365
+          },
+          "text": "if the temperature is higher."
+        }
+      ],
+      "source": [
+        "But before doing that there is a little bit of a trick,",
+        "which is that we divide the logits by a temperature, by a number.",
+        "So basically if the temperature is one, nothing happens.",
+        "But if the temperature is very high,",
+        "what it will do, it will makes the scores",
+        "associated to each of the token to be predictive.",
+        "Next will be relatively similar, close to zero.",
+        "This means that actually",
+        "this token would be more and more likely to be chosen, right?",
+        "So there would be more variety, more a more stuff can be predicted",
+        "if the temperature is higher."
+      ],
+      "result": [
+        "在做这之前，有一个小技巧，",
+        "就是我们会将对数除以一个温度(temperature)值。",
+        "基本上，如果温度是1，就没有任何变化。",
+        "如果温度很高，它会使得所有Token的得分变得接近于0，",
+        "",
+        "",
+        "",
+        "这意味着这个Token更有可能被选中。",
+        "",
+        "所以，如果温度更高，会有更多的多样性，",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "282",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 16,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 20,
+            "milliseconds": 765
+          },
+          "text": "So it's a bit more creative If you have a two high temperature,"
+        },
+        {
+          "id": "283",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 20,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 25,
+            "milliseconds": 299
+          },
+          "text": "of course, the neural network would just predict the gibberish."
+        },
+        {
+          "id": "284",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 26,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 28,
+            "milliseconds": 164
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "285",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 28,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 31,
+            "milliseconds": 198
+          },
+          "text": "And if you have a true temperature, the highest probability"
+        },
+        {
+          "id": "286",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 31,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 34,
+            "milliseconds": 200
+          },
+          "text": "score will be just multiply by a very large number"
+        },
+        {
+          "id": "287",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 34,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 39,
+            "milliseconds": 565
+          },
+          "text": "because it's divided by a small number, it's a number between zero and one,"
+        },
+        {
+          "id": "288",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 40,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 42,
+            "milliseconds": 898
+          },
+          "text": "which means that the highest score will be"
+        },
+        {
+          "id": "289",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 44,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 46,
+            "milliseconds": 99
+          },
+          "text": "become much, much"
+        },
+        {
+          "id": "290",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 46,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 50,
+            "milliseconds": 464
+          },
+          "text": "bigger than the other scores, giving a much higher chance"
+        },
+        {
+          "id": "291",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 50,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 56,
+            "milliseconds": 264
+          },
+          "text": "to be selected, which gives you more of the deterministic behavior."
+        }
+      ],
+      "source": [
+        "So it's a bit more creative If you have a two high temperature,",
+        "of course, the neural network would just predict the gibberish.",
+        "Okay.",
+        "And if you have a true temperature, the highest probability",
+        "score will be just multiply by a very large number",
+        "because it's divided by a small number, it's a number between zero and one,",
+        "which means that the highest score will be",
+        "become much, much",
+        "bigger than the other scores, giving a much higher chance",
+        "to be selected, which gives you more of the deterministic behavior."
+      ],
+      "result": [
+        "更多的内容可以被预测，这会使得模型变得更有创造性。",
+        "如果温度太高，神经网络只会预测出无意义的东西。",
+        "好的。",
+        "如果温度非常低，最高的概率得分会被乘以一个非常大的数，",
+        "",
+        "因为它被一个小数除，这是一个介于0和1之间的数字，",
+        "这会使得最高得分的Token有更大的被选中的概率，也就是说，模型的行为会更加确定。",
+        "",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "292",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 56,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 57,
+            "milliseconds": 399
+          },
+          "text": "Okay, that's the temperature."
+        },
+        {
+          "id": "293",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 57,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 0,
+            "milliseconds": 100
+          },
+          "text": "That's an important parameter, as in this type of architecture."
+        },
+        {
+          "id": "294",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 1,
+            "milliseconds": 532
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 1,
+            "milliseconds": 832
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "295",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 1,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 3,
+            "milliseconds": 232
+          },
+          "text": "And that's what it does."
+        },
+        {
+          "id": "296",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 3,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 4,
+            "milliseconds": 399
+          },
+          "text": "Okay."
+        },
+        {
+          "id": "297",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 4,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 9,
+            "milliseconds": 99
+          },
+          "text": "So now we have the predicted logits we use tf.random.categorical"
+        },
+        {
+          "id": "298",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 9,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 12,
+            "milliseconds": 365
+          },
+          "text": "to just sample from these probability scores"
+        },
+        {
+          "id": "299",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 13,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 18,
+            "milliseconds": 131
+          },
+          "text": "the most likely idea is to be next."
+        },
+        {
+          "id": "300",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 18,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 22,
+            "milliseconds": 764
+          },
+          "text": "We transform that back to a character and that's what we return."
+        },
+        {
+          "id": "301",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 23,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 26,
+            "milliseconds": 700
+          },
+          "text": "Okay, So that's essentially what the decoding function does"
+        },
+        {
+          "id": "302",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 30,
+            "milliseconds": 133
+          },
+          "text": "and most decoding function at the very same structure."
+        }
+      ],
+      "source": [
+        "Okay, that's the temperature.",
+        "That's an important parameter, as in this type of architecture.",
+        "Okay.",
+        "And that's what it does.",
+        "Okay.",
+        "So now we have the predicted logits we use tf.random.categorical",
+        "to just sample from these probability scores",
+        "the most likely idea is to be next.",
+        "We transform that back to a character and that's what we return.",
+        "Okay, So that's essentially what the decoding function does",
+        "and most decoding function at the very same structure."
+      ],
+      "result": [
+        "好的，这就是温度。",
+        "所以，温度是这种架构中一个重要的参数。",
+        "好的。",
+        "这就是它的功能。",
+        "好的。",
+        "有了预测的对数后，我们使用tf.random.categorical从这些概率分数中随机选择下一个最可能的id，",
+        "",
+        "",
+        "然后将它转换回一个字符，这就是我们返回的结果。",
+        "好的，这就是解码函数的主要工作，大多数解码函数都是这样的结构。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "303",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 30,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 34,
+            "milliseconds": 65
+          },
+          "text": "There is also this temperature trick that you can see as a"
+        },
+        {
+          "id": "304",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 34,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 37,
+            "milliseconds": 199
+          },
+          "text": "as a parameter in the case of large"
+        },
+        {
+          "id": "305",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 37,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 38,
+            "milliseconds": 800
+          },
+          "text": "language models."
+        },
+        {
+          "id": "306",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 41,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 44,
+            "milliseconds": 432
+          },
+          "text": "Okay, so let's use our decoding function."
+        },
+        {
+          "id": "307",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 44,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 46,
+            "milliseconds": 598
+          },
+          "text": "So typically you use that in the loop."
+        },
+        {
+          "id": "308",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 46,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 51,
+            "milliseconds": 932
+          },
+          "text": "So here we are going to predict 1000 characters by repeatedly"
+        },
+        {
+          "id": "309",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 51,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 56,
+            "milliseconds": 598
+          },
+          "text": "making a call to the decoding function generated one step,"
+        },
+        {
+          "id": "310",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 57,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 59,
+            "milliseconds": 66
+          },
+          "text": "to which you feed"
+        },
+        {
+          "id": "311",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 0,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 2,
+            "milliseconds": 532
+          },
+          "text": "what has been predicted"
+        },
+        {
+          "id": "312",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 2,
+            "milliseconds": 532
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 7,
+            "milliseconds": 399
+          },
+          "text": "before, along with the state summarizing what happened before,"
+        },
+        {
+          "id": "313",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 7,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 11,
+            "milliseconds": 231
+          },
+          "text": "and it predict the next character along with a new state."
+        }
+      ],
+      "source": [
+        "There is also this temperature trick that you can see as a",
+        "as a parameter in the case of large",
+        "language models.",
+        "Okay, so let's use our decoding function.",
+        "So typically you use that in the loop.",
+        "So here we are going to predict 1000 characters by repeatedly",
+        "making a call to the decoding function generated one step,",
+        "to which you feed",
+        "what has been predicted",
+        "before, along with the state summarizing what happened before,",
+        "and it predict the next character along with a new state."
+      ],
+      "result": [
+        "这个设置“温度”参数的技巧，你也可以应用在大语言模型中。",
+        "",
+        "",
+        "好的，接下来，我们要使用解码函数。",
+        "通常，你会在一个循环中使用它。",
+        "在这里，我们将通过反复调用解码函数生成1000个字符。",
+        "",
+        "你将前一次预测的结果和总结前一次发生的状态一起输入到解码函数中，",
+        "",
+        "",
+        "它会预测下一个字符和一个新的状态，"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "314",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 11,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 13,
+            "milliseconds": 700
+          },
+          "text": "And we start the process."
+        },
+        {
+          "id": "315",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 13,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 15,
+            "milliseconds": 599
+          },
+          "text": "We do sort of a prompt here. That's"
+        },
+        {
+          "id": "316",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 16,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 17,
+            "milliseconds": 500
+          },
+          "text": "Romeo."
+        },
+        {
+          "id": "317",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 17,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 19,
+            "milliseconds": 866
+          },
+          "text": "What are you going to say? And then the"
+        },
+        {
+          "id": "318",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 24,
+            "milliseconds": 599
+          },
+          "text": "there are let's let's see what the neuron that generates, right?"
+        },
+        {
+          "id": "319",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 24,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 28,
+            "milliseconds": 565
+          },
+          "text": "Says no good corona at least take your feetle"
+        },
+        {
+          "id": "320",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 28,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 31,
+            "milliseconds": 666
+          },
+          "text": "and if I seem to my love you..."
+        },
+        {
+          "id": "321",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 32,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 36,
+            "milliseconds": 299
+          },
+          "text": "so you see it's not it doesn't make a lot of sense here."
+        },
+        {
+          "id": "322",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 36,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 39,
+            "milliseconds": 100
+          },
+          "text": "0 Remember I've trained it only a few minutes"
+        },
+        {
+          "id": "323",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 41,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 43,
+            "milliseconds": 966
+          },
+          "text": "on the work bench,"
+        },
+        {
+          "id": "324",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 44,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 50,
+            "milliseconds": 632
+          },
+          "text": "AI work bench in Vertex AI Workbench, which are great by the way, but here"
+        },
+        {
+          "id": "325",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 50,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 54,
+            "milliseconds": 833
+          },
+          "text": "that's a small instance which just one GPU So it was a very small training."
+        }
+      ],
+      "source": [
+        "And we start the process.",
+        "We do sort of a prompt here. That's",
+        "Romeo.",
+        "What are you going to say? And then the",
+        "there are let's let's see what the neuron that generates, right?",
+        "Says no good corona at least take your feetle",
+        "and if I seem to my love you...",
+        "so you see it's not it doesn't make a lot of sense here.",
+        "0 Remember I've trained it only a few minutes",
+        "on the work bench,",
+        "AI work bench in Vertex AI Workbench, which are great by the way, but here",
+        "that's a small instance which just one GPU So it was a very small training."
+      ],
+      "result": [
+        "然后我们就可以开始这个过程了。",
+        "我们以“罗密欧（Romeo）”作为Prompt。",
+        "",
+        "你打算说什么？然后看看神经网络生成的结果。对吧？",
+        "",
+        "生成的是：“no good corona at least take your feetle and if I seem to my love you...”",
+        "",
+        "你会看到，结果并没有完全符合语法规则，",
+        "这是因为我只在Vertex AI工作台上用很短的时间训练了这个模型。",
+        "",
+        "",
+        "这是一个小实例，只用了一个GPU，所以训练规模很小。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "326",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 55,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 57,
+            "milliseconds": 899
+          },
+          "text": "The model is written"
+        },
+        {
+          "id": "327",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 57,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 3,
+            "milliseconds": 265
+          },
+          "text": "in a few lines, but yet you still see that it can really pick up"
+        },
+        {
+          "id": "328",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 3,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 7,
+            "milliseconds": 900
+          },
+          "text": "a lot of things in the structure of the of the input data."
+        },
+        {
+          "id": "329",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 7,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 11,
+            "milliseconds": 65
+          },
+          "text": "It detects patterns that you have characters."
+        },
+        {
+          "id": "330",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 11,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 13,
+            "milliseconds": 599
+          },
+          "text": "So Romeo, that was our input,"
+        },
+        {
+          "id": "331",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 15,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 15,
+            "milliseconds": 965
+          },
+          "text": "but then"
+        },
+        {
+          "id": "332",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 15,
+            "milliseconds": 965
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 19,
+            "milliseconds": 264
+          },
+          "text": "Leontes was generated by the network and then what"
+        },
+        {
+          "id": "333",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 19,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 21,
+            "milliseconds": 832
+          },
+          "text": "Leontes says. So"
+        },
+        {
+          "id": "334",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 23,
+            "milliseconds": 532
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 24,
+            "milliseconds": 299
+          },
+          "text": "okay,"
+        },
+        {
+          "id": "335",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 25,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 26,
+            "milliseconds": 232
+          },
+          "text": "that's it."
+        }
+      ],
+      "source": [
+        "The model is written",
+        "in a few lines, but yet you still see that it can really pick up",
+        "a lot of things in the structure of the of the input data.",
+        "It detects patterns that you have characters.",
+        "So Romeo, that was our input,",
+        "but then",
+        "Leontes was generated by the network and then what",
+        "Leontes says. So",
+        "okay,",
+        "that's it."
+      ],
+      "result": [
+        "模型的代码只有几行，",
+        "但你仍然能看到，它真的能从输入数据的结构中捕获到很多东西。",
+        "",
+        "它能够检测到你输入的字符模式。",
+        "比如，“罗密欧”就是我们的输入，",
+        "然后神经网络生成了“莱昂特斯（Leontes）”，",
+        "以及“莱昂特斯”说的话。",
+        "",
+        "好的，就这样。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "336",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 26,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 30,
+            "milliseconds": 199
+          },
+          "text": "If you like this presentation, you'll find more on our ASL"
+        },
+        {
+          "id": "337",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 30,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 34,
+            "milliseconds": 99
+          },
+          "text": "GitHub repository with 90 plus machine learning and notebooks."
+        },
+        {
+          "id": "338",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 34,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 35,
+            "milliseconds": 66
+          },
+          "text": "Don't forget it."
+        },
+        {
+          "id": "339",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 35,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 37,
+            "milliseconds": 199
+          },
+          "text": "If you find it useful, please star our repo."
+        },
+        {
+          "id": "340",
+          "startTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 37,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 20,
+            "seconds": 40,
+            "milliseconds": 331
+          },
+          "text": "Thanks for your time."
+        }
+      ],
+      "source": [
+        "If you like this presentation, you'll find more on our ASL",
+        "GitHub repository with 90 plus machine learning and notebooks.",
+        "Don't forget it.",
+        "If you find it useful, please star our repo.",
+        "Thanks for your time."
+      ],
+      "result": [
+        "如果你喜欢这个介绍，你可以在我们的ASL GitHub Repo中找到更多的机器学习Notebooks。",
+        "",
+        "如果你觉得这个Repo很有用，请给我们的Repo加星星⭐️。",
+        "",
+        "感谢你花时间来听我讲解。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Encoder-Decoder Architecture- Lab Walkthrough.srt",
+  "ouputBasePath": "input/Generative AI learning path/Encoder-Decoder Architecture- Lab Walkthrough",
+  "totalCost": 0.7530899999999998,
+  "translationPath": "input/Generative AI learning path/Encoder-Decoder Architecture- Lab Walkthrough/translation.json"
+}

@@ -1,0 +1,474 @@
+[Script Info]
+
+Title: Introduction to Generative AI Studio
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.42,0:00:03.96,Secondary,,0,0,0,,Welcome to the Introduction to the Generative AI Studio course.
+Dialogue: 1,0:00:03.96,0:00:09.30,Secondary,,0,0,0,,In this video, you learn what Generative AI Studio is and describe its options for use.
+Dialogue: 1,0:00:09.30,0:00:13.32,Secondary,,0,0,0,,You also demo the Generative AI Studio’s language tool yourself.
+Dialogue: 1,0:00:13.32,0:00:15.42,Secondary,,0,0,0,,What is Generative AI?
+Dialogue: 1,0:00:15.96,0:00:19.74,Secondary,,0,0,0,,It is a type of artificial intelligence that generates content for you.
+Dialogue: 1,0:00:20.40,0:00:22.8,Secondary,,0,0,0,,What kind of content?
+Dialogue: 1,0:00:22.8,0:00:27.84,Secondary,,0,0,0,,Well, the generated content can be multi-modal, including text, images, audio, and video.
+Dialogue: 1,0:00:27.84,0:00:33.48,Secondary,,0,0,0,,When given a prompt or a request, Generative AI can help you achieve various tasks, such
+Dialogue: 1,0:00:33.48,0:00:39.78,Secondary,,0,0,0,,as document summarization, information extraction, code generation, marketing campaign creation,
+Dialogue: 1,0:00:39.78,0:00:42.66,Secondary,,0,0,0,,virtual assistance, and call center bot.
+Dialogue: 1,0:00:42.66,0:00:44.52,Secondary,,0,0,0,,And these are just a few examples!
+Dialogue: 1,0:00:44.52,0:00:46.92,Secondary,,0,0,0,,How does AI generate new content?
+Dialogue: 1,0:00:46.92,0:00:49.98,Secondary,,0,0,0,,It learns from a massive amount of existing content.
+Dialogue: 1,0:00:49.98,0:00:52.26,Secondary,,0,0,0,,This includes text, audio and video.
+Dialogue: 1,0:00:52.26,0:00:57.6,Secondary,,0,0,0,,The process of learning from existing content is called training, which results in the creation
+Dialogue: 1,0:00:57.6,0:00:58.14,Secondary,,0,0,0,,of a “foundation model.”
+Dialogue: 1,0:00:58.14,0:01:04.86,Secondary,,0,0,0,,An LLM, or large language model, which powers chat bots like Bard, is a typical example
+Dialogue: 1,0:01:04.86,0:01:05.94,Secondary,,0,0,0,,of a foundation model.
+Dialogue: 1,0:01:05.94,0:01:07.38,Secondary,,0,0,0,,The foundation model
+Dialogue: 1,0:01:07.38,0:01:12.42,Secondary,,0,0,0,,can then be used to generate content and solve general problems, such as content extraction
+Dialogue: 1,0:01:12.42,0:01:13.86,Secondary,,0,0,0,,and document summarization.
+Dialogue: 1,0:01:13.86,0:01:18.60,Secondary,,0,0,0,,It can also be trained further with new datasets in your field to solve specific problems,
+Dialogue: 1,0:01:18.60,0:01:22.26,Secondary,,0,0,0,,such as financial model generation and healthcare consulting.
+Dialogue: 1,0:01:22.26,0:01:26.34,Secondary,,0,0,0,,This results in the creation of a new model that is tailored to your specific needs.
+Dialogue: 1,0:01:27.36,0:01:31.98,Secondary,,0,0,0,,How can you use the foundation model to power your applications, and how can you further
+Dialogue: 1,0:01:31.98,0:01:35.94,Secondary,,0,0,0,,train, or tune, the foundation model to solve a problem in your specific field?
+Dialogue: 1,0:01:35.94,0:01:41.28,Secondary,,0,0,0,,Google Cloud provides several easy-to-use tools that help you use generative AI in your
+Dialogue: 1,0:01:41.28,0:01:44.40,Secondary,,0,0,0,,projects with or without an AI and machine learning background.
+Dialogue: 1,0:01:45.6,0:01:47.28,Secondary,,0,0,0,,One such tool is Vertex AI.
+Dialogue: 1,0:01:47.82,0:01:53.28,Secondary,,0,0,0,,Vertex AI is an end-to-end ML development platform on Google Cloud that helps you build,
+Dialogue: 1,0:01:53.28,0:01:55.86,Secondary,,0,0,0,,deploy, and manage machine learning models.
+Dialogue: 1,0:01:55.86,0:01:59.4,Secondary,,0,0,0,,With Vertex AI, if you are an app developer
+Dialogue: 1,0:01:59.4,0:02:01.44,Secondary,,0,0,0,,or data scientist and want  to build an application,
+Dialogue: 1,0:02:01.44,0:02:07.14,Secondary,,0,0,0,,you can use Generative AI Studio to quickly prototype and customize generative AI models
+Dialogue: 1,0:02:07.14,0:02:08.64,Secondary,,0,0,0,,with no code or low code.
+Dialogue: 1,0:02:08.64,0:02:13.74,Secondary,,0,0,0,,If you are a data scientist or ML developer who wants to build and automate a generative
+Dialogue: 1,0:02:13.74,0:02:16.20,Secondary,,0,0,0,,AI model, you can start from Model Garden.
+Dialogue: 1,0:02:16.86,0:02:21.60,Secondary,,0,0,0,,Model Garden lets you discover and interact with Google’s foundation and third-party
+Dialogue: 1,0:02:21.60,0:02:26.82,Secondary,,0,0,0,,open source models and has built-in MLOps tools to automate the ML pipeline.
+Dialogue: 1,0:02:28.8,0:02:31.32,Secondary,,0,0,0,,In this course, you focus on Generative AI Studio.
+Dialogue: 1,0:02:32.4,0:02:35.52,Secondary,,0,0,0,,Generative AI Studio supports language, vision, and speech.
+Dialogue: 1,0:02:35.52,0:02:37.80,Secondary,,0,0,0,,The list grows as you are learning this course.
+Dialogue: 1,0:02:38.40,0:02:43.20,Secondary,,0,0,0,,For language, you can design a prompt to perform tasks and tune language models.
+Dialogue: 1,0:02:43.20,0:02:48.24,Secondary,,0,0,0,,For vision, you can generate an image based on a prompt and further edit the image.
+Dialogue: 1,0:02:48.24,0:02:52.44,Secondary,,0,0,0,,For speech, you can generate text from speech or vice versa.
+Dialogue: 1,0:02:53.10,0:02:56.64,Secondary,,0,0,0,,Let’s focus on what you can do with Language in Generative AI Studio.
+Dialogue: 1,0:02:56.64,0:03:01.44,Secondary,,0,0,0,,specifically, you can: Design prompts for tasks relevant to your
+Dialogue: 1,0:03:01.44,0:03:03.78,Secondary,,0,0,0,,business use case including code generation.
+Dialogue: 1,0:03:04.44,0:03:09.36,Secondary,,0,0,0,,Create conversations by specifying the context that instructs how the model should respond.
+Dialogue: 1,0:03:09.36,0:03:14.16,Secondary,,0,0,0,,And tune a model so it is better equipped for your use case, which allows you to then
+Dialogue: 1,0:03:14.16,0:03:17.70,Secondary,,0,0,0,,deploy it to an endpoint to get predictions or test it in prompt design.
+Dialogue: 1,0:03:17.70,0:03:20.70,Secondary,,0,0,0,,Let’s walk through these three features in detail.
+Dialogue: 1,0:03:20.70,0:03:22.14,Secondary,,0,0,0,,First is prompt design.
+Dialogue: 1,0:03:22.14,0:03:27.54,Secondary,,0,0,0,,To get started experimenting with large language models, or LLMs, click on NEW PROMPT.
+Dialogue: 1,0:03:31.68,0:03:36.54,Secondary,,0,0,0,,In the world of Generative AI, a prompt is just a fancy name for the input text that
+Dialogue: 1,0:03:36.54,0:03:37.44,Secondary,,0,0,0,,you feed to your model.
+Dialogue: 1,0:03:37.44,0:03:41.64,Secondary,,0,0,0,,You can feed your desired input text like questions and instructions to the model.
+Dialogue: 1,0:03:41.64,0:03:46.8,Secondary,,0,0,0,,The model will then provide a response based on how you structured your prompt, therefore,
+Dialogue: 1,0:03:46.8,0:03:48.72,Secondary,,0,0,0,,the answers you get depend on the questions you ask.
+Dialogue: 1,0:03:48.72,0:03:53.58,Secondary,,0,0,0,,The process of figuring out and designing the best input text to get the desired response
+Dialogue: 1,0:03:53.58,0:03:57.96,Secondary,,0,0,0,,back from the model is called Prompt Design, which often involves a lot of experimentation.
+Dialogue: 1,0:03:57.96,0:04:00.18,Secondary,,0,0,0,,Let’s start with a free-form prompt.
+Dialogue: 1,0:04:00.18,0:04:03.78,Secondary,,0,0,0,,One way to design a prompt is to simply tell the model what you want.
+Dialogue: 1,0:04:03.78,0:04:05.10,Secondary,,0,0,0,,0 In other words, provide an instruction.
+Dialogue: 1,0:04:06.0,0:04:07.44,Secondary,,0,0,0,,For example,
+Dialogue: 1,0:04:07.44,0:04:11.46,Secondary,,0,0,0,,Generate a list of items I need for a camping trip to Joshua Tree National Park.
+Dialogue: 1,0:04:11.46,0:04:13.14,Secondary,,0,0,0,,We send this text to the model,
+Dialogue: 1,0:04:13.14,0:04:17.4,Secondary,,0,0,0,,And…you can see that the model outputs a useful list of items we don’t want to camp
+Dialogue: 1,0:04:17.4,0:04:17.34,Secondary,,0,0,0,,without.
+Dialogue: 1,0:04:18.36,0:04:23.40,Secondary,,0,0,0,,This approach of writing a single command so that the LLM can adopt a certain behavior,
+Dialogue: 1,0:04:23.40,0:04:25.20,Secondary,,0,0,0,,is called zero shot prompting.
+Dialogue: 1,0:04:25.20,0:04:29.40,Secondary,,0,0,0,,Generally, there are 3 methods that you can use to shape the model's response in a way
+Dialogue: 1,0:04:29.40,0:04:29.100,Secondary,,0,0,0,,that you desire.
+Dialogue: 1,0:04:30.0,0:04:35.46,Secondary,,0,0,0,,Zero-shot prompting - is a method where the LLM is given no additional data on the specific
+Dialogue: 1,0:04:35.46,0:04:37.14,Secondary,,0,0,0,,task that it is being asked to perform.
+Dialogue: 1,0:04:37.14,0:04:40.38,Secondary,,0,0,0,,Instead, it is only given a prompt that describes the task.
+Dialogue: 1,0:04:40.38,0:04:46.26,Secondary,,0,0,0,,For example, if you want the LLM to answer a question, you just prompt "what is prompt
+Dialogue: 1,0:04:46.26,0:04:46.44,Secondary,,0,0,0,,design?".
+Dialogue: 1,0:04:46.44,0:04:51.72,Secondary,,0,0,0,,One-shot prompting - is a method where the LLM is given a single example of the task
+Dialogue: 1,0:04:51.72,0:04:52.98,Secondary,,0,0,0,,that it is being asked to perform.
+Dialogue: 1,0:04:52.98,0:04:58.20,Secondary,,0,0,0,,For example, if you want the LLM to write a poem, you might provide a single example
+Dialogue: 1,0:04:58.20,0:05:04.14,Secondary,,0,0,0,,poem. and Few-shot prompting - is a method where the LLM is given a small number of examples
+Dialogue: 1,0:05:04.14,0:05:06.42,Secondary,,0,0,0,,of the task that it is being asked to perform.
+Dialogue: 1,0:05:06.42,0:05:11.10,Secondary,,0,0,0,,0 For example, if you want the LLM to write a news article, you might give it a few news
+Dialogue: 1,0:05:12.0,0:05:12.84,Secondary,,0,0,0,,articles to read.
+Dialogue: 1,0:05:12.84,0:05:17.88,Secondary,,0,0,0,,You can use the structured mode to design the few-shot prompting by providing a context
+Dialogue: 1,0:05:17.88,0:05:20.52,Secondary,,0,0,0,,and additional examples for the model to learn from.
+Dialogue: 1,0:05:21.36,0:05:24.12,Secondary,,0,0,0,,The structured prompt contains a few different components:
+Dialogue: 1,0:05:24.12,0:05:27.60,Secondary,,0,0,0,,First we have the context, which instructs how the model should respond.
+Dialogue: 1,0:05:27.60,0:05:33.72,Secondary,,0,0,0,,You can specify words the model can or cannot use, topics to focus on or avoid, or a particular
+Dialogue: 1,0:05:33.72,0:05:34.74,Secondary,,0,0,0,,response format.
+Dialogue: 1,0:05:34.74,0:05:37.86,Secondary,,0,0,0,,And the context applies each time you send a request to the model.
+Dialogue: 1,0:05:37.86,0:05:42.48,Secondary,,0,0,0,,Let’s say we want to use an LLM to answer questions based on some background text.
+Dialogue: 1,0:05:42.48,0:05:47.22,Secondary,,0,0,0,,In this case, a passage that describes changes in rainforest vegetation in the Amazon.
+Dialogue: 1,0:05:47.22,0:05:50.4,Secondary,,0,0,0,,We can paste in the background text as the context.
+Dialogue: 1,0:05:50.76,0:05:54.48,Secondary,,0,0,0,,Then, we add some examples of questions that could be answered from this passage
+Dialogue: 1,0:05:54.48,0:05:56.76,Secondary,,0,0,0,,Like what does LGM stand for?
+Dialogue: 1,0:05:56.76,0:06:00.54,Secondary,,0,0,0,,Or what did the analysis from the sediment deposits indicate?
+Dialogue: 1,0:06:00.54,0:06:05.22,Secondary,,0,0,0,,We’ll need to add in the corresponding answers to these questions, to demonstrate how we
+Dialogue: 1,0:06:05.22,0:06:06.30,Secondary,,0,0,0,,want the model to respond.
+Dialogue: 1,0:06:06.30,0:06:10.32,Secondary,,0,0,0,,Then, we can test out the prompt we’ve designed by sending a new question as input.
+Dialogue: 1,0:06:10.32,0:06:15.12,Secondary,,0,0,0,,And there you go, you’ve prototyped a q&a system based on background text in just a
+Dialogue: 1,0:06:15.12,0:06:16.2,Secondary,,0,0,0,,few minutes!
+Dialogue: 1,0:06:16.2,0:06:18.72,Secondary,,0,0,0,,Please note a few best practices around prompt design.
+Dialogue: 1,0:06:18.72,0:06:26.58,Secondary,,0,0,0,,Be concise Be specific and well-defined Ask one task at a time Turn generative tasks into
+Dialogue: 1,0:06:26.58,0:06:28.32,Secondary,,0,0,0,,classification tasks.
+Dialogue: 1,0:06:28.32,0:06:33.78,Secondary,,0,0,0,,For example, instead of asking what programming language to learn, ask if Python, Java, or
+Dialogue: 1,0:06:33.78,0:06:36.42,Secondary,,0,0,0,,C is a better fit for a beginner in programming.
+Dialogue: 1,0:06:36.42,0:06:39.42,Secondary,,0,0,0,,and Improve response quality by including examples
+Dialogue: 1,0:06:40.2,0:06:44.76,Secondary,,0,0,0,,Adding instructions and a few examples tends to yield good results however there’s currently
+Dialogue: 1,0:06:44.76,0:06:46.44,Secondary,,0,0,0,,no one best way to write a prompt.
+Dialogue: 1,0:06:46.44,0:06:50.88,Secondary,,0,0,0,,You may need to experiment with different structures, formats, and examples to see what
+Dialogue: 1,0:06:50.88,0:06:52.14,Secondary,,0,0,0,,works best for your use case.
+Dialogue: 1,0:06:52.14,0:06:57.30,Secondary,,0,0,0,,For more information about prompt design, please check text prompt design in the reading
+Dialogue: 1,0:06:57.30,0:06:57.48,Secondary,,0,0,0,,list.
+Dialogue: 1,0:06:58.44,0:07:02.40,Secondary,,0,0,0,,So if you designed a prompt that you think is working pretty well, you can save it and
+Dialogue: 1,0:07:02.40,0:07:03.18,Secondary,,0,0,0,,return to it later.
+Dialogue: 1,0:07:03.18,0:07:07.92,Secondary,,0,0,0,,Your saved prompt will be visible in the prompt gallery, which is a curated collection of
+Dialogue: 1,0:07:07.92,0:07:12.66,Secondary,,0,0,0,,sample prompts that show how generative AI models can work for a variety of use cases.
+Dialogue: 1,0:07:12.66,0:07:17.64,Secondary,,0,0,0,,Finally, in addition to testing different prompts and prompt structures, there are a
+Dialogue: 1,0:07:17.64,0:07:21.90,Secondary,,0,0,0,,few model parameters you can experiment with to try to improve the quality of responses.
+Dialogue: 1,0:07:22.44,0:07:24.96,Secondary,,0,0,0,,First, there are different models you can choose from.
+Dialogue: 1,0:07:24.96,0:07:28.62,Secondary,,0,0,0,,Each model is tuned to perform well on specific tasks.
+Dialogue: 1,0:07:28.62,0:07:34.56,Secondary,,0,0,0,,You can also specify the temperature, top P, and top K. These parameters all adjust
+Dialogue: 1,0:07:34.56,0:07:38.70,Secondary,,0,0,0,,the randomness of responses by controlling how the output tokens are selected.
+Dialogue: 1,0:07:38.70,0:07:43.32,Secondary,,0,0,0,,When you send a prompt to the model, it produces an array of probabilities over the words that
+Dialogue: 1,0:07:43.32,0:07:44.4,Secondary,,0,0,0,,could come next.
+Dialogue: 1,0:07:44.4,0:07:47.88,Secondary,,0,0,0,,And from this array, we need some strategy to decide what to return.
+Dialogue: 1,0:07:48.60,0:07:52.56,Secondary,,0,0,0,,A simple strategy might be to select the most likely word at every timestep.
+Dialogue: 1,0:07:52.56,0:07:56.70,Secondary,,0,0,0,,But this method can result in uninteresting and sometimes repetitive answers.
+Dialogue: 1,0:07:56.70,0:08:01.98,Secondary,,0,0,0,,On the contrary, if you randomly sample over the distribution returned by the model, you
+Dialogue: 1,0:08:01.98,0:08:03.54,Secondary,,0,0,0,,might get some unlikely responses.
+Dialogue: 1,0:08:03.54,0:08:08.52,Secondary,,0,0,0,,By controlling the degree of randomness, you can get more unexpected, and some might say
+Dialogue: 1,0:08:08.52,0:08:09.84,Secondary,,0,0,0,,creative, responses.
+Dialogue: 1,0:08:09.84,0:08:15.6,Secondary,,0,0,0,,Back to the model parameters, temperature is a number used to tune the degree of randomness.
+Dialogue: 1,0:08:15.6,0:08:18.18,Secondary,,0,0,0,,Low temperature: Means to select the words that are highly
+Dialogue: 1,0:08:18.18,0:08:19.50,Secondary,,0,0,0,,possible and more predictable.
+Dialogue: 1,0:08:19.50,0:08:23.88,Secondary,,0,0,0,,In this case, those are flowers and the other words that are located at the beginning of
+Dialogue: 1,0:08:23.88,0:08:24.18,Secondary,,0,0,0,,the list.
+Dialogue: 1,0:08:24.18,0:08:29.46,Secondary,,0,0,0,,This setting is generally better for tasks like q&a and summarization where you expect
+Dialogue: 1,0:08:29.46,0:08:31.98,Secondary,,0,0,0,,a more “predictable” answer with less variation.
+Dialogue: 1,0:08:31.98,0:08:33.24,Secondary,,0,0,0,,… High temperature:
+Dialogue: 1,0:08:33.24,0:08:35.100,Secondary,,0,0,0,,Means to select the words  that have low possibility
+Dialogue: 1,0:08:36.0,0:08:37.44,Secondary,,0,0,0,,and are more unusual.
+Dialogue: 1,0:08:37.44,0:08:41.70,Secondary,,0,0,0,,In this case, those are bugs and the other words that that are located at the end of
+Dialogue: 1,0:08:41.70,0:08:41.10,Secondary,,0,0,0,,0 the list.
+Dialogue: 1,0:08:42.0,0:08:46.74,Secondary,,0,0,0,,This setting is good if you want to generate more “creative” or unexpected content.
+Dialogue: 1,0:08:46.74,0:08:51.84,Secondary,,0,0,0,,In addition to adjusting the temperature, top K lets the model randomly return a word
+Dialogue: 1,0:08:51.84,0:08:54.96,Secondary,,0,0,0,,from the top K number of words in terms of possibility.
+Dialogue: 1,0:08:55.74,0:09:01.14,Secondary,,0,0,0,,For example, top 2 means you get a random word from the top 2 possible words including
+Dialogue: 1,0:09:01.14,0:09:02.22,Secondary,,0,0,0,,flowers and trees.
+Dialogue: 1,0:09:02.22,0:09:06.54,Secondary,,0,0,0,,This approach allows the other high-scoring word a chance of being selected.
+Dialogue: 1,0:09:06.54,0:09:11.82,Secondary,,0,0,0,,However, if the probability distribution of the words is highly skewed and you have one
+Dialogue: 1,0:09:11.82,0:09:16.56,Secondary,,0,0,0,,word that is very likely and everything else is very unlikely, this approach can result
+Dialogue: 1,0:09:16.56,0:09:18.6,Secondary,,0,0,0,,in some strange responses.
+Dialogue: 1,0:09:19.20,0:09:24.18,Secondary,,0,0,0,,The difficulty of selecting the best top-k value, leads to another popular approach that
+Dialogue: 1,0:09:24.18,0:09:26.70,Secondary,,0,0,0,,dynamically sets the size of the shortlist of words.
+Dialogue: 1,0:09:27.36,0:09:32.40,Secondary,,0,0,0,,Top P allows the model to randomly return a word from the top P probability of words.
+Dialogue: 1,0:09:33.24,0:09:38.22,Secondary,,0,0,0,,With top P, you choose from a set of words with the sum of the likelihoods not exceeding
+Dialogue: 1,0:09:38.22,0:09:44.88,Secondary,,0,0,0,,P. For example, p of 0.75 means you sample from a set of words that have a cumulative
+Dialogue: 1,0:09:44.88,0:09:47.16,Secondary,,0,0,0,,probability greater than 0.75.
+Dialogue: 1,0:09:47.16,0:09:52.20,Secondary,,0,0,0,,In this case, it includes three words: flowers, trees, and herbs.
+Dialogue: 1,0:09:52.92,0:09:57.84,Secondary,,0,0,0,,This way, the size of the set of words can dynamically increase and decrease according
+Dialogue: 1,0:09:57.84,0:10:01.2,Secondary,,0,0,0,,to the probability distribution of the next word on the list.
+Dialogue: 1,0:10:01.74,0:10:06.54,Secondary,,0,0,0,,In sum, Generative AI Studio provides a few model parameters for you to play with such
+Dialogue: 1,0:10:06.54,0:10:11.82,Secondary,,0,0,0,,as the model, temperature, top K, and top P. Note that, you are not required to adjust
+Dialogue: 1,0:10:11.82,0:10:14.64,Secondary,,0,0,0,,them constantly, especially top k and top p.
+Dialogue: 1,0:10:16.2,0:10:18.96,Secondary,,0,0,0,,Now let’s look at the second feature, which creates conversations.
+Dialogue: 1,0:10:19.74,0:10:22.62,Secondary,,0,0,0,,First, you need to specify the conversation context.
+Dialogue: 1,0:10:22.62,0:10:25.50,Secondary,,0,0,0,,Context instructs how the model should respond.
+Dialogue: 1,0:10:26.4,0:10:31.98,Secondary,,0,0,0,,For example, specifying words the model can or cannot use, topics to focus on or avoid,
+Dialogue: 1,0:10:31.98,0:10:33.18,Secondary,,0,0,0,,or response format.
+Dialogue: 1,0:10:33.18,0:10:36.54,Secondary,,0,0,0,,Context applies each time you send a request to the model.
+Dialogue: 1,0:10:37.14,0:10:42.30,Secondary,,0,0,0,,For a simple example, you can define a scenario and tell the AI how to respond to help desk
+Dialogue: 1,0:10:42.30,0:10:42.84,Secondary,,0,0,0,,queries.
+Dialogue: 1,0:10:42.84,0:10:44.28,Secondary,,0,0,0,,Your name is Roy.
+Dialogue: 1,0:10:44.28,0:10:47.22,Secondary,,0,0,0,,You are a support technician of an IT department.
+Dialogue: 1,0:10:47.22,0:10:51.24,Secondary,,0,0,0,,You only respond with "Have you tried turning it off and on again?"
+Dialogue: 1,0:10:51.24,0:10:52.20,Secondary,,0,0,0,,to any queries.
+Dialogue: 1,0:10:52.20,0:10:56.16,Secondary,,0,0,0,,You can tune the parameters on the right, the same as you do when designing the prompt.
+Dialogue: 1,0:10:56.16,0:11:01.86,Secondary,,0,0,0,,To to see how it works, you can type My computer is slow in the chat box and press enter.
+Dialogue: 1,0:11:01.86,0:11:06.30,Secondary,,0,0,0,,The AI responds: Have you tried turning it off and on again?
+Dialogue: 1,0:11:06.30,0:11:08.34,Secondary,,0,0,0,,Exactly as you told the AI to do.
+Dialogue: 1,0:11:09.42,0:11:11.76,Secondary,,0,0,0,,The cool thing is that Google provides the
+Dialogue: 1,0:11:11.76,0:11:15.6,Secondary,,0,0,0,,APIs and SDKs to help you  build your own application.
+Dialogue: 1,0:11:15.6,0:11:17.34,Secondary,,0,0,0,,You can simply click view code.
+Dialogue: 1,0:11:17.34,0:11:22.56,Secondary,,0,0,0,,First, you need to download the Vertex AI SDKs that fit your programming language, like
+Dialogue: 1,0:11:22.56,0:11:23.58,Secondary,,0,0,0,,Python and Curl.
+Dialogue: 1,0:11:23.58,0:11:26.64,Secondary,,0,0,0,,SDK stands for software design kits.
+Dialogue: 1,0:11:26.64,0:11:29.40,Secondary,,0,0,0,,They implement the functions and do the job for you.
+Dialogue: 1,0:11:29.40,0:11:32.22,Secondary,,0,0,0,,You can use them like you call libraries from the code.
+Dialogue: 1,0:11:32.22,0:11:37.8,Secondary,,0,0,0,,You then follow the sample code and the API, and insert the code into your application.
+Dialogue: 1,0:11:38.28,0:11:41.40,Secondary,,0,0,0,,Now let’s look at the third feature, tune a language model.
+Dialogue: 1,0:11:41.40,0:11:45.54,Secondary,,0,0,0,,If you’ve been prototyping with large language models, you might be wondering if there’s
+Dialogue: 1,0:11:45.54,0:11:48.72,Secondary,,0,0,0,,a way you can improve the quality of responses beyond just prompt design.
+Dialogue: 1,0:11:48.72,0:11:53.40,Secondary,,0,0,0,,So let’s learn how to tune a large language model and how to launch a tuning job from
+Dialogue: 1,0:11:53.40,0:11:54.54,Secondary,,0,0,0,,Generative AI Studio.
+Dialogue: 1,0:11:54.54,0:11:58.86,Secondary,,0,0,0,,As a quick recap, the prompt is your text input that you pass to the model.
+Dialogue: 1,0:11:58.86,0:12:00.66,Secondary,,0,0,0,,Your prompt might look like an instruction…
+Dialogue: 1,0:12:00.66,0:12:02.52,Secondary,,0,0,0,,And maybe you add some examples…
+Dialogue: 1,0:12:02.52,0:12:06.96,Secondary,,0,0,0,,Then you send this text to the model so that it adopts the behavior that you want.
+Dialogue: 1,0:12:09.6,0:12:12.54,Secondary,,0,0,0,,Prompt design allows for fast experimentation and customization.
+Dialogue: 1,0:12:12.54,0:12:17.10,Secondary,,0,0,0,,And because you’re not writing any complicated code, you don’t need to be an ML expert
+Dialogue: 1,0:12:17.10,0:12:17.94,Secondary,,0,0,0,,to get started.
+Dialogue: 1,0:12:18.54,0:12:20.34,Secondary,,0,0,0,,But producing prompts can be tricky.
+Dialogue: 1,0:12:20.34,0:12:25.8,Secondary,,0,0,0,,Small changes in wording or word order can affect the model results in ways that aren’t
+Dialogue: 1,0:12:25.8,0:12:25.86,Secondary,,0,0,0,,totally predictable.
+Dialogue: 1,0:12:25.86,0:12:28.98,Secondary,,0,0,0,,And you can’t really fit all that many examples into a prompt.
+Dialogue: 1,0:12:28.98,0:12:33.72,Secondary,,0,0,0,,Even when you do discover a good prompt for your use case, you might notice the quality
+Dialogue: 1,0:12:33.72,0:12:36.24,Secondary,,0,0,0,,of model responses isn’t totally consistent.
+Dialogue: 1,0:12:36.24,0:12:39.84,Secondary,,0,0,0,,One thing we can do to alleviate these issues is to tune the model.
+Dialogue: 1,0:12:39.84,0:12:41.10,Secondary,,0,0,0,,So what’s tuning?
+Dialogue: 1,0:12:41.10,0:12:44.70,Secondary,,0,0,0,,Well, one version you might be familiar with is fine-tuning.
+Dialogue: 1,0:12:44.70,0:12:49.2,Secondary,,0,0,0,,In this scenario, we take a model that was pretrained on a generic dataset.
+Dialogue: 1,0:12:49.2,0:12:50.64,Secondary,,0,0,0,,We make a copy of this model.
+Dialogue: 1,0:12:50.64,0:12:55.8,Secondary,,0,0,0,,Then, using those learned weights as a starting point, we re-train the model
+Dialogue: 1,0:12:55.8,0:12:57.24,Secondary,,0,0,0,,on a new domain-specific dataset.
+Dialogue: 1,0:12:57.24,0:13:01.20,Secondary,,0,0,0,,This technique has been pretty effective for lots of different use cases.
+Dialogue: 1,0:13:01.20,0:13:04.92,Secondary,,0,0,0,,But when we try to fine tune LLMs, we run into some challenges.
+Dialogue: 1,0:13:04.92,0:13:08.34,Secondary,,0,0,0,,LLMs are, as the name suggests, large.
+Dialogue: 1,0:13:08.34,0:13:11.52,Secondary,,0,0,0,,So updating every weight can take a long training job.
+Dialogue: 1,0:13:11.52,0:13:16.44,Secondary,,0,0,0,,Compound all of that computation with the hassle and cost of now having to serve this
+Dialogue: 1,0:13:16.44,0:13:16.86,Secondary,,0,0,0,,giant model…
+Dialogue: 1,0:13:16.86,0:13:21.42,Secondary,,0,0,0,,And as a result, fine-tuning a large language model might not be the best option for you.
+Dialogue: 1,0:13:21.42,0:13:26.16,Secondary,,0,0,0,,But there’s an innovative approach to tuning called parameter-efficient tuning.
+Dialogue: 1,0:13:26.16,0:13:30.84,Secondary,,0,0,0,,This is a super exciting research area that aims to reduce the challenges of fine-tuning
+Dialogue: 1,0:13:30.84,0:13:33.90,Secondary,,0,0,0,,LLMs, by only training a subset of parameters.
+Dialogue: 1,0:13:33.90,0:13:37.68,Secondary,,0,0,0,,These parameters might be a subset of the existing model parameters.
+Dialogue: 1,0:13:37.68,0:13:40.44,Secondary,,0,0,0,,Or they could be an entirely  new set of parameters.
+Dialogue: 1,0:13:40.44,0:13:45.96,Secondary,,0,0,0,,For example, maybe you add on some additional layers to the model or an extra embedding
+Dialogue: 1,0:13:45.96,0:13:46.56,Secondary,,0,0,0,,to the prompt.
+Dialogue: 1,0:13:46.56,0:13:48.96,Secondary,,0,0,0,,If you want to learn more  about parameter-efficient
+Dialogue: 1,0:13:48.96,0:13:50.70,Secondary,,0,0,0,,tuning and some of the different methods,
+Dialogue: 1,0:13:50.70,0:13:53.46,Secondary,,0,0,0,,a summary paper is included in the reading list of this course.
+Dialogue: 1,0:13:53.46,0:13:58.20,Secondary,,0,0,0,,But if you just want to get to building, then let's move to Generative AI Studio and see
+Dialogue: 1,0:13:58.20,0:13:59.76,Secondary,,0,0,0,,how to start a tuning job.
+Dialogue: 1,0:13:59.76,0:14:02.28,Secondary,,0,0,0,,From the language section of Generative AI Studio,
+Dialogue: 1,0:14:02.28,0:14:03.48,Secondary,,0,0,0,,Select TUNING.
+Dialogue: 1,0:14:03.48,0:14:05.70,Secondary,,0,0,0,,To create a tuned model, we provide a name.
+Dialogue: 1,0:14:05.70,0:14:09.78,Secondary,,0,0,0,,Then point to the local or Cloud Storage location of your training data.
+Dialogue: 1,0:14:09.78,0:14:14.58,Secondary,,0,0,0,,Parameter efficient tuning is ideally suited for scenarios where you have "modest" amounts
+Dialogue: 1,0:14:14.58,0:14:18.24,Secondary,,0,0,0,,of training data, say hundreds or maybe thousands of training examples.
+Dialogue: 1,0:14:18.96,0:14:23.52,Secondary,,0,0,0,,Your training data should be structured as a supervised training dataset in a text to
+Dialogue: 1,0:14:23.52,0:14:24.30,Secondary,,0,0,0,,text format.
+Dialogue: 1,0:14:24.30,0:14:29.22,Secondary,,0,0,0,,Each record or row in the data will contain the input text, in other words, the prompt,
+Dialogue: 1,0:14:29.22,0:14:31.86,Secondary,,0,0,0,,which is followed by the expected output of the model.
+Dialogue: 1,0:14:31.86,0:14:36.90,Secondary,,0,0,0,,This means that the model can be tuned for a task that can be modeled as a text-to-text
+Dialogue: 1,0:14:36.90,0:14:37.32,Secondary,,0,0,0,,problem.
+Dialogue: 1,0:14:38.4,0:14:42.84,Secondary,,0,0,0,,After specifying the path to your dataset, you can start the tuning job and monitor the
+Dialogue: 1,0:14:42.84,0:14:45.18,Secondary,,0,0,0,,status in the Google Cloud console.
+Dialogue: 1,0:14:45.18,0:14:50.28,Secondary,,0,0,0,,When the tuning job completes, you’ll see the tuned model in the Vertex AI Model Registry
+Dialogue: 1,0:14:50.28,0:14:55.20,Secondary,,0,0,0,,and you can deploy it to an endpoint for serving, or you can test it in the Generative AI Studio.
+Dialogue: 1,0:14:56.22,0:15:00.72,Secondary,,0,0,0,,In this course, you learned what Generative AI is and the tools provided by Google Cloud
+Dialogue: 1,0:15:00.72,0:15:04.14,Secondary,,0,0,0,,to empower your project with Generative AI capabilities.
+Dialogue: 1,0:15:04.14,0:15:07.26,Secondary,,0,0,0,,Specifically, you focused on Generative AI
+Dialogue: 1,0:15:07.26,0:15:10.38,Secondary,,0,0,0,,Studio, where you can use  genAI in your application
+Dialogue: 1,0:15:10.38,0:15:14.28,Secondary,,0,0,0,,by quickly prototyping and customizing generative AI models.
+Dialogue: 1,0:15:14.28,0:15:19.92,Secondary,,0,0,0,,You learned that Generative AI Studio supports three options: language, vision, and speech.
+Dialogue: 1,0:15:19.92,0:15:24.78,Secondary,,0,0,0,,You then walked through the three major features in Language: design and test prompt, create
+Dialogue: 1,0:15:24.78,0:15:26.70,Secondary,,0,0,0,,conversations, and tune models.
+Dialogue: 1,0:15:27.24,0:15:31.68,Secondary,,0,0,0,,This was a short lesson introducing Generative AI studio on Vertex AI.
+Dialogue: 1,0:15:31.68,0:15:36.30,Secondary,,0,0,0,,For more information about natural language processing and different types of language
+Dialogue: 1,0:15:36.30,0:15:42.12,Secondary,,0,0,0,,models like decoder-encoder, transformer, and LLM, please check the course titled Natural
+Dialogue: 1,0:15:42.12,0:15:45.54,Secondary,,0,0,0,,Language Processing on Google Cloud listed in the reading list.
+Dialogue: 1,0:15:46.44,0:15:50.40,Secondary,,0,0,0,,Now it’s time to play with Generative AI Studio in a hands-on lab, where you:
+Dialogue: 1,0:15:50.40,0:15:53.82,Secondary,,0,0,0,,Design and test prompts in both free-form and structured modes.
+Dialogue: 1,0:15:53.82,0:15:55.68,Secondary,,0,0,0,,Create conversations.
+Dialogue: 1,0:15:55.68,0:15:57.78,Secondary,,0,0,0,,And explore the prompt gallery.
+Dialogue: 1,0:15:57.78,0:16:02.58,Secondary,,0,0,0,,By the end of this lab, you will be able to use the capabilities of Generative AI Studio
+Dialogue: 1,0:16:02.58,0:16:04.20,Secondary,,0,0,0,,that we’ve discussed in this course.
+Dialogue: 1,0:16:04.20,0:16:05.88,Secondary,,0,0,0,,Have fun exploring!
+Dialogue: 1,0:00:00.42,0:00:03.96,Default,,0,0,0,,欢迎来到生成式AI工作室课程的介绍。
+Dialogue: 1,0:00:03.96,0:00:09.30,Default,,0,0,0,,在这个视频中，你将了解什么是生成式AI工作室，并描述其使用选项。
+Dialogue: 1,0:00:09.30,0:00:13.32,Default,,0,0,0,,你还可以亲自尝试生成式AI工作室的语言工具。
+Dialogue: 1,0:00:13.32,0:00:15.42,Default,,0,0,0,,什么是生成式AI？
+Dialogue: 1,0:00:15.96,0:00:19.74,Default,,0,0,0,,它是一种为你生成内容的人工智能类型。
+Dialogue: 1,0:00:20.40,0:00:22.8,Default,,0,0,0,,生成的内容有哪些？
+Dialogue: 1,0:00:22.8,0:00:27.84,Default,,0,0,0,,嗯，生成的内容可以是多模态的，包括文本、图像、音频和视频。
+Dialogue: 1,0:00:27.84,0:00:33.48,Default,,0,0,0,,当给定一个Prompt或请求时，生成式AI可以帮助你完成各种任务，例如
+Dialogue: 1,0:00:33.48,0:00:42.66,Default,,0,0,0,,文档摘要、信息提取、代码生成、营销活动\N创建、虚拟助手和呼叫中心机器人。
+Dialogue: 1,0:00:42.66,0:00:44.52,Default,,0,0,0,,这只是其中的一些例子！
+Dialogue: 1,0:00:44.52,0:00:46.92,Default,,0,0,0,,AI如何生成新内容？
+Dialogue: 1,0:00:46.92,0:00:49.98,Default,,0,0,0,,它从大量现有内容中学习。
+Dialogue: 1,0:00:49.98,0:00:52.26,Default,,0,0,0,,这包括文本、音频和视频。
+Dialogue: 1,0:00:52.26,0:00:58.14,Default,,0,0,0,,从现有内容中学习的过程称为训练，其结果是创建一个“基础模型”。
+Dialogue: 1,0:00:58.14,0:01:05.94,Default,,0,0,0,,LLM（大语言模型），如Bard这样的聊天机器人，是一个典型的基础模型。
+Dialogue: 1,0:01:05.94,0:01:13.86,Default,,0,0,0,,基础模型可以用来生成内容并解决一\N般问题，例如内容提取和文档摘要。
+Dialogue: 1,0:01:13.86,0:01:22.26,Default,,0,0,0,,它还可以通过你领域的新数据集进一步训练，以\N解决特定问题，如财务模型生成和医疗咨询。
+Dialogue: 1,0:01:22.26,0:01:26.34,Default,,0,0,0,,这将导致创建一个定制的新模型，以满足你的特定需求。
+Dialogue: 1,0:01:27.36,0:01:35.94,Default,,0,0,0,,如何使用基础模型为你的应用程序提供动力，以及如何进\N一步训练或调整基础模型以解决你特定领域的问题？
+Dialogue: 1,0:01:35.94,0:01:44.40,Default,,0,0,0,,Google Cloud 提供了几个易于使用的工具，帮助你在具有\N或不具有 AI 和机器学习背景的项目中使用生成式 AI。
+Dialogue: 1,0:01:45.6,0:01:47.28,Default,,0,0,0,,其中一个工具就是 Vertex AI。
+Dialogue: 1,0:01:47.82,0:01:55.86,Default,,0,0,0,,Vertex AI 是一个端到端的 ML 开发平台，位于 Google\N Cloud 上，帮助你构建部署和管理机器学习模型。
+Dialogue: 1,0:01:55.86,0:02:01.44,Default,,0,0,0,,使用 Vertex AI，如果你是一个应用开发\N者或数据科学家，想要构建一个应用，
+Dialogue: 1,0:02:01.44,0:02:08.64,Default,,0,0,0,,你可以使用生成式AI工作室快速原型和定\N制生成式AI模型，无需编码或低代码。
+Dialogue: 1,0:02:08.64,0:02:16.20,Default,,0,0,0,,如果你是一个数据科学家或ML开发者，想要构建和自动\N化一个生成式AI模型，你可以从Model Garden开始。
+Dialogue: 1,0:02:16.86,0:02:26.82,Default,,0,0,0,,Model Garden让你发现和交互Google的基础和第三方\N开源模型，并内置了MLOps工具，以自动化ML管道。
+Dialogue: 1,0:02:28.8,0:02:31.32,Default,,0,0,0,,在本课程中，你将关注生成式 AI 工作室。
+Dialogue: 1,0:02:32.4,0:02:35.52,Default,,0,0,0,,生成式 AI 工作室支持语言、视觉和语音。
+Dialogue: 1,0:02:35.52,0:02:37.80,Default,,0,0,0,,在学习这门课程时，列表会不断增长。
+Dialogue: 1,0:02:38.40,0:02:43.20,Default,,0,0,0,,对于语言，你可以设计一个Prompt来执行任务和调整语言模型。
+Dialogue: 1,0:02:43.20,0:02:48.24,Default,,0,0,0,,对于视觉，你可以根据Prompt生成图像并进一步编辑图像。
+Dialogue: 1,0:02:48.24,0:02:52.44,Default,,0,0,0,,对于语音，你可以从语音生成文本，反之亦然。
+Dialogue: 1,0:02:53.10,0:02:56.64,Default,,0,0,0,,让我们关注在生成式AI工作室中可以用语言做什么。
+Dialogue: 1,0:02:56.64,0:03:03.78,Default,,0,0,0,,具体来说，你可以：为与你的业务用例相\N关的任务设计Prompt，包括代码生成。
+Dialogue: 1,0:03:04.44,0:03:09.36,Default,,0,0,0,,通过指定上下文来创建对话，指导模型如何回应。
+Dialogue: 1,0:03:09.36,0:03:17.70,Default,,0,0,0,,调整模型以更好地适应你的用例，然后将其部署到\N端点以获得预测或在Prompt设计中进行测试。
+Dialogue: 1,0:03:17.70,0:03:20.70,Default,,0,0,0,,让我们详细介绍这三个功能。
+Dialogue: 1,0:03:20.70,0:03:22.14,Default,,0,0,0,,首先是Prompt设计。
+Dialogue: 1,0:03:22.14,0:03:27.54,Default,,0,0,0,,要开始尝试大语言模型（LLM），请点击“NEW PROMPT”。
+Dialogue: 1,0:03:31.68,0:03:37.44,Default,,0,0,0,,在生成式AI的世界里，Prompt只是输入文本的一个比较酷的名字。
+Dialogue: 1,0:03:37.44,0:03:41.64,Default,,0,0,0,,你可以将所需的输入文本（如问题和指令）提供给模型。
+Dialogue: 1,0:03:41.64,0:03:48.72,Default,,0,0,0,,模型将根据你设置的Prompt提供响应，因此\N，你得到的答案取决于你提出的问题。
+Dialogue: 1,0:03:48.72,0:03:57.96,Default,,0,0,0,,找出并设计最佳输入文本以获得所需响应的过\N程称为Prompt设计，这通常需要大量实验。
+Dialogue: 1,0:03:57.96,0:04:00.18,Default,,0,0,0,,让我们从一个自由形式的Prompt开始。
+Dialogue: 1,0:04:00.18,0:04:03.78,Default,,0,0,0,,设计Prompt的一种方法是简单地告诉模型你想要什么。
+Dialogue: 1,0:04:03.78,0:04:05.10,Default,,0,0,0,,换句话说，提供一个指令。
+Dialogue: 1,0:04:06.0,0:04:11.46,Default,,0,0,0,,例如，生成我去Joshua Tree国家公园露营旅行所需的物品清单。
+Dialogue: 1,0:04:11.46,0:04:17.34,Default,,0,0,0,,我们将这段文字发送给模型，然后...你可以看到模型输\N出了一个我们不想在露营时缺少的有用物品清单。
+Dialogue: 1,0:04:18.36,0:04:25.20,Default,,0,0,0,,这种通过编写单一命令使LLM采用某种行为的方法\N称为零示例Prompt（Zero-shot prompting）。
+Dialogue: 1,0:04:25.20,0:04:29.100,Default,,0,0,0,,通常，有3种方法可以用来按照你期望的方式塑造模型的响应。
+Dialogue: 1,0:04:30.0,0:04:40.38,Default,,0,0,0,,零示例Prompt - 是一种方法，即在这种方法中，LLM没有获得关于要\N执行的特定任务的额外数据，而只是给出了描述任务的Prompt。
+Dialogue: 1,0:04:40.38,0:04:46.44,Default,,0,0,0,,例如，如果你想让LLM回答一个问题，你只需\N在Prompt中写：“什么是Prompt设计？”。
+Dialogue: 1,0:04:46.44,0:04:52.98,Default,,0,0,0,,单示例Prompt（One-shot prompting） - 是一种方法，即\N在这种方法中，给LLM一个要执行任务相关的示例。
+Dialogue: 1,0:04:52.98,0:04:58.20,Default,,0,0,0,,例如，如果你想让LLM写一首诗，你可以提供一个诗的示例。
+Dialogue: 1,0:04:58.20,0:05:06.42,Default,,0,0,0,,少量示例Prompt（Few-shot prompting） - 是一种方法，\N即在这种方法中，给LLM几个要执行任务相关的示例。
+Dialogue: 1,0:05:06.42,0:05:12.84,Default,,0,0,0,,例如，如果你想让LLM写一篇新闻文章，你\N可以给它提供一些新闻文章来阅读。
+Dialogue: 1,0:05:12.84,0:05:20.52,Default,,0,0,0,,你可以使用结构化模式来设计少量示例Prompt，\N通过提供上下文和额外的例子让模型学习。
+Dialogue: 1,0:05:21.36,0:05:24.12,Default,,0,0,0,,结构化Prompt包含几个不同的组成部分：
+Dialogue: 1,0:05:24.12,0:05:27.60,Default,,0,0,0,,首先我们有上下文，它指导模型应该如何回应。
+Dialogue: 1,0:05:27.60,0:05:34.74,Default,,0,0,0,,你可以指定模型可以或不能使用的词汇，关\N注或避免的主题，或者特定的结果格式。
+Dialogue: 1,0:05:34.74,0:05:37.86,Default,,0,0,0,,每次向模型发送请求时，上下文都会应用。
+Dialogue: 1,0:05:37.86,0:05:42.48,Default,,0,0,0,,假设我们想使用LLM根据一些背景文本回答问题。
+Dialogue: 1,0:05:42.48,0:05:47.22,Default,,0,0,0,,在这种情况下，一段描述亚马逊雨林植被变化的文字。
+Dialogue: 1,0:05:47.22,0:05:50.4,Default,,0,0,0,,我们可以将背景文本粘贴为上下文。
+Dialogue: 1,0:05:50.76,0:05:56.76,Default,,0,0,0,,然后，我们添加一些可以从这段文字中回\N答的问题示例，比如LGM是什么意思？
+Dialogue: 1,0:05:56.76,0:06:00.54,Default,,0,0,0,,或者沉积物分析表明了什么？
+Dialogue: 1,0:06:00.54,0:06:06.30,Default,,0,0,0,,我们需要添加这些问题的相应答案，以展示我们希望模型如何回应。
+Dialogue: 1,0:06:06.30,0:06:10.32,Default,,0,0,0,,然后，我们可以通过发送一个新问题作\N为输入来测试我们设计的Prompt。
+Dialogue: 1,0:06:10.32,0:06:16.2,Default,,0,0,0,,就这样，你仅用几分钟就搭建了一个基\N于背景文本问答的问答系统原型！
+Dialogue: 1,0:06:16.2,0:06:18.72,Default,,0,0,0,,请注意关于Prompt设计的一些最佳实践。
+Dialogue: 1,0:06:18.72,0:06:28.32,Default,,0,0,0,,简洁明了，具体且明确地提问，一次只询问\N一个任务，将生成任务转化为分类任务。
+Dialogue: 1,0:06:28.32,0:06:36.42,Default,,0,0,0,,例如，不要问应该学习哪种编程语言，而是问 \NPython、Java 或 C 对编程初学者更合适。
+Dialogue: 1,0:06:36.42,0:06:46.44,Default,,0,0,0,,通过包含示例来提高返回结果的质量，添加说明和一些示例往往\N会产生良好的效果，但目前还没有最佳的Prompt编写方法。
+Dialogue: 1,0:06:46.44,0:06:52.14,Default,,0,0,0,,你可能需要尝试不同的结构、格式和示例\N，以找出最适合你使用场景的方法。
+Dialogue: 1,0:06:52.14,0:06:57.48,Default,,0,0,0,,有关Prompt设计的更多信息，请查阅阅读列表中的文本Prompt设计。
+Dialogue: 1,0:06:58.44,0:07:03.18,Default,,0,0,0,,因此，如果你设计了一个你认为效果很好\N的Prompt，可以保存它并稍后返回。
+Dialogue: 1,0:07:03.18,0:07:12.66,Default,,0,0,0,,你保存的Prompt将显示在Prompt库中，Prompt库是一个精选的示\N例Prompt集合，展示了生成式 AI 模型如何适用于各种用例。
+Dialogue: 1,0:07:12.66,0:07:21.90,Default,,0,0,0,,最后，除了测试不同的Prompt和Prompt结构外，还有\N一些模型参数可以尝试，以提高返回结果的质量。
+Dialogue: 1,0:07:22.44,0:07:24.96,Default,,0,0,0,,首先，你可以选择不同的模型。
+Dialogue: 1,0:07:24.96,0:07:28.62,Default,,0,0,0,,每个模型都经过调整，以便在特定任务上表现良好。
+Dialogue: 1,0:07:28.62,0:07:38.70,Default,,0,0,0,,你还可以指定temperature、Top P和Top K。这些参数都\N通过控制输出Token的选择来调整响应的随机性。
+Dialogue: 1,0:07:38.70,0:07:44.4,Default,,0,0,0,,当你向模型发送Prompt时，它会生成一个关\N于接下来可能出现的单词的概率数组。
+Dialogue: 1,0:07:44.4,0:07:47.88,Default,,0,0,0,,从这个数组中，我们需要一些策略来决定返回什么。
+Dialogue: 1,0:07:48.60,0:07:52.56,Default,,0,0,0,,一个简单的策略可能是在每个时间步选择最可能的单词。
+Dialogue: 1,0:07:52.56,0:07:56.70,Default,,0,0,0,,但这种方法可能导致无趣且有时重复的答案。
+Dialogue: 1,0:07:56.70,0:08:03.54,Default,,0,0,0,,相反，如果你在模型返回的分布上随机抽样，\N你可能会得到一些不太可能的返回结果。
+Dialogue: 1,0:08:03.54,0:08:09.84,Default,,0,0,0,,通过控制随机性的程度，你可以获得更多意想不\N到的，有些人可能会说是创造性的返回结果。
+Dialogue: 1,0:08:09.84,0:08:15.6,Default,,0,0,0,,回到模型参数，Temperature是用来调整随机性程度的一个数字。
+Dialogue: 1,0:08:15.6,0:08:19.50,Default,,0,0,0,,低Temperature：意味着选择那些可能性较高且更可预测的单词。
+Dialogue: 1,0:08:19.50,0:08:24.18,Default,,0,0,0,,在这种情况下，这些单词是位于列表开头的花朵和其他单词。
+Dialogue: 1,0:08:24.18,0:08:31.98,Default,,0,0,0,,这个设置通常更适合像问答和摘要这样的任务，在这些\N任务中，你期望得到一个变化较小的“可预测”答案。
+Dialogue: 1,0:08:31.98,0:08:37.44,Default,,0,0,0,,…高Temperature：意味着选择那些可能性较低且更不寻常的单词。
+Dialogue: 1,0:08:37.44,0:08:41.10,Default,,0,0,0,,在这种情况下，这些都是位于列表末尾的错误和其他词语。
+Dialogue: 1,0:08:42.0,0:08:46.74,Default,,0,0,0,,如果你想生成更具创意或出人意料的内容，这个设置很好。
+Dialogue: 1,0:08:46.74,0:08:54.96,Default,,0,0,0,,除了调整Temperature，Top K 还可以让模型从\N可能性最高的前 K 个词中随机返回一个词。
+Dialogue: 1,0:08:55.74,0:09:02.22,Default,,0,0,0,,例如，Top 2 意味着你可以从包括花和树在\N内的前 2 个可能的词中随机选择一个。
+Dialogue: 1,0:09:02.22,0:09:06.54,Default,,0,0,0,,这种方法允许其他高分词有被选中的机会。
+Dialogue: 1,0:09:06.54,0:09:18.6,Default,,0,0,0,,然而，如果词的概率分布非常偏斜，你有一个非常可能的词，其他所\N有词都非常不可能，这种方法可能会导致一些奇怪的返回结果。
+Dialogue: 1,0:09:19.20,0:09:26.70,Default,,0,0,0,,选择最佳 Top K 值的难度，导致了另一种流\N行的方法，即动态设置单词简表的大小。
+Dialogue: 1,0:09:27.36,0:09:32.40,Default,,0,0,0,,Top P 允许模型从前 P 个概率的词中随机返回一个词。
+Dialogue: 1,0:09:33.24,0:09:47.16,Default,,0,0,0,,使用 Top P，你可以从一组总和不超过 P 的可能性中选择。例\N如，P为0.75意味着你从一组累积概率大于0.75的词中取样。
+Dialogue: 1,0:09:47.16,0:09:52.20,Default,,0,0,0,,在这种情况下，它包括三个词：花、树和草药。
+Dialogue: 1,0:09:52.92,0:10:01.2,Default,,0,0,0,,这样，单词集的大小可以根据列表中下\N一个词的概率分布动态增加和减少。
+Dialogue: 1,0:10:01.74,0:10:06.54,Default,,0,0,0,,总之，生成式AI工作室为你提供了一些模型参数供你尝试，
+Dialogue: 1,0:10:06.54,0:10:14.64,Default,,0,0,0,,如模型、Temperature、Top K和Top P。请注意，你\N不需要经常调整它们，尤其是Top K和Top P。
+Dialogue: 1,0:10:16.2,0:10:18.96,Default,,0,0,0,,现在让我们看看第二个功能，创建对话。
+Dialogue: 1,0:10:19.74,0:10:22.62,Default,,0,0,0,,首先，你需要指定对话上下文。
+Dialogue: 1,0:10:22.62,0:10:25.50,Default,,0,0,0,,上下文指示模型应如何回应。
+Dialogue: 1,0:10:26.4,0:10:33.18,Default,,0,0,0,,例如，指定模型可以或不能使用的词汇\N，关注或避免的主题，或响应格式。
+Dialogue: 1,0:10:33.18,0:10:36.54,Default,,0,0,0,,每次向模型发送请求时，都会应用上下文。
+Dialogue: 1,0:10:37.14,0:10:42.84,Default,,0,0,0,,举个简单的例子，你可以定义一个场景，\N告诉AI如何回应技术支持的查询。
+Dialogue: 1,0:10:42.84,0:10:44.28,Default,,0,0,0,,你的名字叫Roy。
+Dialogue: 1,0:10:44.28,0:10:47.22,Default,,0,0,0,,你是IT部门的一名支持技术员。
+Dialogue: 1,0:10:47.22,0:10:52.20,Default,,0,0,0,,对于任何查询你只回应“你尝试过关机重启了吗？”
+Dialogue: 1,0:10:52.20,0:10:56.16,Default,,0,0,0,,你可以调整右侧的参数，就像设计Prompt时一样。
+Dialogue: 1,0:10:56.16,0:11:01.86,Default,,0,0,0,,要查看它的工作原理，你可以在聊天框\N中输入我的电脑很慢，然后按回车。
+Dialogue: 1,0:11:01.86,0:11:06.30,Default,,0,0,0,,AI回应：你尝试过关机重启了吗？
+Dialogue: 1,0:11:06.30,0:11:08.34,Default,,0,0,0,,正如你告诉AI的那样。
+Dialogue: 1,0:11:09.42,0:11:15.6,Default,,0,0,0,,酷的是，谷歌提供了API和SDK，帮助你构建自己的应用程序。
+Dialogue: 1,0:11:15.6,0:11:17.34,Default,,0,0,0,,你可以简单地点击查看代码。
+Dialogue: 1,0:11:17.34,0:11:23.58,Default,,0,0,0,,首先，你需要下载适合你编程语言的 \NVertex AI SDK，比如Python 和 Curl。
+Dialogue: 1,0:11:23.58,0:11:26.64,Default,,0,0,0,,SDK 是软件设计工具包（Software Design Kits）的缩写。
+Dialogue: 1,0:11:26.64,0:11:29.40,Default,,0,0,0,,它们实现了功能并为你完成工作。
+Dialogue: 1,0:11:29.40,0:11:32.22,Default,,0,0,0,,你可以像调用代码中的库一样使用它们。
+Dialogue: 1,0:11:32.22,0:11:37.8,Default,,0,0,0,,然后按照示例代码和 API，将代码插入到你的应用程序中。
+Dialogue: 1,0:11:38.28,0:11:41.40,Default,,0,0,0,,现在让我们看看第三个功能，调整（Tune）语言模型。
+Dialogue: 1,0:11:41.40,0:11:45.54,Default,,0,0,0,,如果你一直在使用大语言模型进行原型设计，你可能会想知道是否有
+Dialogue: 1,0:11:45.54,0:11:48.72,Default,,0,0,0,,一种方法可以在Prompt设计之外提高响应质量。
+Dialogue: 1,0:11:48.72,0:11:54.54,Default,,0,0,0,,那么让我们学习如何调整大语言模型以及\N如何从生成 AI 工作室启动调优任务。
+Dialogue: 1,0:11:54.54,0:11:58.86,Default,,0,0,0,,简要回顾一下，Prompt是你传递给模型的文本输入。
+Dialogue: 1,0:11:58.86,0:12:00.66,Default,,0,0,0,,你的Prompt可能看起来像一条指令...
+Dialogue: 1,0:12:00.66,0:12:02.52,Default,,0,0,0,,也许你还添加了一些例子...
+Dialogue: 1,0:12:02.52,0:12:06.96,Default,,0,0,0,,然后你将这段文本发送给模型，以便它采用你想要的行为。
+Dialogue: 1,0:12:09.6,0:12:12.54,Default,,0,0,0,,Prompt设计允许快速实验和定制。
+Dialogue: 1,0:12:12.54,0:12:17.94,Default,,0,0,0,,而且因为你不需要编写复杂的代码，所以你\N不需要成为机器学习专家就可以开始。
+Dialogue: 1,0:12:18.54,0:12:20.34,Default,,0,0,0,,但是生成Prompt可能会很棘手。
+Dialogue: 1,0:12:20.34,0:12:25.86,Default,,0,0,0,,用词或词序的微小变化可能会以无法完全预测的方式影响模型结果。
+Dialogue: 1,0:12:25.86,0:12:28.98,Default,,0,0,0,,而且你不能在一个Prompt中放入太多的例子。
+Dialogue: 1,0:12:28.98,0:12:36.24,Default,,0,0,0,,即使你找到了一个适合你用例的好Prompt，你可\N能会注意到模型响应的质量并不完全一致。
+Dialogue: 1,0:12:36.24,0:12:39.84,Default,,0,0,0,,我们可以做的一件事是调整模型。
+Dialogue: 1,0:12:39.84,0:12:41.10,Default,,0,0,0,,那么什么是调优（Tuning）呢？
+Dialogue: 1,0:12:41.10,0:12:44.70,Default,,0,0,0,,你可能熟悉的一个版本是微调。
+Dialogue: 1,0:12:44.70,0:12:49.2,Default,,0,0,0,,在这种情况下，我们使用一个在通用数据集上预训练的模型。
+Dialogue: 1,0:12:49.2,0:12:50.64,Default,,0,0,0,,我们复制这个模型。
+Dialogue: 1,0:12:50.64,0:12:57.24,Default,,0,0,0,,然后，以这些学到的权重为起点，我们在一个\N新的领域特定数据集上重新训练模型。
+Dialogue: 1,0:12:57.24,0:13:01.20,Default,,0,0,0,,这种技术在很多不同的用例中都非常有效。
+Dialogue: 1,0:13:01.20,0:13:04.92,Default,,0,0,0,,但是当我们尝试微调大语言模型时，我们遇到了一些挑战。
+Dialogue: 1,0:13:04.92,0:13:08.34,Default,,0,0,0,,正如名称所示，大语言模型是很大的。
+Dialogue: 1,0:13:08.34,0:13:11.52,Default,,0,0,0,,因此，更新每个权重可能需要一个长时间的训练任务。
+Dialogue: 1,0:13:11.52,0:13:16.86,Default,,0,0,0,,再加上运行这个巨大模型的成本和麻烦…
+Dialogue: 1,0:13:16.86,0:13:21.42,Default,,0,0,0,,因此，微调大语言模型可能不是最佳选择。
+Dialogue: 1,0:13:21.42,0:13:26.16,Default,,0,0,0,,但是有一种创新的调优方法叫做参数高效调优。
+Dialogue: 1,0:13:26.16,0:13:33.90,Default,,0,0,0,,这是一个非常令人兴奋的研究领域，旨在减少微\N调大语言模型的挑战，只训练一部分参数。
+Dialogue: 1,0:13:33.90,0:13:37.68,Default,,0,0,0,,这些参数可能是现有模型参数的一个子集。
+Dialogue: 1,0:13:37.68,0:13:40.44,Default,,0,0,0,,或者它们可能是一整套新的参数。
+Dialogue: 1,0:13:40.44,0:13:46.56,Default,,0,0,0,,例如，你可以在模型中添加一些额外的层或者\N在Prompt中添加一个额外的Embedding。
+Dialogue: 1,0:13:46.56,0:13:53.46,Default,,0,0,0,,如果你想了解更多关于参数高效调整和一些不同方法\N的信息，可以参考本课程阅读列表中的总结论文。
+Dialogue: 1,0:13:53.46,0:13:59.76,Default,,0,0,0,,但如果你只想开始构建，那么让我们转到生\N成式AI工作室，看看如何开始调整工作。
+Dialogue: 1,0:13:59.76,0:14:03.48,Default,,0,0,0,,从生成式AI工作室的语言部分，选择TUNING。
+Dialogue: 1,0:14:03.48,0:14:05.70,Default,,0,0,0,,要创建一个调整过的模型，我们需要提供一个名称。
+Dialogue: 1,0:14:05.70,0:14:09.78,Default,,0,0,0,,然后指向你的训练数据的本地或云存储位置。
+Dialogue: 1,0:14:09.78,0:14:18.24,Default,,0,0,0,,参数高效调整非常适合于你拥有适量训练数据\N的场景，比如说几百或者几千个训练样本。
+Dialogue: 1,0:14:18.96,0:14:24.30,Default,,0,0,0,,你的训练数据应该以文本到文本格式构建为一个监督式训练数据集。
+Dialogue: 1,0:14:24.30,0:14:31.86,Default,,0,0,0,,数据中的每条记录或行都包含输入文本，换句\N话说，是Prompt，后面跟着模型的预期输出。
+Dialogue: 1,0:14:31.86,0:14:37.32,Default,,0,0,0,,这意味着该模型可以针对可建模为文本到文本的任务进行调整。
+Dialogue: 1,0:14:38.4,0:14:45.18,Default,,0,0,0,,指定数据集路径后，你可以开始调优任\N务并在谷歌云控制台中监控状态。
+Dialogue: 1,0:14:45.18,0:14:50.28,Default,,0,0,0,,调优任务完成后，你将在Vertex AI模型注册表中看到调优后的模型。
+Dialogue: 1,0:14:50.28,0:14:55.20,Default,,0,0,0,,你可以将其部署到端点进行服务，或者在生成式AI工作室中进行测试。
+Dialogue: 1,0:14:56.22,0:15:04.14,Default,,0,0,0,,在本课程中，你了解了生成式AI是什么以及谷歌云提供的工具。
+Dialogue: 1,0:15:04.14,0:15:07.26,Default,,0,0,0,,具体来说，你关注了生成式AI工作室。
+Dialogue: 1,0:15:07.26,0:15:14.28,Default,,0,0,0,,通过快速原型设计和定制生成式AI模\N型，在你的应用程序中使用GenAI。
+Dialogue: 1,0:15:14.28,0:15:19.92,Default,,0,0,0,,你了解到生成式AI工作室支持三个选项：语言、视觉和语音。
+Dialogue: 1,0:15:19.92,0:15:26.70,Default,,0,0,0,,然后，你浏览了语言中的三个主要功能：设\N计和测试Prompt、创建对话和调整模型。
+Dialogue: 1,0:15:27.24,0:15:31.68,Default,,0,0,0,,这是一个关于Vertex AI上生成式AI工作室的简短课程。
+Dialogue: 1,0:15:31.68,0:15:45.54,Default,,0,0,0,,有关自然语言处理和不同类型的语言模型（如解码器\N-编码器、变压器和LLM）的更多信息，请查看阅读列表\N中的名为“谷歌云上的自然语言处理”的课程。
+Dialogue: 1,0:15:46.44,0:15:50.40,Default,,0,0,0,,现在是时候在动手实验室中尝试生成式AI工作室了，你将：
+Dialogue: 1,0:15:50.40,0:15:53.82,Default,,0,0,0,,在自由形式和结构化模式下设计和测试Prompt。
+Dialogue: 1,0:15:53.82,0:15:57.78,Default,,0,0,0,,创建对话，浏览Prompt库。
+Dialogue: 1,0:15:57.78,0:16:04.20,Default,,0,0,0,,在这个实验室的最后，你将能够使用我们在这\N门课程中讨论过的生成式AI工作室的功能。
+Dialogue: 1,0:16:04.20,0:16:05.88,Default,,0,0,0,,尽情探索吧！

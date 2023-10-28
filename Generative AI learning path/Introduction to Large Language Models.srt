@@ -1,0 +1,1575 @@
+1
+00:00:00,570 --> 00:00:02,759
+JOHN EWALD: Hello, and
+welcome to Introduction
+
+2
+00:00:02,759 --> 00:00:04,386
+to Large Language Models.
+
+3
+00:00:04,386 --> 00:00:06,719
+My name is John Ewald, and
+I'm a training developer here
+
+4
+00:00:06,719 --> 00:00:08,158
+at Google Cloud.
+
+5
+00:00:08,160 --> 00:00:10,859
+In this course, you learn
+to define large language
+
+6
+00:00:10,859 --> 00:00:14,669
+models, or LLMs,
+describe LLM use cases,
+
+7
+00:00:14,669 --> 00:00:18,178
+explain prompt tuning, and
+describe Google's Gen AI
+
+8
+00:00:18,179 --> 00:00:20,429
+development tools.
+
+9
+00:00:20,429 --> 00:00:24,419
+Large language models, or LLMs,
+are a subset of deep learning.
+
+10
+00:00:24,420 --> 00:00:26,219
+To find out more
+about deep learning,
+
+11
+00:00:26,219 --> 00:00:29,669
+see our Introduction to
+Generative AI course video.
+
+12
+00:00:29,670 --> 00:00:32,429
+LLMs and generative AI
+intersect and they are
+
+13
+00:00:32,429 --> 00:00:35,399
+both a part of deep learning.
+
+14
+00:00:35,399 --> 00:00:38,039
+Another area of AI you
+may be hearing a lot about
+
+15
+00:00:38,039 --> 00:00:39,718
+is generative AI.
+
+16
+00:00:39,719 --> 00:00:41,969
+This is a type of
+artificial intelligence that
+
+17
+00:00:41,969 --> 00:00:45,728
+can produce new content,
+including text, images, audio,
+
+18
+00:00:45,729 --> 00:00:48,289
+and synthetic data.
+
+19
+00:00:48,289 --> 00:00:50,648
+So what are large
+language models?
+
+20
+00:00:50,649 --> 00:00:53,979
+Large language models refer to
+large general-purpose language
+
+21
+00:00:53,979 --> 00:00:56,588
+models that can be
+pre-trained and then fine
+
+22
+00:00:56,590 --> 00:00:59,020
+tuned for specific purposes.
+
+23
+00:00:59,020 --> 00:01:03,140
+What do pre-trained
+and fine tuned mean?
+
+24
+00:01:03,140 --> 00:01:05,029
+Imagine training a dog.
+
+25
+00:01:05,030 --> 00:01:07,069
+Often, you train your
+dog basic commands
+
+26
+00:01:07,069 --> 00:01:12,779
+such as sit, come,
+down, and stay.
+
+27
+00:01:12,780 --> 00:01:15,750
+These commands are normally
+sufficient for everyday life
+
+28
+00:01:15,750 --> 00:01:19,489
+and help your dog become
+a good canine citizen.
+
+29
+00:01:19,489 --> 00:01:22,489
+However, if you need a special
+service dog such as a police
+
+30
+00:01:22,489 --> 00:01:28,479
+dog, a guide dog, or a hunting
+dog, you add special trainings.
+
+31
+00:01:28,480 --> 00:01:33,279
+The similar idea applies
+to large language models.
+
+32
+00:01:33,280 --> 00:01:35,489
+These models are trained
+for general purposes
+
+33
+00:01:35,489 --> 00:01:38,158
+to solve common language
+problems such as text
+
+34
+00:01:38,159 --> 00:01:41,219
+classification, question
+answering, document
+
+35
+00:01:41,219 --> 00:01:47,089
+summarization, and text
+generation across industries.
+
+36
+00:01:47,090 --> 00:01:49,900
+The models can then be tailored
+to solve specific problems
+
+37
+00:01:49,900 --> 00:01:52,750
+in different fields
+such as retail, finance,
+
+38
+00:01:52,750 --> 00:01:56,259
+and entertainment using a
+relatively small size of field
+
+39
+00:01:56,260 --> 00:01:58,789
+data sets.
+
+40
+00:01:58,790 --> 00:02:00,560
+Let's further break
+down the concept
+
+41
+00:02:00,560 --> 00:02:04,699
+into three major features
+of large language models.
+
+42
+00:02:04,700 --> 00:02:06,989
+Large indicates two meanings.
+
+43
+00:02:06,989 --> 00:02:10,037
+First is the enormous size
+of the training data set,
+
+44
+00:02:10,038 --> 00:02:12,649
+sometimes at the petabyte scale.
+
+45
+00:02:12,650 --> 00:02:15,289
+Second, it refers to
+the parameter count.
+
+46
+00:02:15,289 --> 00:02:18,889
+In ML, parameters are often
+called hyperparameters.
+
+47
+00:02:18,889 --> 00:02:21,708
+Parameters are basically the
+memories and the knowledge
+
+48
+00:02:21,710 --> 00:02:24,259
+that the machine learned
+from the model training.
+
+49
+00:02:24,259 --> 00:02:26,538
+Parameters define
+the skill of a model
+
+50
+00:02:26,539 --> 00:02:29,998
+in solving a problem
+such as predicting text.
+
+51
+00:02:30,000 --> 00:02:31,830
+General purpose
+means that the models
+
+52
+00:02:31,830 --> 00:02:34,439
+are sufficient to
+solve common problems.
+
+53
+00:02:34,439 --> 00:02:36,869
+Two reasons lead to this idea.
+
+54
+00:02:36,870 --> 00:02:40,019
+First is the commonality of
+a human language regardless
+
+55
+00:02:40,020 --> 00:02:41,580
+of the specific tasks.
+
+56
+00:02:41,580 --> 00:02:44,819
+And second is the
+resource restriction.
+
+57
+00:02:44,819 --> 00:02:47,428
+Only certain organizations
+have the capability
+
+58
+00:02:47,430 --> 00:02:51,209
+to train such large language
+models with huge data sets
+
+59
+00:02:51,210 --> 00:02:54,150
+and a tremendous
+number of parameters.
+
+60
+00:02:54,150 --> 00:02:56,849
+How about letting them create
+fundamental language models
+
+61
+00:02:56,849 --> 00:02:58,869
+for others to use?
+
+62
+00:02:58,870 --> 00:03:02,680
+This leads to the last point,
+pre-trained and fine tuned,
+
+63
+00:03:02,680 --> 00:03:04,930
+meaning to pre-train
+a large language
+
+64
+00:03:04,930 --> 00:03:07,659
+model for a general purpose
+with a large data set
+
+65
+00:03:07,659 --> 00:03:10,899
+and then fine tune it for
+specific aims with a much
+
+66
+00:03:10,900 --> 00:03:13,699
+smaller data set.
+
+67
+00:03:13,699 --> 00:03:15,859
+The benefits of using
+large language models
+
+68
+00:03:15,860 --> 00:03:17,189
+are straightforward.
+
+69
+00:03:17,189 --> 00:03:20,879
+First, a single model can
+be used for different tasks.
+
+70
+00:03:20,879 --> 00:03:22,548
+This is a dream come true.
+
+71
+00:03:22,550 --> 00:03:24,530
+These large language
+models that are
+
+72
+00:03:24,530 --> 00:03:27,949
+trained with petabytes of
+data and generate billions
+
+73
+00:03:27,949 --> 00:03:31,319
+of parameters are smart enough
+to solve different tasks,
+
+74
+00:03:31,319 --> 00:03:35,209
+including language translation,
+sentence completion, text
+
+75
+00:03:35,210 --> 00:03:38,810
+classification, question
+answering, and more.
+
+76
+00:03:38,810 --> 00:03:42,560
+Second, large language models
+require minimal field training
+
+77
+00:03:42,560 --> 00:03:46,219
+data when you tailor them to
+solve your specific problem.
+
+78
+00:03:46,219 --> 00:03:49,009
+Large language models
+obtain decent performance
+
+79
+00:03:49,009 --> 00:03:51,419
+even with little
+domain training data.
+
+80
+00:03:51,419 --> 00:03:54,048
+In other words, they can be
+used for few shot or even
+
+81
+00:03:54,050 --> 00:03:55,789
+zero-shot scenarios.
+
+82
+00:03:55,789 --> 00:03:57,619
+In machine learning,
+few shot refers
+
+83
+00:03:57,620 --> 00:03:59,870
+to training a model
+with minimal data,
+
+84
+00:03:59,870 --> 00:04:02,539
+and zero shot implies
+that a model can recognize
+
+85
+00:04:02,539 --> 00:04:05,688
+things that have not explicitly
+been taught in the training
+
+86
+00:04:05,689 --> 00:04:07,108
+before.
+
+87
+00:04:07,110 --> 00:04:09,719
+Third, the performance
+of large language models
+
+88
+00:04:09,719 --> 00:04:15,549
+is continuously growing when you
+add more data and parameters.
+
+89
+00:04:15,550 --> 00:04:17,949
+Let's take PaLM as an example.
+
+90
+00:04:17,949 --> 00:04:21,308
+In April 2022,
+Google released PaLM,
+
+91
+00:04:21,310 --> 00:04:26,050
+short for Pathways Language
+Model, a 540 billion-parameter
+
+92
+00:04:26,050 --> 00:04:28,899
+model that achieves a state
+of the art performance
+
+93
+00:04:28,899 --> 00:04:31,658
+across multiple language tasks.
+
+94
+00:04:31,660 --> 00:04:35,079
+PaLM is a dense decoder-only
+transformer model.
+
+95
+00:04:35,079 --> 00:04:38,529
+It has 540 billion parameters.
+
+96
+00:04:38,529 --> 00:04:40,788
+It leverages the
+new pathways system,
+
+97
+00:04:40,790 --> 00:04:42,970
+which has enabled
+Google to efficiently
+
+98
+00:04:42,970 --> 00:04:47,859
+train a single model across
+multiple TPU V4 pods.
+
+99
+00:04:47,860 --> 00:04:50,259
+Pathway is a new AI
+architecture that
+
+100
+00:04:50,259 --> 00:04:54,308
+will handle many tasks at
+once, learn new tasks quickly,
+
+101
+00:04:54,310 --> 00:04:57,889
+and reflect a better
+understanding of the world.
+
+102
+00:04:57,889 --> 00:05:01,339
+The system enables PaLM
+to orchestrate distributed
+
+103
+00:05:01,339 --> 00:05:04,629
+computation for accelerators.
+
+104
+00:05:04,629 --> 00:05:07,928
+We previously mentioned that
+PaLM is a transformer model.
+
+105
+00:05:07,930 --> 00:05:11,479
+A transformer model consists
+of encoder and decoder.
+
+106
+00:05:11,480 --> 00:05:13,629
+The encoder encodes
+the input sequence
+
+107
+00:05:13,629 --> 00:05:15,669
+and passes it to
+the decoder, which
+
+108
+00:05:15,670 --> 00:05:18,009
+learns how to decode
+the representations
+
+109
+00:05:18,009 --> 00:05:20,959
+for a relevant task.
+
+110
+00:05:20,959 --> 00:05:23,988
+We've come a long away from
+traditional programming
+
+111
+00:05:23,990 --> 00:05:27,050
+to neural networks
+to generative models.
+
+112
+00:05:27,050 --> 00:05:28,939
+In traditional
+programming, we used
+
+113
+00:05:28,939 --> 00:05:32,059
+to have to hard code the rules
+for distinguishing a cat--
+
+114
+00:05:32,060 --> 00:05:37,879
+type, animal; legs, four;
+ears, two; fur, yes;
+
+115
+00:05:37,879 --> 00:05:40,749
+likes yarn, catnip.
+
+116
+00:05:40,750 --> 00:05:42,790
+In the wave of
+neural networks, we
+
+117
+00:05:42,790 --> 00:05:45,819
+could give the network pictures
+of cats and dogs and ask,
+
+118
+00:05:45,819 --> 00:05:47,048
+is this a cat?
+
+119
+00:05:47,050 --> 00:05:49,029
+And it would predict a cat.
+
+120
+00:05:49,029 --> 00:05:51,969
+In the generative
+wave, we as users
+
+121
+00:05:51,970 --> 00:05:55,399
+can generate our own content,
+whether it be text, images,
+
+122
+00:05:55,399 --> 00:05:57,579
+audio, video, or other.
+
+123
+00:05:57,579 --> 00:06:00,398
+For example, models
+like PaLM, or LaMDA,
+
+124
+00:06:00,399 --> 00:06:03,488
+or Language Model for
+Dialogue Applications,
+
+125
+00:06:03,490 --> 00:06:06,970
+ingest very, very large
+data from multiple sources
+
+126
+00:06:06,970 --> 00:06:10,059
+across the internet and build
+foundation language models
+
+127
+00:06:10,060 --> 00:06:12,910
+we can use simply by
+asking a question,
+
+128
+00:06:12,910 --> 00:06:15,249
+whether typing it into
+a prompt or verbally
+
+129
+00:06:15,250 --> 00:06:17,290
+talking into the prompt.
+
+130
+00:06:17,290 --> 00:06:19,449
+So when you ask it
+what's a cat, it
+
+131
+00:06:19,449 --> 00:06:23,489
+can give you everything it
+has learned about a cat.
+
+132
+00:06:23,490 --> 00:06:26,789
+Let's compare LLM development
+using pre-trained models
+
+133
+00:06:26,790 --> 00:06:29,279
+with traditional ML development.
+
+134
+00:06:29,279 --> 00:06:33,069
+First, with LLM development,
+you don't need to be an expert.
+
+135
+00:06:33,069 --> 00:06:34,799
+You don't need
+training examples.
+
+136
+00:06:34,800 --> 00:06:37,199
+And there is no need
+to train a model.
+
+137
+00:06:37,199 --> 00:06:40,109
+All you need to do is think
+about prompt design, which
+
+138
+00:06:40,110 --> 00:06:43,569
+is the process of creating a
+prompt that is clear, concise,
+
+139
+00:06:43,569 --> 00:06:44,669
+and informative.
+
+140
+00:06:44,670 --> 00:06:48,540
+It is an important part of
+natural language processing.
+
+141
+00:06:48,540 --> 00:06:50,189
+In traditional
+machine learning, you
+
+142
+00:06:50,189 --> 00:06:52,648
+need training examples
+to train a model.
+
+143
+00:06:52,649 --> 00:06:56,508
+You also need compute
+time and hardware.
+
+144
+00:06:56,509 --> 00:07:01,759
+Let's take a look at an example
+of a text generation use case.
+
+145
+00:07:01,759 --> 00:07:05,989
+Question answering, or QA, is
+a subfield of natural language
+
+146
+00:07:05,990 --> 00:07:09,439
+processing that deals with the
+task of automatically answering
+
+147
+00:07:09,439 --> 00:07:12,709
+questions posed in
+natural language.
+
+148
+00:07:12,709 --> 00:07:16,099
+QA systems are typically
+trained on a large amount
+
+149
+00:07:16,100 --> 00:07:17,269
+of text and code.
+
+150
+00:07:17,269 --> 00:07:19,889
+And they are able to answer
+a wide range of questions,
+
+151
+00:07:19,889 --> 00:07:23,599
+including factual, definitional,
+and opinion-based questions.
+
+152
+00:07:23,600 --> 00:07:26,059
+The key here is that you
+need domain knowledge
+
+153
+00:07:26,060 --> 00:07:29,560
+to develop these
+question-answering models.
+
+154
+00:07:29,560 --> 00:07:32,169
+For example, domain
+knowledge is required
+
+155
+00:07:32,170 --> 00:07:34,899
+to develop a question-answering
+model for customer
+
+156
+00:07:34,899 --> 00:07:38,158
+support, or health
+care, or supply chain.
+
+157
+00:07:38,160 --> 00:07:41,279
+Using generative QA, the
+model generates free text
+
+158
+00:07:41,279 --> 00:07:43,439
+directly based on the context.
+
+159
+00:07:43,439 --> 00:07:47,358
+There is no need for
+domain knowledge.
+
+160
+00:07:47,360 --> 00:07:49,699
+Let's look at three
+questions given to Bard,
+
+161
+00:07:49,699 --> 00:07:55,258
+a large language model chat
+bot developed by Google AI.
+
+162
+00:07:55,259 --> 00:07:56,549
+Question one.
+
+163
+00:07:56,550 --> 00:07:59,309
+"This year's sales are $100,000.
+
+164
+00:07:59,310 --> 00:08:01,499
+Expenses are $60,000.
+
+165
+00:08:01,500 --> 00:08:03,729
+How much is net profit?"
+
+166
+00:08:03,730 --> 00:08:07,660
+Bard first shares how net
+profit is calculated, then
+
+167
+00:08:07,660 --> 00:08:09,459
+performs the calculation.
+
+168
+00:08:09,459 --> 00:08:14,128
+Then Bard provides the
+definition of net profit.
+
+169
+00:08:14,129 --> 00:08:15,409
+Here's another question.
+
+170
+00:08:15,410 --> 00:08:18,919
+Inventory on hand
+is 6,000 units.
+
+171
+00:08:18,920 --> 00:08:21,829
+A new order requires
+8,000 units.
+
+172
+00:08:21,829 --> 00:08:25,309
+How many units do I need to
+fill to complete the order?
+
+173
+00:08:25,310 --> 00:08:29,750
+Again, Bard answers the question
+by performing the calculation.
+
+174
+00:08:29,750 --> 00:08:32,509
+And our last example,
+we have 1,000 sensors
+
+175
+00:08:32,509 --> 00:08:34,638
+in 10 geographic regions.
+
+176
+00:08:34,639 --> 00:08:38,639
+How many sensors do we have
+on average in each region?
+
+177
+00:08:38,639 --> 00:08:40,528
+Bard answers the
+question with an example
+
+178
+00:08:40,529 --> 00:08:44,489
+on how to solve the problem
+and some additional context.
+
+179
+00:08:44,490 --> 00:08:47,980
+In each of our questions, a
+desired response was obtained.
+
+180
+00:08:47,980 --> 00:08:50,669
+This is due to prompt design.
+
+181
+00:08:50,669 --> 00:08:52,499
+Prompt design and
+prompt engineering
+
+182
+00:08:52,500 --> 00:08:56,639
+are two closely-related concepts
+in natural language processing.
+
+183
+00:08:56,639 --> 00:08:58,589
+Both involve the
+process of creating
+
+184
+00:08:58,590 --> 00:09:01,440
+a prompt that is clear,
+concise, and informative.
+
+185
+00:09:01,440 --> 00:09:05,019
+However, there are some key
+differences between the two.
+
+186
+00:09:05,019 --> 00:09:08,318
+Prompt design is the process
+of creating a prompt that
+
+187
+00:09:08,320 --> 00:09:11,649
+is tailored to the specific
+task that this system is
+
+188
+00:09:11,649 --> 00:09:13,599
+being asked to perform.
+
+189
+00:09:13,600 --> 00:09:15,370
+For example, if
+the system is being
+
+190
+00:09:15,370 --> 00:09:18,340
+asked to translate a text
+from English to French,
+
+191
+00:09:18,340 --> 00:09:20,469
+the prompt should be
+written in English
+
+192
+00:09:20,470 --> 00:09:22,990
+and should specify that
+the translation should
+
+193
+00:09:22,990 --> 00:09:24,610
+be in French.
+
+194
+00:09:24,610 --> 00:09:26,289
+Prompt engineering
+is the process
+
+195
+00:09:26,289 --> 00:09:28,208
+of creating a prompt
+that is designed
+
+196
+00:09:28,210 --> 00:09:30,289
+to improve performance.
+
+197
+00:09:30,289 --> 00:09:32,958
+This may involve using
+domain-specific knowledge,
+
+198
+00:09:32,960 --> 00:09:35,200
+providing examples of
+the desired output,
+
+199
+00:09:35,200 --> 00:09:37,179
+or using keywords
+that are known to be
+
+200
+00:09:37,179 --> 00:09:40,179
+effective for the
+specific system.
+
+201
+00:09:40,179 --> 00:09:42,728
+Prompt design is a
+more general concept,
+
+202
+00:09:42,730 --> 00:09:45,789
+while prompt engineering is
+a more specialized concept.
+
+203
+00:09:45,789 --> 00:09:48,608
+Prompt design is essential,
+while prompt engineering
+
+204
+00:09:48,610 --> 00:09:50,320
+is only necessary
+for systems that
+
+205
+00:09:50,320 --> 00:09:54,909
+require a high degree of
+accuracy or performance.
+
+206
+00:09:54,909 --> 00:09:57,509
+There are three kinds of
+large language models,
+
+207
+00:09:57,509 --> 00:10:00,178
+generic language models,
+instruction tuned,
+
+208
+00:10:00,179 --> 00:10:01,828
+and dialogue tuned.
+
+209
+00:10:01,830 --> 00:10:04,740
+Each needs prompting
+in a different way.
+
+210
+00:10:04,740 --> 00:10:07,110
+Generic language models
+predict the next word
+
+211
+00:10:07,110 --> 00:10:10,289
+based on the language
+in the training data.
+
+212
+00:10:10,289 --> 00:10:13,068
+This is an example of a
+generic language model.
+
+213
+00:10:13,070 --> 00:10:16,369
+The next word is a token based
+on the language in the training
+
+214
+00:10:16,370 --> 00:10:17,519
+data.
+
+215
+00:10:17,519 --> 00:10:20,059
+In this example,
+"the cat sat on,"
+
+216
+00:10:20,059 --> 00:10:22,248
+the next word should be "the."
+
+217
+00:10:22,250 --> 00:10:26,629
+And you can see that "the"
+is the most likely next word.
+
+218
+00:10:26,629 --> 00:10:30,978
+Think of this type as an
+autocomplete in search.
+
+219
+00:10:30,980 --> 00:10:33,200
+In instruction
+tuned, the model is
+
+220
+00:10:33,200 --> 00:10:35,539
+trained to predict a
+response to the instructions
+
+221
+00:10:35,539 --> 00:10:37,779
+given in the input.
+
+222
+00:10:37,779 --> 00:10:40,569
+For example,
+summarize a text of X,
+
+223
+00:10:40,570 --> 00:10:43,059
+generate a poem
+in the style of X,
+
+224
+00:10:43,059 --> 00:10:48,688
+give me a list of keywords based
+on semantic similarity for X.
+
+225
+00:10:48,690 --> 00:10:51,120
+And in this example,
+classify the text
+
+226
+00:10:51,120 --> 00:10:54,979
+into neutral,
+negative, or positive.
+
+227
+00:10:54,980 --> 00:10:58,309
+In dialogue tuned, the model
+is trained to have a dialogue
+
+228
+00:10:58,309 --> 00:11:00,999
+by the next response.
+
+229
+00:11:01,000 --> 00:11:03,639
+Dialogue-tuned models
+are a special case
+
+230
+00:11:03,639 --> 00:11:06,819
+of instruction tuned where
+requests are typically framed
+
+231
+00:11:06,820 --> 00:11:09,039
+as questions to a chat bot.
+
+232
+00:11:09,039 --> 00:11:10,989
+Dialogue tuning
+is expected to be
+
+233
+00:11:10,990 --> 00:11:13,990
+in the context of a longer
+back and forth conversation,
+
+234
+00:11:13,990 --> 00:11:16,659
+and typically works better
+with natural question-like
+
+235
+00:11:16,659 --> 00:11:19,168
+phrasings.
+
+236
+00:11:19,169 --> 00:11:21,628
+Chain of thought reasoning
+is the observation
+
+237
+00:11:21,629 --> 00:11:24,028
+that models are better at
+getting the right answer when
+
+238
+00:11:24,029 --> 00:11:26,158
+they first output
+text that explains
+
+239
+00:11:26,159 --> 00:11:28,319
+the reason for the answer.
+
+240
+00:11:28,320 --> 00:11:29,899
+Let's look at the question.
+
+241
+00:11:29,899 --> 00:11:31,849
+Roger has five tennis balls.
+
+242
+00:11:31,850 --> 00:11:34,429
+He buys two more
+cans of tennis balls.
+
+243
+00:11:34,429 --> 00:11:36,679
+Each can has three tennis balls.
+
+244
+00:11:36,679 --> 00:11:39,629
+How many tennis balls
+does he have now?
+
+245
+00:11:39,629 --> 00:11:42,869
+This question is posed
+initially with no response.
+
+246
+00:11:42,870 --> 00:11:46,360
+The model is less likely to get
+the correct answer directly.
+
+247
+00:11:46,360 --> 00:11:49,210
+However, by the time the
+second question is asked,
+
+248
+00:11:49,210 --> 00:11:53,879
+the output is more likely to
+end with the correct answer.
+
+249
+00:11:53,879 --> 00:11:57,088
+A model that can do everything
+has practical limitations.
+
+250
+00:11:57,090 --> 00:12:01,359
+Task-specific tuning can
+make LLMs more reliable.
+
+251
+00:12:01,360 --> 00:12:05,259
+Vertex AI provides
+task-specific foundation models.
+
+252
+00:12:05,259 --> 00:12:06,729
+Let's say you have
+a use case where
+
+253
+00:12:06,730 --> 00:12:08,889
+you need to gather
+sentiments, or how
+
+254
+00:12:08,889 --> 00:12:11,829
+your customers are feeling
+about your product or service.
+
+255
+00:12:11,830 --> 00:12:13,929
+You can use the
+classification task
+
+256
+00:12:13,929 --> 00:12:17,038
+sentiment analysis task model.
+
+257
+00:12:17,039 --> 00:12:18,569
+Same for vision tasks.
+
+258
+00:12:18,570 --> 00:12:21,210
+If you need to perform
+occupancy analytics,
+
+259
+00:12:21,210 --> 00:12:24,690
+there is a task-specific
+model for your use case.
+
+260
+00:12:24,690 --> 00:12:27,960
+Tuning a model enables you to
+customize the model response
+
+261
+00:12:27,960 --> 00:12:30,210
+based on examples
+of the task that you
+
+262
+00:12:30,210 --> 00:12:32,109
+want the model to perform.
+
+263
+00:12:32,110 --> 00:12:34,469
+It is essentially the
+process of adapting a model
+
+264
+00:12:34,470 --> 00:12:37,229
+to a new domain, or set
+of custom use cases,
+
+265
+00:12:37,230 --> 00:12:40,239
+by training the
+model on new data.
+
+266
+00:12:40,240 --> 00:12:42,449
+For example, we may
+collect training data
+
+267
+00:12:42,450 --> 00:12:45,990
+and tune the model specifically
+for the legal or medical
+
+268
+00:12:45,990 --> 00:12:47,509
+domain.
+
+269
+00:12:47,509 --> 00:12:50,839
+You can also further tune
+the model by fine tuning
+
+270
+00:12:50,840 --> 00:12:52,549
+where you bring
+your own data set
+
+271
+00:12:52,549 --> 00:12:56,659
+and retrain the model by
+tuning every weight in the LLM.
+
+272
+00:12:56,659 --> 00:12:59,328
+This requires a big
+training job and hosting
+
+273
+00:12:59,330 --> 00:13:01,600
+your own fine-tuned model.
+
+274
+00:13:01,600 --> 00:13:04,389
+Here's an example of a medical
+foundation model trained
+
+275
+00:13:04,389 --> 00:13:05,798
+on health care data.
+
+276
+00:13:05,799 --> 00:13:09,279
+The tasks include question
+answering, image analysis,
+
+277
+00:13:09,279 --> 00:13:12,749
+finding similar
+patients, and so forth.
+
+278
+00:13:12,750 --> 00:13:17,509
+Fine tuning is expensive and
+not realistic in many cases.
+
+279
+00:13:17,509 --> 00:13:21,528
+So are there more efficient
+methods of tuning?
+
+280
+00:13:21,529 --> 00:13:22,339
+Yes.
+
+281
+00:13:22,340 --> 00:13:25,759
+Parameter-efficient
+tuning methods, or PETM,
+
+282
+00:13:25,759 --> 00:13:27,888
+are methods for tuning
+a large language
+
+283
+00:13:27,889 --> 00:13:31,908
+model on your own custom data
+without duplicating the model.
+
+284
+00:13:31,909 --> 00:13:34,609
+The base model itself
+is not altered.
+
+285
+00:13:34,610 --> 00:13:36,799
+Instead, a small
+number of add-on layers
+
+286
+00:13:36,799 --> 00:13:41,529
+are tuned, which can be swapped
+in and out at inference time.
+
+287
+00:13:41,529 --> 00:13:45,428
+Generative AI Studio lets you
+quickly explore and customize
+
+288
+00:13:45,429 --> 00:13:47,498
+generative AI
+models that you can
+
+289
+00:13:47,500 --> 00:13:50,950
+leverage in your
+applications on Google Cloud.
+
+290
+00:13:50,950 --> 00:13:54,309
+Generative AI Studio helps
+developers create and deploy
+
+291
+00:13:54,309 --> 00:13:56,588
+generative AI
+models by providing
+
+292
+00:13:56,590 --> 00:13:58,479
+a variety of tools
+and resources that
+
+293
+00:13:58,480 --> 00:14:00,100
+make it easy to get started.
+
+294
+00:14:00,100 --> 00:14:03,459
+For example, there's a
+library of pre-trained models,
+
+295
+00:14:03,460 --> 00:14:07,359
+a tool for fine tuning models,
+a tool for deploying models
+
+296
+00:14:07,360 --> 00:14:10,149
+to production, and a
+community forum for developers
+
+297
+00:14:10,149 --> 00:14:13,278
+to share ideas and collaborate.
+
+298
+00:14:13,279 --> 00:14:15,589
+Generative AI App
+Builder lets you
+
+299
+00:14:15,590 --> 00:14:19,609
+create Gen AI apps without
+having to write any code.
+
+300
+00:14:19,610 --> 00:14:22,699
+Gen AI App Builder has a
+drag-and-drop interface
+
+301
+00:14:22,700 --> 00:14:24,799
+that makes it easy
+to design and build
+
+302
+00:14:24,799 --> 00:14:28,669
+apps, a visual editor that
+makes it easy to create and edit
+
+303
+00:14:28,669 --> 00:14:32,389
+app content, a built-in search
+engine that allows users
+
+304
+00:14:32,389 --> 00:14:34,759
+to search for information
+within the app,
+
+305
+00:14:34,759 --> 00:14:36,888
+and a conversational
+AI engine that
+
+306
+00:14:36,889 --> 00:14:40,879
+allows users to interact with
+the app using natural language.
+
+307
+00:14:40,879 --> 00:14:44,088
+You can create your own chat
+bots, digital assistants,
+
+308
+00:14:44,090 --> 00:14:48,259
+custom search engines, knowledge
+bases, training applications,
+
+309
+00:14:48,259 --> 00:14:50,029
+and more.
+
+310
+00:14:50,029 --> 00:14:52,939
+PaLM API lets you
+test and experiment
+
+311
+00:14:52,940 --> 00:14:56,999
+with Google's large language
+models and Gen AI tools.
+
+312
+00:14:57,000 --> 00:14:59,909
+To make prototyping quick
+and more accessible,
+
+313
+00:14:59,909 --> 00:15:03,748
+developers can integrate
+PaLM API with Maker Suite
+
+314
+00:15:03,750 --> 00:15:07,200
+and use it to access the
+API using a graphical user
+
+315
+00:15:07,200 --> 00:15:08,339
+interface.
+
+316
+00:15:08,340 --> 00:15:10,649
+The suite includes a
+number of different tools
+
+317
+00:15:10,649 --> 00:15:14,068
+such as a model-training
+tool, a model-deployment tool,
+
+318
+00:15:14,070 --> 00:15:16,480
+and a model-monitoring tool.
+
+319
+00:15:16,480 --> 00:15:19,529
+The model-training tool helps
+developers train ML models
+
+320
+00:15:19,529 --> 00:15:22,029
+on their data using
+different algorithms.
+
+321
+00:15:22,029 --> 00:15:25,589
+The model deployment tool helps
+developers deploy ML models
+
+322
+00:15:25,590 --> 00:15:29,740
+to production with a number of
+different deployment options.
+
+323
+00:15:29,740 --> 00:15:31,929
+And the model-monitoring
+tool helps
+
+324
+00:15:31,929 --> 00:15:35,199
+developers monitor the
+performance of their ML models
+
+325
+00:15:35,200 --> 00:15:37,749
+in production using a
+dashboard and a number
+
+326
+00:15:37,750 --> 00:15:40,480
+of different metrics.
+
+327
+00:15:40,480 --> 00:15:41,720
+That's all for now.
+
+328
+00:15:41,720 --> 00:15:44,919
+Thanks for watching this course,
+Introduction to Large Language
+
+329
+00:15:44,919 --> 00:15:46,469
+Models.
+

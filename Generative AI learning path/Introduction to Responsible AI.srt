@@ -1,0 +1,415 @@
+1
+00:00:00,080 --> 00:00:04,330
+Hello, and welcome to an Introduction to Responsible
+AI.
+
+2
+00:00:04,330 --> 00:00:07,189
+This course will help you:
+
+3
+00:00:07,190 --> 00:00:11,000
+Understand why Google has put AI principles
+in place.
+
+4
+00:00:11,000 --> 00:00:16,618
+Identify the need for a responsible AI practice
+within an organization.
+
+5
+00:00:16,618 --> 00:00:21,629
+Recognize that decisions made at all stages
+of a project have an impact on responsible AI.
+
+6
+00:00:21,629 --> 00:00:29,598
+And, recognize that organizations can design
+AI to fit their own business needs and values.
+
+7
+00:00:29,600 --> 00:00:34,359
+Many of us already have daily interactions
+with artificial intelligence (or AI), 
+
+8
+00:00:34,359 --> 00:00:40,679
+from predictions for traffic and weather, to recommendations
+for TV shows you might like to watch next.
+
+9
+00:00:40,679 --> 00:00:48,049
+As AI becomes more common, many technologies
+that aren’t AI-enabled may start to seem inadequate.
+
+10
+00:00:48,049 --> 00:00:54,529
+Now, AI systems are enabling computers to
+see, understand, and interact with the world
+
+11
+00:00:54,530 --> 00:00:57,320
+in ways that were unimaginable just a decade
+ago.
+
+12
+00:00:57,320 --> 00:01:02,299
+And these systems are developing at an extraordinary
+pace.
+
+13
+00:01:02,299 --> 00:01:07,579
+Yet despite these remarkable advancements,
+AI is not infallible.
+
+14
+00:01:07,579 --> 00:01:17,629
+Developing responsible AI requires an understanding
+of the possible issues, limitations, or unintended consequences.
+
+15
+00:01:17,630 --> 00:01:22,114
+Technology is a reflection of what exists
+in society, so without good practices, 
+
+16
+00:01:22,115 --> 00:01:27,158
+AI may replicate existing issues or bias, and
+amplify them.
+
+17
+00:01:27,159 --> 00:01:33,659
+But there is not a universal definition of
+“responsible AI,” nor is there a simple
+
+18
+00:01:33,659 --> 00:01:39,489
+checklist or formula that defines how responsible
+AI practices should be implemented.
+
+19
+00:01:39,489 --> 00:01:46,948
+Instead, organizations are developing their
+own AI principles, that reflect their mission and values.
+
+20
+00:01:46,950 --> 00:01:51,868
+While these principles are unique to every
+organization, if you look for common themes,
+
+21
+00:01:51,868 --> 00:01:59,298
+you find a consistent set of ideas across
+transparency, fairness, accountability, and privacy.
+
+22
+00:01:59,299 --> 00:02:07,729
+At Google, our approach to responsible AI
+is rooted in a commitment to strive towards AI that is built for everyone,
+
+23
+00:02:07,730 --> 00:02:14,598
+that it is
+accountable and safe, that respects privacy, and that is driven by scientific excellence.
+
+24
+00:02:14,598 --> 00:02:26,989
+We’ve developed our own AI principles, practices, governance processes, and tools that together embody our values and guide our approach to responsible AI.
+
+25
+00:02:26,990 --> 00:02:35,389
+We’ve incorporated responsibility by design
+into our products, and even more importantly, our organization.
+
+26
+00:02:35,389 --> 00:02:42,489
+Like many companies, we use our AI principles
+as a framework to guide responsible decision making.
+
+27
+00:02:42,490 --> 00:02:46,689
+We all have a role to play in how responsible
+AI is applied.
+
+28
+00:02:46,689 --> 00:02:55,299
+Whatever stage in the AI process you are involved
+with, from design to deployment or application, the decisions you make have an impact.
+
+29
+00:02:55,300 --> 00:03:01,598
+Therefore, it's important that you too have
+a defined and repeatable process for using AI responsibly.
+
+30
+00:03:01,598 --> 00:03:09,269
+There is a common misconception with artificial
+intelligence that machines play the central decision-making role.
+
+31
+00:03:09,269 --> 00:03:16,870
+In reality, it’s people who design and build
+these machines and decide how they are used.
+
+32
+00:03:16,870 --> 00:03:23,039
+People are involved in each aspect of AI development.They
+collect or create the data that the model is trained on.
+
+33
+00:03:23,039 --> 00:03:27,817
+They control the deployment of the AI and
+how it is applied in a given context.
+
+34
+00:03:27,818 --> 00:03:33,039
+Essentially, human decisions are threaded
+throughout our technology products.
+
+35
+00:03:33,039 --> 00:03:39,568
+And every time a person makes a decision,
+they are actually making a choice based on their own values.
+
+36
+00:03:39,568 --> 00:03:42,829
+Whether it's the decision to use generative
+AI to solve a problem,
+
+37
+00:03:42,830 --> 00:03:50,449
+as opposed to other methods, or anywhere throughout the machine
+learning lifecycle, that person introduces their own set of values.
+
+38
+00:03:50,449 --> 00:03:56,019
+This means that every decision point requires
+consideration and evaluation to ensure
+
+39
+00:03:56,020 --> 00:04:00,979
+ that choices have been made responsibly from concept
+through deployment and maintenance.
+
+40
+00:04:00,979 --> 00:04:12,739
+Because there’s potential to impact many
+areas of society– not to mention people’s daily lives– it's important to develop these
+technologies with ethics in mind.
+
+41
+00:04:12,740 --> 00:04:18,350
+Responsible AI doesn’t mean to focus only
+on the obviously controversial use cases.
+
+42
+00:04:18,350 --> 00:04:30,439
+Without responsible AI practices, even seemingly innocuous AI use cases, or those with good intent, could still cause ethical issues or
+unintended outcomes, or not be as beneficial as they could be.
+
+43
+00:04:30,439 --> 00:04:42,850
+Ethics and responsibility are important, not
+least because they represent the right thing to do, but also because they can guide AI
+design to be more beneficial for people's lives.
+
+44
+00:04:42,850 --> 00:04:52,379
+At Google, we’ve learned that building responsibility
+into any AI deployment makes better models and builds trust with our customers and our
+customers’ customers.
+
+45
+00:04:52,379 --> 00:04:59,308
+If at any point that trust is broken, we run
+the risk of AI deployments being stalled,
+
+46
+00:04:59,310 --> 00:05:04,369
+unsuccessful, or at worst, harmful to stakeholders
+those products affect.
+
+47
+00:05:04,370 --> 00:05:12,680
+This all fits into our belief at Google that
+responsible AI equals successful AI.
+
+48
+00:05:12,680 --> 00:05:18,039
+We make our product and business decisions
+around AI through a series of assessments and reviews.
+
+49
+00:05:18,040 --> 00:05:22,809
+These instill rigor and consistency in our
+approach across product areas and geographies.
+
+50
+00:05:22,810 --> 00:05:29,600
+These assessments and reviews begin with ensuring
+that any project aligns with our AI Principles.
+
+51
+00:05:29,600 --> 00:05:39,538
+While AI Principles help ground a group in
+shared commitments, not everyone will agree with every decision made on how products should
+be designed responsibly.
+
+52
+00:05:39,538 --> 00:05:50,839
+This is why it's important to develop robust
+processes that people can trust, so even if they don't agree with the end decision, they
+trust the process that drove the decision.
+
+53
+00:05:50,839 --> 00:05:57,718
+In June 2018, we announced seven AI principles
+to guide our work.
+
+54
+00:05:57,720 --> 00:06:04,069
+These are concrete standards that actively
+govern our research and product development and affect our business decisions.
+
+55
+00:06:05,657 --> 00:06:07,686
+Here’s an overview of each one:
+
+56
+00:06:08,429 --> 00:06:12,118
+1. AI should be socially beneficial.
+
+57
+00:06:12,120 --> 00:06:24,571
+Any project should take into account a broad
+range of social and economic factors and will proceed only where we believe that the overall
+likely benefits substantially exceed the foreseeable risks and downsides. 
+
+58
+00:06:25,214 --> 00:06:30,578
+2. AI should avoid creating or reinforcing unfair
+bias.
+
+59
+00:06:30,579 --> 00:06:48,049
+We seek to avoid unjust effects on people,
+particularly those related to sensitive characteristics such as race, ethnicity, gender, nationality,
+income, sexual orientation, ability, and political or religious belief.
+
+60
+00:06:48,050 --> 00:06:49,560
+3.
+
+61
+00:06:49,560 --> 00:06:52,660
+AI should be built and tested for safety.
+
+62
+00:06:52,660 --> 00:06:59,957
+We will continue to develop and apply strong
+safety and security practices to avoid unintended results that create risks of harm.
+
+63
+00:07:01,000 --> 00:07:04,749
+4. AI should be accountable to people.
+
+64
+00:07:04,750 --> 00:07:12,680
+We will design AI systems that provide appropriate
+opportunities for feedback, relevant explanations, and appeal.
+
+65
+00:07:13,171 --> 00:07:17,299
+5. AI should incorporate privacy design principles.
+
+66
+00:07:17,300 --> 00:07:23,589
+We will give opportunity for notice and consent,
+encourage architectures with privacy safeguards,
+
+67
+00:07:23,589 --> 00:07:28,739
+and provide appropriate transparency and control
+over the use of data.
+
+68
+00:07:28,740 --> 00:07:32,779
+6. AI should uphold high standards of scientific
+excellence.
+
+69
+00:07:32,779 --> 00:07:37,838
+We will work with a range of stakeholders
+to promote thoughtful leadership in this area,
+
+70
+00:07:37,839 --> 00:07:42,287
+drawing on scientifically rigorous and multidisciplinary
+approaches.
+
+71
+00:07:42,288 --> 00:07:52,360
+And we will responsibly share AI knowledge
+by publishing educational materials, best practices, and research that enable more people
+to develop useful AI applications.
+
+72
+00:07:52,360 --> 00:07:58,938
+7. AI should be made available for uses that
+accord with these principles.
+
+73
+00:07:58,939 --> 00:08:05,658
+Many technologies have multiple uses, so we’ll
+work to limit potentially harmful or abusive applications.
+
+74
+00:08:05,658 --> 00:08:11,728
+In addition to these seven principles, there
+are certain AI applications we will not pursue.
+
+75
+00:08:11,728 --> 00:08:21,970
+We will not design or deploy AI in these four
+application areas: Technologies that cause or are likely to cause overall harm.
+
+76
+00:08:21,970 --> 00:08:30,149
+Weapons or other technologies whose principal
+purpose or implementation is to cause or directly facilitate injury to people.
+
+77
+00:08:30,149 --> 00:08:35,299
+Technologies that gather or use information
+for surveillance that violates internationally accepted norms.
+
+78
+00:08:35,299 --> 00:08:42,379
+And technologies whose purpose contravenes
+widely accepted principles of international law and human rights.
+
+79
+00:08:42,379 --> 00:08:47,837
+Establishing principles was a starting point,
+rather than an end.
+
+80
+00:08:47,839 --> 00:08:54,599
+What remains true is that our AI Principles
+rarely give us direct answers to our questions on how to build our products.
+
+81
+00:08:54,600 --> 00:08:59,989
+They don’t—and shouldn’t—allow us
+to sidestep hard conversations.
+
+82
+00:08:59,990 --> 00:09:04,200
+They are a foundation that establishes what
+we stand for, what we build, 
+
+83
+00:09:04,201 --> 00:09:09,719
+and why we build it, and they are core to the success of our
+enterprise AI offerings.
+

@@ -1,0 +1,5342 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 3,
+            "milliseconds": 960
+          },
+          "text": "Welcome to the Introduction to the Generative AI Studio course."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 3,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 299
+          },
+          "text": "In this video, you learn what Generative AI Studio is and describe its options for use."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 319
+          },
+          "text": "You also demo the Generative AI Studio’s language tool yourself."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 15,
+            "milliseconds": 420
+          },
+          "text": "What is Generative AI?"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 15,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 739
+          },
+          "text": "It is a type of artificial intelligence that generates content for you."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 78
+          },
+          "text": "What kind of content?"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 79
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 838
+          },
+          "text": "Well, the generated content can be multi-modal, including text, images, audio, and video."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 478
+          },
+          "text": "When given a prompt or a request, Generative AI can help you achieve various tasks, such"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 479
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 778
+          },
+          "text": "as document summarization, information extraction, code generation, marketing campaign creation,"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 659
+          },
+          "text": "virtual assistance, and call center bot."
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 659
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 519
+          },
+          "text": "And these are just a few examples!"
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 919
+          },
+          "text": "How does AI generate new content?"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 979
+          },
+          "text": "It learns from a massive amount of existing content."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 979
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 258
+          },
+          "text": "This includes text, audio and video."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 58
+          },
+          "text": "The process of learning from existing content is called training, which results in the creation"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 140
+          },
+          "text": "of a “foundation model.”"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 859
+          },
+          "text": "An LLM, or large language model, which powers chat bots like Bard, is a typical example"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 859
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 939
+          },
+          "text": "of a foundation model."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 939
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 378
+          },
+          "text": "The foundation model"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 419
+          },
+          "text": "can then be used to generate content and solve general problems, such as content extraction"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 859
+          },
+          "text": "and document summarization."
+        }
+      ],
+      "source": [
+        "Welcome to the Introduction to the Generative AI Studio course.",
+        "In this video, you learn what Generative AI Studio is and describe its options for use.",
+        "You also demo the Generative AI Studio’s language tool yourself.",
+        "What is Generative AI?",
+        "It is a type of artificial intelligence that generates content for you.",
+        "What kind of content?",
+        "Well, the generated content can be multi-modal, including text, images, audio, and video.",
+        "When given a prompt or a request, Generative AI can help you achieve various tasks, such",
+        "as document summarization, information extraction, code generation, marketing campaign creation,",
+        "virtual assistance, and call center bot.",
+        "And these are just a few examples!",
+        "How does AI generate new content?",
+        "It learns from a massive amount of existing content.",
+        "This includes text, audio and video.",
+        "The process of learning from existing content is called training, which results in the creation",
+        "of a “foundation model.”",
+        "An LLM, or large language model, which powers chat bots like Bard, is a typical example",
+        "of a foundation model.",
+        "The foundation model",
+        "can then be used to generate content and solve general problems, such as content extraction",
+        "and document summarization."
+      ],
+      "result": [
+        "欢迎来到生成式AI工作室课程的介绍。",
+        "在这个视频中，你将了解什么是生成式AI工作室，并描述其使用选项。",
+        "你还可以亲自尝试生成式AI工作室的语言工具。",
+        "什么是生成式AI？",
+        "它是一种为你生成内容的人工智能类型。",
+        "生成的内容有哪些？",
+        "嗯，生成的内容可以是多模态的，包括文本、图像、音频和视频。",
+        "当给定一个Prompt或请求时，生成式AI可以帮助你完成各种任务，例如",
+        "文档摘要、信息提取、代码生成、营销活动创建、虚拟助手和呼叫中心机器人。",
+        "",
+        "这只是其中的一些例子！",
+        "AI如何生成新内容？",
+        "它从大量现有内容中学习。",
+        "这包括文本、音频和视频。",
+        "从现有内容中学习的过程称为训练，其结果是创建一个“基础模型”。",
+        "",
+        "LLM（大语言模型），如Bard这样的聊天机器人，是一个典型的基础模型。",
+        "",
+        "基础模型可以用来生成内容并解决一般问题，例如内容提取和文档摘要。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "欢迎来到生成式AI工作室课程的介绍。",
+          "sources": [
+            "Welcome to the Introduction to the Generative AI Studio course."
+          ]
+        },
+        {
+          "translated": "在这个视频中，你将了解什么是生成式AI工作室，并描述其使用选项。",
+          "sources": [
+            "In this video, you learn what Generative AI Studio is and describe its options for use."
+          ]
+        },
+        {
+          "translated": "你还可以亲自尝试生成式AI工作室的语言工具。",
+          "sources": [
+            "You also demo the Generative AI Studio’s language tool yourself."
+          ]
+        },
+        {
+          "translated": "什么是生成式AI？",
+          "sources": [
+            "What is Generative AI?"
+          ]
+        },
+        {
+          "translated": "它是一种为你生成内容的人工智能类型。",
+          "sources": [
+            "It is a type of artificial intelligence that generates content for you."
+          ]
+        },
+        {
+          "translated": "生成的内容有哪些？",
+          "sources": [
+            "What kind of content?"
+          ]
+        },
+        {
+          "translated": "嗯，生成的内容可以是多模态的，包括文本、图像、音频和视频。",
+          "sources": [
+            "Well, the generated content can be multi-modal, including text, images, audio, and video."
+          ]
+        },
+        {
+          "translated": "当给定一个Prompt或请求时，生成式AI可以帮助你完成各种任务，例如",
+          "sources": [
+            "When given a prompt or a request, Generative AI can help you achieve various tasks, such"
+          ]
+        },
+        {
+          "translated": "文档摘要、信息提取、代码生成、营销活动创建、",
+          "sources": [
+            "as document summarization, information extraction, code generation, marketing campaign creation,"
+          ]
+        },
+        {
+          "translated": "虚拟助手和呼叫中心机器人。",
+          "sources": [
+            "virtual assistance, and call center bot."
+          ]
+        },
+        {
+          "translated": "这只是其中的一些例子！",
+          "sources": [
+            "And these are just a few examples!"
+          ]
+        },
+        {
+          "translated": "AI如何生成新内容？",
+          "sources": [
+            "How does AI generate new content?"
+          ]
+        },
+        {
+          "translated": "它从大量现有内容中学习。",
+          "sources": [
+            "It learns from a massive amount of existing content."
+          ]
+        },
+        {
+          "translated": "这包括文本、音频和视频。",
+          "sources": [
+            "This includes text, audio and video."
+          ]
+        },
+        {
+          "translated": "从现有内容中学习的过程称为训练，其结果是创建",
+          "sources": [
+            "The process of learning from existing content is called training, which results in the creation"
+          ]
+        },
+        {
+          "translated": "一个“基础模型”。",
+          "sources": [
+            "of a “foundation model.”"
+          ]
+        },
+        {
+          "translated": "LLM（大语言模型），如Bard这样的聊天机器人，是一个典型的示例",
+          "sources": [
+            "An LLM, or large language model, which powers chat bots like Bard, is a typical example"
+          ]
+        },
+        {
+          "translated": "基础模型。",
+          "sources": [
+            "of a foundation model."
+          ]
+        },
+        {
+          "translated": "基础模型可以用来生成内容并解决一般问题，例如内容提取",
+          "sources": [
+            "The foundation model",
+            "can then be used to generate content and solve general problems, such as content extraction"
+          ]
+        },
+        {
+          "translated": "和文档摘要。",
+          "sources": [
+            "and document summarization."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 859
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 599
+          },
+          "text": "It can also be trained further with new datasets in your field to solve specific problems,"
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 259
+          },
+          "text": "such as financial model generation and healthcare consulting."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 340
+          },
+          "text": "This results in the creation of a new model that is tailored to your specific needs."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 359
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 979
+          },
+          "text": "How can you use the foundation model to power your applications, and how can you further"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 939
+          },
+          "text": "train, or tune, the foundation model to solve a problem in your specific field?"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 939
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 278
+          },
+          "text": "Google Cloud provides several easy-to-use tools that help you use generative AI in your"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 400
+          },
+          "text": "projects with or without an AI and machine learning background."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 280
+          },
+          "text": "One such tool is Vertex AI."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 278
+          },
+          "text": "Vertex AI is an end-to-end ML development platform on Google Cloud that helps you build,"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 859
+          },
+          "text": "deploy, and manage machine learning models."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 859
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 39
+          },
+          "text": "With Vertex AI, if you are an app developer"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 439
+          },
+          "text": "or data scientist and want  to build an application,"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 139
+          },
+          "text": "you can use Generative AI Studio to quickly prototype and customize generative AI models"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 639
+          },
+          "text": "with no code or low code."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 738
+          },
+          "text": "If you are a data scientist or ML developer who wants to build and automate a generative"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 199
+          },
+          "text": "AI model, you can start from Model Garden."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 599
+          },
+          "text": "Model Garden lets you discover and interact with Google’s foundation and third-party"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 818
+          },
+          "text": "open source models and has built-in MLOps tools to automate the ML pipeline."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 320
+          },
+          "text": "In this course, you focus on Generative AI Studio."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 519
+          },
+          "text": "Generative AI Studio supports language, vision, and speech."
+        }
+      ],
+      "source": [
+        "It can also be trained further with new datasets in your field to solve specific problems,",
+        "such as financial model generation and healthcare consulting.",
+        "This results in the creation of a new model that is tailored to your specific needs.",
+        "How can you use the foundation model to power your applications, and how can you further",
+        "train, or tune, the foundation model to solve a problem in your specific field?",
+        "Google Cloud provides several easy-to-use tools that help you use generative AI in your",
+        "projects with or without an AI and machine learning background.",
+        "One such tool is Vertex AI.",
+        "Vertex AI is an end-to-end ML development platform on Google Cloud that helps you build,",
+        "deploy, and manage machine learning models.",
+        "With Vertex AI, if you are an app developer",
+        "or data scientist and want  to build an application,",
+        "you can use Generative AI Studio to quickly prototype and customize generative AI models",
+        "with no code or low code.",
+        "If you are a data scientist or ML developer who wants to build and automate a generative",
+        "AI model, you can start from Model Garden.",
+        "Model Garden lets you discover and interact with Google’s foundation and third-party",
+        "open source models and has built-in MLOps tools to automate the ML pipeline.",
+        "In this course, you focus on Generative AI Studio.",
+        "Generative AI Studio supports language, vision, and speech."
+      ],
+      "result": [
+        "它还可以通过你领域的新数据集进一步训练，以解决特定问题，如财务模型生成和医疗咨询。",
+        "",
+        "这将导致创建一个定制的新模型，以满足你的特定需求。",
+        "如何使用基础模型为你的应用程序提供动力，以及如何进一步训练或调整基础模型以解决你特定领域的问题？",
+        "",
+        "Google Cloud 提供了几个易于使用的工具，帮助你在具有或不具有 AI 和机器学习背景的项目中使用生成式 AI。",
+        "",
+        "其中一个工具就是 Vertex AI。",
+        "Vertex AI 是一个端到端的 ML 开发平台，位于 Google Cloud 上，帮助你构建部署和管理机器学习模型。",
+        "",
+        "使用 Vertex AI，如果你是一个应用开发者或数据科学家，想要构建一个应用，",
+        "",
+        "你可以使用生成式AI工作室快速原型和定制生成式AI模型，无需编码或低代码。",
+        "",
+        "如果你是一个数据科学家或ML开发者，想要构建和自动化一个生成式AI模型，你可以从Model Garden开始。",
+        "",
+        "Model Garden让你发现和交互Google的基础和第三方开源模型，并内置了MLOps工具，以自动化ML管道。",
+        "",
+        "在本课程中，你将关注生成式 AI 工作室。",
+        "生成式 AI 工作室支持语言、视觉和语音。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "sources": [
+            "It can also be trained further with new datasets in your field to solve specific problems,",
+            "such as financial model generation and healthcare consulting."
+          ],
+          "translated": "它还可以通过你领域的新数据集进一步训练，以解决特定问题，如财务模型生成和医疗咨询。"
+        },
+        {
+          "sources": [
+            "This results in the creation of a new model that is tailored to your specific needs."
+          ],
+          "translated": "这将导致创建一个定制的新模型，以满足你的特定需求。"
+        },
+        {
+          "sources": [
+            "How can you use the foundation model to power your applications, and how can you further",
+            "train, or tune, the foundation model to solve a problem in your specific field?"
+          ],
+          "translated": "如何使用基础模型为你的应用程序提供动力，以及如何进一步训练或调整基础模型以解决你特定领域的问题？"
+        },
+        {
+          "sources": [
+            "Google Cloud provides several easy-to-use tools that help you use generative AI in your",
+            "projects with or without an AI and machine learning background."
+          ],
+          "translated": "Google Cloud 提供了几个易于使用的工具，帮助你在具有或不具有 AI 和机器学习背景的项目中使用生成式 AI。"
+        },
+        {
+          "sources": [
+            "One such tool is Vertex AI.",
+            "Vertex AI is an end-to-end ML development platform on Google Cloud that helps you build,"
+          ],
+          "translated": "其中一个工具就是 Vertex AI。Vertex AI 是一个端到端的 ML 开发平台，位于 Google Cloud 上，帮助你构建"
+        },
+        {
+          "sources": [
+            "deploy, and manage machine learning models.",
+            "With Vertex AI, if you are an app developer"
+          ],
+          "translated": "部署和管理机器学习模型。使用 Vertex AI，如果你是一名应用程序开发人员"
+        },
+        {
+          "sources": [
+            "or data scientist and want  to build an application,",
+            "you can use Generative AI Studio to quickly prototype and customize generative AI models"
+          ],
+          "translated": "或数据科学家并想要构建应用程序，你可以使用生成式 AI 工作室快速创建原型并定制生成式 AI 模型"
+        },
+        {
+          "sources": [
+            "with no code or low code.",
+            "If you are a data scientist or ML developer who wants to build and automate a generative"
+          ],
+          "translated": "无需编码或低代码。如果你是一名希望建立和自动化生成式的数据科学家或 ML 开发人员"
+        },
+        {
+          "sources": [
+            "AI model, you can start from Model Garden.",
+            "Model Garden lets you discover and interact with Google’s foundation and third-party"
+          ],
+          "translated": "AI 模型，你可以从 Model Garden 开始。Model Garden 让你发现并与 Google 的基础和第三方"
+        },
+        {
+          "sources": [
+            "open source models and has built-in MLOps tools to automate the ML pipeline.",
+            "In this course, you focus on Generative AI Studio."
+          ],
+          "translated": "开源模型互动，并具有内置的 MLOps 工具来自动化 ML 管道。在本课程中，你将关注生成式 AI 工作室。"
+        },
+        {
+          "sources": [
+            "Generative AI Studio supports language, vision, and speech."
+          ],
+          "translated": "生成式 AI 工作室支持语言、视觉和语音。"
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 799
+          },
+          "text": "The list grows as you are learning this course."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 38,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 199
+          },
+          "text": "For language, you can design a prompt to perform tasks and tune language models."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 239
+          },
+          "text": "For vision, you can generate an image based on a prompt and further edit the image."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 440
+          },
+          "text": "For speech, you can generate text from speech or vice versa."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 639
+          },
+          "text": "Let’s focus on what you can do with Language in Generative AI Studio."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 438
+          },
+          "text": "specifically, you can: Design prompts for tasks relevant to your"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 778
+          },
+          "text": "business use case including code generation."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 358
+          },
+          "text": "Create conversations by specifying the context that instructs how the model should respond."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 159
+          },
+          "text": "And tune a model so it is better equipped for your use case, which allows you to then"
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 699
+          },
+          "text": "deploy it to an endpoint to get predictions or test it in prompt design."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 699
+          },
+          "text": "Let’s walk through these three features in detail."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 138
+          },
+          "text": "First is prompt design."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 539
+          },
+          "text": "To get started experimenting with large language models, or LLMs, click on NEW PROMPT."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 539
+          },
+          "text": "In the world of Generative AI, a prompt is just a fancy name for the input text that"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 439
+          },
+          "text": "you feed to your model."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 639
+          },
+          "text": "You can feed your desired input text like questions and instructions to the model."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 79
+          },
+          "text": "The model will then provide a response based on how you structured your prompt, therefore,"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 719
+          },
+          "text": "the answers you get depend on the questions you ask."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 719
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 579
+          },
+          "text": "The process of figuring out and designing the best input text to get the desired response"
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 959
+          },
+          "text": "back from the model is called Prompt Design, which often involves a lot of experimentation."
+        }
+      ],
+      "source": [
+        "The list grows as you are learning this course.",
+        "For language, you can design a prompt to perform tasks and tune language models.",
+        "For vision, you can generate an image based on a prompt and further edit the image.",
+        "For speech, you can generate text from speech or vice versa.",
+        "Let’s focus on what you can do with Language in Generative AI Studio.",
+        "specifically, you can: Design prompts for tasks relevant to your",
+        "business use case including code generation.",
+        "Create conversations by specifying the context that instructs how the model should respond.",
+        "And tune a model so it is better equipped for your use case, which allows you to then",
+        "deploy it to an endpoint to get predictions or test it in prompt design.",
+        "Let’s walk through these three features in detail.",
+        "First is prompt design.",
+        "To get started experimenting with large language models, or LLMs, click on NEW PROMPT.",
+        "In the world of Generative AI, a prompt is just a fancy name for the input text that",
+        "you feed to your model.",
+        "You can feed your desired input text like questions and instructions to the model.",
+        "The model will then provide a response based on how you structured your prompt, therefore,",
+        "the answers you get depend on the questions you ask.",
+        "The process of figuring out and designing the best input text to get the desired response",
+        "back from the model is called Prompt Design, which often involves a lot of experimentation."
+      ],
+      "result": [
+        "在学习这门课程时，列表会不断增长。",
+        "对于语言，你可以设计一个Prompt来执行任务和调整语言模型。",
+        "对于视觉，你可以根据Prompt生成图像并进一步编辑图像。",
+        "对于语音，你可以从语音生成文本，反之亦然。",
+        "让我们关注在生成式AI工作室中可以用语言做什么。",
+        "具体来说，你可以：为与你的业务用例相关的任务设计Prompt，包括代码生成。",
+        "",
+        "通过指定上下文来创建对话，指导模型如何回应。",
+        "调整模型以更好地适应你的用例，然后将其部署到端点以获得预测或在Prompt设计中进行测试。",
+        "",
+        "让我们详细介绍这三个功能。",
+        "首先是Prompt设计。",
+        "要开始尝试大语言模型（LLM），请点击“NEW PROMPT”。",
+        "在生成式AI的世界里，Prompt只是输入文本的一个比较酷的名字。",
+        "",
+        "你可以将所需的输入文本（如问题和指令）提供给模型。",
+        "模型将根据你设置的Prompt提供响应，因此，你得到的答案取决于你提出的问题。",
+        "",
+        "找出并设计最佳输入文本以获得所需响应的过程称为Prompt设计，这通常需要大量实验。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 180
+          },
+          "text": "Let’s start with a free-form prompt."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 780
+          },
+          "text": "One way to design a prompt is to simply tell the model what you want."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 100
+          },
+          "text": "0 In other words, provide an instruction."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 439
+          },
+          "text": "For example,"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 458
+          },
+          "text": "Generate a list of items I need for a camping trip to Joshua Tree National Park."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 139
+          },
+          "text": "We send this text to the model,"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 38
+          },
+          "text": "And…you can see that the model outputs a useful list of items we don’t want to camp"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 340
+          },
+          "text": "without."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 399
+          },
+          "text": "This approach of writing a single command so that the LLM can adopt a certain behavior,"
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 199
+          },
+          "text": "is called zero shot prompting."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 399
+          },
+          "text": "Generally, there are 3 methods that you can use to shape the model's response in a way"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 999
+          },
+          "text": "that you desire."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 459
+          },
+          "text": "Zero-shot prompting - is a method where the LLM is given no additional data on the specific"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 459
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 138
+          },
+          "text": "task that it is being asked to perform."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 379
+          },
+          "text": "Instead, it is only given a prompt that describes the task."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 258
+          },
+          "text": "For example, if you want the LLM to answer a question, you just prompt \"what is prompt"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 439
+          },
+          "text": "design?\"."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 719
+          },
+          "text": "One-shot prompting - is a method where the LLM is given a single example of the task"
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 980
+          },
+          "text": "that it is being asked to perform."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 199
+          },
+          "text": "For example, if you want the LLM to write a poem, you might provide a single example"
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 139
+          },
+          "text": "poem. and Few-shot prompting - is a method where the LLM is given a small number of examples"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 418
+          },
+          "text": "of the task that it is being asked to perform."
+        }
+      ],
+      "source": [
+        "Let’s start with a free-form prompt.",
+        "One way to design a prompt is to simply tell the model what you want.",
+        "0 In other words, provide an instruction.",
+        "For example,",
+        "Generate a list of items I need for a camping trip to Joshua Tree National Park.",
+        "We send this text to the model,",
+        "And…you can see that the model outputs a useful list of items we don’t want to camp",
+        "without.",
+        "This approach of writing a single command so that the LLM can adopt a certain behavior,",
+        "is called zero shot prompting.",
+        "Generally, there are 3 methods that you can use to shape the model's response in a way",
+        "that you desire.",
+        "Zero-shot prompting - is a method where the LLM is given no additional data on the specific",
+        "task that it is being asked to perform.",
+        "Instead, it is only given a prompt that describes the task.",
+        "For example, if you want the LLM to answer a question, you just prompt \"what is prompt",
+        "design?\".",
+        "One-shot prompting - is a method where the LLM is given a single example of the task",
+        "that it is being asked to perform.",
+        "For example, if you want the LLM to write a poem, you might provide a single example",
+        "poem. and Few-shot prompting - is a method where the LLM is given a small number of examples",
+        "of the task that it is being asked to perform."
+      ],
+      "result": [
+        "让我们从一个自由形式的Prompt开始。",
+        "设计Prompt的一种方法是简单地告诉模型你想要什么。",
+        "换句话说，提供一个指令。",
+        "例如，生成我去Joshua Tree国家公园露营旅行所需的物品清单。",
+        "",
+        "我们将这段文字发送给模型，然后...你可以看到模型输出了一个我们不想在露营时缺少的有用物品清单。",
+        "",
+        "",
+        "这种通过编写单一命令使LLM采用某种行为的方法称为零示例Prompt（Zero-shot prompting）。",
+        "",
+        "通常，有3种方法可以用来按照你期望的方式塑造模型的响应。",
+        "",
+        "零示例Prompt - 是一种方法，即在这种方法中，LLM没有获得关于要执行的特定任务的额外数据，而只是给出了描述任务的Prompt。",
+        "",
+        "",
+        "例如，如果你想让LLM回答一个问题，你只需在Prompt中写：“什么是Prompt设计？”。",
+        "",
+        "单示例Prompt（One-shot prompting） - 是一种方法，即在这种方法中，给LLM一个要执行任务相关的示例。",
+        "",
+        "例如，如果你想让LLM写一首诗，你可以提供一个诗的示例。",
+        "少量示例Prompt（Few-shot prompting） - 是一种方法，即在这种方法中，给LLM几个要执行任务相关的示例。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 11,
+            "milliseconds": 100
+          },
+          "text": "0 For example, if you want the LLM to write a news article, you might give it a few news"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 839
+          },
+          "text": "articles to read."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 879
+          },
+          "text": "You can use the structured mode to design the few-shot prompting by providing a context"
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 20,
+            "milliseconds": 519
+          },
+          "text": "and additional examples for the model to learn from."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 119
+          },
+          "text": "The structured prompt contains a few different components:"
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 600
+          },
+          "text": "First we have the context, which instructs how the model should respond."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 720
+          },
+          "text": "You can specify words the model can or cannot use, topics to focus on or avoid, or a particular"
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 740
+          },
+          "text": "response format."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 860
+          },
+          "text": "And the context applies each time you send a request to the model."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 480
+          },
+          "text": "Let’s say we want to use an LLM to answer questions based on some background text."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 220
+          },
+          "text": "In this case, a passage that describes changes in rainforest vegetation in the Amazon."
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 39
+          },
+          "text": "We can paste in the background text as the context."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 479
+          },
+          "text": "Then, we add some examples of questions that could be answered from this passage"
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 759
+          },
+          "text": "Like what does LGM stand for?"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 538
+          },
+          "text": "Or what did the analysis from the sediment deposits indicate?"
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 5,
+            "milliseconds": 219
+          },
+          "text": "We’ll need to add in the corresponding answers to these questions, to demonstrate how we"
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 5,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 300
+          },
+          "text": "want the model to respond."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 319
+          },
+          "text": "Then, we can test out the prompt we’ve designed by sending a new question as input."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 319
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 118
+          },
+          "text": "And there you go, you’ve prototyped a q&a system based on background text in just a"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 16,
+            "milliseconds": 19
+          },
+          "text": "few minutes!"
+        }
+      ],
+      "source": [
+        "0 For example, if you want the LLM to write a news article, you might give it a few news",
+        "articles to read.",
+        "You can use the structured mode to design the few-shot prompting by providing a context",
+        "and additional examples for the model to learn from.",
+        "The structured prompt contains a few different components:",
+        "First we have the context, which instructs how the model should respond.",
+        "You can specify words the model can or cannot use, topics to focus on or avoid, or a particular",
+        "response format.",
+        "And the context applies each time you send a request to the model.",
+        "Let’s say we want to use an LLM to answer questions based on some background text.",
+        "In this case, a passage that describes changes in rainforest vegetation in the Amazon.",
+        "We can paste in the background text as the context.",
+        "Then, we add some examples of questions that could be answered from this passage",
+        "Like what does LGM stand for?",
+        "Or what did the analysis from the sediment deposits indicate?",
+        "We’ll need to add in the corresponding answers to these questions, to demonstrate how we",
+        "want the model to respond.",
+        "Then, we can test out the prompt we’ve designed by sending a new question as input.",
+        "And there you go, you’ve prototyped a q&a system based on background text in just a",
+        "few minutes!"
+      ],
+      "result": [
+        "例如，如果你想让LLM写一篇新闻文章，你可以给它提供一些新闻文章来阅读。",
+        "",
+        "你可以使用结构化模式来设计少量示例Prompt，通过提供上下文和额外的例子让模型学习。",
+        "",
+        "结构化Prompt包含几个不同的组成部分：",
+        "首先我们有上下文，它指导模型应该如何回应。",
+        "你可以指定模型可以或不能使用的词汇，关注或避免的主题，或者特定的结果格式。",
+        "",
+        "每次向模型发送请求时，上下文都会应用。",
+        "假设我们想使用LLM根据一些背景文本回答问题。",
+        "在这种情况下，一段描述亚马逊雨林植被变化的文字。",
+        "我们可以将背景文本粘贴为上下文。",
+        "然后，我们添加一些可以从这段文字中回答的问题示例，比如LGM是什么意思？",
+        "",
+        "或者沉积物分析表明了什么？",
+        "我们需要添加这些问题的相应答案，以展示我们希望模型如何回应。",
+        "",
+        "然后，我们可以通过发送一个新问题作为输入来测试我们设计的Prompt。",
+        "就这样，你仅用几分钟就搭建了一个基于背景文本问答的问答系统原型！",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 16,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 719
+          },
+          "text": "Please note a few best practices around prompt design."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 579
+          },
+          "text": "Be concise Be specific and well-defined Ask one task at a time Turn generative tasks into"
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 579
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 319
+          },
+          "text": "classification tasks."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 319
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 778
+          },
+          "text": "For example, instead of asking what programming language to learn, ask if Python, Java, or"
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 779
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 36,
+            "milliseconds": 419
+          },
+          "text": "C is a better fit for a beginner in programming."
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 36,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 39,
+            "milliseconds": 420
+          },
+          "text": "and Improve response quality by including examples"
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 759
+          },
+          "text": "Adding instructions and a few examples tends to yield good results however there’s currently"
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 438
+          },
+          "text": "no one best way to write a prompt."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 50,
+            "milliseconds": 879
+          },
+          "text": "You may need to experiment with different structures, formats, and examples to see what"
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 50,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 139
+          },
+          "text": "works best for your use case."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 57,
+            "milliseconds": 299
+          },
+          "text": "For more information about prompt design, please check text prompt design in the reading"
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 57,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 57,
+            "milliseconds": 480
+          },
+          "text": "list."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 399
+          },
+          "text": "So if you designed a prompt that you think is working pretty well, you can save it and"
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 3,
+            "milliseconds": 179
+          },
+          "text": "return to it later."
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 3,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 920
+          },
+          "text": "Your saved prompt will be visible in the prompt gallery, which is a curated collection of"
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 660
+          },
+          "text": "sample prompts that show how generative AI models can work for a variety of use cases."
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 639
+          },
+          "text": "Finally, in addition to testing different prompts and prompt structures, there are a"
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 898
+          },
+          "text": "few model parameters you can experiment with to try to improve the quality of responses."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 22,
+            "milliseconds": 439
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 24,
+            "milliseconds": 959
+          },
+          "text": "First, there are different models you can choose from."
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 24,
+            "milliseconds": 959
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 619
+          },
+          "text": "Each model is tuned to perform well on specific tasks."
+        }
+      ],
+      "source": [
+        "Please note a few best practices around prompt design.",
+        "Be concise Be specific and well-defined Ask one task at a time Turn generative tasks into",
+        "classification tasks.",
+        "For example, instead of asking what programming language to learn, ask if Python, Java, or",
+        "C is a better fit for a beginner in programming.",
+        "and Improve response quality by including examples",
+        "Adding instructions and a few examples tends to yield good results however there’s currently",
+        "no one best way to write a prompt.",
+        "You may need to experiment with different structures, formats, and examples to see what",
+        "works best for your use case.",
+        "For more information about prompt design, please check text prompt design in the reading",
+        "list.",
+        "So if you designed a prompt that you think is working pretty well, you can save it and",
+        "return to it later.",
+        "Your saved prompt will be visible in the prompt gallery, which is a curated collection of",
+        "sample prompts that show how generative AI models can work for a variety of use cases.",
+        "Finally, in addition to testing different prompts and prompt structures, there are a",
+        "few model parameters you can experiment with to try to improve the quality of responses.",
+        "First, there are different models you can choose from.",
+        "Each model is tuned to perform well on specific tasks."
+      ],
+      "result": [
+        "请注意关于Prompt设计的一些最佳实践。",
+        "简洁明了，具体且明确地提问，一次只询问一个任务，将生成任务转化为分类任务。",
+        "",
+        "例如，不要问应该学习哪种编程语言，而是问 Python、Java 或 C 对编程初学者更合适。",
+        "",
+        "通过包含示例来提高返回结果的质量，添加说明和一些示例往往会产生良好的效果，但目前还没有最佳的Prompt编写方法。",
+        "",
+        "",
+        "你可能需要尝试不同的结构、格式和示例，以找出最适合你使用场景的方法。",
+        "",
+        "有关Prompt设计的更多信息，请查阅阅读列表中的文本Prompt设计。",
+        "",
+        "因此，如果你设计了一个你认为效果很好的Prompt，可以保存它并稍后返回。",
+        "",
+        "你保存的Prompt将显示在Prompt库中，Prompt库是一个精选的示例Prompt集合，展示了生成式 AI 模型如何适用于各种用例。",
+        "",
+        "最后，除了测试不同的Prompt和Prompt结构外，还有一些模型参数可以尝试，以提高返回结果的质量。",
+        "",
+        "首先，你可以选择不同的模型。",
+        "每个模型都经过调整，以便在特定任务上表现良好。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 560
+          },
+          "text": "You can also specify the temperature, top P, and top K. These parameters all adjust"
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 699
+          },
+          "text": "the randomness of responses by controlling how the output tokens are selected."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 319
+          },
+          "text": "When you send a prompt to the model, it produces an array of probabilities over the words that"
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 319
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 44,
+            "milliseconds": 39
+          },
+          "text": "could come next."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 44,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 879
+          },
+          "text": "And from this array, we need some strategy to decide what to return."
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 48,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 560
+          },
+          "text": "A simple strategy might be to select the most likely word at every timestep."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 699
+          },
+          "text": "But this method can result in uninteresting and sometimes repetitive answers."
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 979
+          },
+          "text": "On the contrary, if you randomly sample over the distribution returned by the model, you"
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 540
+          },
+          "text": "might get some unlikely responses."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 519
+          },
+          "text": "By controlling the degree of randomness, you can get more unexpected, and some might say"
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 519
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 839
+          },
+          "text": "creative, responses."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 9,
+            "milliseconds": 839
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 58
+          },
+          "text": "Back to the model parameters, temperature is a number used to tune the degree of randomness."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 180
+          },
+          "text": "Low temperature: Means to select the words that are highly"
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "text": "possible and more predictable."
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 879
+          },
+          "text": "In this case, those are flowers and the other words that are located at the beginning of"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 24,
+            "milliseconds": 179
+          },
+          "text": "the list."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 24,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 29,
+            "milliseconds": 459
+          },
+          "text": "This setting is generally better for tasks like q&a and summarization where you expect"
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 29,
+            "milliseconds": 459
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 979
+          },
+          "text": "a more “predictable” answer with less variation."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 240
+          },
+          "text": "… High temperature:"
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 35,
+            "milliseconds": 999
+          },
+          "text": "Means to select the words  that have low possibility"
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 37,
+            "milliseconds": 439
+          },
+          "text": "and are more unusual."
+        }
+      ],
+      "source": [
+        "You can also specify the temperature, top P, and top K. These parameters all adjust",
+        "the randomness of responses by controlling how the output tokens are selected.",
+        "When you send a prompt to the model, it produces an array of probabilities over the words that",
+        "could come next.",
+        "And from this array, we need some strategy to decide what to return.",
+        "A simple strategy might be to select the most likely word at every timestep.",
+        "But this method can result in uninteresting and sometimes repetitive answers.",
+        "On the contrary, if you randomly sample over the distribution returned by the model, you",
+        "might get some unlikely responses.",
+        "By controlling the degree of randomness, you can get more unexpected, and some might say",
+        "creative, responses.",
+        "Back to the model parameters, temperature is a number used to tune the degree of randomness.",
+        "Low temperature: Means to select the words that are highly",
+        "possible and more predictable.",
+        "In this case, those are flowers and the other words that are located at the beginning of",
+        "the list.",
+        "This setting is generally better for tasks like q&a and summarization where you expect",
+        "a more “predictable” answer with less variation.",
+        "… High temperature:",
+        "Means to select the words  that have low possibility",
+        "and are more unusual."
+      ],
+      "result": [
+        "你还可以指定temperature、Top P和Top K。这些参数都通过控制输出Token的选择来调整响应的随机性。",
+        "",
+        "当你向模型发送Prompt时，它会生成一个关于接下来可能出现的单词的概率数组。",
+        "",
+        "从这个数组中，我们需要一些策略来决定返回什么。",
+        "一个简单的策略可能是在每个时间步选择最可能的单词。",
+        "但这种方法可能导致无趣且有时重复的答案。",
+        "相反，如果你在模型返回的分布上随机抽样，你可能会得到一些不太可能的返回结果。",
+        "",
+        "通过控制随机性的程度，你可以获得更多意想不到的，有些人可能会说是创造性的返回结果。",
+        "",
+        "回到模型参数，Temperature是用来调整随机性程度的一个数字。",
+        "低Temperature：意味着选择那些可能性较高且更可预测的单词。",
+        "",
+        "在这种情况下，这些单词是位于列表开头的花朵和其他单词。",
+        "",
+        "这个设置通常更适合像问答和摘要这样的任务，在这些任务中，你期望得到一个变化较小的“可预测”答案。",
+        "",
+        "…高Temperature：意味着选择那些可能性较低且更不寻常的单词。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 37,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 41,
+            "milliseconds": 699
+          },
+          "text": "In this case, those are bugs and the other words that that are located at the end of"
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 41,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 41,
+            "milliseconds": 100
+          },
+          "text": "0 the list."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 740
+          },
+          "text": "This setting is good if you want to generate more “creative” or unexpected content."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 839
+          },
+          "text": "In addition to adjusting the temperature, top K lets the model randomly return a word"
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 960
+          },
+          "text": "from the top K number of words in terms of possibility."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 139
+          },
+          "text": "For example, top 2 means you get a random word from the top 2 possible words including"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 219
+          },
+          "text": "flowers and trees."
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 539
+          },
+          "text": "This approach allows the other high-scoring word a chance of being selected."
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 11,
+            "milliseconds": 819
+          },
+          "text": "However, if the probability distribution of the words is highly skewed and you have one"
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 11,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 16,
+            "milliseconds": 559
+          },
+          "text": "word that is very likely and everything else is very unlikely, this approach can result"
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 16,
+            "milliseconds": 559
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 59
+          },
+          "text": "in some strange responses."
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 19,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 179
+          },
+          "text": "The difficulty of selecting the best top-k value, leads to another popular approach that"
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 699
+          },
+          "text": "dynamically sets the size of the shortlist of words."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 27,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 400
+          },
+          "text": "Top P allows the model to randomly return a word from the top P probability of words."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 33,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 220
+          },
+          "text": "With top P, you choose from a set of words with the sum of the likelihoods not exceeding"
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 44,
+            "milliseconds": 879
+          },
+          "text": "P. For example, p of 0.75 means you sample from a set of words that have a cumulative"
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 44,
+            "milliseconds": 879
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 158
+          },
+          "text": "probability greater than 0.75."
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 199
+          },
+          "text": "In this case, it includes three words: flowers, trees, and herbs."
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 919
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 838
+          },
+          "text": "This way, the size of the set of words can dynamically increase and decrease according"
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 20
+          },
+          "text": "to the probability distribution of the next word on the list."
+        }
+      ],
+      "source": [
+        "In this case, those are bugs and the other words that that are located at the end of",
+        "0 the list.",
+        "This setting is good if you want to generate more “creative” or unexpected content.",
+        "In addition to adjusting the temperature, top K lets the model randomly return a word",
+        "from the top K number of words in terms of possibility.",
+        "For example, top 2 means you get a random word from the top 2 possible words including",
+        "flowers and trees.",
+        "This approach allows the other high-scoring word a chance of being selected.",
+        "However, if the probability distribution of the words is highly skewed and you have one",
+        "word that is very likely and everything else is very unlikely, this approach can result",
+        "in some strange responses.",
+        "The difficulty of selecting the best top-k value, leads to another popular approach that",
+        "dynamically sets the size of the shortlist of words.",
+        "Top P allows the model to randomly return a word from the top P probability of words.",
+        "With top P, you choose from a set of words with the sum of the likelihoods not exceeding",
+        "P. For example, p of 0.75 means you sample from a set of words that have a cumulative",
+        "probability greater than 0.75.",
+        "In this case, it includes three words: flowers, trees, and herbs.",
+        "This way, the size of the set of words can dynamically increase and decrease according",
+        "to the probability distribution of the next word on the list."
+      ],
+      "result": [
+        "在这种情况下，这些都是位于列表末尾的错误和其他词语。",
+        "",
+        "如果你想生成更具创意或出人意料的内容，这个设置很好。",
+        "除了调整Temperature，Top K 还可以让模型从可能性最高的前 K 个词中随机返回一个词。",
+        "",
+        "例如，Top 2 意味着你可以从包括花和树在内的前 2 个可能的词中随机选择一个。",
+        "",
+        "这种方法允许其他高分词有被选中的机会。",
+        "然而，如果词的概率分布非常偏斜，你有一个非常可能的词，其他所有词都非常不可能，这种方法可能会导致一些奇怪的返回结果。",
+        "",
+        "",
+        "选择最佳 Top K 值的难度，导致了另一种流行的方法，即动态设置单词简表的大小。",
+        "",
+        "Top P 允许模型从前 P 个概率的词中随机返回一个词。",
+        "使用 Top P，你可以从一组总和不超过 P 的可能性中选择。例如，P为0.75意味着你从一组累积概率大于0.75的词中取样。",
+        "",
+        "",
+        "在这种情况下，它包括三个词：花、树和草药。",
+        "这样，单词集的大小可以根据列表中下一个词的概率分布动态增加和减少。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 6,
+            "milliseconds": 539
+          },
+          "text": "In sum, Generative AI Studio provides a few model parameters for you to play with such"
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 6,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 11,
+            "milliseconds": 819
+          },
+          "text": "as the model, temperature, top K, and top P. Note that, you are not required to adjust"
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 11,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 14,
+            "milliseconds": 639
+          },
+          "text": "them constantly, especially top k and top p."
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 16,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 18,
+            "milliseconds": 959
+          },
+          "text": "Now let’s look at the second feature, which creates conversations."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 19,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 619
+          },
+          "text": "First, you need to specify the conversation context."
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 25,
+            "milliseconds": 499
+          },
+          "text": "Context instructs how the model should respond."
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 26,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 31,
+            "milliseconds": 979
+          },
+          "text": "For example, specifying words the model can or cannot use, topics to focus on or avoid,"
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 31,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 179
+          },
+          "text": "or response format."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 36,
+            "milliseconds": 538
+          },
+          "text": "Context applies each time you send a request to the model."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 42,
+            "milliseconds": 299
+          },
+          "text": "For a simple example, you can define a scenario and tell the AI how to respond to help desk"
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 42,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 42,
+            "milliseconds": 839
+          },
+          "text": "queries."
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 42,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 44,
+            "milliseconds": 279
+          },
+          "text": "Your name is Roy."
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 44,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 47,
+            "milliseconds": 219
+          },
+          "text": "You are a support technician of an IT department."
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 47,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 239
+          },
+          "text": "You only respond with \"Have you tried turning it off and on again?\""
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 52,
+            "milliseconds": 200
+          },
+          "text": "to any queries."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 52,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 56,
+            "milliseconds": 159
+          },
+          "text": "You can tune the parameters on the right, the same as you do when designing the prompt."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 56,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 1,
+            "milliseconds": 859
+          },
+          "text": "To to see how it works, you can type My computer is slow in the chat box and press enter."
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 1,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 6,
+            "milliseconds": 299
+          },
+          "text": "The AI responds: Have you tried turning it off and on again?"
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 6,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 8,
+            "milliseconds": 339
+          },
+          "text": "Exactly as you told the AI to do."
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 419
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 11,
+            "milliseconds": 758
+          },
+          "text": "The cool thing is that Google provides the"
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 11,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 15,
+            "milliseconds": 58
+          },
+          "text": "APIs and SDKs to help you  build your own application."
+        }
+      ],
+      "source": [
+        "In sum, Generative AI Studio provides a few model parameters for you to play with such",
+        "as the model, temperature, top K, and top P. Note that, you are not required to adjust",
+        "them constantly, especially top k and top p.",
+        "Now let’s look at the second feature, which creates conversations.",
+        "First, you need to specify the conversation context.",
+        "Context instructs how the model should respond.",
+        "For example, specifying words the model can or cannot use, topics to focus on or avoid,",
+        "or response format.",
+        "Context applies each time you send a request to the model.",
+        "For a simple example, you can define a scenario and tell the AI how to respond to help desk",
+        "queries.",
+        "Your name is Roy.",
+        "You are a support technician of an IT department.",
+        "You only respond with \"Have you tried turning it off and on again?\"",
+        "to any queries.",
+        "You can tune the parameters on the right, the same as you do when designing the prompt.",
+        "To to see how it works, you can type My computer is slow in the chat box and press enter.",
+        "The AI responds: Have you tried turning it off and on again?",
+        "Exactly as you told the AI to do.",
+        "The cool thing is that Google provides the",
+        "APIs and SDKs to help you  build your own application."
+      ],
+      "result": [
+        "总之，生成式AI工作室为你提供了一些模型参数供你尝试，",
+        "如模型、Temperature、Top K和Top P。请注意，你不需要经常调整它们，尤其是Top K和Top P。",
+        "",
+        "现在让我们看看第二个功能，创建对话。",
+        "首先，你需要指定对话上下文。",
+        "上下文指示模型应如何回应。",
+        "例如，指定模型可以或不能使用的词汇，关注或避免的主题，或响应格式。",
+        "",
+        "每次向模型发送请求时，都会应用上下文。",
+        "举个简单的例子，你可以定义一个场景，告诉AI如何回应技术支持的查询。",
+        "",
+        "你的名字叫Roy。",
+        "你是IT部门的一名支持技术员。",
+        "对于任何查询你只回应“你尝试过关机重启了吗？”",
+        "",
+        "你可以调整右侧的参数，就像设计Prompt时一样。",
+        "要查看它的工作原理，你可以在聊天框中输入我的电脑很慢，然后按回车。",
+        "AI回应：你尝试过关机重启了吗？",
+        "正如你告诉AI的那样。",
+        "酷的是，谷歌提供了API和SDK，帮助你构建自己的应用程序。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 15,
+            "milliseconds": 59
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 338
+          },
+          "text": "You can simply click view code."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 559
+          },
+          "text": "First, you need to download the Vertex AI SDKs that fit your programming language, like"
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 559
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 23,
+            "milliseconds": 579
+          },
+          "text": "Python and Curl."
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 23,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 26,
+            "milliseconds": 639
+          },
+          "text": "SDK stands for software design kits."
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 26,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 398
+          },
+          "text": "They implement the functions and do the job for you."
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 218
+          },
+          "text": "You can use them like you call libraries from the code."
+        },
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 80
+          },
+          "text": "You then follow the sample code and the API, and insert the code into your application."
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 38,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 41,
+            "milliseconds": 399
+          },
+          "text": "Now let’s look at the third feature, tune a language model."
+        },
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 41,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 45,
+            "milliseconds": 538
+          },
+          "text": "If you’ve been prototyping with large language models, you might be wondering if there’s"
+        },
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 45,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 48,
+            "milliseconds": 719
+          },
+          "text": "a way you can improve the quality of responses beyond just prompt design."
+        },
+        {
+          "id": "196",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 48,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 399
+          },
+          "text": "So let’s learn how to tune a large language model and how to launch a tuning job from"
+        },
+        {
+          "id": "197",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 54,
+            "milliseconds": 538
+          },
+          "text": "Generative AI Studio."
+        },
+        {
+          "id": "198",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 54,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 859
+          },
+          "text": "As a quick recap, the prompt is your text input that you pass to the model."
+        },
+        {
+          "id": "199",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 0,
+            "milliseconds": 659
+          },
+          "text": "Your prompt might look like an instruction…"
+        },
+        {
+          "id": "200",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 0,
+            "milliseconds": 659
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 2,
+            "milliseconds": 519
+          },
+          "text": "And maybe you add some examples…"
+        },
+        {
+          "id": "201",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 2,
+            "milliseconds": 519
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 959
+          },
+          "text": "Then you send this text to the model so that it adopts the behavior that you want."
+        },
+        {
+          "id": "202",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 9,
+            "milliseconds": 59
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 539
+          },
+          "text": "Prompt design allows for fast experimentation and customization."
+        },
+        {
+          "id": "203",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 98
+          },
+          "text": "And because you’re not writing any complicated code, you don’t need to be an ML expert"
+        },
+        {
+          "id": "204",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 940
+          },
+          "text": "to get started."
+        },
+        {
+          "id": "205",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 18,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 20,
+            "milliseconds": 339
+          },
+          "text": "But producing prompts can be tricky."
+        }
+      ],
+      "source": [
+        "You can simply click view code.",
+        "First, you need to download the Vertex AI SDKs that fit your programming language, like",
+        "Python and Curl.",
+        "SDK stands for software design kits.",
+        "They implement the functions and do the job for you.",
+        "You can use them like you call libraries from the code.",
+        "You then follow the sample code and the API, and insert the code into your application.",
+        "Now let’s look at the third feature, tune a language model.",
+        "If you’ve been prototyping with large language models, you might be wondering if there’s",
+        "a way you can improve the quality of responses beyond just prompt design.",
+        "So let’s learn how to tune a large language model and how to launch a tuning job from",
+        "Generative AI Studio.",
+        "As a quick recap, the prompt is your text input that you pass to the model.",
+        "Your prompt might look like an instruction…",
+        "And maybe you add some examples…",
+        "Then you send this text to the model so that it adopts the behavior that you want.",
+        "Prompt design allows for fast experimentation and customization.",
+        "And because you’re not writing any complicated code, you don’t need to be an ML expert",
+        "to get started.",
+        "But producing prompts can be tricky."
+      ],
+      "result": [
+        "你可以简单地点击查看代码。",
+        "首先，你需要下载适合你编程语言的 Vertex AI SDK，比如Python 和 Curl。",
+        "",
+        "SDK 是软件设计工具包（Software Design Kits）的缩写。",
+        "它们实现了功能并为你完成工作。",
+        "你可以像调用代码中的库一样使用它们。",
+        "然后按照示例代码和 API，将代码插入到你的应用程序中。",
+        "现在让我们看看第三个功能，调整（Tune）语言模型。",
+        "如果你一直在使用大语言模型进行原型设计，你可能会想知道是否有",
+        "一种方法可以在Prompt设计之外提高响应质量。",
+        "那么让我们学习如何调整大语言模型以及如何从生成 AI 工作室启动调优任务。",
+        "",
+        "简要回顾一下，Prompt是你传递给模型的文本输入。",
+        "你的Prompt可能看起来像一条指令...",
+        "也许你还添加了一些例子...",
+        "然后你将这段文本发送给模型，以便它采用你想要的行为。",
+        "Prompt设计允许快速实验和定制。",
+        "而且因为你不需要编写复杂的代码，所以你不需要成为机器学习专家就可以开始。",
+        "",
+        "但是生成Prompt可能会很棘手。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "206",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 20,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 80
+          },
+          "text": "Small changes in wording or word order can affect the model results in ways that aren’t"
+        },
+        {
+          "id": "207",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 860
+          },
+          "text": "totally predictable."
+        },
+        {
+          "id": "208",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 28,
+            "milliseconds": 980
+          },
+          "text": "And you can’t really fit all that many examples into a prompt."
+        },
+        {
+          "id": "209",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 28,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 33,
+            "milliseconds": 720
+          },
+          "text": "Even when you do discover a good prompt for your use case, you might notice the quality"
+        },
+        {
+          "id": "210",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 33,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 36,
+            "milliseconds": 240
+          },
+          "text": "of model responses isn’t totally consistent."
+        },
+        {
+          "id": "211",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 36,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 39,
+            "milliseconds": 840
+          },
+          "text": "One thing we can do to alleviate these issues is to tune the model."
+        },
+        {
+          "id": "212",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 39,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 41,
+            "milliseconds": 100
+          },
+          "text": "So what’s tuning?"
+        },
+        {
+          "id": "213",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 41,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 700
+          },
+          "text": "Well, one version you might be familiar with is fine-tuning."
+        },
+        {
+          "id": "214",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 49,
+            "milliseconds": 19
+          },
+          "text": "In this scenario, we take a model that was pretrained on a generic dataset."
+        },
+        {
+          "id": "215",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 49,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 639
+          },
+          "text": "We make a copy of this model."
+        },
+        {
+          "id": "216",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 55,
+            "milliseconds": 79
+          },
+          "text": "Then, using those learned weights as a starting point, we re-train the model"
+        },
+        {
+          "id": "217",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 55,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 57,
+            "milliseconds": 240
+          },
+          "text": "on a new domain-specific dataset."
+        },
+        {
+          "id": "218",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 57,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 1,
+            "milliseconds": 200
+          },
+          "text": "This technique has been pretty effective for lots of different use cases."
+        },
+        {
+          "id": "219",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 1,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 4,
+            "milliseconds": 919
+          },
+          "text": "But when we try to fine tune LLMs, we run into some challenges."
+        },
+        {
+          "id": "220",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 4,
+            "milliseconds": 919
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 8,
+            "milliseconds": 338
+          },
+          "text": "LLMs are, as the name suggests, large."
+        },
+        {
+          "id": "221",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 8,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 11,
+            "milliseconds": 519
+          },
+          "text": "So updating every weight can take a long training job."
+        },
+        {
+          "id": "222",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 11,
+            "milliseconds": 519
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 438
+          },
+          "text": "Compound all of that computation with the hassle and cost of now having to serve this"
+        },
+        {
+          "id": "223",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 860
+          },
+          "text": "giant model…"
+        },
+        {
+          "id": "224",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 21,
+            "milliseconds": 419
+          },
+          "text": "And as a result, fine-tuning a large language model might not be the best option for you."
+        },
+        {
+          "id": "225",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 21,
+            "milliseconds": 419
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 26,
+            "milliseconds": 159
+          },
+          "text": "But there’s an innovative approach to tuning called parameter-efficient tuning."
+        }
+      ],
+      "source": [
+        "Small changes in wording or word order can affect the model results in ways that aren’t",
+        "totally predictable.",
+        "And you can’t really fit all that many examples into a prompt.",
+        "Even when you do discover a good prompt for your use case, you might notice the quality",
+        "of model responses isn’t totally consistent.",
+        "One thing we can do to alleviate these issues is to tune the model.",
+        "So what’s tuning?",
+        "Well, one version you might be familiar with is fine-tuning.",
+        "In this scenario, we take a model that was pretrained on a generic dataset.",
+        "We make a copy of this model.",
+        "Then, using those learned weights as a starting point, we re-train the model",
+        "on a new domain-specific dataset.",
+        "This technique has been pretty effective for lots of different use cases.",
+        "But when we try to fine tune LLMs, we run into some challenges.",
+        "LLMs are, as the name suggests, large.",
+        "So updating every weight can take a long training job.",
+        "Compound all of that computation with the hassle and cost of now having to serve this",
+        "giant model…",
+        "And as a result, fine-tuning a large language model might not be the best option for you.",
+        "But there’s an innovative approach to tuning called parameter-efficient tuning."
+      ],
+      "result": [
+        "用词或词序的微小变化可能会以无法完全预测的方式影响模型结果。",
+        "",
+        "而且你不能在一个Prompt中放入太多的例子。",
+        "即使你找到了一个适合你用例的好Prompt，你可能会注意到模型响应的质量并不完全一致。",
+        "",
+        "我们可以做的一件事是调整模型。",
+        "那么什么是调优（Tuning）呢？",
+        "你可能熟悉的一个版本是微调。",
+        "在这种情况下，我们使用一个在通用数据集上预训练的模型。",
+        "我们复制这个模型。",
+        "然后，以这些学到的权重为起点，我们在一个新的领域特定数据集上重新训练模型。",
+        "",
+        "这种技术在很多不同的用例中都非常有效。",
+        "但是当我们尝试微调大语言模型时，我们遇到了一些挑战。",
+        "正如名称所示，大语言模型是很大的。",
+        "因此，更新每个权重可能需要一个长时间的训练任务。",
+        "再加上运行这个巨大模型的成本和麻烦…",
+        "",
+        "因此，微调大语言模型可能不是最佳选择。",
+        "但是有一种创新的调优方法叫做参数高效调优。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "用词或词序的微小变化可能会以无法完全预测的方式影响模型结果。",
+          "sources": [
+            "Small changes in wording or word order can affect the model results in ways that aren’t",
+            "totally predictable."
+          ]
+        },
+        {
+          "translated": "而且你不能在一个Prompt中放入太多的例子。",
+          "sources": [
+            "And you can’t really fit all that many examples into a prompt."
+          ]
+        },
+        {
+          "translated": "即使你找到了一个适合你用例的好Prompt，你可能会注意到模型响应的质量并不完全一致。",
+          "sources": [
+            "Even when you do discover a good prompt for your use case, you might notice the quality",
+            "of model responses isn’t totally consistent."
+          ]
+        },
+        {
+          "translated": "我们可以做的一件事是调整模型。",
+          "sources": [
+            "One thing we can do to alleviate these issues is to tune the model."
+          ]
+        },
+        {
+          "translated": "那么什么是调优呢？",
+          "sources": [
+            "So what’s tuning?"
+          ]
+        },
+        {
+          "translated": "你可能熟悉的一个版本是微调。",
+          "sources": [
+            "Well, one version you might be familiar with is fine-tuning."
+          ]
+        },
+        {
+          "translated": "在这种情况下，我们使用一个在通用数据集上预训练的模型。",
+          "sources": [
+            "In this scenario, we take a model that was pretrained on a generic dataset."
+          ]
+        },
+        {
+          "translated": "我们复制这个模型。",
+          "sources": [
+            "We make a copy of this model."
+          ]
+        },
+        {
+          "translated": "然后，以这些学到的权重为起点，我们在一个新的领域特定数据集上重新训练模型。",
+          "sources": [
+            "Then, using those learned weights as a starting point, we re-train the model",
+            "on a new domain-specific dataset."
+          ]
+        },
+        {
+          "translated": "这种技术在很多不同的用例中都非常有效。",
+          "sources": [
+            "This technique has been pretty effective for lots of different use cases."
+          ]
+        },
+        {
+          "translated": "但是当我们尝试微调大语言模型时，我们遇到了一些挑战。",
+          "sources": [
+            "But when we try to fine tune LLMs, we run into some challenges."
+          ]
+        },
+        {
+          "translated": "正如名称所示，大语言模型是很大的。",
+          "sources": [
+            "LLMs are, as the name suggests, large."
+          ]
+        },
+        {
+          "translated": "因此，更新每个权重可能需要很长的训练时间。",
+          "sources": [
+            "So updating every weight can take a long training job."
+          ]
+        },
+        {
+          "translated": "将所有这些计算与现在必须为这个巨大模型提供服务的麻烦和成本相结合…",
+          "sources": [
+            "Compound all of that computation with the hassle and cost of now having to serve this",
+            "giant model…"
+          ]
+        },
+        {
+          "translated": "因此，微调大语言模型可能不是最佳选择。",
+          "sources": [
+            "And as a result, fine-tuning a large language model might not be the best option for you."
+          ]
+        },
+        {
+          "translated": "但是有一种创新的调优方法叫做参数高效调优。",
+          "sources": [
+            "But there’s an innovative approach to tuning called parameter-efficient tuning."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "226",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 26,
+            "milliseconds": 159
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 30,
+            "milliseconds": 838
+          },
+          "text": "This is a super exciting research area that aims to reduce the challenges of fine-tuning"
+        },
+        {
+          "id": "227",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 30,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 33,
+            "milliseconds": 899
+          },
+          "text": "LLMs, by only training a subset of parameters."
+        },
+        {
+          "id": "228",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 33,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 37,
+            "milliseconds": 678
+          },
+          "text": "These parameters might be a subset of the existing model parameters."
+        },
+        {
+          "id": "229",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 37,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 40,
+            "milliseconds": 438
+          },
+          "text": "Or they could be an entirely  new set of parameters."
+        },
+        {
+          "id": "230",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 40,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 959
+          },
+          "text": "For example, maybe you add on some additional layers to the model or an extra embedding"
+        },
+        {
+          "id": "231",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 46,
+            "milliseconds": 559
+          },
+          "text": "to the prompt."
+        },
+        {
+          "id": "232",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 46,
+            "milliseconds": 559
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 48,
+            "milliseconds": 958
+          },
+          "text": "If you want to learn more  about parameter-efficient"
+        },
+        {
+          "id": "233",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 48,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 700
+          },
+          "text": "tuning and some of the different methods,"
+        },
+        {
+          "id": "234",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 53,
+            "milliseconds": 459
+          },
+          "text": "a summary paper is included in the reading list of this course."
+        },
+        {
+          "id": "235",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 53,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 58,
+            "milliseconds": 200
+          },
+          "text": "But if you just want to get to building, then let's move to Generative AI Studio and see"
+        },
+        {
+          "id": "236",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 58,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 59,
+            "milliseconds": 759
+          },
+          "text": "how to start a tuning job."
+        },
+        {
+          "id": "237",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 59,
+            "milliseconds": 759
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 2,
+            "milliseconds": 279
+          },
+          "text": "From the language section of Generative AI Studio,"
+        },
+        {
+          "id": "238",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 2,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 478
+          },
+          "text": "Select TUNING."
+        },
+        {
+          "id": "239",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 5,
+            "milliseconds": 700
+          },
+          "text": "To create a tuned model, we provide a name."
+        },
+        {
+          "id": "240",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 5,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 779
+          },
+          "text": "Then point to the local or Cloud Storage location of your training data."
+        },
+        {
+          "id": "241",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 779
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 578
+          },
+          "text": "Parameter efficient tuning is ideally suited for scenarios where you have \"modest\" amounts"
+        },
+        {
+          "id": "242",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 240
+          },
+          "text": "of training data, say hundreds or maybe thousands of training examples."
+        },
+        {
+          "id": "243",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 23,
+            "milliseconds": 519
+          },
+          "text": "Your training data should be structured as a supervised training dataset in a text to"
+        },
+        {
+          "id": "244",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 23,
+            "milliseconds": 519
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 24,
+            "milliseconds": 299
+          },
+          "text": "text format."
+        },
+        {
+          "id": "245",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 24,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 29,
+            "milliseconds": 218
+          },
+          "text": "Each record or row in the data will contain the input text, in other words, the prompt,"
+        },
+        {
+          "id": "246",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 29,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 31,
+            "milliseconds": 860
+          },
+          "text": "which is followed by the expected output of the model."
+        }
+      ],
+      "source": [
+        "This is a super exciting research area that aims to reduce the challenges of fine-tuning",
+        "LLMs, by only training a subset of parameters.",
+        "These parameters might be a subset of the existing model parameters.",
+        "Or they could be an entirely  new set of parameters.",
+        "For example, maybe you add on some additional layers to the model or an extra embedding",
+        "to the prompt.",
+        "If you want to learn more  about parameter-efficient",
+        "tuning and some of the different methods,",
+        "a summary paper is included in the reading list of this course.",
+        "But if you just want to get to building, then let's move to Generative AI Studio and see",
+        "how to start a tuning job.",
+        "From the language section of Generative AI Studio,",
+        "Select TUNING.",
+        "To create a tuned model, we provide a name.",
+        "Then point to the local or Cloud Storage location of your training data.",
+        "Parameter efficient tuning is ideally suited for scenarios where you have \"modest\" amounts",
+        "of training data, say hundreds or maybe thousands of training examples.",
+        "Your training data should be structured as a supervised training dataset in a text to",
+        "text format.",
+        "Each record or row in the data will contain the input text, in other words, the prompt,",
+        "which is followed by the expected output of the model."
+      ],
+      "result": [
+        "这是一个非常令人兴奋的研究领域，旨在减少微调大语言模型的挑战，只训练一部分参数。",
+        "",
+        "这些参数可能是现有模型参数的一个子集。",
+        "或者它们可能是一整套新的参数。",
+        "例如，你可以在模型中添加一些额外的层或者在Prompt中添加一个额外的Embedding。",
+        "",
+        "如果你想了解更多关于参数高效调整和一些不同方法的信息，可以参考本课程阅读列表中的总结论文。",
+        "",
+        "",
+        "但如果你只想开始构建，那么让我们转到生成式AI工作室，看看如何开始调整工作。",
+        "",
+        "从生成式AI工作室的语言部分，选择TUNING。",
+        "",
+        "要创建一个调整过的模型，我们需要提供一个名称。",
+        "然后指向你的训练数据的本地或云存储位置。",
+        "参数高效调整非常适合于你拥有适量训练数据的场景，比如说几百或者几千个训练样本。",
+        "",
+        "你的训练数据应该以文本到文本格式构建为一个监督式训练数据集。",
+        "",
+        "数据中的每条记录或行都包含输入文本，换句话说，是Prompt，后面跟着模型的预期输出。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "247",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 31,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 899
+          },
+          "text": "This means that the model can be tuned for a task that can be modeled as a text-to-text"
+        },
+        {
+          "id": "248",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 37,
+            "milliseconds": 319
+          },
+          "text": "problem."
+        },
+        {
+          "id": "249",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 38,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 42,
+            "milliseconds": 838
+          },
+          "text": "After specifying the path to your dataset, you can start the tuning job and monitor the"
+        },
+        {
+          "id": "250",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 42,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 45,
+            "milliseconds": 179
+          },
+          "text": "status in the Google Cloud console."
+        },
+        {
+          "id": "251",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 45,
+            "milliseconds": 179
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 50,
+            "milliseconds": 278
+          },
+          "text": "When the tuning job completes, you’ll see the tuned model in the Vertex AI Model Registry"
+        },
+        {
+          "id": "252",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 50,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 55,
+            "milliseconds": 198
+          },
+          "text": "and you can deploy it to an endpoint for serving, or you can test it in the Generative AI Studio."
+        },
+        {
+          "id": "253",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 56,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 0,
+            "milliseconds": 720
+          },
+          "text": "In this course, you learned what Generative AI is and the tools provided by Google Cloud"
+        },
+        {
+          "id": "254",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 0,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 4,
+            "milliseconds": 139
+          },
+          "text": "to empower your project with Generative AI capabilities."
+        },
+        {
+          "id": "255",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 4,
+            "milliseconds": 139
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 259
+          },
+          "text": "Specifically, you focused on Generative AI"
+        },
+        {
+          "id": "256",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 379
+          },
+          "text": "Studio, where you can use  genAI in your application"
+        },
+        {
+          "id": "257",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 379
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 14,
+            "milliseconds": 278
+          },
+          "text": "by quickly prototyping and customizing generative AI models."
+        },
+        {
+          "id": "258",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 14,
+            "milliseconds": 279
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 918
+          },
+          "text": "You learned that Generative AI Studio supports three options: language, vision, and speech."
+        },
+        {
+          "id": "259",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 19,
+            "milliseconds": 919
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 24,
+            "milliseconds": 779
+          },
+          "text": "You then walked through the three major features in Language: design and test prompt, create"
+        },
+        {
+          "id": "260",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 24,
+            "milliseconds": 779
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 26,
+            "milliseconds": 698
+          },
+          "text": "conversations, and tune models."
+        },
+        {
+          "id": "261",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 27,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 31,
+            "milliseconds": 679
+          },
+          "text": "This was a short lesson introducing Generative AI studio on Vertex AI."
+        },
+        {
+          "id": "262",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 31,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 36,
+            "milliseconds": 299
+          },
+          "text": "For more information about natural language processing and different types of language"
+        },
+        {
+          "id": "263",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 36,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 42,
+            "milliseconds": 119
+          },
+          "text": "models like decoder-encoder, transformer, and LLM, please check the course titled Natural"
+        },
+        {
+          "id": "264",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 42,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 45,
+            "milliseconds": 539
+          },
+          "text": "Language Processing on Google Cloud listed in the reading list."
+        },
+        {
+          "id": "265",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 46,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 50,
+            "milliseconds": 399
+          },
+          "text": "Now it’s time to play with Generative AI Studio in a hands-on lab, where you:"
+        },
+        {
+          "id": "266",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 50,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 53,
+            "milliseconds": 818
+          },
+          "text": "Design and test prompts in both free-form and structured modes."
+        }
+      ],
+      "source": [
+        "This means that the model can be tuned for a task that can be modeled as a text-to-text",
+        "problem.",
+        "After specifying the path to your dataset, you can start the tuning job and monitor the",
+        "status in the Google Cloud console.",
+        "When the tuning job completes, you’ll see the tuned model in the Vertex AI Model Registry",
+        "and you can deploy it to an endpoint for serving, or you can test it in the Generative AI Studio.",
+        "In this course, you learned what Generative AI is and the tools provided by Google Cloud",
+        "to empower your project with Generative AI capabilities.",
+        "Specifically, you focused on Generative AI",
+        "Studio, where you can use  genAI in your application",
+        "by quickly prototyping and customizing generative AI models.",
+        "You learned that Generative AI Studio supports three options: language, vision, and speech.",
+        "You then walked through the three major features in Language: design and test prompt, create",
+        "conversations, and tune models.",
+        "This was a short lesson introducing Generative AI studio on Vertex AI.",
+        "For more information about natural language processing and different types of language",
+        "models like decoder-encoder, transformer, and LLM, please check the course titled Natural",
+        "Language Processing on Google Cloud listed in the reading list.",
+        "Now it’s time to play with Generative AI Studio in a hands-on lab, where you:",
+        "Design and test prompts in both free-form and structured modes."
+      ],
+      "result": [
+        "这意味着该模型可以针对可建模为文本到文本的任务进行调整。",
+        "",
+        "指定数据集路径后，你可以开始调优任务并在谷歌云控制台中监控状态。",
+        "",
+        "调优任务完成后，你将在Vertex AI模型注册表中看到调优后的模型。",
+        "你可以将其部署到端点进行服务，或者在生成式AI工作室中进行测试。",
+        "在本课程中，你了解了生成式AI是什么以及谷歌云提供的工具。",
+        "",
+        "具体来说，你关注了生成式AI工作室。",
+        "通过快速原型设计和定制生成式AI模型，在你的应用程序中使用GenAI。",
+        "",
+        "你了解到生成式AI工作室支持三个选项：语言、视觉和语音。",
+        "然后，你浏览了语言中的三个主要功能：设计和测试Prompt、创建对话和调整模型。",
+        "",
+        "这是一个关于Vertex AI上生成式AI工作室的简短课程。",
+        "有关自然语言处理和不同类型的语言模型（如解码器-编码器、变压器和LLM）的更多信息，请查看阅读列表中的名为“谷歌云上的自然语言处理”的课程。",
+        "",
+        "",
+        "现在是时候在动手实验室中尝试生成式AI工作室了，你将：",
+        "在自由形式和结构化模式下设计和测试Prompt。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "267",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 53,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 55,
+            "milliseconds": 679
+          },
+          "text": "Create conversations."
+        },
+        {
+          "id": "268",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 55,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 57,
+            "milliseconds": 779
+          },
+          "text": "And explore the prompt gallery."
+        },
+        {
+          "id": "269",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 57,
+            "milliseconds": 779
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 2,
+            "milliseconds": 578
+          },
+          "text": "By the end of this lab, you will be able to use the capabilities of Generative AI Studio"
+        },
+        {
+          "id": "270",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 2,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 4,
+            "milliseconds": 200
+          },
+          "text": "that we’ve discussed in this course."
+        },
+        {
+          "id": "271",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 4,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 5,
+            "milliseconds": 879
+          },
+          "text": "Have fun exploring!"
+        }
+      ],
+      "source": [
+        "Create conversations.",
+        "And explore the prompt gallery.",
+        "By the end of this lab, you will be able to use the capabilities of Generative AI Studio",
+        "that we’ve discussed in this course.",
+        "Have fun exploring!"
+      ],
+      "result": [
+        "创建对话，浏览Prompt库。",
+        "",
+        "在这个实验室的最后，你将能够使用我们在这门课程中讨论过的生成式AI工作室的功能。",
+        "",
+        "尽情探索吧！"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Introduction to Generative AI Studio.srt",
+  "ouputBasePath": "input/Generative AI learning path/Introduction to Generative AI Studio",
+  "totalCost": 0.7935000000000001,
+  "translationPath": "input/Generative AI learning path/Introduction to Generative AI Studio/translation.json"
+}

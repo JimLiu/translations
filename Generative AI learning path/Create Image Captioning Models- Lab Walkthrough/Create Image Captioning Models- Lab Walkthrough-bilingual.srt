@@ -1,0 +1,734 @@
+1
+00:00:00,400 --> 00:00:05,633
+大家好，我是Google Advanced Solutions Lab的机器学习工程师，Takumi。
+Hi, everyone. I'm Takumi, machine Learning engineer at Google Advanced Solutions Lab
+
+3
+00:00:06,865 --> 00:00:09,631
+这是图像标注课程的后半部分。
+This is the second half of the image captioning session.
+
+4
+00:00:10,199 --> 00:00:14,098
+如果你还没看过前半部分，我建议你先看一下。
+If you haven't seen the first half, I recommend checking it out first.
+
+5
+00:00:15,733 --> 00:00:24,032
+在这个视频中，我将带你详细介绍整个代码Notebook，帮助你理解如何创建一个非常简单的生成模型。
+And in this video, I'm going to walk you through the entire code notebook to help you understand how to create a very simple generative model.
+
+7
+00:00:25,865 --> 00:00:29,932
+所有的设置信息都写在ASL的GitHub Repo里。
+All the setup information is written in the ASL GitHub repository.
+
+9
+00:00:30,899 --> 00:00:35,566
+你可以在幻灯片中或者这个视频的描述下面找到链接。
+You can find the link in the slide or in the description below this video.
+
+11
+00:00:37,265 --> 00:00:42,065
+设置好Vertex AI工作台环境并clone Repo后，
+After setting up the Vertex AI I work bench environment and clone in the repo.
+
+13
+00:00:42,066 --> 00:00:56,932
+按照说明你可以找到图像标注Notebook，它位于"asl-ml-immersion/notebooks/multi_modal/solutions"下面。
+Following the instruction you can find the image captioning notebook under asl-ml-immersion notebooks and multimodal solutions.
+
+17
+00:00:57,399 --> 00:01:01,499
+看，这里就是图像标注的.ipynb文件。
+Here you go. You can find image captioning dot i Python notebook.
+
+19
+00:01:01,832 --> 00:01:14,733
+所以请打开这个文件，在这里你可以看到所有的流程和指示来构建和使用图像标注模型，这些我们在上一个视频中已经讨论过了。
+So please open this file and here you can see all the process and instructions to build and use an image captioning model which we discussed in the previous video.
+
+23
+00:01:15,900 --> 00:01:19,500
+让我们从第一个单元格开始看起。
+Let's take a look from the first cell.
+
+24
+00:01:19,500 --> 00:01:26,432
+在第一个单元格里，我们自然要安装所有的依赖，包括tensorflow和keras。
+In the first cell. Of course we install all the dependencies, including tensorflow keras
+
+27
+00:01:27,165 --> 00:01:30,431
+在这里，我们可以找到tensorflow.keras.layers，
+and here we can find TensorFlow keras layers
+
+28
+00:01:30,733 --> 00:01:34,132
+并安装我们需要的所有图像标注模型的layers，
+and installing order layers we need for image captioning model
+
+29
+00:01:34,766 --> 00:01:45,098
+包括GRU、Add层、Attention层、Dense层、Embedding层和LayerNormalization层。
+including GRU, add layer, attention layer or dense layer embedding layer now layer normalization layer.
+
+32
+00:01:45,332 --> 00:01:48,532
+让我们逐一运行。
+So let's run one by one
+
+33
+00:01:49,832 --> 00:01:58,265
+在下一个单元格里，我们定义了一些超参数，包括词汇表大小，
+and in the next cell we define some hyper parameters, including vocabulary size,
+
+36
+00:01:58,266 --> 00:02:03,365
+这意味着我们将使用多少个词汇来进行图像标注。
+which means how many vocabularies we're going to use for image captioning.
+
+37
+00:02:03,365 --> 00:02:10,365
+或者你可以找到一个特征提取器，这意味着我们想要在编码器模型中使用什么样的模型。
+Or you can find a feature extractor, which means what kind of model we want to use in encoder model.
+
+39
+00:02:10,900 --> 00:02:19,366
+所以在这种情况下，正如我们在之前的视频中讨论的，我们指定的是InceptionResNetV2，这是一个非常经典的基于CNN的模型。
+So in this case, as we discussed in the previous video, we are specifying inception resnet v2, which is very classical CNN based model
+
+41
+00:02:20,866 --> 00:02:31,799
+所有下面的定义，包括图像、高度、宽度通道和特征形状都来自InceptionResNetV2的定义，特别是这个特征形状。
+and all the definitions below image, height, width channel and the feature shape is coming from the definition of the inception, resnet v2 and especially this feature shape.
+
+44
+00:02:31,832 --> 00:02:39,564
+8, 8, 1536就是InceptionResNetV2输出的形状。
+8, 8, 1536 is the shape this inception resnet v2 produce.
+
+46
+00:02:41,265 --> 00:02:44,631
+那我们就按照这种方式定义吧。
+So let's define in this way
+
+48
+00:02:48,566 --> 00:02:49,200
+酷，
+cool.
+
+49
+00:02:49,466 --> 00:02:56,100
+在下一个单元格中，我们将从tfds加载数据，也就是TensorFlow数据集。
+So in the next cell we're going to load the data 0 from tfds, which means TensorFlow datasets.
+
+51
+00:02:58,165 --> 00:03:03,198
+所以 TensorFlow 数据集以“coco_captions”这个名字托管这个标注数据集
+So TensorFlow datasets host this caption data set in this name “coco captions”
+
+53
+00:03:03,199 --> 00:03:06,131
+所以我们可以指定这个名字来加载数据。
+so we can specify this name and the loading data.
+
+54
+00:03:07,733 --> 00:03:12,631
+加载数据后，我们可以传递一些预处理函数，
+And after loading data we can pass some preprocessing function,
+
+56
+00:03:14,032 --> 00:03:18,165
+比如获取图像级别，这在这里定义了，获取图像级别。
+get image level which is defined here, get the image level,
+
+57
+00:03:18,199 --> 00:03:37,566
+在这里我们可以找到一些非常基础的预处理，包括改变图像的大小或者图像的比例，并返回图像张量和文字说明同时。
+and here we can find some preprocessing, very basic preprocessing, including changing the size of the image or the change in the scale of the image and returning image tensor and the caption at the same time.
+
+61
+00:03:37,566 --> 00:03:39,666
+所以让我们按照相同的方式运行。
+So let's run in the same way
+
+62
+00:03:40,733 --> 00:03:44,066
+让我们看一些例子。
+and let's take a look at some of the example.
+
+64
+00:03:51,765 --> 00:04:01,631
+这里我们可以看到，例如，一个随机的例子，每一对图像和文本对我来说都是有意义的。
+Here we can see, for example, a random example and each pair of image and text makes sense to me.
+
+67
+00:04:01,633 --> 00:04:11,098
+例如，这个图像的标注是“一个装有烤三明治、薯片和炸薯条的宽盘子”，以及另一个图像的标注。
+So wide plate with a toasted sandwich, chips and fries for this image. And another caption for another image.
+
+70
+00:04:11,932 --> 00:04:21,399
+我们有很多图像。如果你想看另一个例子，你可以再运行这个单元格，你会看到另一个例子。
+And we have a lot of image. So if you want to see another example, you can run this cell again and you will see another example.
+
+73
+00:04:21,399 --> 00:04:23,265
+那么让我们继续。
+So let's move on.
+
+74
+00:04:24,132 --> 00:04:30,600
+由于我们有文本数据，我们需要以一种标准的方式预处理那些文本数据。
+So since we have text data, we need to preprocess that text data in kind of standard way.
+
+76
+00:04:31,533 --> 00:04:41,198
+在这个单元格里，我们添加了开始和结束的特殊标记，这也是我们在幻灯片里讨论过的。
+So in this cell we add start and end special tokens, which we discussed in the slide as well.
+
+78
+00:04:41,966 --> 00:04:54,133
+通过添加这些，我们可以把这个标记处理成一种特殊的符号，这个开始标记意味着句子的开始。
+So by adding this so we can handle this token as a kind of special sign, this start talking means the special token, that means the beginning of the sentence.
+
+81
+00:04:54,766 --> 00:05:00,033
+同样，结束标记意味着句子的结束。
+And in the same way, the end token means the, the end of the sentence.
+
+82
+00:05:01,000 --> 00:05:07,333
+我们可以用一个函数来添加开始标记和结束标记，并将这个函数传入trainds.map。
+So we can add these things in the same way trainds.map and pass this function.
+
+84
+00:05:07,333 --> 00:05:14,699
+让我们继续。
+They let's move on.
+
+85
+00:05:14,699 --> 00:05:17,965
+这是一个非常重要的预处理。
+And this is a very important preprocessing.
+
+86
+00:05:18,466 --> 00:05:21,566
+现在我们有了文本数据，标注数据。
+So now we have text data, caption data.
+
+87
+00:05:22,000 --> 00:05:25,432
+所以我们要创建分词器。
+So we're going to create tokenizer.
+
+88
+00:05:25,432 --> 00:05:35,599
+通过创建分词器，我们可以将像开始标记、猫、狗这样的词进行分词到某个索引。
+So by creating tokenizer, we can tokenize word like start token or cat or dog to some index.
+
+91
+00:05:35,600 --> 00:05:38,065
+在 TensorFlow 中，这非常简单。
+In TensorFlow, it is very easy.
+
+92
+00:05:38,065 --> 00:05:51,399
+你可以只用这个TextVectorization模块，然后通过传递所有的数据或标注数据到这个TextVectorization层，
+You can just use this text vectoralization module and you can call by passing all the data or the caption data to this text vectoralization layer
+
+96
+00:05:52,699 --> 00:05:56,532
+这需要一些时间，在我的环境中大约需要5分钟。
+so it takes some time around 5 minutes in my environments.
+
+97
+00:05:56,733 --> 00:06:01,899
+让我们等待它完成。
+So let's wait until it finishes.
+
+98
+00:06:01,899 --> 00:06:03,399
+现在已经完成。
+Now it's finished.
+
+99
+00:06:03,899 --> 00:06:15,265
+现在，让我们尝试一下这个分词器，通过传递一些样本句子，“<start> This is a sentence <end>”。
+Now let's try this tokenizer either by passing some sample sentence, start token This is a sentence end token.
+
+102
+00:06:16,500 --> 00:06:21,599
+所以现在你可以看到，它是以这种方式被分词的。
+So now you can see it is tokenized in this way.
+
+104
+00:06:21,600 --> 00:06:31,865
+你可以在这里找到很多的填充，通过改变这个最大标注长度（MAX_CAPTION_LEN），你可以控制这个填充的长度。
+And so the here you can find a lot of paddings by changing this max caption lengths you can control the lengths of this padding here.
+
+107
+00:06:31,865 --> 00:06:34,631
+但在这个案例中，我们指定的是64。
+But in this case we are specifying 64.
+
+108
+00:06:34,899 --> 00:06:47,432
+所以所有的标注都将以这种方式被填充，直到达到这个最大标注长度。
+So the order of the captions will be padded in this way until this max caption lengths.
+
+111
+00:06:47,432 --> 00:06:55,300
+同样，你可以看到这个分词器的行为，这非常有用。
+And in the same way you can see the behavior of this tokenizer This is very useful.
+
+114
+00:06:55,300 --> 00:07:06,599
+一旦你创建了分词器，你可以在不同的标注中应用这个分词器，并将文本数据转化为适当的标记。
+Once you create you can apply this tokenizer in different captions and convert text data to the token at the white tokens.
+
+116
+00:07:07,899 --> 00:07:11,765
+在此时创建转换器是非常好的。
+And it's nice to create converters at this point.
+
+117
+00:07:12,600 --> 00:07:21,899
+所以在这里，我们可以找到StringLookup层，并且创建了转换器，从词到索引，还有从索引到词。
+So here we can find string lookup layer, string look up layer, and the creating converter the from want to index and also index to want.
+
+119
+00:07:22,300 --> 00:07:25,099
+我们稍后将使用这些模块。
+So we're going to use these modules later.
+
+120
+00:07:25,100 --> 00:07:31,365
+所以这非常有用，然后我们可以创建最终的数据集。
+So this is quite useful and then we can create a final data set.
+
+122
+00:07:32,432 --> 00:07:34,799
+这是一个非常重要的部分。
+So this is a very important part.
+
+123
+00:07:34,800 --> 00:07:36,865
+我们有trainds。
+So we have trainds.
+
+124
+00:07:37,466 --> 00:07:41,533
+我们要添加额外的create_ds_fn函数，这个函数，
+We're going to add additional create_ds function, this function
+
+125
+00:07:42,300 --> 00:07:55,700
+如你所见，它返回img_tensor、caption，这是一个元组，img_tensor将进入编码器，caption将进入解码器。
+and as you can see, it returns image tensor caption that this is the tuple image tensor will go to encoder and caption will go to the decoder.
+
+129
+00:07:56,466 --> 00:08:02,265
+同时，我们还创建了target，即标签。
+And also we are creating Target, which is label.
+
+130
+00:08:02,266 --> 00:08:15,100
+在这个函数中，你可以发现这个target是从caption中创建的，只需将caption移动一个单词。
+And in this function you can find this target is created from caption by the is shifting just caption in the in one word.
+
+133
+00:08:16,500 --> 00:08:16,733
+好的。
+Okay.
+
+134
+00:08:16,733 --> 00:08:32,232
+通过这样做，我们将创建一个移位的caption，也就是下一个单词，并且我们将用这个作为target。
+By doing so, we are creating we're going to create a shifted caption, which means the next word A and we're going to utilize this for target.
+
+137
+00:08:32,232 --> 00:08:43,666
+所以让我们定义并应用这个函数，并创建一个批处理指定批处理大小，一切都已经准备就绪。
+So let's define and apply this function and create a batch in specified batch size and everything is ready.
+
+140
+00:08:43,666 --> 00:08:49,732
+那么让我们看一些数据集。
+So let's take a look at some of the data set.
+
+141
+00:08:49,732 --> 00:08:50,199
+给你。
+Here you go.
+
+142
+00:08:50,200 --> 00:09:00,432
+你可以看到Image shape、Caption shape，以及与Caption相同的Label shape，因为我们只是做了移位。
+So you can find the image in this shape and caption in the shape 0 and level in the same shape as caption because we are just shifting. And no.
+
+145
+00:09:00,432 --> 00:09:08,232
+所以我们用零值填充了移位部分，看起来不错。
+So we are padding the shifted part with zero value looks nice.
+
+147
+00:09:08,666 --> 00:09:12,100
+接下来是模型。
+So the next part is model.
+
+148
+00:09:12,100 --> 00:09:17,598
+大部分模型代码已经在之前的视频中解释过了，所以我会很快地过一遍。
+Most of the model code has already explained in the previous video, so I'm going to go through very quickly.
+
+150
+00:09:17,966 --> 00:09:22,299
+但是，如果你对此不是很熟悉或者不是很有信心，
+But if you are not very familiar with that very confident with that,
+
+151
+00:09:22,299 --> 00:09:28,266
+那么你可以回到之前的幻灯片，查看编码器和解码器内部发生了什么。
+then you can go back to the the previous slide and check what is going on inside encoder and decoder.
+
+153
+00:09:28,899 --> 00:09:33,299
+在这个视频里，我们来快速运行这些东西。
+So here in this video. So let's quickly run these things.
+
+155
+00:09:33,432 --> 00:09:43,531
+这是编码器，你可以看到我们只是将inception_resnet_v2应用到图像数据上。
+So this is the encoder and as you can see we are just in the applying inception resnet V2 to image data.
+
+157
+00:09:43,533 --> 00:09:51,433
+请注意，在这种情况下，我们冻结了这个卷积神经网络（CNN）的大部分内容，因为我们不需要训练。
+And please note that in this case we are freezing the most of the parts of this cnn because we don't need to be trained.
+
+159
+00:09:52,299 --> 00:10:00,233
+这个模型基本上是使用大型数据集（在这种情况下是 ImageNet 数据集）预先训练的。
+This model, basically this kind of the the backbone is pre-trained by using huge dataset in this case image net data set.
+
+161
+00:10:00,832 --> 00:10:14,566
+当然，如果你想要再次进行微调，那是可能的，但在这种情况下，我们只想保留预训练的权重。
+So of course if you want to the train, fine tune again, it is possible, but in this case we want to you just to preserve the weights Pre-trained.
+
+164
+00:10:14,566 --> 00:10:17,332
+接下来让我们继续讨论解码器。
+So next let's move on to the decoder.
+
+165
+00:10:18,700 --> 00:10:20,732
+正如我们讨论的，它有点复杂。
+It is a bit complex as we discussed,
+
+166
+00:10:20,732 --> 00:10:32,066
+在这里，您可以找到关于注意力层的许多说明，以及我们在上一个视频中讨论过的解码器的步骤。
+and here you can find a lot of instruction about the attention layer and also the steps of the decoder, which we discussed in the previous video.
+
+169
+00:10:32,066 --> 00:10:48,899
+在这里，我们可以找到一些定义，你可以找到Embedding层来创建Embedding和第一个GRU层，然后是Attention层、Add层、LayerNormalization层和最后的Dense层。
+And here we can find a definitions so you can find embedding layer to create what embedding and first GRU layer and attention layer add layer layer normalization and final dense layer.
+
+173
+00:10:48,899 --> 00:10:52,198
+让我们按这种方式定义。
+So let's define in this way.
+
+174
+00:10:52,200 --> 00:11:00,232
+模型看起来是这样的，Embedding层，GRU，Attention，Add，LayerNormalization，然后是Dense。
+So model looks like this embedding layer GRU attention add layer normalization, then this.
+
+177
+00:11:01,500 --> 00:11:17,866
+它有很多参数，在定义解码器和编码器之后，我们可以创建最终的 TF Keras 模型，并定义输入和输出。
+And it has so many parameters after defining decoder and also encoder, we can create final model TF Keras model and define inputs and output.
+
+181
+00:11:18,832 --> 00:11:37,232
+你可以看到，它有两个输入，image_input进入编码器，word_input进入解码器，输出应该是decoder_output。
+And as you can see, it has two inputs, image inputs go to encoder and word inputs go to the goes to the decoder and output should be decoder output.
+
+186
+00:11:37,232 --> 00:11:45,831
+现在模型已经准备好了，但在运行训练之前，我们需要像往常一样定义损失函数。
+Now model is ready, but before running training we need to define lost function as usual.
+
+188
+00:11:45,832 --> 00:11:58,065
+在损失方面，我们的模型基本上是一个分类模型，因为解码器为每个类别、每个单词类别、每个词汇生成了很多概率。
+So in terms of the loss, our model is basically a classification model since the decoder generate a lot of probabilities for each class, each word class, each of vocabularies.
+
+192
+00:11:58,500 --> 00:12:05,732
+所以我们可以像往常一样使用SparseCategoricalCrossentropy来解决分类问题。
+So we can use sparse categorical course entropy as usual for the classification problem.
+
+194
+00:12:05,732 --> 00:12:14,799
+但在这种情况下，我们的数据是填充的，所以它有很多零值和很多没有意义的值。
+But in this case our data is padded, so it has a lot of that zero values and a lot of the there meaningless values.
+
+196
+00:12:15,000 --> 00:12:18,365
+所以我们想要去掉那部分。
+So we want to remove that part.
+
+197
+00:12:18,365 --> 00:12:26,899
+为了做到这一点，我们正在定义这个自定义损失函数，然后一切都已经准备就绪。
+So in order to do so, we are defining this custom loss function and then everything is ready.
+
+200
+00:12:26,899 --> 00:12:34,066
+让我们编译模型，然后可以运行训练。
+So let's compile the model and we can run training.
+
+202
+00:12:34,066 --> 00:12:44,099
+在训练方面，使用一块T4 GPU进行一轮训练需要 15 到 20 分钟。
+0 And in terms of the training, it takes 15 minutes, to 20 minutes with one GPU, one T4 GPUs to train one epoch.
+
+204
+00:12:45,500 --> 00:12:49,099
+所以，如果你想增加额外的轮次，这是可以的。
+So if you want to add additional epochs, it's okay.
+
+206
+00:12:49,332 --> 00:12:53,032
+你可以这样做，我认为你可以得到稍微好一点的结果。
+You can do that and I think you can get the slightly better result.
+
+207
+00:12:53,600 --> 00:13:00,299
+但是一个轮次就足够了，只是为了检查它是如何工作的。
+But epoch one epoch is the enough to just to check the how it works.
+
+209
+00:13:00,299 --> 00:13:10,499
+所以让我们保持一个轮次并进行训练，等待15到20分钟，直到训练完成。
+So let's just keep it as one and run training and let's wait 15 to 20 minutes until it finished that training.
+
+212
+00:13:11,200 --> 00:13:23,766
+现在训练已经完成，所以让我们用它生成图片的文字说明，但在此之前，我们需要为推理重建解码器，以便手动控制增长状态。
+Now training is done, so let's use it for captioning, but before that we need to rebuild the decoder for inference in order to control the growth state manually.
+
+215
+00:13:24,033 --> 00:13:28,066
+正如我们在之前的视频中讨论的。
+As we talked in the previous video.
+
+216
+00:13:28,066 --> 00:13:37,599
+所以在这个单元格中，通过重用训练过的层，我们正在创建一个用于推理的模型。
+So in this cell, by re-using the trained layers, we are creating a model for inference.
+
+218
+00:13:37,600 --> 00:13:44,333
+所以这里你可以找到训练decoder_gru，训练decoder_attention等。
+So here you can find train decoder GRU train decoder attention and so on.
+
+220
+00:13:45,732 --> 00:13:53,600
+与训练模型相比，我们添加GRU状态到输入输出。
+And compared to the train training model, we are adding GRU state to its Io's.
+
+222
+00:13:55,732 --> 00:14:03,999
+对于输入，我们添加gru_state_input，对于输出，我们添加gru_state作为输出。
+For inputs, we are adding GRU state inputs and for output we are adding GRU state as output.
+
+225
+00:14:04,000 --> 00:14:10,966
+这样，我们可以在推理过程中控制GRU状态。
+So by doing so we can control the GRU state in the inference group.
+
+227
+00:14:10,966 --> 00:14:17,399
+好的，让我们用这个自定义推理循环函数生成文本。
+Okay, so let's generate text with this custom inference loop function.
+
+229
+00:14:18,765 --> 00:14:26,132
+我们已经在之前的视频中讨论了它应该具有哪些组件，但让我们简要回顾一下。
+We already discussed the what kind of the component it should have in the previous video, but let's review very briefly.
+
+231
+00:14:27,466 --> 00:14:33,499
+首先，我们初始化GRU状态，这种情况下只是简单地用零向量初始化。
+So first we initialize GRU state, in this case just the initialize with zero vector simply.
+
+233
+00:14:34,799 --> 00:14:44,832
+然后这里我们获取图像，再对图像进行预处理并将其传递给编码器，当然，是训练的编码器。
+And then here we get image and then pre process to image and pass it to encoder. Of course, the train encoder
+
+236
+00:14:45,265 --> 00:14:47,999
+我们可以获得图像特征.
+and we can get the feature image features
+
+237
+00:14:49,500 --> 00:14:51,633
+然后在将其传递给我们的解码器之前,
+and before passing it to our decoder.
+
+238
+00:14:52,033 --> 00:14:58,999
+所以我们也初始化这个，这个开始标记作为第一个词.
+So we also initialize this, this start token as the first word
+
+240
+00:14:59,533 --> 00:15:08,533
+然后我们将重复这个整个循环，一次又一次地生成文本。
+and then we are going to repeat this whole loop again and again and generate text one by one.
+
+243
+00:15:09,232 --> 00:15:19,764
+所以步骤看起来是这样的，编码解码器，当然，然后它返回很多预测的词的概率。
+So a step that looks like this coding decoder, of course, and then it returns a lot of predictions out of the word of the probabilities.
+
+246
+00:15:20,299 --> 00:15:29,531
+所以有很多方法可以从词概率的列表中挑选出实际的词，最后的词，最后的选择。
+So there are so many ways to pick up the actual word the final word, final selection from the list of a lot of ward probabilities.
+
+248
+00:15:29,932 --> 00:15:38,832
+但在这种情况下，我们是以某种随机方式挑选词，以引入一些随机性。
+But in this case we are pulling the word kind of stochastically to introduce some randomness.
+
+250
+00:15:38,832 --> 00:15:45,064
+这些代码行正在执行此操作，最终选择一些单词，
+So it is the these lines of code are doing doing that and eventually picking up some words
+
+252
+00:15:45,299 --> 00:15:58,165
+然后使用分词器将它们从单词Token还原回单词，并追加到列表中。
+and the the bringing it back to the brink bring it back to the word from the word token by using the tokenizer and appending to the list.
+
+255
+00:15:58,166 --> 00:16:00,799
+所以最后我们应该得到一些图片的文字说明。
+So eventually we should get some captions.
+
+256
+00:16:01,100 --> 00:16:03,466
+让我们看看结果。
+So let's take a look at the result.
+
+257
+00:16:03,466 --> 00:16:06,166
+定义了这个函数，然后调用它。
+So defined this function and let's call it
+
+258
+00:16:10,432 --> 00:16:17,365
+在这里，你可以看到这张图片的文字说明样本。
+so here you can see a caption samples for this image.
+
+260
+00:16:17,365 --> 00:16:22,031
+这个样本图片位于这个目录中。
+So this sample image is located in this directly.
+
+261
+00:16:22,332 --> 00:16:27,799
+只需传递JPEG和它返回五条文字说明。
+Just passing this for the JPEG and the it returns five captions.
+
+263
+00:16:29,000 --> 00:16:39,032
+看起来像是一个棒球运动员站在球棒旁边一个接球员在棒球场上打棒球，或者类似的东西。
+It looks like this a baseball player standing next to the bat a catcher in a field playing baseball or something like that.
+
+266
+00:16:39,832 --> 00:16:42,364
+虽然语法不完美，
+It is not grammatically perfect,
+
+267
+00:16:42,566 --> 00:16:50,898
+但你仍然可以看到它在生成文本，生成多个文本和生成有意义的文本。
+but still the you can see it is generating the text, generating multiple text and generating the meaningful text.
+
+269
+00:16:51,399 --> 00:17:07,365
+我们还可以看到我们的模型捕捉到了重要的信息，如棒球、接球员或一个人站在另一个人旁边，或棒球场之类的。
+And also we can see our model is capturing important informations like baseball or catcher or a man standing next to another man or baseball field or something like that.
+
+274
+00:17:08,333 --> 00:17:16,432
+虽然不是很完美，但它确实在生成非常有意义的文本。
+So still, it's not very it's not perfect, but it is generating very meaningful text.
+
+276
+00:17:16,432 --> 00:17:18,632
+令人惊讶，不是吗？
+It's very surprising, isn't it?
+
+277
+00:17:18,633 --> 00:17:20,833
+这个模型非常简单。
+So the model is very simple.
+
+278
+00:17:21,032 --> 00:17:32,931
+我们只是将编码器和解码器堆叠在一起，然后将图像数据传递给编码器，解码器以自回归的方式逐个生成图像的文字说明。
+We are just stacking encoder and decoder and then passing the image cap image data to encoder and the decoder generate captions one by one in auto regressive way.
+
+281
+00:17:33,965 --> 00:17:39,065
+通过堆叠编码器和解码器，我们可以创建这种非常小的生成模型。
+So just by stacking this so we can create this kind of the very small generative model.
+
+283
+00:17:40,299 --> 00:17:41,099
+好的。
+Okay.
+
+284
+00:17:41,099 --> 00:17:45,565
+目前市面上有很多生成性的大语言模型。
+Currently there are so many generative large language models out there.
+
+285
+00:17:45,566 --> 00:17:51,266
+当然，它们具有更复杂、更大的网络，并在更大的数据集上进行训练。
+Of course they have more complex and larger network and train a much larger dataset.
+
+287
+00:17:52,133 --> 00:17:55,500
+但是，这个简单模型的架构可能与它们类似。
+But the architecture may look similar to this simple model.
+
+288
+00:17:56,766 --> 00:17:58,833
+非常感谢观看这个视频。
+Thank you so much for watching this video.
+
+289
+00:17:58,833 --> 00:18:00,599
+希望你喜欢。
+I hope you enjoyed.
+
+290
+00:18:00,766 --> 00:18:08,400
+如果你喜欢这个演示，你可以在我们的ASL Github Repo中找到90多个机器学习相关的Notebooks，
+If you like this presentation, you'll find more in our ASL Github repository with 90 plus immersion regarding notebooks
+
+292
+00:18:10,133 --> 00:18:14,398
+如果你觉得有用，请不要忘记给GitHub Repo加星。
+if you find it useful. Please don't forget to star the repository.

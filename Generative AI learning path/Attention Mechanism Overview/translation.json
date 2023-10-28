@@ -1,0 +1,2145 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 866
+          },
+          "text": "Hi. I'm Sanjana Reddy,"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 866
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 300
+          },
+          "text": "a machine learning engineer at Google's Advanced Solutions Lab."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 766
+          },
+          "text": "There's a lot of excitement currently around generative"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 933
+          },
+          "text": "AI and new advancements, including new vertex AI features"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 733
+          },
+          "text": "such as Gen AI, Studio Model Garden, Gen AI API."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 333
+          },
+          "text": "Our objective in this short session is to give you a solid footing"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 433
+          },
+          "text": "on some of the underlying concepts that make all the Gen AI magic possible."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 833
+          },
+          "text": "Today I'm going to talk about the attention mechanism"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 433
+          },
+          "text": "that is behind all the transformer models and which is core to the LEM models."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "text": "Let's say you want to translate in English sentence"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 833
+          },
+          "text": "the cat ate the mouse to French."
+        }
+      ],
+      "source": [
+        "Hi. I'm Sanjana Reddy,",
+        "a machine learning engineer at Google's Advanced Solutions Lab.",
+        "There's a lot of excitement currently around generative",
+        "AI and new advancements, including new vertex AI features",
+        "such as Gen AI, Studio Model Garden, Gen AI API.",
+        "Our objective in this short session is to give you a solid footing",
+        "on some of the underlying concepts that make all the Gen AI magic possible.",
+        "Today I'm going to talk about the attention mechanism",
+        "that is behind all the transformer models and which is core to the LEM models.",
+        "Let's say you want to translate in English sentence",
+        "the cat ate the mouse to French."
+      ],
+      "result": [
+        "嗨，我是Sanjana Reddy，",
+        "我在谷歌高级解决方案实验室担任机器学习工程师。",
+        "最近，生成式AI和相关的新技术引起了大家的关注，包括新的Vertex AI功能，",
+        "",
+        "如Gen AI、Studio Model Garden、Gen AI API等。",
+        "在这个简短的课程中，我们的目标是让您能了解Gen AI背后的一些基本概念，打下一个坚实的基础。",
+        "",
+        "今天我要谈谈注意力机制，",
+        "它是所有Transformer模型背后推动力，也是LEM模型的核心。",
+        "假设您想把英语句子“the cat ate the mouse”翻译成法语。",
+        ""
+      ],
+      "status": "success",
+      "output": [
+        {
+          "translated": "嗨，我是Sanjana Reddy，",
+          "indexes": [
+            0
+          ]
+        },
+        {
+          "translated": "我在谷歌高级解决方案实验室担任机器学习工程师。",
+          "indexes": [
+            1
+          ]
+        },
+        {
+          "translated": "目前，生成式AI和新进展引起了很多关注，包括新的顶点AI功能，",
+          "indexes": [
+            2,
+            3
+          ]
+        },
+        {
+          "translated": "如Gen AI、Studio Model Garden、Gen AI API等。",
+          "indexes": [
+            4
+          ]
+        },
+        {
+          "translated": "在这个简短的课程中，我们的目标是让您对所有Gen AI魔法背后的一些基本概念有一个坚实的基础。",
+          "indexes": [
+            5,
+            6
+          ]
+        },
+        {
+          "translated": "今天我要谈谈注意力机制，",
+          "indexes": [
+            7
+          ]
+        },
+        {
+          "translated": "它是所有Transformer模型背后的核心，也是LEM模型的核心。",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "假设您想把英语句子“猫吃了老鼠”翻译成法语。",
+          "indexes": [
+            9,
+            10
+          ]
+        }
+      ],
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 33
+          },
+          "text": "You could use an encoder decoder."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 366
+          },
+          "text": "This is a popular model that is used to translate sentences."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 533
+          },
+          "text": "The encoder decoder takes one word at a time"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 700
+          },
+          "text": "and translates it at each time step."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 66
+          },
+          "text": "However, sometimes the words in the source language"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 233
+          },
+          "text": "do not align with the words in the target language."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 133
+          },
+          "text": "Here's an example."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 10,
+            "milliseconds": 100
+          },
+          "text": "Take the sentence Black cat ate the mouse."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 10,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 833
+          },
+          "text": "In this example, the first English word is black."
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "text": "However, in the translation,"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 300
+          },
+          "text": "the first French word is chat, which means cat in English."
+        }
+      ],
+      "source": [
+        "You could use an encoder decoder.",
+        "This is a popular model that is used to translate sentences.",
+        "The encoder decoder takes one word at a time",
+        "and translates it at each time step.",
+        "However, sometimes the words in the source language",
+        "do not align with the words in the target language.",
+        "Here's an example.",
+        "Take the sentence Black cat ate the mouse.",
+        "In this example, the first English word is black.",
+        "However, in the translation,",
+        "the first French word is chat, which means cat in English."
+      ],
+      "result": [
+        "你可以使用编码器解码器。",
+        "这是一种常用的翻译句子的模型。",
+        "编码解码器每次只处理一个单词，",
+        "然后在每个时间步骤进行翻译。",
+        "然而，有时源语言中的单词并不对应目标语言中的单词。",
+        "",
+        "这里有一个例子。",
+        "这个句子是“Black cat ate the mouse”。",
+        "在这个例子中，英文中的第一个词是“black”，",
+        "但在翻译成法文的时候，",
+        "第一个词是“chat”，意思是英文中的“cat”。"
+      ],
+      "output": [
+        {
+          "translated": "你可以使用编码器解码器。",
+          "indexes": [
+            0
+          ]
+        },
+        {
+          "translated": "这是一种用于翻译句子的流行模型。",
+          "indexes": [
+            1
+          ]
+        },
+        {
+          "translated": "编码器解码器一次处理一个单词，",
+          "indexes": [
+            2
+          ]
+        },
+        {
+          "translated": "每个时间步都进行翻译。",
+          "indexes": [
+            3
+          ]
+        },
+        {
+          "translated": "然而，有时源语言中的单词与目标语言中的单词不对应。",
+          "indexes": [
+            4,
+            5
+          ]
+        },
+        {
+          "translated": "这里有一个例子。",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "以句子“黑猫吃了老鼠”为例。",
+          "indexes": [
+            7
+          ]
+        },
+        {
+          "translated": "在这个例子中，第一个英语单词是黑色。",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "然而，在翻译中，",
+          "indexes": [
+            9
+          ]
+        },
+        {
+          "translated": "第一个法语单词是chat，意思是英语中的猫。",
+          "indexes": [
+            10
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 866
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 933
+          },
+          "text": "So how can you train a model to focus more on"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 633
+          },
+          "text": "the word cat instead of the word black?"
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 700
+          },
+          "text": "Add the first time step to improve the translation."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 666
+          },
+          "text": "You can add what is called the attention mechanism to the encoder decoder."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 333
+          },
+          "text": "Attention mechanism is a technique that allows the neural network"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 100
+          },
+          "text": "to focus on specific parts of an input sequence."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 500
+          },
+          "text": "This is done by assigning weights to different parts of the input sequence"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 900
+          },
+          "text": "with the most important parts receiving the highest weights."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 166
+          },
+          "text": "This is what a traditional RNN based encoder decoder looks like."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 700
+          },
+          "text": "The model takes one word at a time as input"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 433
+          },
+          "text": "updates the hidden state and passes it on to the next time step."
+        }
+      ],
+      "source": [
+        "So how can you train a model to focus more on",
+        "the word cat instead of the word black?",
+        "Add the first time step to improve the translation.",
+        "You can add what is called the attention mechanism to the encoder decoder.",
+        "Attention mechanism is a technique that allows the neural network",
+        "to focus on specific parts of an input sequence.",
+        "This is done by assigning weights to different parts of the input sequence",
+        "with the most important parts receiving the highest weights.",
+        "This is what a traditional RNN based encoder decoder looks like.",
+        "The model takes one word at a time as input",
+        "updates the hidden state and passes it on to the next time step."
+      ],
+      "result": [
+        "那么如何训练一个模型，让它在第一步时更多地关注“cat”这个词，而不是“black”这个词，以提高翻译的准确度呢？",
+        "",
+        "",
+        "你可以在编码解码器中加入所谓的注意力机制。",
+        "注意力机制是一种让神经网络能够专注于输入序列特定部分的技术，",
+        "",
+        "它通过为输入序列的不同部分分配权重来实现，",
+        "最重要的部分会获得最高的权重。",
+        "传统的基于RNN的编码解码器看起来是这样的：",
+        "模型一次接收一个单词作为输入，",
+        "更新隐藏状态，并将其传递到下一个时间步骤。"
+      ],
+      "output": [
+        {
+          "translated": "那么如何训练模型更关注猫这个词而不是黑色这个词呢？",
+          "indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "translated": "添加第一个时间步以改进翻译。",
+          "indexes": [
+            2
+          ]
+        },
+        {
+          "translated": "你可以在编码器解码器中添加所谓的注意力机制。",
+          "indexes": [
+            3
+          ]
+        },
+        {
+          "translated": "注意力机制是一种让神经网络关注输入序列特定部分的技术。",
+          "indexes": [
+            4,
+            5
+          ]
+        },
+        {
+          "translated": "这是通过为输入序列的不同部分分配权重来实现的，",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "最重要的部分获得最高的权重。",
+          "indexes": [
+            7
+          ]
+        },
+        {
+          "translated": "这就是传统的基于RNN的编码器解码器的样子。",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "该模型一次输入一个单词，",
+          "indexes": [
+            9
+          ]
+        },
+        {
+          "translated": "更新隐藏状态并将其传递给下一个时间步。",
+          "indexes": [
+            10
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 9,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 166
+          },
+          "text": "In the end,"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 766
+          },
+          "text": "only the final hidden state is passed on to the decoder."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 100
+          },
+          "text": "The decoder works with the final hidden state"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 466
+          },
+          "text": "for processing and translates it to the target language."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 700
+          },
+          "text": "An attention model differs from the traditional sequence"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 700
+          },
+          "text": "to sequence model in two ways."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 733
+          },
+          "text": "First, the encoder passes a lot more data to the decoder."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 100
+          },
+          "text": "So instead of just passing the final hidden state number"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 533
+          },
+          "text": "three to the decoder, the encoder passes"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "text": "all the hidden states from each time step."
+        }
+      ],
+      "source": [
+        "In the end,",
+        "only the final hidden state is passed on to the decoder.",
+        "The decoder works with the final hidden state",
+        "for processing and translates it to the target language.",
+        "An attention model differs from the traditional sequence",
+        "to sequence model in two ways.",
+        "First, the encoder passes a lot more data to the decoder.",
+        "So instead of just passing the final hidden state number",
+        "three to the decoder, the encoder passes",
+        "all the hidden states from each time step."
+      ],
+      "result": [
+        "在结束时，只有最后的隐藏状态会传递给解码器。",
+        "",
+        "解码器使用最后的隐藏状态进行处理，并将其翻译为目标语言。",
+        "",
+        "注意力模型与传统的序列到序列模型在两个方面有所不同。",
+        "",
+        "首先，编码器向解码器传递更多的数据。",
+        "所以，编码器不只是将最后的隐藏状态3传递给解码器，它会将每个时间步骤的所有隐藏状态都传递给解码器。",
+        "",
+        ""
+      ],
+      "output": [
+        {
+          "translated": "最后，只有最后的隐藏状态被传递给解码器。",
+          "indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "translated": "解码器使用最后的隐藏状态进行处理并将其翻译成目标语言。",
+          "indexes": [
+            2,
+            3
+          ]
+        },
+        {
+          "translated": "注意力模型与传统的序列到序列模型有两个不同之处。",
+          "indexes": [
+            4,
+            5
+          ]
+        },
+        {
+          "translated": "首先，编码器向解码器传递更多的数据。",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "因此，编码器不仅仅传递最后的隐藏状态3给解码器，还传递每个时间步的所有隐藏状态。",
+          "indexes": [
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 533
+          },
+          "text": "This gives the decoder more context"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 966
+          },
+          "text": "beyond just the final hidden state."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 400
+          },
+          "text": "The decoder uses all the hidden state information to translate the sentence."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 166
+          },
+          "text": "The second change that the attention mechanism brings is adding"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 500
+          },
+          "text": "an extra step to the attention decoder before producing its output."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 600
+          },
+          "text": "Let's take a look at what these steps are"
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 733
+          },
+          "text": "to focus"
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 433
+          },
+          "text": "only on the most relevant parts of the input."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 100
+          },
+          "text": "The decoder does the following."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 933
+          },
+          "text": "First, it looks at the set of encoder states that it has received."
+        }
+      ],
+      "source": [
+        "This gives the decoder more context",
+        "beyond just the final hidden state.",
+        "The decoder uses all the hidden state information to translate the sentence.",
+        "The second change that the attention mechanism brings is adding",
+        "an extra step to the attention decoder before producing its output.",
+        "Let's take a look at what these steps are",
+        "to focus",
+        "only on the most relevant parts of the input.",
+        "The decoder does the following.",
+        "First, it looks at the set of encoder states that it has received."
+      ],
+      "result": [
+        "这让解码器在只有最后隐藏状态的基础上获得了更多的上下文信息。",
+        "",
+        "解码器使用所有隐藏状态的信息来翻译句子。",
+        "注意力机制带来的第二个变化是，在产生输出之前，注意力解码器增加了一个额外的步骤。",
+        "",
+        "让我们看看这些步骤是怎么让解码器只关注输入中最相关的部分的。",
+        "",
+        "",
+        "解码器执行以下操作：",
+        "首先，它会观察到它收到的编码器状态集合，"
+      ],
+      "output": [
+        {
+          "translated": "这为解码器提供了更多的上下文，",
+          "indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "translated": "解码器使用所有隐藏状态信息来翻译句子。",
+          "indexes": [
+            2
+          ]
+        },
+        {
+          "translated": "注意力机制带来的第二个变化是在产生输出之前，为注意力解码器添加一个额外的步骤。",
+          "indexes": [
+            3,
+            4
+          ]
+        },
+        {
+          "translated": "让我们看看这些步骤是什么，",
+          "indexes": [
+            5
+          ]
+        },
+        {
+          "translated": "只关注输入中最相关的部分。",
+          "indexes": [
+            6,
+            7
+          ]
+        },
+        {
+          "translated": "解码器执行以下操作。",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "首先，它查看收到的一组编码器状态。",
+          "indexes": [
+            9
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 566
+          },
+          "text": "Each encoder Hidden State is associated"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 266
+          },
+          "text": "with a certain word in the input sentence."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 533
+          },
+          "text": "Second, it gives each hidden state a score."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 566
+          },
+          "text": "Third in multiplies each hidden state by its"
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 700
+          },
+          "text": "soft-max score as shown here."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 533
+          },
+          "text": "Thus amplifying hidden states with the highest scores"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 333
+          },
+          "text": "and downsizing hidden states with low scores."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 566
+          },
+          "text": "If we connect all of these pieces together,"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "text": "we're going to see how the Attention Network works."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 266
+          },
+          "text": "Before moving on, let's define some of the notations on this slide."
+        }
+      ],
+      "source": [
+        "Each encoder Hidden State is associated",
+        "with a certain word in the input sentence.",
+        "Second, it gives each hidden state a score.",
+        "Third in multiplies each hidden state by its",
+        "soft-max score as shown here.",
+        "Thus amplifying hidden states with the highest scores",
+        "and downsizing hidden states with low scores.",
+        "If we connect all of these pieces together,",
+        "we're going to see how the Attention Network works.",
+        "Before moving on, let's define some of the notations on this slide."
+      ],
+      "result": [
+        "每个编码器的隐藏状态都与输入句子中的某个词有关。",
+        "",
+        "其次，它会给每个隐藏状态一个分数。",
+        "然后，它会将每个隐藏状态乘以它的softmax分数，如图所示。",
+        "",
+        "这样就可以增强得分高的隐藏状态，降低得分低的隐藏状态。",
+        "",
+        "如果我们把所有这些元素都连接起来，我们就可以看到注意力网络是如何工作的。",
+        "",
+        "我们继续之前，让我们来定义一下这个幻灯片上的一些符号。"
+      ],
+      "output": [
+        {
+          "translated": "每个编码器隐藏状态都与输入句子中的某个词相关。",
+          "indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "translated": "第二，它为每个隐藏状态打分。",
+          "indexes": [
+            2
+          ]
+        },
+        {
+          "translated": "第三，它将每个隐藏状态乘以其soft-max分数，如图所示。",
+          "indexes": [
+            3,
+            4
+          ]
+        },
+        {
+          "translated": "这样可以放大分数最高的隐藏状态，缩小分数较低的隐藏状态。",
+          "indexes": [
+            5,
+            6
+          ]
+        },
+        {
+          "translated": "如果我们将所有这些部分连接在一起，我们将看到注意力网络是如何工作的。",
+          "indexes": [
+            7,
+            8
+          ]
+        },
+        {
+          "translated": "在继续之前，让我们定义一下这张幻灯片上的一些符号。",
+          "indexes": [
+            9
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": true
+    },
+    {
+      "items": [
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 766
+          },
+          "text": "Alpha here represents the attention rate at each time step."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 366
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 666
+          },
+          "text": "H represents the hidden state of the encoder RNN"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 0
+          },
+          "text": "at each time step h subscript"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 466
+          },
+          "text": "B represents the hidden state of the decoder"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 16,
+            "milliseconds": 833
+          },
+          "text": "RNN at each time step. With the attention mechanism"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 133
+          },
+          "text": "the inversion of the Black Cat translation is clearly visible"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 166
+          },
+          "text": "in the attention diagram and ate"
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "text": "translates as two words, a mange,"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 333
+          },
+          "text": "in French. We can see the attention network"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 366
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 933
+          },
+          "text": "staying focused on the word ate for two time steps."
+        }
+      ],
+      "source": [
+        "Alpha here represents the attention rate at each time step.",
+        "H represents the hidden state of the encoder RNN",
+        "at each time step h subscript",
+        "B represents the hidden state of the decoder",
+        "RNN at each time step. With the attention mechanism",
+        "the inversion of the Black Cat translation is clearly visible",
+        "in the attention diagram and ate",
+        "translates as two words, a mange,",
+        "in French. We can see the attention network",
+        "staying focused on the word ate for two time steps."
+      ],
+      "result": [
+        "这里的α表示每个时间步骤的注意力率，",
+        "H表示编码器RNN在每个时间步骤的隐藏状态，",
+        "",
+        "H下标b表示解码器RNN在",
+        "每个时间步骤的隐藏状态。有了注意力机制",
+        "\"Black Cat\"的翻译倒置就在注意力图中清晰可见，",
+        "",
+        "而\"ate\"在法语中翻译为两个词，\"a mange\"。",
+        "我们可以看到注意力网络在两个时间步骤内都集中在\"ate\"这个词上。",
+        ""
+      ],
+      "output": [
+        {
+          "translated": "这里的Alpha代表每个时间步的注意力率。",
+          "indexes": [
+            0
+          ]
+        },
+        {
+          "translated": "H代表编码器RNN的隐藏状态",
+          "indexes": [
+            1
+          ]
+        },
+        {
+          "translated": "在每个时间步的h下标。",
+          "indexes": [
+            2
+          ]
+        },
+        {
+          "translated": "B代表解码器的隐藏状态",
+          "indexes": [
+            3
+          ]
+        },
+        {
+          "translated": "在每个时间步的RNN。有了注意力机制",
+          "indexes": [
+            4
+          ]
+        },
+        {
+          "translated": "黑猫翻译的反转在注意力图中清晰可见",
+          "indexes": [
+            5
+          ]
+        },
+        {
+          "translated": "和吃，",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "翻译为两个词，一种螨虫，",
+          "indexes": [
+            7
+          ]
+        },
+        {
+          "translated": "在法语中。我们可以看到注意力网络",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "在两个时间步内专注于单词吃。",
+          "indexes": [
+            9
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [
+        "Sun Jun 25 2023 18:36:46 GMT-0500 (Central Daylight Time)\nRequest failed with status code 401\nError: Request failed with status code 401\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:523:35)\n    at endReadableNT (node:internal/streams/readable:1367:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]",
+        "Sun Jun 25 2023 18:37:40 GMT-0500 (Central Daylight Time)\ntest\nError: test\n    at startThread (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:83:15)\n    at async Promise.all (index 0)\n    at translate (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:101:3)\n    at main (/Users/junminliu/GitHub/subtitle-translator/src/main.ts:44:31)"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 933
+          },
+          "text": "During the attention"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 933
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 733
+          },
+          "text": "step we use the encoder hidden states and the H4 vector"
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 45,
+            "milliseconds": 100
+          },
+          "text": "to calculate a context vector a four for this time step."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 45,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 133
+          },
+          "text": "This is the weighted sum."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 400
+          },
+          "text": "We then concatenate H4"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 966
+          },
+          "text": "and a 4 into one vector."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 300
+          },
+          "text": "This concatenated vector is passed through a feedforward neural network."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 833
+          },
+          "text": "One train jointly with the model"
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 166
+          },
+          "text": "to predict the next work."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 766
+          },
+          "text": "The output of the feedforward neural network"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 0
+          },
+          "text": "indicates the output word of this time step."
+        }
+      ],
+      "source": [
+        "During the attention",
+        "step we use the encoder hidden states and the H4 vector",
+        "to calculate a context vector a four for this time step.",
+        "This is the weighted sum.",
+        "We then concatenate H4",
+        "and a 4 into one vector.",
+        "This concatenated vector is passed through a feedforward neural network.",
+        "One train jointly with the model",
+        "to predict the next work.",
+        "The output of the feedforward neural network",
+        "indicates the output word of this time step."
+      ],
+      "result": [
+        "在注意力步骤中，我们使用编码器隐藏状态和H4向量来计算这个时间步骤的上下文向量a4，",
+        "",
+        "",
+        "这是一个加权和。",
+        "然后，我们将H4和a4合并成一个向量。",
+        "",
+        "这个合并的向量被送入一个前馈神经网络中，",
+        "与模型一起训练，以预测下一个词。",
+        "",
+        "这个前馈神经网络的输出代表了这个时间步骤的输出词。",
+        ""
+      ],
+      "output": [
+        {
+          "translated": "在注意力步骤中，我们使用编码器隐藏状态和H4向量来计算这个时间步的上下文向量a4。",
+          "indexes": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "translated": "这是加权和。",
+          "indexes": [
+            3
+          ]
+        },
+        {
+          "translated": "然后我们将H4和a4连接成一个向量。",
+          "indexes": [
+            4,
+            5
+          ]
+        },
+        {
+          "translated": "这个连接的向量通过前馈神经网络。",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "与模型一起训练，预测下一个工作。",
+          "indexes": [
+            7,
+            8
+          ]
+        },
+        {
+          "translated": "前馈神经网络的输出指示这个时间步的输出词。",
+          "indexes": [
+            9,
+            10
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [
+        "Sun Jun 25 2023 18:36:46 GMT-0500 (Central Daylight Time)\nRequest failed with status code 401\nError: Request failed with status code 401\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:523:35)\n    at endReadableNT (node:internal/streams/readable:1367:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]",
+        "Sun Jun 25 2023 18:37:49 GMT-0500 (Central Daylight Time)\ntest\nError: test\n    at startThread (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:83:15)\n    at async Promise.all (index 0)\n    at translate (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:101:3)\n    at main (/Users/junminliu/GitHub/subtitle-translator/src/main.ts:44:31)"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 533
+          },
+          "text": "This process continues till the end of sentence token"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 166
+          },
+          "text": "is generated by the decoder."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 20,
+            "milliseconds": 666
+          },
+          "text": "This is how you can use an attention mechanism to improve"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 20,
+            "milliseconds": 666
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 466
+          },
+          "text": "the performance of a traditional encoder decoder architecture."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 300
+          },
+          "text": "Thank you so much for listening."
+        }
+      ],
+      "source": [
+        "This process continues till the end of sentence token",
+        "is generated by the decoder.",
+        "This is how you can use an attention mechanism to improve",
+        "the performance of a traditional encoder decoder architecture.",
+        "Thank you so much for listening."
+      ],
+      "result": [
+        "这个过程会一直持续，直到解码器生成句子结束的标记。",
+        "",
+        "这就是你可以如何使用注意力机制来提高传统编码解码架构性能的方式。",
+        "",
+        "非常感谢你的聆听。"
+      ],
+      "output": [
+        {
+          "translated": "这个过程一直持续到解码器生成句子结束标记。",
+          "indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "translated": "这就是你如何使用注意力机制来提高传统编码器解码器架构的性能。",
+          "indexes": [
+            2,
+            3
+          ]
+        },
+        {
+          "translated": "非常感谢你的聆听。",
+          "indexes": [
+            4
+          ]
+        }
+      ],
+      "status": "success",
+      "errors": [
+        "Sun Jun 25 2023 18:36:46 GMT-0500 (Central Daylight Time)\nRequest failed with status code 401\nError: Request failed with status code 401\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:523:35)\n    at endReadableNT (node:internal/streams/readable:1367:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]",
+        "Sun Jun 25 2023 18:37:55 GMT-0500 (Central Daylight Time)\ntest\nError: test\n    at startThread (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:83:15)\n    at async Promise.all (index 0)\n    at translate (/Users/junminliu/GitHub/subtitle-translator/src/translator.ts:101:3)\n    at main (/Users/junminliu/GitHub/subtitle-translator/src/main.ts:44:31)"
+      ],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Attention Mechanism Overview.srt",
+  "ouputBasePath": "input/Generative AI learning path/Attention Mechanism Overview",
+  "totalCost": 0.05448,
+  "translationPath": "input/Generative AI learning path/Attention Mechanism Overview/translation.json"
+}

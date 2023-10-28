@@ -1,0 +1,444 @@
+1
+00:00:01,199 --> 00:00:02,165
+大家好。
+Hi everyone.
+
+2
+00:00:02,165 --> 00:00:09,099
+我是谷歌高级解决方案实验室的机器学习工程师Takumi。
+I am Takumi, machine learning engineer at Google Advanced Solutions. Lab.
+
+4
+00:00:09,099 --> 00:00:14,999
+目前很多人都在谈论生成式AI及其新进展，
+Currently a lot of people are talking about generative AI and its new advancement,
+
+6
+00:00:15,000 --> 00:00:26,666
+正如你们中的一些人可能知道的那样，谷歌和谷歌云也发布了很多与生成式AI相关的新产品和功能。
+and as some of you may know, Google and Google Cloud also released so many generative AI related new products and features.
+
+9
+00:00:26,666 --> 00:00:37,200
+但在这个视频系列中，我们的目标不是创建我们的生成式AI的状态，也不是介绍谷歌云的新产品。
+But in this video series, our goal is not to create a state of our generative AIS, nor to introduce Google Cloud new products.
+
+12
+00:00:37,200 --> 00:00:42,299
+相反，我们将解释这背后有哪些技术。
+Instead, we will explain what kind of technology has walking behind them.
+
+13
+00:00:43,665 --> 00:00:50,765
+特别是在这个视频中，我将讨论如何实际创建一个非常简单的生成模型，
+And especially in this video, I'm going to talk about how to actually create a very simple generative model,
+
+15
+00:00:51,299 --> 00:01:00,198
+使用诸如编码器解码器注意力机制和一点Transformer的技术来创建图像说明文字模型。
+image captioning model by using a technologies like encoder decoder attention mechanism and a bit transformer.
+
+17
+00:01:01,200 --> 00:01:10,664
+如果你对这些概念不是很熟悉，我建议在此之前查看其他关于它们的视频。
+If you're not very familiar with these concepts, I recommend checking other videos, talking about them before this.
+
+20
+00:01:10,665 --> 00:01:10,965
+好的，
+Okay.
+
+21
+00:01:10,965 --> 00:01:15,498
+那么如果你准备好了，让我们来谈谈图像说明文字任务和数据集，
+So if you're ready, let's talk about image captioning tasks and data
+
+22
+00:01:15,500 --> 00:01:20,533
+首先，我们将使用这种类型的数据集。
+set out first, we're going to use this kind of dataset.
+
+23
+00:01:21,099 --> 00:01:33,499
+如你所见，这里有很多图像和文本数据配对，我们的目标是构建和训练一个模型，可以根据图像生成这种类型的说明文字。
+As you can see, there are a lot of pairs of images and text data and our goal is to build and train a model that can generate these kind of takes captions based on images,
+
+26
+00:01:34,132 --> 00:01:38,665
+我们将通过构建这种模型来实现这一目标。
+and we'll make it happen by building this kind of model.
+
+27
+00:01:38,665 --> 00:01:50,964
+如你所见，这是一种编码器解码器模型，但在这种情况下，编码器和解码器处理不同类型的数据，即图像和文本。
+As you can see, it is kind of encoder decoder model, but in this case, encode and decoder handle different modality of data, which is image and text.
+
+29
+00:01:50,965 --> 00:02:00,731
+因此，我们首先将图像传递给编码器，它从图像中提取信息并创建一些特征向量。
+So we pass the images to encoder at first and it extract information from the images and create some feature vectors.
+
+31
+00:02:00,733 --> 00:02:08,632
+然后，将向量传递给解码器，逐个生成字来构建说明文字。
+And then the vectors are passed to the decoder which actually build the captions by generating was one by one.
+
+33
+00:02:09,599 --> 00:02:11,965
+这个编码器部分很简单。
+So this encoder part is easy.
+
+34
+00:02:11,966 --> 00:02:20,099
+你可以使用任何类型的图像骨干网络，如ResNet、EfficientNet或Vision Transformer。
+You can use any kinds of image backbone like resonant efficient net or vision transformer.
+
+36
+00:02:20,099 --> 00:02:24,599
+我们想要做的是使用这些骨干网络来提取特征。
+What we want to do here is to extract features by using that kind of backbones.
+
+37
+00:02:25,566 --> 00:02:32,998
+因此，代码也非常简单，在代码方面，我们将在下一个视频中查看整个笔记本示例。
+So code is very simple too, in terms of the code, we're going to see the entire notebook example in the next video.
+
+39
+00:02:33,466 --> 00:02:39,299
+所以在这里，让我们只关注一些重要的行。
+So here, let's just focus on some important lines.
+
+41
+00:02:39,300 --> 00:02:47,231
+如你所见，我们在这里使用了经典的InceptionResNetV2，来自Carousel应用程序。
+As you can see, we are using classical inception version of V2 here from Carousel Applications.
+
+43
+00:02:47,233 --> 00:02:52,500
+但是，这可以是任何图像骨干网络。
+But again, this can be any image backbones.
+
+44
+00:02:52,500 --> 00:03:00,599
+接下来的部分有点复杂，让我们仔细看看。
+So the next part that the quarter is a bit complex. So let's take a look very carefully.
+
+46
+00:03:00,599 --> 00:03:03,299
+这是解码器的整个架构。
+So this is the entire architecture of the decoder.
+
+47
+00:03:04,400 --> 00:03:17,899
+它逐个获取，并将编码器输出中的词和图像信息进行组合，尝试预测下一个词。
+It it gets was one by one and makes the information of wires and images which is coming from the encoder output and tried to predict the next wires.
+
+51
+00:03:17,900 --> 00:03:21,465
+解码器本身是一种迭代操作。
+So this decoder itself is in kind of iterative operation.
+
+52
+00:03:21,900 --> 00:03:28,732
+通过反复调用或回归，最终可以生成六条说明文字。
+So by calling it again and again or to regress fully, we can eventually generate six captions.
+
+54
+00:03:29,900 --> 00:03:39,098
+有很多这种解码器设计的变体，但在这里我们构建了类似于Transformer的架构，尽管我们仍然使用RNN GRU。
+There are so many variations for this decoder design, but here we build transformer like architecture, although we still use are in RNN GUR.
+
+57
+00:03:40,765 --> 00:03:45,298
+让我们放大每个组件。
+So let's zoom into each component.
+
+58
+00:03:45,300 --> 00:03:56,099
+第一个嵌入层创建了单词嵌入，这在其他视频中已经讨论过了，我们将其传递给GUR层。
+The first embedding layer creates word embeddings, which was discussed in other videos and we are passing it to GUR layer.
+
+61
+00:03:56,099 --> 00:03:57,965
+如果你忘记了你猜的是什么。
+If you forgot what you are your guess.
+
+62
+00:03:57,966 --> 00:04:08,731
+这是一种循环神经网络的变体，或者你可以称之为RNN，RNN接收输入并更新其内部状态并生成输出。
+It's a variation of recurrent neural network or you can call r in n r n n takes inputs and updates its internal states and generate output.
+
+66
+00:04:09,599 --> 00:04:14,665
+所以通过传递序列数据，如文本数据，它可以保持序列依赖性。
+So by passing sequential data like text data, it keeps two sequential dependencies.
+
+68
+00:04:14,665 --> 00:04:24,898
+这些来自以前的输入，比如之前的词，那个GRU的输出进入了注意力层，它混合了文本和图像的信息。
+These from previous inputs like previous was that grow output goes to attention layer which mixes the information of texts and image
+
+71
+00:04:26,100 --> 00:04:31,033
+在TensorFlow Keras中，我们可以像使用其他层一样使用预定义的层。
+in TensorFlow Keras, we can use predefined layers in the same way as other layers.
+
+73
+00:04:32,165 --> 00:04:38,100
+有多种实现，但是我们在这里简单地使用了tf.keras.layers.Attention。
+There are multiple implementations, but here we simply use F cross layers attention.
+
+75
+00:04:39,300 --> 00:04:50,532
+但是，如果你想使用更像Transformer的架构，你可以了解tf.keras.layers.MultiHeadAttention，它使用多个注意力头。
+But if you want to use more transformer like architecture, you can know. So the pick up tf cross layers most attention which uses multiple attention heads.
+
+78
+00:04:51,600 --> 00:04:54,933
+你可以简单地切换并以几乎相同的方式使用它。
+You can simply switch and use it in almost the same way.
+
+79
+00:04:56,266 --> 00:05:03,765
+在我们的注意力层中，你可能已经在关于注意力机制的另一个视频中看到了这个。
+Inside our attention layer, it looks like this as you may have already seen in another video about attention mechanism.
+
+81
+00:05:04,800 --> 00:05:16,833
+但这里独特的是，它通过处理文本数据关注图像特征，这样，它可以通过混合两种信息来计算注意力分数。
+0 But the unique thing here is it pays attention to image feature from text data by doing so, it can calculate attention score by mixing both information.
+
+85
+00:05:18,600 --> 00:05:26,833
+回到代码，你可以看到这个注意力层接受两个输入，gru_ouput和encoder_output。
+Going back to code, you can see this attention layer takes two inputs gru_ouput and encoder output.
+
+88
+00:05:28,565 --> 00:05:36,599
+在内部，GRU的输出用作注意力查询和键，编码器输出用作值。
+Internally, GRU ouput is used as attention query and key and encoder output as value.
+
+90
+00:05:38,165 --> 00:05:43,364
+最后的组件是Add层和LayerNormalization层。
+The last components are add layer and layer normalization layer
+
+92
+00:05:44,932 --> 00:05:48,500
+Add层只是添加两个相同的移位向量。
+Add layer Just add two same shift vectors.
+
+94
+00:05:50,100 --> 00:06:04,765
+如你所见，GRU的输出被传递给我们讨论过的注意力层以及直接传递给这个Add层，这两个流最终在这个Add层中合并。
+As you can see here, the GRU ouput as passed to attention layer as we discussed and to this Add layer directly, these two flows are eventually marched in this Add layer.
+
+98
+00:06:05,000 --> 00:06:14,200
+这种架构被称为跳跃连接（Skip Connection），自Resonant以来一直非常受欢迎的深度神经网络设计模式。
+This kind of architecture is called skip connection, which has been a very popular deep neural network design pattern since Resonant.
+
+101
+00:06:15,333 --> 00:06:20,600
+因此，它也被称为残差连接（Residual Connection）。
+So it is also called residual connection.
+
+102
+00:06:20,600 --> 00:06:32,166
+这种跳跃连接非常有用，尤其是当你想设计一个非常深的神经网络时，它还用于Transformer。
+This skip connection is very useful, especially when you want to design a very deep neural network and it is also used in the transformer.
+
+105
+00:06:32,500 --> 00:06:42,499
+有了这个，我们现在可以构建一个完整的解码器，因此我们准备使用说明文字数据集训练编码器解码器图像说明文字模型。
+With this now we could build an entire decoder, so we are ready to train the encoder decoder image captioning model using the captioning dataset.
+
+108
+00:06:43,399 --> 00:06:47,932
+我们将在下一个视频中看到它是如何工作的。
+We will see how it works in the next video.
+
+109
+00:06:47,932 --> 00:07:02,766
+但在继续下一个之前，我想多解释一下关于推理阶段的内容，在这个阶段我们实际上可以为图像生成说明文字，因为这个过程可能看起来有点复杂。
+But before moving on to the next one, I want to explain a bit more about inference phase where we can actually generate captions for obviously images because this process may look a bit complex here.
+
+114
+00:07:02,766 --> 00:07:08,499
+在这里，我们可以看到三个步骤，我们将在一个自定义推理函数中实现这些步骤，
+We can see three steps and we're going to implement these steps in a custom inference function,
+
+116
+00:07:10,000 --> 00:07:17,865
+第一，生成初始状态并创建一个起始Token，在训练阶段。
+the number one, and generate the initial state and create a star token in training phase.
+
+119
+00:07:17,865 --> 00:07:23,698
+TensorFlow Chorus可以自动处理每个序列的状态，
+TensorFlow Keras can automatically handle a state for each sequence,
+
+121
+00:07:23,699 --> 00:07:31,500
+但在这个推理阶段，由于我们设计了自己的自定义函数，我们需要明确地编写处理它的逻辑。
+but in this inference phase, since we design our own custom function, we need to write a logic to deal with it explicitly.
+
+123
+00:07:33,266 --> 00:07:40,500
+因此，在每个说明文字的开始，我们明确地用某个值初始化GRU状态，
+So at the beginning of each captioning we explicitly initialize the GRU state with some value
+
+126
+00:07:41,800 --> 00:07:46,565
+同时记住我们的解码器是一个自回归函数。
+and at the same time remember our decoder is an auto regressive function.
+
+128
+00:07:47,466 --> 00:07:56,632
+但是由于我们在推理开始时还没有得到任何预测，所以我们从一个特殊的开始Token开始。
+But since we haven't get any wider prediction yet at the beginning of the inference we start talking, which is a special token.
+
+130
+00:07:56,632 --> 00:08:00,232
+这意味着一个句子的开始，
+That means the beginning of a sentence
+
+131
+00:08:00,733 --> 00:08:06,665
+第二，将图像输入到编码器，并按照我们讨论的进行特征向量的提取，
+number 2% input image to the encoder and instruct the feature vector as we discussed
+
+133
+00:08:07,233 --> 00:08:27,064
+第三，将向量传递给这个时间解码器，在for循环中生成一个说明文字的单词，直到它返回一个结束Token，或者达到最大说明文字长度，这只是一个指定一些数字的超参数，比如264。
+and number three passed a vector to this time decoder and generate a caption word in the for loop until it returns and token or it reads to max caption lengths, which is just a hyper parameter specifying some number like 264.
+
+138
+00:08:27,699 --> 00:08:41,499
+在这个完整的循环中，我们定义了所有说明文字通过反复调用解码器生成的过程，结束Token也是一个特殊的Token，意味着序列的结束。
+And in this full loop we define all the procedures of caption generation by calling the decoder also aggressively and token is a special token two, which means to end of the sequence.
+
+142
+00:08:42,265 --> 00:08:56,133
+因此，当我们的解码器生成这个Token时，我们可以完成这个完整的循环，或者当说明文字的长度达到某个最大长度时，可以跳出循环。
+So when our decoder generate this token, we can finish this full loop or you can go out of the loop when the lengths of the caption rigid, some number max capsule lengths.
+
+146
+00:08:56,133 --> 00:08:58,200
+让我们逐一看一下代码。
+Let's take a look at the code one by one.
+
+147
+00:08:59,832 --> 00:09:06,065
+在第一步中，我们初始化了两个东西：GRU状态和起始Token。
+In the first step we initialize two things GRU state and start token.
+
+149
+00:09:06,066 --> 00:09:16,299
+在这种情况下，GRU的状态只是用零向量初始化，而起始Token作为解码器的第一个输入词。
+In this case, GRU state is simply initialized with zero vectors n which says start tokens as the first input word for the decoder
+
+152
+00:09:18,066 --> 00:09:30,600
+关于这里使用的word_to_index函数，我将在下一个视频中解释，但它基本上只是将词汇分词为我们的Token，这是标准的文本预处理技术。
+in terms of the word_to_index function used here, I'm going to explain in the next video, but it basically is just tokenized awards to our token, which is the standard text pre-processing technique.
+
+155
+00:09:31,865 --> 00:09:37,866
+在下一步中，我们预处理输入的图像，并将其传递给我们训练的编码器。
+In the next step, we pre process to input image habit and pass it to the encoder we train.
+
+158
+00:09:39,399 --> 00:09:53,166
+在图像预处理方面，它首先读取并解码JPEG，然后将其从任意分辨率调整为特定分辨率，
+In terms of the image pre-processing, it reads in decode JPEG in the first line and resize it from any arbitrarily resolutions to specific resolution
+
+162
+00:09:53,166 --> 00:10:00,432
+接着在第三行将比例从0到255更改为0到1，
+and it changes to scale from 0 to 255 two 0 to 1 in the third line
+
+164
+00:10:01,932 --> 00:10:05,331
+最后是解码器循环。
+and the last phase decoder for loop.
+
+165
+00:10:05,332 --> 00:10:06,364
+这有点复杂。
+It is a bit complex.
+
+166
+00:10:06,365 --> 00:10:10,765
+因此，我将在下一个视频中更详细地解释实际代码。
+So I will explain in the next video more in detail with the actual code.
+
+167
+00:10:11,533 --> 00:10:17,698
+但这里的主要内容是通过传递三个事物来调用解码器。
+But the main thing here is to call the decoder by passing the three things.
+
+169
+00:10:17,700 --> 00:10:24,932
+解码输入意味着解码器输入，它应该有一个在上一次迭代中预测的词Token。
+Decode inputs means decoder inputs, which should have a wire token predicted in the previous iteration.
+
+171
+00:10:26,133 --> 00:10:37,266
+正如我们所说，如果这是第一次迭代，那么这将是开始Token，GRU状态是我们讨论过的当前状态。
+And as we talked, if it is the first iteration, this would be the start token of state is the current of state we discussed.
+
+174
+00:10:37,932 --> 00:10:44,599
+请注意记录器的这个输出，更新了GRU的状态。
+And please note that the recorder of this output, the updated GRU state
+
+176
+00:10:45,365 --> 00:10:47,732
+最后但同样重要的是特征，
+and last but not least features.
+
+177
+00:10:48,500 --> 00:10:52,565
+这是我们用编码器提取的图像特征。
+This is the image feature we extracted with the encoder.
+
+178
+00:10:52,566 --> 00:10:58,799
+通过传递它们，我们可以得到实际的下一个变量预测。
+By passing them we can get the actual next var the prediction.
+
+179
+00:10:58,799 --> 00:11:03,031
+这是一个非常简单的从图像生成文本的模型，
+This is a very simple text generation model from images,
+
+180
+00:11:03,666 --> 00:11:10,132
+但这种迭代在很大的语言生成模型中也非常相似，
+but this kind of iteration is very similar even in very large language generation models
+
+182
+00:11:10,432 --> 00:11:17,433
+就像Google Board， 他们基本上也是以这种方式预测下一个词，以自回归的方式，
+like Google Board, they basically predict the next Var, also rigorously in this way,
+
+184
+00:11:17,865 --> 00:11:25,664
+一个接一个地基于一些信息和学习到的知识，这些知识都嵌入在大量的参数中。
+one by one based on some information and learned knowledge, which is embedded in the huge number of parameters.
+
+186
+00:11:27,066 --> 00:11:30,900
+在下一个视频中，我将带你浏览整个Notebook，
+In the next video, I will walk you through the entire notebook
+
+187
+00:11:31,566 --> 00:11:37,865
+然后我们将检查这个模型可以生成哪些说明文字。
+and then we will check what kind of captions this model can generate.
+
+189
+00:11:37,865 --> 00:11:42,732
+非常感谢你的观看，我们下一个视频见。
+Thank you so much for watching and see you in the next video.

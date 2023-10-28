@@ -1,0 +1,2064 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 428
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 711
+          },
+          "text": "Hi, my name is Kyle Steckler, and I'm a machine learning engineer on the Advanced Solutions Lab team at Google Cloud."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 711
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 474
+          },
+          "text": "In this talk, we're going to dive into an introduction to image generation."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 474
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 114
+          },
+          "text": "Specifically, I'll provide an introduction to diffusion models,"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 115
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 919
+          },
+          "text": "a family of models that have recently shown tremendous promise in the image generation space."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 919
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 128
+          },
+          "text": "With that said, image generation has long been a field of interest,"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 129
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 163
+          },
+          "text": "and there are many interesting approaches that you may have heard about."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 598
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 114
+          },
+          "text": "Now, while many approaches have been implemented for image generation,"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 115
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 909
+          },
+          "text": "some of the more promising ones over time have been model families such as variational autoencoders,"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 910
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 443
+          },
+          "text": "which encode images to a compressed size"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 444
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 672
+          },
+          "text": "and then decode back to the original size while learning the distribution of the data itself."
+        }
+      ],
+      "source": [
+        "Hi, my name is Kyle Steckler, and I'm a machine learning engineer on the Advanced Solutions Lab team at Google Cloud.",
+        "In this talk, we're going to dive into an introduction to image generation.",
+        "Specifically, I'll provide an introduction to diffusion models,",
+        "a family of models that have recently shown tremendous promise in the image generation space.",
+        "With that said, image generation has long been a field of interest,",
+        "and there are many interesting approaches that you may have heard about.",
+        "Now, while many approaches have been implemented for image generation,",
+        "some of the more promising ones over time have been model families such as variational autoencoders,",
+        "which encode images to a compressed size",
+        "and then decode back to the original size while learning the distribution of the data itself."
+      ],
+      "result": [
+        "嗨，我叫Kyle Steckler，我是Google Cloud高级解决方案实验室团队的机器学习工程师。",
+        "在这次演讲中，我们将深入介绍图像生成的入门知识。",
+        "具体来说，我将介绍扩散模型，",
+        "这是近期在图像生成领域表现出巨大潜力的一类模型。",
+        "话虽如此，图像生成一直是一个颇受关注的领域，",
+        "你可能听说过许多有趣的方法。",
+        "现在，虽然已经实施了许多图像生成的方法，",
+        "但随着时间的推移，最有前景的一些方法已经被模型家族所采用，比如变分自编码器，",
+        "它们将图像编码到一个压缩的大小，",
+        "然后解码回原始大小，同时学习数据本身的分布。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 39
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 542
+          },
+          "text": "Generative adversarial models, or GANs, have also been quite popular."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 542
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 842
+          },
+          "text": "These models are really interesting."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 842
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 504
+          },
+          "text": "They actually pit two neural networks against each other."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 504
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 513
+          },
+          "text": "One neural network, the generator, creates images,"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 614
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 214
+          },
+          "text": "and the other neural network, the discriminator, predicts if the image is real or fake."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 749
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 688
+          },
+          "text": "Over time, the discriminator gets better and better at distinguishing between real and fake,"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 554
+          },
+          "text": "and the generator gets better and better at creating real-looking fakes."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 554
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 175
+          },
+          "text": "You may have heard the term deepfakes before."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 316
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 579
+          },
+          "text": "And lastly, autoregressive models."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 579
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 186
+          },
+          "text": "These things generate images by treating an image as a sequence of pixels."
+        }
+      ],
+      "source": [
+        "Generative adversarial models, or GANs, have also been quite popular.",
+        "These models are really interesting.",
+        "They actually pit two neural networks against each other.",
+        "One neural network, the generator, creates images,",
+        "and the other neural network, the discriminator, predicts if the image is real or fake.",
+        "Over time, the discriminator gets better and better at distinguishing between real and fake,",
+        "and the generator gets better and better at creating real-looking fakes.",
+        "You may have heard the term deepfakes before.",
+        "And lastly, autoregressive models.",
+        "These things generate images by treating an image as a sequence of pixels."
+      ],
+      "result": [
+        "生成对抗模型，或者说GANs，也非常受欢迎。",
+        "这些模型真的很有趣。",
+        "它们实际上是让两个神经网络相互对抗。",
+        "一个神经网络（生成器）创建图像，",
+        "另一个神经网络（鉴别器）预测图像是真是假。",
+        "随着时间的推移，鉴别器在区分真假方面越来越好，",
+        "生成器在创造逼真的假图像方面也越来越好。",
+        "你可能听说过“深度伪造(Deepfake)”这个术语。",
+        "最后，自回归模型。",
+        "这些模型将图像视为像素序列来生成。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 186
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 629
+          },
+          "text": "And the modern approach with autoregressive models actually draws"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 630
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 898
+          },
+          "text": "much of its inspiration from how LLMs, or large language models, handle text."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 898
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 579
+          },
+          "text": "Very interesting."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 563
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 284
+          },
+          "text": "Now in this talk, this is really going to be the focus."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 284
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 725
+          },
+          "text": "And this is one of the newer image generation model families."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 725
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 266
+          },
+          "text": "And that is diffusion models."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 787
+          },
+          "text": "Diffusion models draw their inspiration from physics, specifically thermodynamics."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 787
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 449
+          },
+          "text": "And while they were first really introduced for image generation in 2015,"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 649
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 770
+          },
+          "text": "it took a few years for the idea to really take off."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 457
+          },
+          "text": "Within the last few years though, 2020 up until now,"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 458
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 571
+          },
+          "text": "we have seen a massive increase of diffusion models in both the research space"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 9,
+            "milliseconds": 83
+          },
+          "text": "and now today in the industry space as well."
+        }
+      ],
+      "source": [
+        "And the modern approach with autoregressive models actually draws",
+        "much of its inspiration from how LLMs, or large language models, handle text.",
+        "Very interesting.",
+        "Now in this talk, this is really going to be the focus.",
+        "And this is one of the newer image generation model families.",
+        "And that is diffusion models.",
+        "Diffusion models draw their inspiration from physics, specifically thermodynamics.",
+        "And while they were first really introduced for image generation in 2015,",
+        "it took a few years for the idea to really take off.",
+        "Within the last few years though, 2020 up until now,",
+        "we have seen a massive increase of diffusion models in both the research space",
+        "and now today in the industry space as well."
+      ],
+      "result": [
+        "现代的自回归模型实际上从大型语言模型(LLMs)处理文本的方式中汲取了大量灵感。",
+        "",
+        "非常有趣。",
+        "在这次讲座中，这就是我们真正要关注的内容。",
+        "这是较新的图像生成模型家族之一。",
+        "那就是扩散模型。",
+        "扩散模型的灵感来源于物理学，特别是热力学。",
+        "虽然它们最初是在2015年为图像生成引入的，",
+        "但这个想法真正流行起来还是花了好几年时间。",
+        "然而，在过去的几年里，从2020年到现在，",
+        "我们在研究领域和现今的工业领域，都看到了扩散模型的大量增长。",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 12 vs 10, Wed Jun 14 2023 23:00:37 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 9,
+            "milliseconds": 83
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 145
+          },
+          "text": "Diffusion models underpin many of the state-of-the-art image generation systems that you may be familiar with today."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 337
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 601
+          },
+          "text": "Diffusion models show promise across a number of different use cases."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 601
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 992
+          },
+          "text": "Unconditioned diffusion models, where models have no additional input or instruction,"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 29
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 886
+          },
+          "text": "can be trained from images of a specific thing, such as faces, as you can see on the slide here,"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 887
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 633
+          },
+          "text": "and it will learn to generate new images of that thing."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 540
+          },
+          "text": "Another example of unconditioned generation is super resolution,"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 19
+          },
+          "text": "which is really powerful in enhancing low-quality images."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 975
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 692
+          },
+          "text": "We also have conditioned generation models,"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 892
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 986
+          },
+          "text": "and these give us things like text-to-image, where we can generate an image from a text prompt,"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 281
+          },
+          "text": "and other things like image-inpainting and text-guided image-to-image, where we can remove or add things."
+        }
+      ],
+      "source": [
+        "Diffusion models underpin many of the state-of-the-art image generation systems that you may be familiar with today.",
+        "Diffusion models show promise across a number of different use cases.",
+        "Unconditioned diffusion models, where models have no additional input or instruction,",
+        "can be trained from images of a specific thing, such as faces, as you can see on the slide here,",
+        "and it will learn to generate new images of that thing.",
+        "Another example of unconditioned generation is super resolution,",
+        "which is really powerful in enhancing low-quality images.",
+        "We also have conditioned generation models,",
+        "and these give us things like text-to-image, where we can generate an image from a text prompt,",
+        "and other things like image-inpainting and text-guided image-to-image, where we can remove or add things."
+      ],
+      "result": [
+        "可能你熟悉的许多最先进的图像生成系统都是由扩散模型支持的。",
+        "扩散模型在许多不同的使用场景中都展现出了潜力。",
+        "无条件的扩散模型，即模型没有额外的输入或指令，",
+        "可以从特定事物的图像中进行训练，比如你可以在这里的幻灯片中看到的脸，",
+        "它将学习生成新的图像。",
+        "无条件生成的另一个例子是超分辨率，",
+        "它在提高低质量图像的清晰度方面非常强大。",
+        "还有条件生成模型，",
+        "这些模型为我们提供了像从文本提示（Prompt）生成图像的文本到图像，",
+        "还有其他像图像修复和文本引导的图像到图像等功能，我们可以在图像上删除或添加内容。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 281
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 82
+          },
+          "text": "We can edit the image itself."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 82
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 465
+          },
+          "text": "Now, let's take a little bit of a deeper dive into diffusion models and talk about how do these things actually work."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 643
+          },
+          "text": "As noted on the slide here,"
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 644
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 165
+          },
+          "text": "the essential idea is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 29,
+            "milliseconds": 646
+          },
+          "text": "Really, this is going to be adding noise iteratively to an image."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 29,
+            "milliseconds": 646
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 3
+          },
+          "text": "We then learn a reverse diffusion process that restores structure in the data,"
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 203
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 810
+          },
+          "text": "yielding a highly flexible and tractable generative model of the data."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 817
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 44,
+            "milliseconds": 914
+          },
+          "text": "In other words, we can add noise to an image iteratively,"
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 43
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 681
+          },
+          "text": "and we can then train a model that learns how to denoise an image, thus generating novel images."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 681
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 863
+          },
+          "text": "So the goal here is that we want to have this model learn to denoise, to remove noise."
+        }
+      ],
+      "source": [
+        "We can edit the image itself.",
+        "Now, let's take a little bit of a deeper dive into diffusion models and talk about how do these things actually work.",
+        "As noted on the slide here,",
+        "the essential idea is to systematically and slowly destroy structure in a data distribution through an iterative forward diffusion process.",
+        "Really, this is going to be adding noise iteratively to an image.",
+        "We then learn a reverse diffusion process that restores structure in the data,",
+        "yielding a highly flexible and tractable generative model of the data.",
+        "In other words, we can add noise to an image iteratively,",
+        "and we can then train a model that learns how to denoise an image, thus generating novel images.",
+        "So the goal here is that we want to have this model learn to denoise, to remove noise."
+      ],
+      "result": [
+        "我们可以编辑图像本身。",
+        "现在，让我们更深入地探讨一下扩散模型，看看这些东西到底是如何工作的。",
+        "如幻灯片上所示，",
+        "基本的思想是通过迭代的前向扩散过程，系统地、慢慢地破坏数据分布中的结构。",
+        "实际上，这将是对图像进行迭代噪声添加。",
+        "然后我们学习一个反向扩散过程，恢复数据中的结构，",
+        "产生一个高度灵活且易于处理的数据生成模型。",
+        "换句话说，我们可以迭代地向图像添加噪声，",
+        "然后我们可以训练一个模型，学习如何去噪图像，从而生成新的图像。",
+        "因此，我们的目标是让这个模型学会去噪，去除噪声。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 863
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 305
+          },
+          "text": "And in that aspect then, we could start here on the left of the slide, we could start from pure noise,"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 945
+          },
+          "text": "And from that pure noise, we could have a model that will be able to synthesize a novel image."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 655
+          },
+          "text": "Now, I know that there's a bit of math notation on this slide, so let's break it down just a little bit."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 655
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 897
+          },
+          "text": "We start with a large data set of images."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 897
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 940
+          },
+          "text": "But let's just take a single image here, shown on the right-hand side."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 987
+          },
+          "text": "Well, we can start this forward diffusion process, and we can go from x0, the initial image, to x1, the initial image with a little bit of noise added to it."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 667
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 333
+          },
+          "text": "And we can do this over and over again, iteratively adding more and more noise to the initial image."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 397
+          },
+          "text": "Now this distribution we call q, and it only depends on the previous step."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 397
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 524
+          },
+          "text": "So if we do this over and over, iteratively adding more noise, we need to think about how many times do we perform that operation."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 524
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 926
+          },
+          "text": "And the initial research paper did this 1,000 times."
+        }
+      ],
+      "source": [
+        "And in that aspect then, we could start here on the left of the slide, we could start from pure noise,",
+        "And from that pure noise, we could have a model that will be able to synthesize a novel image.",
+        "Now, I know that there's a bit of math notation on this slide, so let's break it down just a little bit.",
+        "We start with a large data set of images.",
+        "But let's just take a single image here, shown on the right-hand side.",
+        "Well, we can start this forward diffusion process, and we can go from x0, the initial image, to x1, the initial image with a little bit of noise added to it.",
+        "And we can do this over and over again, iteratively adding more and more noise to the initial image.",
+        "Now this distribution we call q, and it only depends on the previous step.",
+        "So if we do this over and over, iteratively adding more noise, we need to think about how many times do we perform that operation.",
+        "And the initial research paper did this 1,000 times."
+      ],
+      "result": [
+        "那么从这个角度来看，我们可以从幻灯片的左边开始，从纯粹的噪声开始，",
+        "从这个纯粹的噪声中，我们可以有一个模型能够合成一个新的图像。",
+        "我知道这个幻灯片上有一些数学符号，所以让我稍微解释一下。",
+        "我们从一个大型的图像数据集开始。",
+        "但是让我们只选取一个图像，就像这里右边显示的那样。",
+        "好的，我们可以开始这个前向扩散过程，我们可以从x0（初始图像）到x1（加入一点噪声的初始图像）。",
+        "我们可以一次又一次地做这个过程，反复向初始图像添加更多的噪声。",
+        "我们称这个分布为q，它只依赖于前一步。",
+        "所以如果我们一次又一次地加入更多的噪声，我们需要思考我们要执行多少次这个操作。",
+        "而最初的研究论文做了1000次。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 8,
+            "milliseconds": 647
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 35
+          },
+          "text": "So ideally, with that number being high enough, 1000, by the end of it, we should reach a state of pure noise."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 35
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 420
+          },
+          "text": "And so by this point, all structure in the initial image is completely gone."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 222
+          },
+          "text": "We're just looking at pure noise."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 222
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 184
+          },
+          "text": "Now, obviously, that's kind of the easy part."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 184
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 286
+          },
+          "text": "It's not too difficult to perform q."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 247
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 543
+          },
+          "text": "to iteratively add more and more noise,"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 544
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 689
+          },
+          "text": "the challenging part is how do we go from a noisy image to a slightly less noisy image."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 689
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 44,
+            "milliseconds": 830
+          },
+          "text": "And so this we'll refer to as the reverse diffusion process."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 44,
+            "milliseconds": 830
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 53,
+            "milliseconds": 592
+          },
+          "text": "And at this stage, every step of the way, every step that we add noise, we also learn the reverse diffusion process."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 457
+          },
+          "text": "That is, we train a machine learning model that takes in as input the noisy image"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 458
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 539
+          },
+          "text": "and predicts the noise that's been added to it."
+        }
+      ],
+      "source": [
+        "So ideally, with that number being high enough, 1000, by the end of it, we should reach a state of pure noise.",
+        "And so by this point, all structure in the initial image is completely gone.",
+        "We're just looking at pure noise.",
+        "Now, obviously, that's kind of the easy part.",
+        "It's not too difficult to perform q.",
+        "to iteratively add more and more noise,",
+        "the challenging part is how do we go from a noisy image to a slightly less noisy image.",
+        "And so this we'll refer to as the reverse diffusion process.",
+        "And at this stage, every step of the way, every step that we add noise, we also learn the reverse diffusion process.",
+        "That is, we train a machine learning model that takes in as input the noisy image",
+        "and predicts the noise that's been added to it."
+      ],
+      "result": [
+        "理想情况下，如果这个数字足够高，比如1000，到最后，我们应该达到纯噪声的状态。",
+        "到这个时候，初始图像中的所有结构都完全消失了。",
+        "我们只看到纯噪声。",
+        "显然，这是相对容易的部分。",
+        "执行q并不太困难，",
+        "只是逐步增加更多的噪声，",
+        "困难的部分是我们如何从一个噪声图像转变为一个稍微噪声较少的图像。",
+        "我们将这个过程称为反向扩散过程。",
+        "在这个阶段，我们每一步都要添加噪声，我们也都要学习反向扩散过程。",
+        "也就是说，我们训练一个机器学习模型，输入噪声图像，",
+        "并预测已经加入到图像中的噪声。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 539
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 901
+          },
+          "text": "Now let's look at that from a slightly different angle."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 901
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 743
+          },
+          "text": "We can visualize a single training step of the model here."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 743
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 19,
+            "milliseconds": 887
+          },
+          "text": "So we have our initial image x on the left and we sample at a time step to create a noisy image."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 873
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 534
+          },
+          "text": "We then send that through our denoising model with the goal of predicting the noise."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 534
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 30,
+            "milliseconds": 475
+          },
+          "text": "So the output of the model is the predicted noise."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 30,
+            "milliseconds": 475
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 596
+          },
+          "text": "But we just added the noise to this image."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 596
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 876
+          },
+          "text": "We know what it is."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 876
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 35,
+            "milliseconds": 656
+          },
+          "text": "So we can actually compare that."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 35,
+            "milliseconds": 656
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 41,
+            "milliseconds": 658
+          },
+          "text": "We can see what is the difference between the model's predicted noise and the actual noise that we added."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 510
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 50,
+            "milliseconds": 797
+          },
+          "text": "Now this model is trained similar to most machine learning models that you might be familiar with to minimize that difference."
+        }
+      ],
+      "source": [
+        "Now let's look at that from a slightly different angle.",
+        "We can visualize a single training step of the model here.",
+        "So we have our initial image x on the left and we sample at a time step to create a noisy image.",
+        "We then send that through our denoising model with the goal of predicting the noise.",
+        "So the output of the model is the predicted noise.",
+        "But we just added the noise to this image.",
+        "We know what it is.",
+        "So we can actually compare that.",
+        "We can see what is the difference between the model's predicted noise and the actual noise that we added.",
+        "Now this model is trained similar to most machine learning models that you might be familiar with to minimize that difference."
+      ],
+      "result": [
+        "现在让我们从一个稍微不同的角度来看待这个问题。",
+        "我们可以在这里可视化模型的单个训练步骤。",
+        "所以我们在左边有初始图像x，并且在一个时间步骤中生成一个噪声图像。",
+        "然后我们将其输入我们的去噪模型，目标是预测噪声。",
+        "所以模型的输出就是预测的噪声。",
+        "但我们刚刚向这个图像添加了噪声。",
+        "我们知道它是什么。",
+        "我们实际上可以比较一下。",
+        "我们可以看看模型预测的噪声和我们实际添加的噪声之间的区别。",
+        "这个模型的训练方式类似于你可能熟悉的大多数机器学习模型，目标是最小化那个差异。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 50,
+            "milliseconds": 797
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 725
+          },
+          "text": "And over time, after seeing enough examples, this model gets very, very good at removing noise from images."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 725
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 206
+          },
+          "text": "And now for the fun part."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 206
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 10
+          },
+          "text": "This is where it gets really cool as we need to think about once we train this model,"
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 932
+          },
+          "text": "how do we generate images with it?"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 8,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 10,
+            "milliseconds": 662
+          },
+          "text": "Well, it's actually fairly intuitive."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 10,
+            "milliseconds": 662
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 19,
+            "milliseconds": 72
+          },
+          "text": "We can just start with pure absolute noise and send that noise through our model that is trained."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 19,
+            "milliseconds": 72
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 58
+          },
+          "text": "We then take the output, the predicted noise, and subtract it from the initial noise."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 58
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 184
+          },
+          "text": "And if we do that over and over and over again, we end up with a generated image."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 31,
+            "milliseconds": 650
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "text": "Another way to think about this is that"
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 1
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 39,
+            "milliseconds": 45
+          },
+          "text": "the model is able to learn the real data distribution of images that it's seen"
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 39,
+            "milliseconds": 245
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 44,
+            "milliseconds": 779
+          },
+          "text": "and then sample from that learned distribution to create new novel images."
+        }
+      ],
+      "source": [
+        "And over time, after seeing enough examples, this model gets very, very good at removing noise from images.",
+        "And now for the fun part.",
+        "This is where it gets really cool as we need to think about once we train this model,",
+        "how do we generate images with it?",
+        "Well, it's actually fairly intuitive.",
+        "We can just start with pure absolute noise and send that noise through our model that is trained.",
+        "We then take the output, the predicted noise, and subtract it from the initial noise.",
+        "And if we do that over and over and over again, we end up with a generated image.",
+        "Another way to think about this is that",
+        "the model is able to learn the real data distribution of images that it's seen",
+        "and then sample from that learned distribution to create new novel images."
+      ],
+      "result": [
+        "随着时间的推移，看过足够多的例子后，这个模型在去除图像噪声方面变得非常非常好。",
+        "现在来到有趣的部分。",
+        "这是真正酷的地方，我们需要思考一旦我们训练了这个模型，",
+        "我们如何用它生成图像？",
+        "实际上，这是非常直观的。",
+        "我们可以从纯粹的绝对噪声开始，然后将这个噪声送入我们训练过的模型。",
+        "然后我们取出输出，预测的噪声，并从初始噪声中减去它。",
+        "如果我们一次又一次地这样做，我们最终会得到一个生成的图像。",
+        "另一种思考方式是，",
+        "模型能够学习到它所看到的图像的真实数据分布，",
+        "然后从那个学习到的分布中采样，创建新的、独特的图像。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 44,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 220
+          },
+          "text": "Very cool."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 584
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 232
+          },
+          "text": "As I'm sure we're all aware, there have been many advances in this space in just the last few years."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 232
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 504
+          },
+          "text": "And while many of the exciting new technologies on Vertex AI for image generation are underpinned with diffusion models,"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 505
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 4,
+            "milliseconds": 726
+          },
+          "text": "lots of work has been done to generate images faster and with more control."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 487
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 10,
+            "milliseconds": 514
+          },
+          "text": "Hopefully now, after taking a little bit of a look under the covers into how diffusion models work,"
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 10,
+            "milliseconds": 515
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 17,
+            "milliseconds": 700
+          },
+          "text": "you have a bit better intuition as to what's actually going on with these really new, innovative model types."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 18,
+            "milliseconds": 175
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 429
+          },
+          "text": "We've also seen wonderful results combining the power of diffusion models with the power of LLMs, or large language models,"
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 571
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 565
+          },
+          "text": "that can really enable us to create context-aware, photorealistic images from a text prompt."
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 34,
+            "milliseconds": 502
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 325
+          },
+          "text": "One great example of this is Imagen from Google Research."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 325
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 400
+          },
+          "text": "While it's a bit more complicated than what we've talked through in this session,"
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 401
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 49,
+            "milliseconds": 613
+          },
+          "text": "you can see that at its core, it's a composition of an LLM and a few diffusion-based models."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 49,
+            "milliseconds": 613
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 471
+          },
+          "text": "This is a really exciting space,"
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 472
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 178
+          },
+          "text": "and I'm thrilled to see this wonderful technology make its way into enterprise-grade products on Vertex AI."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 178
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 919
+          },
+          "text": "Thanks for listening."
+        }
+      ],
+      "source": [
+        "Very cool.",
+        "As I'm sure we're all aware, there have been many advances in this space in just the last few years.",
+        "And while many of the exciting new technologies on Vertex AI for image generation are underpinned with diffusion models,",
+        "lots of work has been done to generate images faster and with more control.",
+        "Hopefully now, after taking a little bit of a look under the covers into how diffusion models work,",
+        "you have a bit better intuition as to what's actually going on with these really new, innovative model types.",
+        "We've also seen wonderful results combining the power of diffusion models with the power of LLMs, or large language models,",
+        "that can really enable us to create context-aware, photorealistic images from a text prompt.",
+        "One great example of this is Imagen from Google Research.",
+        "While it's a bit more complicated than what we've talked through in this session,",
+        "you can see that at its core, it's a composition of an LLM and a few diffusion-based models.",
+        "This is a really exciting space,",
+        "and I'm thrilled to see this wonderful technology make its way into enterprise-grade products on Vertex AI.",
+        "Thanks for listening."
+      ],
+      "result": [
+        "非常酷！",
+        "我相信我们都知道，在过去的几年里，这个领域有了许多进展。",
+        "尽管在 Vertex AI 中，许多令人兴奋的新图像生成技术都是以扩散模型为基础，",
+        "但我们已经做了大量的工作，使得图像生成更快，控制更精确。",
+        "希望现在，经过简单了解扩散模型如何工作的介绍后，",
+        "你对这些真正新颖、创新的模型类型有更好的理解。",
+        "我们也看到，将扩散模型的力量与大型语言模型（LLM）的力量相结合，可以带来出色的结果，",
+        "真正让我们能够根据文本提示（Prompt）生成具有上下文感知的、照片级真实的图像。",
+        "Google Research 的 Imagen 就是一个很好的例子。",
+        "虽然这比我们在这个环节中讨论的内容要复杂一些，",
+        "但你可以看到，它的核心是一个大型语言模型和几个基于扩散的模型的组合。",
+        "这是一个非常令人兴奋的领域，",
+        "我很高兴看到这项出色的技术正在被整合进 Vertex AI 的企业级产品中。",
+        "感谢你的聆听！"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Introduction to Image Generation.srt",
+  "ouputBasePath": "input/Generative AI learning path/Introduction to Image Generation",
+  "totalCost": 0.23385,
+  "translationPath": "input/Generative AI learning path/Introduction to Image Generation/translation.json"
+}

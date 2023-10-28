@@ -1,0 +1,294 @@
+1
+00:00:00,033 --> 00:00:01,866
+嗨，我是Sanjana Reddy，
+Hi. I'm Sanjana Reddy,
+
+2
+00:00:01,866 --> 00:00:05,300
+我在谷歌高级解决方案实验室担任机器学习工程师。
+a machine learning engineer at Google's Advanced Solutions Lab.
+
+3
+00:00:06,000 --> 00:00:12,933
+最近，生成式AI和相关的新技术引起了大家的关注，包括新的Vertex AI功能，
+There's a lot of excitement currently around generative AI and new advancements, including new vertex AI features
+
+5
+00:00:13,266 --> 00:00:17,733
+如Gen AI、Studio Model Garden、Gen AI API等。
+such as Gen AI, Studio Model Garden, Gen AI API.
+
+6
+00:00:18,166 --> 00:00:27,433
+在这个简短的课程中，我们的目标是让您能了解Gen AI背后的一些基本概念，打下一个坚实的基础。
+Our objective in this short session is to give you a solid footing on some of the underlying concepts that make all the Gen AI magic possible.
+
+8
+00:00:28,166 --> 00:00:31,833
+今天我要谈谈注意力机制，
+Today I'm going to talk about the attention mechanism
+
+9
+00:00:32,000 --> 00:00:37,433
+它是所有Transformer模型背后推动力，也是LEM模型的核心。
+that is behind all the transformer models and which is core to the LEM models.
+
+10
+00:00:38,400 --> 00:00:44,833
+假设您想把英语句子“the cat ate the mouse”翻译成法语。
+Let's say you want to translate in English sentence the cat ate the mouse to French.
+
+12
+00:00:44,900 --> 00:00:47,033
+你可以使用编码器解码器。
+You could use an encoder decoder.
+
+13
+00:00:47,433 --> 00:00:51,366
+这是一种常用的翻译句子的模型。
+This is a popular model that is used to translate sentences.
+
+14
+00:00:51,966 --> 00:00:55,533
+编码解码器每次只处理一个单词，
+The encoder decoder takes one word at a time
+
+15
+00:00:55,533 --> 00:00:57,700
+然后在每个时间步骤进行翻译。
+and translates it at each time step.
+
+16
+00:00:58,266 --> 00:01:05,233
+然而，有时源语言中的单词并不对应目标语言中的单词。
+However, sometimes the words in the source language do not align with the words in the target language.
+
+18
+00:01:05,633 --> 00:01:07,133
+这里有一个例子。
+Here's an example.
+
+19
+00:01:07,133 --> 00:01:10,100
+这个句子是“Black cat ate the mouse”。
+Take the sentence Black cat ate the mouse.
+
+20
+00:01:10,666 --> 00:01:13,833
+在这个例子中，英文中的第一个词是“black”，
+In this example, the first English word is black.
+
+21
+00:01:14,433 --> 00:01:16,500
+但在翻译成法文的时候，
+However, in the translation,
+
+22
+00:01:16,500 --> 00:01:21,300
+第一个词是“chat”，意思是英文中的“cat”。
+the first French word is chat, which means cat in English.
+
+23
+00:01:21,866 --> 00:01:31,700
+那么如何训练一个模型，让它在第一步时更多地关注“cat”这个词，而不是“black”这个词，以提高翻译的准确度呢？
+So how can you train a model to focus more on the word cat instead of the word black? Add the first time step to improve the translation.
+
+26
+00:01:31,733 --> 00:01:36,666
+你可以在编码解码器中加入所谓的注意力机制。
+You can add what is called the attention mechanism to the encoder decoder.
+
+27
+00:01:37,466 --> 00:01:45,100
+注意力机制是一种让神经网络能够专注于输入序列特定部分的技术，
+Attention mechanism is a technique that allows the neural network to focus on specific parts of an input sequence.
+
+29
+00:01:45,933 --> 00:01:50,500
+它通过为输入序列的不同部分分配权重来实现，
+This is done by assigning weights to different parts of the input sequence
+
+30
+00:01:50,833 --> 00:01:54,900
+最重要的部分会获得最高的权重。
+with the most important parts receiving the highest weights.
+
+31
+00:01:55,766 --> 00:02:00,166
+传统的基于RNN的编码解码器看起来是这样的：
+This is what a traditional RNN based encoder decoder looks like.
+
+32
+00:02:00,766 --> 00:02:03,700
+模型一次接收一个单词作为输入，
+The model takes one word at a time as input
+
+33
+00:02:04,266 --> 00:02:08,433
+更新隐藏状态，并将其传递到下一个时间步骤。
+updates the hidden state and passes it on to the next time step.
+
+34
+00:02:09,933 --> 00:02:14,766
+在结束时，只有最后的隐藏状态会传递给解码器。
+In the end, only the final hidden state is passed on to the decoder.
+
+36
+00:02:15,933 --> 00:02:23,466
+解码器使用最后的隐藏状态进行处理，并将其翻译为目标语言。
+The decoder works with the final hidden state for processing and translates it to the target language.
+
+38
+00:02:24,433 --> 00:02:29,700
+注意力模型与传统的序列到序列模型在两个方面有所不同。
+An attention model differs from the traditional sequence to sequence model in two ways.
+
+40
+00:02:30,333 --> 00:02:34,733
+首先，编码器向解码器传递更多的数据。
+First, the encoder passes a lot more data to the decoder.
+
+41
+00:02:35,400 --> 00:02:45,000
+所以，编码器不只是将最后的隐藏状态3传递给解码器，它会将每个时间步骤的所有隐藏状态都传递给解码器。
+So instead of just passing the final hidden state number three to the decoder, the encoder passes all the hidden states from each time step.
+
+44
+00:02:46,033 --> 00:02:50,966
+这让解码器在只有最后隐藏状态的基础上获得了更多的上下文信息。
+This gives the decoder more context beyond just the final hidden state.
+
+46
+00:02:51,666 --> 00:02:56,400
+解码器使用所有隐藏状态的信息来翻译句子。
+The decoder uses all the hidden state information to translate the sentence.
+
+47
+00:02:56,800 --> 00:03:05,500
+注意力机制带来的第二个变化是，在产生输出之前，注意力解码器增加了一个额外的步骤。
+The second change that the attention mechanism brings is adding an extra step to the attention decoder before producing its output.
+
+49
+00:03:06,600 --> 00:03:13,433
+让我们看看这些步骤是怎么让解码器只关注输入中最相关的部分的。
+Let's take a look at what these steps are to focus only on the most relevant parts of the input.
+
+52
+00:03:13,800 --> 00:03:17,100
+解码器执行以下操作：
+The decoder does the following.
+
+53
+00:03:17,100 --> 00:03:21,933
+首先，它会观察到它收到的编码器状态集合，
+First, it looks at the set of encoder states that it has received.
+
+54
+00:03:22,933 --> 00:03:28,266
+每个编码器的隐藏状态都与输入句子中的某个词有关。
+Each encoder Hidden State is associated with a certain word in the input sentence.
+
+56
+00:03:28,733 --> 00:03:31,533
+其次，它会给每个隐藏状态一个分数。
+Second, it gives each hidden state a score.
+
+57
+00:03:32,400 --> 00:03:38,700
+然后，它会将每个隐藏状态乘以它的softmax分数，如图所示。
+Third in multiplies each hidden state by its soft-max score as shown here.
+
+59
+00:03:38,700 --> 00:03:46,333
+这样就可以增强得分高的隐藏状态，降低得分低的隐藏状态。
+Thus amplifying hidden states with the highest scores and downsizing hidden states with low scores.
+
+61
+00:03:47,133 --> 00:03:52,500
+如果我们把所有这些元素都连接起来，我们就可以看到注意力网络是如何工作的。
+If we connect all of these pieces together, we're going to see how the Attention Network works.
+
+63
+00:03:53,033 --> 00:03:57,266
+我们继续之前，让我们来定义一下这个幻灯片上的一些符号。
+Before moving on, let's define some of the notations on this slide.
+
+64
+00:03:57,933 --> 00:04:01,766
+这里的α表示每个时间步骤的注意力率，
+Alpha here represents the attention rate at each time step.
+
+65
+00:04:02,366 --> 00:04:09,000
+H表示编码器RNN在每个时间步骤的隐藏状态，
+H represents the hidden state of the encoder RNN at each time step h subscript
+
+67
+00:04:09,000 --> 00:04:12,466
+H下标b表示解码器RNN在
+B represents the hidden state of the decoder
+
+68
+00:04:12,466 --> 00:04:16,833
+每个时间步骤的隐藏状态。有了注意力机制
+RNN at each time step. With the attention mechanism
+
+69
+00:04:17,000 --> 00:04:24,166
+"Black Cat"的翻译倒置就在注意力图中清晰可见，
+the inversion of the Black Cat translation is clearly visible in the attention diagram and ate
+
+71
+00:04:24,533 --> 00:04:27,000
+而"ate"在法语中翻译为两个词，"a mange"。
+translates as two words, a mange,
+
+72
+00:04:27,266 --> 00:04:33,933
+我们可以看到注意力网络在两个时间步骤内都集中在"ate"这个词上。
+in French. We can see the attention network staying focused on the word ate for two time steps.
+
+74
+00:04:34,933 --> 00:04:45,100
+在注意力步骤中，我们使用编码器隐藏状态和H4向量来计算这个时间步骤的上下文向量a4，
+During the attention step we use the encoder hidden states and the H4 vector to calculate a context vector a four for this time step.
+
+77
+00:04:45,666 --> 00:04:48,133
+这是一个加权和。
+This is the weighted sum.
+
+78
+00:04:48,133 --> 00:04:52,966
+然后，我们将H4和a4合并成一个向量。
+We then concatenate H4 and a 4 into one vector.
+
+80
+00:04:54,000 --> 00:04:58,300
+这个合并的向量被送入一个前馈神经网络中，
+This concatenated vector is passed through a feedforward neural network.
+
+81
+00:04:58,733 --> 00:05:04,166
+与模型一起训练，以预测下一个词。
+One train jointly with the model to predict the next work.
+
+83
+00:05:04,166 --> 00:05:10,000
+这个前馈神经网络的输出代表了这个时间步骤的输出词。
+The output of the feedforward neural network indicates the output word of this time step.
+
+85
+00:05:10,500 --> 00:05:17,166
+这个过程会一直持续，直到解码器生成句子结束的标记。
+This process continues till the end of sentence token is generated by the decoder.
+
+87
+00:05:17,166 --> 00:05:24,466
+这就是你可以如何使用注意力机制来提高传统编码解码架构性能的方式。
+This is how you can use an attention mechanism to improve the performance of a traditional encoder decoder architecture.
+
+89
+00:05:25,233 --> 00:05:28,300
+非常感谢你的聆听。
+Thank you so much for listening.

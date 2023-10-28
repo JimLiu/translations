@@ -1,0 +1,4357 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 465
+          },
+          "text": "Hi. I'm Sanjana"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 764
+          },
+          "text": "Reddy, a machine learning engineer at Google's Advanced Solutions Lab."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 65
+          },
+          "text": "There's been a lot of excitement around generative AI and all the new"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 365
+          },
+          "text": "advancements, including new vertex AI features that are coming up,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 165
+          },
+          "text": "such as Gen AI Studio, Model Garden, Gen AI API."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 699
+          },
+          "text": "Our objective in this short session is to give you a solid footing"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 733
+          },
+          "text": "on some of the underlying concepts that make"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 32
+          },
+          "text": "all the Gen AI magic possible."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 665
+          },
+          "text": "Today I'm going to talk about transformer"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 964
+          },
+          "text": "models and the BERT model."
+        }
+      ],
+      "source": [
+        "Hi. I'm Sanjana",
+        "Reddy, a machine learning engineer at Google's Advanced Solutions Lab.",
+        "There's been a lot of excitement around generative AI and all the new",
+        "advancements, including new vertex AI features that are coming up,",
+        "such as Gen AI Studio, Model Garden, Gen AI API.",
+        "Our objective in this short session is to give you a solid footing",
+        "on some of the underlying concepts that make",
+        "all the Gen AI magic possible.",
+        "Today I'm going to talk about transformer",
+        "models and the BERT model."
+      ],
+      "result": [
+        "嗨，我是Sanjana Reddy，我在谷歌的高级解决方案实验室担任机器学习工程师。",
+        "",
+        "最近，生成式AI以及相关的新的技术，包括即将出现的新的顶点AI特性，如Gen AI Studio, Model Garden, Gen AI API等，引起了大量的关注和热议。",
+        "",
+        "",
+        "在这个简短的课程中，我们的目标是让你对构成所有Gen AI神奇的基本概念有一个扎实的理解。",
+        "",
+        "",
+        "今天，我将要谈论的是Transformer模型和BERT模型。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "嗨，我是Sanjana Reddy，我在谷歌的高级解决方案实验室担任机器学习工程师。",
+          "indexes": [
+            0,
+            1
+          ]
+        },
+        {
+          "translated": "围绕生成性AI以及所有新的进步，包括即将推出的新的顶点AI功能，产生了很多兴奋。",
+          "indexes": [
+            2,
+            3
+          ]
+        },
+        {
+          "translated": "比如Gen AI Studio，Model Garden，Gen AI API。",
+          "indexes": [
+            4
+          ]
+        },
+        {
+          "translated": "我们在这个短暂的会议中的目标是为你提供一些坚实的基础，",
+          "indexes": [
+            5
+          ]
+        },
+        {
+          "translated": "这些基础使所有的Gen AI魔法成为可能。",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "今天我要谈论的是Transformer模型和BERT模型。",
+          "indexes": [
+            7,
+            8,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 732
+          },
+          "text": "Language modeling has evolved over the years."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 399
+          },
+          "text": "The recent breakthroughs in the past ten years include the usage"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 365
+          },
+          "text": "of neural networks to represent text,"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 999
+          },
+          "text": "such as Word2vec an N-grams in 2013."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 832
+          },
+          "text": "In 2014, the development of sequence to sequence models"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 466
+          },
+          "text": "such as RNN's and LSTM’s"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 331
+          },
+          "text": "helped improve the performance of ML models on NLP tasks"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 766
+          },
+          "text": "such as translation and text classification."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 633
+          },
+          "text": "In 2015, the excitement came with attention mechanisms"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 665
+          },
+          "text": "and the models built based on it, such"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 16,
+            "milliseconds": 964
+          },
+          "text": "as Transformers and the Bert model."
+        }
+      ],
+      "source": [
+        "Language modeling has evolved over the years.",
+        "The recent breakthroughs in the past ten years include the usage",
+        "of neural networks to represent text,",
+        "such as Word2vec an N-grams in 2013.",
+        "In 2014, the development of sequence to sequence models",
+        "such as RNN's and LSTM’s",
+        "helped improve the performance of ML models on NLP tasks",
+        "such as translation and text classification.",
+        "In 2015, the excitement came with attention mechanisms",
+        "and the models built based on it, such",
+        "as Transformers and the Bert model."
+      ],
+      "result": [
+        "语言建模技术在过去几年中发生了很大的变化。",
+        "过去十年的最新突破包括使用神经网络来表示文本，",
+        "",
+        "例如2013年的Word2vec和N-grams。",
+        "2014年，序列到序列模型的发展，",
+        "如RNN和LSTM，",
+        "帮助提高了机器学习模型在自然语言处理任务上的性能，",
+        "如翻译和文本分类。",
+        "2015年，随着注意力机制的出现及其基于该机制建立的模型，如Transformer和Bert模型，引起了人们的关注。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "语言建模多年来一直在发展。",
+          "indexes": [
+            0
+          ]
+        },
+        {
+          "translated": "过去十年的最新突破包括使用神经网络来表示文本，",
+          "indexes": [
+            1,
+            2
+          ]
+        },
+        {
+          "translated": "例如2013年的Word2vec和N-grams。",
+          "indexes": [
+            3
+          ]
+        },
+        {
+          "translated": "2014年，序列到序列模型的发展，",
+          "indexes": [
+            4
+          ]
+        },
+        {
+          "translated": "如RNN和LSTM，",
+          "indexes": [
+            5
+          ]
+        },
+        {
+          "translated": "帮助提高了ML模型在NLP任务上的性能，",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "如翻译和文本分类。",
+          "indexes": [
+            7
+          ]
+        },
+        {
+          "translated": "2015年，引起兴奋的是注意力机制，",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "以及基于它构建的模型，",
+          "indexes": [
+            9
+          ]
+        },
+        {
+          "translated": "如Transformers和Bert模型。",
+          "indexes": [
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 999
+          },
+          "text": "In this presentation we'll focus on Transformers."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 399
+          },
+          "text": "Transformers is based on a 2017 paper"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 533
+          },
+          "text": "named Attention As All You Need."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 29,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 165
+          },
+          "text": "Although all the models before Transformers were able to represent words"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 931
+          },
+          "text": "as vectors, these vectors did not contain the context"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 42,
+            "milliseconds": 965
+          },
+          "text": "and the usage of words changes based on the context."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 433
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 99
+          },
+          "text": "For example, bank and river bank"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 465
+          },
+          "text": "versus bank in bank robber might have the same vector"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 564
+          },
+          "text": "representation before attention mechanisms came about."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 232
+          },
+          "text": "A transformer is an encoder decoder model"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 465
+          },
+          "text": "that uses the attention mechanism."
+        }
+      ],
+      "source": [
+        "In this presentation we'll focus on Transformers.",
+        "Transformers is based on a 2017 paper",
+        "named Attention As All You Need.",
+        "Although all the models before Transformers were able to represent words",
+        "as vectors, these vectors did not contain the context",
+        "and the usage of words changes based on the context.",
+        "For example, bank and river bank",
+        "versus bank in bank robber might have the same vector",
+        "representation before attention mechanisms came about.",
+        "A transformer is an encoder decoder model",
+        "that uses the attention mechanism."
+      ],
+      "result": [
+        "在这个课程中，我们将重点讨论Transformer。",
+        "Transformer的基础是2017年的一篇论文，名为《Attention As All You Need》。",
+        "",
+        "尽管Transformer之前的所有模型都能将单词表示为向量，",
+        "但这些向量并不包含上下文，",
+        "而单词的使用会根据上下文而变化。",
+        "例如，\"bank\"和\"river bank\"与\"bank robber\"中的\"bank\"在注意力机制出现之前可能具有相同的向量表示。",
+        "",
+        "",
+        "Transformer是一个使用注意力机制的编码解码模型。",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 11 vs 12, Sun Jun 25 2023 20:26:16 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "在这个演讲中，我们将重点讨论Transformer。",
+          "indexes": [
+            0
+          ]
+        },
+        {
+          "translated": "Transformer基于2017年的一篇论文",
+          "indexes": [
+            1
+          ]
+        },
+        {
+          "translated": "名为“注意力就是你所需要的”。",
+          "indexes": [
+            2
+          ]
+        },
+        {
+          "translated": "尽管所有的模型在Transformer之前都能够将单词表示为向量，",
+          "indexes": [
+            3
+          ]
+        },
+        {
+          "translated": "但这些向量并未包含上下文，",
+          "indexes": [
+            4
+          ]
+        },
+        {
+          "translated": "而单词的使用方式会根据上下文而变化。",
+          "indexes": [
+            5
+          ]
+        },
+        {
+          "translated": "例如，银行和河岸",
+          "indexes": [
+            6
+          ]
+        },
+        {
+          "translated": "与银行抢劫中的银行可能有相同的向量表示，",
+          "indexes": [
+            7,
+            8
+          ]
+        },
+        {
+          "translated": "在注意力机制出现之前。",
+          "indexes": [
+            8
+          ]
+        },
+        {
+          "translated": "Transformer是一个使用注意力机制的编码解码模型。",
+          "indexes": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 65
+          },
+          "text": "It can take advantage of pluralization"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 399
+          },
+          "text": "and also process a large amount of data at the same time."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 798
+          },
+          "text": "because of its model architecture,"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 166
+          },
+          "text": "attention mechanism helps improve"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 132
+          },
+          "text": "the performance of machine translation applications."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 300
+          },
+          "text": "Transformer models were built using"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 365
+          },
+          "text": "attention mechanisms at the core."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 799
+          },
+          "text": "A transformer model consists"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 866
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 66
+          },
+          "text": "of encoder and decoder."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 499
+          },
+          "text": "The encoder encodes the input sequence and passes it to the decoder"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 132
+          },
+          "text": "and the decoder decodes the representation for a relevant task."
+        }
+      ],
+      "source": [
+        "It can take advantage of pluralization",
+        "and also process a large amount of data at the same time.",
+        "because of its model architecture,",
+        "attention mechanism helps improve",
+        "the performance of machine translation applications.",
+        "Transformer models were built using",
+        "attention mechanisms at the core.",
+        "A transformer model consists",
+        "of encoder and decoder.",
+        "The encoder encodes the input sequence and passes it to the decoder",
+        "and the decoder decodes the representation for a relevant task."
+      ],
+      "result": [
+        "它可以利用复数化和同时处理大量数据，因为它的模型架构，注意力机制有助于提高机器翻译应用的性能。",
+        "",
+        "",
+        "",
+        "",
+        "Transformer模型是使用注意力机制为核心构建的。",
+        "",
+        "一个Transformer模型包括编码器和解码器。",
+        "",
+        "编码器对输入序列进行编码，并将其传递给解码器，解码器解码表示以用于相关任务。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "它可以利用复数化和同时处理大量数据，因为它的模型架构，注意力机制有助于提高机器翻译应用的性能。",
+          "indexes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "translated": "Transformer模型是使用注意力机制为核心构建的。一个Transformer模型包括编码器和解码器。",
+          "indexes": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "translated": "编码器对输入序列进行编码，并将其传递给解码器，解码器解码表示以用于相关任务。",
+          "indexes": [
+            9,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 999
+          },
+          "text": "The encoding"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 700
+          },
+          "text": "component is a stack of encoders of the same number."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 800
+          },
+          "text": "The research paper that introduced Transformers"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 465
+          },
+          "text": "stack six encoders on top of each other."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 400
+          },
+          "text": "Six is not a magical number."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 99
+          },
+          "text": "It's just a hyperparameter."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 99
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 365
+          },
+          "text": "The encoders are all identical in structure, but with different weights."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 931
+          },
+          "text": "Each encoder can be broken down into two sub layers."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 532
+          },
+          "text": "The first layer is called self attention."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 232
+          },
+          "text": "The input of the encode are first flows through a self attention layer,"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 633
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 500
+          },
+          "text": "which helps to encode or look at relevant parts of the words"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 99
+          },
+          "text": "as it encodes a central word in the input sentence."
+        }
+      ],
+      "source": [
+        "The encoding",
+        "component is a stack of encoders of the same number.",
+        "The research paper that introduced Transformers",
+        "stack six encoders on top of each other.",
+        "Six is not a magical number.",
+        "It's just a hyperparameter.",
+        "The encoders are all identical in structure, but with different weights.",
+        "Each encoder can be broken down into two sub layers.",
+        "The first layer is called self attention.",
+        "The input of the encode are first flows through a self attention layer,",
+        "which helps to encode or look at relevant parts of the words",
+        "as it encodes a central word in the input sentence."
+      ],
+      "result": [
+        "编码组件是一个由相同数量的编码器堆叠而成的栈。",
+        "",
+        "引入Transformer的研究论文将六个编码器堆叠在一起。",
+        "",
+        "六并不是一个神奇的数字，它只是一个超参数（Hyperparameter）。",
+        "",
+        "这些编码器在结构上都是相同的，但权重不同。",
+        "每个编码器都可以分解成两个子层。",
+        "第一层称为自注意力。",
+        "编码器的输入首先流经一个自注意力层，这有助于编码或查看单词的相关部分，因为它编码输入句子中的中心词。",
+        "",
+        ""
+      ],
+      "output": {
+        "translation": "编码组件是一个由相同数量的编码器堆叠而成的栈。引入Transformer的研究论文将六个编码器堆叠在一起。六并不是一个神奇的数字，它只是一个超参数。这些编码器在结构上都是相同的，但权重不同。每个编码器都可以分解成两个子层。第一层称为自注意力。编码器的输入首先流经一个自注意力层，这有助于编码或查看单词的相关部分，因为它编码输入句子中的中心词。",
+        "sentences": [
+          {
+            "translated": "编码组件是一个由相同数量的编码器堆叠而成的栈。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "引入Transformer的研究论文将六个编码器堆叠在一起。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "六并不是一个神奇的数字，它只是一个超参数。",
+            "indexes": [
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "这些编码器在结构上都是相同的，但权重不同。",
+            "indexes": [
+              6
+            ]
+          },
+          {
+            "translated": "每个编码器都可以分解成两个子层。",
+            "indexes": [
+              7
+            ]
+          },
+          {
+            "translated": "第一层称为自注意力。",
+            "indexes": [
+              8
+            ]
+          },
+          {
+            "translated": "编码器的输入首先流经一个自注意力层，这有助于编码或查看单词的相关部分，因为它编码输入句子中的中心词。",
+            "indexes": [
+              9,
+              10,
+              11
+            ]
+          }
+        ]
+      },
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 398
+          },
+          "text": "And the second layer is called a feedforward layer."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 399
+          },
+          "text": "The output of the self attention layer is"
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 600
+          },
+          "text": "fed to the feedforward neural network."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 965
+          },
+          "text": "The exact same feedforward neural network is independently applied"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 233
+          },
+          "text": "to each position."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 366
+          },
+          "text": "The decoder has both the"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 366
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 966
+          },
+          "text": "self attention and the feedforward layer,"
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 166
+          },
+          "text": "but between them is the encoder decoder, attention layer"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 164
+          },
+          "text": "that helps a decoder focus on relevant"
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 399
+          },
+          "text": "parts of the input sentence."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 400
+          },
+          "text": "After embedding the words in the input sequence,"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 266
+          },
+          "text": "each of the embedding vector flows through the two layers of the encoder."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 500
+          },
+          "text": "The word at each position passes through a self attention process."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 266
+          },
+          "text": "Then it passes through a feedforward neural network,"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 131
+          },
+          "text": "the exact same network with each vector flowing through it separately."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 32
+          },
+          "text": "Dependencies exist between these paths"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 565
+          },
+          "text": "in this self attention layer."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 432
+          },
+          "text": "However, the feedforward layer does not have these dependencies"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 99
+          },
+          "text": "and therefore various paths can be executed in parallel"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 32
+          },
+          "text": "while they flow through the feedforward layer."
+        }
+      ],
+      "source": [
+        "And the second layer is called a feedforward layer.",
+        "The output of the self attention layer is",
+        "fed to the feedforward neural network.",
+        "The exact same feedforward neural network is independently applied",
+        "to each position.",
+        "The decoder has both the",
+        "self attention and the feedforward layer,",
+        "but between them is the encoder decoder, attention layer",
+        "that helps a decoder focus on relevant",
+        "parts of the input sentence.",
+        "After embedding the words in the input sequence,",
+        "each of the embedding vector flows through the two layers of the encoder.",
+        "The word at each position passes through a self attention process.",
+        "Then it passes through a feedforward neural network,",
+        "the exact same network with each vector flowing through it separately.",
+        "Dependencies exist between these paths",
+        "in this self attention layer.",
+        "However, the feedforward layer does not have these dependencies",
+        "and therefore various paths can be executed in parallel",
+        "while they flow through the feedforward layer."
+      ],
+      "result": [
+        "第二层被称为前馈层。",
+        "自注意力层的输出被送入前馈神经网络。",
+        "",
+        "相同的前馈神经网络独立应用于每个位置。",
+        "",
+        "解码器既有自注意力层，也有前馈层，但在它们之间是编码器解码器注意力层，帮助解码器关注输入句子的相关部分。",
+        "",
+        "",
+        "",
+        "",
+        "在对输入序列中的单词进行嵌入（Embedding）后，每个嵌入向量都会流经编码器的两层。",
+        "",
+        "每个位置的单词都经过一个自注意力过程。",
+        "然后它通过一个前馈神经网络，每个向量分别流过相同的网络。",
+        "",
+        "在这个自注意力层中，这些路径之间存在依赖关系。",
+        "",
+        "然而，前馈层没有这些依赖关系，因此各种路径可以在它们流经前馈层时并行执行。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 20 vs 21, Sun Jun 25 2023 21:31:48 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": {
+        "paragraph": "第二层被称为前馈层。自注意力层的输出被送入前馈神经网络。相同的前馈神经网络独立应用于每个位置。解码器既有自注意力层，也有前馈层，但在它们之间是编码器解码器注意力层，帮助解码器关注输入句子的相关部分。在对输入序列中的单词进行嵌入后，每个嵌入向量都会流经编码器的两层。每个位置的单词都经过一个自注意力过程。然后它通过一个前馈神经网络，每个向量分别流过相同的网络。在这个自注意力层中，这些路径之间存在依赖关系。然而，前馈层没有这些依赖关系，因此各种路径可以在它们流经前馈层时并行执行。",
+        "sentences": [
+          {
+            "translated": "第二层被称为前馈层。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "自注意力层的输出被送入前馈神经网络。",
+            "indexes": [
+              1,
+              2
+            ]
+          },
+          {
+            "translated": "相同的前馈神经网络独立应用于每个位置。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "解码器既有自注意力层，也有前馈层，但在它们之间是编码器解码器注意力层，帮助解码器关注输入句子的相关部分。",
+            "indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "translated": "在对输入序列中的单词进行嵌入后，每个嵌入向量都会流经编码器的两层。",
+            "indexes": [
+              10,
+              11
+            ]
+          },
+          {
+            "translated": "每个位置的单词都经过一个自注意力过程。",
+            "indexes": [
+              12
+            ]
+          },
+          {
+            "translated": "然后它通过一个前馈神经网络，每个向量分别流过相同的网络。",
+            "indexes": [
+              13,
+              14
+            ]
+          },
+          {
+            "translated": "在这个自注意力层中，这些路径之间存在依赖关系。",
+            "indexes": [
+              15,
+              16
+            ]
+          },
+          {
+            "translated": "然而，前馈层没有这些依赖关系，因此各种路径可以在它们流经前馈层时并行执行。",
+            "indexes": [
+              17,
+              18,
+              19,
+              20
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 464
+          },
+          "text": "In the self attention layer, the input embedding is"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 533
+          },
+          "text": "broken up into query, key, and value vectors."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 45,
+            "milliseconds": 64
+          },
+          "text": "These vectors are computed using weights"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 45,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 765
+          },
+          "text": "that the transformer learns during the training process."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 599
+          },
+          "text": "All of these computations happen in parallel"
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 300
+          },
+          "text": "in the model, in the form of matrix computation."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 56,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 300
+          },
+          "text": "Once we have the query key"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 2,
+            "milliseconds": 766
+          },
+          "text": "and value vectors, the next step is to multiply each value"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 2,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 565
+          },
+          "text": "vector by the soft max score in preparation to sum them up."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 8,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 199
+          },
+          "text": "The intention here is to keep intact the values of the words"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 899
+          },
+          "text": "you want to focus on and leave out a irrelevant words"
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 966
+          },
+          "text": "by multiplying them by tiny numbers"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 632
+          },
+          "text": "like 0.001, for example."
+        }
+      ],
+      "source": [
+        "In the self attention layer, the input embedding is",
+        "broken up into query, key, and value vectors.",
+        "These vectors are computed using weights",
+        "that the transformer learns during the training process.",
+        "All of these computations happen in parallel",
+        "in the model, in the form of matrix computation.",
+        "Once we have the query key",
+        "and value vectors, the next step is to multiply each value",
+        "vector by the soft max score in preparation to sum them up.",
+        "The intention here is to keep intact the values of the words",
+        "you want to focus on and leave out a irrelevant words",
+        "by multiplying them by tiny numbers",
+        "like 0.001, for example."
+      ],
+      "result": [
+        "在自注意力层，输入嵌入被分解成查询向量、键向量和值向量。",
+        "",
+        "这些向量是通过Transformer在训练过程中学到的权重计算的。",
+        "",
+        "所有这些计算都是在模型中以矩阵计算的形式并行进行的。",
+        "",
+        "一旦我们有了查询键和值向量，下一步就是将每个值向量乘以\"Softmax\"分数，以便将它们加起来。",
+        "",
+        "",
+        "这里的目的是保持你想要关注的单词的值不变，并通过将它们乘以很小的数字（例如0.001）来排除不相关的单词。",
+        "",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "在自注意力层，输入嵌入被分解成查询、键和值向量。这些向量是通过Transformer在训练过程中学到的权重计算的。所有这些计算都是在模型中以矩阵计算的形式并行进行的。一旦我们有了查询键和值向量，下一步就是将每个值向量乘以软最大分数，以便将它们加起来。这里的意图是保持你想要关注的单词的值不变，并通过将它们乘以很小的数字（例如0.001）来排除不相关的单词。",
+        "sentences": [
+          {
+            "translated": "在自注意力层，输入嵌入被分解成查询、键和值向量。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "这些向量是通过Transformer在训练过程中学到的权重计算的。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "所有这些计算都是在模型中以矩阵计算的形式并行进行的。",
+            "indexes": [
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "一旦我们有了查询键和值向量，下一步就是将每个值向量乘以软最大分数，以便将它们加起来。",
+            "indexes": [
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "这里的意图是保持你想要关注的单词的值不变，并通过将它们乘以很小的数字（例如0.001）来排除不相关的单词。",
+            "indexes": [
+              9,
+              10,
+              11,
+              12
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 900
+          },
+          "text": "Next, we have to sum up the weighted value vectors"
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 26,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 33
+          },
+          "text": "which produces the output of the self attention layer at this position."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 864
+          },
+          "text": "For the first word, you can send along the resulting vector"
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 333
+          },
+          "text": "to the feedforward neural network."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 38,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 499
+          },
+          "text": "To sum up this process of getting"
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 43,
+            "milliseconds": 833
+          },
+          "text": "the final embeddings, these are the steps that we take."
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 44,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 365
+          },
+          "text": "We start with the natural language sentence"
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 800
+          },
+          "text": "embed each word in the sentence."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 331
+          },
+          "text": "After that, we perform multi-headed"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 565
+          },
+          "text": "attention eight times in this case and multiply"
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 265
+          },
+          "text": "this embedded word with the respective weighted matrices."
+        }
+      ],
+      "source": [
+        "Next, we have to sum up the weighted value vectors",
+        "which produces the output of the self attention layer at this position.",
+        "For the first word, you can send along the resulting vector",
+        "to the feedforward neural network.",
+        "To sum up this process of getting",
+        "the final embeddings, these are the steps that we take.",
+        "We start with the natural language sentence",
+        "embed each word in the sentence.",
+        "After that, we perform multi-headed",
+        "attention eight times in this case and multiply",
+        "this embedded word with the respective weighted matrices."
+      ],
+      "result": [
+        "接下来，我们需要对加权值向量求和，从而得到这个位置的自注意力层的输出。",
+        "",
+        "对于第一个单词，你可以将结果向量发送到前馈神经网络。",
+        "",
+        "总结一下这个过程，我们采取以下步骤来获得最终的嵌入。",
+        "",
+        "我们从自然语言句子开始，嵌入句子中的每个单词。",
+        "",
+        "然后，我们在这种情况下执行8次多头注意力，并将这个嵌入的单词与相应的加权矩阵相乘。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "接下来，我们需要对加权值向量求和，从而得到这个位置的自注意力层的输出。对于第一个单词，你可以将结果向量发送到前馈神经网络。总结一下这个过程，我们采取以下步骤来获得最终的嵌入。我们从自然语言句子开始，嵌入句子中的每个单词。然后，我们在这种情况下执行8次多头注意力，并将这个嵌入的单词与相应的加权矩阵相乘。",
+        "sentences": [
+          {
+            "translated": "接下来，我们需要对加权值向量求和，从而得到这个位置的自注意力层的输出。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "对于第一个单词，你可以将结果向量发送到前馈神经网络。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "总结一下这个过程，我们采取以下步骤来获得最终的嵌入。",
+            "indexes": [
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "我们从自然语言句子开始，嵌入句子中的每个单词。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "然后，我们在这种情况下执行8次多头注意力，并将这个嵌入的单词与相应的加权矩阵相乘。",
+            "indexes": [
+              8,
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 832
+          },
+          "text": "We then calculate the attention using the resulting Q K.V."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 533
+          },
+          "text": "matrices."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 666
+          },
+          "text": "Finally, we can concatenate the matrices to produce the output matrix,"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 732
+          },
+          "text": "which is the same dimension as the final matrix"
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 733
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 132
+          },
+          "text": "that this layer initially got."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 265
+          },
+          "text": "There's multiple variations of transformers out there now."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 26,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 31,
+            "milliseconds": 332
+          },
+          "text": "Some use both the encoder and the decoder component from the original architecture."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 31,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 35,
+            "milliseconds": 400
+          },
+          "text": "Some use only the encoder and some use only the decoder."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 36,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 39,
+            "milliseconds": 699
+          },
+          "text": "A popular encoder only architecture is Bert."
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 665
+          },
+          "text": "Bert is one of the trained transformer models."
+        }
+      ],
+      "source": [
+        "We then calculate the attention using the resulting Q K.V.",
+        "matrices.",
+        "Finally, we can concatenate the matrices to produce the output matrix,",
+        "which is the same dimension as the final matrix",
+        "that this layer initially got.",
+        "There's multiple variations of transformers out there now.",
+        "Some use both the encoder and the decoder component from the original architecture.",
+        "Some use only the encoder and some use only the decoder.",
+        "A popular encoder only architecture is Bert.",
+        "Bert is one of the trained transformer models."
+      ],
+      "result": [
+        "我们首先使用结果Q K.V矩阵计算注意力。",
+        "然后，我们可以将矩阵连接起来生成输出矩阵，这与该层最初获得的最终矩阵具有相同的维度。",
+        "",
+        "",
+        "现在有多种Transformer的变体。",
+        "有些使用原始架构中的编码器和解码器部分。",
+        "有些只使用编码器，有些只使用解码器。",
+        "",
+        "一个流行的只有编码器架构是Bert。",
+        "Bert是一种训练过的Transformer模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "我们首先使用结果Q K.V矩阵计算注意力。然后，我们可以将矩阵连接起来生成输出矩阵，这与该层最初获得的最终矩阵具有相同的维度。现在有多种Transformer的变体。有些使用原始架构中的编码器和解码器组件。有些只使用编码器，有些只使用解码器。一个流行的仅编码器架构是Bert。Bert是经过训练的Transformer模型之一。",
+        "sentences": [
+          {
+            "translated": "我们首先使用结果Q K.V矩阵计算注意力。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "然后，我们可以将矩阵连接起来生成输出矩阵，这与该层最初获得的最终矩阵具有相同的维度。",
+            "indexes": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "现在有多种Transformer的变体。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "有些使用原始架构中的编码器和解码器组件。",
+            "indexes": [
+              5
+            ]
+          },
+          {
+            "translated": "有些只使用编码器，有些只使用解码器。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "一个流行的仅编码器架构是Bert。",
+            "indexes": [
+              8
+            ]
+          },
+          {
+            "translated": "Bert是经过训练的Transformer模型之一。",
+            "indexes": [
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 266
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 899
+          },
+          "text": "Bert stands for bidirectional encoder representations"
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 633
+          },
+          "text": "from transformers and was developed by Google in 2018."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 54,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 232
+          },
+          "text": "Since then,"
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 233
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 57,
+            "milliseconds": 899
+          },
+          "text": "multiple variations of Bert have been built."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 0,
+            "milliseconds": 965
+          },
+          "text": "Today, Bert Powers Google Search."
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 998
+          },
+          "text": "You can see how different"
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 665
+          },
+          "text": "the results provided by Bert are for the same search query."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 698
+          },
+          "text": "Before and after,"
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 100
+          },
+          "text": "Bert was trained in two variations."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 14,
+            "milliseconds": 899
+          },
+          "text": "One model contains Bert Base,"
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 766
+          },
+          "text": "which had 12 stock of Transformers"
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 18,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 65
+          },
+          "text": "with approximately 110 million"
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 65
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 26,
+            "milliseconds": 699
+          },
+          "text": "parameters, and the other Bert Large with 24 layers of transformers"
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 26,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 29,
+            "milliseconds": 465
+          },
+          "text": "with about 340 million parameters."
+        }
+      ],
+      "source": [
+        "Bert stands for bidirectional encoder representations",
+        "from transformers and was developed by Google in 2018.",
+        "Since then,",
+        "multiple variations of Bert have been built.",
+        "Today, Bert Powers Google Search.",
+        "You can see how different",
+        "the results provided by Bert are for the same search query.",
+        "Before and after,",
+        "Bert was trained in two variations.",
+        "One model contains Bert Base,",
+        "which had 12 stock of Transformers",
+        "with approximately 110 million",
+        "parameters, and the other Bert Large with 24 layers of transformers",
+        "with about 340 million parameters."
+      ],
+      "result": [
+        "Bert代表双向编码器表示，来自Transformer，由谷歌于2018年开发。",
+        "",
+        "从那时起，已经建立了多种Bert的变体。",
+        "",
+        "如今，Bert为谷歌搜索提供动力。",
+        "你可以看到Bert为同一搜索查询提供的结果有多么不同。",
+        "",
+        "在此之前和之后，Bert分为两种变体进行训练。",
+        "",
+        "一个模型包含Bert Base，它有12个Transformer的堆栈，大约有1.1亿个参数，",
+        "",
+        "",
+        "另一个是Bert Large，有24层Transformer，大约有3.4亿个参数。",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 14 vs 15, Sun Jun 25 2023 22:38:47 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": {
+        "paragraph": "Bert代表双向编码器表示，来自Transformer，由谷歌于2018年开发。从那时起，已经建立了多种Bert的变体。如今，Bert为谷歌搜索提供动力。你可以看到Bert为同一搜索查询提供的结果有多么不同。在此之前和之后，Bert分为两种变体进行训练。一个模型包含Bert Base，它有12个Transformer库存，大约有1.1亿个参数，另一个是Bert Large，有24层Transformer，大约有3.4亿个参数。",
+        "sentences": [
+          {
+            "translated": "Bert代表双向编码器表示，来自Transformer，由谷歌于2018年开发。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "从那时起，已经建立了多种Bert的变体。",
+            "indexes": [
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "如今，Bert为谷歌搜索提供动力。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "你可以看到Bert为同一搜索查询提供的结果有多么不同。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "在此之前和之后，Bert分为两种变体进行训练。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "一个模型包含Bert Base，它有12个Transformer库存，大约有1.1亿个参数，另一个是Bert Large，有24层Transformer，大约有3.4亿个参数。",
+            "indexes": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 499
+          },
+          "text": "The Bert model is powerful because it can handle long input context."
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 36,
+            "milliseconds": 165
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 299
+          },
+          "text": "It was trained on the entire Wikipedia corpus and books corpus."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 44,
+            "milliseconds": 99
+          },
+          "text": "The Bert model was trained for 1 million steps."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 44,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 66
+          },
+          "text": "Bert is trained on different tasks,"
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 49,
+            "milliseconds": 864
+          },
+          "text": "which means it has multi-task objective."
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 50,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 300
+          },
+          "text": "This makes Bert very powerful"
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 633
+          },
+          "text": "because of the kind of tasks it was trained on."
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 59,
+            "milliseconds": 632
+          },
+          "text": "It works at both a sentence level and at a token level."
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 332
+          },
+          "text": "These are the two"
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 4,
+            "milliseconds": 833
+          },
+          "text": "different versions of Bert that were originally released."
+        }
+      ],
+      "source": [
+        "The Bert model is powerful because it can handle long input context.",
+        "It was trained on the entire Wikipedia corpus and books corpus.",
+        "The Bert model was trained for 1 million steps.",
+        "Bert is trained on different tasks,",
+        "which means it has multi-task objective.",
+        "This makes Bert very powerful",
+        "because of the kind of tasks it was trained on.",
+        "It works at both a sentence level and at a token level.",
+        "These are the two",
+        "different versions of Bert that were originally released."
+      ],
+      "result": [
+        "Bert模型之所以强大，是因为它可以处理长输入上下文。",
+        "它在整个维基百科语料库和书籍语料库上进行了训练。",
+        "Bert模型经过了100万步的训练。",
+        "Bert在不同任务上进行了训练，这意味着它具有多任务目标。",
+        "",
+        "这使得Bert非常强大，因为它接受了各种任务的训练。",
+        "",
+        "它既可以在句子级别上工作，也可以在Token级别上工作。",
+        "这是最初发布的两个不同版本的Bert。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "Bert模型之所以强大，是因为它可以处理长输入上下文。它在整个维基百科语料库和书籍语料库上进行了训练。Bert模型经过了100万步的训练。Bert在不同任务上进行了训练，这意味着它具有多任务目标。这使得Bert非常强大，因为它接受了各种任务的训练。它既可以在句子级别上工作，也可以在词元级别上工作。这是最初发布的两个不同版本的Bert。",
+        "sentences": [
+          {
+            "translated": "Bert模型之所以强大，是因为它可以处理长输入上下文。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "它在整个维基百科语料库和书籍语料库上进行了训练。",
+            "indexes": [
+              1
+            ]
+          },
+          {
+            "translated": "Bert模型经过了100万步的训练。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "Bert在不同任务上进行了训练，这意味着它具有多任务目标。",
+            "indexes": [
+              3,
+              4
+            ]
+          },
+          {
+            "translated": "这使得Bert非常强大，因为它接受了各种任务的训练。",
+            "indexes": [
+              5,
+              6
+            ]
+          },
+          {
+            "translated": "它既可以在句子级别上工作，也可以在词元级别上工作。",
+            "indexes": [
+              7
+            ]
+          },
+          {
+            "translated": "这是最初发布的两个不同版本的Bert。",
+            "indexes": [
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 166
+          },
+          "text": "One is Bert Base, which had 12 layers,"
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 431
+          },
+          "text": "whereas Bert Large had 24 layers."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 699
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 299
+          },
+          "text": "And compared to the original transformer, which had six layers."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 333
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 20,
+            "milliseconds": 833
+          },
+          "text": "The way that Bert works is that it was trained on two different tasks."
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 21,
+            "milliseconds": 132
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 298
+          },
+          "text": "Task one is called a masked language model, where the sentences are masked"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 30,
+            "milliseconds": 633
+          },
+          "text": "and the model is trained to predict the masked words."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 199
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 34,
+            "milliseconds": 899
+          },
+          "text": "If you were to train Bert from scratch, you would have to mask"
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 35,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 233
+          },
+          "text": "a certain percentage of the words in your corpus."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 231
+          },
+          "text": "The recommended percentage for masking is 15%."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 45,
+            "milliseconds": 298
+          },
+          "text": "The masking percentage achieves a balance"
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 45,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 731
+          },
+          "text": "between too little and too much masking."
+        }
+      ],
+      "source": [
+        "One is Bert Base, which had 12 layers,",
+        "whereas Bert Large had 24 layers.",
+        "And compared to the original transformer, which had six layers.",
+        "The way that Bert works is that it was trained on two different tasks.",
+        "Task one is called a masked language model, where the sentences are masked",
+        "and the model is trained to predict the masked words.",
+        "If you were to train Bert from scratch, you would have to mask",
+        "a certain percentage of the words in your corpus.",
+        "The recommended percentage for masking is 15%.",
+        "The masking percentage achieves a balance",
+        "between too little and too much masking."
+      ],
+      "result": [
+        "一个是Bert Base，它有12层，而Bert Large有24层。",
+        "",
+        "与原始的Transformer相比，它只有六层。",
+        "Bert的工作方式是在两个不同的任务上进行训练。",
+        "任务一称为掩码语言模型，其中句子被掩盖，模型被训练来预测被掩盖的单词。",
+        "",
+        "如果要从头开始训练Bert，你将不得不掩盖语料库中的一定百分比的单词。",
+        "",
+        "建议的掩盖百分比是15%。",
+        "掩盖百分比实现了过少和过多掩盖之间的平衡。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "一个是Bert Base，它有12层，而Bert Large有24层。与原始的Transformer相比，它有六层。Bert的工作方式是在两个不同的任务上进行训练。任务一称为掩码语言模型，其中句子被掩盖，模型被训练来预测被掩盖的单词。如果要从头开始训练Bert，你将不得不掩盖语料库中的一定百分比的单词。建议的掩盖百分比是15%。掩盖百分比实现了过少和过多掩盖之间的平衡。",
+        "sentences": [
+          {
+            "translated": "一个是Bert Base，它有12层，而Bert Large有24层。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "与原始的Transformer相比，它有六层。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "Bert的工作方式是在两个不同的任务上进行训练。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "任务一称为掩码语言模型，其中句子被掩盖，模型被训练来预测被掩盖的单词。",
+            "indexes": [
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "如果要从头开始训练Bert，你将不得不掩盖语料库中的一定百分比的单词。",
+            "indexes": [
+              6,
+              7
+            ]
+          },
+          {
+            "translated": "建议的掩盖百分比是15%。",
+            "indexes": [
+              8
+            ]
+          },
+          {
+            "translated": "掩盖百分比实现了过少和过多掩盖之间的平衡。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 48,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 332
+          },
+          "text": "Too little masking makes the training process extremely expensive,"
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 732
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 57,
+            "milliseconds": 265
+          },
+          "text": "and too much masking removes the context of the model requires."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 133
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 733
+          },
+          "text": "The second task is to predict the next sentence."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 132
+          },
+          "text": "For example, the model is given two sets of sentences."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 700
+          },
+          "text": "Bert aims to learn the relationships between sentences"
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 12,
+            "milliseconds": 833
+          },
+          "text": "and predict the next sentence given the first one."
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 13,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 14,
+            "milliseconds": 964
+          },
+          "text": "For example,"
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 14,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 66
+          },
+          "text": "sentence A could be a man went to the store"
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 432
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 21,
+            "milliseconds": 864
+          },
+          "text": "and sentence B is he bought a gallon of milk."
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 22,
+            "milliseconds": 966
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 99
+          },
+          "text": "Bert is responsible for classifying if sentence"
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 29,
+            "milliseconds": 733
+          },
+          "text": "B is in next sentence after sentence A."
+        }
+      ],
+      "source": [
+        "Too little masking makes the training process extremely expensive,",
+        "and too much masking removes the context of the model requires.",
+        "The second task is to predict the next sentence.",
+        "For example, the model is given two sets of sentences.",
+        "Bert aims to learn the relationships between sentences",
+        "and predict the next sentence given the first one.",
+        "For example,",
+        "sentence A could be a man went to the store",
+        "and sentence B is he bought a gallon of milk.",
+        "Bert is responsible for classifying if sentence",
+        "B is in next sentence after sentence A."
+      ],
+      "result": [
+        "太少的遮罩使训练过程非常昂贵，太多的遮罩则去除了模型所需的上下文。",
+        "",
+        "第二个任务是预测下一句话。",
+        "例如，模型给出了两组句子。",
+        "Bert的目标是学习句子之间的关系，并根据第一句预测下一句。",
+        "",
+        "例如，句子A可能是一个人去了商店，句子B是他买了一加仑牛奶。",
+        "",
+        "",
+        "Bert负责分类句子B是否在句子A之后的下一句。",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 11 vs 12, Sun Jun 25 2023 22:40:55 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": {
+        "paragraph": "太少的遮罩使训练过程非常昂贵，太多的遮罩则去除了模型所需的上下文。第二个任务是预测下一句话。例如，模型给出了两组句子。Bert旨在学习句子之间的关系，并根据第一句预测下一句。例如，句子A可能是一个人去了商店，句子B是他买了一加仑牛奶。Bert负责分类句子B是否在句子A之后的下一句。",
+        "sentences": [
+          {
+            "translated": "太少的遮罩使训练过程非常昂贵，太多的遮罩则去除了模型所需的上下文。",
+            "indexes": [
+              0,
+              1
+            ]
+          },
+          {
+            "translated": "第二个任务是预测下一句话。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "例如，模型给出了两组句子。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "Bert旨在学习句子之间的关系，并根据第一句预测下一句。",
+            "indexes": [
+              4,
+              5
+            ]
+          },
+          {
+            "translated": "例如，句子A可能是一个人去了商店，句子B是他买了一加仑牛奶。",
+            "indexes": [
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "Bert负责分类句子B是否在句子A之后的下一句。",
+            "indexes": [
+              9,
+              10,
+              11
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 166
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 633
+          },
+          "text": "This is a binary classification task."
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 699
+          },
+          "text": "This helps Bert perform at a sentence level in order to train Bert."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 32
+          },
+          "text": "You need to feed three different kinds of embeddings"
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 45,
+            "milliseconds": 231
+          },
+          "text": "to the model for the input sentence."
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 45,
+            "milliseconds": 265
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 31
+          },
+          "text": "You get three different embeddings token"
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 50,
+            "milliseconds": 533
+          },
+          "text": "segment and position embeddings."
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 799
+          },
+          "text": "The token embeddings is a representation"
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 58,
+            "milliseconds": 832
+          },
+          "text": "of each token as an embedding in the input sentence."
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 2,
+            "milliseconds": 32
+          },
+          "text": "The words are transformed into vector"
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 2,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 500
+          },
+          "text": "representations of certain dimensions."
+        }
+      ],
+      "source": [
+        "This is a binary classification task.",
+        "This helps Bert perform at a sentence level in order to train Bert.",
+        "You need to feed three different kinds of embeddings",
+        "to the model for the input sentence.",
+        "You get three different embeddings token",
+        "segment and position embeddings.",
+        "The token embeddings is a representation",
+        "of each token as an embedding in the input sentence.",
+        "The words are transformed into vector",
+        "representations of certain dimensions."
+      ],
+      "result": [
+        "这是一个二分类任务。",
+        "这帮助Bert在句子级别上表现良好，为了训练Bert，",
+        "你需要为输入句子向模型提供三种不同类型的嵌入，",
+        "",
+        "分别是Token嵌入、段落嵌入和位置嵌入。",
+        "",
+        "Token嵌入是输入句子中每个Token的表示。",
+        "",
+        "单词被转换为特定维度的向量表示。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "这是一个二分类任务。这有助于Bert在句子级别上执行，以便训练Bert。你需要为输入句子向模型提供三种不同类型的嵌入，分别是Token嵌入、段落嵌入和位置嵌入。Token嵌入是输入句子中每个Token的表示。单词被转换为特定维度的向量表示。",
+        "sentences": [
+          {
+            "translated": "这是一个二分类任务。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "这有助于Bert在句子级别上执行，以便训练Bert。",
+            "indexes": [
+              1
+            ]
+          },
+          {
+            "translated": "你需要为输入句子向模型提供三种不同类型的嵌入，",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "分别是Token嵌入、段落嵌入和位置嵌入。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "Token嵌入是输入句子中每个Token的表示。",
+            "indexes": [
+              4,
+              7
+            ]
+          },
+          {
+            "translated": "单词被转换为特定维度的向量表示。",
+            "indexes": [
+              5,
+              6,
+              8,
+              9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 5,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 566
+          },
+          "text": "Bert can solve NLP tasks"
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 199
+          },
+          "text": "that involve tex classification as well."
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 14,
+            "milliseconds": 231
+          },
+          "text": "An example is to classify whether two sentences say"
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 14,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 18,
+            "milliseconds": 600
+          },
+          "text": "my dog is cute and he likes playing are semantically similar."
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 18,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 23,
+            "milliseconds": 465
+          },
+          "text": "The pairs of input texts are simply concatenated and fed into the model."
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 23,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 27,
+            "milliseconds": 532
+          },
+          "text": "How does Bert distinguish the input in a given pair?"
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 30,
+            "milliseconds": 832
+          },
+          "text": "The answer is to use segment embeddings."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 31,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 35,
+            "milliseconds": 99
+          },
+          "text": "There is a special token represented by SEP"
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 35,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 38,
+            "milliseconds": 833
+          },
+          "text": "that separates the two different splits of the sentence."
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 39,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 65
+          },
+          "text": "Another problem is to"
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 66
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 43,
+            "milliseconds": 666
+          },
+          "text": "learn the order of the words in the sentence."
+        }
+      ],
+      "source": [
+        "Bert can solve NLP tasks",
+        "that involve tex classification as well.",
+        "An example is to classify whether two sentences say",
+        "my dog is cute and he likes playing are semantically similar.",
+        "The pairs of input texts are simply concatenated and fed into the model.",
+        "How does Bert distinguish the input in a given pair?",
+        "The answer is to use segment embeddings.",
+        "There is a special token represented by SEP",
+        "that separates the two different splits of the sentence.",
+        "Another problem is to",
+        "learn the order of the words in the sentence."
+      ],
+      "result": [
+        "Bert可以解决涉及文本分类的自然语言处理任务。",
+        "",
+        "一个例子是，对于两句话“我的狗很可爱”和“他喜欢玩耍”，我们需要分类这两句话在语义上是否相似。",
+        "",
+        "将输入文本对简单地连接起来并输入模型。",
+        "那么Bert如何区分给定对中的输入呢？",
+        "答案是使用段落嵌入。",
+        "有一个由SEP表示的特殊标记，用于分隔句子的两个不同部分。",
+        "",
+        "另一个问题是学习句子中单词的顺序。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "Bert可以解决涉及文本分类的自然语言处理任务。一个例子是判断两个句子是否在语义上相似，例如“我的狗很可爱，它喜欢玩耍”。将输入文本对简单地连接起来并输入模型。那么Bert如何区分给定对中的输入呢？答案是使用段落嵌入。有一个由SEP表示的特殊标记，用于分隔句子的两个不同部分。另一个问题是学习句子中单词的顺序。",
+        "sentences": [
+          {
+            "translated": "Bert可以解决涉及文本分类的自然语言处理任务。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "一个例子是判断两个句子是否在语义上相似，例如“我的狗很可爱，它喜欢玩耍”。",
+            "indexes": [
+              1,
+              2,
+              3
+            ]
+          },
+          {
+            "translated": "将输入文本对简单地连接起来并输入模型。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "那么Bert如何区分给定对中的输入呢？",
+            "indexes": [
+              5
+            ]
+          },
+          {
+            "translated": "答案是使用段落嵌入。",
+            "indexes": [
+              6
+            ]
+          },
+          {
+            "translated": "有一个由SEP表示的特殊标记，用于分隔句子的两个不同部分。",
+            "indexes": [
+              7,
+              8
+            ]
+          },
+          {
+            "translated": "另一个问题是学习句子中单词的顺序。",
+            "indexes": [
+              9,
+              10
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "items": [
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 44,
+            "milliseconds": 799
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 331
+          },
+          "text": "As you know, Bert consists of a stack of transformers."
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 899
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 53,
+            "milliseconds": 998
+          },
+          "text": "Bert is designed to process input sequences up to a length of 512."
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 832
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 59,
+            "milliseconds": 965
+          },
+          "text": "The order of the input sequence is incorporated into the position embeddings."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 399
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 5,
+            "milliseconds": 565
+          },
+          "text": "This allows Bert to learn a vector representation for each position."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 932
+          },
+          "text": "Bert can be used for different downstream tasks."
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 533
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 699
+          },
+          "text": "Although Bert was trained on mass language modeling"
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 599
+          },
+          "text": "and single sentence classification, it can be used"
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 900
+          },
+          "text": "for popular NLP tasks like single sentence classification."
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 332
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 299
+          },
+          "text": "Sentence Pair Classification."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 299
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 28,
+            "milliseconds": 231
+          },
+          "text": "Question Answering and single sentence tagging tasks."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 28,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 31,
+            "milliseconds": 898
+          },
+          "text": "Thank you for listening."
+        }
+      ],
+      "source": [
+        "As you know, Bert consists of a stack of transformers.",
+        "Bert is designed to process input sequences up to a length of 512.",
+        "The order of the input sequence is incorporated into the position embeddings.",
+        "This allows Bert to learn a vector representation for each position.",
+        "Bert can be used for different downstream tasks.",
+        "Although Bert was trained on mass language modeling",
+        "and single sentence classification, it can be used",
+        "for popular NLP tasks like single sentence classification.",
+        "Sentence Pair Classification.",
+        "Question Answering and single sentence tagging tasks.",
+        "Thank you for listening."
+      ],
+      "result": [
+        "众所周知，Bert由一堆Transformer组成。",
+        "Bert设计用于处理最长为512的输入序列。",
+        "输入序列的顺序被整合到位置嵌入中。",
+        "这使得Bert能够为每个位置学习一个向量表示。",
+        "Bert可用于不同的下游任务。",
+        "尽管Bert是在大规模语言建模和单句分类上进行训练的，但它可以用于流行的NLP任务，如单句分类、句子对分类、问答和单句标记任务。",
+        "",
+        "",
+        "",
+        "",
+        "感谢你的聆听。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": {
+        "paragraph": "众所周知，Bert由一堆Transformer组成。Bert设计用于处理最长为512的输入序列。输入序列的顺序被整合到位置嵌入中。这使得Bert能够为每个位置学习一个向量表示。Bert可用于不同的下游任务。尽管Bert是在大规模语言建模和单句分类上进行训练的，但它可以用于流行的NLP任务，如单句分类、句子对分类、问答和单句标记任务。感谢你的聆听。",
+        "sentences": [
+          {
+            "translated": "众所周知，Bert由一堆Transformer组成。",
+            "indexes": [
+              0
+            ]
+          },
+          {
+            "translated": "Bert设计用于处理最长为512的输入序列。",
+            "indexes": [
+              1
+            ]
+          },
+          {
+            "translated": "输入序列的顺序被整合到位置嵌入中。",
+            "indexes": [
+              2
+            ]
+          },
+          {
+            "translated": "这使得Bert能够为每个位置学习一个向量表示。",
+            "indexes": [
+              3
+            ]
+          },
+          {
+            "translated": "Bert可用于不同的下游任务。",
+            "indexes": [
+              4
+            ]
+          },
+          {
+            "translated": "尽管Bert是在大规模语言建模和单句分类上进行训练的，但它可以用于流行的NLP任务，如单句分类、句子对分类、问答和单句标记任务。",
+            "indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "translated": "感谢你的聆听。",
+            "indexes": [
+              10
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "sourcePath": "input/Generative AI learning path/Transformer Models and BERT Model- Overview.srt",
+  "ouputBasePath": "input/Generative AI learning path/Transformer Models and BERT Model- Overview",
+  "totalCost": 0.49956000000000006,
+  "translationPath": "input/Generative AI learning path/Transformer Models and BERT Model- Overview/translation.json"
+}

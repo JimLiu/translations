@@ -1,0 +1,185 @@
+[Script Info]
+
+Title: Introduction to Responsible AI
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 0,0:00:00.8,0:00:04.33,Secondary,,0,0,0,,Hello, and welcome to an Introduction to Responsible AI.
+Dialogue: 0,0:00:04.33,0:00:07.19,Secondary,,0,0,0,,This course will help you:
+Dialogue: 0,0:00:07.19,0:00:11.0,Secondary,,0,0,0,,Understand why Google has put AI principles in place.
+Dialogue: 0,0:00:11.0,0:00:16.62,Secondary,,0,0,0,,Identify the need for a responsible AI practice within an organization.
+Dialogue: 0,0:00:16.62,0:00:21.63,Secondary,,0,0,0,,Recognize that decisions made at all stages of a project have an impact on responsible AI.
+Dialogue: 0,0:00:21.63,0:00:29.60,Secondary,,0,0,0,,And, recognize that organizations can design AI to fit their own business needs and values.
+Dialogue: 0,0:00:29.60,0:00:34.36,Secondary,,0,0,0,,Many of us already have daily interactions with artificial intelligence (or AI),
+Dialogue: 0,0:00:34.36,0:00:40.68,Secondary,,0,0,0,,from predictions for traffic and weather, to recommendations for TV shows you might like to watch next.
+Dialogue: 0,0:00:40.68,0:00:48.5,Secondary,,0,0,0,,As AI becomes more common, many technologies that aren’t AI-enabled may start to seem inadequate.
+Dialogue: 0,0:00:48.5,0:00:54.53,Secondary,,0,0,0,,Now, AI systems are enabling computers to see, understand, and interact with the world
+Dialogue: 0,0:00:57.32,0:01:02.30,Secondary,,0,0,0,,And these systems are developing at an extraordinary pace.
+Dialogue: 0,0:01:02.30,0:01:07.58,Secondary,,0,0,0,,Yet despite these remarkable advancements, AI is not infallible.
+Dialogue: 0,0:01:07.58,0:01:17.63,Secondary,,0,0,0,,Developing responsible AI requires an understanding of the possible issues, limitations, or unintended consequences.
+Dialogue: 0,0:01:17.63,0:01:22.11,Secondary,,0,0,0,,Technology is a reflection of what exists in society, so without good practices,
+Dialogue: 0,0:01:22.12,0:01:27.16,Secondary,,0,0,0,,AI may replicate existing issues or bias, and amplify them.
+Dialogue: 0,0:01:27.16,0:01:33.66,Secondary,,0,0,0,,But there is not a universal definition of “responsible AI,” nor is there a simple
+Dialogue: 0,0:01:33.66,0:01:39.49,Secondary,,0,0,0,,checklist or formula that defines how responsible AI practices should be implemented.
+Dialogue: 0,0:01:39.49,0:01:46.95,Secondary,,0,0,0,,Instead, organizations are developing their own AI principles, that reflect their mission and values.
+Dialogue: 0,0:01:46.95,0:01:51.87,Secondary,,0,0,0,,While these principles are unique to every organization, if you look for common themes,
+Dialogue: 0,0:01:51.87,0:01:59.30,Secondary,,0,0,0,,you find a consistent set of ideas across transparency, fairness, accountability, and privacy.
+Dialogue: 0,0:01:59.30,0:02:07.73,Secondary,,0,0,0,,At Google, our approach to responsible AI is rooted in a commitment to strive towards AI that is built for everyone,
+Dialogue: 0,0:02:07.73,0:02:14.60,Secondary,,0,0,0,,that it is accountable and safe, that respects privacy, and that is driven by scientific excellence.
+Dialogue: 0,0:02:14.60,0:02:26.99,Secondary,,0,0,0,,We’ve developed our own AI principles, practices, governance processes, and tools that together embody our values and guide our approach to responsible AI.
+Dialogue: 0,0:02:26.99,0:02:35.39,Secondary,,0,0,0,,We’ve incorporated responsibility by design into our products, and even more importantly, our organization.
+Dialogue: 0,0:02:35.39,0:02:42.49,Secondary,,0,0,0,,Like many companies, we use our AI principles as a framework to guide responsible decision making.
+Dialogue: 0,0:02:42.49,0:02:46.69,Secondary,,0,0,0,,We all have a role to play in how responsible AI is applied.
+Dialogue: 0,0:02:46.69,0:02:55.30,Secondary,,0,0,0,,Whatever stage in the AI process you are involved with, from design to deployment or application, the decisions you make have an impact.
+Dialogue: 0,0:02:55.30,0:03:01.60,Secondary,,0,0,0,,Therefore, it's important that you too have a defined and repeatable process for using AI responsibly.
+Dialogue: 0,0:03:01.60,0:03:09.27,Secondary,,0,0,0,,There is a common misconception with artificial intelligence that machines play the central decision-making role.
+Dialogue: 0,0:03:09.27,0:03:16.87,Secondary,,0,0,0,,In reality, it’s people who design and build these machines and decide how they are used.
+Dialogue: 0,0:03:16.87,0:03:23.4,Secondary,,0,0,0,,People are involved in each aspect of AI development.They collect or create the data that the model is trained on.
+Dialogue: 0,0:03:23.4,0:03:27.82,Secondary,,0,0,0,,They control the deployment of the AI and how it is applied in a given context.
+Dialogue: 0,0:03:27.82,0:03:33.4,Secondary,,0,0,0,,Essentially, human decisions are threaded throughout our technology products.
+Dialogue: 0,0:03:33.4,0:03:39.57,Secondary,,0,0,0,,And every time a person makes a decision, they are actually making a choice based on their own values.
+Dialogue: 0,0:03:39.57,0:03:42.83,Secondary,,0,0,0,,Whether it's the decision to use generative AI to solve a problem,
+Dialogue: 0,0:03:42.83,0:03:50.45,Secondary,,0,0,0,,as opposed to other methods, or anywhere throughout the machine learning lifecycle, that person introduces their own set of values.
+Dialogue: 0,0:03:50.45,0:03:56.2,Secondary,,0,0,0,,This means that every decision point requires consideration and evaluation to ensure
+Dialogue: 0,0:03:56.2,0:04:00.98,Secondary,,0,0,0,,that choices have been made responsibly from concept through deployment and maintenance.
+Dialogue: 0,0:04:00.98,0:04:12.74,Secondary,,0,0,0,,Because there’s potential to impact many areas of society– not to mention people’s daily lives– it's important to develop these technologies with ethics in mind.
+Dialogue: 0,0:04:12.74,0:04:18.35,Secondary,,0,0,0,,Responsible AI doesn’t mean to focus only on the obviously controversial use cases.
+Dialogue: 0,0:04:18.35,0:04:30.44,Secondary,,0,0,0,,Without responsible AI practices, even seemingly innocuous AI use cases, or those with good intent, could still cause ethical issues or unintended outcomes, or not be as beneficial as they could be.
+Dialogue: 0,0:04:30.44,0:04:42.85,Secondary,,0,0,0,,Ethics and responsibility are important, not least because they represent the right thing to do, but also because they can guide AI design to be more beneficial for people's lives.
+Dialogue: 0,0:04:42.85,0:04:52.38,Secondary,,0,0,0,,At Google, we’ve learned that building responsibility into any AI deployment makes better models and builds trust with our customers and our customers’ customers.
+Dialogue: 0,0:04:52.38,0:04:59.31,Secondary,,0,0,0,,If at any point that trust is broken, we run the risk of AI deployments being stalled,
+Dialogue: 0,0:04:59.31,0:05:04.37,Secondary,,0,0,0,,unsuccessful, or at worst, harmful to stakeholders those products affect.
+Dialogue: 0,0:05:04.37,0:05:12.68,Secondary,,0,0,0,,This all fits into our belief at Google that responsible AI equals successful AI.
+Dialogue: 0,0:05:12.68,0:05:18.4,Secondary,,0,0,0,,We make our product and business decisions around AI through a series of assessments and reviews.
+Dialogue: 0,0:05:18.4,0:05:22.81,Secondary,,0,0,0,,These instill rigor and consistency in our approach across product areas and geographies.
+Dialogue: 0,0:05:22.81,0:05:29.60,Secondary,,0,0,0,,These assessments and reviews begin with ensuring that any project aligns with our AI Principles.
+Dialogue: 0,0:05:29.60,0:05:39.54,Secondary,,0,0,0,,While AI Principles help ground a group in shared commitments, not everyone will agree with every decision made on how products should be designed responsibly.
+Dialogue: 0,0:05:39.54,0:05:50.84,Secondary,,0,0,0,,This is why it's important to develop robust processes that people can trust, so even if they don't agree with the end decision, they trust the process that drove the decision.
+Dialogue: 0,0:05:50.84,0:05:57.72,Secondary,,0,0,0,,In June 2018, we announced seven AI principles to guide our work.
+Dialogue: 0,0:05:57.72,0:06:04.7,Secondary,,0,0,0,,These are concrete standards that actively govern our research and product development and affect our business decisions.
+Dialogue: 0,0:06:05.66,0:06:07.69,Secondary,,0,0,0,,Here’s an overview of each one:
+Dialogue: 0,0:06:08.43,0:06:12.12,Secondary,,0,0,0,,1. AI should be socially beneficial.
+Dialogue: 0,0:06:12.12,0:06:24.57,Secondary,,0,0,0,,Any project should take into account a broad range of social and economic factors and will proceed only where we believe that the overall likely benefits substantially exceed the foreseeable risks and downsides.
+Dialogue: 0,0:06:25.21,0:06:30.58,Secondary,,0,0,0,,2. AI should avoid creating or reinforcing unfair bias.
+Dialogue: 0,0:06:30.58,0:06:48.5,Secondary,,0,0,0,,We seek to avoid unjust effects on people, particularly those related to sensitive characteristics such as race, ethnicity, gender, nationality, income, sexual orientation, ability, and political or religious belief.
+Dialogue: 0,0:06:48.5,0:06:49.56,Secondary,,0,0,0,,3.
+Dialogue: 0,0:06:52.66,0:06:59.96,Secondary,,0,0,0,,We will continue to develop and apply strong safety and security practices to avoid unintended results that create risks of harm.
+Dialogue: 0,0:07:01.0,0:07:04.75,Secondary,,0,0,0,,4. AI should be accountable to people.
+Dialogue: 0,0:07:04.75,0:07:12.68,Secondary,,0,0,0,,We will design AI systems that provide appropriate opportunities for feedback, relevant explanations, and appeal.
+Dialogue: 0,0:07:13.17,0:07:17.30,Secondary,,0,0,0,,5. AI should incorporate privacy design principles.
+Dialogue: 0,0:07:17.30,0:07:23.59,Secondary,,0,0,0,,We will give opportunity for notice and consent, encourage architectures with privacy safeguards,
+Dialogue: 0,0:07:23.59,0:07:28.74,Secondary,,0,0,0,,and provide appropriate transparency and control over the use of data.
+Dialogue: 0,0:07:28.74,0:07:32.78,Secondary,,0,0,0,,6. AI should uphold high standards of scientific excellence.
+Dialogue: 0,0:07:32.78,0:07:37.84,Secondary,,0,0,0,,We will work with a range of stakeholders to promote thoughtful leadership in this area,
+Dialogue: 0,0:07:37.84,0:07:42.29,Secondary,,0,0,0,,drawing on scientifically rigorous and multidisciplinary approaches.
+Dialogue: 0,0:07:42.29,0:07:52.36,Secondary,,0,0,0,,And we will responsibly share AI knowledge by publishing educational materials, best practices, and research that enable more people to develop useful AI applications.
+Dialogue: 0,0:07:52.36,0:07:58.94,Secondary,,0,0,0,,7. AI should be made available for uses that accord with these principles.
+Dialogue: 0,0:07:58.94,0:08:05.66,Secondary,,0,0,0,,Many technologies have multiple uses, so we’ll work to limit potentially harmful or abusive applications.
+Dialogue: 0,0:08:05.66,0:08:11.73,Secondary,,0,0,0,,In addition to these seven principles, there are certain AI applications we will not pursue.
+Dialogue: 0,0:08:11.73,0:08:21.97,Secondary,,0,0,0,,We will not design or deploy AI in these four application areas: Technologies that cause or are likely to cause overall harm.
+Dialogue: 0,0:08:21.97,0:08:30.15,Secondary,,0,0,0,,Weapons or other technologies whose principal purpose or implementation is to cause or directly facilitate injury to people.
+Dialogue: 0,0:08:30.15,0:08:35.30,Secondary,,0,0,0,,Technologies that gather or use information for surveillance that violates internationally accepted norms.
+Dialogue: 0,0:08:35.30,0:08:42.38,Secondary,,0,0,0,,And technologies whose purpose contravenes widely accepted principles of international law and human rights.
+Dialogue: 0,0:08:42.38,0:08:47.84,Secondary,,0,0,0,,Establishing principles was a starting point, rather than an end.
+Dialogue: 0,0:08:47.84,0:08:54.60,Secondary,,0,0,0,,What remains true is that our AI Principles rarely give us direct answers to our questions on how to build our products.
+Dialogue: 0,0:08:54.60,0:08:59.99,Secondary,,0,0,0,,They don’t—and shouldn’t—allow us to sidestep hard conversations.
+Dialogue: 0,0:08:59.99,0:09:04.20,Secondary,,0,0,0,,They are a foundation that establishes what we stand for, what we build,
+Dialogue: 0,0:09:04.20,0:09:09.72,Secondary,,0,0,0,,and why we build it, and they are core to the success of our enterprise AI offerings.
+Dialogue: 0,0:00:00.8,0:00:04.33,Default,,0,0,0,,大家好，欢迎来到《负责任的人工智能入门》。
+Dialogue: 0,0:00:04.33,0:00:07.19,Default,,0,0,0,,这门课程将帮助你：
+Dialogue: 0,0:00:07.19,0:00:11.0,Default,,0,0,0,,了解为什么谷歌制定了AI原则。
+Dialogue: 0,0:00:11.0,0:00:16.62,Default,,0,0,0,,认识到一个组织内负责任AI实践的必要性。
+Dialogue: 0,0:00:16.62,0:00:21.63,Default,,0,0,0,,意识到项目各个阶段的决策对负责任AI的影响。
+Dialogue: 0,0:00:21.63,0:00:29.60,Default,,0,0,0,,并且，认识到组织可以根据自己的业务需求和价值观设计AI。
+Dialogue: 0,0:00:29.60,0:00:34.36,Default,,0,0,0,,我们中的许多人已经与人工智能（或AI）进行了日常互动，
+Dialogue: 0,0:00:34.36,0:00:40.68,Default,,0,0,0,,从交通和天气的预测，到可能喜欢观看的电视节目的推荐。
+Dialogue: 0,0:00:40.68,0:00:48.5,Default,,0,0,0,,随着AI变得越来越普遍，许多没集成AI的技术可能开始显得不够好。
+Dialogue: 0,0:00:48.5,0:00:57.32,Default,,0,0,0,,现在，AI系统使计算机能够以前所未有\N的方式看到、理解和与世界互动。
+Dialogue: 0,0:00:57.32,0:01:02.30,Default,,0,0,0,,这些系统正在以惊人的速度发展。
+Dialogue: 0,0:01:02.30,0:01:07.58,Default,,0,0,0,,尽管有这些显著的进步，但AI并非万无一失。
+Dialogue: 0,0:01:07.58,0:01:17.63,Default,,0,0,0,,负责任的AI开发需要了解可能的问题、局限性或意外后果。
+Dialogue: 0,0:01:17.63,0:01:22.11,Default,,0,0,0,,技术是社会现象的反映，没有良好的实践，
+Dialogue: 0,0:01:22.12,0:01:27.16,Default,,0,0,0,,AI可能复制现有的问题或偏见，并放大它们。
+Dialogue: 0,0:01:27.16,0:01:33.66,Default,,0,0,0,,但是，并没有一个关于“负责任的AI”的通用定义，也没有一个简单的
+Dialogue: 0,0:01:33.66,0:01:39.49,Default,,0,0,0,,清单或公式来定义如何实施负责任的AI实践。
+Dialogue: 0,0:01:39.49,0:01:46.95,Default,,0,0,0,,相反，各个组织正在制定自己的AI原则，反映了他们的使命和价值观。
+Dialogue: 0,0:01:46.95,0:01:51.87,Default,,0,0,0,,虽然这些原则因组织而异，但如果寻找共同点，
+Dialogue: 0,0:01:51.87,0:01:59.30,Default,,0,0,0,,你会发现透明度、公平性、问责制和隐私方面有一致的观念。
+Dialogue: 0,0:01:59.30,0:02:07.73,Default,,0,0,0,,在谷歌，我们负责任的AI方法植根于致力于为每个人构建AI的承诺，
+Dialogue: 0,0:02:07.73,0:02:14.60,Default,,0,0,0,,它要有责任感、安全，尊重隐私，并以科学卓越为驱动。
+Dialogue: 0,0:02:14.60,0:02:26.99,Default,,0,0,0,,我们制定了自己的AI原则、实践、治理流程和工具，\N共同体现了我们的价值观，指导我们负责任地使用AI。
+Dialogue: 0,0:02:26.99,0:02:35.39,Default,,0,0,0,,我们将责任设计融入了产品，更重要的是，融入了我们的组织。
+Dialogue: 0,0:02:35.39,0:02:42.49,Default,,0,0,0,,像许多公司一样，我们使用AI原则作为指导负责任决策的框架。
+Dialogue: 0,0:02:42.49,0:02:46.69,Default,,0,0,0,,我们都在负责任地应用AI方面有作用。
+Dialogue: 0,0:02:46.69,0:02:55.30,Default,,0,0,0,,无论您参与AI过程的哪个阶段，从设计\N到部署或应用，您所做的决策都会产生影响。
+Dialogue: 0,0:02:55.30,0:03:01.60,Default,,0,0,0,,因此，您也需要有明确且可重复的负责任使用AI的流程。
+Dialogue: 0,0:03:01.60,0:03:09.27,Default,,0,0,0,,关于人工智能的一个普遍误解是，机器在决策中起着核心作用。
+Dialogue: 0,0:03:09.27,0:03:16.87,Default,,0,0,0,,实际上，设计和构建这些机器以及决定如何使用它们的是人。
+Dialogue: 0,0:03:16.87,0:03:23.4,Default,,0,0,0,,人们参与到AI开发的每个方面。他们收集或创建模型训练所需的数据。
+Dialogue: 0,0:03:23.4,0:03:27.82,Default,,0,0,0,,他们控制AI的部署以及在特定场景中的应用。
+Dialogue: 0,0:03:27.82,0:03:33.4,Default,,0,0,0,,从本质上讲，人类决策贯穿于我们的技术产品中。
+Dialogue: 0,0:03:33.4,0:03:39.57,Default,,0,0,0,,每当一个人做出决策时，他们实际上是根据自己的价值观做出选择。
+Dialogue: 0,0:03:39.57,0:03:42.83,Default,,0,0,0,,无论是决定使用生成式AI来解决问题，
+Dialogue: 0,0:03:42.83,0:03:50.45,Default,,0,0,0,,还是在整个机器学习生命周期中的\N其他方法，那个人都会引入自己的价值观。
+Dialogue: 0,0:03:50.45,0:03:56.2,Default,,0,0,0,,这意味着每个决策点都需要考虑和评估，以确保
+Dialogue: 0,0:03:56.2,0:04:00.98,Default,,0,0,0,,从概念到部署和维护，选择都是负责任的。
+Dialogue: 0,0:04:00.98,0:04:12.74,Default,,0,0,0,,因为这些技术有可能影响到社会的许多领域，更不用说\N人们的日常生活了，所以在开发这些技术时要牢记道德。
+Dialogue: 0,0:04:12.74,0:04:18.35,Default,,0,0,0,,负责任的AI并不意味着只关注明显有争议的用例。
+Dialogue: 0,0:04:18.35,0:04:30.44,Default,,0,0,0,,没有负责任的AI实践，即使看似无害的AI\N应用案例，或者那些出于好意的案例，仍然可能导致\N道德问题或意外后果，或者没有达到它们可能的最大效益。
+Dialogue: 0,0:04:30.44,0:04:42.85,Default,,0,0,0,,道德和责任很重要，不仅因为它们代表了正确的事情，\N而且因为它们可以指导AI设计，使人们的生活更有益。
+Dialogue: 0,0:04:42.85,0:04:52.38,Default,,0,0,0,,在谷歌，我们了解到，在任何AI部署中建立责任感\N可以使模型更好，并与我们的客户和客户的客户建立信任。
+Dialogue: 0,0:04:52.38,0:04:59.31,Default,,0,0,0,,如果在任何时候信任破裂，我们就有可能使AI部署停滞不前，
+Dialogue: 0,0:04:59.31,0:05:04.37,Default,,0,0,0,,不成功，或者在最坏的情况下，对受影响的利益相关者造成伤害。
+Dialogue: 0,0:05:04.37,0:05:12.68,Default,,0,0,0,,这都符合我们在谷歌的信念，即负责任的AI等于成功的AI。
+Dialogue: 0,0:05:12.68,0:05:18.4,Default,,0,0,0,,我们通过一系列评估和审查来做出关于AI的产品和业务决策。
+Dialogue: 0,0:05:18.4,0:05:22.81,Default,,0,0,0,,这些评估和审查确保了我们在产品领域\N和地理区域的方法的严谨性和一致性。
+Dialogue: 0,0:05:22.81,0:05:29.60,Default,,0,0,0,,这些评估和审查从确保任何项目与我们的AI原则保持一致开始。
+Dialogue: 0,0:05:29.60,0:05:39.54,Default,,0,0,0,,虽然AI原则有助于团队在共同承诺方面保持一致，\N但并非每个人都会同意关于如何负责任地设计产品的每个决策。
+Dialogue: 0,0:05:39.54,0:05:50.84,Default,,0,0,0,,这就是为什么我们要建立可靠的流程让人们信任，\N即使他们不同意最终决定，也会信任作出决定的过程。
+Dialogue: 0,0:05:50.84,0:05:57.72,Default,,0,0,0,,2018年6月，我们公布了七项AI原则来指导我们的工作。
+Dialogue: 0,0:05:57.72,0:06:04.7,Default,,0,0,0,,这些具体标准积极地指导我们的研究\N和产品开发，并影响我们的业务决策。
+Dialogue: 0,0:06:05.66,0:06:07.69,Default,,0,0,0,,以下是每个原则的概述：
+Dialogue: 0,0:06:08.43,0:06:12.12,Default,,0,0,0,,1. AI应具有社会效益。
+Dialogue: 0,0:06:12.12,0:06:24.57,Default,,0,0,0,,任何项目都应考虑广泛的社会和经济因素，只有在我们认为总体\N可能的收益明显超过可预见的风险和缺点时，才会继续进行。
+Dialogue: 0,0:06:25.21,0:06:30.58,Default,,0,0,0,,2. AI应避免产生或加强不公平的偏见。
+Dialogue: 0,0:06:30.58,0:06:48.5,Default,,0,0,0,,我们努力避免对人们产生不公正的影响，\N特别是与种族、民族、性别、国籍、收入、性取向、\N能力以及政治或宗教信仰等敏感特征相关的影响。
+Dialogue: 0,0:06:48.5,0:06:52.66,Default,,0,0,0,,3. AI应该在安全方面进行构建和测试。
+Dialogue: 0,0:06:52.66,0:06:59.96,Default,,0,0,0,,我们将继续发展并应用强大的安全保障措施，\N以避免产生可能导致伤害的意外结果。
+Dialogue: 0,0:07:01.0,0:07:04.75,Default,,0,0,0,,4. AI应对人类负责。
+Dialogue: 0,0:07:04.75,0:07:12.68,Default,,0,0,0,,我们将设计提供适当反馈、相关解释和申诉机会的AI系统。
+Dialogue: 0,0:07:13.17,0:07:17.30,Default,,0,0,0,,5. AI应融入隐私设计原则。
+Dialogue: 0,0:07:17.30,0:07:23.59,Default,,0,0,0,,我们将提供通知和同意的机会，鼓励具有隐私保护的架构，
+Dialogue: 0,0:07:23.59,0:07:28.74,Default,,0,0,0,,并在数据使用方面提供适当的透明度和控制。
+Dialogue: 0,0:07:28.74,0:07:32.78,Default,,0,0,0,,6. AI应维护高科学水平。
+Dialogue: 0,0:07:32.78,0:07:37.84,Default,,0,0,0,,我们将与各方利益相关者合作，推动这一领域的深思熟虑的领导力，
+Dialogue: 0,0:07:37.84,0:07:42.29,Default,,0,0,0,,运用科学严谨和多学科方法。
+Dialogue: 0,0:07:42.29,0:07:52.36,Default,,0,0,0,,我们将负责任地分享AI知识，发布教育材料、\N最佳实践和研究，使更多人能够开发有用的AI应用。
+Dialogue: 0,0:07:52.36,0:07:58.94,Default,,0,0,0,,7. AI应遵循这些原则进行开发。
+Dialogue: 0,0:07:58.94,0:08:05.66,Default,,0,0,0,,许多技术有多种用途，我们将努力限制可能有害或滥用的应用。
+Dialogue: 0,0:08:05.66,0:08:11.73,Default,,0,0,0,,除了这七个原则外，我们还有一些AI应用不会开发。
+Dialogue: 0,0:08:11.73,0:08:21.97,Default,,0,0,0,,我们不会设计或部署以下四个应用领域的AI：\N可能导致或很可能导致整体伤害的技术。
+Dialogue: 0,0:08:21.97,0:08:30.15,Default,,0,0,0,,主要目的或实施是导致或直接促成人员受伤的武器或其他技术。
+Dialogue: 0,0:08:30.15,0:08:35.30,Default,,0,0,0,,收集或使用违反国际公认准则的监控信息的技术。
+Dialogue: 0,0:08:35.30,0:08:42.38,Default,,0,0,0,,以及违反国际法和人权广泛接受原则的技术。
+Dialogue: 0,0:08:42.38,0:08:47.84,Default,,0,0,0,,制定原则是一个起点，而不是终点。
+Dialogue: 0,0:08:47.84,0:08:54.60,Default,,0,0,0,,我们的AI原则很少能直接回答我们关于如何构建产品的问题。
+Dialogue: 0,0:08:54.60,0:08:59.99,Default,,0,0,0,,它们不会（也不应该）让我们回避艰难的对话。
+Dialogue: 0,0:08:59.99,0:09:04.20,Default,,0,0,0,,它们是我们立场、我们构建的基础，
+Dialogue: 0,0:09:04.20,0:09:09.72,Default,,0,0,0,,以及为什么我们要构建它，它们是我们企业AI产品成功的核心。

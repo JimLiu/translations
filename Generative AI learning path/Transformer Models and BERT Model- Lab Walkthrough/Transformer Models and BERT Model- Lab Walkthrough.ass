@@ -1,0 +1,304 @@
+[Script Info]
+
+Title: Transformer Models and BERT Model- Lab Walkthrough
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.10,0:00:03.13,Secondary,,0,0,0,,Hi. I'm Sanjana Reddy, a machine learning
+Dialogue: 1,0:00:03.13,0:00:05.10,Secondary,,0,0,0,,0 engineer at Google's Advanced Solutions Lab.
+Dialogue: 1,0:00:06.87,0:00:11.50,Secondary,,0,0,0,,Welcome to the lab walkthrough for Transformer models and BERT model.
+Dialogue: 1,0:00:12.60,0:00:14.70,Secondary,,0,0,0,,In this lab walkthrough, we'll be going
+Dialogue: 1,0:00:14.70,0:00:18.13,Secondary,,0,0,0,,through classification using a Pre-Trained Bert model.
+Dialogue: 1,0:00:18.67,0:00:21.77,Secondary,,0,0,0,,You'll find the setup instructions in our GitHub repository.
+Dialogue: 1,0:00:22.67,0:00:24.47,Secondary,,0,0,0,,Let's get started.
+Dialogue: 1,0:00:24.50,0:00:28.7,Secondary,,0,0,0,,In order to work on this notebook, you'll need to log into Google Cloud,
+Dialogue: 1,0:00:28.60,0:00:32.70,Secondary,,0,0,0,,go into Vertex AI and click on Workbench.
+Dialogue: 1,0:00:33.73,0:00:37.20,Secondary,,0,0,0,,Make sure that you have a notebook created once a notebook instance
+Dialogue: 1,0:00:37.20,0:00:38.27,Secondary,,0,0,0,,has been created.
+Dialogue: 1,0:00:38.27,0:00:41.66,Secondary,,0,0,0,,Click on Open Jupyter Lab.
+Dialogue: 1,0:00:41.67,0:00:45.23,Secondary,,0,0,0,,Once you've followed the instructions in our GitHub repository,
+Dialogue: 1,0:00:45.43,0:00:47.86,Secondary,,0,0,0,,navigate to classify text with Bert
+Dialogue: 1,0:00:48.83,0:00:51.76,Secondary,,0,0,0,,in this notebook, we're going to learn how to load
+Dialogue: 1,0:00:51.77,0:00:54.60,Secondary,,0,0,0,,a Pre-Trained Bert model from TensorFlow Hub
+Dialogue: 1,0:00:55.33,0:00:59.83,Secondary,,0,0,0,,and build our own classification using the Pre-Trained Bert model,
+Dialogue: 1,0:00:59.83,0:01:03.3,Secondary,,0,0,0,,we learn how to train a Bert model by fine tuning it
+Dialogue: 1,0:01:05.10,0:01:06.47,Secondary,,0,0,0,,before you get started.
+Dialogue: 1,0:01:06.47,0:01:09.36,Secondary,,0,0,0,,Note that this notebook requires a GPU
+Dialogue: 1,0:01:09.87,0:01:13.93,Secondary,,0,0,0,,because the training does take quite a bit of time.
+Dialogue: 1,0:01:14.43,0:01:15.83,Secondary,,0,0,0,,When you open this notebook,
+Dialogue: 1,0:01:15.83,0:01:19.30,Secondary,,0,0,0,,there is a setup instruction in order to set up a bert kernel
+Dialogue: 1,0:01:19.30,0:01:23.43,Secondary,,0,0,0,,to install all the required libraries for this notebook.
+Dialogue: 1,0:01:24.80,0:01:26.86,Secondary,,0,0,0,,For this notebook, we're going to be using
+Dialogue: 1,0:01:26.87,0:01:30.90,Secondary,,0,0,0,,TensorFlow and TensorFlow Hub TensorFlow Text,
+Dialogue: 1,0:01:30.93,0:01:35.7,Secondary,,0,0,0,,which is required to pre process the input for the BERT model.
+Dialogue: 1,0:01:36.63,0:01:39.47,Secondary,,0,0,0,,You can see that I'm checking if a GPU is attached
+Dialogue: 1,0:01:39.47,0:01:42.93,Secondary,,0,0,0,,and I see that I have one GPU attached to this notebook.
+Dialogue: 1,0:01:43.60,0:01:46.53,Secondary,,0,0,0,,In this notebook we're going to train a sentiment
+Dialogue: 1,0:01:46.53,0:01:51.23,Secondary,,0,0,0,,analysis model to classify movie reviews as either being positive
+Dialogue: 1,0:01:51.30,0:01:54.27,Secondary,,0,0,0,,or negative based on the text of the review,
+Dialogue: 1,0:01:55.53,0:01:58.23,Secondary,,0,0,0,,we're going to be working with the IMDB data set
+Dialogue: 1,0:01:58.40,0:02:02.23,Secondary,,0,0,0,,that you can download from this URL.
+Dialogue: 1,0:02:03.93,0:02:05.33,Secondary,,0,0,0,,Once we have downloaded
+Dialogue: 1,0:02:05.33,0:02:09.50,Secondary,,0,0,0,,the data set, we can examine the data to see what's in it.
+Dialogue: 1,0:02:10.7,0:02:15.17,Secondary,,0,0,0,,We see that we have 25,000 files that belong to two classes, positive
+Dialogue: 1,0:02:15.17,0:02:19.6,Secondary,,0,0,0,,and negative, and we're going to be using 20,000 files
+Dialogue: 1,0:02:19.7,0:02:24.30,Secondary,,0,0,0,,for training and the remaining 5000 for testing.
+Dialogue: 1,0:02:24.30,0:02:28.43,Secondary,,0,0,0,,A sample of this dataset shows you the movie review
+Dialogue: 1,0:02:28.67,0:02:31.53,Secondary,,0,0,0,,over here and an associated label.
+Dialogue: 1,0:02:31.53,0:02:36.40,Secondary,,0,0,0,,So for the one over here, we see that the label that is associated is negative
+Dialogue: 1,0:02:37.40,0:02:42.43,Secondary,,0,0,0,,and the one below here it's positive.
+Dialogue: 1,0:02:42.97,0:02:46.20,Secondary,,0,0,0,,Once we've examined our dataset and we're happy with that, we're
+Dialogue: 1,0:02:46.20,0:02:50.3,Secondary,,0,0,0,,going to load a Pre-Trained BERT model from TensorFlow Hub.
+Dialogue: 1,0:02:51.23,0:02:53.77,Secondary,,0,0,0,,TensorFlow Hub offers multiple
+Dialogue: 1,0:02:53.77,0:02:57.56,Secondary,,0,0,0,,different variations of BERT models in all different sizes.
+Dialogue: 1,0:02:58.10,0:03:02.50,Secondary,,0,0,0,,We're going to use a small BERT for today's notebook.
+Dialogue: 1,0:03:02.50,0:03:06.7,Secondary,,0,0,0,,So this bert model has four different layers.
+Dialogue: 1,0:03:06.43,0:03:11.66,Secondary,,0,0,0,,It has 512 hidden units, and it has eight attention heads.
+Dialogue: 1,0:03:11.67,0:03:15.6,Secondary,,0,0,0,,For every BERT model that we load from TensorFlow Hub,
+Dialogue: 1,0:03:15.50,0:03:19.63,Secondary,,0,0,0,,it is associated with a corresponding pre-processing model.
+Dialogue: 1,0:03:20.43,0:03:24.10,Secondary,,0,0,0,,You can find the corresponding pre-processing model on TensorFlow Hub
+Dialogue: 1,0:03:24.10,0:03:28.40,Secondary,,0,0,0,,as well.
+Dialogue: 1,0:03:28.40,0:03:30.60,Secondary,,0,0,0,,We're going to examine the pre processing model.
+Dialogue: 1,0:03:30.60,0:03:33.47,Secondary,,0,0,0,,So we have we're going to load the pre processing model
+Dialogue: 1,0:03:33.47,0:03:38.30,Secondary,,0,0,0,,we see in the previous step and we pass a sample text over here.
+Dialogue: 1,0:03:38.30,0:03:39.23,Secondary,,0,0,0,,So we just passed.
+Dialogue: 1,0:03:39.23,0:03:42.60,Secondary,,0,0,0,,This is an amazing movie and we're going to examine the output.
+Dialogue: 1,0:03:43.27,0:03:47.16,Secondary,,0,0,0,,The pre processing model gives us multiple outputs.
+Dialogue: 1,0:03:47.40,0:03:49.90,Secondary,,0,0,0,,The first is the input word ID.
+Dialogue: 1,0:03:50.40,0:03:53.23,Secondary,,0,0,0,,The input word ID is the idea of the words
+Dialogue: 1,0:03:53.23,0:03:56.33,Secondary,,0,0,0,,in the tokenized sentence.
+Dialogue: 1,0:03:56.33,0:03:59.70,Secondary,,0,0,0,,The pre-processing model also provides
+Dialogue: 1,0:03:59.70,0:04:02.3,Secondary,,0,0,0,,us the masking for each word.
+Dialogue: 1,0:04:02.80,0:04:06.87,Secondary,,0,0,0,,Every sentence is converted into a fixed length input,
+Dialogue: 1,0:04:07.23,0:04:14.7,Secondary,,0,0,0,,and it masks words that are not valid.
+Dialogue: 1,0:04:14.7,0:04:17.87,Secondary,,0,0,0,,So once we have pre processed our input text, we can use the loaded
+Dialogue: 1,0:04:18.40,0:04:20.53,Secondary,,0,0,0,,bert model from TensorFlow Hub
+Dialogue: 1,0:04:21.63,0:04:23.40,Secondary,,0,0,0,,in this particular cell block.
+Dialogue: 1,0:04:23.40,0:04:26.90,Secondary,,0,0,0,,It doesn't really make any sense because we've not trained the model.
+Dialogue: 1,0:04:26.90,0:04:30.20,Secondary,,0,0,0,,This is just a random list of numbers at this point.
+Dialogue: 1,0:04:30.63,0:04:34.40,Secondary,,0,0,0,,But once you pass the pre process text into this bert model,
+Dialogue: 1,0:04:34.73,0:04:41.33,Secondary,,0,0,0,,you get certain embeddings.
+Dialogue: 1,0:04:41.33,0:04:44.30,Secondary,,0,0,0,,So in order to define our classification model,
+Dialogue: 1,0:04:44.43,0:04:47.40,Secondary,,0,0,0,,we start with an input layer.
+Dialogue: 1,0:04:47.40,0:04:51.3,Secondary,,0,0,0,,The input layer takes the raw text as input
+Dialogue: 1,0:04:51.60,0:04:54.97,Secondary,,0,0,0,,passes it on to the processing layer for pre-processing
+Dialogue: 1,0:04:55.7,0:04:59.70,Secondary,,0,0,0,,that converted into token IDs, bert IDs and mask IDs.
+Dialogue: 1,0:04:59.70,0:05:04.17,Secondary,,0,0,0,,The pre processed words are then passed to the Pre-Trained model.
+Dialogue: 1,0:05:05.70,0:05:07.83,Secondary,,0,0,0,,There is an argument here called trainable.
+Dialogue: 1,0:05:08.40,0:05:12.27,Secondary,,0,0,0,,Trainable here determines if you want to fine tune the Pre-Trained
+Dialogue: 1,0:05:12.27,0:05:16.27,Secondary,,0,0,0,,model using the new data that you're training with or not.
+Dialogue: 1,0:05:16.67,0:05:19.87,Secondary,,0,0,0,,In our example, we are setting trainable to true,
+Dialogue: 1,0:05:20.53,0:05:23.70,Secondary,,0,0,0,,which means that we're going to update the initial weights
+Dialogue: 1,0:05:23.70,0:05:24.93,Secondary,,0,0,0,,of the Pre-Trained model.
+Dialogue: 1,0:05:26.7,0:05:27.67,Secondary,,0,0,0,,Your decision to
+Dialogue: 1,0:05:27.67,0:05:30.67,Secondary,,0,0,0,,set this to true or false depends on two things
+Dialogue: 1,0:05:31.50,0:05:33.77,Secondary,,0,0,0,,whether you want to update the weights
+Dialogue: 1,0:05:33.97,0:05:36.60,Secondary,,0,0,0,,and second, on the size of your dataset,
+Dialogue: 1,0:05:37.20,0:05:42.37,Secondary,,0,0,0,,if you have a relatively small data set, it is recommended to set this to false
+Dialogue: 1,0:05:42.53,0:05:46.57,Secondary,,0,0,0,,so that you're not introducing noise into the pre-trained weights.
+Dialogue: 1,0:05:47.7,0:05:50.67,Secondary,,0,0,0,,But if you have a large enough dataset, you can set this to true.
+Dialogue: 1,0:05:52.20,0:05:56.30,Secondary,,0,0,0,,Once we have our pre-trained model, we pass it through a dense layer
+Dialogue: 1,0:05:57.0,0:06:02.43,Secondary,,0,0,0,,to get probabilities for each of our classes.
+Dialogue: 1,0:06:02.43,0:06:05.3,Secondary,,0,0,0,,This is what the output from the model is going to look like.
+Dialogue: 1,0:06:05.3,0:06:10.73,Secondary,,0,0,0,,The output is going to be a probability of whether this particular sentence is
+Dialogue: 1,0:06:10.73,0:06:15.57,Secondary,,0,0,0,,true, is positive or negative.
+Dialogue: 1,0:06:15.57,0:06:18.67,Secondary,,0,0,0,,Since we're working with a binary classification problem,
+Dialogue: 1,0:06:18.80,0:06:22.47,Secondary,,0,0,0,,we're going to use BinaryCrossentropy as our loss function
+Dialogue: 1,0:06:22.90,0:06:26.83,Secondary,,0,0,0,,and the metric to optimize for is going to be BinaryAccuracy
+Dialogue: 1,0:06:28.57,0:06:29.70,Secondary,,0,0,0,,for initializing
+Dialogue: 1,0:06:29.70,0:06:33.3,Secondary,,0,0,0,,our training by defining the optimizer.
+Dialogue: 1,0:06:33.3,0:06:38.17,Secondary,,0,0,0,,In our case, we're using Adam, which is a popular choice for neural network
+Dialogue: 1,0:06:38.93,0:06:39.100,Secondary,,0,0,0,,models.
+Dialogue: 1,0:06:40.90,0:06:42.93,Secondary,,0,0,0,,Once we initialize the training,
+Dialogue: 1,0:06:42.93,0:06:45.70,Secondary,,0,0,0,,we can start training using model dot fit.
+Dialogue: 1,0:06:46.10,0:06:49.63,Secondary,,0,0,0,,We can pass the train dataset and the validation dataset
+Dialogue: 1,0:06:49.63,0:06:55.20,Secondary,,0,0,0,,and the number of epochs that we want to train for.
+Dialogue: 1,0:06:55.20,0:06:59.53,Secondary,,0,0,0,,Once the model has trained, let's evaluate the performance of the model.
+Dialogue: 1,0:06:59.57,0:07:04.36,Secondary,,0,0,0,,So in our case we see that the model achieved an accuracy of 85%,
+Dialogue: 1,0:07:04.97,0:07:08.70,Secondary,,0,0,0,,which is pretty decent considering we only trained it for five epochs.
+Dialogue: 1,0:07:09.90,0:07:13.10,Secondary,,0,0,0,,You can potentially thwart the accuracy
+Dialogue: 1,0:07:13.10,0:07:16.67,Secondary,,0,0,0,,and loss over time in order to visualize the model's performance.
+Dialogue: 1,0:07:17.77,0:07:20.10,Secondary,,0,0,0,,0 We see that the training loss is going down
+Dialogue: 1,0:07:21.53,0:07:24.87,Secondary,,0,0,0,,and we could work on our validation loss a little bit.
+Dialogue: 1,0:07:25.27,0:07:28.13,Secondary,,0,0,0,,But for the sake of demonstration, we've only trained it
+Dialogue: 1,0:07:28.13,0:07:31.50,Secondary,,0,0,0,,for five epochs.
+Dialogue: 1,0:07:31.50,0:07:35.43,Secondary,,0,0,0,,Once you're satisfied with the model that you've trained, you can save the model
+Dialogue: 1,0:07:35.97,0:07:40.57,Secondary,,0,0,0,,using model dot safe model dot save export.
+Dialogue: 1,0:07:40.57,0:07:42.86,Secondary,,0,0,0,,So TensorFlow model to a local path.
+Dialogue: 1,0:07:43.43,0:07:47.63,Secondary,,0,0,0,,So the export path in this line is going to be a part
+Dialogue: 1,0:07:47.63,0:07:51.67,Secondary,,0,0,0,,in your notebook instance.
+Dialogue: 1,0:07:51.67,0:07:55.30,Secondary,,0,0,0,,Once you've saved your model, you can load it to get predictions.
+Dialogue: 1,0:07:55.60,0:07:59.77,Secondary,,0,0,0,,So in this example we have this is such an amazing movie.
+Dialogue: 1,0:07:59.77,0:08:01.33,Secondary,,0,0,0,,This movie was great.
+Dialogue: 1,0:08:01.33,0:08:04.47,Secondary,,0,0,0,,The movie was okay-ish, the movie was terrible.
+Dialogue: 1,0:08:04.93,0:08:05.87,Secondary,,0,0,0,,And we get predictions
+Dialogue: 1,0:08:05.87,0:08:09.87,Secondary,,0,0,0,,for each of these sentences based on the model that we have trained.
+Dialogue: 1,0:08:11.67,0:08:12.13,Secondary,,0,0,0,,If you would
+Dialogue: 1,0:08:12.13,0:08:16.53,Secondary,,0,0,0,,like to take this further and deploy your model on Vertex AI to get online
+Dialogue: 1,0:08:16.53,0:08:23.33,Secondary,,0,0,0,,predictions, you could take the locally saved model and export it to Vertex AI.
+Dialogue: 1,0:08:25.73,0:08:28.30,Secondary,,0,0,0,,in order to do this, you need to check the signature
+Dialogue: 1,0:08:28.30,0:08:31.80,Secondary,,0,0,0,,of the model to see how you can pass predictions to the model.
+Dialogue: 1,0:08:32.57,0:08:36.27,Secondary,,0,0,0,,The signature of the model shows you what is the first layer
+Dialogue: 1,0:08:36.67,0:08:40.37,Secondary,,0,0,0,,that is taking input.
+Dialogue: 1,0:08:40.37,0:08:43.20,Secondary,,0,0,0,,So once we have the locally saved model,
+Dialogue: 1,0:08:43.60,0:08:48.10,Secondary,,0,0,0,,we are going to push the model to Vertex’s Model Registry
+Dialogue: 1,0:08:49.47,0:08:52.80,Secondary,,0,0,0,,using these commands.
+Dialogue: 1,0:08:52.80,0:08:55.90,Secondary,,0,0,0,,In order to put the model in Vertex’s Model Registry,
+Dialogue: 1,0:08:56.3,0:08:59.3,Secondary,,0,0,0,,you need to ensure that you have a Google Cloud storage bucket.
+Dialogue: 1,0:08:59.43,0:09:02.50,Secondary,,0,0,0,,And these lines over here, let you create a bucket.
+Dialogue: 1,0:09:02.50,0:09:04.10,Secondary,,0,0,0,,If it doesn't already exist,
+Dialogue: 1,0:09:05.43,0:09:06.27,Secondary,,0,0,0,,we're going to copy the
+Dialogue: 1,0:09:06.27,0:09:10.20,Secondary,,0,0,0,,locally saved model using GS Utils CP
+Dialogue: 1,0:09:10.70,0:09:13.67,Secondary,,0,0,0,,which takes a locally saved model from the export pack
+Dialogue: 1,0:09:13.77,0:09:16.56,Secondary,,0,0,0,,and puts it in the Google Cloud storage bucket.
+Dialogue: 1,0:09:17.87,0:09:20.66,Secondary,,0,0,0,,Once the model is in the Google Cloud Storage bucket,
+Dialogue: 1,0:09:20.67,0:09:24.7,Secondary,,0,0,0,,we're going to upload it to Vertex AI's model registry.
+Dialogue: 1,0:09:24.80,0:09:27.96,Secondary,,0,0,0,,We're using the Python SDK in this case.
+Dialogue: 1,0:09:28.13,0:09:32.40,Secondary,,0,0,0,,So we have a platform dot model dot upload, which takes the model
+Dialogue: 1,0:09:32.40,0:09:36.96,Secondary,,0,0,0,,from Google Cloud Storage Bucket and puts it in the model registry.
+Dialogue: 1,0:09:38.73,0:09:40.63,Secondary,,0,0,0,,Once the model has been uploaded,
+Dialogue: 1,0:09:40.63,0:09:43.57,Secondary,,0,0,0,,we're ready to deploy the model on Vertex
+Dialogue: 1,0:09:44.0,0:09:47.33,Secondary,,0,0,0,,and get online predictions.
+Dialogue: 1,0:09:47.33,0:09:51.60,Secondary,,0,0,0,,In order to do this, we can use the Python SDK again
+Dialogue: 1,0:09:51.67,0:09:56.7,Secondary,,0,0,0,,so we can use uploaded model to deploy, which is a function that is going to do
+Dialogue: 1,0:09:56.7,0:09:56.73,Secondary,,0,0,0,,two things.
+Dialogue: 1,0:09:56.73,0:10:00.66,Secondary,,0,0,0,,One, it's going to create an end point, and two,
+Dialogue: 1,0:10:00.67,0:10:04.67,Secondary,,0,0,0,,it's going to upload the model to this particular endpoint.
+Dialogue: 1,0:10:05.47,0:10:07.80,Secondary,,0,0,0,,So you can see here that it's creating the endpoint,
+Dialogue: 1,0:10:08.0,0:10:11.7,Secondary,,0,0,0,,providing you the endpoint location.
+Dialogue: 1,0:10:11.7,0:10:12.17,Secondary,,0,0,0,,And then once the endpoint
+Dialogue: 1,0:10:12.17,0:10:15.63,Secondary,,0,0,0,,has been created, the model is deployed to this endpoint.
+Dialogue: 1,0:10:16.57,0:10:20.7,Secondary,,0,0,0,,This step is going to take around 5 to 10 minutes.
+Dialogue: 1,0:10:20.7,0:10:22.10,Secondary,,0,0,0,,When you run through your notebook.
+Dialogue: 1,0:10:22.10,0:10:24.47,Secondary,,0,0,0,,So just don't worry if it takes too long,
+Dialogue: 1,0:10:25.37,0:10:29.13,Secondary,,0,0,0,,once the model has been deployed to the endpoint, you're ready
+Dialogue: 1,0:10:29.13,0:10:31.90,Secondary,,0,0,0,,to get predictions from this endpoint
+Dialogue: 1,0:10:32.83,0:10:35.20,Secondary,,0,0,0,,so you can create an instance object.
+Dialogue: 1,0:10:35.97,0:10:38.33,Secondary,,0,0,0,,So using the signature of the model, we know that
+Dialogue: 1,0:10:38.33,0:10:41.67,Secondary,,0,0,0,,the name of the first input layer is text.
+Dialogue: 1,0:10:42.10,0:10:47.23,Secondary,,0,0,0,,So we're going to pass our review text to this particular key.
+Dialogue: 1,0:10:48.30,0:10:49.67,Secondary,,0,0,0,,We create this instances
+Dialogue: 1,0:10:49.67,0:10:53.53,Secondary,,0,0,0,,object that is going to be passed to the endpoint dot predictive function.
+Dialogue: 1,0:10:54.23,0:10:57.66,Secondary,,0,0,0,,And the endpoint our predict function is going to take this instance
+Dialogue: 1,0:10:58.7,0:11:00.33,Secondary,,0,0,0,,and it's going to give us predictions.
+Dialogue: 1,0:11:00.33,0:11:04.50,Secondary,,0,0,0,,So we can see for our first instance, I love the movie and highly recommend it.
+Dialogue: 1,0:11:04.80,0:11:08.36,Secondary,,0,0,0,,We have a prediction of 0.99.
+Dialogue: 1,0:11:08.37,0:11:10.10,Secondary,,0,0,0,,For it was an okay movie in my opinion.
+Dialogue: 1,0:11:10.10,0:11:13.63,Secondary,,0,0,0,,We have 84% and for I hated the movie,
+Dialogue: 1,0:11:13.63,0:11:16.33,Secondary,,0,0,0,,we have 2%, which means it's a negative sentiment.
+Dialogue: 1,0:11:17.23,0:11:21.77,Secondary,,0,0,0,,So this is how you can create a classification model from a pre-trained
+Dialogue: 1,0:11:21.77,0:11:27.70,Secondary,,0,0,0,,BERT model and then deploy it on Vertex to get online predictions.
+Dialogue: 1,0:00:00.10,0:00:05.10,Default,,0,0,0,,嗨，我是Sanjana Reddy，一名在谷歌高级\N解决方案实验室的机器学习工程师。
+Dialogue: 1,0:00:06.87,0:00:11.50,Default,,0,0,0,,欢迎来到Transformer模型和BERT模型的实验室演示。
+Dialogue: 1,0:00:12.60,0:00:18.13,Default,,0,0,0,,在这个实验室演示中，我们将通过使用预训练的Bert模型进行分类。
+Dialogue: 1,0:00:18.67,0:00:21.77,Default,,0,0,0,,您可以在我们的GitHub仓库中找到设置说明。
+Dialogue: 1,0:00:22.67,0:00:24.47,Default,,0,0,0,,让我们开始吧。
+Dialogue: 1,0:00:24.50,0:00:32.70,Default,,0,0,0,,为了在这个Notebook上工作，您需要登录谷歌\N云，进入Vertex AI，然后点击Workbench。
+Dialogue: 1,0:00:33.73,0:00:38.27,Default,,0,0,0,,确保在Notebook实例创建后，您已经创建了一个Notebook。
+Dialogue: 1,0:00:38.27,0:00:41.66,Default,,0,0,0,,点击打开Jupyter Lab。
+Dialogue: 1,0:00:41.67,0:00:47.86,Default,,0,0,0,,按照我们GitHub仓库中的说明操作后，\N导航到使用Bert对文本进行分类。
+Dialogue: 1,0:00:48.83,0:00:59.83,Default,,0,0,0,,在这个Notebook中，我们将学习如何从TensorFlow Hub加载一个预训\N练的Bert模型，并使用预训练的Bert模型构建我们自己的分类。
+Dialogue: 1,0:00:59.83,0:01:03.3,Default,,0,0,0,,我们将学习如何通过微调来训练Bert模型。
+Dialogue: 1,0:01:05.10,0:01:13.93,Default,,0,0,0,,在开始之前，请注意，这个Notebook需要一个\NGPU，因为训练确实需要相当长的时间。
+Dialogue: 1,0:01:14.43,0:01:23.43,Default,,0,0,0,,当你打开这个Notebook时，有一个设置说明，以便设置一\N个bert_kernel来安装这个Notebook所需的所有库。
+Dialogue: 1,0:01:24.80,0:01:35.7,Default,,0,0,0,,对于这个Notebook，我们将使用TensorFlow和TensorFlow Hub \NTensorFlow Text，这是为BERT模型预处理输入所必需的。
+Dialogue: 1,0:01:36.63,0:01:42.93,Default,,0,0,0,,你可以看到我在检查是否有GPU连接，我\N发现这个Notebook有一个GPU连接。
+Dialogue: 1,0:01:43.60,0:02:02.23,Default,,0,0,0,,在这个Notebook中，我们将训练一个情感分析模型，\N根据评论的文本将电影评论分类为正面或负面，我\N们将使用IMDB数据集，你可以从这个URL下载。
+Dialogue: 1,0:02:03.93,0:02:09.50,Default,,0,0,0,,一旦我们下载了数据集，我们可以查看数据以了解其中的内容。
+Dialogue: 1,0:02:10.7,0:02:24.30,Default,,0,0,0,,我们看到我们有25,000个文件，分为正面和负面两个类别，我们\N将使用20,000个文件进行训练，剩下的5000个文件进行测试。
+Dialogue: 1,0:02:24.30,0:02:31.53,Default,,0,0,0,,这个数据集的一个样本向您展示了电影评论和相关标签。
+Dialogue: 1,0:02:31.53,0:02:42.43,Default,,0,0,0,,所以对于这里的一个，我们看到关联的标\N签是负面的，而下面这个是正面的。
+Dialogue: 1,0:02:42.97,0:02:50.3,Default,,0,0,0,,一旦我们检查了数据集并对其感到满意，我们将从\NTensorFlow Hub加载一个预训练的BERT模型。
+Dialogue: 1,0:02:51.23,0:02:57.56,Default,,0,0,0,,TensorFlow Hub提供了多种不同大小的BERT模型。
+Dialogue: 1,0:02:58.10,0:03:02.50,Default,,0,0,0,,在今天的Notebook中，我们将使用一个小型BERT。
+Dialogue: 1,0:03:02.50,0:03:06.7,Default,,0,0,0,,这个Bert模型有四个不同的层。
+Dialogue: 1,0:03:06.43,0:03:11.66,Default,,0,0,0,,它有512个隐藏单元，有8个注意力头。
+Dialogue: 1,0:03:11.67,0:03:19.63,Default,,0,0,0,,对于我们从TensorFlow Hub加载的每一个\NBERT模型，它都有一个相应的预处理模型。
+Dialogue: 1,0:03:20.43,0:03:28.40,Default,,0,0,0,,您也可以在TensorFlow Hub上找到相应的预处理模型。
+Dialogue: 1,0:03:28.40,0:03:30.60,Default,,0,0,0,,我们将研究预处理模型。
+Dialogue: 1,0:03:30.60,0:03:38.30,Default,,0,0,0,,我们将加载预处理模型，就像在前面的步骤中\N看到的那样，并在这里传递一个示例文本。
+Dialogue: 1,0:03:38.30,0:03:39.23,Default,,0,0,0,,我们刚刚通过了。
+Dialogue: 1,0:03:39.23,0:03:42.60,Default,,0,0,0,,这是一部很棒的电影，我们将检查输出。
+Dialogue: 1,0:03:43.27,0:03:47.16,Default,,0,0,0,,预处理模型给我们提供了多个输出。
+Dialogue: 1,0:03:47.40,0:03:49.90,Default,,0,0,0,,第一个是输入单词ID。
+Dialogue: 1,0:03:50.40,0:03:56.33,Default,,0,0,0,,输入单词ID是被分词的句子（Tokenized Sentence）中单词的ID。
+Dialogue: 1,0:03:56.33,0:04:02.3,Default,,0,0,0,,预处理模型还为每个单词提供了掩码（Masking）。
+Dialogue: 1,0:04:02.80,0:04:14.7,Default,,0,0,0,,每个句子都被转换成固定长度的输入，屏蔽掉无效的词语。
+Dialogue: 1,0:04:14.7,0:04:20.53,Default,,0,0,0,,所以一旦我们预处理了输入文本，就可以在这个特定的\N单元格中使用从TensorFlow Hub加载的Bert模型。
+Dialogue: 1,0:04:21.63,0:04:26.90,Default,,0,0,0,,这没有什么意义，因为我们还没有训练模型。
+Dialogue: 1,0:04:26.90,0:04:30.20,Default,,0,0,0,,这只是一个随机的数字列表。
+Dialogue: 1,0:04:30.63,0:04:41.33,Default,,0,0,0,,但是一旦你把预处理的文本传递给这个Bert\N模型，你就会得到一些嵌入（Embedding）。
+Dialogue: 1,0:04:41.33,0:04:47.40,Default,,0,0,0,,所以为了定义我们的分类模型，我们从一个输入层开始。
+Dialogue: 1,0:04:47.40,0:04:59.70,Default,,0,0,0,,输入层接收原始文本作为输入，将其传递给处理层进行\N预处理，将其转换为Token ID、Bert ID 和 Mask ID。
+Dialogue: 1,0:04:59.70,0:05:04.17,Default,,0,0,0,,预处理后的单词然后传递给预训练模型。
+Dialogue: 1,0:05:05.70,0:05:07.83,Default,,0,0,0,,这里有一个名为trainable（可训练）的参数。
+Dialogue: 1,0:05:08.40,0:05:16.27,Default,,0,0,0,,可训练在这里决定了您是否希望使用您正在\N训练的新数据对预训练模型进行微调。
+Dialogue: 1,0:05:16.67,0:05:24.93,Default,,0,0,0,,在我们的例子中，我们将trainable设置为True，\N这意味着我们将更新预训练模型的初始权重。
+Dialogue: 1,0:05:26.7,0:05:36.60,Default,,0,0,0,,您将此设置为True或False的决定取决于两件事：\N你是否想更新权重，以及你的数据集的大小。
+Dialogue: 1,0:05:37.20,0:05:46.57,Default,,0,0,0,,如果您有一个相对较小的数据集，建议将此设\N置为False，以免在预训练权重中引入噪声。
+Dialogue: 1,0:05:47.7,0:05:50.67,Default,,0,0,0,,但是，如果您有足够大的数据集，可以将其设置为True。
+Dialogue: 1,0:05:52.20,0:06:02.43,Default,,0,0,0,,一旦我们有了预训练模型，我们将其通过\N一个密集层，以获得每个类别的概率。
+Dialogue: 1,0:06:02.43,0:06:05.3,Default,,0,0,0,,这就是模型输出的样子。
+Dialogue: 1,0:06:05.3,0:06:15.57,Default,,0,0,0,,输出将是这个特定句子是真实的、正面的还是负面的概率。
+Dialogue: 1,0:06:15.57,0:06:26.83,Default,,0,0,0,,因为我们正在处理一个二分类问题，所以我们将使用\NBinaryCrossentropy作为损失函数，优化的指标将是\NBinaryAccuracy，
+Dialogue: 1,0:06:28.57,0:06:33.3,Default,,0,0,0,,通过定义优化器，我们开始初始化我们的训练。
+Dialogue: 1,0:06:33.3,0:06:39.100,Default,,0,0,0,,在我们的例子中，我们使用的是Adam，这是神经网络模型的热门选择。
+Dialogue: 1,0:06:40.90,0:06:45.70,Default,,0,0,0,,一旦我们初始化训练，我们可以开始使用model.fit进行训练。
+Dialogue: 1,0:06:46.10,0:06:55.20,Default,,0,0,0,,我们可以传递训练数据集和验证数据集以及我们想要训练的周期数。
+Dialogue: 1,0:06:55.20,0:06:59.53,Default,,0,0,0,,一旦模型训练完成，让我们评估模型的性能。
+Dialogue: 1,0:06:59.57,0:07:08.70,Default,,0,0,0,,在我们的例子中，我们看到模型达到了85%的准确率，\N考虑到我们只训练了五个周期，这是相当不错的。
+Dialogue: 1,0:07:09.90,0:07:16.67,Default,,0,0,0,,您可以潜在地阻止准确性和损失随时间变化，以便可视化模型的性能。
+Dialogue: 1,0:07:17.77,0:07:24.87,Default,,0,0,0,,我们看到训练损失正在减少，我们可以稍微改进一下验证损失。
+Dialogue: 1,0:07:25.27,0:07:31.50,Default,,0,0,0,,但是为了演示，我们只训练了五个周期。
+Dialogue: 1,0:07:31.50,0:07:42.86,Default,,0,0,0,,一旦你对你训练的模型感到满意，你可以使用model.save \NEXPORT_PATH保存模型，将TensorFlow模型保存到本地路径。
+Dialogue: 1,0:07:43.43,0:07:51.67,Default,,0,0,0,,因此，这行中的EXPORT_PATH将是您Notebook实例中的一部分。
+Dialogue: 1,0:07:51.67,0:07:55.30,Default,,0,0,0,,保存模型后，您可以加载它以获得预测。
+Dialogue: 1,0:07:55.60,0:07:59.77,Default,,0,0,0,,在这个例子中，我们有这是一部令人惊叹的电影。
+Dialogue: 1,0:07:59.77,0:08:01.33,Default,,0,0,0,,这部电影很棒。
+Dialogue: 1,0:08:01.33,0:08:04.47,Default,,0,0,0,,电影还可以，电影很糟糕。
+Dialogue: 1,0:08:04.93,0:08:09.87,Default,,0,0,0,,我们根据训练的模型得到每个句子的预测。
+Dialogue: 1,0:08:11.67,0:08:23.33,Default,,0,0,0,,如果您想进一步部署您的模型到 Vertex AI 以获得在线\N预测，您可以将本地保存的模型导出到 Vertex AI。
+Dialogue: 1,0:08:25.73,0:08:31.80,Default,,0,0,0,,为了做到这一点，您需要检查模型的签\N名，以了解如何将预测传递给模型。
+Dialogue: 1,0:08:32.57,0:08:40.37,Default,,0,0,0,,模型的签名会告诉您哪个是接收输入的第一层。
+Dialogue: 1,0:08:40.37,0:08:52.80,Default,,0,0,0,,所以一旦我们有了本地保存的模型，我们将使用这\N些命令将模型推送到 Vertex 的模型注册表。
+Dialogue: 1,0:08:52.80,0:08:59.3,Default,,0,0,0,,要将模型放入Vertex的模型注册表中，您需\N要确保拥有一个Google Cloud存储桶。
+Dialogue: 1,0:08:59.43,0:09:02.50,Default,,0,0,0,,这些代码行可以让您创建一个存储桶。
+Dialogue: 1,0:09:02.50,0:09:10.20,Default,,0,0,0,,如果它还不存在，我们将使用gsutils cp复制本地保存的模型，
+Dialogue: 1,0:09:10.70,0:09:16.56,Default,,0,0,0,,它从EXPORT_PATH中获取本地保存的模型，\N并将其放入Google Cloud存储桶中。
+Dialogue: 1,0:09:17.87,0:09:24.7,Default,,0,0,0,,一旦模型在Google Cloud存储桶中，我们将\N把它上传到Vertex AI的模型注册表中。
+Dialogue: 1,0:09:24.80,0:09:27.96,Default,,0,0,0,,在这个例子中，我们使用Python SDK。
+Dialogue: 1,0:09:28.13,0:09:36.96,Default,,0,0,0,,我们有aiplatform.model.upload，它从Google \NCloud存储桶获取模型并将其放入模型注册表中。
+Dialogue: 1,0:09:38.73,0:09:47.33,Default,,0,0,0,,一旦模型上传完毕，我们就可以在Vertex上部署模型并获得在线预测。
+Dialogue: 1,0:09:47.33,0:09:56.73,Default,,0,0,0,,为了实现这一点，我们可以再次使用Python SDK，使用已上\N传的模型进行部署，这是一个将执行两个操作的函数。
+Dialogue: 1,0:09:56.73,0:10:04.67,Default,,0,0,0,,首先，它将创建一个端点（Endpoint），其次\N，它将把模型上传到这个特定的端点。
+Dialogue: 1,0:10:05.47,0:10:11.7,Default,,0,0,0,,如您所见，这里创建了端点，并提供了端点位置。
+Dialogue: 1,0:10:11.7,0:10:15.63,Default,,0,0,0,,一旦端点创建完成，模型就会部署到这个端点。
+Dialogue: 1,0:10:16.57,0:10:20.7,Default,,0,0,0,,这个步骤大约需要5到10分钟。
+Dialogue: 1,0:10:20.7,0:10:24.47,Default,,0,0,0,,当您在Notebook中运行时，如果花费时间较长，请不要担心。
+Dialogue: 1,0:10:25.37,0:10:35.20,Default,,0,0,0,,一旦模型部署到端点，您就可以从这个端\N点获取预测，然后创建一个实例对象。
+Dialogue: 1,0:10:35.97,0:10:41.67,Default,,0,0,0,,根据模型的签名，我们知道第一个输入层的名称是"text"。
+Dialogue: 1,0:10:42.10,0:10:47.23,Default,,0,0,0,,我们将把评论文本传递给这个特定的键。
+Dialogue: 1,0:10:48.30,0:10:53.53,Default,,0,0,0,,我们创建这个实例对象，它将被传递给endpoint.predict函数。
+Dialogue: 1,0:10:54.23,0:11:00.33,Default,,0,0,0,,endpoint.predict函数将接收这个实例，并给我们预测结果。
+Dialogue: 1,0:11:00.33,0:11:04.50,Default,,0,0,0,,我们可以看到，对于我们的第一个实例\N，我喜欢这部电影并强烈推荐它。
+Dialogue: 1,0:11:04.80,0:11:08.36,Default,,0,0,0,,我们有一个0.99的预测。
+Dialogue: 1,0:11:08.37,0:11:10.10,Default,,0,0,0,,对于这是一部还可以的电影，这是我的看法。
+Dialogue: 1,0:11:10.10,0:11:16.33,Default,,0,0,0,,我们有84%，而对于我讨厌这部电影，我们\N有2%，这意味着这是一种负面情绪。
+Dialogue: 1,0:11:17.23,0:11:27.70,Default,,0,0,0,,所以这就是如何从一个预先训练的BERT模型创建一个分\N类模型，然后将其部署到Vertex上以获得在线预测。
