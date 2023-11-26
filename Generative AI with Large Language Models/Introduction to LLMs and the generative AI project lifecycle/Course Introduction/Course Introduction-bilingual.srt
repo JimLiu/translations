@@ -1,0 +1,384 @@
+1
+00:00:00,000 --> 00:00:04,845
+欢迎参加这门关于大型语言模型的生成式AI课程。
+Welcome to this course on generative AI with large language models.
+
+3
+00:00:04,845 --> 00:00:09,180
+大型语言模型或LLMs是一项非常令人兴奋的技术。
+Large language models or LLMs are a very exciting technology.
+
+5
+00:00:09,180 --> 00:00:17,940
+然而，尽管各种新闻和炒作满天飞，许多人仍然低估了它们作为开发者工具的能力。
+But despite all the buzz and hype, one of the thing that is still underestimated by many people is their power as a developer too.
+
+8
+00:00:17,940 --> 00:00:28,395
+具体来说，过去我需要花费数月时间构建的许多机器学习和AI应用，现在你可能只需要几天甚至几周就能完成。
+Specifically, there are many machine learning and AI applications that used to take me many months to build that you can now build in days or maybe even small numbers of weeks.
+
+13
+00:00:28,395 --> 00:00:34,605
+这门课程将和你一起深入研究LLM技术的工作原理，
+This course will take a deep dive with you into how LLM technology actually works
+
+15
+00:00:34,605 --> 00:00:42,175
+包括详解许多技术细节，如模型训练，指令调整，微调，
+including going through many of the technical details, like model training, instruction tuning, fine-tuning,
+
+17
+00:00:42,175 --> 00:00:49,970
+以及生成式AI项目生命周期框架，帮助你规划和执行你的项目等等。
+the generative AI project life cycle framework to help you plan and execute your projects and so on.
+
+19
+00:00:49,970 --> 00:00:55,445
+生成式AI和LLMs是一种通用技术。
+Generative AI and LLMs specifically are a general purpose technology.
+
+21
+00:00:55,445 --> 00:01:01,940
+这意味着它们与其他通用技术（如深度学习和电力）类似，
+That means that similar to other general purpose technologies like deep learning and electricity,
+
+24
+00:01:01,940 --> 00:01:04,640
+它不仅对单一应用有用，
+is useful not just for a single application,
+
+25
+00:01:04,640 --> 00:01:10,060
+而且对许多不同的应用也有用，这些应用覆盖了经济的许多领域。
+but for a lot of different applications that span many corners of the economy.
+
+28
+00:01:10,060 --> 00:01:16,560
+类似于大约15年前深度学习的崛起，
+Similar to the rise of deep learning that started maybe 15 years ago or so,
+
+30
+00:01:16,560 --> 00:01:23,090
+我们面前还有许多重要的工作需要由许多人花费多年的时间来完成，
+there's a lot of important where it lies ahead of us that needs to be done over many years by many people,
+
+32
+00:01:23,090 --> 00:01:28,900
+我希望你也能参与其中，去确定使用案例并构建特定的应用。
+I hope including you, to identify use cases and build specific applications.
+
+34
+00:01:28,900 --> 00:01:34,855
+因为这项技术还非常新，很少有人真正知道如何使用它，
+Because a lot of with this technology is so new and so few people really know how to use them,
+
+36
+00:01:34,855 --> 00:01:43,160
+许多公司现在也在急着寻找和雇佣那些真正懂得如何用LLMs构建应用的人才。
+many companies are also right now scrambling to try to find and hire people that actually know how to build applications with LLMs.
+
+40
+00:01:43,160 --> 00:01:46,415
+我希望这门课程也能帮助你，
+I hope that this course will also help you,
+
+41
+00:01:46,415 --> 00:01:50,525
+如果你愿意的话，可以更好地定位自己去获得一份相关的工作。
+if you wish, better position yourself to get one of those jobs.
+
+43
+00:01:50,525 --> 00:01:56,225
+我很高兴能够带来这门课程，一同教授的还有来自AWS团队的一群出色的导师，
+I'm thrilled to bring you this course along with a group of fantastic instructors from the AWS team,
+
+45
+00:01:56,225 --> 00:02:04,565
+他们包括今天在我身边的Antje Barth、Mike Chambers、Shelbee Eigenbrode，以及第四位导师Chris Fregly，
+[inaudible] who are here with me today, as well as a fourth instructor Chris Freby,
+
+47
+00:02:04,565 --> 00:02:06,515
+他将会进行一些附加的讲解。
+who will be presenting sort of adds.
+
+48
+00:02:06,515 --> 00:02:11,530
+Antje和Mike是生成式AI开发者倡导者。
+Antje and Mike above generative AI developer advocates.
+
+49
+00:02:11,530 --> 00:02:16,130
+Shelbee和Chris是生成式AI解决方案架构师。
+Shelbee and Chris above generative AI solutions architects.
+
+51
+00:02:16,130 --> 00:02:17,720
+他们都有丰富的经验，
+All of them have a lot of
+
+52
+00:02:17,720 --> 00:02:23,480
+帮助过许多不同的公司使用LLMs构建了许多创新的应用。
+experience helping many different companies build many, many creative applications using LLMs.
+
+54
+00:02:23,480 --> 00:02:29,740
+我期待他们在这门课程中分享这些丰富的实践经验。
+I look forward to all of them sharing this rich hands-on experience in this course.
+
+56
+00:02:29,740 --> 00:02:33,230
+我们在开发这门课程的内容时，
+We've develop the content for this course with inputs from
+
+58
+00:02:33,230 --> 00:02:41,740
+参考了来自Amazon、AWS、HuggingFace以及世界各地顶级大学的许多行业专家和应用科学家的意见。
+many industry experts and applied scientists at Amazon, AWS, Hugging Face and many top universities around the world.
+
+61
+00:02:41,740 --> 00:02:44,600
+Antje，也许你可以进一步介绍一下这门课程。
+Antje, perhaps you can say a bit more about this course.
+
+63
+00:02:44,600 --> 00:02:45,905
+好的。谢谢Andrew。
+Sure. Thanks Andrew.
+
+64
+00:02:45,905 --> 00:02:48,560
+很高兴再次与你在这门课程上合作，
+It's a pleasure to work with you again on this course and
+
+65
+00:02:48,560 --> 00:02:51,290
+这是一个关于生成式AI的激动人心的领域。
+the exciting area of generative AI.
+
+66
+00:02:51,290 --> 00:02:54,935
+在这门有关大型语言模型生成人工智能的课程中，
+With this course on generative AI with large language models,
+
+68
+00:02:54,935 --> 00:03:01,260
+我们为AI爱好者，工程师或数据科学家设计了一系列课程。
+we've created a series of lessons meant for AI enthusiasts, engineers, or data scientists.
+
+71
+00:03:01,260 --> 00:03:10,550
+如果你希望学习LLMs的技术基础，以及训练，调整和部署它们的最佳实践，那么这门课程正适合你。
+Looking to learn the technical foundations of how LLMs work, as well as the best practices behind training, tuning, and deploying them.
+
+75
+00:03:10,550 --> 00:03:19,445
+我们假设你已经熟悉Python编程，以及基本的数据科学和机器学习概念，这是学习这门课的先决条件。
+In terms of prerequisites, we assume you are already familiar with Python programming and at least basic data science and machine learning concepts.
+
+79
+00:03:19,445 --> 00:03:24,560
+如果你已经有一些Python或TensorFlow的经验，那应该足够了。
+If you have some experience with either Python or TensorFlow, that should be enough.
+
+81
+00:03:24,560 --> 00:03:32,305
+在这门课程中，你将详细探讨构成典型生成式AI项目生命周期的各个步骤，
+In this course, you will explore in detail the steps that make up a typical generative AI project lifecycle,
+
+83
+00:03:32,305 --> 00:03:40,475
+从定义问题和选择语言模型，到优化模型部署和集成到你的应用中。
+from scoping the problem and selecting a language model to optimizing a model for deployment and integrating into your applications.
+
+87
+00:03:40,475 --> 00:03:42,710
+这门课程涵盖了所有的主题，
+This course covers all of the topics,
+
+88
+00:03:42,710 --> 00:03:44,315
+不仅是浅层次的，
+not just at a shallow level,
+
+89
+00:03:44,315 --> 00:03:49,850
+我们不仅会浅尝辄止，而且会确保你深入理解所有这些技术，
+but we'll take the time to make sure you come away with a deep technical understanding of
+
+91
+00:03:49,850 --> 00:03:57,260
+让你在构建自己的生成式AI项目时真正知道自己在做什么。
+all of these technologies and be well-positioned to really know what you're doing when you build your own generative AI projects.
+
+94
+00:03:57,260 --> 00:04:01,970
+Mike，你能告诉我们的学员每周将看到什么内容吗？
+Mike, why don't you tell us a little bit more details about what the learners will see in each week?
+
+97
+00:04:01,970 --> 00:04:04,275
+当然，Antje，谢谢。
+Absolutely, Antje. Thank you.
+
+98
+00:04:04,275 --> 00:04:10,595
+在第一周，你将研究驱动大型语言模型的Transformer架构，
+In Week 1, you will examine the transformer architecture that powers large language models,
+
+101
+00:04:10,595 --> 00:04:18,815
+探索如何训练这些模型，并了解开发这些强大的LLMs所需的计算资源。
+explore how these models are trained, and understand the compute resources required to develop these powerful LLMs.
+
+104
+00:04:18,815 --> 00:04:23,465
+你还会了解一种叫做上下文学习的技术，
+You'll also learn about a technique called in-context learning.
+
+106
+00:04:23,465 --> 00:04:29,045
+如何通过Prompt工程在推理时引导模型输出，
+How to guide the model to output at inference time with prompt engineering,
+
+108
+00:04:29,045 --> 00:04:36,350
+以及如何调整LLMs的最重要的生成参数以调整你的模型输出。
+and how to tune the most important generation parameters of LLMs for tuning your model output.
+
+111
+00:04:36,350 --> 00:04:37,610
+在第二周，
+In Week 2,
+
+112
+00:04:37,610 --> 00:04:48,680
+你将探索如何通过一种称为指令微调的过程，将预训练模型适应到特定的任务和数据集。
+you'll explore options for adapting pre-trained models to specific tasks and datasets via a process called instruction fine tuning. Then in Week 3,
+
+116
+00:04:48,680 --> 00:04:50,120
+然后在第三周，
+you'll see how to align
+
+117
+00:04:50,120 --> 00:04:54,890
+你将看到如何将语言模型的输出与人类价值观对齐，
+the output of language models with human values in order to increase
+
+119
+00:04:54,890 --> 00:05:01,025
+以增加其实用性并减少潜在的伤害和毒性。
+helpfulness and decrease potential harm and toxicity. Though we don't stop at the theory.
+
+121
+00:05:01,025 --> 00:05:03,680
+我们不仅仅停留在理论上。
+Each week includes a hands-on lab
+
+122
+00:05:03,680 --> 00:05:06,080
+每周都包括一个动手实验，
+where you'll be able to try out these techniques for
+
+123
+00:05:06,080 --> 00:05:12,290
+你将能够在一个包含所有你需要的大模型工作资源的AWS环境中尝试这些技术，
+yourself in an AWS environment that includes all the resources you need for working with
+
+125
+00:05:12,290 --> 00:05:15,395
+而且你可以免费实验这些技术。
+large models at no cost to you.
+
+126
+00:05:15,395 --> 00:05:18,350
+Shelbee，你能告诉我们更多关于动手实验的信息吗？
+Shelbee, can you tell us a little bit more about the hands-on labs?
+
+128
+00:05:18,350 --> 00:05:21,665
+当然可以，Mike。在第一个动手实验中，
+Sure thing, Mike. In the first hands-on lab,
+
+129
+00:05:21,665 --> 00:05:25,745
+在第一个动手实验中，你将构建并比较给定生成任务的不同Prompt和输入，
+you'll construct a compare different prompts and inputs for a given generative task,
+
+131
+00:05:25,745 --> 00:05:27,725
+在这个案例中，是对话摘要。
+in this case, dialogue summarization.
+
+132
+00:05:27,725 --> 00:05:36,055
+你也会探索不同的推理参数和采样策略，以了解如何进一步改善生成模型的返回结果。
+You'll also explore different inference parameters and sampling strategies to gain intuition on how to further improve the generative model of responses.
+
+136
+00:05:36,055 --> 00:05:37,910
+在第二个动手实验室中，
+In the second hands-on lab,
+
+137
+00:05:37,910 --> 00:05:43,700
+你将微调一个现有的来自HuggingFace（一个流行的开源模型库）的大型语言模型。
+you'll find tune it existing large language model from Hugging Face, a popular open-source model hub.
+
+140
+00:05:43,700 --> 00:05:49,220
+你将同时使用完全微调和参数有效微调（简称PEFT）。
+You'll play with both full fine-tuning and parameter efficient fine tuning or path for short.
+
+142
+00:05:49,220 --> 00:05:53,530
+你将看到PEFT如何让你的工作流程更加高效。
+You'll see how puffed lets you make your workflow much more efficient.
+
+144
+00:05:53,530 --> 00:05:59,105
+在第三个实验中，你将通过人类反馈进行强化学习（RLHF），
+In the third lab, you get hands-on with reinforcement learning from human feedback or RLHF,
+
+146
+00:05:59,105 --> 00:06:04,865
+你将构建一个奖励模型分类器来标记模型的返回结果是有害还是无害。
+you'll build a reward model classifier to label model responses as either toxic or non-toxic.
+
+148
+00:06:04,865 --> 00:06:08,250
+如果你现在还不理解所有这些术语和概念，也不用担心。
+Don't worry if you don't understand all these terms and concepts just yet.
+
+150
+00:06:08,250 --> 00:06:12,445
+你将在这门课程中深入探讨每一个主题。
+You'll dive into each of these topics in much more detail throughout this course.
+
+152
+00:06:12,445 --> 00:06:22,670
+我很高兴有Antje，Mike，Shelbee以及Chris来向你们介绍这门深入探讨LLMs的课程。
+I'm thrilled to have Antje, Mike, Shelbee as well as Tris presenting this course to you that takes a deep technical dive into LLMs.
+
+155
+00:06:22,670 --> 00:06:29,750
+你将从这门课程中获得很多关于如何构建或使用LLMs的具体代码示例的实践经验。
+You come away from this course having practice with many different concrete code examples for how to build or use LLMs.
+
+158
+00:06:29,750 --> 00:06:35,405
+我相信其中许多代码片段将直接用于你自己的工作。
+I'm sure that many of the code snippets will end up being directly useful in your own work.
+
+160
+00:06:35,405 --> 00:06:41,015
+我希望你能喜欢这门课程，并利用你学到的知识构建一些真正令人兴奋的应用。
+I hope you enjoy the course and use what you learn to build some really exciting applications.
+
+162
+00:06:41,015 --> 00:06:49,290
+那么，让我们继续下一个视频，开始深入了解如何使用LLMs构建应用。
+So that, let's go on to the next video where we start diving into how LLMs are being used to build applications.

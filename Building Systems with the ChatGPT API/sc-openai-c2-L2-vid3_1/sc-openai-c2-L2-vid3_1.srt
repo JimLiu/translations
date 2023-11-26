@@ -1,0 +1,163 @@
+1
+00:00:05,000 --> 00:00:12,000
+In this section, we'll focus on tasks to evaluate inputs, which can be important for ensuring the quality and safety of the system.
+
+2
+00:00:12,000 --> 00:00:16,000
+For tasks in which lots of independent sets of instructions are needed to handle different cases,
+
+3
+00:00:16,000 --> 00:00:23,000
+it can be beneficial to first classify the type of query and then use that classification to determine which instructions to use.
+
+4
+00:00:23,000 --> 00:00:30,000
+This can be achieved by defining fixed categories and hard-coding instructions that are relevant for handling tasks in a given category.
+
+5
+00:00:30,000 --> 00:00:36,000
+For instance, when building a customer service assistant, it might be important to first classify the type of query
+
+6
+00:00:36,000 --> 00:00:39,000
+and then determine which instructions to use based on that classification.
+
+7
+00:00:39,000 --> 00:00:48,000
+So, for example, you might give different secondary instructions if a user asks to close their account versus if a user asks about a specific product.
+
+8
+00:00:48,000 --> 00:00:52,000
+So in the first case, you'd maybe add additional instructions about how to close the account,
+
+9
+00:00:52,000 --> 00:00:55,000
+and then in the second case, you might add additional product information.
+
+10
+00:00:55,000 --> 00:00:58,000
+But let's see an example, and I think it will make it more clear.
+
+11
+00:00:58,000 --> 00:01:06,000
+So here we have our system message, which is the instruction for the overall system, and we're using this delimiter.
+
+12
+00:01:06,000 --> 00:01:11,000
+And a delimiter is just a way to separate different parts of an instruction or output,
+
+13
+00:01:11,000 --> 00:01:15,000
+and it helps the model kind of determine the different sections.
+
+14
+00:01:15,000 --> 00:01:25,000
+And so for this example, we'll use the delimiter for hashtags, and this is a nice delimiter because it's actually represented as one token.
+
+15
+00:01:25,000 --> 00:01:27,000
+And so here's our system message.
+
+16
+00:01:27,000 --> 00:01:31,000
+We're asking the model, so you will be provided with customer service queries.
+
+17
+00:01:31,000 --> 00:01:36,000
+The customer service query will be delimited with these hashtag characters.
+
+18
+00:01:36,000 --> 00:01:40,000
+Classify each query into a primary category and a secondary category,
+
+19
+00:01:40,000 --> 00:01:44,000
+and then provide the output in a JSON format with the keys primary and secondary.
+
+20
+00:01:44,000 --> 00:01:51,000
+And so we have our primary categories listed here, so billing, technical support, account management, or general inquiry.
+
+21
+00:01:51,000 --> 00:01:59,000
+And then below, we have the list of secondary categories, unsubscrible upgrade, et cetera.
+
+22
+00:01:59,000 --> 00:02:04,000
+And so now let's do an example of a user message.
+
+23
+00:02:04,000 --> 00:02:12,000
+So for our first user message, we'll use the following.
+
+24
+00:02:12,000 --> 00:02:20,000
+So the user message is: "I want you to delete my profile and all of my user data".
+
+25
+00:02:20,000 --> 00:02:30,000
+And then we'll just format this into a messages list with the system message and the user message delimited with these hashtags.
+
+26
+00:02:30,000 --> 00:02:33,000
+And let's just take a look and see what we think this might be.
+
+27
+00:02:33,000 --> 00:02:36,000
+So I want you to delete my profile.
+
+28
+00:02:36,000 --> 00:02:41,000
+This kind of looks like account management, maybe close account.
+
+29
+00:02:41,000 --> 00:02:48,000
+Let's see what the model thinks.
+
+30
+00:02:48,000 --> 00:02:55,000
+Great, so the classification from the model is account management as the primary category and then close account as a secondary.
+
+31
+00:02:55,000 --> 00:03:03,000
+And the nice thing about asking for a structured output like a JSON is that you can then read this easily into some kind of object.
+
+32
+00:03:03,000 --> 00:03:08,000
+So a dictionary, for example, in Python or something else if you're using a different language.
+
+33
+00:03:08,000 --> 00:03:13,000
+And then you can use this as the input to a subsequent step.
+
+34
+00:03:13,000 --> 00:03:23,000
+I'll show you another example, but also feel free to pause the video now and just try your own user questions and see how the model categorizes them.
+
+35
+00:03:23,000 --> 00:03:27,000
+So here's another user message. Tell me more about your flat screen TVs.
+
+36
+00:03:27,000 --> 00:03:33,000
+And we just have the same messages list response from the model and then we'll just print it.
+
+37
+00:03:33,000 --> 00:03:40,000
+And here we have our second categorization, which seems correct.
+
+38
+00:03:40,000 --> 00:03:49,000
+And so in general, based on the categorization of the customer inquiry, we can now provide a set of more specific instructions to handle the next steps.
+
+39
+00:03:49,000 --> 00:03:58,000
+In this case, we might add kind of additional information about the TVs versus in this case, we might want to give a link to closing the account or something like that.
+
+40
+00:03:58,000 --> 00:04:03,000
+We'll learn more about different ways to process inputs in a later video.
+
+41
+00:04:03,000 --> 00:04:12,000
+And in the next video, we'll look at more ways to evaluate inputs and specifically ways to ensure that your users are using the system in a responsible way.

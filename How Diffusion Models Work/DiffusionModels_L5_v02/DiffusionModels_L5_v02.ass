@@ -1,0 +1,172 @@
+[Script Info]
+
+Title: DiffusionModels_L5_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H000092FE,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:09.54,Secondary,,0,0,0,,In this video, you'll learn how to control the model and what it generates.
+Dialogue: 0,0:00:09.54,0:00:17.30,Secondary,,0,0,0,,For many, this is the most exciting piece because you get to tell the model what you want and it gets to imagine it for you.
+Dialogue: 0,0:00:17.30,0:00:22.66,Secondary,,0,0,0,,When it comes to controlling these models, we actually want to use embeddings.
+Dialogue: 0,0:00:22.66,0:00:28.46,Secondary,,0,0,0,,And what embeddings are, which we looked at a little bit in previous videos of a time embedding and a context embedding,
+Dialogue: 0,0:00:28.46,0:00:34.34,Secondary,,0,0,0,,what embeddings are is they're vectors, they're numbers that are able to capture a meaning.
+Dialogue: 0,0:00:34.34,0:00:40.6,Secondary,,0,0,0,,And here it's capturing the meaning of this sentence or this joke, perhaps, for diffusion models.
+Dialogue: 0,0:00:40.6,0:00:42.50,Secondary,,0,0,0,,Brownians often bump into each other.
+Dialogue: 0,0:00:42.50,0:00:47.50,Secondary,,0,0,0,,So it encodes that into this embedding, which is this set of numbers in a vector.
+Dialogue: 0,0:00:47.50,0:00:53.70,Secondary,,0,0,0,,And what's special about embeddings is because they can capture the semantic meaning, text with similar content will have similar vectors.
+Dialogue: 0,0:00:53.70,0:00:59.28,Secondary,,0,0,0,,And one of the kind of magical things about embeddings is you can almost do this vector arithmetic with it.
+Dialogue: 0,0:00:59.28,0:01:04.18,Secondary,,0,0,0,,So Paris minus France plus England equals the London embedding, for example.
+Dialogue: 0,0:01:04.18,0:01:09.74,Secondary,,0,0,0,,Okay, so how do these embeddings actually become context to the model during training?
+Dialogue: 0,0:01:09.74,0:01:14.46,Secondary,,0,0,0,,Well, here you have an avocado image, which you want the neural network to understand.
+Dialogue: 0,0:01:14.46,0:01:17.76,Secondary,,0,0,0,,And you also have a caption for it, a ripe avocado.
+Dialogue: 0,0:01:17.76,0:01:22.33,Secondary,,0,0,0,,And you can actually pass that through, get an embedding and input that into the neural network
+Dialogue: 0,0:01:22.33,0:01:28.94,Secondary,,0,0,0,,to then predict the noise that was added to this avocado image, and then compute the loss and do the same thing as before.
+Dialogue: 0,0:01:28.94,0:01:33.22,Secondary,,0,0,0,,And you could do this across a lot of different images with captions.
+Dialogue: 0,0:01:33.22,0:01:39.78,Secondary,,0,0,0,,So here is a comfy armchair, you can pass it through an embedding, pass it into the model and have that be part of training.
+Dialogue: 0,0:01:39.78,0:01:48.20,Secondary,,0,0,0,,Now the magic of this section is that while you were able to scrape these images of avocados and armchairs off the internet with those captions,
+Dialogue: 0,0:01:48.20,0:01:55.14,Secondary,,0,0,0,,you're able to at sample time, be able to generate things that the model has never seen before.
+Dialogue: 0,0:01:55.14,0:01:57.28,Secondary,,0,0,0,,And that could be an avocado armchair.
+Dialogue: 0,0:01:57.28,0:02:03.10,Secondary,,0,0,0,,And the magic of this is because you can embed the words avocado armchair into this embedding that has,
+Dialogue: 0,0:02:03.10,0:02:05.64,Secondary,,0,0,0,,you know, a bit of avocado in there, a bit of armchair in there,
+Dialogue: 0,0:02:05.64,0:02:14.22,Secondary,,0,0,0,,put that through the neural network, have it predict noise, subtract that noise out and get lo and behold, an avocado armchair.
+Dialogue: 0,0:02:14.22,0:02:18.18,Secondary,,0,0,0,,So more broadly, context is a vector that can control generation.
+Dialogue: 0,0:02:18.18,0:02:23.42,Secondary,,0,0,0,,Context can be just as we have seen now, the text embeddings that of that avocado armchair,
+Dialogue: 0,0:02:23.42,0:02:26.90,Secondary,,0,0,0,,that's very long, but context doesn't have to be that long.
+Dialogue: 0,0:02:26.90,0:02:30.34,Secondary,,0,0,0,,Context can also be different categories that are five in length, you know,
+Dialogue: 0,0:02:30.34,0:02:37.14,Secondary,,0,0,0,,five different dimensions such as having a hero or being a non-hero like these objects of a fireball and a mushroom.
+Dialogue: 0,0:02:37.14,0:02:41.14,Secondary,,0,0,0,,It could be food items, you know, apple, orange, watermelon.
+Dialogue: 0,0:02:41.14,0:02:44.46,Secondary,,0,0,0,,It could be spells and weapons like this bow and arrow or this candle.
+Dialogue: 0,0:02:44.46,0:02:48.36,Secondary,,0,0,0,,And finally, it could be whether these sprites are side facing or not.
+Dialogue: 0,0:02:48.36,0:02:52.82,Secondary,,0,0,0,,So now let's take a look at adding context to your model in the next lab.
+Dialogue: 0,0:02:52.82,0:03:02.94,Secondary,,0,0,0,,Onto our lab, we can just run the setup here for all these things, just setting up the same things as before.
+Dialogue: 0,0:03:02.94,0:03:08.98,Secondary,,0,0,0,,And then down here in context, I want to instantiate our neural network again.
+Dialogue: 0,0:03:08.98,0:03:13.70,Secondary,,0,0,0,,And again, we're not training, but I'm going to call out a few places where we do add the context.
+Dialogue: 0,0:03:13.70,0:03:21.62,Secondary,,0,0,0,,So when we do load the data here, we now iterate through both the data point and the context factor associated with it.
+Dialogue: 0,0:03:21.62,0:03:28.70,Secondary,,0,0,0,,And the context that we do have are these one hot encoded vectors of hero, non-hero, food, spells and weapons and side facing.
+Dialogue: 0,0:03:28.70,0:03:30.18,Secondary,,0,0,0,,We create a context mask.
+Dialogue: 0,0:03:30.18,0:03:34.66,Secondary,,0,0,0,,And what's important here is that actually with some randomness, we completely mask out
+Dialogue: 0,0:03:34.66,0:03:39.46,Secondary,,0,0,0,,the context so that the model is able to learn generally what a sprite is as well.
+Dialogue: 0,0:03:39.46,0:03:42.4,Secondary,,0,0,0,,It's pretty common for diffusion models.
+Dialogue: 0,0:03:42.4,0:03:45.98,Secondary,,0,0,0,,And then we add context when we call the neural network right here.
+Dialogue: 0,0:03:45.98,0:03:49.94,Secondary,,0,0,0,,So let's load a checkpoint where we did train the model with context.
+Dialogue: 0,0:03:49.94,0:03:54.58,Secondary,,0,0,0,,So just loading that model here, running that.
+Dialogue: 0,0:03:54.58,0:03:56.2,Secondary,,0,0,0,,Running our sampling code again.
+Dialogue: 0,0:03:56.2,0:03:58.10,Secondary,,0,0,0,,So we have that for this notebook.
+Dialogue: 0,0:03:58.10,0:04:00.46,Secondary,,0,0,0,,And here you can see that when you run this,
+Dialogue: 0,0:04:00.47,0:04:05.36,Secondary,,0,0,0,,this is actually choosing completely random context right here, completely randomly.
+Dialogue: 0,0:04:05.36,0:04:12.98,Secondary,,0,0,0,,You can see the different types of outputs of objects and people.
+Dialogue: 0,0:04:12.98,0:04:16.22,Secondary,,0,0,0,,And now controlling it a bit, you can actually define it here.
+Dialogue: 0,0:04:16.22,0:04:20.90,Secondary,,0,0,0,,So here I just defined, oh, hero, a couple heroes, the first two.
+Dialogue: 0,0:04:20.90,0:04:21.90,Secondary,,0,0,0,,So these two are heroes.
+Dialogue: 0,0:04:21.90,0:04:23.72,Secondary,,0,0,0,,The next two are side facing.
+Dialogue: 0,0:04:23.72,0:04:28.58,Secondary,,0,0,0,,So it's one hot with this last value here for side facing.
+Dialogue: 0,0:04:28.58,0:04:30.30,Secondary,,0,0,0,,The next two are non-heroes.
+Dialogue: 0,0:04:30.30,0:04:31.70,Secondary,,0,0,0,,So kind of beasts.
+Dialogue: 0,0:04:32.14,0:04:35.62,Secondary,,0,0,0,,They look very blobby here.
+Dialogue: 0,0:04:35.62,0:04:37.66,Secondary,,0,0,0,,And the last two are food items.
+Dialogue: 0,0:04:37.66,0:04:40.6,Secondary,,0,0,0,,So this kind of looks like an apple.
+Dialogue: 0,0:04:40.6,0:04:42.94,Secondary,,0,0,0,,And this kind of looks like a pear.
+Dialogue: 0,0:04:42.94,0:04:48.58,Secondary,,0,0,0,,And now getting into the avocado armchair vibe, we can actually mix and match these a bit.
+Dialogue: 0,0:04:48.58,0:04:51.83,Secondary,,0,0,0,,So while we trained it on one hot encoded vectors,
+Dialogue: 0,0:04:51.86,0:04:57.78,Secondary,,0,0,0,,we can also provide it with these float numbers between 0 and 1 to get a mix of things.
+Dialogue: 0,0:04:57.78,0:05:03.38,Secondary,,0,0,0,,So here for the second one here, it is a hero and partially food.
+Dialogue: 0,0:05:03.38,0:05:05.26,Secondary,,0,0,0,,And so now it looks like a potato man.
+Dialogue: 0,0:05:05.26,0:05:07.2,Secondary,,0,0,0,,The third one is also a little bit quirky.
+Dialogue: 0,0:05:07.2,0:05:08.82,Secondary,,0,0,0,,It is part food and part spells.
+Dialogue: 0,0:05:08.82,0:05:10.2,Secondary,,0,0,0,,So it kind of looks like this potion.
+Dialogue: 0,0:05:10.2,0:05:12.28,Secondary,,0,0,0,,But yeah, you can play with these yourself.
+Dialogue: 0,0:05:12.28,0:05:19.8,Secondary,,0,0,0,,You can try to put in something contradictory, like it's supposed to be a hero, but also side facing, like both front facing and side facing.
+Dialogue: 0,0:05:19.8,0:05:21.70,Secondary,,0,0,0,,So this is good fun.
+Dialogue: 0,0:05:21.70,0:05:27.53,Secondary,,0,0,0,,Feel free to stop, pause, and play with this a few times and start changing these values up.
+Dialogue: 0,0:05:27.53,0:05:30.36,Secondary,,0,0,0,,So now that you can create all these samples, control them,
+Dialogue: 0,0:05:30.37,0:05:36.32,Secondary,,0,0,0,,in the next video you'll explore speeding up the sampling process so that you don't have to wait so long to see these amazing samples.
+Dialogue: 0,0:00:05.0,0:00:09.54,Default,,0,0,0,,在这个视频中，你将学习\N如何控制模型和生成的内容。
+Dialogue: 0,0:00:09.54,0:00:17.30,Default,,0,0,0,,对很多人来说，这是最令人兴奋的\N部分，因为你可以告诉模型想要\N什么，然后它帮你实现你想要的。
+Dialogue: 0,0:00:17.30,0:00:22.66,Default,,0,0,0,,在控制这些模型时，我们实际上\N想要使用嵌入（Embeddings）。
+Dialogue: 0,0:00:22.66,0:00:28.46,Default,,0,0,0,,嵌入是什么呢？我们在之前的视频中\N稍微了解过时间嵌入和上下文嵌入，
+Dialogue: 0,0:00:28.46,0:00:34.34,Default,,0,0,0,,嵌入就是向量，\N是能够捕捉意义的数字。
+Dialogue: 0,0:00:34.34,0:00:40.6,Default,,0,0,0,,在这里，它捕捉了这个句子或这个\N笑话的意义，可能是针对扩散模型的。
+Dialogue: 0,0:00:40.6,0:00:42.50,Default,,0,0,0,,布朗运动的粒子经常相互碰撞。
+Dialogue: 0,0:00:42.50,0:00:47.50,Default,,0,0,0,,所以它将这个意义编码到这个\N嵌入中，也就是向量中的一组数字。
+Dialogue: 0,0:00:47.50,0:00:53.70,Default,,0,0,0,,嵌入的特殊之处在于，\N因为它们可以捕捉语义意义，\N内容相似的文本将具有相似的向量。
+Dialogue: 0,0:00:53.70,0:00:59.28,Default,,0,0,0,,关于嵌入的神奇之处之一是，\N你甚至可以用它进行向量运算。
+Dialogue: 0,0:00:59.28,0:01:04.18,Default,,0,0,0,,例如：将巴黎的嵌入减去法国的嵌入\N加上英国的嵌入等于伦敦的嵌入。
+Dialogue: 0,0:01:04.18,0:01:09.74,Default,,0,0,0,,那么，在训练过程中，这些嵌入\N是如何成为模型的上下文的？
+Dialogue: 0,0:01:09.74,0:01:14.46,Default,,0,0,0,,好吧，这里有一个牛油果图片，\N你希望神经网络能理解它。
+Dialogue: 0,0:01:14.46,0:01:17.76,Default,,0,0,0,,还有一个关于它的标题，\N一个成熟的牛油果。
+Dialogue: 0,0:01:17.76,0:01:22.33,Default,,0,0,0,,实际上，你可以将其传递，获得\N一个嵌入并将其输入到神经网络中。
+Dialogue: 0,0:01:22.33,0:01:28.94,Default,,0,0,0,,然后预测添加到这个\N牛油果图像的噪声，然后计算损失\N并像以前一样做同样的事情。
+Dialogue: 0,0:01:28.94,0:01:33.22,Default,,0,0,0,,你可以在很多不同的\N带有标题的图片上做这个。
+Dialogue: 0,0:01:33.22,0:01:39.78,Default,,0,0,0,,这里有一个舒适的扶手椅，\N你可以将其通过嵌入，传递到\N模型中，并成为训练的一部分。
+Dialogue: 0,0:01:39.78,0:01:48.20,Default,,0,0,0,,现在这部分的神奇之处\N在于，虽然你能够从互联网上抓取\N这些牛油果和扶手椅的图片和标题，
+Dialogue: 0,0:01:48.20,0:01:55.14,Default,,0,0,0,,但在抽样时，\N你能够生成模型从未见过的东西。
+Dialogue: 0,0:01:55.14,0:01:57.28,Default,,0,0,0,,那可能是个牛油果扶手椅。
+Dialogue: 0,0:01:57.28,0:02:03.10,Default,,0,0,0,,这个的神奇之处在于，\N你可以把牛油果扶手椅\N这几个词嵌入到这个词嵌入中，
+Dialogue: 0,0:02:03.10,0:02:05.64,Default,,0,0,0,,里面有一点牛油果，一点扶手椅，
+Dialogue: 0,0:02:05.64,0:02:14.22,Default,,0,0,0,,通过神经网络预测噪音，减去\N噪音，然后得到一个牛油果扶手椅。
+Dialogue: 0,0:02:14.22,0:02:18.18,Default,,0,0,0,,从更广泛的角度来看，\N上下文是一个可以控制生成的向量。
+Dialogue: 0,0:02:18.18,0:02:23.42,Default,,0,0,0,,上下文可以是我们现在看到\N的文本嵌入，比如牛油果扶手椅，
+Dialogue: 0,0:02:23.42,0:02:26.90,Default,,0,0,0,,虽然很长，\N但上下文不一定要那么长。
+Dialogue: 0,0:02:26.90,0:02:30.34,Default,,0,0,0,,上下文也可以是\N五个不同的类别，比如，
+Dialogue: 0,0:02:30.34,0:02:37.14,Default,,0,0,0,,五个不同的维度，如英雄或非\N英雄，比如火球和蘑菇这样的物体。
+Dialogue: 0,0:02:37.14,0:02:41.14,Default,,0,0,0,,还可以是食物，\N比如苹果、橙子、西瓜。
+Dialogue: 0,0:02:41.14,0:02:44.46,Default,,0,0,0,,这可能是像这弓箭\N或蜡烛这样的法术和武器。
+Dialogue: 0,0:02:44.46,0:02:48.36,Default,,0,0,0,,最后，这可能是\N这些游戏角色是否侧面的问题。
+Dialogue: 0,0:02:48.36,0:02:52.82,Default,,0,0,0,,现在让我们在下一个实验室中\N看看如何为您的模型添加上下文。
+Dialogue: 0,0:02:52.82,0:03:02.94,Default,,0,0,0,,在我们的实验室里，\N我们只需为所有这些东西\N运行设置，就像之前一样。
+Dialogue: 0,0:03:02.94,0:03:08.98,Default,,0,0,0,,然后在这里的上下文中，\N我想再次实例化我们的神经网络。
+Dialogue: 0,0:03:08.98,0:03:13.70,Default,,0,0,0,,同样，我们没有进行训练，但\N我会指出我们在哪里添加了上下文。
+Dialogue: 0,0:03:13.70,0:03:21.62,Default,,0,0,0,,所以当我们在这里加载\N数据时，我们现在遍历数据点\N和与之相关的上下文因素。
+Dialogue: 0,0:03:21.62,0:03:28.70,Default,,0,0,0,,我们拥有的上下文是这些\N英雄、非英雄、食物、法术和\N武器以及侧面的独热编码向量。
+Dialogue: 0,0:03:28.70,0:03:30.18,Default,,0,0,0,,我们创建一个上下文遮罩。
+Dialogue: 0,0:03:30.18,0:03:34.66,Default,,0,0,0,,这里重要的是，实际上，\N我们用一些随机性完全遮住
+Dialogue: 0,0:03:34.66,0:03:39.46,Default,,0,0,0,,上下文，以便模型能够\N学习到什么是游戏角色。
+Dialogue: 0,0:03:39.46,0:03:42.4,Default,,0,0,0,,这对扩散模型来说是很常见的。
+Dialogue: 0,0:03:42.4,0:03:45.98,Default,,0,0,0,,然后我们在这里\N调用神经网络时添加上下文。
+Dialogue: 0,0:03:45.98,0:03:49.94,Default,,0,0,0,,让我们加载一个\N带有上下文训练的模型检查点。
+Dialogue: 0,0:03:49.94,0:03:54.58,Default,,0,0,0,,加载这个模型，运行它。
+Dialogue: 0,0:03:54.58,0:03:56.2,Default,,0,0,0,,再次运行我们的采样代码。
+Dialogue: 0,0:03:56.2,0:03:58.10,Default,,0,0,0,,这个Notebook就有了。
+Dialogue: 0,0:03:58.10,0:04:00.46,Default,,0,0,0,,你可以看到运行时，
+Dialogue: 0,0:04:00.47,0:04:05.36,Default,,0,0,0,,这里实际上是\N完全随机选择的上下文。
+Dialogue: 0,0:04:05.36,0:04:12.98,Default,,0,0,0,,你可以看到\N不同类型的物体和人物输出。
+Dialogue: 0,0:04:12.98,0:04:16.22,Default,,0,0,0,,现在稍微控制一下，\N你可以在这里定义它。
+Dialogue: 0,0:04:16.22,0:04:20.90,Default,,0,0,0,,我在这里定义了两个英雄，\N第一个和第二个。
+Dialogue: 0,0:04:20.90,0:04:21.90,Default,,0,0,0,,这两个都是英雄。
+Dialogue: 0,0:04:21.90,0:04:23.72,Default,,0,0,0,,接下来的两个是侧面的。
+Dialogue: 0,0:04:23.72,0:04:28.58,Default,,0,0,0,,最后一个值是侧面的。
+Dialogue: 0,0:04:28.58,0:04:30.30,Default,,0,0,0,,接下来的两个不是英雄。
+Dialogue: 0,0:04:30.30,0:04:31.70,Default,,0,0,0,,有点像野兽。
+Dialogue: 0,0:04:32.14,0:04:35.62,Default,,0,0,0,,它们看起来很胖乎乎的。
+Dialogue: 0,0:04:35.62,0:04:37.66,Default,,0,0,0,,最后两个是食物。
+Dialogue: 0,0:04:37.66,0:04:40.6,Default,,0,0,0,,这个看起来像苹果。
+Dialogue: 0,0:04:40.6,0:04:42.94,Default,,0,0,0,,这个看起来像梨子。
+Dialogue: 0,0:04:42.94,0:04:48.58,Default,,0,0,0,,现在我们可以混合这些一下，\N就像牛油果扶手椅的感觉那样。
+Dialogue: 0,0:04:48.58,0:04:51.83,Default,,0,0,0,,虽然我们在一个\N热编码的向量上训练了它，
+Dialogue: 0,0:04:51.86,0:04:57.78,Default,,0,0,0,,但我们也可以用0到1之间\N的浮点数来获得各种混合效果。
+Dialogue: 0,0:04:57.78,0:05:03.38,Default,,0,0,0,,所以这里的第二个\N是英雄和部分食物。
+Dialogue: 0,0:05:03.38,0:05:05.26,Default,,0,0,0,,现在它看起来像个土豆人。
+Dialogue: 0,0:05:05.26,0:05:07.2,Default,,0,0,0,,第三个也有点古怪。
+Dialogue: 0,0:05:07.2,0:05:08.82,Default,,0,0,0,,它是部分食物和部分法术。
+Dialogue: 0,0:05:08.82,0:05:10.2,Default,,0,0,0,,所以它看起来像这种药水。
+Dialogue: 0,0:05:10.2,0:05:12.28,Default,,0,0,0,,不过，你可以自己试试。
+Dialogue: 0,0:05:12.28,0:05:19.8,Default,,0,0,0,,你可以尝试输入一些矛盾的东西，\N比如它应该是个英雄，但同时\N又是侧面的，就像正面和侧面都有。
+Dialogue: 0,0:05:19.8,0:05:21.70,Default,,0,0,0,,这很有趣。
+Dialogue: 0,0:05:21.70,0:05:27.53,Default,,0,0,0,,建议你随时停下来，\N暂停，玩几次，尝试改变这些值。
+Dialogue: 0,0:05:27.53,0:05:30.36,Default,,0,0,0,,现在你可以创建\N所有这些样本并控制它们，
+Dialogue: 0,0:05:30.37,0:05:36.32,Default,,0,0,0,,在下一个视频中，你将学习如何\N加速采样过程，这样不用等待\N太久就能看到这些精彩的样本了。

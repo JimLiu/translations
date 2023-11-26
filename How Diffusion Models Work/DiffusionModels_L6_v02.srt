@@ -1,0 +1,288 @@
+1
+00:00:05,000 --> 00:00:13,640
+In this video, you'll learn about a new sampling method that is over 10 times   efficient than DDPM, which is what we've been using so far.
+
+2
+00:00:13,640 --> 00:00:16,360
+And this new method is called DDIM.
+
+3
+00:00:16,360 --> 00:00:20,680
+So your goal is that you want more images, and you want them quickly.
+
+4
+00:00:20,680 --> 00:00:26,000
+But sampling so far has been slow because, one, there are many time steps involved, 
+
+5
+00:00:26,000 --> 00:00:29,960
+you know, 500, there are even more sometimes to get a good sample.
+
+6
+00:00:29,960 --> 00:00:33,080
+And also each time step is dependent on the previous one.
+
+7
+00:00:33,080 --> 00:00:36,600
+It follows a Markov chain process.
+
+8
+00:00:36,600 --> 00:00:43,960
+But thankfully, there are many new samplers here to address this problem, since this has been a long standing problem with diffusion models.
+
+9
+00:00:43,960 --> 00:00:49,614
+It's that you can train them and they can create amazing, beautiful images that are both diverse and realistic,
+
+10
+00:00:49,615 --> 00:00:52,520
+but it's so slow to get something out of them.
+
+11
+00:00:52,520 --> 00:01:01,400
+And one of these samplers that has been very popular is called DDIM, or Denoising Diffusion Implicit Models, which is just the name of the paper.
+
+12
+00:01:01,400 --> 00:01:08,120
+And this paper was written by Jiaming Song, Chenlin Meng, and my PhD co-advisor, Stefano Ermon.
+
+13
+00:01:08,120 --> 00:01:12,440
+DDIM is faster because it's able to skip time steps.
+
+14
+00:01:12,440 --> 00:01:19,280
+So instead of going from time step 500 to 499 to 498, it's able to skip all these time steps.
+
+15
+00:01:19,280 --> 00:01:23,840
+And it's able to skip quite a bit, because it breaks the Markov assumption.
+
+16
+00:01:23,840 --> 00:01:26,760
+Markov chains are only used for probabilistic processes.
+
+17
+00:01:26,760 --> 00:01:33,800
+But DDIM actually removes all the randomness from this sampling process, and is therefore deterministic.
+
+18
+00:01:33,800 --> 00:01:40,140
+And what it does, essentially, is it predicts a rough sketch of the final output.
+
+19
+00:01:40,140 --> 00:01:44,560
+And then it refines it with the denoising process.
+
+20
+00:01:44,560 --> 00:01:51,200
+So let's compare DDPM here on the left, which is what we've been doing so far, and DDIM here on the right.
+
+21
+00:01:51,200 --> 00:01:54,760
+Yes, it is much faster with DDIM.
+
+22
+00:01:54,760 --> 00:02:00,560
+You immediately see a buck there after time step 19.
+
+23
+00:02:00,560 --> 00:02:02,480
+And we're still going for DDPM.
+
+24
+00:02:02,480 --> 00:02:04,240
+We're still going.
+
+25
+00:02:04,240 --> 00:02:08,760
+And this goes all the way up to 500 with DDPM, as you know.
+
+26
+00:02:08,760 --> 00:02:11,760
+Great, so here's the lab.
+
+27
+00:02:11,760 --> 00:02:13,360
+A lot of the setup will look the same.
+
+28
+00:02:13,360 --> 00:02:22,560
+So I'm just going to run this cell here, set up the unit again, our hyperparameters.
+
+29
+00:02:22,560 --> 00:02:24,360
+Here's the DDPM noise schedule.
+
+30
+00:02:24,360 --> 00:02:27,560
+We'll use it to compare it to DDIM later.
+
+31
+00:02:27,560 --> 00:02:30,000
+Now I'm instantiating the model.
+
+32
+00:02:30,000 --> 00:02:32,600
+And here's where fast sampling comes in with DDIM.
+
+33
+00:02:32,600 --> 00:02:35,560
+So here's the function for DDIM.
+
+34
+00:02:35,560 --> 00:02:42,080
+You can look at the paper for the details, but this implements that with its scaling factors.
+
+35
+00:02:42,080 --> 00:02:44,480
+And then we load up our trained model here.
+
+36
+00:02:44,480 --> 00:02:49,600
+So what's cool is that we can actually just load up the trained model and use either DDIM or DDPM.
+
+37
+00:02:49,600 --> 00:02:50,600
+It doesn't matter.
+
+38
+00:02:50,600 --> 00:02:53,040
+This is just a sampling process after training.
+
+39
+00:02:53,040 --> 00:02:55,360
+And this is the sampling algorithm using DDIM.
+
+40
+00:02:55,360 --> 00:02:58,480
+And the only thing to call out is that there is a step size involved.
+
+41
+00:02:58,480 --> 00:03:00,720
+We're not going through every single time step.
+
+42
+00:03:00,720 --> 00:03:02,800
+We're actually skipping steps here.
+
+43
+00:03:02,800 --> 00:03:05,600
+And here is where n is 20.
+
+44
+00:03:05,600 --> 00:03:08,200
+So this is 500 over 20.
+
+45
+00:03:08,200 --> 00:03:10,800
+We'll run that here.
+
+46
+00:03:10,800 --> 00:03:11,960
+And then we can sample.
+
+47
+00:03:11,960 --> 00:03:13,240
+That was much, much faster.
+
+48
+00:03:13,240 --> 00:03:16,040
+I could barely even see that there.
+
+49
+00:03:16,040 --> 00:03:19,080
+And now the GIF is just being composed.
+
+50
+00:03:19,080 --> 00:03:21,440
+We'll speed up the video for the GIF.
+
+51
+00:03:21,440 --> 00:03:22,720
+All right.
+
+52
+00:03:22,720 --> 00:03:26,120
+So here's what that looks like.
+
+53
+00:03:26,120 --> 00:03:31,640
+And it's very fast that it's able to instantly turn into these sprites.
+
+54
+00:03:31,640 --> 00:03:38,480
+Now with this faster sampling method, you don't always get the same level of quality as if you were to run DDPM.
+
+55
+00:03:38,480 --> 00:03:40,560
+These actually do look quite good.
+
+56
+00:03:40,560 --> 00:03:46,080
+Empirically, people have found that with a model trained on these 500 steps, for example,
+
+57
+00:03:46,080 --> 00:03:49,600
+DDPM will perform better if you sample for 500 steps.
+
+58
+00:03:49,600 --> 00:03:54,720
+But for any number under 500 steps, DDIM will do much better.
+
+59
+00:03:54,720 --> 00:03:57,560
+And so now here's the same, but with a context model.
+
+60
+00:03:57,560 --> 00:03:58,920
+So you can load in that context.
+
+61
+00:03:58,920 --> 00:04:03,680
+Great.
+
+62
+00:04:03,680 --> 00:04:05,600
+So these are just random contexts here.
+
+63
+00:04:05,600 --> 00:04:07,440
+But you can set them yourselves as well.
+
+64
+00:04:07,440 --> 00:04:10,200
+And this is what they look like.
+
+65
+00:04:10,200 --> 00:04:15,040
+So now your question is probably, how does the speed compare?
+
+66
+00:04:15,040 --> 00:04:21,440
+So we can load up the original DDPM functions and sampling algorithm.
+
+67
+00:04:21,440 --> 00:04:24,120
+And we can compare it using TimeIt in this notebook.
+
+68
+00:04:24,120 --> 00:04:26,280
+So we're going to compare DDIM with DDPM.
+
+69
+00:04:26,280 --> 00:04:32,840
+All right.
+
+70
+00:04:32,840 --> 00:04:34,040
+Look at that speed up.
+
+71
+00:04:34,040 --> 00:04:35,120
+Wow.
+
+72
+00:04:35,120 --> 00:04:37,880
+So try running these in your own notebook and see what you get.
+

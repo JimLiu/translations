@@ -1,0 +1,412 @@
+[Script Info]
+
+Title: LangChain_L6_v03
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,14,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,8,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs8\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}作者：{\1c&H80FFFF&\2c&H0000FF&}Harrison Chase, Andrew Wu\N{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 0,0:00:00.0,0:00:05.0,Default,,0,0,0,,{\fs14\an8}{\fad(200,200)\c&HFFFFFF&}基于LangChain的大语言模型应用开发7\N代理
+Dialogue: 0,0:00:05.28,0:00:09.19,Secondary,,0,0,0,,Sometimes people think of a large language model as a knowledge store,
+Dialogue: 0,0:00:09.19,0:00:13.1,Secondary,,0,0,0,,as if it's learned to memorize a lot of information, maybe off the internet,
+Dialogue: 0,0:00:13.2,0:00:16.69,Secondary,,0,0,0,,so when you ask the question, it can answer the question.
+Dialogue: 0,0:00:16.69,0:00:23.6,Secondary,,0,0,0,,But I think an even more useful way to think of a large language model is sometimes as a reasoning engine
+Dialogue: 0,0:00:23.6,0:00:27.32,Secondary,,0,0,0,,in which you can give it chunks of text or other sources of information.
+Dialogue: 0,0:00:27.32,0:00:29.55,Secondary,,0,0,0,,And then the large language model, LLM,
+Dialogue: 0,0:00:29.56,0:00:32.99,Secondary,,0,0,0,,will maybe use this background knowledge that's learned off the internet,
+Dialogue: 0,0:00:32.99,0:00:41.21,Secondary,,0,0,0,,but to use the new information you give it to help you answer questions or reason through content or decide even what to do next.
+Dialogue: 0,0:00:41.21,0:00:44.61,Secondary,,0,0,0,,And that's what LangChain's agents framework helps you to do.
+Dialogue: 0,0:00:45.67,0:00:48.32,Secondary,,0,0,0,,Agents are probably my favorite part of LangChain.
+Dialogue: 0,0:00:48.32,0:00:52.28,Secondary,,0,0,0,,I think they're also one of the most powerful parts, but they're also one of the newer parts.
+Dialogue: 0,0:00:52.28,0:00:56.6,Secondary,,0,0,0,,So we're seeing a lot of stuff emerge here that's really new to everyone in the field.
+Dialogue: 0,0:00:56.6,0:00:59.90,Secondary,,0,0,0,,And so this should be a very exciting lesson as we dive into what agents are,
+Dialogue: 0,0:00:59.90,0:01:02.51,Secondary,,0,0,0,,how to create and how to use agents,
+Dialogue: 0,0:01:02.51,0:01:06.87,Secondary,,0,0,0,,how to equip them with different types of tools like search engines that come built into LangChain.
+Dialogue: 0,0:01:07.41,0:01:17.3,Secondary,,0,0,0,,and then also how to create your own tools so that you can let agents interact with any data stores, any APIs, any functions that you might want them to.
+Dialogue: 0,0:01:17.3,0:01:23.22,Secondary,,0,0,0,,So this is exciting, cutting-edge stuff, but already with emerging important use cases.
+Dialogue: 0,0:01:23.22,0:01:26.60,Secondary,,0,0,0,,So with that, let's dive in.
+Dialogue: 0,0:01:26.60,0:01:33.2,Secondary,,0,0,0,,First, we're going to set the environment variables and import a bunch of stuff that we will use later on.
+Dialogue: 0,0:01:33.2,0:01:35.16,Secondary,,0,0,0,,Next, we're going to initialize a language model
+Dialogue: 0,0:01:35.78,0:01:37.50,Secondary,,0,0,0,,We're going to use ChatOpenAI.
+Dialogue: 0,0:01:37.50,0:01:41.28,Secondary,,0,0,0,,And importantly, we're going to set the temperature equal to zero.
+Dialogue: 0,0:01:41.28,0:01:51.10,Secondary,,0,0,0,,This is important because we're going to be using the language model as the reasoning engine of an agent where it's connecting to other sources of data and computation.
+Dialogue: 0,0:01:51.10,0:01:56.28,Secondary,,0,0,0,,And so we want this reasoning engine to be as good and as precise as possible.
+Dialogue: 0,0:01:56.28,0:02:02.50,Secondary,,0,0,0,,And so we're going to set it to zero to get rid of any randomness that might arise.
+Dialogue: 0,0:02:02.50,0:02:04.0,Secondary,,0,0,0,,Next, we're going to load some tools.
+Dialogue: 0,0:02:05.5,0:02:10.91,Secondary,,0,0,0,,The two tools that we're going to load are the LLM math tool and the Wikipedia tool.
+Dialogue: 0,0:02:10.91,0:02:20.66,Secondary,,0,0,0,,The LLM math tool is actually a chain itself, which uses a language model in conjunction with a calculator to do math problems.
+Dialogue: 0,0:02:20.66,0:02:24.16,Secondary,,0,0,0,,The Wikipedia tool is an API that connects to Wikipedia,
+Dialogue: 0,0:02:24.16,0:02:28.78,Secondary,,0,0,0,,allowing you to run search queries against Wikipedia and get back results.
+Dialogue: 0,0:02:31.69,0:02:33.77,Secondary,,0,0,0,,Next, we're going to initialize an agent.
+Dialogue: 0,0:02:33.77,0:02:39.47,Secondary,,0,0,0,,We're going to initialize the agent with the tools, the language model, and then an agent type.
+Dialogue: 0,0:02:39.47,0:02:43.55,Secondary,,0,0,0,,Here, we're going to use CHAT_ZERO_SHOT_REACT_DESCRIPTION.
+Dialogue: 0,0:02:43.55,0:02:46.87,Secondary,,0,0,0,,The important things to note here are first chat.
+Dialogue: 0,0:02:46.87,0:02:50.81,Secondary,,0,0,0,,This is an agent that has been optimized to work with chat models.
+Dialogue: 0,0:02:50.81,0:02:52.71,Secondary,,0,0,0,,And second react.
+Dialogue: 0,0:02:52.71,0:02:58.50,Secondary,,0,0,0,,This is a prompting technique designed to get the best reasoning performance out of language models.
+Dialogue: 0,0:02:59.82,0:03:03.78,Secondary,,0,0,0,,We're also going to pass in handle_parsing_errors equals true.
+Dialogue: 0,0:03:03.78,0:03:14.72,Secondary,,0,0,0,,This is useful when the language model might output something that is not able to be parsed into an action input, which is the desired output.
+Dialogue: 0,0:03:14.72,0:03:19.86,Secondary,,0,0,0,,When this happens, we'll actually pass the misformatted text back to the language model and ask it to correct itself.
+Dialogue: 0,0:03:21.10,0:03:24.10,Secondary,,0,0,0,,Finally, we're going to pass in verbose equals true.
+Dialogue: 0,0:03:24.10,0:03:30.68,Secondary,,0,0,0,,This is going to print out a bunch of steps that makes it really clear to us in the Jupyter notebook what's going on.
+Dialogue: 0,0:03:30.68,0:03:34.99,Secondary,,0,0,0,,We'll also set debug equals True at the global level later on in the notebook
+Dialogue: 0,0:03:35.0,0:03:38.69,Secondary,,0,0,0,,so we can see in more detail what exactly is happening.
+Dialogue: 0,0:03:38.69,0:03:41.3,Secondary,,0,0,0,,First, we're going to ask the agent a math question.
+Dialogue: 0,0:03:41.3,0:03:42.51,Secondary,,0,0,0,,What is 25% of 300?
+Dialogue: 0,0:03:42.51,0:03:47.90,Secondary,,0,0,0,,This is a pretty simple question, but it will be good to understand what exactly is going on.
+Dialogue: 0,0:03:49.23,0:03:56.2,Secondary,,0,0,0,,So we can see here that when it enters the AgentExecutor chain, that it first thinks about what it needs to do.
+Dialogue: 0,0:03:56.2,0:03:57.31,Secondary,,0,0,0,,So it has a thought.
+Dialogue: 0,0:03:57.96,0:03:59.51,Secondary,,0,0,0,,It then has an action.
+Dialogue: 0,0:03:59.58,0:04:06.43,Secondary,,0,0,0,,And this action is actually a JSON blob corresponding to two things, an action and an action input.
+Dialogue: 0,0:04:06.62,0:04:09.10,Secondary,,0,0,0,,The action corresponds to the tool to use.
+Dialogue: 0,0:04:09.10,0:04:11.20,Secondary,,0,0,0,,So here it says calculator.
+Dialogue: 0,0:04:11.20,0:04:14.1,Secondary,,0,0,0,,The action input is the input to that tool.
+Dialogue: 0,0:04:14.1,0:04:15.81,Secondary,,0,0,0,,And here it's a string of 300 times 0.25.
+Dialogue: 0,0:04:19.28,0:04:24.6,Secondary,,0,0,0,,Next, we can see that there's observation with answer in a separate color.
+Dialogue: 0,0:04:24.6,0:04:33.47,Secondary,,0,0,0,,This observation, answer equals 75.0, is actually coming from the calculator tool itself.
+Dialogue: 0,0:04:33.47,0:04:37.35,Secondary,,0,0,0,,Next, we go back to the language model when the text turns to green.
+Dialogue: 0,0:04:37.35,0:04:39.1,Secondary,,0,0,0,,We have the answer to the question.
+Dialogue: 0,0:04:39.1,0:04:43.42,Secondary,,0,0,0,,Final answer, 75.0, and that's the output that we get.
+Dialogue: 0,0:04:47.4,0:04:53.25,Secondary,,0,0,0,,This is a good time to pause and try out different math problems of your own.
+Dialogue: 0,0:04:53.25,0:04:57.49,Secondary,,0,0,0,,Next, we're going to go through an example using the Wikipedia API.
+Dialogue: 0,0:04:57.49,0:04:59.96,Secondary,,0,0,0,,Here, we're going to ask it a question about Tom Mitchell,
+Dialogue: 0,0:05:00.9,0:05:04.9,Secondary,,0,0,0,,and we can look at the intermediate steps to see what it does.
+Dialogue: 0,0:05:04.10,0:05:08.37,Secondary,,0,0,0,,We can see once again that it thinks and it correctly realizes that it should use Wikipedia.
+Dialogue: 0,0:05:10.42,0:05:14.68,Secondary,,0,0,0,,It says action equal to Wikipedia and action input equal to Tom M. Mitchell.
+Dialogue: 0,0:05:15.96,0:05:18.93,Secondary,,0,0,0,,The observation that comes back in yellow this time,
+Dialogue: 0,0:05:19.10,0:05:22.3,Secondary,,0,0,0,,and we use different colors to denote different tools,
+Dialogue: 0,0:05:22.14,0:05:28.27,Secondary,,0,0,0,,is the Wikipedia summary result for the Tom M. Mitchell page.
+Dialogue: 0,0:05:28.27,0:05:30.61,Secondary,,0,0,0,,The observation that comes back from Wikipedia
+Dialogue: 0,0:05:30.66,0:05:32.74,Secondary,,0,0,0,,is actually two results, two pages,
+Dialogue: 0,0:05:32.74,0:05:34.57,Secondary,,0,0,0,,as there's two different Tom M. Mitchells.
+Dialogue: 0,0:05:34.57,0:05:37.66,Secondary,,0,0,0,,We can see the first one covers the computer scientist,
+Dialogue: 0,0:05:37.67,0:05:41.25,Secondary,,0,0,0,,and the second one, it looks like it's an Australian footballer.
+Dialogue: 0,0:05:42.94,0:05:45.84,Secondary,,0,0,0,,We can see that the information needed to answer this question,
+Dialogue: 0,0:05:45.84,0:05:49.19,Secondary,,0,0,0,,namely the name of the book that he wrote, Machine Learning,
+Dialogue: 0,0:05:49.39,0:05:55.14,Secondary,,0,0,0,,is present in the summary of the first Tom Mitchell.
+Dialogue: 0,0:05:55.14,0:05:59.59,Secondary,,0,0,0,,We can see next that the agent tries to look up more information about this book.
+Dialogue: 0,0:05:59.59,0:06:03.9,Secondary,,0,0,0,,So it looks up Machine Learning book in Wikipedia.
+Dialogue: 0,0:06:03.9,0:06:04.64,Secondary,,0,0,0,,This isn't strictly necessary,
+Dialogue: 0,0:06:04.64,0:06:08.81,Secondary,,0,0,0,,and it's an interesting example to show how agents aren't perfectly reliable yet.
+Dialogue: 0,0:06:09.97,0:06:11.73,Secondary,,0,0,0,,We can see that after this lookup,
+Dialogue: 0,0:06:11.80,0:06:18.40,Secondary,,0,0,0,,the agent recognizes that it has all the information it needs to answer and responds with the correct answer, machine learning.
+Dialogue: 0,0:06:19.47,0:06:21.95,Secondary,,0,0,0,,The next example we're going to go through is a really cool one.
+Dialogue: 0,0:06:21.95,0:06:28.94,Secondary,,0,0,0,,If you've seen things like copilot or even ChatGPT with the code interpreter plugin enabled,
+Dialogue: 0,0:06:29.10,0:06:34.54,Secondary,,0,0,0,,one of the things they're doing is they're using the language model to write code and then executing that code.
+Dialogue: 0,0:06:34.54,0:06:35.100,Secondary,,0,0,0,,We can do the same exact thing here.
+Dialogue: 0,0:06:37.38,0:06:43.34,Secondary,,0,0,0,,So we're going to create a Python agent and we're going to use the same LLM as before.
+Dialogue: 0,0:06:43.34,0:06:46.76,Secondary,,0,0,0,,And we're going to give it a tool, the PythonREPLTool.
+Dialogue: 0,0:06:46.76,0:06:49.25,Secondary,,0,0,0,,A REPL is basically a way to interact with code.
+Dialogue: 0,0:06:49.25,0:06:51.77,Secondary,,0,0,0,,You can think of it as a Jupyter Notebook.
+Dialogue: 0,0:06:51.77,0:06:55.59,Secondary,,0,0,0,,So the agent can execute code with this REPL.
+Dialogue: 0,0:06:55.59,0:07:04.23,Secondary,,0,0,0,,It will then run and then we'll get back some results and those results will be passed back into the agent so it can decide what to do next.
+Dialogue: 0,0:07:05.75,0:07:12.59,Secondary,,0,0,0,,The problem that we're going to have this agent solve is we're going to give it a list of names and then ask it to sort them.
+Dialogue: 0,0:07:12.59,0:07:21.94,Secondary,,0,0,0,,So you can see here we have a list of names, "Harrison Chase", "Lang Chain", "Elle Elem", "Geoff Fusion", "Trance Former", "Jen Ayai".
+Dialogue: 0,0:07:21.94,0:07:28.96,Secondary,,0,0,0,,And we're going to ask the agent to first sort these names by last name and then first name and then print the output.
+Dialogue: 0,0:07:28.96,0:07:33.80,Secondary,,0,0,0,,Importantly, we're asking it to print the output so that it can actually see what the result is.
+Dialogue: 0,0:07:35.19,0:07:39.54,Secondary,,0,0,0,,These printed statements are what's going to be fed back into the language model later on,
+Dialogue: 0,0:07:39.91,0:07:45.19,Secondary,,0,0,0,,so it can reason about the output of the code that it just ran.
+Dialogue: 0,0:07:45.20,0:07:49.2,Secondary,,0,0,0,,Let's give this a try.
+Dialogue: 0,0:07:49.2,0:07:51.74,Secondary,,0,0,0,,We can see that when we go into the AgentExecutor chain,
+Dialogue: 0,0:07:52.80,0:07:56.35,Secondary,,0,0,0,,it first realizes that it can use the sorted function to list the customers.
+Dialogue: 0,0:08:00.41,0:08:02.36,Secondary,,0,0,0,,It's using a different agent type under the hood,
+Dialogue: 0,0:08:02.36,0:08:08.38,Secondary,,0,0,0,,which is why you can see that the action and action input is actually formatted slightly differently.
+Dialogue: 0,0:08:08.38,0:08:11.60,Secondary,,0,0,0,,Here, the action that it takes is to use the Python REPL,
+Dialogue: 0,0:08:11.60,0:08:15.37,Secondary,,0,0,0,,and then the action input that you can see is code,
+Dialogue: 0,0:08:15.37,0:08:19.69,Secondary,,0,0,0,,where it first writes out customers equals this list, it then sorts the customers,
+Dialogue: 0,0:08:19.69,0:08:21.97,Secondary,,0,0,0,,and then it goes through this list and print it.
+Dialogue: 0,0:08:23.53,0:08:26.87,Secondary,,0,0,0,,You can see the agent thinks about what to do and realizes that it needs to write some code.
+Dialogue: 0,0:08:28.41,0:08:33.45,Secondary,,0,0,0,,The format that it's using of action and action input is actually slightly different than before.
+Dialogue: 0,0:08:33.45,0:08:36.97,Secondary,,0,0,0,,It's using a different agent type under the hood.
+Dialogue: 0,0:08:36.97,0:08:39.35,Secondary,,0,0,0,,For the action, it's going to use the Python REPL.
+Dialogue: 0,0:08:39.35,0:08:42.29,Secondary,,0,0,0,,And for the action input, it's going to have a bunch of code.
+Dialogue: 0,0:08:42.29,0:08:48.9,Secondary,,0,0,0,,And so if we look at what this code is doing, it's first creating a variable to list out these customer names.
+Dialogue: 0,0:08:48.9,0:08:50.74,Secondary,,0,0,0,,It's then sorting that and creating a new variable.
+Dialogue: 0,0:08:50.74,0:08:56.30,Secondary,,0,0,0,,And it's then iterating through that new variable and printing out each line, just like we asked it to.
+Dialogue: 0,0:08:57.41,0:09:01.51,Secondary,,0,0,0,,We can see that we get the observation back and this is a list of names.
+Dialogue: 0,0:09:01.51,0:09:07.20,Secondary,,0,0,0,,And then the agent realizes that it's done and it returns these names.
+Dialogue: 0,0:09:07.20,0:09:09.0,Secondary,,0,0,0,,We can see from the stuff that's printed out,
+Dialogue: 0,0:09:11.7,0:09:16.27,Secondary,,0,0,0,,but let's dig a little bit deeper and run this with "langchain.debug" set to "True".
+Dialogue: 0,0:09:19.21,0:09:23.71,Secondary,,0,0,0,,As this prints out all the levels, all the different chains that are going on,
+Dialogue: 0,0:09:23.72,0:09:27.16,Secondary,,0,0,0,,let's go through them and see what exactly is happening.
+Dialogue: 0,0:09:27.16,0:09:29.68,Secondary,,0,0,0,,So first, we start with the agent executor.
+Dialogue: 0,0:09:29.68,0:09:31.36,Secondary,,0,0,0,,This is the top level agent runner.
+Dialogue: 0,0:09:31.36,0:09:33.50,Secondary,,0,0,0,,And we can see that we have here our input,
+Dialogue: 0,0:09:33.50,0:09:38.37,Secondary,,0,0,0,,sort these customers by last name and then first name and print the output.
+Dialogue: 0,0:09:38.37,0:09:41.1,Secondary,,0,0,0,,From here, we call an LLMChain.
+Dialogue: 0,0:09:41.1,0:09:43.53,Secondary,,0,0,0,,This is the LLMChain that the agent is using.
+Dialogue: 0,0:09:44.58,0:09:48.84,Secondary,,0,0,0,,The LLMChain, remember, is a combination of prompt and an LLM.
+Dialogue: 0,0:09:48.84,0:09:52.66,Secondary,,0,0,0,,At this point, it's only got the input, an agent scratchpad,
+Dialogue: 0,0:09:52.66,0:09:59.40,Secondary,,0,0,0,,we'll get back to that later, and then some stop sequences to tell the language model when to stop doing its generations.
+Dialogue: 0,0:10:00.95,0:10:05.45,Secondary,,0,0,0,,At the next level, we see the exact call to the language model.
+Dialogue: 0,0:10:05.45,0:10:07.43,Secondary,,0,0,0,,We can see the fully formatted prompt,
+Dialogue: 0,0:10:07.46,0:10:12.55,Secondary,,0,0,0,,which includes instructions about what tools it has access to as well as how to format its output.
+Dialogue: 0,0:10:15.30,0:10:19.26,Secondary,,0,0,0,,From there, we can then see the exact output of the language model.
+Dialogue: 0,0:10:19.26,0:10:28.13,Secondary,,0,0,0,,So we can see the text key where it has the thought and the action and the action input all in one string.
+Dialogue: 0,0:10:28.13,0:10:32.41,Secondary,,0,0,0,,It then wraps up the LLMChain as it exits through there.
+Dialogue: 0,0:10:32.41,0:10:34.29,Secondary,,0,0,0,,And the next thing that it calls is a tool.
+Dialogue: 0,0:10:34.29,0:10:37.30,Secondary,,0,0,0,,And here we can see the exact input to the tool.
+Dialogue: 0,0:10:37.30,0:10:39.63,Secondary,,0,0,0,,We can also see the name of the tool, Python REPL,
+Dialogue: 0,0:10:39.66,0:10:41.62,Secondary,,0,0,0,,and then we can see the input, which is this code.
+Dialogue: 0,0:10:43.97,0:10:46.89,Secondary,,0,0,0,,We can then see the output of this tool, which is this printed out string.
+Dialogue: 0,0:10:46.89,0:10:54.21,Secondary,,0,0,0,,And again, this happens because we specifically ask the Python REPL to print out what is going on.
+Dialogue: 0,0:10:54.21,0:11:00.62,Secondary,,0,0,0,,We can then see the next input to the LLMChain, which again, the LLMChain here is the agent.
+Dialogue: 0,0:11:00.62,0:11:04.88,Secondary,,0,0,0,,So here, if you look at the variables, there's the input.
+Dialogue: 0,0:11:04.88,0:11:05.66,Secondary,,0,0,0,,This is unchanged.
+Dialogue: 0,0:11:05.66,0:11:10.36,Secondary,,0,0,0,,This is the high level objective that we're asking, but now there's some new values for agent scratchpad.
+Dialogue: 0,0:11:11.36,0:11:19.46,Secondary,,0,0,0,,You can see here that this is actually a combination of the previous generation plus the tool output.
+Dialogue: 0,0:11:19.46,0:11:21.33,Secondary,,0,0,0,,And so we're passing this back in
+Dialogue: 0,0:11:21.33,0:11:24.19,Secondary,,0,0,0,,so that the language model can understand what happened previously
+Dialogue: 0,0:11:24.19,0:11:26.63,Secondary,,0,0,0,,and use that to reason about what to do next.
+Dialogue: 0,0:11:28.7,0:11:32.70,Secondary,,0,0,0,,The next few print statements are covering what happens as the language model realizes that
+Dialogue: 0,0:11:32.70,0:11:35.27,Secondary,,0,0,0,,it is basically finished with its job.
+Dialogue: 0,0:11:35.27,0:11:38.13,Secondary,,0,0,0,,So we can see here the fully formatted prompt to the language model.
+Dialogue: 0,0:11:39.27,0:11:44.89,Secondary,,0,0,0,,the response where it realizes that it is done and it says final answer,
+Dialogue: 0,0:11:44.89,0:11:50.38,Secondary,,0,0,0,,which here is the sequence that the agent uses to recognize that it's done with its job.
+Dialogue: 0,0:11:50.38,0:11:53.78,Secondary,,0,0,0,,We can then see it exiting the LLMChain and then exiting the agent executor.
+Dialogue: 0,0:11:55.9,0:12:00.1,Secondary,,0,0,0,,This should hopefully give you a pretty good idea of what's going on under the hood inside these agents.
+Dialogue: 0,0:12:00.39,0:12:04.3,Secondary,,0,0,0,,This should hopefully give you a pretty good idea of what's going on under the hood
+Dialogue: 0,0:12:04.9,0:12:11.66,Secondary,,0,0,0,,and is hopefully instructive as you pause and put your own objectives for this coding agent to try to accomplish.
+Dialogue: 0,0:12:11.66,0:12:16.95,Secondary,,0,0,0,,This debug mode can also be used to highlight what's going wrong as shown above in the Wikipedia example,
+Dialogue: 0,0:12:16.95,0:12:22.72,Secondary,,0,0,0,,sometimes agents act a little funny and so having all this information is really helpful for understanding what's going on.
+Dialogue: 0,0:12:23.87,0:12:28.58,Secondary,,0,0,0,,So far, we've used tools that come to find in LangChain already.
+Dialogue: 0,0:12:28.58,0:12:35.36,Secondary,,0,0,0,,But a big power of agents is that you can connect it to your own sources of information, your own APIs, your own data.
+Dialogue: 0,0:12:35.36,0:12:40.96,Secondary,,0,0,0,,So here, we're going to go over how you can create a custom tool so that you can connect it to whatever you want.
+Dialogue: 0,0:12:40.96,0:12:44.94,Secondary,,0,0,0,,Let's make a tool that's going to tell us what the current date is.
+Dialogue: 0,0:12:44.94,0:12:47.74,Secondary,,0,0,0,,First, we're going to import this tool decorator.
+Dialogue: 0,0:12:47.74,0:12:52.18,Secondary,,0,0,0,,This can be applied to any function, and it turns it into a tool that LangChain can use.
+Dialogue: 0,0:12:53.43,0:12:58.67,Secondary,,0,0,0,,Next, we're going to write a function called time, which shakes in any text string.
+Dialogue: 0,0:12:58.67,0:13:00.11,Secondary,,0,0,0,,We're not really going to use that.
+Dialogue: 0,0:13:00.11,0:13:05.79,Secondary,,0,0,0,,And it's going to return today's date by calling datetime.
+Dialogue: 0,0:13:05.79,0:13:10.86,Secondary,,0,0,0,,In addition to the name of the function, we're also going to write a really detailed docstring.
+Dialogue: 0,0:13:10.86,0:13:16.44,Secondary,,0,0,0,,That's because this is what the agent will use to know when it should call this tool and how it should call this tool.
+Dialogue: 0,0:13:18.73,0:13:22.25,Secondary,,0,0,0,,For example, here we say that the input should always be an empty string.
+Dialogue: 0,0:13:22.25,0:13:24.13,Secondary,,0,0,0,,That's because we don't use it.
+Dialogue: 0,0:13:24.13,0:13:27.44,Secondary,,0,0,0,,If we have more stringent requirements on what the input should be,
+Dialogue: 0,0:13:27.59,0:13:32.87,Secondary,,0,0,0,,for example, if we have a function that should always take in a search query or a SQL statement,
+Dialogue: 0,0:13:32.91,0:13:35.29,Secondary,,0,0,0,,you'll want to make sure to mention that here.
+Dialogue: 0,0:13:37.57,0:13:39.27,Secondary,,0,0,0,,We're now going to create another agent.
+Dialogue: 0,0:13:39.27,0:13:42.76,Secondary,,0,0,0,,This time we're adding the time tool to the list of existing tools.
+Dialogue: 0,0:13:45.90,0:13:53.96,Secondary,,0,0,0,,And finally, let's call the agent and ask it what the date today is.
+Dialogue: 0,0:13:53.96,0:13:58.46,Secondary,,0,0,0,,It recognizes that it needs to use the time tool, which it specifies here.
+Dialogue: 0,0:13:58.46,0:14:00.60,Secondary,,0,0,0,,It has the action input as an empty string.
+Dialogue: 0,0:14:00.60,0:14:01.16,Secondary,,0,0,0,,This is great.
+Dialogue: 0,0:14:01.16,0:14:02.80,Secondary,,0,0,0,,This is what we told it to do.
+Dialogue: 0,0:14:02.80,0:14:04.96,Secondary,,0,0,0,,And then it returns with an observation.
+Dialogue: 0,0:14:04.96,0:14:09.1,Secondary,,0,0,0,,And then finally, the language model takes that observation and responds to the user.
+Dialogue: 0,0:14:09.1,0:14:09.91,Secondary,,0,0,0,,Today's date is 2023-05-21.
+Dialogue: 0,0:14:12.77,0:14:17.5,Secondary,,0,0,0,,You should pause the video here and try putting in different inputs.
+Dialogue: 0,0:14:17.5,0:14:19.57,Secondary,,0,0,0,,This wraps up the lesson on agents.
+Dialogue: 0,0:14:19.57,0:14:25.4,Secondary,,0,0,0,,This is one of the newer and more exciting and more experimental pieces of LangChain.
+Dialogue: 0,0:14:25.4,0:14:26.82,Secondary,,0,0,0,,So I hope you enjoy using it.
+Dialogue: 0,0:14:26.82,0:14:32.16,Secondary,,0,0,0,,Hopefully it showed you how you can use a language model as a reasoning engine to take different actions
+Dialogue: 0,0:14:32.16,0:14:34.15,Secondary,,0,0,0,,and connect to other functions and data sources.
+Dialogue: 0,0:00:05.28,0:00:09.19,Default,,0,0,0,,有时候人们把大语言模型看作是知识库，
+Dialogue: 0,0:00:09.19,0:00:13.1,Default,,0,0,0,,就好像它学会并记忆了大量的\N从互联网上获取的信息，
+Dialogue: 0,0:00:13.2,0:00:16.69,Default,,0,0,0,,所以当你问问题时，它可以回答问题。
+Dialogue: 0,0:00:16.69,0:00:23.6,Default,,0,0,0,,但我认为更有用的方式是把大语\N言模型看作是一个推理引擎，
+Dialogue: 0,0:00:23.6,0:00:27.32,Default,,0,0,0,,你可以给它提供一些文本或其他信息来源。
+Dialogue: 0,0:00:27.32,0:00:29.55,Default,,0,0,0,,然后大型语言模型，LLM，
+Dialogue: 0,0:00:29.56,0:00:32.99,Default,,0,0,0,,可能会使用它从互联网上\N学习的这些背景知识，
+Dialogue: 0,0:00:32.99,0:00:41.21,Default,,0,0,0,,但是也会利用你提供的新信息来帮助你回答问\N题，或者推理内容，甚至决定接下来要做什么。
+Dialogue: 0,0:00:41.21,0:00:44.61,Default,,0,0,0,,这就是LangChain的代理框架能帮助你做的事。
+Dialogue: 0,0:00:45.67,0:00:48.32,Default,,0,0,0,,代理可能是我最喜欢的LangChain功能。
+Dialogue: 0,0:00:48.32,0:00:52.28,Default,,0,0,0,,我认为代理也是最强大的功能\N之一，但也是较新的功能。
+Dialogue: 0,0:00:52.28,0:00:56.6,Default,,0,0,0,,对于这个领域的每个人来说\N，涌现了很多新的技术，
+Dialogue: 0,0:00:56.6,0:00:59.90,Default,,0,0,0,,这节课程将会令人期待，因为我\N们将会深入了解什么是代理，
+Dialogue: 0,0:00:59.90,0:01:02.51,Default,,0,0,0,,如何创建和使用代理，
+Dialogue: 0,0:01:02.51,0:01:06.87,Default,,0,0,0,,如何配备不同类型的工具，比如内\N置在LangChain中的搜索引擎。
+Dialogue: 0,0:01:07.41,0:01:17.3,Default,,0,0,0,,然后还有如何创建自己的工具，这\N样你就可以让代理与任何数据存\N储、API、或者功能进行互动。
+Dialogue: 0,0:01:17.3,0:01:23.22,Default,,0,0,0,,这是令人兴奋的前沿技术，而且已\N经有了一些重要的应用案例。
+Dialogue: 0,0:01:23.22,0:01:26.60,Default,,0,0,0,,那么，让我们开始吧。
+Dialogue: 0,0:01:26.60,0:01:33.2,Default,,0,0,0,,首先，我们将设置环境变量并导\N入一些内容，稍后将会用到。
+Dialogue: 0,0:01:33.2,0:01:35.16,Default,,0,0,0,,接下来，我们将初始化一个语言模型。
+Dialogue: 0,0:01:35.78,0:01:37.50,Default,,0,0,0,,我们将使用ChatOpenAI。
+Dialogue: 0,0:01:37.50,0:01:41.28,Default,,0,0,0,,首先，我们要把temperature参数设为0。
+Dialogue: 0,0:01:41.28,0:01:51.10,Default,,0,0,0,,这点很重要，因为我们将使用语言\N模型作为代理的推理引擎，它会连\N接到其他数据和计算资源，
+Dialogue: 0,0:01:51.10,0:01:56.28,Default,,0,0,0,,所以，我们希望这个推理引擎尽\N可能地好并且尽可能精确。
+Dialogue: 0,0:01:56.28,0:02:02.50,Default,,0,0,0,,所以我们把temperature参数设为0\N，消除任何可能出现的随机性。
+Dialogue: 0,0:02:02.50,0:02:04.0,Default,,0,0,0,,接下来，我们要加载一些工具。
+Dialogue: 0,0:02:05.5,0:02:10.91,Default,,0,0,0,,我们要加载的两个工具是llm-\Nmath工具和维基百科工具。
+Dialogue: 0,0:02:10.91,0:02:20.66,Default,,0,0,0,,llm-math工具实际上是一个链，它结合了\N语言模型和计算器来解决数学问题。
+Dialogue: 0,0:02:20.66,0:02:24.16,Default,,0,0,0,,维基百科工具是一个连接\N到维基百科API的程序，
+Dialogue: 0,0:02:24.16,0:02:28.78,Default,,0,0,0,,允许你查询维基百科上的\N内容，并返回搜索结果。
+Dialogue: 0,0:02:31.69,0:02:33.77,Default,,0,0,0,,最后，我们将初始化一个代理。
+Dialogue: 0,0:02:33.77,0:02:39.47,Default,,0,0,0,,我们将用“工具列表”、“语言模型\N”和“代理类型”初始化代理。
+Dialogue: 0,0:02:39.47,0:02:43.55,Default,,0,0,0,,这里，我们将使用名为\NCHAT_ZERO_SHOT_REACT_DESCRIPTION\N的代理类型。
+Dialogue: 0,0:02:43.55,0:02:46.87,Default,,0,0,0,,这里面首先要注意的是CHAT。
+Dialogue: 0,0:02:46.87,0:02:50.81,Default,,0,0,0,,这是一个专为与Chat模型一\N起工作而优化的代理。
+Dialogue: 0,0:02:50.81,0:02:52.71,Default,,0,0,0,,其次是REACT。
+Dialogue: 0,0:02:52.71,0:02:58.50,Default,,0,0,0,,REACT是一种组织Prompt的技术，能\N最大化语言模型的推理能力。
+Dialogue: 0,0:02:59.82,0:03:03.78,Default,,0,0,0,,我们还将设置\Nhandle_parsing_errors参数\N的值为True。
+Dialogue: 0,0:03:03.78,0:03:14.72,Default,,0,0,0,,当语言模型输出的内容无法\N被正常解析时，这很有用。
+Dialogue: 0,0:03:14.72,0:03:19.86,Default,,0,0,0,,实际上就是遇到内容无法被正常\N解析时，将格式错误的内容传回语\N言模型，并要求它自行纠正。
+Dialogue: 0,0:03:21.10,0:03:24.10,Default,,0,0,0,,最后，我们将设置verbose参数的值为True。
+Dialogue: 0,0:03:24.10,0:03:30.68,Default,,0,0,0,,这会打印出每一个步骤的详细记录，\N让我们可以在Jupyter Notebook中\N清楚地了解正在发生的事情。
+Dialogue: 0,0:03:30.68,0:03:34.99,Default,,0,0,0,,稍后我们还会在全局级别设置debug为True
+Dialogue: 0,0:03:35.0,0:03:38.69,Default,,0,0,0,,这样我们可以更详细地了解到底发生了什么。
+Dialogue: 0,0:03:38.69,0:03:41.3,Default,,0,0,0,,首先，我们要问代理一个数学问题：
+Dialogue: 0,0:03:41.3,0:03:42.51,Default,,0,0,0,,“300的25%是多少？”
+Dialogue: 0,0:03:42.51,0:03:47.90,Default,,0,0,0,,这是一个相当简单的问题，但对于我们\N了解具体发生了什么非常有帮助。
+Dialogue: 0,0:03:49.23,0:03:56.2,Default,,0,0,0,,我们可以看到，当它进入\NAgentExecutor链时，首先会考虑需要\N做什么。
+Dialogue: 0,0:03:56.2,0:03:57.31,Default,,0,0,0,,所以它有一个THOUGHT（思考）。
+Dialogue: 0,0:03:57.96,0:03:59.51,Default,,0,0,0,,然后它有一个ACTION（操作）。
+Dialogue: 0,0:03:59.58,0:04:06.43,Default,,0,0,0,,这个ACTION实际上是一个JSON对象，其\N中有两部分内容：一个action（操作）和\N一个action_input（操作输入）。
+Dialogue: 0,0:04:06.62,0:04:09.10,Default,,0,0,0,,action对应的是要使用的工具，
+Dialogue: 0,0:04:09.10,0:04:11.20,Default,,0,0,0,,这里写的是计算器。
+Dialogue: 0,0:04:11.20,0:04:14.1,Default,,0,0,0,,action_input对应的是该工具的输入，
+Dialogue: 0,0:04:14.1,0:04:15.81,Default,,0,0,0,,这里是一个“300*0.25”的字符串。
+Dialogue: 0,0:04:19.28,0:04:24.6,Default,,0,0,0,,接下来，我们可以看到Observation（观察结果\N）和Answer（答案）是用不同颜色显示的。
+Dialogue: 0,0:04:24.6,0:04:33.47,Default,,0,0,0,,这个Observation后面的“Answer: 75.0”，\N实际上是来自计算器工具返回的结果。
+Dialogue: 0,0:04:33.47,0:04:37.35,Default,,0,0,0,,接下来我们回到语言模型，文字变为\N绿色，语言模型Thought（思考）：
+Dialogue: 0,0:04:37.35,0:04:39.1,Default,,0,0,0,,“我们得到了问题的答案。
+Dialogue: 0,0:04:39.1,0:04:43.42,Default,,0,0,0,,最后答案是75.0”。这就是\N我们得到的输出结果。
+Dialogue: 0,0:04:47.4,0:04:53.25,Default,,0,0,0,,建议你现在暂停一下，自己尝试\N测试一些不同的数学问题。
+Dialogue: 0,0:04:53.25,0:04:57.49,Default,,0,0,0,,接下来，我们将展示一个使\N用维基百科API的示例。
+Dialogue: 0,0:04:57.49,0:04:59.96,Default,,0,0,0,,在这里，我们将向它问一个关于Tom Mitchell\N的问题（Tom M. Mitchell是美国计算机科学家\N，卡内基梅隆大学的教授。他写了什么书？），
+Dialogue: 0,0:05:00.9,0:05:04.9,Default,,0,0,0,,我们可以查看中间步骤，了解它的工作原理。
+Dialogue: 0,0:05:04.10,0:05:08.37,Default,,0,0,0,,我们再次看到它在思考，并正确地\N意识到应该使用维基百科工具。
+Dialogue: 0,0:05:10.42,0:05:14.68,Default,,0,0,0,,它显示action是“维基百科”，\Naction_input是“Tom M. Mitchell”。
+Dialogue: 0,0:05:15.96,0:05:18.93,Default,,0,0,0,,这次返回的Observation（观察结果）是黄色的，
+Dialogue: 0,0:05:19.10,0:05:22.3,Default,,0,0,0,,我们用不同的颜色表示不同的工具，
+Dialogue: 0,0:05:22.14,0:05:28.27,Default,,0,0,0,,这是Tom M. Mitchell页面\N的维基百科摘要结果。
+Dialogue: 0,0:05:28.27,0:05:30.61,Default,,0,0,0,,从维基百科返回的Observation
+Dialogue: 0,0:05:30.66,0:05:32.74,Default,,0,0,0,,实际上是两个结果，两个页面，
+Dialogue: 0,0:05:32.74,0:05:34.57,Default,,0,0,0,,因为有两个不同的Tom M. Mitchell。
+Dialogue: 0,0:05:34.57,0:05:37.66,Default,,0,0,0,,我们可以看到第一个结果\N是一位计算机科学家，
+Dialogue: 0,0:05:37.67,0:05:41.25,Default,,0,0,0,,第二个结果看起来像是一位\N澳大利亚足球运动员。
+Dialogue: 0,0:05:42.94,0:05:45.84,Default,,0,0,0,,我们可以看到回答这个问题所需的关键信息，
+Dialogue: 0,0:05:45.84,0:05:49.19,Default,,0,0,0,,也就是他写的那本书的名字：《机器学习》，
+Dialogue: 0,0:05:49.39,0:05:55.14,Default,,0,0,0,,出现在第一个Tom Mitchell的摘要中。
+Dialogue: 0,0:05:55.14,0:05:59.59,Default,,0,0,0,,接下来我们可以看到代理试图查\N找关于这本书的更多信息。
+Dialogue: 0,0:05:59.59,0:06:03.9,Default,,0,0,0,,所以它在维基百科上查找\N了《机器学习》这本书。
+Dialogue: 0,0:06:03.9,0:06:04.64,Default,,0,0,0,,这其实没太有必要，
+Dialogue: 0,0:06:04.64,0:06:08.81,Default,,0,0,0,,这是一个有趣的例子，说明代理还不完全可靠。
+Dialogue: 0,0:06:09.97,0:06:11.73,Default,,0,0,0,,我们可以看到在这次查找之后，
+Dialogue: 0,0:06:11.80,0:06:18.40,Default,,0,0,0,,代理意识到它已经有了回答所需的所有信\N息，并给出了正确答案：《机器学习》。
+Dialogue: 0,0:06:19.47,0:06:21.95,Default,,0,0,0,,我们接下来要讲的例子非常酷。
+Dialogue: 0,0:06:21.95,0:06:28.94,Default,,0,0,0,,如果你见过像GitHub Copilot，或者\NChatGPT的代码解释器插件这样的东西，
+Dialogue: 0,0:06:29.10,0:06:34.54,Default,,0,0,0,,它们所做的就是用语言模型写\N代码，然后执行生成的代码。
+Dialogue: 0,0:06:34.54,0:06:35.100,Default,,0,0,0,,我们在这里也可以做同样的事情。
+Dialogue: 0,0:06:37.38,0:06:43.34,Default,,0,0,0,,所以我们要创建一个Python代\N理，使用之前一样的LLM。
+Dialogue: 0,0:06:43.34,0:06:46.76,Default,,0,0,0,,我们会给它一个工具，PythonREPLTool。
+Dialogue: 0,0:06:46.76,0:06:49.25,Default,,0,0,0,,REPL基本上是一种与代码互动的方式，
+Dialogue: 0,0:06:49.25,0:06:51.77,Default,,0,0,0,,你可以把它想象成一个Jupyter Notebook，
+Dialogue: 0,0:06:51.77,0:06:55.59,Default,,0,0,0,,代理可以用这个REPL执行代码。
+Dialogue: 0,0:06:55.59,0:07:04.23,Default,,0,0,0,,然后我们会得到代码运行结果，这些结果会\N传回给代理，让它决定接下来要做什么。
+Dialogue: 0,0:07:05.75,0:07:12.59,Default,,0,0,0,,我们需要这个代理解决的问题是\N让它给一组客户名单排序。
+Dialogue: 0,0:07:12.59,0:07:21.94,Default,,0,0,0,,可以看到我们这里有一组名字，"Harrison \NChase"，"Lang Chain"，"Elle Elem"，"Geoff \NFusion"，"Trance Former"，"Jen Ayai"。
+Dialogue: 0,0:07:21.94,0:07:28.96,Default,,0,0,0,,我们要求代理先按姓氏再按名字对这些\N名字进行排序，然后打印输出结果。
+Dialogue: 0,0:07:28.96,0:07:33.80,Default,,0,0,0,,重要的是，我们要求它打印输出结果，\N以便可以看到实际结果是什么。
+Dialogue: 0,0:07:35.19,0:07:39.54,Default,,0,0,0,,这些打印出来的内容将在后\N面被反馈到语言模型中，
+Dialogue: 0,0:07:39.91,0:07:45.19,Default,,0,0,0,,这样它就可以对代码输出的结果进行推理。
+Dialogue: 0,0:07:45.20,0:07:49.2,Default,,0,0,0,,让我们试试看。
+Dialogue: 0,0:07:49.2,0:07:51.74,Default,,0,0,0,,我们可以看到当进入AgentExecutor链时，
+Dialogue: 0,0:07:52.80,0:07:56.35,Default,,0,0,0,,它首先意识到可以使用\Nsorted函数对名单进行排序。
+Dialogue: 0,0:08:00.41,0:08:02.36,Default,,0,0,0,,它在底层使用了不同类型的代理，
+Dialogue: 0,0:08:02.36,0:08:08.38,Default,,0,0,0,,这就是为什么你可以看到Action和\NAction Input实际上格式有些不同。
+Dialogue: 0,0:08:08.38,0:08:11.60,Default,,0,0,0,,这里，它使用的Action是Python REPL，
+Dialogue: 0,0:08:11.60,0:08:15.37,Default,,0,0,0,,然后你可以看到Action Input是一段代码，
+Dialogue: 0,0:08:15.37,0:08:19.69,Default,,0,0,0,,它首先写出customers等于这个列\N表，然后对customers进行排序，
+Dialogue: 0,0:08:19.69,0:08:21.97,Default,,0,0,0,,然后遍历这个列表并打印它。
+Dialogue: 0,0:08:23.53,0:08:26.87,Default,,0,0,0,,你可以看到代理在Thought（思考）该做\N什么，并意识到需要写一段代码。
+Dialogue: 0,0:08:28.41,0:08:33.45,Default,,0,0,0,,它使用的Action和Action Input的\N格式实际上与以前略有不同。
+Dialogue: 0,0:08:33.45,0:08:36.97,Default,,0,0,0,,它在底层使用了不同的代理类型。
+Dialogue: 0,0:08:36.97,0:08:39.35,Default,,0,0,0,,对于Action，它将使用Python REPL。
+Dialogue: 0,0:08:39.35,0:08:42.29,Default,,0,0,0,,对于Action Input，有一段代码。
+Dialogue: 0,0:08:42.29,0:08:48.9,Default,,0,0,0,,如果我们看看这段代码在做什么，它首先创建\N一个"customers"变量来列出这些客户名称。
+Dialogue: 0,0:08:48.9,0:08:50.74,Default,,0,0,0,,首先对其进行排序并创建一个新\N变量"sorted_customers"。
+Dialogue: 0,0:08:50.74,0:08:56.30,Default,,0,0,0,,然后遍历这个新变量，按照我们的\N要求逐行打印出排序后的名单。
+Dialogue: 0,0:08:57.41,0:09:01.51,Default,,0,0,0,,我们可以看到我们得到了\NObservation（观察结果），这是一份名\N单列表。
+Dialogue: 0,0:09:01.51,0:09:07.20,Default,,0,0,0,,然后代理意识到任务完成，返回这份名单。
+Dialogue: 0,0:09:07.20,0:09:11.7,Default,,0,0,0,,我们可以从打印出来的内容\N看到一些大概的情况，
+Dialogue: 0,0:09:11.7,0:09:16.27,Default,,0,0,0,,但让我们再深入一点，将“langchain\N.debug”设置为“True”并运行。
+Dialogue: 0,0:09:19.21,0:09:23.71,Default,,0,0,0,,因为这会打印出所有级别，所\N有正在运行的不同的链，
+Dialogue: 0,0:09:23.72,0:09:27.16,Default,,0,0,0,,让我们逐一查看究竟发生了什么。
+Dialogue: 0,0:09:27.16,0:09:29.68,Default,,0,0,0,,首先，我们从AgentExecutor开始。
+Dialogue: 0,0:09:29.68,0:09:31.36,Default,,0,0,0,,这是第一级的代理运行器。
+Dialogue: 0,0:09:31.36,0:09:33.50,Default,,0,0,0,,我们可以看到这里有我们的输入，
+Dialogue: 0,0:09:33.50,0:09:38.37,Default,,0,0,0,,按姓氏和名字对这些客户进\N行排序，然后打印输出。
+Dialogue: 0,0:09:38.37,0:09:41.1,Default,,0,0,0,,从这里，我们调用一个LLMChain。
+Dialogue: 0,0:09:41.1,0:09:43.53,Default,,0,0,0,,这是代理正在使用的LLMChain。
+Dialogue: 0,0:09:44.58,0:09:48.84,Default,,0,0,0,,LLMChain，记住，是Prompt和LLM的组合。
+Dialogue: 0,0:09:48.84,0:09:52.66,Default,,0,0,0,,目前，它只有input和agent_scratchpad，
+Dialogue: 0,0:09:52.66,0:09:59.40,Default,,0,0,0,,稍后我们会回到这个问题，然后是"stop"\N参数，告诉语言模型何时停止生成。
+Dialogue: 0,0:10:00.95,0:10:05.45,Default,,0,0,0,,在下一级，我们看到了对语言模型的调用。
+Dialogue: 0,0:10:05.45,0:10:07.43,Default,,0,0,0,,可以看到完整的格式化了的Prompt，
+Dialogue: 0,0:10:07.46,0:10:12.55,Default,,0,0,0,,其中包括关于它可以访问哪些工具的\N说明，以及返回何种格式的输出。
+Dialogue: 0,0:10:15.30,0:10:19.26,Default,,0,0,0,,从那里，我们可以看到语言模型的详细输出。
+Dialogue: 0,0:10:19.26,0:10:28.13,Default,,0,0,0,,我们可以看到text键，其中包含了Thought（思\N考）、Action（操作）和Action Input（操作输入）。
+Dialogue: 0,0:10:28.13,0:10:32.41,Default,,0,0,0,,然后它退出LLMChain。
+Dialogue: 0,0:10:32.41,0:10:34.29,Default,,0,0,0,,接下来它调用的是一个工具。
+Dialogue: 0,0:10:34.29,0:10:37.30,Default,,0,0,0,,在这里我们可以看到工具的详细输入。
+Dialogue: 0,0:10:37.30,0:10:39.63,Default,,0,0,0,,我们还可以看到工具的名称：“Python REPL”，
+Dialogue: 0,0:10:39.66,0:10:41.62,Default,,0,0,0,,然后我们可以看到输入，也就是这段代码。
+Dialogue: 0,0:10:43.97,0:10:46.89,Default,,0,0,0,,接着我们可以看到这个工具的输出，\N也就是这个打印出来的字符串。
+Dialogue: 0,0:10:46.89,0:10:54.21,Default,,0,0,0,,之所以有这段代码是因为我们特意要求\NPython REPL打印出正在进行的操作。
+Dialogue: 0,0:10:54.21,0:11:00.62,Default,,0,0,0,,然后我们可以看到下一个输入到\NLLMChain，同样，这里的LLMChain是代理。
+Dialogue: 0,0:11:00.62,0:11:04.88,Default,,0,0,0,,这里，如果你看"input"变量，
+Dialogue: 0,0:11:04.88,0:11:05.66,Default,,0,0,0,,这没有改变，
+Dialogue: 0,0:11:05.66,0:11:10.36,Default,,0,0,0,,这是我们要代理实现的目标。但现在\N"agent_scratchpad"参数有一些新值。
+Dialogue: 0,0:11:11.36,0:11:19.46,Default,,0,0,0,,你可以看到这实际上是之前的\N输出和工具输出的组合。
+Dialogue: 0,0:11:19.46,0:11:21.33,Default,,0,0,0,,我们把这个传回去
+Dialogue: 0,0:11:21.33,0:11:24.19,Default,,0,0,0,,让语言模型了解之前发生了什么
+Dialogue: 0,0:11:24.19,0:11:26.63,Default,,0,0,0,,并用这些信息来推理出接下来应该做什么。
+Dialogue: 0,0:11:28.7,0:11:32.70,Default,,0,0,0,,接下来的几个打印语句都\N在讲述语言模型意识到
+Dialogue: 0,0:11:32.70,0:11:35.27,Default,,0,0,0,,它基本上完成了它的工作。
+Dialogue: 0,0:11:35.27,0:11:38.13,Default,,0,0,0,,所以我们可以看到语言模型的\N完整的格式化了的Prompt。
+Dialogue: 0,0:11:39.27,0:11:44.89,Default,,0,0,0,,它意识到任务完成并输出了最终答案，
+Dialogue: 0,0:11:44.89,0:11:50.38,Default,,0,0,0,,这是代理用来识别它完成工作的顺序。
+Dialogue: 0,0:11:50.38,0:11:53.78,Default,,0,0,0,,然后我们可以看到它退出\NLLMChain，然后退出\NAgentExecutor。
+Dialogue: 0,0:11:55.9,0:12:00.1,Default,,0,0,0,,这应该能让你对代理内部发生\N了什么有一个很好的了解，
+Dialogue: 0,0:12:00.39,0:12:04.3,Default,,0,0,0,,这应该能让你对代理内部发生\N了什么有一个很好的了解，
+Dialogue: 0,0:12:04.9,0:12:11.66,Default,,0,0,0,,建议你暂停并为这个编码代理设定\N自己的目标，希望能对你有启发。
+Dialogue: 0,0:12:11.66,0:12:16.95,Default,,0,0,0,,这种调试模式也可以用来发现出错的地方，就\N像上面的维基百科示例中调用了不必要的查询，
+Dialogue: 0,0:12:16.95,0:12:22.72,Default,,0,0,0,,有时代理的表现会出人意料，所以这些信息\N对于帮助你理解发生了什么非常有帮助。
+Dialogue: 0,0:12:23.87,0:12:28.58,Default,,0,0,0,,到目前为止，我们已经使用了\NLangChain中内置的工具。
+Dialogue: 0,0:12:28.58,0:12:35.36,Default,,0,0,0,,但是代理的一大优势是你可以将其连接到你自\N己的信息来源，你自己的API，你自己的数据。
+Dialogue: 0,0:12:35.36,0:12:40.96,Default,,0,0,0,,那么在这里，我们将介绍如何创建\N一个自定义工具，以便您可以将其\N连接到您想要的任何地方。
+Dialogue: 0,0:12:40.96,0:12:44.94,Default,,0,0,0,,让我们制作一个工具，它会告\N诉我们当前的日期是什么。
+Dialogue: 0,0:12:44.94,0:12:47.74,Default,,0,0,0,,首先，我们要导入这个工具装饰器。
+Dialogue: 0,0:12:47.74,0:12:52.18,Default,,0,0,0,,它可以应用于任何函数，并将其转换\N为LangChain可以使用的工具。
+Dialogue: 0,0:12:53.43,0:12:58.67,Default,,0,0,0,,接下来，我们将编写一个名为time的函\N数，它可以接收任何文本字符串。
+Dialogue: 0,0:12:58.67,0:13:00.11,Default,,0,0,0,,我们并不真正使用它。
+Dialogue: 0,0:13:00.11,0:13:05.79,Default,,0,0,0,,它将返回今天的日期。
+Dialogue: 0,0:13:05.79,0:13:10.86,Default,,0,0,0,,除了函数的名称外，我们还写了一份非常\N详细的DocString格式的注释说明。
+Dialogue: 0,0:13:10.86,0:13:16.44,Default,,0,0,0,,因为代理会利用注释中的信息来知\N道何时应该调用这个工具（函数），\N以及应该如何调用这个工具。
+Dialogue: 0,0:13:18.73,0:13:22.25,Default,,0,0,0,,例如，在这里我们说输入应该始终为空字符串。
+Dialogue: 0,0:13:22.25,0:13:24.13,Default,,0,0,0,,那是因为我们不用它。
+Dialogue: 0,0:13:24.13,0:13:27.44,Default,,0,0,0,,如果我们对输入有更严格的要求，
+Dialogue: 0,0:13:27.59,0:13:32.87,Default,,0,0,0,,比如，如果我们有一个函数，它应该\N总是接收搜索查询或SQL语句，
+Dialogue: 0,0:13:32.91,0:13:35.29,Default,,0,0,0,,你需要在这里说明。
+Dialogue: 0,0:13:37.57,0:13:39.27,Default,,0,0,0,,我们现在要创建另一个代理。
+Dialogue: 0,0:13:39.27,0:13:42.76,Default,,0,0,0,,这次我们把time工具加到现有工具列表里。
+Dialogue: 0,0:13:45.90,0:13:53.96,Default,,0,0,0,,最后，让我们调用代理，问它今天是什么日期。
+Dialogue: 0,0:13:53.96,0:13:58.46,Default,,0,0,0,,它意识到需要使用time工具，并在这里指定
+Dialogue: 0,0:13:58.46,0:14:00.60,Default,,0,0,0,,它的action_input是一个空字符串。
+Dialogue: 0,0:14:00.60,0:14:01.16,Default,,0,0,0,,这很棒！
+Dialogue: 0,0:14:01.16,0:14:02.80,Default,,0,0,0,,这就是我们让它做的事情。
+Dialogue: 0,0:14:02.80,0:14:04.96,Default,,0,0,0,,然后它返回一个Observation（观察结果）。
+Dialogue: 0,0:14:04.96,0:14:09.1,Default,,0,0,0,,接着，语言模型根据这个\NObservation回复用户：
+Dialogue: 0,0:14:09.1,0:14:09.91,Default,,0,0,0,,“今天是2023年5月21日。”
+Dialogue: 0,0:14:12.77,0:14:17.5,Default,,0,0,0,,建议你暂停视频，尝试输入不同\N的内容，看看返回的结果。
+Dialogue: 0,0:14:17.5,0:14:19.57,Default,,0,0,0,,这就是关于代理的课程总结。
+Dialogue: 0,0:14:19.57,0:14:25.4,Default,,0,0,0,,这是LangChain中比较新，也比较激\N动人心部分，还处于实验性阶段。
+Dialogue: 0,0:14:25.4,0:14:26.82,Default,,0,0,0,,希望你能喜欢！
+Dialogue: 0,0:14:26.82,0:14:32.16,Default,,0,0,0,,希望这堂课向你展示了如何将语言模型\N作为推理引擎来采取不同的操作，
+Dialogue: 0,0:14:32.16,0:14:34.15,Default,,0,0,0,,并连接到其他函数和数据源。

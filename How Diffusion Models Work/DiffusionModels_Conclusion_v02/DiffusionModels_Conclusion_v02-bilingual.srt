@@ -1,0 +1,104 @@
+1
+00:00:05,000 --> 00:00:09,520
+恭喜你学会了扩散模型的基础知识。
+Congratulations on learning about the foundations of diffusion models.
+
+2
+00:00:09,520 --> 00:00:13,800
+现在把所有内容整合在一起，你已经能够训练扩散模型来预测噪声，
+Now putting it all together, you're able to train a diffusion model to predict noise,
+
+3
+00:00:13,800 --> 00:00:18,080
+并迭代地从纯噪声中减去预测的噪声，得到一幅好的图像。
+and iteratively subtract the predicted noise from pure noise to get a good image.
+
+4
+00:00:18,080 --> 00:00:24,400
+你可以从训练好的神经网络中快速采样图像，使用更高效的采样器DDIM。
+You're able to sample images from that trained neural network, fast too with a more efficient sampler called DDIM.
+
+5
+00:00:24,400 --> 00:00:27,140
+你了解了模型结构，一个单元。
+You went through the model architecture, a unit.
+
+6
+00:00:27,140 --> 00:00:34,600
+你将上下文融入模型，以便你可以选择想要的食物、魔法、英雄形象，或者介于两者之间的有趣事物。
+You put context into the model so that you could decide whether you wanted food or spells or a hero sprite out, or something quirky in between.
+
+7
+00:00:34,600 --> 00:00:38,000
+最后，你探索并运行了所有这些代码。
+Finally, you explored and ran the code for all of this.
+
+8
+00:00:38,000 --> 00:00:42,520
+现在你可以创建自己的数据集，尝试生成新的东西。
+Now you can create your own dataset and try to generate new things.
+
+9
+00:00:42,520 --> 00:00:47,040
+扩散模型并不仅限于图像，只是它们在这方面最受欢迎。
+Diffusion models aren't bound to images either, that's just where they've been the most popular.
+
+10
+00:00:47,040 --> 00:00:54,360
+还有用于音乐的扩散模型，你可以给它任何提示，然后得到音乐，还可以提议新的分子来加速药物发现。
+There are diffusion models for music, where you can give it any prompt and get music out, for proposing new molecules to accelerate drug discovery.
+
+11
+00:00:54,360 --> 00:00:56,900
+你也可以尝试更大的数据集，尝试一个新的采样器。
+You can also try a larger dataset, try a new sampler.
+
+12
+00:00:56,900 --> 00:01:01,640
+实际上有很多比DDIM更快更好的。
+There are actually a ton out there that are even faster and better than DDIM.
+
+13
+00:01:01,640 --> 00:01:08,480
+你可以用这些模型做更多事情，比如图像修复，让扩散模型在你已有的图像周围绘制一些东西。
+You can do more with these models, such as inpainting, which is letting the diffusion model paint something around an existing image you already have.
+
+14
+00:01:08,480 --> 00:01:15,760
+还有文本反演，它可以让模型通过几个样本图像捕捉到全新的文本概念。
+And textual inversion, which enables the model to capture an entirely new text concept with just a few sample images.
+
+15
+00:01:15,760 --> 00:01:18,440
+你已经掌握了基础知识，这是基础。
+You covered the basics here, the foundations.
+
+16
+00:01:18,440 --> 00:01:20,680
+这个领域还有其他重要的发展。
+There are other important developments in this space.
+
+17
+00:01:20,680 --> 00:01:30,560
+例如，Stable Diffusion采用一种名为潜在扩散的方法，它直接在图像嵌入上操作，而不是在图像上操作，使过程更加高效。
+For example, Stable Diffusion uses a method called latent diffusion, which operates on image embeddings instead of images directly to make the process even more efficient.
+
+18
+00:01:30,560 --> 00:01:35,720
+其他值得一提的酷炫方法还有交叉注意力文本调节和无分类器引导。
+Other cool methods to call out are cross-attention text conditioning and classifier-free guidance.
+
+19
+00:01:35,720 --> 00:01:41,840
+研究界还在研究更快的采样方法，因为它在推理时仍然比其他生成模型慢。
+And the research community is still working on faster sampling methods because it's still slower than other generative models at inference time.
+
+20
+00:01:41,840 --> 00:01:51,480
+总的来说，对于扩散模型和整个生成模型来说，这是一个非常激动人心的时期，因为它们在改进，并且应用越来越广泛。
+All in all, this is an extremely exciting time for diffusion models and generative models as a whole, as they improve and their applications become ever more widespread.
+
+21
+00:01:51,480 --> 00:01:55,840
+非常感谢你参加这门课程，期待看到你的作品。
+Thank you so much for joining me in this course, and I look forward to seeing what you build.

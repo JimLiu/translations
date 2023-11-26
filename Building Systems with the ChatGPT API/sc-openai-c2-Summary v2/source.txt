@@ -1,0 +1,13 @@
+Congratulations and thank you for getting to the end of this short course.
+As we conclude the course, let's recap the main topics we covered.
+We went over details of how an LM works, including subtleties like the tokenizer and why it can't reverse lollipop.
+We learned methods for evaluating user inputs to ensure the quality and safety of the system,
+processing inputs using both chain of thought reasoning and splitting tasks into subtasks with chain prompts and checking outputs before showing them to users.
+We also took a look at methods for evaluating the system over time, so as to monitor and improve its performance.
+Throughout the course, we also discussed the importance of building responsibly with these tools,
+ensuring that the model is safe and provides appropriate responses that are accurate, relevant, and in the tone you want.
+As always, practice is key to mastering these concepts, so we hope you'll apply what you've learned in your own projects.
+And so that's it.
+There are so many exciting applications that are yet to be built.
+The world needs more people like you building useful applications,
+and we look forward to hearing about the amazing things you build.

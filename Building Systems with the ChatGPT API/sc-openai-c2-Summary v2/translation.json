@@ -1,0 +1,253 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 3,
+            "milliseconds": 560
+          },
+          "text": "Congratulations and thank you for getting to the end of this short course."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 3,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 240
+          },
+          "text": "As we conclude the course, let's recap the main topics we covered."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 960
+          },
+          "text": "We went over details of how an LM works, including subtleties like the tokenizer and why it can't reverse lollipop."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 570
+          },
+          "text": "We learned methods for evaluating user inputs to ensure the quality and safety of the system,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 571
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 200
+          },
+          "text": "processing inputs using both chain of thought reasoning and splitting tasks into subtasks with chain prompts and checking outputs before showing them to users."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 0
+          },
+          "text": "We also took a look at methods for evaluating the system over time, so as to monitor and improve its performance."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 670
+          },
+          "text": "Throughout the course, we also discussed the importance of building responsibly with these tools,"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 671
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 240
+          },
+          "text": "ensuring that the model is safe and provides appropriate responses that are accurate, relevant, and in the tone you want."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 200
+          },
+          "text": "As always, practice is key to mastering these concepts, so we hope you'll apply what you've learned in your own projects."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 560
+          },
+          "text": "And so that's it."
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 240
+          },
+          "text": "There are so many exciting applications that are yet to be built."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 271
+          },
+          "text": "The world needs more people like you building useful applications,"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 3,
+            "milliseconds": 272
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 240
+          },
+          "text": "and we look forward to hearing about the amazing things you build."
+        }
+      ],
+      "source": [
+        "Congratulations and thank you for getting to the end of this short course.",
+        "As we conclude the course, let's recap the main topics we covered.",
+        "We went over details of how an LM works, including subtleties like the tokenizer and why it can't reverse lollipop.",
+        "We learned methods for evaluating user inputs to ensure the quality and safety of the system,",
+        "processing inputs using both chain of thought reasoning and splitting tasks into subtasks with chain prompts and checking outputs before showing them to users.",
+        "We also took a look at methods for evaluating the system over time, so as to monitor and improve its performance.",
+        "Throughout the course, we also discussed the importance of building responsibly with these tools,",
+        "ensuring that the model is safe and provides appropriate responses that are accurate, relevant, and in the tone you want.",
+        "As always, practice is key to mastering these concepts, so we hope you'll apply what you've learned in your own projects.",
+        "And so that's it.",
+        "There are so many exciting applications that are yet to be built.",
+        "The world needs more people like you building useful applications,",
+        "and we look forward to hearing about the amazing things you build."
+      ],
+      "result": [
+        "恭喜你完成了这个短期课程，感谢你的参与。",
+        "在课程结束之际，让我们回顾一下我们所涵盖的主要话题：",
+        "我们详细了解了LM的工作原理，包括诸如分词器之类的细微之处，以及为什么它无法将单词lollipop中的字符翻转。",
+        "我们学习了评估用户输入的方法，以确保系统的质量和安全，",
+        "使用思维链推理和链式Prompt将任务切分成子任务来处理输入，并在将结果展示给用户之前检查输出。",
+        "我们还研究了随着时间的推移评估系统的方法，以监控和提升其性能。",
+        "在整个课程中，我们也讨论了负责任地使用这些工具的重要性，",
+        "确保模型安全，提供准确、相关，且符合你期望的语调的回答。",
+        "一如既往，实践是掌握这些概念的关键，所以我们希望你能在自己的项目中应用你所学到的知识。",
+        "就是这样。",
+        "还有许多令人兴奋的应用等待着你去开发。",
+        "世界需要更多像你这样的人去构建有价值的应用，",
+        "我们期待看到你创造出的了不起的作品。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-Summary v2.srt",
+  "ouputBasePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-Summary v2",
+  "totalCost": 0.03375,
+  "translationPath": "input/Building Systems with the ChatGPT API/sc-openai-c2-Summary v2/translation.json"
+}

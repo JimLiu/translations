@@ -1,0 +1,88 @@
+[Script Info]
+
+Title: LangChain_Intro_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,16,&H000092FE,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.4,Secondary,,0,0,0,,Welcome to this short course on LangChain for large language model application development.
+Dialogue: 0,0:00:10.4,0:00:18.60,Secondary,,0,0,0,,By prompting an LLM or large language model, it is now possible to develop AI applications much faster than ever before.
+Dialogue: 0,0:00:18.60,0:00:24.76,Secondary,,0,0,0,,But an application can require prompting an LLM multiple times and parsing its output.
+Dialogue: 0,0:00:24.76,0:00:28.24,Secondary,,0,0,0,,And so there's a lot of glue code that needs to be written.
+Dialogue: 0,0:00:28.24,0:00:34.32,Secondary,,0,0,0,,LangChain created by Harrison Chase makes this development process much easier.
+Dialogue: 0,0:00:34.32,0:00:42.68,Secondary,,0,0,0,,I'm thrilled to have Harrison here, who had built this short course in collaboration with deeplearning.ai to teach how to use this amazing tool.
+Dialogue: 0,0:00:42.68,0:00:45.40,Secondary,,0,0,0,,Thanks for having me. I'm really excited to be here.
+Dialogue: 0,0:00:45.40,0:00:49.76,Secondary,,0,0,0,,LangChain started as an open source framework for building LLM applications.
+Dialogue: 0,0:00:49.76,0:00:59.52,Secondary,,0,0,0,,It came about when I was talking to a bunch of folks in the field who were building more complex applications and saw some common abstractions in terms of how they were being developed.
+Dialogue: 0,0:00:59.52,0:01:04.12,Secondary,,0,0,0,,And we've been really thrilled at the community adoption of LangChain so far.
+Dialogue: 0,0:01:04.12,0:01:08.88,Secondary,,0,0,0,,And so look forward to sharing it with everyone here and look forward to seeing what people build with it.
+Dialogue: 0,0:01:08.88,0:01:18.80,Secondary,,0,0,0,,And in fact, as a sign of LangChain's momentum, not only does it have numerous users, but there are also many hundreds of contributors to the open source.
+Dialogue: 0,0:01:18.80,0:01:22.72,Secondary,,0,0,0,,And this has been instrumental for its rapid rate of development.
+Dialogue: 0,0:01:22.72,0:01:26.44,Secondary,,0,0,0,,This team really ships code and features at an amazing pace.
+Dialogue: 0,0:01:26.44,0:01:33.68,Secondary,,0,0,0,,So hopefully, after this short course, you'll be able to quickly put together some really cool applications using LangChain.
+Dialogue: 0,0:01:33.68,0:01:39.76,Secondary,,0,0,0,,And who knows, maybe you even decide to contribute back to the open source LangChain effort.
+Dialogue: 0,0:01:39.76,0:01:45.32,Secondary,,0,0,0,,LangChain is an open source development framework for building LLM applications.
+Dialogue: 0,0:01:45.32,0:01:49.52,Secondary,,0,0,0,,We have two different packages, a Python one and a JavaScript(TypeScript) one.
+Dialogue: 0,0:01:49.52,0:01:52.60,Secondary,,0,0,0,,They're focused on composition and modularity.
+Dialogue: 0,0:01:52.60,0:01:58.32,Secondary,,0,0,0,,So they have a lot of individual components that can be used in conjunction with each other or by themselves.
+Dialogue: 0,0:02:00.8,0:02:03.64,Secondary,,0,0,0,,And then the other key value add is a bunch of different use cases.
+Dialogue: 0,0:02:03.64,0:02:12.60,Secondary,,0,0,0,,So chains of ways of combining these modular components into more end-to-end applications and making it very easy to get started with those use cases.
+Dialogue: 0,0:02:12.60,0:02:16.4,Secondary,,0,0,0,,In this class, we'll cover the common components of LangChain.
+Dialogue: 0,0:02:16.4,0:02:17.48,Secondary,,0,0,0,,So we'll talk about models.
+Dialogue: 0,0:02:17.48,0:02:22.4,Secondary,,0,0,0,,We'll talk about prompts, which are how you get models to do useful and interesting things.
+Dialogue: 0,0:02:22.4,0:02:27.92,Secondary,,0,0,0,,We'll talk about indexes, which are ways of ingesting data so that you can combine it with models.
+Dialogue: 0,0:02:27.92,0:02:29.48,Secondary,,0,0,0,,And then we'll talk about chains,
+Dialogue: 0,0:02:32.28,0:02:34.92,Secondary,,0,0,0,,which are a very exciting type of end-to-end use case,
+Dialogue: 0,0:02:37.68,0:02:40.36,Secondary,,0,0,0,,We're also grateful to Ankush Gola,
+Dialogue: 0,0:02:40.36,0:02:44.60,Secondary,,0,0,0,,who is the co-founder of LangChain alongside Harrison Chase,
+Dialogue: 0,0:02:44.60,0:02:50.48,Secondary,,0,0,0,,for also putting a lot of thoughts into these materials and helping with the creation of this short course.
+Dialogue: 0,0:02:50.48,0:02:58.84,Secondary,,0,0,0,,And on the deep learning, the AI side, Geoff Ladwig, Eddie Shyu, and Diala Ezzedine have also contributed to these materials.
+Dialogue: 0,0:02:58.84,0:03:05.96,Secondary,,0,0,0,,And so with that, let's go on to the next video where we'll learn about LangChain's: Models, Prompts, and Parsers.
+Dialogue: 0,0:00:05.0,0:00:10.4,Default,,0,0,0,,欢迎来到《基于LangChain的大语\N言模型应用开发》的短期课程。
+Dialogue: 0,0:00:10.4,0:00:18.60,Default,,0,0,0,,通过对大语言模型使用提示（Prompt），\N现在可以比以往任何时候都更快地开发AI应用程序。
+Dialogue: 0,0:00:18.60,0:00:24.76,Default,,0,0,0,,但是一个应用程序可能需要多次对\N大语言模型写提示并对它输出的结果进行解析。
+Dialogue: 0,0:00:24.76,0:00:28.24,Default,,0,0,0,,因此，需要编写很多胶水代码。
+Dialogue: 0,0:00:28.24,0:00:34.32,Default,,0,0,0,,Harrison Chase创建的LangChain\N使这个开发过程变得更容易。
+Dialogue: 0,0:00:34.32,0:00:42.68,Default,,0,0,0,,我很高兴邀请到Harrison，他与deeplearning.ai\N合作创建了这个短期课程，教大家如何使用这个神奇的工具。
+Dialogue: 0,0:00:42.68,0:00:45.40,Default,,0,0,0,,谢谢Andrew的邀请，我很高兴来到这里。
+Dialogue: 0,0:00:45.40,0:00:49.76,Default,,0,0,0,,LangChain起初是一个用于构建\N大语言模型应用的开源框架。
+Dialogue: 0,0:00:49.76,0:00:59.52,Default,,0,0,0,,当时有些人在开发LLM的复杂应用，当我与他们交流时，\N发现了可以从中有一些公共的抽象，于是LangChain应运而生。
+Dialogue: 0,0:00:59.52,0:01:04.12,Default,,0,0,0,,迄今为止，LangChain在社区中\N的采用情况非常令人激动。
+Dialogue: 0,0:01:04.12,0:01:08.88,Default,,0,0,0,,期待与大家分享，也期待看到\N大家用它做出精彩的作品。
+Dialogue: 0,0:01:08.88,0:01:18.80,Default,,0,0,0,,事实上，从一个现象你就可以看到LangChain的良好发展势头：\N它不仅拥有众多用户，还有数百名贡献者为其开源项目做出了贡献。
+Dialogue: 0,0:01:18.80,0:01:22.72,Default,,0,0,0,,这对于它的快速发展至关重要。
+Dialogue: 0,0:01:22.72,0:01:26.44,Default,,0,0,0,,这个团队更新代码和迭代\N功能的速度令人惊叹。
+Dialogue: 0,0:01:26.44,0:01:33.68,Default,,0,0,0,,希望在学习完这个短期课程后，你\N也能迅速用LangChain搭建出很酷的应用。
+Dialogue: 0,0:01:33.68,0:01:39.76,Default,,0,0,0,,说不定你还能一起参与贡\N献LangChain开源项目。
+Dialogue: 0,0:01:39.76,0:01:45.32,Default,,0,0,0,,LangChain是一个用于构建\NLLM应用的开源开发框架。
+Dialogue: 0,0:01:45.32,0:01:49.52,Default,,0,0,0,,我们有两个不同的包，一个是Python，\N另一个是JavaScript（TypeScript）。
+Dialogue: 0,0:01:49.52,0:01:52.60,Default,,0,0,0,,LangChain注重组合和模块化。
+Dialogue: 0,0:01:52.60,0:02:00.8,Default,,0,0,0,,LangChain一个很有价值的地方是有很多\N可以单独使用或与其他组件结合使用的独立组件。
+Dialogue: 0,0:02:00.8,0:02:03.64,Default,,0,0,0,,另一个有价值的地方是\N有许多不同的用例，
+Dialogue: 0,0:02:03.64,0:02:12.60,Default,,0,0,0,,可以将这些模块化组件链式组合成更完\N整的应用程序，并且非常容易上手。
+Dialogue: 0,0:02:12.60,0:02:16.4,Default,,0,0,0,,在这个课程中，我们将介绍\NLangChain的常见组件。
+Dialogue: 0,0:02:16.4,0:02:17.48,Default,,0,0,0,,我们会讨论模型。
+Dialogue: 0,0:02:17.48,0:02:22.4,Default,,0,0,0,,我们会讨论提示，这是让模型\N做有用和有趣事情的方法。
+Dialogue: 0,0:02:22.4,0:02:27.92,Default,,0,0,0,,我们会讨论索引，也就是检索召回数\N据，并且将数据与模型结合起来。
+Dialogue: 0,0:02:27.92,0:02:32.28,Default,,0,0,0,,然后我们会讨论链式应用，更\N多端到端的用例以及代理，
+Dialogue: 0,0:02:32.28,0:02:37.68,Default,,0,0,0,,代理一种非常令人兴奋的端到端用例\N，使用大语言模型作为推理引擎。
+Dialogue: 0,0:02:37.68,0:02:40.36,Default,,0,0,0,,我们也感谢Ankush Gola，
+Dialogue: 0,0:02:40.36,0:02:44.60,Default,,0,0,0,,他与Harrison Chase共\N同创立了LangChain，
+Dialogue: 0,0:02:44.60,0:02:50.48,Default,,0,0,0,,他在这些材料的思考和短课程的\N创建中也做出了很大的贡献。
+Dialogue: 0,0:02:50.48,0:02:58.84,Default,,0,0,0,,在深度学习和AI方面，Geoff Ladwig、\NEddie Shyu和Diala Ezzedine也为这些材料做出了贡献。
+Dialogue: 0,0:02:58.84,0:03:05.96,Default,,0,0,0,,那么，让我们继续下一个视频，\N了解LangChain的：模型、提示和解析器。

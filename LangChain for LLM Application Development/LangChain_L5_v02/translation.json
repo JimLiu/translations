@@ -1,0 +1,4232 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 962
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 129
+          },
+          "text": "When building a complex application using an LLM,"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 135
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 414
+          },
+          "text": "one of the important but sometimes tricky steps is"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 429
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 367
+          },
+          "text": "how do you evaluate how well your application is doing?"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 14,
+            "milliseconds": 367
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 149
+          },
+          "text": "Is it meeting some accuracy criteria?"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 149
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 854
+          },
+          "text": "And also, if you decide to change your implementation,"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 855
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 229
+          },
+          "text": "maybe swap in a different LLM"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 257
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 71
+          },
+          "text": "or change the strategy of how you use a vector database or something else to retrieve channels,"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 72
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 594
+          },
+          "text": "or change some other parameter to the system."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 594
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 775
+          },
+          "text": "How do you know if you're making it better or worse?"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 775
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 356
+          },
+          "text": "In this video, Harrison will dive into some frameworks to how to think about evaluating a LLM based application,"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 357
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 366
+          },
+          "text": "as well as some tools that help you do that."
+        }
+      ],
+      "source": [
+        "When building a complex application using an LLM,",
+        "one of the important but sometimes tricky steps is",
+        "how do you evaluate how well your application is doing?",
+        "Is it meeting some accuracy criteria?",
+        "And also, if you decide to change your implementation,",
+        "maybe swap in a different LLM",
+        "or change the strategy of how you use a vector database or something else to retrieve channels,",
+        "or change some other parameter to the system.",
+        "How do you know if you're making it better or worse?",
+        "In this video, Harrison will dive into some frameworks to how to think about evaluating a LLM based application,",
+        "as well as some tools that help you do that."
+      ],
+      "result": [
+        "当使用LLM构建复杂应用程序时，",
+        "一个重要但有时有点棘手的步骤是",
+        "如何评估应用程序的表现？",
+        "它是否达到了某种验收标准？",
+        "此外，如果你决定换一种实现方式，",
+        "可能换到不同的LLM，",
+        "或者更改如何使用向量数据库的策略，或者使用其他方式检索数据，",
+        "或者更改系统中的其他参数。",
+        "你要怎么样知道结果是比以前更好了？还是更糟糕了？",
+        "在这个视频中，Harrison将深入探讨一些框架，以思考如何评估基于LLM的应用程序，",
+        "同时会介绍一些帮助你评估的工具。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 367
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 589
+          },
+          "text": "These applications are really chains and sequences of a lot of different steps."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 589
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 700
+          },
+          "text": "And so honestly, part of the first thing that you should do is"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 701
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 491
+          },
+          "text": "just understand what exactly is going in and coming out of each step."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 491
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 933
+          },
+          "text": "And so some of the tools can really just be thought of as visualizers or debuggers in that thing."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 953
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 418
+          },
+          "text": "But it's often really useful to get a more holistic picture on a lot of different data points of how the model is doing."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 418
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 800
+          },
+          "text": "And one way to do that is by looking at things by eye."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 927
+          },
+          "text": "But there's also this really cool idea of using language models themselves and chains themselves to evaluate other language models and other chains and other applications."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 927
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 328
+          },
+          "text": "And we'll dive a bunch into that as well."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 978
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 682
+          },
+          "text": "So lots of cool topics,"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 683
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 943
+          },
+          "text": "and I find that with a lot of development shifting towards prompting-based development, developing applications using LLMs,"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 944
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 326
+          },
+          "text": "this whole workflow evaluation process is being rethought."
+        }
+      ],
+      "source": [
+        "These applications are really chains and sequences of a lot of different steps.",
+        "And so honestly, part of the first thing that you should do is",
+        "just understand what exactly is going in and coming out of each step.",
+        "And so some of the tools can really just be thought of as visualizers or debuggers in that thing.",
+        "But it's often really useful to get a more holistic picture on a lot of different data points of how the model is doing.",
+        "And one way to do that is by looking at things by eye.",
+        "But there's also this really cool idea of using language models themselves and chains themselves to evaluate other language models and other chains and other applications.",
+        "And we'll dive a bunch into that as well.",
+        "So lots of cool topics,",
+        "and I find that with a lot of development shifting towards prompting-based development, developing applications using LLMs,",
+        "this whole workflow evaluation process is being rethought."
+      ],
+      "result": [
+        "这些应用实际上是许多不同步骤的链和序列。",
+        "我们的首要任务是",
+        "了解每个步骤的输入和输出到底是什么。",
+        "因此，我们会用到一些可视化工具和调试工具。",
+        "使用大量不同的数据集来测试模型，这有助于我们全面了解模型的表现。",
+        "观察事物的一种方法是用肉眼看。",
+        "但还有一个非常酷的想法，就是使用语言模型和链来评估其他语言模型、其他链和其他应用程序。",
+        "我们也会深入探讨这个想法。",
+        "这个视频中有很多有趣的话题，",
+        "我发现随着越来越多的开发转向基于Prompt的开发，使用LLM开发应用程序，",
+        "整个工作流程、评估过程正在被重新思考。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 326
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 267
+          },
+          "text": "So lots of exciting concepts in this video."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 267
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 568
+          },
+          "text": "Let's dive in."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 568
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 930
+          },
+          "text": "All right, so let's get set up with evaluation."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 877
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 919
+          },
+          "text": "First, we need to have the chain or the application that we're going to evaluate in the first place."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 919
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 581
+          },
+          "text": "And we're going to use the document question answering chain from the previous lesson."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 581
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 742
+          },
+          "text": "So we're going to import everything we need."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 742
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 125
+          },
+          "text": "We're going to load the same data that we were using."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 125
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 266
+          },
+          "text": "We're going to create that index with one line."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 273
+          },
+          "text": "And then we're going to create the retrieval QA chain by specifying the language model, the chain type, the retriever, and then the verbosity that we're going to print out."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 273
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 934
+          },
+          "text": "So we've got this application."
+        }
+      ],
+      "source": [
+        "So lots of exciting concepts in this video.",
+        "Let's dive in.",
+        "All right, so let's get set up with evaluation.",
+        "First, we need to have the chain or the application that we're going to evaluate in the first place.",
+        "And we're going to use the document question answering chain from the previous lesson.",
+        "So we're going to import everything we need.",
+        "We're going to load the same data that we were using.",
+        "We're going to create that index with one line.",
+        "And then we're going to create the retrieval QA chain by specifying the language model, the chain type, the retriever, and then the verbosity that we're going to print out.",
+        "So we've got this application."
+      ],
+      "result": [
+        "这个视频里有很多激动人心的概念。",
+        "让我们开始吧。",
+        "好的，让我们开始设置评估所需要的环境。",
+        "首先，我们需要有一个链或应用程序，以便进行评估。",
+        "我们将使用上一课的文档问答链。",
+        "所以我们要导入所需的相关库。",
+        "我们将加载上一课中使用过的相同数据。",
+        "我们将用一行代码创建索引。",
+        "然后，我们将通过指定语言模型、链类型、检索器以及verbosity（要打印日志的详细程度）这些参数来创建RetrievalQA链。",
+        "现在我们有了这个应用程序。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 934
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 86
+          },
+          "text": "And the first thing we need to do is"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 87
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 455
+          },
+          "text": "we need to really figure out what are some data points that we want to evaluate it on."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 455
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 976
+          },
+          "text": "And so there's a few different methods that we're going to cover for doing this."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 953
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 385
+          },
+          "text": "The first is the most simple,"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 386
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 38,
+            "milliseconds": 998
+          },
+          "text": "which is basically we're going to come up with data points that we think are good examples ourselves."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 38,
+            "milliseconds": 999
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 571
+          },
+          "text": "And so to do that, we can just look at some of the data and come up with example questions"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 572
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 766
+          },
+          "text": "and then example ground truth answers that we can later use to evaluate."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 948
+          },
+          "text": "So if we look at a few of the documents here,"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 37
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 338
+          },
+          "text": "We can kind of get a sense of what's going on inside them."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 338
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 220
+          },
+          "text": "It looks like the first one, there's this pullover set."
+        }
+      ],
+      "source": [
+        "And the first thing we need to do is",
+        "we need to really figure out what are some data points that we want to evaluate it on.",
+        "And so there's a few different methods that we're going to cover for doing this.",
+        "The first is the most simple,",
+        "which is basically we're going to come up with data points that we think are good examples ourselves.",
+        "And so to do that, we can just look at some of the data and come up with example questions",
+        "and then example ground truth answers that we can later use to evaluate.",
+        "So if we look at a few of the documents here,",
+        "We can kind of get a sense of what's going on inside them.",
+        "It looks like the first one, there's this pullover set."
+      ],
+      "result": [
+        "我们需要做的第一件事就是",
+        "真正搞清楚我们需要用什么样的数据集来评估。",
+        "我将介绍几种不同的方法来实现这个目标。",
+        "第一个方法最简单，",
+        "就是自己想出一些好的示例数据集。",
+        "为了做到这一点，我们可以查看一些数据并提出示例问题",
+        "然后提供可以用于评估的标准答案。",
+        "让我们看一下这里的几份文档，",
+        "可以了解到文档里面都有什么。",
+        "看起来第一个文档是关于一套连帽衫的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 322
+          },
+          "text": "There's this in the second one, there's this jacket as a bunch of details about all of them."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 223
+          },
+          "text": "And from these details, we can create some example query and answer pairs."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 223
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 107
+          },
+          "text": "So the first one, we can ask a simple, \"Does the Cozy Comfort Pullover Set have side pockets?\""
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 107
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 431
+          },
+          "text": "And we can see by looking above that it does, in fact, have some side pockets in it."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 431
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 794
+          },
+          "text": "And then for the second one, we can see that this Jacket is from a certain collection, the DownTek collection."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 794
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 456
+          },
+          "text": "And so we can ask the question, \"What collection is this jacket from?\""
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 456
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 837
+          },
+          "text": "And have the answer be, \"The DownTek collection\"."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 837
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 138
+          },
+          "text": "And so here we've created two examples."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 138
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 679
+          },
+          "text": "But this doesn't really scale that well."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 679
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 21
+          },
+          "text": "It takes a bit of time to look through each example and figure out what's going on."
+        }
+      ],
+      "source": [
+        "There's this in the second one, there's this jacket as a bunch of details about all of them.",
+        "And from these details, we can create some example query and answer pairs.",
+        "So the first one, we can ask a simple, \"Does the Cozy Comfort Pullover Set have side pockets?\"",
+        "And we can see by looking above that it does, in fact, have some side pockets in it.",
+        "And then for the second one, we can see that this Jacket is from a certain collection, the DownTek collection.",
+        "And so we can ask the question, \"What collection is this jacket from?\"",
+        "And have the answer be, \"The DownTek collection\".",
+        "And so here we've created two examples.",
+        "But this doesn't really scale that well.",
+        "It takes a bit of time to look through each example and figure out what's going on."
+      ],
+      "result": [
+        "第二个文档是关于一件夹克的，都有很多详细信息。",
+        "从这些详细信息中，我们可以创建若干组示例问题和答案。",
+        "第一个问题，我们可以简单地问：“舒适保暖连帽衫套装有侧口袋吗？”",
+        "我们可以通过上面看到，它确实有侧口袋。",
+        "对于第二个，我们可以看到这件夹克来自某个系列，DownTek系列。",
+        "所以我们可以问这个问题：\"这件夹克来自哪个系列？\"",
+        "答案是：\"DownTek系列\"。",
+        "所以在这里我们创建了两组问答示例。",
+        "但是，这种方式并不易于扩展。",
+        "需要花费一些时间来查看每个示例，弄清楚发生了什么。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 21
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 142
+          },
+          "text": "And so is there a way that we can automate it?"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 142
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 64
+          },
+          "text": "And one of the really cool ways that we think we can automate it is with language models themselves."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 731
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 613
+          },
+          "text": "So we have a chain in LangChain that can do exactly that."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 613
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 400
+          },
+          "text": "So we can import the QAGenerationChain"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 401
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 216
+          },
+          "text": "and this will take in documents and it will create a question answer pair from each document."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 216
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 10,
+            "milliseconds": 638
+          },
+          "text": "It'll do this using a language model itself."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 10,
+            "milliseconds": 638
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 640
+          },
+          "text": "So we need to create this chain by passing in the ChatOpenAI language model."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 321
+          },
+          "text": "And then from there, we can create a bunch of examples."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 19,
+            "milliseconds": 255
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 442
+          },
+          "text": "And so we're going to use the apply_and_parse method, because this is applying an output parser to the result."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 442
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 587
+          },
+          "text": "Because we want to get back a dictionary that has the query and answer pair, not just a single string."
+        }
+      ],
+      "source": [
+        "And so is there a way that we can automate it?",
+        "And one of the really cool ways that we think we can automate it is with language models themselves.",
+        "So we have a chain in LangChain that can do exactly that.",
+        "So we can import the QAGenerationChain",
+        "and this will take in documents and it will create a question answer pair from each document.",
+        "It'll do this using a language model itself.",
+        "So we need to create this chain by passing in the ChatOpenAI language model.",
+        "And then from there, we can create a bunch of examples.",
+        "And so we're going to use the apply_and_parse method, because this is applying an output parser to the result.",
+        "Because we want to get back a dictionary that has the query and answer pair, not just a single string."
+      ],
+      "result": [
+        "那么有没有办法让我们自动化这个过程？",
+        "借助语言模型来自动化这个过程是一种非常酷的方式。",
+        "在LangChain中有一个链可以做到这一点。",
+        "我们可以导入QAGenerationChain",
+        "它可以读取文档并从每个文档中生成一组问题和答案。",
+        "它将借助语言模型来实现。",
+        "因此，我们需要通过传入ChatOpenAI语言模型来创建这个链。",
+        "然后我们可以用它创建很多组问题和答案示例。",
+        "我们将使用apply_and_parse方法，应用解析器来解析输出的结果。",
+        "因为我们想要得到一系列包含一组问题和答案的字典对象，而不是一个文本字符串。"
+      ],
+      "status": "success",
+      "errors": [
+        "Sun Jun 11 2023 22:56:59 GMT-0500 (Central Daylight Time)\nRequest failed with status code 429\nError: Request failed with status code 429\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:523:35)\n    at endReadableNT (node:internal/streams/readable:1367:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 6
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 574
+          },
+          "text": "And so now if we look at what exactly is returned here,"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 575
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 428
+          },
+          "text": "we can see a query and we can see an answer."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 428
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 110
+          },
+          "text": "And let's check the document that this is a question and answer for."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 651
+          },
+          "text": "And we can see that it's asking what the weight of this is."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 651
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 172
+          },
+          "text": "We can see that it's taking the weight from here."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 172
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 752
+          },
+          "text": "And look at that."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 752
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 313
+          },
+          "text": "We just generated a bunch of question answer pairs."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 313
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 474
+          },
+          "text": "We didn't have to write it all ourselves."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 474
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 2,
+            "milliseconds": 475
+          },
+          "text": "Saves us a bunch of time and we can do more exciting things."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 602
+          },
+          "text": "And so now let's go ahead and add these examples into the examples that we already created."
+        }
+      ],
+      "source": [
+        "And so now if we look at what exactly is returned here,",
+        "we can see a query and we can see an answer.",
+        "And let's check the document that this is a question and answer for.",
+        "And we can see that it's asking what the weight of this is.",
+        "We can see that it's taking the weight from here.",
+        "And look at that.",
+        "We just generated a bunch of question answer pairs.",
+        "We didn't have to write it all ourselves.",
+        "Saves us a bunch of time and we can do more exciting things.",
+        "And so now let's go ahead and add these examples into the examples that we already created."
+      ],
+      "result": [
+        "现在如果我们看一下返回的内容，",
+        "我们可以看到一个问题和一个答案。",
+        "让我们检查一下这是哪个文档的问题和答案。",
+        "我们可以看到它在问这个的重量是多少。",
+        "我们可以看到它是从这里获取重量的。",
+        "看看这个，",
+        "我们刚刚生成了很多组问题和答案，",
+        "不需要去一个个手动生成。",
+        "这样可以帮我们节省很多时间，可以去做更多其他有意思的事情。",
+        "现在让我们把这些示例加入到我们已经创建的示例中。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 602
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 343
+          },
+          "text": "So we got these examples now, but how exactly do we evaluate what's going on?"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 343
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 865
+          },
+          "text": "The first thing we want to do is just run an example through the chain and take a look at the output it produces."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 506
+          },
+          "text": "So here we pass in a query and we get back."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 965
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 290
+          },
+          "text": "but this is a little bit limiting in terms of what we can see that's actually happening inside the chain."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 12
+          },
+          "text": "What is the actual prompt that's going into the language model?"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 12
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 754
+          },
+          "text": "What are the documents that it retrieves?"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 754
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 957
+          },
+          "text": "If this were a more complex chain with multiple steps in it, what are the intermediate results?"
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 890
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 214
+          },
+          "text": "It's oftentimes not enough to just look at the final answer to understand"
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 243
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 435
+          },
+          "text": "what is or could be going wrong in the chain."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 435
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 59,
+            "milliseconds": 921
+          },
+          "text": "And to help with that, we have a fun little util in LangChain called LangChain debug."
+        }
+      ],
+      "source": [
+        "So we got these examples now, but how exactly do we evaluate what's going on?",
+        "The first thing we want to do is just run an example through the chain and take a look at the output it produces.",
+        "So here we pass in a query and we get back.",
+        "but this is a little bit limiting in terms of what we can see that's actually happening inside the chain.",
+        "What is the actual prompt that's going into the language model?",
+        "What are the documents that it retrieves?",
+        "If this were a more complex chain with multiple steps in it, what are the intermediate results?",
+        "It's oftentimes not enough to just look at the final answer to understand",
+        "what is or could be going wrong in the chain.",
+        "And to help with that, we have a fun little util in LangChain called LangChain debug."
+      ],
+      "result": [
+        "现在我们有了这些示例数据，但是我们如何评估效果如何？",
+        "首先，我们要做的就是将其中某个示例传入链并运行，然后观察它输出的结果。",
+        "这里我们输入一个问题，然后得到返回结果。",
+        "但我们无法观察到链的内部到底发生了什么！",
+        "例如传给语言模型中的Prompt是什么？",
+        "它检索到的文档有哪些？",
+        "如果这是一个包含多个步骤的复杂链，那么每一步的中间结果是什么？",
+        "仅仅观察最终答案通常不足以理解",
+        "链中哪里出错或可能出错。",
+        "为了解决这个问题，LangChain中提供了一个有意思的小工具，叫做“langchain debug”。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 59,
+            "milliseconds": 921
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 143
+          },
+          "text": "And so if we set \"langchain.debug\" equals \"True\","
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 574
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 823
+          },
+          "text": "and we now rerun the same example as above,"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 471
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 11,
+            "milliseconds": 508
+          },
+          "text": "we can see that it starts printing out a lot more information."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 455
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 729
+          },
+          "text": "And so if we look at what exactly it's printing out,"
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 730
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 920
+          },
+          "text": "we can see that it's diving down first into the RetrievalQA chain."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 583
+          },
+          "text": "And then it's going down into a StuffDocumentsChain."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 583
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 5
+          },
+          "text": "And so as mentioned, we were using the \"stuff\" method."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 5
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 389
+          },
+          "text": "And now it's entering the LLMChain where we have a few different inputs."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 389
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 471
+          },
+          "text": "So we can see the original question is right there."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 471
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 393
+          },
+          "text": "And now we're passing in this context."
+        }
+      ],
+      "source": [
+        "And so if we set \"langchain.debug\" equals \"True\",",
+        "and we now rerun the same example as above,",
+        "we can see that it starts printing out a lot more information.",
+        "And so if we look at what exactly it's printing out,",
+        "we can see that it's diving down first into the RetrievalQA chain.",
+        "And then it's going down into a StuffDocumentsChain.",
+        "And so as mentioned, we were using the \"stuff\" method.",
+        "And now it's entering the LLMChain where we have a few different inputs.",
+        "So we can see the original question is right there.",
+        "And now we're passing in this context."
+      ],
+      "result": [
+        "如果我们把 \"langchain.debug\" 设为 \"True\",",
+        "然后把之前的示例再运行一遍，",
+        "就可以看到它输出了更多的信息。",
+        "如果我们看看它到底输出了什么，",
+        "我们可以看到它首先调用了RetrievalQA链，",
+        "然后它又调用了StuffDocumentsChain。",
+        "上一节课讲到过，我们使用了 \"stuff\" 方法。",
+        "现在它调用了LLMChain，有几个不同的输入参数：",
+        "可以看到原始问题，",
+        "传入的上下文，"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 393
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 118
+          },
+          "text": "And we can see that this context is created from a bunch of the different documents that we've retrieved."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 758
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 314
+          },
+          "text": "And so when doing question answering,"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 315
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 602
+          },
+          "text": "oftentimes when a wrong result is returned, it's not necessarily the language model itself that's messing up."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 48,
+            "milliseconds": 602
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 504
+          },
+          "text": "It's actually the retrieval step that's messing up."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 504
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 54,
+            "milliseconds": 757
+          },
+          "text": "And so taking a really close look at what exactly the question is"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 54,
+            "milliseconds": 758
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 808
+          },
+          "text": "and what exactly the context is can help debug what's going wrong."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 808
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 532
+          },
+          "text": "We can then step down one more level and see exactly what is entering the language model, ChatOpenAI, itself."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 902
+          },
+          "text": "And so here we can see the full prompt that's passed in."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 9,
+            "milliseconds": 902
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 384
+          },
+          "text": "So we've got a system message."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 384
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 14,
+            "milliseconds": 506
+          },
+          "text": "We've got the description of the prompt that's used."
+        }
+      ],
+      "source": [
+        "And we can see that this context is created from a bunch of the different documents that we've retrieved.",
+        "And so when doing question answering,",
+        "oftentimes when a wrong result is returned, it's not necessarily the language model itself that's messing up.",
+        "It's actually the retrieval step that's messing up.",
+        "And so taking a really close look at what exactly the question is",
+        "and what exactly the context is can help debug what's going wrong.",
+        "We can then step down one more level and see exactly what is entering the language model, ChatOpenAI, itself.",
+        "And so here we can see the full prompt that's passed in.",
+        "So we've got a system message.",
+        "We've got the description of the prompt that's used."
+      ],
+      "result": [
+        "可以看到这个上下文是根据问题检索到的几个文档块内容。",
+        "在做问答时，",
+        "往往当返回错误的结果时，不一定是语言模型本身出了问题。",
+        "实际上，可能是在检索的步骤出了问题。",
+        "仔细查看问题的确切内容",
+        "和上下文的确切内容可以帮助调试，找出问题在哪。",
+        "我们可以再深入一层，看看究竟传入语言模型（ChatOpenAI）的Prompt究竟是什么。",
+        "这里我们可以看到传入语言模型的完整Prompt：",
+        "有一个系统消息。",
+        "有一个对Prompt的描述。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 14,
+            "milliseconds": 506
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 18,
+            "milliseconds": 815
+          },
+          "text": "And so this is the prompt that the question answering chain is using under the hood,"
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 18,
+            "milliseconds": 816
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 243
+          },
+          "text": "which we actually haven't even looked at until now."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 244
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 27,
+            "milliseconds": 135
+          },
+          "text": "And so we can see the prompt printing out, use the following pieces of context to answer the user's question."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 27,
+            "milliseconds": 135
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 29,
+            "milliseconds": 297
+          },
+          "text": "If you don't know the answer, just say that you don't know."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 29,
+            "milliseconds": 297
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 638
+          },
+          "text": "Don't try to make up an answer."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 638
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 181
+          },
+          "text": "And then we see a bunch of the context as inserted before."
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 34,
+            "milliseconds": 181
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 123
+          },
+          "text": "And then we see a human question, which is the question that we asked it."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 683
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 705
+          },
+          "text": "We can also see a lot more information about the actual return type."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 40,
+            "milliseconds": 705
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 514
+          },
+          "text": "So rather than just a string, we get back a bunch of information like the token usage,"
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 515
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 50,
+            "milliseconds": 951
+          },
+          "text": "so the prompt tokens, the completion tokens, total tokens, and the model name."
+        }
+      ],
+      "source": [
+        "And so this is the prompt that the question answering chain is using under the hood,",
+        "which we actually haven't even looked at until now.",
+        "And so we can see the prompt printing out, use the following pieces of context to answer the user's question.",
+        "If you don't know the answer, just say that you don't know.",
+        "Don't try to make up an answer.",
+        "And then we see a bunch of the context as inserted before.",
+        "And then we see a human question, which is the question that we asked it.",
+        "We can also see a lot more information about the actual return type.",
+        "So rather than just a string, we get back a bunch of information like the token usage,",
+        "so the prompt tokens, the completion tokens, total tokens, and the model name."
+      ],
+      "result": [
+        "这就是问答链在底层使用的Prompt，",
+        "我们直到现在才看到。",
+        "我们可以看到Prompt输出：“使用以下上下文信息来回答用户的问题，",
+        "如果你不知道答案，就说不知道，",
+        "不要试图编造答案。”",
+        "然后我们看到之前插入的一堆上下文。",
+        "接着我们看到一个人类提出的问题，这就是我们问它的问题。",
+        "我们还可以看到更多语言模型返回的结果信息。",
+        "所以不仅仅是一个字符串，我们还得到了诸如Token使用量这样的信息，",
+        "比如Prompt消耗了多少Token、返回的结果消耗了多少Token、总共消耗的Token数和模型名称。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 50,
+            "milliseconds": 951
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 58,
+            "milliseconds": 13
+          },
+          "text": "And this can be really useful to track the tokens that you're using in your chains or calls to language models over time"
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 58,
+            "milliseconds": 314
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 2,
+            "milliseconds": 543
+          },
+          "text": "and keep track of the total number of tokens, which corresponds very closely to the total cost."
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 608
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 543
+          },
+          "text": "And because this is a relatively simple chain,"
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 5,
+            "milliseconds": 557
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 937
+          },
+          "text": "we can now see that the final response,"
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 957
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 514
+          },
+          "text": "\"The Cozy Comfort Pullover Set, Stripe, does have side pockets.\","
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 515
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 297
+          },
+          "text": "is getting bubbled up through the chains and getting returned to the user."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 297
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 386
+          },
+          "text": "So we've just walked through how to look at and debug"
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 22,
+            "milliseconds": 442
+          },
+          "text": "what's going on with a single input to this chain."
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 22,
+            "milliseconds": 442
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 24,
+            "milliseconds": 643
+          },
+          "text": "But what about all the examples we created?"
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 24,
+            "milliseconds": 643
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 27,
+            "milliseconds": 5
+          },
+          "text": "How are we going to evaluate those?"
+        }
+      ],
+      "source": [
+        "And this can be really useful to track the tokens that you're using in your chains or calls to language models over time",
+        "and keep track of the total number of tokens, which corresponds very closely to the total cost.",
+        "And because this is a relatively simple chain,",
+        "we can now see that the final response,",
+        "\"The Cozy Comfort Pullover Set, Stripe, does have side pockets.\",",
+        "is getting bubbled up through the chains and getting returned to the user.",
+        "So we've just walked through how to look at and debug",
+        "what's going on with a single input to this chain.",
+        "But what about all the examples we created?",
+        "How are we going to evaluate those?"
+      ],
+      "result": [
+        "这些信息对于跟踪在链或调用语言模型中使用了多少Token非常有用，",
+        "根据消耗的Token数和模型，可以算出来花费了多少成本。",
+        "因为这是一个相对简单的链，",
+        "我们现在可以看到最后的返回结果：",
+        "“舒适保暖连帽衫套装，条纹款，有侧口袋。”，",
+        "通过链传递并返回给用户。",
+        "我们刚刚讲解了如何查看和调试",
+        "这个链中单个输入的情况。",
+        "但是如何输入我们前面创建的所有示例呢？",
+        "我们该如何评估它们呢？"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 27,
+            "milliseconds": 5
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 30,
+            "milliseconds": 448
+          },
+          "text": "Similarly to when creating them, one way to do it would be manually."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "text": "We could run the chain over all the examples,"
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 601
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 771
+          },
+          "text": "then look at the outputs and try to figure out what's going on, whether it's correct, incorrect, partially correct."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 771
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 44,
+            "milliseconds": 177
+          },
+          "text": "Similar to creating the examples, that starts to get a little bit tedious over time."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 44,
+            "milliseconds": 177
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 900
+          },
+          "text": "And so let's go back to our favorite solution."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 48,
+            "milliseconds": 883
+          },
+          "text": "Can we ask a language model to do it?"
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 53,
+            "milliseconds": 382
+          },
+          "text": "First, we need to create predictions for all the examples."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 53,
+            "milliseconds": 382
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 300
+          },
+          "text": "Before doing that,"
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 314
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 0,
+            "milliseconds": 943
+          },
+          "text": "I'm actually going to turn off the debug mode in order to just not print everything out onto the screen,"
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 0,
+            "milliseconds": 944
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 152
+          },
+          "text": "and then I'm going to create predictions for all the different examples."
+        }
+      ],
+      "source": [
+        "Similarly to when creating them, one way to do it would be manually.",
+        "We could run the chain over all the examples,",
+        "then look at the outputs and try to figure out what's going on, whether it's correct, incorrect, partially correct.",
+        "Similar to creating the examples, that starts to get a little bit tedious over time.",
+        "And so let's go back to our favorite solution.",
+        "Can we ask a language model to do it?",
+        "First, we need to create predictions for all the examples.",
+        "Before doing that,",
+        "I'm actually going to turn off the debug mode in order to just not print everything out onto the screen,",
+        "and then I'm going to create predictions for all the different examples."
+      ],
+      "result": [
+        "和创建示例数据的方法类似，一种方法是手动操作。",
+        "我们可以在所有示例上运行链，",
+        "然后观察输出，搞清楚发生了什么，是否正确、错误或部分正确。",
+        "与创建示例数据类似，手动操作的方法随着时间的推移会变得有些繁琐。",
+        "所以让我们回到大家最喜欢的解决方案。",
+        "能让语言模型来完成吗？",
+        "首先，我们需要为所有示例生成实际答案。",
+        "在此之前，",
+        "我实际上要关闭调试模式，以免把所有内容都打印出来，",
+        "然后我将为所有不同的示例生成实际答案。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 6,
+            "milliseconds": 152
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 743
+          },
+          "text": "And so I think we had seven examples total,"
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 744
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 13,
+            "milliseconds": 718
+          },
+          "text": "and so we're going to loop through this chain seven times, getting a prediction for each one."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 31,
+            "milliseconds": 559
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 35,
+            "milliseconds": 301
+          },
+          "text": "Now that we've got these examples, we can think about evaluating them."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 35,
+            "milliseconds": 301
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 39,
+            "milliseconds": 343
+          },
+          "text": "So we're going to import the QA, question answering, eval chain."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 39,
+            "milliseconds": 343
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 600
+          },
+          "text": "We are going to create this chain with a language model,"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 601
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 849
+          },
+          "text": "because again, we're going to be using a language model to help do the evaluation."
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 849
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 450
+          },
+          "text": "And then we're going to call evaluate on this chain."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 450
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 57
+          },
+          "text": "We're going to pass in examples and predictions,"
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 71
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 273
+          },
+          "text": "and we're going to get back a bunch of graded outputs."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 2
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 6,
+            "milliseconds": 656
+          },
+          "text": "And so in order to see what exactly is going on for each example,"
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 6,
+            "milliseconds": 657
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 524
+          },
+          "text": "we're going to loop through them."
+        }
+      ],
+      "source": [
+        "And so I think we had seven examples total,",
+        "and so we're going to loop through this chain seven times, getting a prediction for each one.",
+        "Now that we've got these examples, we can think about evaluating them.",
+        "So we're going to import the QA, question answering, eval chain.",
+        "We are going to create this chain with a language model,",
+        "because again, we're going to be using a language model to help do the evaluation.",
+        "And then we're going to call evaluate on this chain.",
+        "We're going to pass in examples and predictions,",
+        "and we're going to get back a bunch of graded outputs.",
+        "And so in order to see what exactly is going on for each example,",
+        "we're going to loop through them."
+      ],
+      "result": [
+        "我想我们总共有七个示例，",
+        "我们将循环七次，为每个示例生成一个实际答案。",
+        "现在我们有了这些示例，可以考虑评估它们。",
+        "我们将导入QAEvalChain。",
+        "我们将用语言模型创建这个链，",
+        "因为我们将使用语言模型来帮助评估。",
+        "然后我们将在这个链上调用\"evaluate\"方法。",
+        "并传入示例列表和实际答案列表，",
+        "然后我们将得到与这组示例列表相对应的一组评估打分结果，并保存到了\"graded_outputs\"变量。",
+        "为了查看每个示例的具体情况，",
+        "我们将遍历它们。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 524
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 144
+          },
+          "text": "We're going to print out the question."
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 144
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 13,
+            "milliseconds": 25
+          },
+          "text": "And again, this was generated by a language model."
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 13,
+            "milliseconds": 25
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 15,
+            "milliseconds": 5
+          },
+          "text": "We're going to print out the real answer."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 15,
+            "milliseconds": 5
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 227
+          },
+          "text": "And again, this was also generated by a language model when it had the whole document in front of it."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 227
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 22,
+            "milliseconds": 47
+          },
+          "text": "And so it could generate a ground truth answer."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 23,
+            "milliseconds": 138
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 24,
+            "milliseconds": 819
+          },
+          "text": "We're going to print out the predicted answer."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 24,
+            "milliseconds": 819
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 129
+          },
+          "text": "And this is generated by a language model when it's doing the QA chain,"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 130
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 929
+          },
+          "text": "when it's doing the retrieval with the embeddings in the vector databases, passing that into a language model,"
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 930
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 36,
+            "milliseconds": 202
+          },
+          "text": "and then trying to guess the predicted answer."
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 36,
+            "milliseconds": 202
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 38,
+            "milliseconds": 123
+          },
+          "text": "And then we're also going to print it out the grade."
+        }
+      ],
+      "source": [
+        "We're going to print out the question.",
+        "And again, this was generated by a language model.",
+        "We're going to print out the real answer.",
+        "And again, this was also generated by a language model when it had the whole document in front of it.",
+        "And so it could generate a ground truth answer.",
+        "We're going to print out the predicted answer.",
+        "And this is generated by a language model when it's doing the QA chain,",
+        "when it's doing the retrieval with the embeddings in the vector databases, passing that into a language model,",
+        "and then trying to guess the predicted answer.",
+        "And then we're also going to print it out the grade."
+      ],
+      "result": [
+        "我们要打印出问题。",
+        "再次说明，这是由语言模型生成的。",
+        "我们要打印出标准答案。",
+        "同样，这是语言模型基于整个文档的内容生成的，",
+        "所以它生成的标准答案是可靠的。",
+        "我们要打印出实际答案。",
+        "这是在语言模型和问答链生成的，",
+        "先对问题生成Embedding，然后去向量数据库检索相似文档，再将检索出来的文档传递给语言模型，",
+        "然后语言模型生成实际答案。",
+        "我们还会打印出评分。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 38,
+            "milliseconds": 123
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 900
+          },
+          "text": "And again, this is also generated by a language model"
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 901
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 45,
+            "milliseconds": 571
+          },
+          "text": "when it's asking the eval chain to grade what's going on and whether it's correct or incorrect."
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 45,
+            "milliseconds": 985
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 571
+          },
+          "text": "And so when we loop through all these examples and print them out,"
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 48,
+            "milliseconds": 572
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 51,
+            "milliseconds": 687
+          },
+          "text": "we can see those in detail for each example."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 612
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 474
+          },
+          "text": "And looks like here it got everything correct."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 474
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 2,
+            "milliseconds": 418
+          },
+          "text": "This is a relatively simple retrieval problem, so that is reassuring."
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 2,
+            "milliseconds": 418
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 920
+          },
+          "text": "So let's look at the first example."
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 343
+          },
+          "text": "The question here is, \"Does the Cozy Comfort Pullover Set have side pockets?\""
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 343
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 12,
+            "milliseconds": 365
+          },
+          "text": "The real answer, and we created this, is \"Yes\"."
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 12,
+            "milliseconds": 365
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 288
+          },
+          "text": "The predicted answer, which the language model produced, was,"
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 751
+          },
+          "text": "\"The Cozy Comfort Pullover Set, Stripe does have side pockets\"."
+        }
+      ],
+      "source": [
+        "And again, this is also generated by a language model",
+        "when it's asking the eval chain to grade what's going on and whether it's correct or incorrect.",
+        "And so when we loop through all these examples and print them out,",
+        "we can see those in detail for each example.",
+        "And looks like here it got everything correct.",
+        "This is a relatively simple retrieval problem, so that is reassuring.",
+        "So let's look at the first example.",
+        "The question here is, \"Does the Cozy Comfort Pullover Set have side pockets?\"",
+        "The real answer, and we created this, is \"Yes\".",
+        "The predicted answer, which the language model produced, was,",
+        "\"The Cozy Comfort Pullover Set, Stripe does have side pockets\"."
+      ],
+      "result": [
+        "再次强调，这也是由语言模型生成的",
+        "评估链对标准答案和实际答案进行对比，判断对错，得出一个评分。",
+        "所以当我们遍历所有这些示例并打印它们时，",
+        "可以详细查看每个示例。",
+        "看起来每一个示例都做对了。",
+        "这是一个相对简单的检索问题，所以这结果还是靠得住的。",
+        "那我们来看第一个示例。",
+        "这里的问题是：“舒适保暖套装有侧面口袋吗？”",
+        "我们创建的标准答案是：“是的”。",
+        "语言模型生成的实际答案是：",
+        "“舒适保暖套装，条纹款确实有侧面口袋。”"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 20,
+            "milliseconds": 627
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 23,
+            "milliseconds": 769
+          },
+          "text": "And so we can understand that this is a correct answer."
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 23,
+            "milliseconds": 769
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 27,
+            "milliseconds": 592
+          },
+          "text": "And actually the language model does as well and it creates it correct."
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 27,
+            "milliseconds": 592
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 215
+          },
+          "text": "But let's think about why we actually need to use the language model in the first place."
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 215
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 35,
+            "milliseconds": 898
+          },
+          "text": "These two strings are actually nothing alike."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 36,
+            "milliseconds": 685
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 445
+          },
+          "text": "They're very different."
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 445
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 507
+          },
+          "text": "One's really short, one's really long."
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 507
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 42,
+            "milliseconds": 828
+          },
+          "text": "I don't even think \"Yes\" doesn't appear anywhere in this string."
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 42,
+            "milliseconds": 828
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 47,
+            "milliseconds": 657
+          },
+          "text": "So if we were to try to do some string matching or exact matching or even some regexes here,"
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 47,
+            "milliseconds": 986
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 50,
+            "milliseconds": 753
+          },
+          "text": "it wouldn't know what to do."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 50,
+            "milliseconds": 753
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 51,
+            "milliseconds": 953
+          },
+          "text": "They're not the same thing."
+        }
+      ],
+      "source": [
+        "And so we can understand that this is a correct answer.",
+        "And actually the language model does as well and it creates it correct.",
+        "But let's think about why we actually need to use the language model in the first place.",
+        "These two strings are actually nothing alike.",
+        "They're very different.",
+        "One's really short, one's really long.",
+        "I don't even think \"Yes\" doesn't appear anywhere in this string.",
+        "So if we were to try to do some string matching or exact matching or even some regexes here,",
+        "it wouldn't know what to do.",
+        "They're not the same thing."
+      ],
+      "result": [
+        "所以我们可以认为这个答案是正确的。",
+        "实际上，语言模型也知道，并且它把它标记为正确。",
+        "但让我们想想为什么我们需要使用语言模型。",
+        "因为这两个字符串实际上一点都不像。",
+        "它们非常不同。",
+        "一个很短，一个很长。",
+        "“是的”这个词在这个长字符串里都没有出现。",
+        "所以如果我们试图进行字符串匹配、精确匹配或者使用正则表达式，",
+        "是无法对两个字符串进行比较的。",
+        "它们不是同一回事。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 51,
+            "milliseconds": 953
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 56,
+            "milliseconds": 696
+          },
+          "text": "And that shows off the importance of using the language model to do evaluation here."
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 56,
+            "milliseconds": 696
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 57
+          },
+          "text": "You've got these answers."
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 717
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 1,
+            "milliseconds": 639
+          },
+          "text": "which are arbitrary strings."
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 1,
+            "milliseconds": 639
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 982
+          },
+          "text": "There's no single one-truth string that is the best possible answer."
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 982
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 7,
+            "milliseconds": 944
+          },
+          "text": "There's many different variants."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 7,
+            "milliseconds": 944
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 10,
+            "milliseconds": 700
+          },
+          "text": "And as long as they have the same semantic meaning,"
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 10,
+            "milliseconds": 701
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 267
+          },
+          "text": "they should be graded as being similar."
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 267
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 16,
+            "milliseconds": 970
+          },
+          "text": "And that's what a language model helps with, as opposed to just doing exact matching."
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 532
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 24,
+            "milliseconds": 718
+          },
+          "text": "This difficulty in comparing strings is what makes evaluation of language models so hard in the first place."
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 24,
+            "milliseconds": 718
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 29,
+            "milliseconds": 62
+          },
+          "text": "We're using them for these really open-ended tasks where they're asked to generate text."
+        }
+      ],
+      "source": [
+        "And that shows off the importance of using the language model to do evaluation here.",
+        "You've got these answers.",
+        "which are arbitrary strings.",
+        "There's no single one-truth string that is the best possible answer.",
+        "There's many different variants.",
+        "And as long as they have the same semantic meaning,",
+        "they should be graded as being similar.",
+        "And that's what a language model helps with, as opposed to just doing exact matching.",
+        "This difficulty in comparing strings is what makes evaluation of language models so hard in the first place.",
+        "We're using them for these really open-ended tasks where they're asked to generate text."
+      ],
+      "result": [
+        "这就突显了在这里使用语言模型进行评估的重要性。",
+        "你有这些答案，",
+        "它们可能是任意的字符串。",
+        "答案不是唯一的，",
+        "有很多不同的变体。",
+        "只要它们意思相同，",
+        "它们就应该被看做是相似的。",
+        "这就是语言模型的作用，而不仅仅是进行精确匹配。",
+        "之所以对语言模型的评估如此困难，就是因为很难对字符串进行比较。",
+        "我们将语言模型用于这些非常开放的任务，让它们生成文本。"
+      ],
+      "status": "success",
+      "errors": [
+        "Sun Jun 11 2023 23:03:45 GMT-0500 (Central Daylight Time)\nRequest failed with status code 502\nError: Request failed with status code 502\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:523:35)\n    at endReadableNT (node:internal/streams/readable:1367:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 29,
+            "milliseconds": 62
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 206
+          },
+          "text": "This hasn't really been done before as models until recently weren't really good enough to do this."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 206
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 38,
+            "milliseconds": 570
+          },
+          "text": "And so a lot of the evaluation metrics that did exist up to this point just aren't good enough."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 38,
+            "milliseconds": 690
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 992
+          },
+          "text": "and we're having to invent new ones and invent new heuristics for doing so."
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 992
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 48,
+            "milliseconds": 241
+          },
+          "text": "And the most interesting and most popular of those heuristics at the moment is actually"
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 48,
+            "milliseconds": 242
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 596
+          },
+          "text": "using a language model to do the evaluation."
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 596
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 438
+          },
+          "text": "This finishes the evaluation lesson, but one last thing I want to show you is the LangChain evaluation platform."
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 438
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 2,
+            "milliseconds": 381
+          },
+          "text": "This is a way to do everything that we just did in the notebook, but persist it and show it in a UI."
+        },
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 2,
+            "milliseconds": 381
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 3,
+            "milliseconds": 582
+          },
+          "text": "And so let's check it out."
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 4,
+            "milliseconds": 607
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 128
+          },
+          "text": "Here, we can see that we have a session."
+        },
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 128
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 8,
+            "milliseconds": 268
+          },
+          "text": "We called it \"deeplearningai\"."
+        }
+      ],
+      "source": [
+        "This hasn't really been done before as models until recently weren't really good enough to do this.",
+        "And so a lot of the evaluation metrics that did exist up to this point just aren't good enough.",
+        "and we're having to invent new ones and invent new heuristics for doing so.",
+        "And the most interesting and most popular of those heuristics at the moment is actually",
+        "using a language model to do the evaluation.",
+        "This finishes the evaluation lesson, but one last thing I want to show you is the LangChain evaluation platform.",
+        "This is a way to do everything that we just did in the notebook, but persist it and show it in a UI.",
+        "And so let's check it out.",
+        "Here, we can see that we have a session.",
+        "We called it \"deeplearningai\"."
+      ],
+      "result": [
+        "这在模型上从来没有真正做过，直到最近模型变的足够好了，才好来做这个。",
+        "目前为止很多现存的评估指标都不够好。",
+        "我们不得不发明新的指标和新的启发式方法。",
+        "目前最有趣和最受欢迎的启发式方法实际上是",
+        "使用语言模型进行评估。",
+        "这节关于评估的课程到此就结束了，但我还想给你们展示一下LangChain的评估平台。",
+        "借助评估平台可以在Notebook中完成我们刚做的所有事情，并且可以在UI中显示，并对数据持久化。",
+        "那么让我们看看。",
+        "在这里，可以看到有一个会话。",
+        "我们称之为\"deeplearningai\"。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 8,
+            "milliseconds": 268
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 14,
+            "milliseconds": 411
+          },
+          "text": "And we can see here that we've actually persisted all the runs that we ran in the notebook."
+        },
+        {
+          "id": "196",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 14,
+            "milliseconds": 411
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 17,
+            "milliseconds": 886
+          },
+          "text": "And so this is a good way to track the inputs and outputs at a high level,"
+        },
+        {
+          "id": "197",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 17,
+            "milliseconds": 943
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 22,
+            "milliseconds": 654
+          },
+          "text": "but it's also a really good way to see what exactly is going on underneath."
+        },
+        {
+          "id": "198",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 22,
+            "milliseconds": 654
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 28,
+            "milliseconds": 258
+          },
+          "text": "So this is the same information that was printed out in the notebook when we turned on debug mode,"
+        },
+        {
+          "id": "199",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 28,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 917
+          },
+          "text": "but it's just visualized in a UI in a little bit of a nicer way."
+        },
+        {
+          "id": "200",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 32,
+            "milliseconds": 497
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 78
+          },
+          "text": "And so we can see the inputs to the chain and the outputs to the chain at each step."
+        },
+        {
+          "id": "201",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 78
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 39,
+            "milliseconds": 290
+          },
+          "text": "And then we can click further and further down into the chain"
+        },
+        {
+          "id": "202",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 39,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 43,
+            "milliseconds": 240
+          },
+          "text": "and see more and more information about what is actually getting passed in."
+        },
+        {
+          "id": "203",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 43,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 329
+          },
+          "text": "And so if we go all the way down to the bottom,"
+        },
+        {
+          "id": "204",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 330
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 48,
+            "milliseconds": 461
+          },
+          "text": "we can now see what's getting passed exactly to the chat model."
+        }
+      ],
+      "source": [
+        "And we can see here that we've actually persisted all the runs that we ran in the notebook.",
+        "And so this is a good way to track the inputs and outputs at a high level,",
+        "but it's also a really good way to see what exactly is going on underneath.",
+        "So this is the same information that was printed out in the notebook when we turned on debug mode,",
+        "but it's just visualized in a UI in a little bit of a nicer way.",
+        "And so we can see the inputs to the chain and the outputs to the chain at each step.",
+        "And then we can click further and further down into the chain",
+        "and see more and more information about what is actually getting passed in.",
+        "And so if we go all the way down to the bottom,",
+        "we can now see what's getting passed exactly to the chat model."
+      ],
+      "result": [
+        "可以看到实际上已经保存了我们在Notebook中运行的所有记录。",
+        "这是一个跟踪输入和输出的好方法，",
+        "也是一个查看底层究竟发生了什么的好方法。",
+        "这与我们在Notebook中打开调试模式时打印出的信息相同，",
+        "但它在UI中以更好的方式呈现。",
+        "我们可以看到链的输入和每个步骤中链的输出。",
+        "然后我们可以进一步深入链中，",
+        "了解更多实际传入的信息。",
+        "如果我们一直到最底层，",
+        "可以看到究竟向聊天模型传入了什么内容。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "205",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 48,
+            "milliseconds": 461
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 582
+          },
+          "text": "We've got the system message here."
+        },
+        {
+          "id": "206",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 50,
+            "milliseconds": 582
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 52,
+            "milliseconds": 702
+          },
+          "text": "We've got the human question here."
+        },
+        {
+          "id": "207",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 52,
+            "milliseconds": 702
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 783
+          },
+          "text": "We've got the response from the Chat Model here."
+        },
+        {
+          "id": "208",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 783
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 56,
+            "milliseconds": 183
+          },
+          "text": "And we've got some Output Metadata."
+        },
+        {
+          "id": "209",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 57,
+            "milliseconds": 462
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 2,
+            "milliseconds": 384
+          },
+          "text": "One other thing that we've added here is the ability to add these examples to a data set."
+        },
+        {
+          "id": "210",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 2,
+            "milliseconds": 384
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 6,
+            "milliseconds": 171
+          },
+          "text": "So if you remember, when creating those data sets of examples at the start,"
+        },
+        {
+          "id": "211",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 6,
+            "milliseconds": 172
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 567
+          },
+          "text": "we created them partially by hand, partially with a language model."
+        },
+        {
+          "id": "212",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 567
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 13,
+            "milliseconds": 671
+          },
+          "text": "Here we can add it to a data set by clicking on this little button,"
+        },
+        {
+          "id": "213",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 13,
+            "milliseconds": 672
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 430
+          },
+          "text": "and we now have the input query and the output results."
+        },
+        {
+          "id": "214",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 18,
+            "milliseconds": 430
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 20,
+            "milliseconds": 10
+          },
+          "text": "And so we can create a data set."
+        }
+      ],
+      "source": [
+        "We've got the system message here.",
+        "We've got the human question here.",
+        "We've got the response from the Chat Model here.",
+        "And we've got some Output Metadata.",
+        "One other thing that we've added here is the ability to add these examples to a data set.",
+        "So if you remember, when creating those data sets of examples at the start,",
+        "we created them partially by hand, partially with a language model.",
+        "Here we can add it to a data set by clicking on this little button,",
+        "and we now have the input query and the output results.",
+        "And so we can create a data set."
+      ],
+      "result": [
+        "这里有系统消息。",
+        "这里有人类的问题。",
+        "这里有来自聊天模型的返回结果。",
+        "还有一些元数据的输出。",
+        "我们在这里添加的另一个功能是将这些示例添加到数据集中。",
+        "如果你还有印象的话，在一开始创建那些示例数据集时，",
+        "我们是通过手工和语言模型部分创建的。",
+        "我们可以通过点击这个小按钮将其添加到数据集中，",
+        "现在我们有了输入问题和输出结果。",
+        "这样我们就可以创建一个数据集。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "215",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 20,
+            "milliseconds": 10
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 22,
+            "milliseconds": 431
+          },
+          "text": "We can call it deep learning."
+        },
+        {
+          "id": "216",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 25,
+            "milliseconds": 371
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 28,
+            "milliseconds": 413
+          },
+          "text": "And then we can start adding examples to this data set."
+        },
+        {
+          "id": "217",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 28,
+            "milliseconds": 413
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 600
+          },
+          "text": "And so again, getting back to the original thing that we tackled at the beginning of the lesson,"
+        },
+        {
+          "id": "218",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 601
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 356
+          },
+          "text": "we need to create these data sets so that we can do evaluation."
+        },
+        {
+          "id": "219",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 356
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 59
+          },
+          "text": "This is a really good way to have this just running in the background"
+        },
+        {
+          "id": "220",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 259
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 44,
+            "milliseconds": 529
+          },
+          "text": "and then add to the example data sets over time and start building up these examples"
+        },
+        {
+          "id": "221",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 44,
+            "milliseconds": 530
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 503
+          },
+          "text": "that you can start using for evaluation and have this flywheel of evaluation start turning."
+        }
+      ],
+      "source": [
+        "We can call it deep learning.",
+        "And then we can start adding examples to this data set.",
+        "And so again, getting back to the original thing that we tackled at the beginning of the lesson,",
+        "we need to create these data sets so that we can do evaluation.",
+        "This is a really good way to have this just running in the background",
+        "and then add to the example data sets over time and start building up these examples",
+        "that you can start using for evaluation and have this flywheel of evaluation start turning."
+      ],
+      "result": [
+        "我们可以给它命名为\"deeplearning\"。",
+        "然后我们可以开始向这个数据集添加示例。",
+        "回到我们在课程开始时解决的原始问题，",
+        "我们需要创建这些数据集以便进行评估。",
+        "这是一种在后台运行的好方法，",
+        "然后随着时间的推移向示例数据集中添加内容并开始积累这些示例，",
+        "这样你就可以开始将这些数据集用于评估，并让评估的飞轮开始转动起来。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/LangChain for LLM Application Development/LangChain_L5_v02.srt",
+  "ouputBasePath": "input/LangChain for LLM Application Development/LangChain_L5_v02",
+  "totalCost": 0.46881000000000006,
+  "translationPath": "input/LangChain for LLM Application Development/LangChain_L5_v02/translation.json"
+}

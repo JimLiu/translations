@@ -1,0 +1,168 @@
+[Script Info]
+
+Title: Introduction
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.33,0:00:00.100,Secondary,,0,0,0,,Welcome back.
+Dialogue: 1,0:00:00.100,0:00:04.91,Secondary,,0,0,0,,There's a lot of exciting material to go over this week, and
+Dialogue: 1,0:00:04.91,0:00:09.66,Secondary,,0,0,0,,one of the first topics that Mike will share with you in a little bit is a deep
+Dialogue: 1,0:00:09.66,0:00:13.25,Secondary,,0,0,0,,dive into how transformer networks actually work.
+Dialogue: 1,0:00:13.25,0:00:16.53,Secondary,,0,0,0,,Yeah, so look, it's a complicated topic, right?
+Dialogue: 1,0:00:16.53,0:00:20.3,Secondary,,0,0,0,,In 2017, the paper came out, Tension is all You Need, and
+Dialogue: 1,0:00:20.3,0:00:24.25,Secondary,,0,0,0,,it laid out all of these fairly complex data processes which are going to happen
+Dialogue: 1,0:00:24.25,0:00:26.59,Secondary,,0,0,0,,inside the transformer architecture.
+Dialogue: 1,0:00:26.59,0:00:31.30,Secondary,,0,0,0,,So we take a little bit of a high level view, but we do go down into some depths.
+Dialogue: 1,0:00:31.30,0:00:33.68,Secondary,,0,0,0,,We talk about things like self-attention and
+Dialogue: 1,0:00:33.68,0:00:36.35,Secondary,,0,0,0,,the multi-headed self-attention mechanism.
+Dialogue: 1,0:00:36.35,0:00:40.32,Secondary,,0,0,0,,So we can see why it is that these models actually work,
+Dialogue: 1,0:00:40.32,0:00:45.13,Secondary,,0,0,0,,how it is that they actually gain an understanding of language.
+Dialogue: 1,0:00:45.13,0:00:48.87,Secondary,,0,0,0,,And it's amazing how long the transformer architecture has been around
+Dialogue: 1,0:00:48.87,0:00:51.49,Secondary,,0,0,0,,and it's still state of the art for many models.
+Dialogue: 1,0:00:51.49,0:00:56.29,Secondary,,0,0,0,,I remember after I saw the transformer paper when it first came out, I thought,
+Dialogue: 1,0:00:56.29,0:00:58.6,Secondary,,0,0,0,,yep, I get this equation.
+Dialogue: 1,0:00:58.6,0:01:00.54,Secondary,,0,0,0,,I acknowledge this is a math equation.
+Dialogue: 1,0:01:00.54,0:01:02.50,Secondary,,0,0,0,,But what's it actually doing?
+Dialogue: 1,0:01:02.50,0:01:04.15,Secondary,,0,0,0,,And it's always seemed a little bit magical.
+Dialogue: 1,0:01:04.15,0:01:08.6,Secondary,,0,0,0,,It took me a long time playing with it to finally go, okay, this is why it works.
+Dialogue: 1,0:01:08.6,0:01:12.11,Secondary,,0,0,0,,And so I think in this first week, you learn the intuitions behind
+Dialogue: 1,0:01:12.11,0:01:17.10,Secondary,,0,0,0,,some of these terms you may have heard before, like multi-headed attention.
+Dialogue: 1,0:01:17.10,0:01:19.12,Secondary,,0,0,0,,What is that and why does it make sense?
+Dialogue: 1,0:01:19.12,0:01:23.28,Secondary,,0,0,0,,And why did the transformer architecture really take off?
+Dialogue: 1,0:01:23.28,0:01:27.4,Secondary,,0,0,0,,I think attention had been around for a long time, but actually thought it was,
+Dialogue: 1,0:01:27.4,0:01:29.79,Secondary,,0,0,0,,one of the things that really made to take off was it allowed
+Dialogue: 1,0:01:29.79,0:01:32.9,Secondary,,0,0,0,,attention to work in a massively parallel way.
+Dialogue: 1,0:01:32.9,0:01:35.63,Secondary,,0,0,0,,So it made it work on modern GPUs and could scale it up.
+Dialogue: 1,0:01:35.63,0:01:40.27,Secondary,,0,0,0,,I think these nuances around transformers are not well-understood by many, so
+Dialogue: 1,0:01:40.27,0:01:43.19,Secondary,,0,0,0,,looking forward to when you deep dive into that.
+Dialogue: 1,0:01:43.19,0:01:45.35,Secondary,,0,0,0,,Absolutely, I mean, the scale is part of it and
+Dialogue: 1,0:01:45.35,0:01:47.22,Secondary,,0,0,0,,how it's able to take in all that data.
+Dialogue: 1,0:01:47.22,0:01:50.82,Secondary,,0,0,0,,I just want to say as well, though, that we're not going to go into this at such
+Dialogue: 1,0:01:50.82,0:01:53.37,Secondary,,0,0,0,,a level which is going to make people's heads explode.
+Dialogue: 1,0:01:53.37,0:01:56.64,Secondary,,0,0,0,,If they want to do that, then they can go ahead and read that paper too.
+Dialogue: 1,0:01:56.64,0:02:00.30,Secondary,,0,0,0,,What we're going to do is we're going to look at the really important
+Dialogue: 1,0:02:00.30,0:02:04.53,Secondary,,0,0,0,,parts of that transformer architecture that gives you the intuition you need so
+Dialogue: 1,0:02:04.53,0:02:08.49,Secondary,,0,0,0,,that you can actually make practical use out of these models.
+Dialogue: 1,0:02:08.49,0:02:12.78,Secondary,,0,0,0,,One thing I've been surprised and delighted by is how transformers,
+Dialogue: 1,0:02:12.78,0:02:17.57,Secondary,,0,0,0,,even though this course focuses on text, it's been really interesting to see
+Dialogue: 1,0:02:17.57,0:02:21.85,Secondary,,0,0,0,,how that basic transformer architecture is creating a foundation for
+Dialogue: 1,0:02:21.85,0:02:23.79,Secondary,,0,0,0,,vision transformers as well.
+Dialogue: 1,0:02:23.79,0:02:27.99,Secondary,,0,0,0,,So even though in this course you learn mostly about large language models,
+Dialogue: 1,0:02:27.99,0:02:32.38,Secondary,,0,0,0,,models about text, I think understanding transformers is also helping people
+Dialogue: 1,0:02:32.38,0:02:37.9,Secondary,,0,0,0,,understand this really exciting vision transformer and other modalities as well.
+Dialogue: 1,0:02:37.9,0:02:39.31,Secondary,,0,0,0,,It's going to be a really critical building block for
+Dialogue: 1,0:02:39.31,0:02:40.66,Secondary,,0,0,0,,a lot of machine learning.
+Dialogue: 1,0:02:40.66,0:02:41.40,Secondary,,0,0,0,,Absolutely.
+Dialogue: 1,0:02:41.40,0:02:46.69,Secondary,,0,0,0,,And then beyond transformers, there's a second major topic that looking forward
+Dialogue: 1,0:02:46.69,0:02:51.93,Secondary,,0,0,0,,to having this first week cover, which is the Generative AI project Lifecycle.
+Dialogue: 1,0:02:51.93,0:02:56.22,Secondary,,0,0,0,,I know a lot of people are thinking, boy, does all this LM stuff, what I do of it?
+Dialogue: 1,0:02:56.22,0:03:01.60,Secondary,,0,0,0,,And the Generative AI project Lifecycle, which will talk about in a little bit,
+Dialogue: 1,0:03:01.60,0:03:06.81,Secondary,,0,0,0,,helps you plan out how to think about building your own Generative AI project.
+Dialogue: 1,0:03:06.81,0:03:08.6,Secondary,,0,0,0,,That's right, and
+Dialogue: 1,0:03:08.6,0:03:13.6,Secondary,,0,0,0,,the Generative AI project Lifecycle walks you through the individual stages and
+Dialogue: 1,0:03:13.6,0:03:18.14,Secondary,,0,0,0,,decisions you have to make when you're developing Generative AI applications.
+Dialogue: 1,0:03:18.14,0:03:22.3,Secondary,,0,0,0,,So one of the first things you have to decide is whether you're taking
+Dialogue: 1,0:03:22.3,0:03:26.87,Secondary,,0,0,0,,a foundation model off the shelf or you're actually pre-training your own model and
+Dialogue: 1,0:03:26.87,0:03:29.76,Secondary,,0,0,0,,then as a follow up, whether you want to fine tune and
+Dialogue: 1,0:03:29.76,0:03:32.85,Secondary,,0,0,0,,customize that model maybe for your specific data.
+Dialogue: 1,0:03:32.85,0:03:37.5,Secondary,,0,0,0,,Yeah, in fact, there's so many large language model options out there,
+Dialogue: 1,0:03:37.5,0:03:41.57,Secondary,,0,0,0,,some open source, some not open source, that I see many developers wondering,
+Dialogue: 1,0:03:41.57,0:03:43.75,Secondary,,0,0,0,,which of these models do I want to use?
+Dialogue: 1,0:03:43.75,0:03:48.30,Secondary,,0,0,0,,And so having a way to evaluate it and then also choose the right model sizing.
+Dialogue: 1,0:03:48.30,0:03:53.31,Secondary,,0,0,0,,I know in your other work, you've talked about when do you need a giant model, 100
+Dialogue: 1,0:03:53.31,0:03:58.5,Secondary,,0,0,0,,billion or even much bigger versus when can a 1 to 30 billion parameter model or
+Dialogue: 1,0:03:58.5,0:04:03.15,Secondary,,0,0,0,,even sub 1 billion parameter model be just fantastic for a specific application?
+Dialogue: 1,0:04:03.15,0:04:07.75,Secondary,,0,0,0,,Exactly, so there might be use cases where you really need the model to be very
+Dialogue: 1,0:04:07.75,0:04:11.86,Secondary,,0,0,0,,comprehensive and able to generalize to a lot of different tasks.
+Dialogue: 1,0:04:11.86,0:04:14.93,Secondary,,0,0,0,,And there might be use cases where you're just optimizing for
+Dialogue: 1,0:04:14.93,0:04:16.42,Secondary,,0,0,0,,a single-use case, right?
+Dialogue: 1,0:04:16.42,0:04:20.14,Secondary,,0,0,0,,And you can potentially work with a smaller model and achieving similar or
+Dialogue: 1,0:04:20.14,0:04:21.47,Secondary,,0,0,0,,even very good results.
+Dialogue: 1,0:04:21.47,0:04:24.68,Secondary,,0,0,0,,Yeah, I think that might be one of the really surprising things for
+Dialogue: 1,0:04:24.68,0:04:28.7,Secondary,,0,0,0,,some people to learn is that you can actually use quite small models and
+Dialogue: 1,0:04:28.7,0:04:30.49,Secondary,,0,0,0,,still get quite a lot of capability out of them.
+Dialogue: 1,0:04:30.49,0:04:34.42,Secondary,,0,0,0,,Yeah, I think when you want your large language model to have a lot of general
+Dialogue: 1,0:04:34.42,0:04:38.29,Secondary,,0,0,0,,knowledge about the world, when you wanted to know stuff about history and
+Dialogue: 1,0:04:38.29,0:04:42.6,Secondary,,0,0,0,,philosophy and the sizes and how to write Python code and so on and so on.
+Dialogue: 1,0:04:42.6,0:04:46.54,Secondary,,0,0,0,,It helps to have a giant model with hundreds of billions of parameters.
+Dialogue: 1,0:04:46.54,0:04:49.68,Secondary,,0,0,0,,But for a single task like summarizing dialogue or
+Dialogue: 1,0:04:49.68,0:04:54.83,Secondary,,0,0,0,,acting as a customer service agent for one company, for applications like that,
+Dialogue: 1,0:04:54.83,0:04:59.3,Secondary,,0,0,0,,sometimes you can use hundreds of billions of parameters models.
+Dialogue: 1,0:04:59.3,0:05:01.11,Secondary,,0,0,0,,But that's not always necessary.
+Dialogue: 1,0:05:01.11,0:05:05.51,Secondary,,0,0,0,,So lots of really exciting material to get into this week.
+Dialogue: 1,0:05:05.51,0:05:10.34,Secondary,,0,0,0,,With that, let's go on to the next video when Mike will kick things off with
+Dialogue: 1,0:05:10.34,0:05:14.73,Secondary,,0,0,0,,a deep dive into many different use cases of large language models.
+Dialogue: 1,0:00:00.33,0:00:00.100,Default,,0,0,0,,欢迎回来。
+Dialogue: 1,0:00:00.100,0:00:04.91,Default,,0,0,0,,本周有很多令人激动的内容要学习讨论，
+Dialogue: 1,0:00:04.91,0:00:13.25,Default,,0,0,0,,Mike将在稍后与你分享的第一个主题是：深\N入了解Transformer网络的工作原理。
+Dialogue: 1,0:00:13.25,0:00:16.53,Default,,0,0,0,,是的，这是一个复杂的话题，对吗？
+Dialogue: 1,0:00:16.53,0:00:26.59,Default,,0,0,0,,2017年发表的论文《Attension is all You Need》详细阐述了在\NTransformer架构中会发生的一系列相当复杂的数据处理过程。
+Dialogue: 1,0:00:26.59,0:00:31.30,Default,,0,0,0,,我们会从高层次的角度进行讨论，但也会深入探究一些内容。
+Dialogue: 1,0:00:31.30,0:00:36.35,Default,,0,0,0,,我们会讨论自注意力和多头自注意力机制等内容。
+Dialogue: 1,0:00:36.35,0:00:45.13,Default,,0,0,0,,这样我们就能理解这些模型为什么有效，它们是如何理解语言的。
+Dialogue: 1,0:00:45.13,0:00:51.49,Default,,0,0,0,,Transformer已经存在了很长时间，令人惊奇\N的是，它仍然是许多模型的最先进技术。
+Dialogue: 1,0:00:51.49,0:00:58.6,Default,,0,0,0,,我记得当我第一次看到Transformer论\N文时，我觉得，是的，我懂这个等式。
+Dialogue: 1,0:00:58.6,0:01:00.54,Default,,0,0,0,,我承认这是一个数学等式。
+Dialogue: 1,0:01:00.54,0:01:02.50,Default,,0,0,0,,但它实际上是做什么的？
+Dialogue: 1,0:01:02.50,0:01:04.15,Default,,0,0,0,,这一直似乎有点神奇。
+Dialogue: 1,0:01:04.15,0:01:08.6,Default,,0,0,0,,我花了很长时间去研究它，最后终于明白，这就是它有效的原因。
+Dialogue: 1,0:01:08.6,0:01:17.10,Default,,0,0,0,,所以我认为在第一周，你会学习到一些你可能听过的专业名词\N背后的知识，比如多头注意力（Multi-headed Attention）。
+Dialogue: 1,0:01:17.10,0:01:19.12,Default,,0,0,0,,那是什么，它的意义是什么？
+Dialogue: 1,0:01:19.12,0:01:23.28,Default,,0,0,0,,为什么Transformer架构真正流行起来？
+Dialogue: 1,0:01:23.28,0:01:32.9,Default,,0,0,0,,我认为注意力机制（Attention）已经存在了很长时间，但我认为真\N正让它流行起来的是，它允许注意力以大规模并行的方式工作。
+Dialogue: 1,0:01:32.9,0:01:35.63,Default,,0,0,0,,所以它使得现代GPU上的工作成为可能，并且可以扩大其规模。
+Dialogue: 1,0:01:35.63,0:01:43.19,Default,,0,0,0,,我认为很多人并不了解关于Transformer的这些细\N微之处，所以我期待你们能深入研究这个问题。
+Dialogue: 1,0:01:43.19,0:01:47.22,Default,,0,0,0,,绝对的，我想说的是，规模是一部分，它能够处理所有的数据。
+Dialogue: 1,0:01:47.22,0:01:53.37,Default,,0,0,0,,我只是想说，我们不会在这个问题上深入到让人头疼的程度。
+Dialogue: 1,0:01:53.37,0:01:56.64,Default,,0,0,0,,如果他们想这样做，他们可以去阅读那篇论文。
+Dialogue: 1,0:01:56.64,0:02:00.30,Default,,0,0,0,,我们要做的是，我们要看看那个Transformer架构的真正重要的部分，
+Dialogue: 1,0:02:00.30,0:02:08.49,Default,,0,0,0,,让你得到你需要的知识，这样你就可以实际地利用这些模型。
+Dialogue: 1,0:02:08.49,0:02:17.57,Default,,0,0,0,,一件让我感到惊讶和高兴的事情是，虽然这个课程主要关注文本，
+Dialogue: 1,0:02:17.57,0:02:23.79,Default,,0,0,0,,但看到基础的Transformer架构如何为视觉\NTransformer创建基础实在是非常有趣。
+Dialogue: 1,0:02:23.79,0:02:27.99,Default,,0,0,0,,所以，虽然在这门课程中你主要学习的\N是大语言模型、关于文本的模型，
+Dialogue: 1,0:02:27.99,0:02:37.9,Default,,0,0,0,,我认为理解Transformer也有助于人们理解这种非\N常激动人心的视觉Transformer以及其他形式。
+Dialogue: 1,0:02:37.9,0:02:40.66,Default,,0,0,0,,这将是很多机器学习的重要基础。
+Dialogue: 1,0:02:40.66,0:02:41.40,Default,,0,0,0,,绝对的。
+Dialogue: 1,0:02:41.40,0:02:46.69,Default,,0,0,0,,然后，除了Transformer，还有第二个主要的话题，
+Dialogue: 1,0:02:46.69,0:02:51.93,Default,,0,0,0,,期待在这第一周覆盖，那就是生成式AI项目生命周期。
+Dialogue: 1,0:02:51.93,0:02:56.22,Default,,0,0,0,,我知道很多人在想，哇，所有这些LLM的项目，我该怎么去构建呢？
+Dialogue: 1,0:02:56.22,0:03:06.81,Default,,0,0,0,,生成式AI项目生命周期，我们稍后会谈到，它可以\N帮助你规划如何构建你自己的生成式AI项目。
+Dialogue: 1,0:03:06.81,0:03:18.14,Default,,0,0,0,,没错，生成式AI项目生命周期会引导你了解在开发\N生成式AI应用时需要做出的各个阶段和决定。
+Dialogue: 1,0:03:18.14,0:03:26.87,Default,,0,0,0,,所以你首先需要决定的是，是选择一个现成的基\N础模型，还是实际上要预训练你自己的模型，
+Dialogue: 1,0:03:26.87,0:03:32.85,Default,,0,0,0,,然后作为后续，你是否希望微调和定制该模型以适应你的特定数据。
+Dialogue: 1,0:03:32.85,0:03:37.5,Default,,0,0,0,,是的，事实上，现在有很多大语言模型可供选择，
+Dialogue: 1,0:03:37.5,0:03:43.75,Default,,0,0,0,,有些是开源的，有些不是，我看到很多开\N发人员在纠结，我应该选择哪些模型？
+Dialogue: 1,0:03:43.75,0:03:48.30,Default,,0,0,0,,因此，有一个评估并选择正确模型大小的方式是非常重要的。
+Dialogue: 1,0:03:48.30,0:03:53.31,Default,,0,0,0,,我知道在你的其他工作中，你谈到过何时需要一\N个巨大的模型，比如1000亿甚至更大的模型，
+Dialogue: 1,0:03:53.31,0:04:03.15,Default,,0,0,0,,相对的，何时一个1到30亿参数的模型或者小于10\N亿参数的模型对于特定的应用来说就足够好？
+Dialogue: 1,0:04:03.15,0:04:07.75,Default,,0,0,0,,确实，可能有一些使用场景，你真的需要模型非常全面，
+Dialogue: 1,0:04:07.75,0:04:11.86,Default,,0,0,0,,能够适应很多不同的任务。
+Dialogue: 1,0:04:11.86,0:04:16.42,Default,,0,0,0,,也可能有一些使用场景，你只是为了单一的使用场景进行优化，对吧？
+Dialogue: 1,0:04:16.42,0:04:21.47,Default,,0,0,0,,你可能只需要使用一个小一些的模型\N就能获得相似甚至非常好的结果。
+Dialogue: 1,0:04:21.47,0:04:24.68,Default,,0,0,0,,是的，我认为这可能是一些人会感到非常惊讶的事情，
+Dialogue: 1,0:04:24.68,0:04:30.49,Default,,0,0,0,,那就是你实际上可以使用相当小的模\N型，仍然能够从中获取很多的能力。
+Dialogue: 1,0:04:30.49,0:04:34.42,Default,,0,0,0,,是的，我认为当你希望你的大语言模型具有很多关于世界的通用知识，
+Dialogue: 1,0:04:34.42,0:04:42.6,Default,,0,0,0,,当你希望它知道关于历史和哲学的东西，知道\N大小，知道如何编写Python代码等等时。
+Dialogue: 1,0:04:42.6,0:04:46.54,Default,,0,0,0,,拥有一个拥有上千亿参数的巨大模型是有帮助的。
+Dialogue: 1,0:04:46.54,0:04:54.83,Default,,0,0,0,,但是对于像对话总结或者作为一家公司的客户\N服务代理这样的单一任务，对于这样的应用，
+Dialogue: 1,0:04:54.83,0:04:59.3,Default,,0,0,0,,有时候你可以使用上百亿参数的模型。
+Dialogue: 1,0:04:59.3,0:05:01.11,Default,,0,0,0,,但这并不总是必要的。
+Dialogue: 1,0:05:01.11,0:05:05.51,Default,,0,0,0,,所以本周有很多真正令人兴奋的材料要深入研究。
+Dialogue: 1,0:05:05.51,0:05:14.73,Default,,0,0,0,,那么，让我们进入下一个视频，Mike将开始深\N入探讨大语言模型的许多不同使用案例。

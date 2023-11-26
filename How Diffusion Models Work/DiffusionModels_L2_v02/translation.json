@@ -1,0 +1,1763 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "In this video, we'll talk about sampling, we'll get into the details of it and how it works across multiple different iterations."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 954
+          },
+          "text": "So before we talk about how to train this neural network, let's talk about sampling,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 955
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "text": "or what we do with the neural network after it's trained at inference time."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 404
+          },
+          "text": "So what happens is you have that noise sample,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 405
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "text": "you put it through your trained neural network that has understood what a sprite kind of looks like,"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 346
+          },
+          "text": "and what it does is it predicts noise."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 546
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "text": "It predicts noise as opposed to the sprite."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "text": "And then we subtract that predicted noise from the noise sample to get something a little bit more sprite-like."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "text": "Now realistically, that is just a prediction of noise, and it doesn't fully remove all the noise,"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 0
+          },
+          "text": "so you need multiple steps to get high-quality samples."
+        }
+      ],
+      "source": [
+        "In this video, we'll talk about sampling, we'll get into the details of it and how it works across multiple different iterations.",
+        "So before we talk about how to train this neural network, let's talk about sampling,",
+        "or what we do with the neural network after it's trained at inference time.",
+        "So what happens is you have that noise sample,",
+        "you put it through your trained neural network that has understood what a sprite kind of looks like,",
+        "and what it does is it predicts noise.",
+        "It predicts noise as opposed to the sprite.",
+        "And then we subtract that predicted noise from the noise sample to get something a little bit more sprite-like.",
+        "Now realistically, that is just a prediction of noise, and it doesn't fully remove all the noise,",
+        "so you need multiple steps to get high-quality samples."
+      ],
+      "result": [
+        "在这个视频里，我们将讨论采样，\\N我们将深入了解它的细节以及\\N它在多个不同迭代中如何工作。",
+        "在我们讨论如何训练\\N这个神经网络之前，先来谈谈采样，",
+        "也就是我们在神经网络\\N训练完成后，在推理时会做什么。",
+        "你会有一个噪声样本，",
+        "把它放进已经理解了\\N游戏角色样子的训练好的神经网络里，",
+        "然后它预测噪声。",
+        "它预测噪声，而不是游戏角色。",
+        "然后我们从噪声样本中减去预测的噪声，\\N得到的东西就更像游戏角色一些。",
+        "现实情况是，这只是噪声的预测，\\N并没有完全消除所有的噪声，",
+        "你需要多次迭代才能得到高质量的样本。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "text": "That's after 500 iterations, we're able to get something that looks very sprite-like."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 0
+          },
+          "text": "So now let's step through this algorithmically."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 0
+          },
+          "text": "So first, you can sample a random noise sample, and that was that original noise you had in the beginning."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 0
+          },
+          "text": "And then you want to step through time, and actually you're stepping backwards through time,"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "all the way from the last iteration, 500, where it's completely noisy, all the way down to 1."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "text": "And just think of your ink drop, you're actually going backwards in time."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "text": "It's fully diffused initially, and then you're going back all the way up to when it was first dropped into the water."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "text": "Next, you'll sample some extra noise. We'll actually touch on this in a minute, so don't worry about this just now."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "text": "Here is where you actually pass that original noise, that sample, back into your neural network, and you get some predicted noise."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 0
+          },
+          "text": "And this predicted noise is noise that the trained neural network wants to subtract from the original noise to get something that looks more sprite-like."
+        }
+      ],
+      "source": [
+        "That's after 500 iterations, we're able to get something that looks very sprite-like.",
+        "So now let's step through this algorithmically.",
+        "So first, you can sample a random noise sample, and that was that original noise you had in the beginning.",
+        "And then you want to step through time, and actually you're stepping backwards through time,",
+        "all the way from the last iteration, 500, where it's completely noisy, all the way down to 1.",
+        "And just think of your ink drop, you're actually going backwards in time.",
+        "It's fully diffused initially, and then you're going back all the way up to when it was first dropped into the water.",
+        "Next, you'll sample some extra noise. We'll actually touch on this in a minute, so don't worry about this just now.",
+        "Here is where you actually pass that original noise, that sample, back into your neural network, and you get some predicted noise.",
+        "And this predicted noise is noise that the trained neural network wants to subtract from the original noise to get something that looks more sprite-like."
+      ],
+      "result": [
+        "经过500次迭代后，\\N我们得到了非常像游戏角色的图像。",
+        "现在让我们逐步了解这个算法。",
+        "首先，你可以采样一个\\N随机噪声样本，这就是你一开始有的原始噪声。",
+        "然后你要逐步穿越时间，\\N实际上就像在时光倒流，",
+        "从最后一次迭代，第500次，\\N完全噪声的状态，一直倒退到第1次。",
+        "想象一下上一部视频中讲的\\N墨水滴的例子，我们让时光倒流。",
+        "一开始它是完全扩散的，然后\\N你一直倒退回到它刚刚滴入水中的时候。",
+        "接下来，你需要采样一些额外的噪声。\\N我们稍后会详细讲解这个，所以现在不用担心。",
+        "这里你真正要做的是把那个\\N原始的噪声，那个样本，再次输入\\N你的神经网络，然后你得到一些预测的噪声。",
+        "这个预测的噪声就是\\N训练过的神经网络想从原始噪声中\\N减去的，从而得到更像游戏角色的图像。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "text": "And finally, there's a sampling algorithm called DDPM, which stands for Denoising Diffusion Probabilistic Models,"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "text": "and it's a paper written by Jonathan Ho, Ajay Jain, and one of my good friends, Pieter Abbeel."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "text": "And this sampling algorithm essentially is able to get a few numbers for scale."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 0
+          },
+          "text": "That's not super important, but what is important is that this is where you are actually subtracting out that predicted noise from the original noise sample."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 0
+          },
+          "text": "And again, you're adding that little extra noise back in, which we'll return to in a moment."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 985
+          },
+          "text": "All right, let's jump to the notebook."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 986
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 0
+          },
+          "text": "So you'll see here some setup code."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "text": "I think all that's really important here is that you're importing PyTorch and a lot of utilities from PyTorch."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 0
+          },
+          "text": "We also import some helper functions here that we had written for the neural network."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "text": "So I'm just going to hit Shift+Enter to run that cell so that we import everything."
+        }
+      ],
+      "source": [
+        "And finally, there's a sampling algorithm called DDPM, which stands for Denoising Diffusion Probabilistic Models,",
+        "and it's a paper written by Jonathan Ho, Ajay Jain, and one of my good friends, Pieter Abbeel.",
+        "And this sampling algorithm essentially is able to get a few numbers for scale.",
+        "That's not super important, but what is important is that this is where you are actually subtracting out that predicted noise from the original noise sample.",
+        "And again, you're adding that little extra noise back in, which we'll return to in a moment.",
+        "All right, let's jump to the notebook.",
+        "So you'll see here some setup code.",
+        "I think all that's really important here is that you're importing PyTorch and a lot of utilities from PyTorch.",
+        "We also import some helper functions here that we had written for the neural network.",
+        "So I'm just going to hit Shift+Enter to run that cell so that we import everything."
+      ],
+      "result": [
+        "最后，有一个叫做DDPM的采样算法，\\N也就是噪扩散概率模型（Denoising Diffusion Probabilistic Models），",
+        "这是由Jonathan Ho、Ajay Jain和我的\\N好朋友Pieter Abbeel共同撰写的一篇论文。",
+        "这个采样算法基本上能够得到一些规模的数字。",
+        "那不是非常重要，但\\N重要的是这里你实际上是\\N在从原始噪声样本中减去预测的噪声。",
+        "而且，你还要再加回那一点\\N额外的噪声，我们稍后会回到这一点。",
+        "好了，让我们回到Notebook。",
+        "你会看到这里有一些设置代码。",
+        "我认为这里真正重要的是\\N你要导入PyTorch和很多PyTorch的实用工具。",
+        "我们还导入了一些为神经网络编写的辅助函数。",
+        "我只需按Shift+Enter运行\\N这个单元格，以便我们导入所有内容。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 0
+          },
+          "text": "And now here's setting up the neural network, which we're going to use for sampling."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "text": "We'll go into the details of this later."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 0
+          },
+          "text": "So I'm just going to run this, and no need to really follow everything that's going on there just yet."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "text": "Here we're setting up some hyperparameters, and that includes those time steps that you've seen there."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "text": "So that's the 500 time steps."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "text": "Beta 1 and Beta 2 are just some hyperparameters for DDPM."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "text": "And here you can also see the height. This is the 16 by 16 image."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "And again, it's just a square image. So I'm going to run this Shift+Enter again."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 0
+          },
+          "text": "And this is just a noise schedule defined in the DDPM paper."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "text": "And all a noise schedule is, is it determines what level of noise to apply to the image at a certain time step."
+        }
+      ],
+      "source": [
+        "And now here's setting up the neural network, which we're going to use for sampling.",
+        "We'll go into the details of this later.",
+        "So I'm just going to run this, and no need to really follow everything that's going on there just yet.",
+        "Here we're setting up some hyperparameters, and that includes those time steps that you've seen there.",
+        "So that's the 500 time steps.",
+        "Beta 1 and Beta 2 are just some hyperparameters for DDPM.",
+        "And here you can also see the height. This is the 16 by 16 image.",
+        "And again, it's just a square image. So I'm going to run this Shift+Enter again.",
+        "And this is just a noise schedule defined in the DDPM paper.",
+        "And all a noise schedule is, is it determines what level of noise to apply to the image at a certain time step."
+      ],
+      "result": [
+        "现在这里我们设置了用于采样的神经网络，",
+        "稍后我们会详细讨论这个。",
+        "我现在就运行它，\\N不用刚开始就关注所有细节。",
+        "这里我们设置了一些\\N超参数（Hyperparameters），\\N包括你在那里看到的那些时间步长。",
+        "就是那500个时间步长。",
+        "Beta 1和Beta 2只是DDPM的一些超参数。",
+        "这里你还可以看到高度。\\N这是16乘16的图像。",
+        "再次说明，这只是一个正方形图像。\\N我再按Shift+Enter运行。",
+        "这只是DDPM论文中定义的\\N噪声调度（Noise Schedule）。",
+        "噪声调度的作用就是\\N确定在某个时间步长应用于图像的噪声级别。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "text": "So this part is just constructing some of the parameters for the DDPM algorithm that you remember, those scaling factors, those scaling values, S1, S2, S3."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "text": "That's being computed here in the noise schedule, and it's called a schedule because it is dependent on the time step."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "text": "Remember, you're looking through 500 time steps because you're going through those 500 iterations that you see here of slowly removing noise."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 56
+          },
+          "text": "So I'm just going to run that here."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 57
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "text": "So just dependent on that time step that we're on."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "text": "Next, I'm just going to instantiate the model, that unit, which we will come back to."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 0
+          },
+          "text": "And then here is the sampling algorithm, the denoise add noise that you had seen previously,"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "text": "which is really the main important part is that it is removing the predicted noise,"
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "which is what the model thinks is not a sprite, from the original noise."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "So we can run that Shift+Enter to load that model."
+        }
+      ],
+      "source": [
+        "So this part is just constructing some of the parameters for the DDPM algorithm that you remember, those scaling factors, those scaling values, S1, S2, S3.",
+        "That's being computed here in the noise schedule, and it's called a schedule because it is dependent on the time step.",
+        "Remember, you're looking through 500 time steps because you're going through those 500 iterations that you see here of slowly removing noise.",
+        "So I'm just going to run that here.",
+        "So just dependent on that time step that we're on.",
+        "Next, I'm just going to instantiate the model, that unit, which we will come back to.",
+        "And then here is the sampling algorithm, the denoise add noise that you had seen previously,",
+        "which is really the main important part is that it is removing the predicted noise,",
+        "which is what the model thinks is not a sprite, from the original noise.",
+        "So we can run that Shift+Enter to load that model."
+      ],
+      "result": [
+        "这部分主要是构建 DDPM 算法\\N的一些参数，你还记得那些\\N缩放因子（Scaling Factors）、\\N缩放值（Scaling Values） S1、S2、S3 吧。",
+        "那些在噪声调度（Noise Schedule）中\\N被计算，它被称为调度是因为它依赖于时间步长。",
+        "记住，你要看 500 个时间步长，因为\\N你要经历这里的 500 次迭代，慢慢去除噪声。",
+        "我现在就运行一下。",
+        "这取决于我们所在的时间步长。",
+        "接下来，我将实例化模型，\\N那个单元，我们稍后会回来。",
+        "然后这里就是那个采样算法，\\N之前你看到的去噪加噪，",
+        "这真的是最重要的部分，\\N因为它正在移除预测的噪声，",
+        "也就是模型认为不是游戏角色的部分，\\N从原始噪声中去除。",
+        "我们可以通过 Shift+Enter 来运行以加载模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "text": "And then here is what we had just stepped through, that sampling algorithm."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "text": "And specifically here is running the model to get the predicted noise."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "text": "And then running the denoise."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "text": "Now let's visualize what sampling looks like over time."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 32,
+            "milliseconds": 0
+          },
+          "text": "This may take a few minutes depending on what kind of hardware you're running on,"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 32,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "text": "and we're going to speed this up in the video."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "text": "But in the next video, you'll also see a more efficient sampling technique as well."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "text": "All right, let's see it in action."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "text": "Wow, look at those sprites."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 0
+          },
+          "text": "So you should definitely pause and try these yourself."
+        }
+      ],
+      "source": [
+        "And then here is what we had just stepped through, that sampling algorithm.",
+        "And specifically here is running the model to get the predicted noise.",
+        "And then running the denoise.",
+        "Now let's visualize what sampling looks like over time.",
+        "This may take a few minutes depending on what kind of hardware you're running on,",
+        "and we're going to speed this up in the video.",
+        "But in the next video, you'll also see a more efficient sampling technique as well.",
+        "All right, let's see it in action.",
+        "Wow, look at those sprites.",
+        "So you should definitely pause and try these yourself."
+      ],
+      "result": [
+        "然后这就是我们刚刚讲过的那个采样算法。",
+        "特别是在这里运行模型以获取预测的噪声。",
+        "然后进行去噪。",
+        "现在让我们看看\\N随着时间的推移采样是什么样子的。",
+        "这可能需要几分钟，取决于你用的硬件，",
+        "我们会在视频里加速这个过程。",
+        "但在下一个视频里，\\N你还会看到更高效的采样技巧。",
+        "好了，让我们看看实际效果。",
+        "哇，看看这些游戏图像。",
+        "你绝对应该暂停并自己试试。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 0
+          },
+          "text": "All right, so there's one more extra detail."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "text": "So right now you have your neural network that's predicting noise from your original noise sample."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "text": "You subtract it out. Great. And you get something a little bit more sprite-like."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "text": "But the thing is, this neural network expects this noisy sample, this normally distributed noisy sample, as input."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 0
+          },
+          "text": "And once you've denoised it like this, it's no longer distributed in that way."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 13,
+            "milliseconds": 29
+          },
+          "text": "So actually what you have to do after each step and before each next step"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 13,
+            "milliseconds": 30
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 57
+          },
+          "text": "is to add in additional noise that's scaled based on what time step you're at"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 58
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "text": "to get passed in as the next sample, the next iteration into your trained neural network."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 42
+          },
+          "text": "And empirically, this actually helps stabilize the neural network"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 43
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 457
+          },
+          "text": "so it doesn't collapse to something that's close to the average of the data set,"
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 458
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "text": "meaning it doesn't look like this thing on the left."
+        }
+      ],
+      "source": [
+        "All right, so there's one more extra detail.",
+        "So right now you have your neural network that's predicting noise from your original noise sample.",
+        "You subtract it out. Great. And you get something a little bit more sprite-like.",
+        "But the thing is, this neural network expects this noisy sample, this normally distributed noisy sample, as input.",
+        "And once you've denoised it like this, it's no longer distributed in that way.",
+        "So actually what you have to do after each step and before each next step",
+        "is to add in additional noise that's scaled based on what time step you're at",
+        "to get passed in as the next sample, the next iteration into your trained neural network.",
+        "And empirically, this actually helps stabilize the neural network",
+        "so it doesn't collapse to something that's close to the average of the data set,",
+        "meaning it doesn't look like this thing on the left."
+      ],
+      "result": [
+        "好吧，还有一个额外的细节。",
+        "现在你有个神经网络，\\N它从原始噪声样本中预测噪声。",
+        "减去它，很好，你把它减去。\\N很好。你得到的图像就更像游戏角色图像。",
+        "但问题是，这个神经网络需要这个\\N噪声样本，这个正常分布的噪声样本，作为输入。",
+        "一旦你像这样去噪，\\N它就不再按照那种方式分布了。",
+        "实际上，在每一步之后和下一步之前，\\N你需要做的是",
+        "根据你所处的时间步长添加额外的噪声",
+        "然后作为下一个样本，\\N下一个迭代输入你的训练过的神经网络。",
+        "从经验上看，这实际上有助于稳定神经网络，",
+        "使它不会坍塌成接近数据集平均值的样子，",
+        "意味着它看起来不会像左边的那些图像。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "text": "When we don't add that noise back in, the neural network just produces these average-looking blobs of sprites,"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "text": "versus when we go add it back in, it actually is able to produce these beautiful images of sprites."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "text": "So here in the algorithm is where this happens."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 0
+          },
+          "text": "So we actually sample a random noise again at each time step based on the time step."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 0
+          },
+          "text": "And then down here, we actually add it back in with that scaling factor S3."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 0
+          },
+          "text": "So now let's take a look at the notebook."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 2,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "So now in this function denoise add noise, we are talking about the add noise part."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "And what that is, is this Z that you randomly sample, that's that extra noise."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 0
+          },
+          "text": "And you scale it by some factor, and then you actually do add it back in."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "text": "And again, that all happens down here in your main algorithm."
+        }
+      ],
+      "source": [
+        "When we don't add that noise back in, the neural network just produces these average-looking blobs of sprites,",
+        "versus when we go add it back in, it actually is able to produce these beautiful images of sprites.",
+        "So here in the algorithm is where this happens.",
+        "So we actually sample a random noise again at each time step based on the time step.",
+        "And then down here, we actually add it back in with that scaling factor S3.",
+        "So now let's take a look at the notebook.",
+        "So now in this function denoise add noise, we are talking about the add noise part.",
+        "And what that is, is this Z that you randomly sample, that's that extra noise.",
+        "And you scale it by some factor, and then you actually do add it back in.",
+        "And again, that all happens down here in your main algorithm."
+      ],
+      "result": [
+        "当我们不把噪音加回去时，神经网络\\N只会生成这些看起来很普通的游戏角色图像，",
+        "而当我们把噪音加回去时，\\N它就能生成这些漂亮的游戏角色图像。",
+        "这个算法就是在这里发生的。",
+        "我们实际上在每个时间步长都再次采样\\N一个随机噪声，这个噪声是根据时间步长来的。",
+        "然后在这里，我们用缩放因子S3把它加回去。",
+        "现在让我们看看 Notebook。",
+        "现在在这个去噪加噪的函数里，\\N我们讨论的是加噪部分。",
+        "那就是你随机抽取的这个Z，\\N就是那个额外的噪音。",
+        "你用某个因子来缩放它，\\N然后实际上把它加回去。",
+        "再次强调，这一切都发生在你的主要算法里。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "text": "All right, so let's pick up where we left off then."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "text": "So for the incorrect way where we don't add the noise back in, we actually just set Z to 0, and we pass that in."
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "text": "It only subtracts the predicted noise from the original noise, and it doesn't add any extra noise back in."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 0
+          },
+          "text": "And let's run this with Shift+Enter."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 0
+          },
+          "text": "And again, this will take a couple minutes."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "text": "All right, so let's take a look at what this does instead."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 0
+          },
+          "text": "Oh no, blobs!"
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 0
+          },
+          "text": "So this is obviously not what you want."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "text": "So make sure you add that extra noise back in."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 1,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "And so you should definitely pause and try these yourself and compare it to the other method where you do add that extra noise."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 13,
+            "milliseconds": 0
+          },
+          "text": "And in the next video, we're going to cover that neural network architecture, that U-Net."
+        }
+      ],
+      "source": [
+        "All right, so let's pick up where we left off then.",
+        "So for the incorrect way where we don't add the noise back in, we actually just set Z to 0, and we pass that in.",
+        "It only subtracts the predicted noise from the original noise, and it doesn't add any extra noise back in.",
+        "And let's run this with Shift+Enter.",
+        "And again, this will take a couple minutes.",
+        "All right, so let's take a look at what this does instead.",
+        "Oh no, blobs!",
+        "So this is obviously not what you want.",
+        "So make sure you add that extra noise back in.",
+        "And so you should definitely pause and try these yourself and compare it to the other method where you do add that extra noise.",
+        "And in the next video, we're going to cover that neural network architecture, that U-Net."
+      ],
+      "result": [
+        "好的，让我们继续之前的话题。",
+        "错误的方法是不加噪声回去，\\N我们只需把Z设为0，然后传进去。",
+        "它只从原始噪声中减去预测的噪声，\\N而不会加回任何额外的噪声。",
+        "让我们用Shift+Enter运行这个。",
+        "这个过程又要花几分钟。",
+        "好了，我们来看看这个方法的效果。",
+        "哦不，一团糟！",
+        "这显然不是我们想要的。",
+        "一定要把那些额外的噪声加回去。",
+        "建议你先暂停，自己试试这个方法，\\N然后跟另一个加回额外噪声的方法比较。",
+        "下一个视频我们会讲解\\N神经网络架构，那个U-Net。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/How Diffusion Models Work/DiffusionModels_L2_v02.srt",
+  "ouputBasePath": "input/How Diffusion Models Work/DiffusionModels_L2_v02",
+  "totalCost": 0.23060999999999998,
+  "translationPath": "input/How Diffusion Models Work/DiffusionModels_L2_v02/translation.json"
+}

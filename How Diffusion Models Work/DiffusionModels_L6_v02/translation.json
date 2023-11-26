@@ -1,0 +1,1381 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 640
+          },
+          "text": "In this video, you'll learn about a new sampling method that is over 10 times   efficient than DDPM, which is what we've been using so far."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 360
+          },
+          "text": "And this new method is called DDIM."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 680
+          },
+          "text": "So your goal is that you want more images, and you want them quickly."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 0
+          },
+          "text": "But sampling so far has been slow because, one, there are many time steps involved,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 960
+          },
+          "text": "you know, 500, there are even more sometimes to get a good sample."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 80
+          },
+          "text": "And also each time step is dependent on the previous one."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 600
+          },
+          "text": "It follows a Markov chain process."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 960
+          },
+          "text": "But thankfully, there are many new samplers here to address this problem, since this has been a long standing problem with diffusion models."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 614
+          },
+          "text": "It's that you can train them and they can create amazing, beautiful images that are both diverse and realistic,"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 615
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 520
+          },
+          "text": "but it's so slow to get something out of them."
+        }
+      ],
+      "source": [
+        "In this video, you'll learn about a new sampling method that is over 10 times   efficient than DDPM, which is what we've been using so far.",
+        "And this new method is called DDIM.",
+        "So your goal is that you want more images, and you want them quickly.",
+        "But sampling so far has been slow because, one, there are many time steps involved,",
+        "you know, 500, there are even more sometimes to get a good sample.",
+        "And also each time step is dependent on the previous one.",
+        "It follows a Markov chain process.",
+        "But thankfully, there are many new samplers here to address this problem, since this has been a long standing problem with diffusion models.",
+        "It's that you can train them and they can create amazing, beautiful images that are both diverse and realistic,",
+        "but it's so slow to get something out of them."
+      ],
+      "result": [
+        "在这个视频中，你将了解一种\\N新的采样方法，它比我们迄今\\N为止使用的DDPM高效10倍以上。",
+        "这种新方法叫做DDIM。",
+        "你的目标是想要更多\\N的图片，并且快速得到它们。",
+        "但是到目前为止，采样速度\\N很慢，因为涉及到很多时间步骤，",
+        "比如500个，有时甚至\\N更多才能得到一个好的样本。",
+        "而且每个时间步骤都依赖于前一个。",
+        "它遵循一个马尔可夫链过程。",
+        "但幸运的是，有许多新的\\N采样器来解决这个问题，因为\\N这一直是扩散模型的一个长期问题。",
+        "你可以训练它们，它们可以创造出\\N既多样又逼真的惊人美丽的图像，",
+        "但从它们那里\\N得到结果的速度非常慢。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 400
+          },
+          "text": "And one of these samplers that has been very popular is called DDIM, or Denoising Diffusion Implicit Models, which is just the name of the paper."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 120
+          },
+          "text": "And this paper was written by Jiaming Song, Chenlin Meng, and my PhD co-advisor, Stefano Ermon."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 440
+          },
+          "text": "DDIM is faster because it's able to skip time steps."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 280
+          },
+          "text": "So instead of going from time step 500 to 499 to 498, it's able to skip all these time steps."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 840
+          },
+          "text": "And it's able to skip quite a bit, because it breaks the Markov assumption."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 760
+          },
+          "text": "Markov chains are only used for probabilistic processes."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 800
+          },
+          "text": "But DDIM actually removes all the randomness from this sampling process, and is therefore deterministic."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 140
+          },
+          "text": "And what it does, essentially, is it predicts a rough sketch of the final output."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 560
+          },
+          "text": "And then it refines it with the denoising process."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 200
+          },
+          "text": "So let's compare DDPM here on the left, which is what we've been doing so far, and DDIM here on the right."
+        }
+      ],
+      "source": [
+        "And one of these samplers that has been very popular is called DDIM, or Denoising Diffusion Implicit Models, which is just the name of the paper.",
+        "And this paper was written by Jiaming Song, Chenlin Meng, and my PhD co-advisor, Stefano Ermon.",
+        "DDIM is faster because it's able to skip time steps.",
+        "So instead of going from time step 500 to 499 to 498, it's able to skip all these time steps.",
+        "And it's able to skip quite a bit, because it breaks the Markov assumption.",
+        "Markov chains are only used for probabilistic processes.",
+        "But DDIM actually removes all the randomness from this sampling process, and is therefore deterministic.",
+        "And what it does, essentially, is it predicts a rough sketch of the final output.",
+        "And then it refines it with the denoising process.",
+        "So let's compare DDPM here on the left, which is what we've been doing so far, and DDIM here on the right."
+      ],
+      "result": [
+        "其中一种非常受欢迎的\\N采样器叫做DDIM，即去噪扩散\\N隐式模型，这只是论文的名字。",
+        "这篇论文是由Jiaming Song、\\NChenlin Meng和我的博士联合\\N导师Stefano Ermon共同完成的。",
+        "DDIM之所以更快，\\N是因为它能跳过时间步长。",
+        "所以它不是从500步\\N到499步再到498步，而是\\N能跳过所有这些步骤。",
+        "它能跳过很多步骤，\\N因为它打破了马尔可夫假设。",
+        "马尔可夫链只用于概率过程。",
+        "但DDIM实际上从这个\\N采样过程中去除了所有的\\N随机性，因此是确定性的。",
+        "它所做的，本质上就是\\N预测最终输出的粗略草图。",
+        "然后用去噪过程对其进行细化。",
+        "那么让我们比较一下左边\\N的DDPM，这是我们迄今为止\\N一直在做的，和右边的DDIM。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 760
+          },
+          "text": "Yes, it is much faster with DDIM."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 560
+          },
+          "text": "You immediately see a buck there after time step 19."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 480
+          },
+          "text": "And we're still going for DDPM."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 240
+          },
+          "text": "We're still going."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 760
+          },
+          "text": "And this goes all the way up to 500 with DDPM, as you know."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 760
+          },
+          "text": "Great, so here's the lab."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 360
+          },
+          "text": "A lot of the setup will look the same."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 560
+          },
+          "text": "So I'm just going to run this cell here, set up the unit again, our hyperparameters."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 360
+          },
+          "text": "Here's the DDPM noise schedule."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 560
+          },
+          "text": "We'll use it to compare it to DDIM later."
+        }
+      ],
+      "source": [
+        "Yes, it is much faster with DDIM.",
+        "You immediately see a buck there after time step 19.",
+        "And we're still going for DDPM.",
+        "We're still going.",
+        "And this goes all the way up to 500 with DDPM, as you know.",
+        "Great, so here's the lab.",
+        "A lot of the setup will look the same.",
+        "So I'm just going to run this cell here, set up the unit again, our hyperparameters.",
+        "Here's the DDPM noise schedule.",
+        "We'll use it to compare it to DDIM later."
+      ],
+      "result": [
+        "是的，使用DDIM速度快很多。",
+        "在时间步19之后，你\\N立即就能看到一个有形的结果。",
+        "我们还在继续使用DDPM。",
+        "我们还在继续。",
+        "而且这一直可以\\N用DDPM达到500。",
+        "好的，这里是实验课。",
+        "很多设置看起来都一样。",
+        "我只是在这里运行这个单元格，\\N重新设置单位，我们的超参数。",
+        "这是DDPM噪声计划。",
+        "稍后我们会用\\N它来和DDIM进行比较。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "Now I'm instantiating the model."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 600
+          },
+          "text": "And here's where fast sampling comes in with DDIM."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 560
+          },
+          "text": "So here's the function for DDIM."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 80
+          },
+          "text": "You can look at the paper for the details, but this implements that with its scaling factors."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 480
+          },
+          "text": "And then we load up our trained model here."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 600
+          },
+          "text": "So what's cool is that we can actually just load up the trained model and use either DDIM or DDPM."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 600
+          },
+          "text": "It doesn't matter."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 40
+          },
+          "text": "This is just a sampling process after training."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 55,
+            "milliseconds": 360
+          },
+          "text": "And this is the sampling algorithm using DDIM."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 55,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 480
+          },
+          "text": "And the only thing to call out is that there is a step size involved."
+        }
+      ],
+      "source": [
+        "Now I'm instantiating the model.",
+        "And here's where fast sampling comes in with DDIM.",
+        "So here's the function for DDIM.",
+        "You can look at the paper for the details, but this implements that with its scaling factors.",
+        "And then we load up our trained model here.",
+        "So what's cool is that we can actually just load up the trained model and use either DDIM or DDPM.",
+        "It doesn't matter.",
+        "This is just a sampling process after training.",
+        "And this is the sampling algorithm using DDIM.",
+        "And the only thing to call out is that there is a step size involved."
+      ],
+      "result": [
+        "现在我正在实例化模型。",
+        "这里是用DDIM进行快速采样的地方。",
+        "这是DDIM的功能。",
+        "可以查看论文了解细节，\\N但这里实现了相应的缩放因子。",
+        "然后我们在这里\\N加载训练好的模型。",
+        "很酷的是，我们可以\\N直接加载训练好的模型，\\N使用DDIM或DDPM。",
+        "这都没关系。",
+        "这只是训练后的采样过程。",
+        "这是使用DDIM的采样算法。",
+        "需要指出的是，这里涉及到一个步长。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 720
+          },
+          "text": "We're not going through every single time step."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 800
+          },
+          "text": "We're actually skipping steps here."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 600
+          },
+          "text": "And here is where n is 20."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 200
+          },
+          "text": "So this is 500 over 20."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 800
+          },
+          "text": "We'll run that here."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 960
+          },
+          "text": "And then we can sample."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 240
+          },
+          "text": "That was much, much faster."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 40
+          },
+          "text": "I could barely even see that there."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 80
+          },
+          "text": "And now the GIF is just being composed."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 440
+          },
+          "text": "We'll speed up the video for the GIF."
+        }
+      ],
+      "source": [
+        "We're not going through every single time step.",
+        "We're actually skipping steps here.",
+        "And here is where n is 20.",
+        "So this is 500 over 20.",
+        "We'll run that here.",
+        "And then we can sample.",
+        "That was much, much faster.",
+        "I could barely even see that there.",
+        "And now the GIF is just being composed.",
+        "We'll speed up the video for the GIF."
+      ],
+      "result": [
+        "我们没有逐个\\N时间步骤地进行。",
+        "实际上我们在\\N这里跳过了一些步骤。",
+        "这里的n是20。",
+        "所以这是500除以20。",
+        "我们将在这里运行。",
+        "然后我们可以进行采样。",
+        "这速度快了很多。",
+        "我几乎看不到那里。",
+        "现在正在合成GIF。",
+        "我们会加快合成GIF的视频速度。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 720
+          },
+          "text": "All right."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 120
+          },
+          "text": "So here's what that looks like."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 640
+          },
+          "text": "And it's very fast that it's able to instantly turn into these sprites."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 480
+          },
+          "text": "Now with this faster sampling method, you don't always get the same level of quality as if you were to run DDPM."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 560
+          },
+          "text": "These actually do look quite good."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 80
+          },
+          "text": "Empirically, people have found that with a model trained on these 500 steps, for example,"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 600
+          },
+          "text": "DDPM will perform better if you sample for 500 steps."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 720
+          },
+          "text": "But for any number under 500 steps, DDIM will do much better."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 560
+          },
+          "text": "And so now here's the same, but with a context model."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 920
+          },
+          "text": "So you can load in that context."
+        }
+      ],
+      "source": [
+        "All right.",
+        "So here's what that looks like.",
+        "And it's very fast that it's able to instantly turn into these sprites.",
+        "Now with this faster sampling method, you don't always get the same level of quality as if you were to run DDPM.",
+        "These actually do look quite good.",
+        "Empirically, people have found that with a model trained on these 500 steps, for example,",
+        "DDPM will perform better if you sample for 500 steps.",
+        "But for any number under 500 steps, DDIM will do much better.",
+        "And so now here's the same, but with a context model.",
+        "So you can load in that context."
+      ],
+      "result": [
+        "好了！",
+        "这就是它的样子。",
+        "它能够瞬间变成这些\\N游戏角色，速度非常快。",
+        "现在用这种更快的\\N采样方法，你并不总能\\N得到和使用DDPM一样的质量。",
+        "但这些实际上看起来相当不错。",
+        "实际上，人们发现，用在\\N这500步上训练的模型，例如，",
+        "如果你采样500步，\\NDDPM的表现会更好。",
+        "但对于任何小于500步\\N的数字，DDIM的表现会好得多。",
+        "现在这里是相同的，\\N但带有上下文模型。",
+        "所以你可以加载那个上下文。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 680
+          },
+          "text": "Great."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 600
+          },
+          "text": "So these are just random contexts here."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 440
+          },
+          "text": "But you can set them yourselves as well."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 10,
+            "milliseconds": 200
+          },
+          "text": "And this is what they look like."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 10,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 40
+          },
+          "text": "So now your question is probably, how does the speed compare?"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 440
+          },
+          "text": "So we can load up the original DDPM functions and sampling algorithm."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 120
+          },
+          "text": "And we can compare it using  timeit  in this notebook."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 280
+          },
+          "text": "So we're going to compare DDIM with DDPM."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 31,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 32,
+            "milliseconds": 840
+          },
+          "text": "All right."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 32,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 40
+          },
+          "text": "Look at that speed up."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 120
+          },
+          "text": "Wow."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 35,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 880
+          },
+          "text": "So try running these in your own notebook and see what you get."
+        }
+      ],
+      "source": [
+        "Great.",
+        "So these are just random contexts here.",
+        "But you can set them yourselves as well.",
+        "And this is what they look like.",
+        "So now your question is probably, how does the speed compare?",
+        "So we can load up the original DDPM functions and sampling algorithm.",
+        "And we can compare it using  ti'mei't  in this notebook.",
+        "So we're going to compare DDIM with DDPM.",
+        "All right.",
+        "Look at that speed up.",
+        "Wow.",
+        "So try running these in your own notebook and see what you get."
+      ],
+      "result": [
+        "太棒了！",
+        "这些只是随机的上下文。",
+        "但你们也可以自己设置。",
+        "它们是这样的。",
+        "那么现在你们可能\\N会问速度如何对比？",
+        "我们可以加载原始的\\NDDPM函数和采样算法。",
+        "然后我们可以在这个\\NNotebook中使用 timeit 进行比较。",
+        "我们将比较DDIM和DDPM。",
+        "好了",
+        "看看这个速度提升。",
+        "哇！",
+        "试着在你们自己的Notebook\\N中运行这些，看看结果如何。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/How Diffusion Models Work/DiffusionModels_L6_v02.srt",
+  "ouputBasePath": "input/How Diffusion Models Work/DiffusionModels_L6_v02",
+  "totalCost": 0.14826000000000003,
+  "translationPath": "input/How Diffusion Models Work/DiffusionModels_L6_v02/translation.json"
+}

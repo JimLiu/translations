@@ -1,0 +1,428 @@
+[Script Info]
+
+Title: sc-openai-c2-L8-vid9_1
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,方正准圆简体,16,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Arial,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.7,Secondary,,0,0,0,,In the previous few videos, Isa showed how to build an application using an LLM
+Dialogue: 0,0:00:10.8,0:00:19.0,Secondary,,0,0,0,,from evaluating the inputs to processing the inputs to then doing final output checking before you show the output to a user.
+Dialogue: 0,0:00:19.0,0:00:22.88,Secondary,,0,0,0,,After you've built such a system, how do you know how it's working?
+Dialogue: 0,0:00:22.88,0:00:26.52,Secondary,,0,0,0,,And maybe even as you deploy it and let users use it,
+Dialogue: 0,0:00:26.52,0:00:35.0,Secondary,,0,0,0,,how can you track how it's doing and find any shortcomings and continue to improve the quality of the answers of your system?
+Dialogue: 0,0:00:35.0,0:00:41.38,Secondary,,0,0,0,,In this video, I'd like to share with you some best practices for evaluating the output of an LLM.
+Dialogue: 0,0:00:41.38,0:00:46.44,Secondary,,0,0,0,,And I want to share with you specifically what it feels like to build one of these systems.
+Dialogue: 0,0:00:46.44,0:00:49.85,Secondary,,0,0,0,,One key distinction between what you hear me talk about in this video
+Dialogue: 0,0:00:49.85,0:00:55.55,Secondary,,0,0,0,,and what you may have seen in more traditional machine learning, supervised learning applications is
+Dialogue: 0,0:00:55.55,0:01:03.52,Secondary,,0,0,0,,because you can build such an application so quickly, the methods of evaluating it, it tends not to start off with a test set.
+Dialogue: 0,0:01:03.52,0:01:08.84,Secondary,,0,0,0,,Instead, you often end up gradually building up a set of test examples.
+Dialogue: 0,0:01:08.84,0:01:10.88,Secondary,,0,0,0,,Let me share with you what I mean by that.
+Dialogue: 0,0:01:10.88,0:01:18.39,Secondary,,0,0,0,,You will remember this diagram from the second video about how prompt-based development speeds up the core parts of model development
+Dialogue: 0,0:01:18.39,0:01:25.64,Secondary,,0,0,0,,from maybe months to just minutes or hours or at most a very small number of days.
+Dialogue: 0,0:01:25.64,0:01:32.52,Secondary,,0,0,0,,In the traditional supervised learning approach, if you needed to collect, say, 10,000 labeled examples anyway,
+Dialogue: 0,0:01:32.52,0:01:38.28,Secondary,,0,0,0,,then the incremental cost of collecting another 1,000 test examples isn't that bad.
+Dialogue: 0,0:01:38.28,0:01:41.22,Secondary,,0,0,0,,So in the traditional supervised learning setting,
+Dialogue: 0,0:01:41.23,0:01:48.67,Secondary,,0,0,0,,it was not unusual to collect a training set, collect a development set or holdout cross-validation set in the test set,
+Dialogue: 0,0:01:48.68,0:01:52.76,Secondary,,0,0,0,,and then tap those at hand throughout this development process.
+Dialogue: 0,0:01:52.76,0:01:57.86,Secondary,,0,0,0,,But if you're able to specify a prompt in just minutes and get something working in hours,
+Dialogue: 0,0:01:57.86,0:02:05.8,Secondary,,0,0,0,,then it would seem like a huge pain if you had to pause for a long time to collect 1,000 test examples
+Dialogue: 0,0:02:05.8,0:02:09.56,Secondary,,0,0,0,,because you can now get this working with zero training examples.
+Dialogue: 0,0:02:09.56,0:02:14.88,Secondary,,0,0,0,,So when building an application using an LLM, this is what it often feels like.
+Dialogue: 0,0:02:14.88,0:02:18.93,Secondary,,0,0,0,,First, you would tune the prompts on just a small handful of examples,
+Dialogue: 0,0:02:18.93,0:02:25.12,Secondary,,0,0,0,,maybe one to three to five examples, and try to get a prompt that works on them.
+Dialogue: 0,0:02:25.12,0:02:32.56,Secondary,,0,0,0,,And then as you have the system undergo additional testing, you occasionally run into a few examples that are tricky.
+Dialogue: 0,0:02:32.56,0:02:35.72,Secondary,,0,0,0,,The prompt doesn't work on them or the algorithm doesn't work on them.
+Dialogue: 0,0:02:35.72,0:02:42.63,Secondary,,0,0,0,,And in that case, you can take these additional one or two or three or five examples and add them to the set that you're testing on
+Dialogue: 0,0:02:42.64,0:02:46.24,Secondary,,0,0,0,,to just add additional tricky examples opportunistically.
+Dialogue: 0,0:02:46.24,0:02:53.91,Secondary,,0,0,0,,Eventually, you have enough of these examples you've added to your slowly growing development set
+Dialogue: 0,0:02:53.91,0:03:00.48,Secondary,,0,0,0,,that it becomes a bit inconvenient to manually run every example through the prompt every time you change the prompt.
+Dialogue: 0,0:03:00.48,0:03:08.4,Secondary,,0,0,0,,And then you start to develop metrics to measure performance on this small set of examples, such as maybe average accuracy.
+Dialogue: 0,0:03:08.4,0:03:16.84,Secondary,,0,0,0,,And one interesting aspect of this process is if you decide at any moment in time your system is working well enough,
+Dialogue: 0,0:03:16.88,0:03:19.88,Secondary,,0,0,0,,you can stop right there and not go on to the next bullet.
+Dialogue: 0,0:03:19.88,0:03:30.44,Secondary,,0,0,0,,And in fact, there are many deploy applications that stops at maybe the first or the second bullet and are running just fine.
+Dialogue: 0,0:03:30.44,0:03:37.3,Secondary,,0,0,0,,Now if your hand-built development set that you're evaluating the model on
+Dialogue: 0,0:03:37.3,0:03:40.84,Secondary,,0,0,0,,isn't giving you sufficient confidence yet in the performance of your system,
+Dialogue: 0,0:03:40.84,0:03:49.76,Secondary,,0,0,0,,then that's when you may go to the next step of collecting a randomly sampled set of examples to tune the model to.
+Dialogue: 0,0:03:49.76,0:03:54.6,Secondary,,0,0,0,,And this would continue to be a development set or a holdout cross-validation set,
+Dialogue: 0,0:03:54.10,0:04:00.12,Secondary,,0,0,0,,because it would be quite common to continue to tune your prompt to this.
+Dialogue: 0,0:04:00.12,0:04:05.68,Secondary,,0,0,0,,And only if you need even higher fidelity estimate of the performance of your system,
+Dialogue: 0,0:04:05.68,0:04:14.52,Secondary,,0,0,0,,then might you collect and use a holdout test sets that you don't even look at yourself when you're tuning the model.
+Dialogue: 0,0:04:14.52,0:04:18.50,Secondary,,0,0,0,,And so step four tends to be more important if, say,
+Dialogue: 0,0:04:18.50,0:04:28.92,Secondary,,0,0,0,,your system is getting the right answer 91% of the time and you want to tune it to get it to give the right answer 92 or 93% of the time.
+Dialogue: 0,0:04:28.92,0:04:36.80,Secondary,,0,0,0,,Then you do need a larger set of examples to measure those differences between 91 and 93% performance.
+Dialogue: 0,0:04:36.80,0:04:42.48,Secondary,,0,0,0,,And then only if you really need an unbiased, fair estimate of how was the system doing,
+Dialogue: 0,0:04:42.48,0:04:47.68,Secondary,,0,0,0,,then do you need to go beyond the development set to also collect a holdout test set.
+Dialogue: 0,0:04:47.68,0:04:49.10,Secondary,,0,0,0,,One important caveat,
+Dialogue: 0,0:04:49.12,0:04:55.49,Secondary,,0,0,0,,I've seen a lot of applications of large language models where there isn't meaningful risk of harm
+Dialogue: 0,0:04:59.8,0:05:08.1,Secondary,,0,0,0,,But obviously for any high-stakes applications, if there's a risk of bias or an inappropriate output causing harm to someone,
+Dialogue: 0,0:05:08.1,0:05:13.49,Secondary,,0,0,0,,then the responsibility to collect a test set to rigorously evaluate the performance of your system
+Dialogue: 0,0:05:13.49,0:05:19.4,Secondary,,0,0,0,,to make sure it's doing the right thing before you use it, that becomes much more important.
+Dialogue: 0,0:05:19.4,0:05:26.11,Secondary,,0,0,0,,But if, for example, if you are using it to summarize articles just for yourself to read and no one else,
+Dialogue: 0,0:05:26.12,0:05:28.61,Secondary,,0,0,0,,then maybe the risk of harm is more modest
+Dialogue: 0,0:05:28.62,0:05:38.48,Secondary,,0,0,0,,and you can stop early in this process without going to the expense of bullets four and five and collecting larger data sets on which to evaluate your algorithm.
+Dialogue: 0,0:05:38.48,0:05:48.60,Secondary,,0,0,0,,So in this example, let me start with the usual helper functions.
+Dialogue: 0,0:05:48.60,0:05:53.32,Secondary,,0,0,0,,Use a utils function to get a list of products and categories.
+Dialogue: 0,0:05:53.32,0:06:00.80,Secondary,,0,0,0,,So in the computers and laptop category, there's a list of computers and laptops and the smartphones and accessories category.
+Dialogue: 0,0:06:00.80,0:06:05.76,Secondary,,0,0,0,,Here's a list of smartphones and accessories and so on for other categories.
+Dialogue: 0,0:06:12.4,0:06:26.3,Secondary,,0,0,0,,Now let's say the task of an address is given a user input such as what TV can I buy if I'm on a budget
+Dialogue: 0,0:06:26.3,0:06:35.8,Secondary,,0,0,0,,to retrieve the relevant categories and products so that we have the right info to answer the user's query.
+Dialogue: 0,0:06:35.8,0:06:36.8,Secondary,,0,0,0,,So here's a prompt.
+Dialogue: 0,0:06:36.8,0:06:39.52,Secondary,,0,0,0,,Feel free to pause the video and read through this in detail if you wish.
+Dialogue: 0,0:06:39.52,0:06:47.36,Secondary,,0,0,0,,But the prompt specifies a set of instructions and it actually gives the language model one example of a good output.
+Dialogue: 0,0:06:47.36,0:06:50.50,Secondary,,0,0,0,,This is sometimes called a few shot or technically one shot prompting
+Dialogue: 0,0:06:50.50,0:06:56.64,Secondary,,0,0,0,,because we're actually using a user message and a system message to give it one example of a good output.
+Dialogue: 0,0:06:56.64,0:07:03.80,Secondary,,0,0,0,,If someone says I want the most expensive computer, let's just return all the computers because we don't have pricing information.
+Dialogue: 0,0:07:03.80,0:07:15.56,Secondary,,0,0,0,,Now let's use this prompt on the customer message, which TV can I buy if I'm on a budget.
+Dialogue: 0,0:07:15.56,0:07:22.76,Secondary,,0,0,0,,And so we're passing in to this both the prompt customer_msg_0 as well as the products and category.
+Dialogue: 0,0:07:22.76,0:07:26.88,Secondary,,0,0,0,,This is the information that we have retrieved up top using the utils function.
+Dialogue: 0,0:07:26.88,0:07:34.22,Secondary,,0,0,0,,And here it lists out the relevant information to this query, which is under the category televisions and whole theater systems.
+Dialogue: 0,0:07:34.22,0:07:38.22,Secondary,,0,0,0,,This is a list of TVs and whole theater systems that seem relevant.
+Dialogue: 0,0:07:38.22,0:07:43.92,Secondary,,0,0,0,,To see how well the prompt is doing, you may evaluate it on a second prompt.
+Dialogue: 0,0:07:43.92,0:07:47.48,Secondary,,0,0,0,,Someone says I need a charger for my smartphone.
+Dialogue: 0,0:07:47.48,0:07:56.40,Secondary,,0,0,0,,It looks like it's correctly retrieving this data, how to be a smartphone's accessories and list the relevant products.
+Dialogue: 0,0:07:56.40,0:08:00.68,Secondary,,0,0,0,,And here's another one.
+Dialogue: 0,0:08:00.68,0:08:03.8,Secondary,,0,0,0,,So what computers do you have?
+Dialogue: 0,0:08:03.8,0:08:06.62,Secondary,,0,0,0,,And hopefully you'll retrieve a list of the computers.
+Dialogue: 0,0:08:06.62,0:08:08.96,Secondary,,0,0,0,,So here I have three prompts.
+Dialogue: 0,0:08:08.96,0:08:12.70,Secondary,,0,0,0,,And if you are developing this prompt for the first time,
+Dialogue: 0,0:08:12.70,0:08:18.29,Secondary,,0,0,0,,it would be quite reasonable to have one or two or three examples like this
+Dialogue: 0,0:08:18.33,0:08:22.69,Secondary,,0,0,0,,and to keep on tuning the prompt until it gives appropriate outputs
+Dialogue: 0,0:08:22.69,0:08:30.20,Secondary,,0,0,0,,until the prompt is retrieving the relevant products and categories to the customer requests for all of your prompts,
+Dialogue: 0,0:08:30.40,0:08:32.41,Secondary,,0,0,0,,all three of them in this example.
+Dialogue: 0,0:08:34.96,0:08:38.49,Secondary,,0,0,0,,And if the prompt had been missing some products or something,
+Dialogue: 0,0:08:38.49,0:08:44.30,Secondary,,0,0,0,,then what we would do is probably go back to edit the prompt a few times until it gets it right on all three of these prompts.
+Dialogue: 0,0:08:45.40,0:08:53.20,Secondary,,0,0,0,,After you've gotten the system to this point, you might then start running the system in testing,
+Dialogue: 0,0:08:53.20,0:09:00.84,Secondary,,0,0,0,,maybe send it to internal test users or try using it yourself and just run it for a while to see what happens.
+Dialogue: 0,0:09:00.84,0:09:06.12,Secondary,,0,0,0,,And sometimes you will run across a prompt that it fails on.
+Dialogue: 0,0:09:06.12,0:09:07.84,Secondary,,0,0,0,,So here's an example of a prompt.
+Dialogue: 0,0:09:07.84,0:09:12.12,Secondary,,0,0,0,,Tell me about the SmartX pro phone and the Fotoshop camera, also what TVs you have.
+Dialogue: 0,0:09:12.12,0:09:16.50,Secondary,,0,0,0,,So when I run it on this prompt, it looks like it's outputting the right data,
+Dialogue: 0,0:09:16.50,0:09:20.32,Secondary,,0,0,0,,but it also outputs a bunch of text here, this extra junk.
+Dialogue: 0,0:09:20.32,0:09:26.82,Secondary,,0,0,0,,It makes it harder to parse this into a Python list of dictionaries.
+Dialogue: 0,0:09:26.82,0:09:30.8,Secondary,,0,0,0,,So we don't like that it's outputting this extra junk.
+Dialogue: 0,0:09:30.8,0:09:34.79,Secondary,,0,0,0,,So when you run across one example that the system fails on,
+Dialogue: 0,0:09:34.79,0:09:39.28,Secondary,,0,0,0,,then common practice is to just note down that this is a somewhat tricky example.
+Dialogue: 0,0:09:39.28,0:09:45.4,Secondary,,0,0,0,,So let's add this to our set of examples that we're going to test the system on systematically.
+Dialogue: 0,0:09:45.4,0:09:49.72,Secondary,,0,0,0,,And if you keep on running the system for a while longer, maybe it works on those examples.
+Dialogue: 0,0:09:49.72,0:09:53.64,Secondary,,0,0,0,,We did tune the prompt to three examples, so maybe it will work on many examples.
+Dialogue: 0,0:09:53.64,0:09:58.96,Secondary,,0,0,0,,But just by chance, you might run across another example where it generates an error.
+Dialogue: 0,0:09:58.96,0:10:07.92,Secondary,,0,0,0,,So this customer_msg_4 also causes the system to output a bunch of junk text at the end that we don't want.
+Dialogue: 0,0:10:07.92,0:10:13.68,Secondary,,0,0,0,,Trying to be helpful to get all this extra text, but we actually don't want this.
+Dialogue: 0,0:10:13.68,0:10:17.91,Secondary,,0,0,0,,And so at this point, you may have run this prompt maybe on hundreds of examples,
+Dialogue: 0,0:10:17.92,0:10:23.92,Secondary,,0,0,0,,maybe you have test users, but you would just take the examples, the tricky ones, it's doing poorly on.
+Dialogue: 0,0:10:23.92,0:10:28.67,Secondary,,0,0,0,,And now I have this set of five examples indexed from zero to four,
+Dialogue: 0,0:10:28.67,0:10:34.44,Secondary,,0,0,0,,have this set of five examples that you use to further fine tune the prompts.
+Dialogue: 0,0:10:34.44,0:10:44.56,Secondary,,0,0,0,,And in both of these examples, the LLM had output a bunch of extra junk text at the end that we don't want.
+Dialogue: 0,0:10:44.56,0:10:51.40,Secondary,,0,0,0,,And after a little bit of trial and error, you might decide to modify the prompts as follows.
+Dialogue: 0,0:10:51.40,0:10:54.64,Secondary,,0,0,0,,So here's a new prompt, this is called prompt v2.
+Dialogue: 0,0:10:54.64,0:11:00.56,Secondary,,0,0,0,,But what we did here was we added to the prompt, do not output any additional text that's not in JSON format,
+Dialogue: 0,0:11:00.56,0:11:03.64,Secondary,,0,0,0,,just to emphasize, please don't output this JSON stuff.
+Dialogue: 0,0:11:03.64,0:11:09.68,Secondary,,0,0,0,,And added a second example, using the user and assistant message for few-shot prompting,
+Dialogue: 0,0:11:09.68,0:11:12.60,Secondary,,0,0,0,,where the user asked the cheapest computer.
+Dialogue: 0,0:11:12.60,0:11:14.86,Secondary,,0,0,0,,And in both of the few-shot examples,
+Dialogue: 0,0:11:14.86,0:11:21.4,Secondary,,0,0,0,,we're demonstrating to the system a response where it gives only JSON outputs.
+Dialogue: 0,0:11:21.4,0:11:23.41,Secondary,,0,0,0,,So here's the extra thing that we just added to the prompt,
+Dialogue: 0,0:11:23.42,0:11:26.0,Secondary,,0,0,0,,do not output any additional text that's not in JSON format.
+Dialogue: 0,0:11:26.0,0:11:31.34,Secondary,,0,0,0,,And we use few_shot_user1, few_shot_assistant1, and few_shot_user2, few_shot_assistant2,
+Dialogue: 0,0:11:31.34,0:11:35.64,Secondary,,0,0,0,,to give it two of these few-shot prompts.
+Dialogue: 0,0:11:35.64,0:11:39.16,Secondary,,0,0,0,,So let me hit shift enter to find that prompt.
+Dialogue: 0,0:11:39.16,0:11:44.6,Secondary,,0,0,0,,And you were to go back and manually rerun this prompt on all five of the examples of user inputs,
+Dialogue: 0,0:11:44.6,0:11:47.36,Secondary,,0,0,0,,including this one that previously had given a broken output,
+Dialogue: 0,0:11:47.36,0:11:51.28,Secondary,,0,0,0,,you find that it now gives a correct output.
+Dialogue: 0,0:11:51.28,0:11:55.94,Secondary,,0,0,0,,And if you were to go back and rerun this new prompt, this is prompt version v2,
+Dialogue: 0,0:11:55.94,0:12:03.67,Secondary,,0,0,0,,on that customer message example that had resulted in the broken output with extra junk after the JSON output,
+Dialogue: 0,0:12:03.67,0:12:08.88,Secondary,,0,0,0,,then this will generate a better output.
+Dialogue: 0,0:12:08.88,0:12:16.44,Secondary,,0,0,0,,And I'm not going to do it here, but I encourage you to pause the video and rerun it yourself on customer_msg_4 as well on this prompt v2,
+Dialogue: 0,0:12:16.44,0:12:20.28,Secondary,,0,0,0,,see if it also generates the correct output.
+Dialogue: 0,0:12:20.28,0:12:24.60,Secondary,,0,0,0,,And hopefully it will, I think it should.
+Dialogue: 0,0:12:24.60,0:12:26.96,Secondary,,0,0,0,,And of course, when you modify the prompts,
+Dialogue: 0,0:12:26.96,0:12:36.76,Secondary,,0,0,0,,it's also useful to do a bit of regression testing to make sure that when fixing the incorrect outputs on prompts three and four,
+Dialogue: 0,0:12:36.76,0:12:41.48,Secondary,,0,0,0,,it didn't break the output on prompt zero either.
+Dialogue: 0,0:12:41.48,0:12:50.57,Secondary,,0,0,0,,Now you can kind of tell that if I had to copy paste five prompts, customer_msg_0, 1, 2, 3, and 4 into my Jupyter Notebook
+Dialogue: 0,0:12:50.57,0:12:55.81,Secondary,,0,0,0,,and run them and then manually look at them to see if they all put in the right categories and products,
+Dialogue: 0,0:12:55.81,0:12:57.32,Secondary,,0,0,0,,you can kind of do it.
+Dialogue: 0,0:12:57.32,0:13:00.8,Secondary,,0,0,0,,I can look at this and go yep, category TV and home theater systems products.
+Dialogue: 0,0:13:00.8,0:13:02.16,Secondary,,0,0,0,,Yep, looks like you got all of them.
+Dialogue: 0,0:13:02.16,0:13:04.66,Secondary,,0,0,0,,But it's actually a little bit painful to do this manually,
+Dialogue: 0,0:13:04.66,0:13:12.28,Secondary,,0,0,0,,to manually inspect or to look at this output to make sure with your eyes that this is exactly the right output.
+Dialogue: 0,0:13:12.28,0:13:19.20,Secondary,,0,0,0,,So when the development set that you're tuning to becomes more than just a small handful of examples,
+Dialogue: 0,0:13:19.20,0:13:27.20,Secondary,,0,0,0,,it then becomes useful to start to automate the testing process.
+Dialogue: 0,0:13:27.20,0:13:35.78,Secondary,,0,0,0,,So here is a set of 10 examples where I'm specifying 10 customer messages.
+Dialogue: 0,0:13:35.78,0:13:39.26,Secondary,,0,0,0,,So here's the customer message, what TV can I buy from a budget?
+Dialogue: 0,0:13:39.26,0:13:41.88,Secondary,,0,0,0,,As well as what's the ideal answer?
+Dialogue: 0,0:13:41.88,0:13:45.43,Secondary,,0,0,0,,Think of this as the right answer in the test set,
+Dialogue: 0,0:13:45.43,0:13:49.24,Secondary,,0,0,0,,or really I should say development set because we're actually tuning to this.
+Dialogue: 0,0:13:49.24,0:13:54.70,Secondary,,0,0,0,,And so we've collected here 10 examples indexed from zero through nine,
+Dialogue: 0,0:13:54.70,0:14:03.72,Secondary,,0,0,0,,where the last one is if the user says I would like hot tub time machine, we have no relevant products to that, really sorry.
+Dialogue: 0,0:14:03.72,0:14:07.4,Secondary,,0,0,0,,The ideal answer is the empty set.
+Dialogue: 0,0:14:07.4,0:14:13.34,Secondary,,0,0,0,,And now, if you want to evaluate automatically,
+Dialogue: 0,0:14:13.34,0:14:19.92,Secondary,,0,0,0,,what a prompt is doing on any of these 10 examples, here is a function to do so.
+Dialogue: 0,0:14:19.92,0:14:24.28,Secondary,,0,0,0,,It's kind of a long function, feel free to pause the video and read through it if you wish.
+Dialogue: 0,0:14:24.28,0:14:28.2,Secondary,,0,0,0,,But let me just demonstrate what it is actually doing.
+Dialogue: 0,0:14:28.2,0:14:32.44,Secondary,,0,0,0,,So let me print out the customer message for customer message 0.
+Dialogue: 0,0:14:32.44,0:14:38.8,Secondary,,0,0,0,,Right, so customer messages, which TV can I buy if I'm on a budget?
+Dialogue: 0,0:14:38.8,0:14:42.28,Secondary,,0,0,0,,And let's also print out the ideal answer.
+Dialogue: 0,0:14:42.28,0:14:49.40,Secondary,,0,0,0,,So the ideal answer is here are all the TVs that we want the prompt to retrieve.
+Dialogue: 0,0:14:49.40,0:14:56.92,Secondary,,0,0,0,,And let me now call the prompt, this is prompt v2 on this customer message with that user products and category information.
+Dialogue: 0,0:14:56.92,0:14:57.92,Secondary,,0,0,0,,Let's print it out.
+Dialogue: 0,0:14:57.92,0:15:01.68,Secondary,,0,0,0,,And then we'll call the eval.
+Dialogue: 0,0:15:01.68,0:15:09.52,Secondary,,0,0,0,,We'll call the eval_responsive_with_ideal function to see how well the response matches the ideal answer.
+Dialogue: 0,0:15:09.52,0:15:16.46,Secondary,,0,0,0,,And in this case, it did output the category that we wanted and it did output the entire list of products.
+Dialogue: 0,0:15:16.46,0:15:21.80,Secondary,,0,0,0,,And so it's this gives you the score of 1.0.
+Dialogue: 0,0:15:21.80,0:15:28.28,Secondary,,0,0,0,,Just to show you one more example, it turns out that I know it gets it wrong on example seven.
+Dialogue: 0,0:15:28.28,0:15:36.72,Secondary,,0,0,0,,So if I change this from zero to seven and run it, this is what it gets.
+Dialogue: 0,0:15:36.72,0:15:42.30,Secondary,,0,0,0,,Oh, let me update this to seven as well.
+Dialogue: 0,0:15:42.30,0:15:50.52,Secondary,,0,0,0,,So under this customer message, this is the ideal answer where it should output under gaming consoles and accessories.
+Dialogue: 0,0:15:50.52,0:15:52.60,Secondary,,0,0,0,,So this is gaming consoles and accessories.
+Dialogue: 0,0:15:52.60,0:16:01.72,Secondary,,0,0,0,,But whereas the response here has three outputs, it actually should have had one, two, three, four, five outputs.
+Dialogue: 0,0:16:01.72,0:16:04.48,Secondary,,0,0,0,,And so it's missing some of the products.
+Dialogue: 0,0:16:04.48,0:16:07.36,Secondary,,0,0,0,,So what I would do if I'm tuning the prompt now is
+Dialogue: 0,0:16:07.36,0:16:18.97,Secondary,,0,0,0,,I would then use a for loop to loop over all 10 of the development set examples where we repeatedly pull out the customer message,
+Dialogue: 0,0:16:18.97,0:16:25.80,Secondary,,0,0,0,,get the ideal answer, the right answer, call the arm to get a response, evaluate it,
+Dialogue: 0,0:16:25.80,0:16:27.88,Secondary,,0,0,0,,and then you know, accumulate it in average.
+Dialogue: 0,0:16:27.88,0:16:32.20,Secondary,,0,0,0,,And let me just run this.
+Dialogue: 0,0:16:32.20,0:16:35.96,Secondary,,0,0,0,,So this will take a while to run, but when it's done running, this is the result.
+Dialogue: 0,0:16:35.96,0:16:38.32,Secondary,,0,0,0,,We're running through the 10 examples.
+Dialogue: 0,0:16:38.32,0:16:41.24,Secondary,,0,0,0,,It looks like example seven was wrong.
+Dialogue: 0,0:16:41.24,0:16:46.12,Secondary,,0,0,0,,And so the fraction correct of 10 was 90% correct.
+Dialogue: 0,0:16:46.12,0:16:53.76,Secondary,,0,0,0,,And so if you were to tune the prompts, you can rerun this to see if the percent correct goes up or down.
+Dialogue: 0,0:16:53.76,0:17:00.48,Secondary,,0,0,0,,What you just saw in this Notebook is going through steps one, two, and three of this bulleted list.
+Dialogue: 0,0:17:00.48,0:17:09.6,Secondary,,0,0,0,,And this already gives a pretty good development sets of 10 examples with which to tune and validate the prompts is working.
+Dialogue: 0,0:17:09.6,0:17:11.24,Secondary,,0,0,0,,If you needed an additional level of rigor,
+Dialogue: 0,0:17:11.24,0:17:20.2,Secondary,,0,0,0,,then you now have the software needed to collect a randomly sample sets of maybe 100 examples with their ideal outputs.
+Dialogue: 0,0:17:20.2,0:17:25.80,Secondary,,0,0,0,,And maybe even go beyond that to the rigor of a holdout test set that you don't even look at while you're tuning the prompt.
+Dialogue: 0,0:17:25.80,0:17:29.71,Secondary,,0,0,0,,But for a lot of applications, stopping at bullet three,
+Dialogue: 0,0:17:29.72,0:17:35.93,Secondary,,0,0,0,,but there are also certainly applications where you could do what you just saw me do in Jupyter Notebook
+Dialogue: 0,0:17:36.44,0:17:39.84,Secondary,,0,0,0,,and get a pretty performance system quite quickly.
+Dialogue: 0,0:17:39.84,0:17:46.60,Secondary,,0,0,0,,And again, the important caveat that if you're working on a safety critical application or
+Dialogue: 0,0:17:46.60,0:17:50.90,Secondary,,0,0,0,,an application where there's non-trivial risk of harm,
+Dialogue: 0,0:17:50.90,0:17:56.0,Secondary,,0,0,0,,then of course it would be the responsible thing to do to actually get a much larger test set
+Dialogue: 0,0:17:59.34,0:18:00.34,Secondary,,0,0,0,,And so that's it.
+Dialogue: 0,0:18:00.34,0:18:06.34,Secondary,,0,0,0,,I find that the workflow of building applications using prompts is very different than a workflow
+Dialogue: 0,0:18:12.86,0:18:14.76,Secondary,,0,0,0,,And if you have not yet done it before,
+Dialogue: 0,0:18:14.76,0:18:22.38,Secondary,,0,0,0,,you might be surprised at how well an evaluation method built on just a few hand curated tricky examples.
+Dialogue: 0,0:18:22.38,0:18:27.40,Secondary,,0,0,0,,You think with 10 examples and this is not statistically valid for almost anything,
+Dialogue: 0,0:18:27.40,0:18:33.14,Secondary,,0,0,0,,but you might be surprised when you actually use this procedure, how effective adding a handful,
+Dialogue: 0,0:18:36.64,0:18:43.50,Secondary,,0,0,0,,in terms of helping you and your team get to an effective set of prompts and effective system.
+Dialogue: 0,0:18:43.50,0:18:45.3,Secondary,,0,0,0,,In this video,
+Dialogue: 0,0:18:45.3,0:18:55.50,Secondary,,0,0,0,,the outputs could be evaluated quantitatively as in there was a desired output and you could tell if it gave this desired output or not.
+Dialogue: 0,0:18:55.50,0:18:56.23,Secondary,,0,0,0,,So the next video,
+Dialogue: 0,0:18:56.23,0:19:04.90,Secondary,,0,0,0,,let's take a look at how you can evaluate output in that setting where what is the right answer is a bit more ambiguous.
+Dialogue: 0,0:00:05.0,0:00:10.7,Default,,0,0,0,,在前几个视频中，Isa展示了\N如何使用大型语言模型（LLM）来构建应用，
+Dialogue: 0,0:00:10.8,0:00:19.0,Default,,0,0,0,,从评估输入到处理输入，\N然后在向用户展示输出之前进行最终的输出检查。
+Dialogue: 0,0:00:19.0,0:00:22.88,Default,,0,0,0,,在你构建了这样一个系统之后，\N你怎么知道它的运行情况呢？
+Dialogue: 0,0:00:22.88,0:00:26.52,Default,,0,0,0,,甚至当你部署并让用户使用它时，
+Dialogue: 0,0:00:26.52,0:00:35.0,Default,,0,0,0,,你如何跟踪它的表现，发现不足之处，\N并继续提高系统答案的质量呢？
+Dialogue: 0,0:00:35.0,0:00:41.38,Default,,0,0,0,,在这个视频中，我想和大家\N分享一些评估LLM输出的最佳实践。
+Dialogue: 0,0:00:41.38,0:00:46.44,Default,,0,0,0,,我特别想和你分享\N构建这些系统的感觉是什么样的。
+Dialogue: 0,0:00:46.44,0:00:49.85,Default,,0,0,0,,你在这个视频中听我讲述的内容
+Dialogue: 0,0:00:49.85,0:00:55.55,Default,,0,0,0,,和你在更传统的机器学习，监督学习\N应用中可能看到的内容之间的一个关键区别是
+Dialogue: 0,0:00:55.55,0:01:03.52,Default,,0,0,0,,因为你可以快速构建这样的应用程序，\N所以评估它的方法通常不会从测试数据集开始。
+Dialogue: 0,0:01:03.52,0:01:08.84,Default,,0,0,0,,相反，你通常最终会逐渐建立一套测试例子。
+Dialogue: 0,0:01:08.84,0:01:10.88,Default,,0,0,0,,让我向你解释我这么说的原因。
+Dialogue: 0,0:01:10.88,0:01:18.39,Default,,0,0,0,,你还记得第二个视频中的这个图表，它展示了\N”如何通过基于提示的开发加快模型开发“\N的核心部分，
+Dialogue: 0,0:01:18.39,0:01:25.64,Default,,0,0,0,,从可能需要几个月到\N仅仅几分钟、几小时或者最多几天。
+Dialogue: 0,0:01:25.64,0:01:32.52,Default,,0,0,0,,在传统的监督学习方法中，如果你需要收集，\N比如说，10,000个标记了的数据示例，
+Dialogue: 0,0:01:32.52,0:01:38.28,Default,,0,0,0,,那么收集另外1,000个\N测试示例的增量成本并不算高。
+Dialogue: 0,0:01:38.28,0:01:41.22,Default,,0,0,0,,所以在传统的监督学习环境中，
+Dialogue: 0,0:01:41.23,0:01:48.67,Default,,0,0,0,,收集训练数据集、收集开发数据集、\N保留交叉验证数据集和测试数据集是很常见的，
+Dialogue: 0,0:01:48.68,0:01:52.76,Default,,0,0,0,,然后在整个开发过程中随时要使用这些数据。
+Dialogue: 0,0:01:52.76,0:01:57.86,Default,,0,0,0,,但是，如果你使用Prompt-based AI，\N你只要几分钟内就可以写好一个提示\（Prompt），N并在几个小时内使其工作，
+Dialogue: 0,0:01:57.86,0:02:05.8,Default,,0,0,0,,那么如果你必须暂停很长时间\N去收集1000个测试示例，就会觉得非常麻烦，
+Dialogue: 0,0:02:05.8,0:02:09.56,Default,,0,0,0,,因为你现在完全不需要训练数据\N就可以让它正常工作。
+Dialogue: 0,0:02:09.56,0:02:14.88,Default,,0,0,0,,所以在使用LLM构建应用程序时，\N通常会有这种感觉：
+Dialogue: 0,0:02:14.88,0:02:18.93,Default,,0,0,0,,首先，你会在少量的例子\N上调整提示（Prompt），
+Dialogue: 0,0:02:18.93,0:02:25.12,Default,,0,0,0,,可能是一到三到五个例子，\N尝试找到一个适用于它们的提示。
+Dialogue: 0,0:02:25.12,0:02:32.56,Default,,0,0,0,,然后，在系统调试过程中，\N你偶尔会遇到一些棘手的案例。
+Dialogue: 0,0:02:32.56,0:02:35.72,Default,,0,0,0,,提示或者算法在这些案例上不起作用。
+Dialogue: 0,0:02:35.72,0:02:42.63,Default,,0,0,0,,在这种情况下，你可以把这些额外的一两个\N或三五个例子加入到你正在测试的数据集中，
+Dialogue: 0,0:02:42.64,0:02:46.24,Default,,0,0,0,,慢慢的收集更多棘手的例子\N形成一个开发数据集。
+Dialogue: 0,0:02:46.24,0:02:53.91,Default,,0,0,0,,最后，你添加到开发数据集的例子足够多了，
+Dialogue: 0,0:02:53.91,0:03:00.48,Default,,0,0,0,,以至于每次对提示修改后，要手动\N把数据集的例子挨个运行一遍都有点麻烦了。
+Dialogue: 0,0:03:00.48,0:03:08.4,Default,,0,0,0,,然后你可以开始制定指标来衡量\N这些例子的运行情况，比如说平均准确率如何。
+Dialogue: 0,0:03:08.4,0:03:16.84,Default,,0,0,0,,而这个过程中，如果在任何时候\N你觉得系统运行得足够好了，
+Dialogue: 0,0:03:16.88,0:03:19.88,Default,,0,0,0,,你可以就此停止，不需要再进行下一个步骤。
+Dialogue: 0,0:03:19.88,0:03:30.44,Default,,0,0,0,,事实上，有很多应用可能只进行\N到第一或第二步，运行得也很好。
+Dialogue: 0,0:03:30.44,0:03:37.3,Default,,0,0,0,,现在，如果你手工收集的\N用来评估模型的数据集，
+Dialogue: 0,0:03:37.3,0:03:40.84,Default,,0,0,0,,还不能让你对系统的表现有足够的信心，
+Dialogue: 0,0:03:40.84,0:03:49.76,Default,,0,0,0,,那么你可能需要进行下一步，\N收集随机抽样的数据集来调整模型。
+Dialogue: 0,0:03:49.76,0:03:54.6,Default,,0,0,0,,这将继续作为一个开发数据集\N或保留交叉验证数据集，
+Dialogue: 0,0:03:54.10,0:04:00.12,Default,,0,0,0,,因为继续调整你的提示\N以适应数据集合是很常见的。
+Dialogue: 0,0:04:00.12,0:04:05.68,Default,,0,0,0,,只有当你需要对系统的表现\N做很高精准度的评估时，
+Dialogue: 0,0:04:05.68,0:04:14.52,Default,,0,0,0,,你才需要收集和使用一个保留测试数据集，\N通常在调整模型时，你是不应该使用\N这个保留测试集的（甚至看都不要看一眼）。
+Dialogue: 0,0:04:14.52,0:04:18.50,Default,,0,0,0,,所以第四步在某种程度上更重要，\N比如说：
+Dialogue: 0,0:04:18.50,0:04:28.92,Default,,0,0,0,,如果你的系统正确率为91%，\N你想调整它使正确率达到92%或93%。
+Dialogue: 0,0:04:28.92,0:04:36.80,Default,,0,0,0,,那么你确实需要更多的例子\N来衡量91%和93%之间的准确率差异。
+Dialogue: 0,0:04:36.80,0:04:42.48,Default,,0,0,0,,只有在你真的需要一个\N公正、无偏的估计来评估系统的表现时，
+Dialogue: 0,0:04:42.48,0:04:47.68,Default,,0,0,0,,你才需要在开发数据集之外\N再收集一个保留测试数据集。
+Dialogue: 0,0:04:47.68,0:04:49.10,Default,,0,0,0,,有一个重要的注意事项：
+Dialogue: 0,0:04:49.12,0:04:59.8,Default,,0,0,0,,我见过很多大型语言模型的应用，\N其中如果给出的答案不太准确，\N并没有实质性的危害风险。
+Dialogue: 0,0:04:59.8,0:05:08.1,Default,,0,0,0,,但显然对于任何高风险的应用，如果存在\N偏见风险或不恰当的输出对某人造成伤害，
+Dialogue: 0,0:05:08.1,0:05:13.49,Default,,0,0,0,,那么收集一个测试集来严格评估你的系统的表现，
+Dialogue: 0,0:05:13.49,0:05:19.4,Default,,0,0,0,,确保在使用之前它能做正确的事情，\N这就变得更加重要了。
+Dialogue: 0,0:05:19.4,0:05:26.11,Default,,0,0,0,,但是，举个例子，如果你只是\N用它来为自己阅读的文章做总结，\N而不是给别人看，
+Dialogue: 0,0:05:26.12,0:05:28.61,Default,,0,0,0,,那么可能造成的危害风险就相对较小
+Dialogue: 0,0:05:28.62,0:05:38.48,Default,,0,0,0,,你可以在这个过程的早期就停止，\N而不用花费第四和第五点的成本，\N收集更大的数据集来评估你的算法。
+Dialogue: 0,0:05:38.48,0:05:48.60,Default,,0,0,0,,所以在这个例子中，让我从常用的辅助函数开始。
+Dialogue: 0,0:05:48.60,0:05:53.32,Default,,0,0,0,,使用一个utils函数\N来获取产品和类别的列表。
+Dialogue: 0,0:05:53.32,0:06:00.80,Default,,0,0,0,,所以在计算机和笔记本电脑类别中，\N有一个计算机和笔记本电脑的列表，\N还有智能手机和配件类别。
+Dialogue: 0,0:06:00.80,0:06:05.76,Default,,0,0,0,,这里有一个智能手机和配件的\N列表，以及其他类别的列表。
+Dialogue: 0,0:06:12.4,0:06:26.3,Default,,0,0,0,,现在假设一个任务是：\N“根据用户输入，比如我有预算限制要买什么电视
+Dialogue: 0,0:06:26.3,0:06:35.8,Default,,0,0,0,,来检索相关的类别和产品，\N以便我们有正确的信息来回答用户的查询。”
+Dialogue: 0,0:06:35.8,0:06:36.8,Default,,0,0,0,,那么这里有一个提示。
+Dialogue: 0,0:06:36.8,0:06:39.52,Default,,0,0,0,,如果需要的话请随时暂停视频，\N以便你可以详细阅读这个Prompt的详细信息。
+Dialogue: 0,0:06:39.52,0:06:47.36,Default,,0,0,0,,但是提示中指定了一组说明，\N并且实际上给了语言模型一个好的输出示例。
+Dialogue: 0,0:06:47.36,0:06:50.50,Default,,0,0,0,,这有时被称为少量示例（Few-shot）\N或者从技术上说是单示例提示（One-shot prompting）
+Dialogue: 0,0:06:50.50,0:06:56.64,Default,,0,0,0,,因为我们实际上使用用户消息\N和系统消息给它一个好的输出示例。
+Dialogue: 0,0:06:56.64,0:07:03.80,Default,,0,0,0,,如果有人说我想要最贵的电脑，\N那我们就返回所有电脑，因为我们没有价格信息。
+Dialogue: 0,0:07:03.80,0:07:15.56,Default,,0,0,0,,现在让我们在客户留言上使用这个提示：\N“如果我预算有限，我可以买哪台电视？”
+Dialogue: 0,0:07:15.56,0:07:22.76,Default,,0,0,0,,所以我们把提示、customer_msg_0\N和产品类别都传递给它。
+Dialogue: 0,0:07:22.76,0:07:26.88,Default,,0,0,0,,这是我们在上面使用utils函数\N检索到的信息。
+Dialogue: 0,0:07:26.88,0:07:34.22,Default,,0,0,0,,这里列出了与此查询相关的信息，\N即电视和整个影院系统类别下的信息。
+Dialogue: 0,0:07:34.22,0:07:38.22,Default,,0,0,0,,这是一份看起来相关的电视\N和整个影院系统列表。
+Dialogue: 0,0:07:38.22,0:07:43.92,Default,,0,0,0,,要查看提示的效果如何，\N可以在第二个提示上进行评估。
+Dialogue: 0,0:07:43.92,0:07:47.48,Default,,0,0,0,,有人说我需要一个智能手机充电器。
+Dialogue: 0,0:07:47.48,0:07:56.40,Default,,0,0,0,,看起来它正确地获取了这些数据，\N如何成为智能手机配件并列出相关产品。
+Dialogue: 0,0:07:56.40,0:08:00.68,Default,,0,0,0,,还有另一个：
+Dialogue: 0,0:08:00.68,0:08:03.8,Default,,0,0,0,,“那么你们有哪些电脑？”
+Dialogue: 0,0:08:03.8,0:08:06.62,Default,,0,0,0,,希望你能找到一份电脑列表。
+Dialogue: 0,0:08:06.62,0:08:08.96,Default,,0,0,0,,所以这里我有三个提示。
+Dialogue: 0,0:08:08.96,0:08:12.70,Default,,0,0,0,,如果你是第一次开发这个提示，
+Dialogue: 0,0:08:12.70,0:08:18.29,Default,,0,0,0,,这样的一两个或三个例子是相当合理的
+Dialogue: 0,0:08:18.33,0:08:22.69,Default,,0,0,0,,并不断调整提示，直到它给出适当的输出
+Dialogue: 0,0:08:22.69,0:08:30.20,Default,,0,0,0,,直到提示能够根据客户的请求，\N检索出所有提示所需的相关产品和类别，
+Dialogue: 0,0:08:30.40,0:08:32.41,Default,,0,0,0,,就像这个例子中的所有三个提示一样。
+Dialogue: 0,0:08:34.96,0:08:38.49,Default,,0,0,0,,如果提示缺少一些产品之类的东西，
+Dialogue: 0,0:08:38.49,0:08:44.30,Default,,0,0,0,,那么我们可能会回去修改几次提示，\N直到它在这三个提示上都正确。
+Dialogue: 0,0:08:45.40,0:08:53.20,Default,,0,0,0,,在将系统调整到这个程度之后，\N你可能会开始测试你的系统，
+Dialogue: 0,0:08:53.20,0:09:00.84,Default,,0,0,0,,也许将其发送给内部测试用户\N或尝试自己使用它，然后运行一段时间\N看看会发生什么。
+Dialogue: 0,0:09:00.84,0:09:06.12,Default,,0,0,0,,有时候你会遇到一个它无法解决的提示。
+Dialogue: 0,0:09:06.12,0:09:07.84,Default,,0,0,0,,这里有一个提示的例子。
+Dialogue: 0,0:09:07.84,0:09:12.12,Default,,0,0,0,,告诉我关于SmartX Pro手机\N和Fotoshop相机，还有你们有哪些电视。
+Dialogue: 0,0:09:12.12,0:09:16.50,Default,,0,0,0,,当我在这个提示上运行它时，\N看起来它输出了正确的数据，
+Dialogue: 0,0:09:16.50,0:09:20.32,Default,,0,0,0,,但它也输出了一堆额外的垃圾文字。
+Dialogue: 0,0:09:20.32,0:09:26.82,Default,,0,0,0,,这使得要这段字符串很难\N被解析成Python对象列表。
+Dialogue: 0,0:09:26.82,0:09:30.8,Default,,0,0,0,,我们不喜欢它输出这些额外的废话。
+Dialogue: 0,0:09:30.8,0:09:34.79,Default,,0,0,0,,当你遇到一个系统处理失败的例子时，
+Dialogue: 0,0:09:34.79,0:09:39.28,Default,,0,0,0,,通常的做法就是记下\N这是一个有点棘手的例子。
+Dialogue: 0,0:09:39.28,0:09:45.4,Default,,0,0,0,,那么让我们把这个加入\N到我们要测试系统的例子集合里。
+Dialogue: 0,0:09:45.4,0:09:49.72,Default,,0,0,0,,如果你继续运行系统一段时间，\N也许它能处理那些例子。
+Dialogue: 0,0:09:49.72,0:09:53.64,Default,,0,0,0,,我们确实调整了三个示例的提示，\N它可能会在很多例子上都能工作。
+Dialogue: 0,0:09:53.64,0:09:58.96,Default,,0,0,0,,但是碰巧，你可能会遇到\N另一个它产生错误的例子。
+Dialogue: 0,0:09:58.96,0:10:07.92,Default,,0,0,0,,这个customer_msg_4也导致系统\N在最后输出了一堆我们不想要的垃圾文本。
+Dialogue: 0,0:10:07.92,0:10:13.68,Default,,0,0,0,,试图帮助我们得到所有这些\N额外的文本，但实际上我们并不需要这些。
+Dialogue: 0,0:10:13.68,0:10:17.91,Default,,0,0,0,,在这一点上，你可能已经\N在数百个例子上运行了这个提示，
+Dialogue: 0,0:10:17.92,0:10:23.92,Default,,0,0,0,,也许你有测试用户，但你只需要\N拿那些棘手的例子，它做得不好的那些。
+Dialogue: 0,0:10:23.92,0:10:28.67,Default,,0,0,0,,现在我有这一组5个例子，从0到4编号，
+Dialogue: 0,0:10:28.67,0:10:34.44,Default,,0,0,0,,有这一组5个例子，\N你可以用来进一步微调提示。
+Dialogue: 0,0:10:34.44,0:10:44.56,Default,,0,0,0,,在这两个例子中，LLM \N都输出了一堆我们不想要的额外垃圾文本。
+Dialogue: 0,0:10:44.56,0:10:51.40,Default,,0,0,0,,经过一点尝试和错误，\N你可能会决定修改提示如下：
+Dialogue: 0,0:10:51.40,0:10:54.64,Default,,0,0,0,,这里有一个新版本的提示，叫做Prompt v2。
+Dialogue: 0,0:10:54.64,0:11:00.56,Default,,0,0,0,,但我们在这里做的是，我们在提示中添加了：\N“不要输出任何不是 JSON 格式的额外文本”。
+Dialogue: 0,0:11:00.56,0:11:03.64,Default,,0,0,0,,就是强调一下：请不要输出JSON之外的内容。
+Dialogue: 0,0:11:03.64,0:11:09.68,Default,,0,0,0,,并添加了第2个例子，\N使用用户和助手消息进行\N少量示例提示（Few-shot prompting），
+Dialogue: 0,0:11:09.68,0:11:12.60,Default,,0,0,0,,用户询问最便宜的电脑。
+Dialogue: 0,0:11:12.60,0:11:14.86,Default,,0,0,0,,在这两个少量示例提示的例子中，
+Dialogue: 0,0:11:14.86,0:11:21.4,Default,,0,0,0,,我们向系统展示了一个示例，\N这个示例只返回 JSON 格式的结果。
+Dialogue: 0,0:11:21.4,0:11:23.41,Default,,0,0,0,,这是我们刚刚添加到提示中的额外内容：
+Dialogue: 0,0:11:23.42,0:11:26.0,Default,,0,0,0,,不要输出任何不是JSON格式的额外文本。
+Dialogue: 0,0:11:26.0,0:11:31.34,Default,,0,0,0,,我们使用few_shot_user1, \Nfew_shot_assistant1, few_shot_user2 \N和 few_shot_assistant2，
+Dialogue: 0,0:11:31.34,0:11:35.64,Default,,0,0,0,,给它两个这样的少量示例提示。
+Dialogue: 0,0:11:35.64,0:11:39.16,Default,,0,0,0,,那么让我按shift enter找到那个提示。
+Dialogue: 0,0:11:39.16,0:11:44.6,Default,,0,0,0,,如果你回头手动重新运行这个提示，\N对所有五个用户输入示例，
+Dialogue: 0,0:11:44.6,0:11:47.36,Default,,0,0,0,,包括之前给出了错误输出的这个，
+Dialogue: 0,0:11:47.36,0:11:51.28,Default,,0,0,0,,你会发现它现在给出了正确的输出。
+Dialogue: 0,0:11:51.28,0:11:55.94,Default,,0,0,0,,如果你回头重新运行这个新提示，\N这是提示版本v2，
+Dialogue: 0,0:11:55.94,0:12:03.67,Default,,0,0,0,,在那个客户留言示例上，\N之前的版本在JSON输出之后还有额外垃圾文本，\N导致输出错误。
+Dialogue: 0,0:12:03.67,0:12:08.88,Default,,0,0,0,,新版本生成了更好的输出结果。
+Dialogue: 0,0:12:08.88,0:12:16.44,Default,,0,0,0,,我不会在这里做，但我鼓励你暂停视频，\N然后自己重新运行customer_msg_4，\N还有这个提示v2，
+Dialogue: 0,0:12:16.44,0:12:20.28,Default,,0,0,0,,看看它是否也能生成正确的输出。
+Dialogue: 0,0:12:20.28,0:12:24.60,Default,,0,0,0,,希望它能，我觉得应该可以。
+Dialogue: 0,0:12:24.60,0:12:26.96,Default,,0,0,0,,当然，当你修改提示时，
+Dialogue: 0,0:12:26.96,0:12:36.76,Default,,0,0,0,,也有必要做一些回归测试，\N以确保在修复提示3和4的错误输出时，
+Dialogue: 0,0:12:36.76,0:12:41.48,Default,,0,0,0,,没有破坏提示0的输出。
+Dialogue: 0,0:12:41.48,0:12:50.57,Default,,0,0,0,,现在你可以看出，如果我必须复制粘贴\N五个提示，customer_msg_0、1、2、3和4\N到我的Jupyter Notebook，
+Dialogue: 0,0:12:50.57,0:12:55.81,Default,,0,0,0,,运行它们，然后手动查看它们，\N看看它们是否都放在了正确的类别和产品中，
+Dialogue: 0,0:12:55.81,0:12:57.32,Default,,0,0,0,,你可以这么做。
+Dialogue: 0,0:12:57.32,0:13:00.8,Default,,0,0,0,,我可以看着这个说：\N是的，类别是电视和家庭影院系统产品。
+Dialogue: 0,0:13:00.8,0:13:02.16,Default,,0,0,0,,嗯，看起来你把它们都找到了。
+Dialogue: 0,0:13:02.16,0:13:04.66,Default,,0,0,0,,但实际上，手动做这个有点痛苦，
+Dialogue: 0,0:13:04.66,0:13:12.28,Default,,0,0,0,,需要用眼睛仔细检查输出结果，\N确保这确实是正确的输出。
+Dialogue: 0,0:13:12.28,0:13:19.20,Default,,0,0,0,,当你调整的开发集不再只有少数几个例子时，
+Dialogue: 0,0:13:19.20,0:13:27.20,Default,,0,0,0,,自动化测试流程就变得很有用了。
+Dialogue: 0,0:13:27.20,0:13:35.78,Default,,0,0,0,,这里有10个例子，\N我指定了10条客户留言。
+Dialogue: 0,0:13:35.78,0:13:39.26,Default,,0,0,0,,这是客户的留言，\N我有预算可以买什么电视？
+Dialogue: 0,0:13:39.26,0:13:41.88,Default,,0,0,0,,还有什么是理想的答案？
+Dialogue: 0,0:13:41.88,0:13:45.43,Default,,0,0,0,,把这个当作测试数据集里的正确答案，
+Dialogue: 0,0:13:45.43,0:13:49.24,Default,,0,0,0,,或者我应该说开发数据集，\N因为我们实际上是在调整这个。
+Dialogue: 0,0:13:49.24,0:13:54.70,Default,,0,0,0,,我们在这里收集了10个例子，\N索引编号从0到9，
+Dialogue: 0,0:13:54.70,0:14:03.72,Default,,0,0,0,,最后一个是：\N“如果用户说我想要热水浴缸时间机器，\N我们真的没有相关产品，非常抱歉。”
+Dialogue: 0,0:14:03.72,0:14:07.4,Default,,0,0,0,,理想的答案是空集。
+Dialogue: 0,0:14:07.4,0:14:13.34,Default,,0,0,0,,现在，如果你想自动评估
+Dialogue: 0,0:14:13.34,0:14:19.92,Default,,0,0,0,,某个提示在这10个例子中的某个例子上\N的运行结果，这里有一个函数可以实现。
+Dialogue: 0,0:14:19.92,0:14:24.28,Default,,0,0,0,,这是一个有点长的函数，如果你\N愿意的话，可以暂停视频并仔细阅读。
+Dialogue: 0,0:14:24.28,0:14:28.2,Default,,0,0,0,,让我演示一下它实际上在做什么。
+Dialogue: 0,0:14:28.2,0:14:32.44,Default,,0,0,0,,让我打印出索引是0的客户留言。
+Dialogue: 0,0:14:32.44,0:14:38.8,Default,,0,0,0,,客户留言：“如果我预算有限，\N我可以买哪台电视？”
+Dialogue: 0,0:14:38.8,0:14:42.28,Default,,0,0,0,,我们也来打印一下\N这个留言理想的答案是什么。
+Dialogue: 0,0:14:42.28,0:14:49.40,Default,,0,0,0,,所以理想的答案是根据提示\N列出所有我们希望获取的电视。
+Dialogue: 0,0:14:49.40,0:14:56.92,Default,,0,0,0,,现在让我调用这个提示，这是在\N这个客户消息上使用该用户产品\N和类别信息的提示符v2。
+Dialogue: 0,0:14:56.92,0:14:57.92,Default,,0,0,0,,我们打印出来。
+Dialogue: 0,0:14:57.92,0:15:01.68,Default,,0,0,0,,然后我们将调用eval。
+Dialogue: 0,0:15:01.68,0:15:09.52,Default,,0,0,0,,我们将调用\Neval_responsive_with_ideal函数，\N看看返回结果与理想答案的匹配程度如何。
+Dialogue: 0,0:15:09.52,0:15:16.46,Default,,0,0,0,,在这种情况下，\N它确实输出了我们想要的类别，\N也输出了整个产品列表。
+Dialogue: 0,0:15:16.46,0:15:21.80,Default,,0,0,0,,所以这给你一个1.0的分数。
+Dialogue: 0,0:15:21.80,0:15:28.28,Default,,0,0,0,,再给你们举个例子，\N事实证明我知道它在第7个例子上出错了。
+Dialogue: 0,0:15:28.28,0:15:36.72,Default,,0,0,0,,所以如果我把这个从0改成7\N然后运行，这就是它得到的。
+Dialogue: 0,0:15:36.72,0:15:42.30,Default,,0,0,0,,哦，让我把这个也更新成7。
+Dialogue: 0,0:15:42.30,0:15:50.52,Default,,0,0,0,,在这个客户留言下面，\N这是理想的答案，它应该输出\N在”游戏机和配件“分类下面。
+Dialogue: 0,0:15:50.52,0:15:52.60,Default,,0,0,0,,这是游戏机和配件。
+Dialogue: 0,0:15:52.60,0:16:01.72,Default,,0,0,0,,但是这里的回应有三个输出，\N实际上应该有一、二、三、四、五个输出。
+Dialogue: 0,0:16:01.72,0:16:04.48,Default,,0,0,0,,它缺少了一些产品。
+Dialogue: 0,0:16:04.48,0:16:07.36,Default,,0,0,0,,如果我现在要调整提示的话，
+Dialogue: 0,0:16:07.36,0:16:18.97,Default,,0,0,0,,我会用一个for循环来遍历\N所有10个来自开发数据集的示例，\N我们逐个获取客户留言，
+Dialogue: 0,0:16:18.97,0:16:25.80,Default,,0,0,0,,得到理想答案，正确答案，调用函数\N得到返回结果，并对结果进行评估，
+Dialogue: 0,0:16:25.80,0:16:27.88,Default,,0,0,0,,然后你知道，累积平均。
+Dialogue: 0,0:16:27.88,0:16:32.20,Default,,0,0,0,,让我运行一下这个。
+Dialogue: 0,0:16:32.20,0:16:35.96,Default,,0,0,0,,这个运行起来需要一段时间，\N但当它运行完毕时，这就是结果。
+Dialogue: 0,0:16:35.96,0:16:38.32,Default,,0,0,0,,我们正在浏览10个示例。
+Dialogue: 0,0:16:38.32,0:16:41.24,Default,,0,0,0,,看起来第7个示例是错误的。
+Dialogue: 0,0:16:41.24,0:16:46.12,Default,,0,0,0,,所以在10个示例的测试中，\N正确的比例是90%。
+Dialogue: 0,0:16:46.12,0:16:53.76,Default,,0,0,0,,因此，如果你调整提示，\N可以重新运行以查看正确百分比是上升还是下降。
+Dialogue: 0,0:16:53.76,0:17:00.48,Default,,0,0,0,,你刚才在这个笔记本中看到的是\N完成这个项目符号列表中的第一、二、三步。
+Dialogue: 0,0:17:00.48,0:17:09.6,Default,,0,0,0,,这已经提供了一个相当好的\N开发数据集，包括10个示例，\N用于调整和验证提示是否有效。
+Dialogue: 0,0:17:09.6,0:17:11.24,Default,,0,0,0,,如果你需要更高的严谨性，
+Dialogue: 0,0:17:11.24,0:17:20.2,Default,,0,0,0,,那么你现在已经有了需要的软件，\N可以收集一个随机抽样的示例数据集，\N比如100个示例及其理想输出。
+Dialogue: 0,0:17:20.2,0:17:25.80,Default,,0,0,0,,甚至可以做的更好，用一个\N你在调整提示时完全没有测试过的保留测试集，\N以保证严谨性。
+Dialogue: 0,0:17:25.80,0:17:29.71,Default,,0,0,0,,但对于很多应用来说，做到第三点就足够了，
+Dialogue: 0,0:17:29.72,0:17:35.93,Default,,0,0,0,,像我刚才在Jupyter Notebook\N做的这些，你也可以应用，
+Dialogue: 0,0:17:36.44,0:17:39.84,Default,,0,0,0,,帮你快速将系统准确率优化到很好。
+Dialogue: 0,0:17:39.84,0:17:46.60,Default,,0,0,0,,再次强调，如果你正在开发\N对安全性要求很高的应用或者
+Dialogue: 0,0:17:46.60,0:17:50.90,Default,,0,0,0,,可能存在实质性伤害风险的应用，
+Dialogue: 0,0:17:50.90,0:17:59.34,Default,,0,0,0,,那么负责任的做法当然是\N在任何地方使用它之前，进行\N大规模的测试集验证以严格验证其准确性。
+Dialogue: 0,0:17:59.34,0:18:00.34,Default,,0,0,0,,就是这样。
+Dialogue: 0,0:18:00.34,0:18:12.86,Default,,0,0,0,,我发现，使用提示构建应用程序\N的工作流程与使用监督学习构建应用程序\N的工作流程非常不同，迭代的步伐感觉快了很多。
+Dialogue: 0,0:18:12.86,0:18:14.76,Default,,0,0,0,,如果你还没有尝试过这种方法，
+Dialogue: 0,0:18:14.76,0:18:22.38,Default,,0,0,0,,你可能会对只用几个精心策划的棘手例子\N构建的评估方法的效果感到惊讶。
+Dialogue: 0,0:18:22.38,0:18:27.40,Default,,0,0,0,,你可能会认为，10个例子对于几乎所有事情\N来说，这在统计上都是不成立的，
+Dialogue: 0,0:18:27.40,0:18:36.64,Default,,0,0,0,,但你可能会在实际使用这个程序时惊讶地发现，\N将一小部分棘手的例子加入到你的开发集中，
+Dialogue: 0,0:18:36.64,0:18:43.50,Default,,0,0,0,,可能会在帮助你和你的团队得到一套\N有效的提示和有效的系统方面，效果出奇的好。
+Dialogue: 0,0:18:43.50,0:18:45.3,Default,,0,0,0,,在这个视频中，
+Dialogue: 0,0:18:45.3,0:18:55.50,Default,,0,0,0,,输出可以定量地进行评估，因为有一个期望的输出，\N你可以判断它是否生成了期望的输出。
+Dialogue: 0,0:18:55.50,0:18:56.23,Default,,0,0,0,,那么下一个视频中，
+Dialogue: 0,0:18:56.23,0:19:04.90,Default,,0,0,0,,让我们一起看看在那种\N没有标准答案的情况下，如何评估输出。

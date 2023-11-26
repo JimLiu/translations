@@ -1,0 +1,88 @@
+Welcome back.
+There's a lot of exciting material to go over this week, and
+one of the first topics that Mike will share with you in a little bit is a deep
+dive into how transformer networks actually work.
+Yeah, so look, it's a complicated topic, right?
+In 2017, the paper came out, Attension is all You Need, and
+it laid out all of these fairly complex data processes which are going to happen
+inside the transformer architecture.
+So we take a little bit of a high level view, but we do go down into some depths.
+We talk about things like self-attention and
+the multi-headed self-attention mechanism.
+So we can see why it is that these models actually work,
+how it is that they actually gain an understanding of language.
+And it's amazing how long the transformer architecture has been around
+and it's still state of the art for many models.
+I remember after I saw the transformer paper when it first came out, I thought,
+yep, I get this equation.
+I acknowledge this is a math equation.
+But what's it actually doing?
+And it's always seemed a little bit magical.
+It took me a long time playing with it to finally go, okay, this is why it works.
+And so I think in this first week, you learn the intuitions behind
+some of these terms you may have heard before, like multi-headed attention.
+What is that and why does it make sense?
+And why did the transformer architecture really take off?
+I think attention had been around for a long time, but actually thought it was,
+one of the things that really made to take off was it allowed
+attention to work in a massively parallel way.
+So it made it work on modern GPUs and could scale it up.
+I think these nuances around transformers are not well-understood by many, so
+looking forward to when you deep dive into that.
+Absolutely, I mean, the scale is part of it and
+how it's able to take in all that data.
+I just want to say as well, though, that we're not going to go into this at such
+a level which is going to make people's heads explode.
+If they want to do that, then they can go ahead and read that paper too.
+What we're going to do is we're going to look at the really important
+parts of that transformer architecture that gives you the intuition you need so
+that you can actually make practical use out of these models.
+One thing I've been surprised and delighted by is how transformers,
+even though this course focuses on text, it's been really interesting to see
+how that basic transformer architecture is creating a foundation for
+vision transformers as well.
+So even though in this course you learn mostly about large language models,
+models about text, I think understanding transformers is also helping people
+understand this really exciting vision transformer and other modalities as well.
+It's going to be a really critical building block for
+a lot of machine learning.
+Absolutely.
+And then beyond transformers, there's a second major topic that looking forward
+to having this first week cover, which is the Generative AI project Lifecycle.
+I know a lot of people are thinking, boy, does all this LM stuff, what I do of it?
+And the Generative AI project Lifecycle, which will talk about in a little bit,
+helps you plan out how to think about building your own Generative AI project.
+That's right, and
+the Generative AI project Lifecycle walks you through the individual stages and
+decisions you have to make when you're developing Generative AI applications.
+So one of the first things you have to decide is whether you're taking
+a foundation model off the shelf or you're actually pre-training your own model and
+then as a follow up, whether you want to fine tune and
+customize that model maybe for your specific data.
+Yeah, in fact, there's so many large language model options out there,
+some open source, some not open source, that I see many developers wondering,
+which of these models do I want to use?
+And so having a way to evaluate it and then also choose the right model sizing.
+I know in your other work, you've talked about when do you need a giant model, 100
+billion or even much bigger versus when can a 1 to 30 billion parameter model or
+even sub 1 billion parameter model be just fantastic for a specific application?
+Exactly, so there might be use cases where you really need the model to be very
+comprehensive and able to generalize to a lot of different tasks.
+And there might be use cases where you're just optimizing for
+a single-use case, right?
+And you can potentially work with a smaller model and achieving similar or
+even very good results.
+Yeah, I think that might be one of the really surprising things for
+some people to learn is that you can actually use quite small models and
+still get quite a lot of capability out of them.
+Yeah, I think when you want your large language model to have a lot of general
+knowledge about the world, when you wanted to know stuff about history and
+philosophy and the sizes and how to write Python code and so on and so on.
+It helps to have a giant model with hundreds of billions of parameters.
+But for a single task like summarizing dialogue or
+acting as a customer service agent for one company, for applications like that,
+sometimes you can use hundreds of billions of parameters models.
+But that's not always necessary.
+So lots of really exciting material to get into this week.
+With that, let's go on to the next video when Mike will kick things off with
+a deep dive into many different use cases of large language models.

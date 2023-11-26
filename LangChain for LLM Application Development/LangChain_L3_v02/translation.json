@@ -1,0 +1,2891 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 960
+          },
+          "text": "In this lesson, Harrison will teach the most important key building block of LangChain, namely the chain."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 440
+          },
+          "text": "The chain usually combines an LLM, large language model, together with a prompt."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 560
+          },
+          "text": "And with this building block, you can also put a bunch of these building blocks together to carry out a sequence of operations on your text or on your other data."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 400
+          },
+          "text": "I'm excited to dive into it."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 680
+          },
+          "text": "All right, to start, we're going to load the environment variables as we have before."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 360
+          },
+          "text": "And then we're also going to load some data that we're going to use."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 440
+          },
+          "text": "So part of the power of these chains is that you can run them over many inputs at a time."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 720
+          },
+          "text": "Here, we're going to load a Pandas DataFrame."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 520
+          },
+          "text": "A Pandas DataFrame is just a data structure that contains a bunch of different elements of data."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 600
+          },
+          "text": "If you're not familiar with Pandas, don't worry about it."
+        }
+      ],
+      "source": [
+        "In    lesson, Harrison will teach the most important key building block of LangChain, namely the chain.",
+        "The chain usually combines an LLM, large language model, together with a prompt.",
+        "And with this building block, you can also put a bunch of these building blocks together to carry out a sequence of operations on your text or on your other data.",
+        "I'm excited to dive into it.",
+        "All right, to start, we're going to load the environment variables as we have before.",
+        "And then we're also going to load some data that we're going to use.",
+        "So part of the power of these chains is that you can run them over many inputs at a time.",
+        "Here, we're going to load a Pandas DataFrame.",
+        "A Pandas DataFrame is just a data structure that contains a bunch of different elements of data.",
+        "If you're not familiar with Pandas, don't worry about it."
+      ],
+      "result": [
+        "在这节课中，Harrison将为大家讲解LangChain最关键的构建模块，也就是链（Chain）。",
+        "链通常将大型语言模型（LLM）与提示词（Prompt）结合在一起。",
+        "有了这个构建模块，你还可以将一堆这样的构建模块组合在一起，对你的文本或其他数据按顺序进行操作。",
+        "我已经等不及想要深入了解它了。",
+        "好的，首先，我们将像以前一样加载环境变量。",
+        "然后我们还要加载一些即将使用的数据。",
+        "这些链的强大之处在于，它们可以一次处理多个输入。",
+        "这里，我们将加载一个Pandas DataFrame。",
+        "Pandas DataFrame只是一个包含许多不同数据元素的数据结构。",
+        "如果你不熟悉Pandas，不用担心。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 720
+          },
+          "text": "The main point here is that we're loading some data that we can then use later on."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 400
+          },
+          "text": "And so if we look inside this Pandas DataFrame, we can see that there is a product column and then a review column."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 680
+          },
+          "text": "And each of these rows is a different data point that we can start passing through our chains."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 280
+          },
+          "text": "So the first chain we're going to cover is the LLMChain."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 400
+          },
+          "text": "And this is a simple but really powerful chain that underpins a lot of the chains that we'll go over in the future."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "text": "And so we're going to import three different things."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 80
+          },
+          "text": "We're going to import the OpenAI model, so the LLM."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 560
+          },
+          "text": "We're going to import the ChatPromptTemplate."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 640
+          },
+          "text": "And so this is the prompt."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 160
+          },
+          "text": "And then we're going to import the LLMChain."
+        }
+      ],
+      "source": [
+        "The main point here is that we're loading some data that we can then use later on.",
+        "And so if we look inside this Pandas DataFrame, we can see that there is a product column and then a review column.",
+        "And each of these rows is a different data point that we can start passing through our chains.",
+        "So the first chain we're going to cover is the LLMChain.",
+        "And this is a simple but really powerful chain that underpins a lot of the chains that we'll go over in the future.",
+        "And so we're going to import three different things.",
+        "We're going to import the OpenAI model, so the LLM.",
+        "We're going to import the ChatPromptTemplate.",
+        "And so this is the prompt.",
+        "And then we're going to import the LLMChain."
+      ],
+      "result": [
+        "这里的重点是，我们正在加载一些数据，稍后将会被用到。",
+        "如果我们查看这个Pandas DataFrame，可以看到有一个产品列和一个评论列。",
+        "这些行中的每一行都是一个不同的数据记录，我们可以开始通过我们的链进行传递。",
+        "首先我们要介绍的链是LLMChain。",
+        "这是一个简单但非常强大的链，后面要介绍的很多链它都能支持。",
+        "我们将导入三个不同的库。",
+        "我们将导入OpenAI模型，即LLM。",
+        "我们将导入ChatPromptTemplate，这是提示词（Prompt）相关的。",
+        "",
+        "然后我们将导入LLMChain。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 240
+          },
+          "text": "And so first, what we're going to do is we're going to initialize the language model that we want to use."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 120
+          },
+          "text": "So we're going to initialize the ChatOpenAI with a high temperature so that we can get some fun descriptions."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 160
+          },
+          "text": "Now we're going to initialize a prompt, and this prompt is going to take in a variable called product."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 880
+          },
+          "text": "It's going to ask the LLM to generate what the best name is to describe a company that makes that product."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 280
+          },
+          "text": "And then finally, we're going to combine these two things into a chain."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "text": "And so this is what we call an LLMChain, and it's quite simple."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 280
+          },
+          "text": "It's just the combination of the LLM and the prompt."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 560
+          },
+          "text": "But now this chain will let us run through the prompt and into the LLM in a sequential manner."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 960
+          },
+          "text": "And so if we have a product called \"Queen Size Sheet Set\", we can run this through the chain by using \"chain.run\"."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 200
+          },
+          "text": "And what    will do is it will format the prompt under the hood, and then it will pass the whole prompt into the LLM."
+        }
+      ],
+      "source": [
+        "And so first, what we're going to do is we're going to initialize the language model that we want to use.",
+        "So we're going to initialize the ChatOpenAI with a high temperature so that we can get some fun descriptions.",
+        "Now we're going to initialize a prompt, and this prompt is going to take in a variable called product.",
+        "It's going to ask the LLM to generate what the best name is to describe a company that makes that product.",
+        "And then finally, we're going to combine these two things into a chain.",
+        "And so this is what we call an LLMChain, and it's quite simple.",
+        "It's just the combination of the LLM and the prompt.",
+        "But now this chain will let us run through the prompt and into the LLM in a sequential manner.",
+        "And so if we have a product called \"Queen Size Sheet Set\", we can run this through the chain by using \"chain.run\".",
+        "And what    will do is it will format the prompt under the hood, and then it will pass the whole prompt into the LLM."
+      ],
+      "result": [
+        "首先，我们要初始化我们想要使用的语言模型。",
+        "我们将用一个比较高的temperature值来初始化ChatOpenAI，这样能获得一些有意思的结果。",
+        "现在我们要初始化一个提示词模板，这个提示词模板将接收一个名为产品（product）的变量。",
+        "它会要求LLM根据产品名称，为制作该产品的公司取一个最佳的公司描述名称。",
+        "最后，我们将这两者结合成一条链。",
+        "这就是我们所说的LLMChain，非常简单。",
+        "它只是LLM和提示词模板的结合。",
+        "这条链将提示词模板和LLM按顺序连接起来。",
+        "如果我们有一个名为“双人床床单套装”的产品，我们可以通过使用“chain.run”将它传入链，并运行链。",
+        "它会在后台格式化提示词，然后将格式化后的提示词传给LLM。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 520
+          },
+          "text": "And so we can see that we get back the name of this hypothetical company called \"Royal Beddings\"."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 400
+          },
+          "text": "so here would be a good time to pause, and you can input any product descriptions that you would want, and you can see what the chain will output as a result."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 840
+          },
+          "text": "So the LLMChain is the most basic type of chain, and that's going to be used a lot in the future."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 600
+          },
+          "text": "And so we can see how this will be used in the next type of chain, which will be \"Sequential Chains\"."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 720
+          },
+          "text": "And so Sequential Chains run a sequence of chains one after another."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 53,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 57,
+            "milliseconds": 40
+          },
+          "text": "So to start, you're going to import the SimpleSequentialChain."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 57,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 200
+          },
+          "text": "And this works well when we have sub chains that expect only one input and return only one output."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 360
+          },
+          "text": "And so here we're going to first create one chain, which uses an LLM and a prompt."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 840
+          },
+          "text": "And this prompt is going to take in the product and will return the best name to describe that company."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 240
+          },
+          "text": "So that will be the first chain."
+        }
+      ],
+      "source": [
+        "And so we can see that we get back the name of this hypothetical company called \"Royal Beddings\".",
+        "so here would be a good time to pause, and you can input any product descriptions that you would want, and you can see what the chain will output as a result.",
+        "So the LLMChain is the most basic type of chain, and that's going to be used a lot in the future.",
+        "And so we can see how this will be used in the next type of chain, which will be \"Sequential Chains\".",
+        "And so Sequential Chains run a sequence of chains one after another.",
+        "So to start, you're going to import the SimpleSequentialChain.",
+        "And this works well when we have sub chains that expect only one input and return only one output.",
+        "And so here we're going to first create one chain, which uses an LLM and a prompt.",
+        "And this prompt is going to take in the product and will return the best name to describe that company.",
+        "So that will be the first chain."
+      ],
+      "result": [
+        "我们可以看到LLM给这个生产床单的公司取了个名字叫做\"皇家寝具\"。",
+        "建议你暂停视频，去Notebook输入你想要的产品描述，看看这条链会输出什么结果。",
+        "LLMChain是最基本的链类型，以后经常会被用到。",
+        "我们来看看下一种常用的链，也就是\"顺序链（Sequential Chains）\"。",
+        "顺序链是将一系列链一个接一个地运行。",
+        "首先，你需要导入SimpleSequentialChain。",
+        "当我们的子链都只需要一个输入并且只返回一个输出时，这个方法很有用。",
+        "这里我们首先创建一条链，它使用LLM和提示词模板。",
+        "这个提示词模板将接受输入一个产品参数，并返回最佳的产品所属公司描述名称。",
+        "那将是第一条链。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 280
+          },
+          "text": "Then we're going to create a second chain."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 320
+          },
+          "text": "And the second chain will take in the company name and then output a 20 word description of that company."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 0
+          },
+          "text": "And so you can imagine how these chains might want to be run one after another,"
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 320
+          },
+          "text": "where the output of the first chain, the company name is then passed into the second chain."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 680
+          },
+          "text": "We can easily do this by creating a SimpleSequentialChain where we have the two chains described there."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 320
+          },
+          "text": "And we'll call this overall_simple_chain."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 240
+          },
+          "text": "Now, what you can do is run this chain over any product description."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 52,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 114
+          },
+          "text": "And so if we use it with the product above the \"Queen Size Sheet Set\","
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 115
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 557
+          },
+          "text": "we can run it over and we can see that at first outputs \"Royal Bedding\","
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 558
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 280
+          },
+          "text": "and then it passes it into the second chain and it comes up with this description of what that company could be about."
+        }
+      ],
+      "source": [
+        "Then we're going to create a second chain.",
+        "And the second chain will take in the company name and then output a 20 word description of that company.",
+        "And so you can imagine how these chains might want to be run one after another,",
+        "where the output of the first chain, the company name is then passed into the second chain.",
+        "We can easily do this by creating a SimpleSequentialChain where we have the two chains described there.",
+        "And we'll call this overall_simple_chain.",
+        "Now, what you can do is run this chain over any product description.",
+        "And so if we use it with the product above the \"Queen Size Sheet Set\",",
+        "we can run it over and we can see that at first outputs \"Royal Bedding\",",
+        "and then it passes it into the second chain and it comes up with this description of what that company could be about."
+      ],
+      "result": [
+        "然后我们要创建第二条链。",
+        "第二条链会接收公司名称，然后输出一个20字的公司描述。",
+        "你可以想象这些链需要一条接一条地运行，",
+        "其中第一条链会输出公司名称，然后会将它传递给第二条链。",
+        "通过创建一个SimpleSequentialChain我们可以很容易的实现这一点，参数中包含了两条链的描述。",
+        "我们将这条链命名为overall_simple_chain。",
+        "现在，你可以在任何产品描述上运行这条链。",
+        "我们可以用之前的“双人床床单套装”来测试，",
+        "让我们运行它看看，先是输出了“皇家寝具”，",
+        "然后将它传递到第二条链，得出关于该公司可能的描述。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "text": "The simple sequential chain(SimpleSequentialChain) works well when there's only a single input and a single output."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "text": "But what about when there are multiple inputs or multiple outputs?"
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 16,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 80
+          },
+          "text": "And so we can do this by using just the regular SequentialChain."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 22,
+            "milliseconds": 120
+          },
+          "text": "So let's import that."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 22,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 920
+          },
+          "text": "And then you're going to create a bunch of chains that we're going to use one after another."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 160
+          },
+          "text": "We're going to be using the data from above, which has a review."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 840
+          },
+          "text": "And so the first chain, we're going to take the review and translate it into English."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 840
+          },
+          "text": "With a second chain, we're going to create a summary of that review in one sentence."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 840
+          },
+          "text": "And this will use the previously generated English review."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 200
+          },
+          "text": "The third chain is going to detect what the language of the review was in the first place."
+        }
+      ],
+      "source": [
+        "The simple sequential chain(SimpleSequentialChain) works well when there's only a single input and a single output.",
+        "But what about when there are multiple inputs or multiple outputs?",
+        "And so we can do this by using just the regular SequentialChain.",
+        "So let's import that.",
+        "And then you're going to create a bunch of chains that we're going to use one after another.",
+        "We're going to be using the data from above, which has a review.",
+        "And so the first chain, we're going to take the review and translate it into English.",
+        "With a second chain, we're going to create a summary of that review in one sentence.",
+        "And this will use the previously generated English review.",
+        "The third chain is going to detect what the language of the review was in the first place."
+      ],
+      "result": [
+        "简单顺序链（SimpleSequentialChain）在只有一个输入和一个输出时表现非常好。",
+        "但是当有多个输入或多个输出时该怎么办？",
+        "我们可以通过使用常规的SequentialChain来实现这一点。",
+        "让我们导入它。",
+        "然后你可以创建一系列链，后面我们将依次调用这些链。",
+        "我们将使用上面的数据，其中包含一篇评论。",
+        "首先，我们将用第一条链将评论翻译成英语。",
+        "然后用第二条链，我们将用一句话总结这篇评论。",
+        "这里用的是之前生成的英语评论。",
+        "第三条链将检测评论最初是用什么语言写的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 280
+          },
+          "text": "And so if you notice, this is using the review variable that is coming from the original review."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 480
+          },
+          "text": "And finally, the fourth chain will take in multiple inputs."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 13,
+            "milliseconds": 280
+          },
+          "text": "So this will take in the summary variable, which we calculated with the second chain and the language variable, which we calculated with the third chain."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 13,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 280
+          },
+          "text": "And it's going to ask for a follow up response to the summary in the specified language."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 960
+          },
+          "text": "One important thing to note about all these sub chains is that the input keys and output keys need to be pretty precise."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 520
+          },
+          "text": "So here we're taking in review."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 120
+          },
+          "text": "This is a variable that will be passed in at the start."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 320
+          },
+          "text": "We can see that we explicitly set the output key to English review."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 40
+          },
+          "text": "This is then used in the next prompt down below, where we take in English review with that same variable name."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 840
+          },
+          "text": "And we set the output key of that chain to summary, which we can see is used in the final chain."
+        }
+      ],
+      "source": [
+        "And so if you notice, this is using the review variable that is coming from the original review.",
+        "And finally, the fourth chain will take in multiple inputs.",
+        "So this will take in the summary variable, which we calculated with the second chain and the language variable, which we calculated with the third chain.",
+        "And it's going to ask for a follow up response to the summary in the specified language.",
+        "One important thing to note about all these sub chains is that the input keys and output keys need to be pretty precise.",
+        "So here we're taking in review.",
+        "This is a variable that will be passed in at the start.",
+        "We can see that we explicitly set the output key to English review.",
+        "This is then used in the next prompt down below, where we take in English review with that same variable name.",
+        "And we set the output key of that chain to summary, which we can see is used in the final chain."
+      ],
+      "result": [
+        "注意看，这里使用的是\"Review\"变量，表示原始的评论。",
+        "最后，第四条链将接收多个输入。",
+        "它将接收我们用第二条链得到的摘要\"summary\"变量和我们用第三条链得到的语言\"language\"变量。",
+        "要求后续对摘要回复时，使用指定的语言。",
+        "关于所有这些子链，需要注意的是输入名和输出名需要非常精确，这非常重要。",
+        "所以这里我们接收\"Review\"。",
+        "这是一个在开始时传入的变量。",
+        "我们可以看到我们明确设置了输出名为\"English_Review\"。",
+        "这在下面的下一个提示中使用，我们用相同的变量名接收\"English_Review\"。",
+        "我们将该链的输出名设置为\"summary\"，我们可以看到它在最后一条链中使用。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 80
+          },
+          "text": "The third prompt takes in review, the original variable and output language, which is again used in the final prompt."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 760
+          },
+          "text": "It's really important to get these variable names lined up exactly right,"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 400
+          },
+          "text": "because there's so many different inputs and outputs going on."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 200
+          },
+          "text": "And if you get any key errors, you should definitely check that they are lined up."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 680
+          },
+          "text": "So the Simple Sequential Chain takes in multiple chains, where each one has a single input and a single output."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 720
+          },
+          "text": "To see a visual representation of this, we can look at the slide where it has one chain feeding into the other chain, one after another."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 640
+          },
+          "text": "Here we can see a visual description of the sequential chain, comparing it to the above chain."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 360
+          },
+          "text": "You can notice that any step in the chain can take in multiple input variables."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 41,
+            "milliseconds": 960
+          },
+          "text": "This is useful when you have more complicated downstream chains that need to be a composition of multiple previous chains."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 41,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 440
+          },
+          "text": "Now that we have all these chains, we can easily combine them in the SequentialChain."
+        }
+      ],
+      "source": [
+        "The third prompt takes in review, the original variable and output language, which is again used in the final prompt.",
+        "It's really important to get these variable names lined up exactly right,",
+        "because there's so many different inputs and outputs going on.",
+        "And if you get any key errors, you should definitely check that they are lined up.",
+        "So the Simple Sequential Chain takes in multiple chains, where each one has a single input and a single output.",
+        "To see a visual representation of this, we can look at the slide where it has one chain feeding into the other chain, one after another.",
+        "Here we can see a visual description of the sequential chain, comparing it to the above chain.",
+        "You can notice that any step in the chain can take in multiple input variables.",
+        "This is useful when you have more complicated downstream chains that need to be a composition of multiple previous chains.",
+        "Now that we have all these chains, we can easily combine them in the SequentialChain."
+      ],
+      "result": [
+        "第三个提示词模板接收原始的\"Review\"变量和输出\"language\"，这些在最后的提示词模板中会被再次使用。",
+        "因为有很多不同的输入和输出一起运行，确保这些变量名称完全一致非常重要。",
+        "",
+        "如果出现任何关键性的错误，一定要检查变量名是否一致。",
+        "简单顺序链（Simple Sequential Chain）接收多条链，每条链都有一个输入和一个输出。",
+        "一图胜千言，可以看这张幻灯片的图示，一条链的输出传入另一条链作为输入，一个接一个。",
+        "在这里，我们可以看到顺序链（Sequential Chain）的图示，并把它跟前面的简单顺序链进行比较。",
+        "你会注意到链中的任何步骤都可以接收多个输入变量。",
+        "当你有复杂的下游链需要和多个上游链组合，这会非常有用。",
+        "有了所有这些链之后，我们可以轻松地将它们组合在顺序链（SequentialChain）中。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 53,
+            "milliseconds": 440
+          },
+          "text": "So you'll notice here that we'll pass in the four chains we created into the chains variable."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 53,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 440
+          },
+          "text": "We'll create the inputs variable with the one human input, which is the review."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 680
+          },
+          "text": "And then we want to return all of the intermediate outputs."
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 520
+          },
+          "text": "So the English review, the summary, and then the follow-up message."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 10,
+            "milliseconds": 480
+          },
+          "text": "Now we can run this over some of the data."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 10,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 280
+          },
+          "text": "So let's choose a review and pass it in through the overall chain."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 400
+          },
+          "text": "We can see here that the original review looks like it was in French."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 480
+          },
+          "text": "We can see the English review as a translation."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 80
+          },
+          "text": "We can see a summary of that review, and then we can see a follow-up message in the original language of French."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 39,
+            "milliseconds": 120
+          },
+          "text": "You should pause the video here and try putting in different inputs."
+        }
+      ],
+      "source": [
+        "So you'll notice here that we'll pass in the four chains we created into the chains variable.",
+        "We'll create the inputs variable with the one human input, which is the review.",
+        "And then we want to return all of the intermediate outputs.",
+        "So the English review, the summary, and then the follow-up message.",
+        "Now we can run this over some of the data.",
+        "So let's choose a review and pass it in through the overall chain.",
+        "We can see here that the original review looks like it was in French.",
+        "We can see the English review as a translation.",
+        "We can see a summary of that review, and then we can see a follow-up message in the original language of French.",
+        "You should pause the video here and try putting in different inputs."
+      ],
+      "result": [
+        "首先，我们将创建的四条链作为数组保存到chains变量。",
+        "我们用一个人类输入也就是\"Review\"来创建\"inputs_variables\"。",
+        "然后我们想返回所有中间输出：",
+        "\"English_Review\"、\"summary\"，然后是\"followup_message\"。",
+        "现在我们可以传一些数据来运行试试。",
+        "让我们选择一条评论并传递给整条链。",
+        "我们可以看到原始的\"Review\"似乎是法语的。",
+        "我们可以看到\"English_Review\"作为翻译。",
+        "我们可以看到评论的\"summary\"，然后我们可以看到法语的\"followup_message\"。",
+        "建议你暂停视频，尝试输入不同的内容，并运行看看效果。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 39,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 360
+          },
+          "text": "So far we've covered the LLMChain and then a Sequential Chain."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 43,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 440
+          },
+          "text": "But what if you want to do something more complicated?"
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 160
+          },
+          "text": "A pretty common but basic operation is to route an input to a chain, depending on what exactly that input is."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "text": "A good way to imagine this is if you have multiple subchains, each of which specialized for a particular type of input, you could have a Router Chain,"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 560
+          },
+          "text": "which first decides which subchain to pass it to, and then passes it to that chain."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 960
+          },
+          "text": "For a concrete example, let's look at where we are routing between different types of chains, depending on the subject that seems to come in."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 16,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 920
+          },
+          "text": "So we have here different prompts."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 22,
+            "milliseconds": 760
+          },
+          "text": "One prompt is good for answering physics questions."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 22,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 560
+          },
+          "text": "The second prompt is good for answering math questions, the third for history, and then a fourth for computer science."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 160
+          },
+          "text": "Let's define all these prompt templates."
+        }
+      ],
+      "source": [
+        "So far we've covered the LLMChain and then a Sequential Chain.",
+        "But what if you want to do something more complicated?",
+        "A pretty common but basic operation is to route an input to a chain, depending on what exactly that input is.",
+        "A good way to imagine this is if you have multiple subchains, each of which specialized for a particular type of input, you could have a Router Chain,",
+        "which first decides which subchain to pass it to, and then passes it to that chain.",
+        "For a concrete example, let's look at where we are routing between different types of chains, depending on the subject that seems to come in.",
+        "So we have here different prompts.",
+        "One prompt is good for answering physics questions.",
+        "The second prompt is good for answering math questions, the third for history, and then a fourth for computer science.",
+        "Let's define all these prompt templates."
+      ],
+      "result": [
+        "到目前为止，我们已经介绍了LLMChain和顺序链（Sequential Chain）。",
+        "但是，如果你想完成更复杂的任务呢？",
+        "一个相当常见的基本操作是，根据输入内容路由到某条链来处理你的输入。",
+        "可以想象以下，如果你有多条子链，每条子链专门负责处理某种特定类型的输入，这种情况下你可以使用路由链（Router Chain），",
+        "它首先判断该使用哪条子链，然后将输入传递到相应的子链。",
+        "举一个具体的例子来看看我们如何根据输入的内容来路由到不同类型的链。",
+        "这里我们有不同的提示词。",
+        "一个提示词适合回答物理问题。",
+        "第二个提示词适合回答数学问题，第三个提示词适合历史，第四个提示词适合计算机科学。",
+        "让我们定义所有这些提示词模板。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 31,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 40
+          },
+          "text": "After we have these prompt templates, we can then provide more information about them."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 320
+          },
+          "text": "We can give each one a name and then a description."
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 640
+          },
+          "text": "This description for the physics one is good for answering questions about physics."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 80
+          },
+          "text": "This information is going to be passed to the router chain, so the router chain can decide when to use this subchain."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 59,
+            "milliseconds": 857
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 840
+          },
+          "text": "Let's now import the other types of chains that we need."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 40
+          },
+          "text": "Here we need a MultiPromptChain."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 10,
+            "milliseconds": 640
+          },
+          "text": "This is a specific type of chain that is used when routing between multiple different prompt templates."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 10,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 17,
+            "milliseconds": 800
+          },
+          "text": "As you can see, all the options we have are prompt templates themselves, but this is just one type of thing that you can route between."
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 17,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 20,
+            "milliseconds": 240
+          },
+          "text": "You can route between any type of chain."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 20,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 120
+          },
+          "text": "The other classes that we'll import here are an LLMRouterChain."
+        }
+      ],
+      "source": [
+        "After we have these prompt templates, we can then provide more information about them.",
+        "We can give each one a name and then a description.",
+        "This description for the physics one is good for answering questions about physics.",
+        "This information is going to be passed to the router chain, so the router chain can decide when to use this subchain.",
+        "Let's now import the other types of chains that we need.",
+        "Here we need a MultiPromptChain.",
+        "This is a specific type of chain that is used when routing between multiple different prompt templates.",
+        "As you can see, all the options we have are prompt templates themselves, but this is just one type of thing that you can route between.",
+        "You can route between any type of chain.",
+        "The other classes that we'll import here are an LLMRouterChain."
+      ],
+      "result": [
+        "有了这些提示模板后，我们可以提供更多关于它们的信息。",
+        "可以给每个模板起个名字，然后写个描述。",
+        "这个物理模板的描述非常适合回答物理问题。",
+        "这些信息将传递给路由链，路由链会根据这些信息来决定什么时候该使用哪条子链。",
+        "现在让我们导入其他需要的链类型。",
+        "这里我们需要用MultiPromptChain，",
+        "这是一种特定类型的链，可以用来在多个不同提示词模板之间路由。",
+        "如你所见，我们所有的选项都是提示模板，但实际上不止是可以路由这一种类型，",
+        "除此之外你也可以在任何其他类型的链之间路由。",
+        "这里还需要引用LLMRouterChain。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 24,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 480
+          },
+          "text": "This uses a language model itself to route between the different subchains."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 28,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 40
+          },
+          "text": "This is where the description and the name provided above will be used."
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 32,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 35,
+            "milliseconds": 40
+          },
+          "text": "We'll also import a RouterOutputParser."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 35,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "text": "This parses the LLM output into a dictionary that can be used downstream to determine which chain to use and what the input to that chain should be."
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 49,
+            "milliseconds": 40
+          },
+          "text": "Now we can get around to using it."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 49,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 53,
+            "milliseconds": 720
+          },
+          "text": "First, let's import and define the language model that we will use."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 53,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 40
+          },
+          "text": "We now create the destination chains."
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 880
+          },
+          "text": "These are the chains that will be called by the router chain."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 1,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 160
+          },
+          "text": "As you can see, each destination chain itself is a language model chain, an LLMChain."
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "text": "In addition to the destination chains, we also need a default chain."
+        }
+      ],
+      "source": [
+        "This uses a language model itself to route between the different subchains.",
+        "This is where the description and the name provided above will be used.",
+        "We'll also import a RouterOutputParser.",
+        "This parses the LLM output into a dictionary that can be used downstream to determine which chain to use and what the input to that chain should be.",
+        "Now we can get around to using it.",
+        "First, let's import and define the language model that we will use.",
+        "We now create the destination chains.",
+        "These are the chains that will be called by the router chain.",
+        "As you can see, each destination chain itself is a language model chain, an LLMChain.",
+        "In addition to the destination chains, we also need a default chain."
+      ],
+      "result": [
+        "这个程序借助大语言模型的帮助在不同的子链之间路由。",
+        "这就是为什么上面需要提供名称和描述，语言模型根据这些信息判断如何路由。",
+        "我们还要导入一个RouterOutputParser。",
+        "这个解析器将LLM输出解析成一个字典，根据字典的内容可以在下游确定使用哪条链，以及该链的输入应该是什么。",
+        "现在我们可以开始使用它了。",
+        "首先，让我们导入并定义将要使用的语言模型。",
+        "接下来创建目标链，",
+        "路由链会根据输入的内容来调用这些目标链之一。",
+        "如你所见，每个目标链本身就是一个语言模型链，即LLMChain。",
+        "除了目标链，我们还需要一个默认链。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 840
+          },
+          "text": "This is a chain that's called when the router can't decide which of the subchains to use."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 25,
+            "milliseconds": 840
+          },
+          "text": "And the example above, this might be called when the input question has nothing to do with physics, math, history, or computer science."
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 25,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 840
+          },
+          "text": "Now we define the template that is used by the LLM to route between the different chains."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 440
+          },
+          "text": "This has instructions of the task to be done, as well as the specific formatting that the output should be in."
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 40,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 44,
+            "milliseconds": 840
+          },
+          "text": "Let's put a few of these pieces together to build the router chain."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 45,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 50,
+            "milliseconds": 480
+          },
+          "text": "First, we create the full router template by formatting it with the destinations that we defined above."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 50,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 320
+          },
+          "text": "This template is flexible to a bunch of different types of destinations."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 520
+          },
+          "text": "One thing you can do here is pause and add different types of destinations."
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "text": "So up here, rather than just physics, math, history, and computer science, you could add a different subject like English or Latin."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 14,
+            "milliseconds": 240
+          },
+          "text": "Next, we create the prompt template from this template, and then we create the router chain by passing in the LLM and the overall router prompt."
+        }
+      ],
+      "source": [
+        "This is a chain that's called when the router can't decide which of the subchains to use.",
+        "And the example above, this might be called when the input question has nothing to do with physics, math, history, or computer science.",
+        "Now we define the template that is used by the LLM to route between the different chains.",
+        "This has instructions of the task to be done, as well as the specific formatting that the output should be in.",
+        "Let's put a few of these pieces together to build the router chain.",
+        "First, we create the full router template by formatting it with the destinations that we defined above.",
+        "This template is flexible to a bunch of different types of destinations.",
+        "One thing you can do here is pause and add different types of destinations.",
+        "So up here, rather than just physics, math, history, and computer science, you could add a different subject like English or Latin.",
+        "Next, we create the prompt template from this template, and then we create the router chain by passing in the LLM and the overall router prompt."
+      ],
+      "result": [
+        "默认链是在路由找不到合适的子链调用时，用来备用的一条链路。",
+        "在上面的例子中，当输入问题与物理、数学、历史或计算机科学无关时，就会调用这条链路。",
+        "现在我们定义一个路由的提示词模板，让LLM根据提示词的内容在不同链之间路由。",
+        "这里包含了完成任务的说明，以及输出内容的的格式。",
+        "让我们把这些部分组合起来，构建路由链。",
+        "首先，我们通过使用上面定义的目标来创建完整的路由模板。",
+        "这个模板适用于许多不同类型的目标。",
+        "建议你在这里暂停，然后尝试添加不同类型的目标。",
+        "在这里，除了物理、数学、历史和计算机科学，你还可以添加其他学科，如英语或拉丁语。",
+        "接下来，我们从这个模板创建提示词模板，然后传入LLM和整个路由器提示词，创建路由链。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 15,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 440
+          },
+          "text": "Note that here we have the RouterOutputParser."
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 23,
+            "milliseconds": 240
+          },
+          "text": "This is important as it will help this chain decide which subchains to route between."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 25,
+            "milliseconds": 557
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "And finally, putting it all together, we can create the overall chain."
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 33,
+            "milliseconds": 520
+          },
+          "text": "This has a router chain, which is defined here."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 33,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 36,
+            "milliseconds": 280
+          },
+          "text": "It has destination chains, which we pass in here."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 36,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 38,
+            "milliseconds": 280
+          },
+          "text": "And then we also pass in the default chain."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 38,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 41,
+            "milliseconds": 200
+          },
+          "text": "We can now use this chain."
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 41,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 43,
+            "milliseconds": 120
+          },
+          "text": "So let's ask it some questions."
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 43,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 900
+          },
+          "text": "If we ask it a question about physics, we should hopefully see that it is routed to the physics chain with the input, \"What is black body radiation?\","
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 901
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 56,
+            "milliseconds": 680
+          },
+          "text": "and then that is passed into the chain down below."
+        }
+      ],
+      "source": [
+        "Note that here we have the RouterOutputParser.",
+        "This is important as it will help this chain decide which subchains to route between.",
+        "And finally, putting it all together, we can create the overall chain.",
+        "This has a router chain, which is defined here.",
+        "It has destination chains, which we pass in here.",
+        "And then we also pass in the default chain.",
+        "We can now use this chain.",
+        "So let's ask it some questions.",
+        "If we ask it a question about physics, we should hopefully see that it is routed to the physics chain with the input, \"What is black body radiation?\",",
+        "and then that is passed into the chain down below."
+      ],
+      "result": [
+        "注意这里有RouterOutputParser。",
+        "这很重要，因为它会帮助决定这条链在哪些子链之间路由。",
+        "最后，把所有内容放在一起，我们可以创建整条链。",
+        "这里有一个路由链，定义在这里，",
+        "它有目标链，我们在这里传入。",
+        "然后传入默认链，",
+        "现在可以使用这条链了。",
+        "让我们向它提问试试。",
+        "如果我们问一个关于物理的问题，希望能看到它被路由到物理链，输入是“什么是黑体辐射？”",
+        "然后这个问题会传到下面的链。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 56,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 2,
+            "milliseconds": 240
+          },
+          "text": "And we can see that the response is very detailed with lots of physics details."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 2,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 560
+          },
+          "text": "You should pause the video here and try putting in different inputs."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 6,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 40
+          },
+          "text": "You can try with all the other types of special chains that we have defined above."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 16,
+            "milliseconds": 57
+          },
+          "text": "So for example, if we ask it a math question,"
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 23,
+            "milliseconds": 329
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 27,
+            "milliseconds": 160
+          },
+          "text": "we should see that it's routed to the math chain and then passed into that."
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 31,
+            "milliseconds": 971
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 37,
+            "milliseconds": 560
+          },
+          "text": "We can also see what happens when we pass in a question that is not related to any of the subchains."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 37,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 43,
+            "milliseconds": 160
+          },
+          "text": "So here we ask it a question about biology and we can see the chain that it chooses is \"None\"."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 43,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 48,
+            "milliseconds": 760
+          },
+          "text": "This means that it will be passed to the default chain, which itself is just a generic call to the language model."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 48,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 52,
+            "milliseconds": 360
+          },
+          "text": "The language model luckily knows a lot about biology, so it can help us out here."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 52,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 200
+          },
+          "text": "Now that we've covered these basic building blocks types of chains, we can start to put them together to create really interesting applications."
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 400
+          },
+          "text": "For example, in the next section, we're going to cover how to create a chain that can do question answering over your documents."
+        }
+      ],
+      "source": [
+        "And we can see that the response is very detailed with lots of physics details.",
+        "You should pause the video here and try putting in different inputs.",
+        "You can try with all the other types of special chains that we have defined above.",
+        "So for example, if we ask it a math question,",
+        "we should see that it's routed to the math chain and then passed into that.",
+        "We can also see what happens when we pass in a question that is not related to any of the subchains.",
+        "So here we ask it a question about biology and we can see the chain that it chooses is \"None\".",
+        "This means that it will be passed to the default chain, which itself is just a generic call to the language model.",
+        "The language model luckily knows a lot about biology, so it can help us out here.",
+        "Now that we've covered these basic building blocks types of chains, we can start to put them together to create really interesting applications.",
+        "For example, in the next section, we're going to cover how to create a chain that can do question answering over your documents."
+      ],
+      "result": [
+        "可以看到回复非常详细，包含了很多物理细节。",
+        "建议你在这里暂停视频，自己尝试输入不同的内容试试。",
+        "可以尝试我们之前定义的路由链中的其他链。",
+        "比如，如果问一个数学问题，",
+        "应该看到它被路由到数学链，然后把问题传入数学链。",
+        "还可以试试当我们提出一个与这些子链都无关的问题时会发生什么。",
+        "这里我们问一个关于生物学的问题，可以看到它选择的链是“无”。",
+        "这意味着问题会被传递到默认链，也就是直接当做一个通用问题去问语言模型。",
+        "幸运的是，语言模型对了解很多生物学知识，所以它还是可以帮助我们回答这个问题。",
+        "现在我们已经学习了这些基本的构建块类型的链，我们可以尝试将它们组合在一起，创建有趣的应用。",
+        "在下一节课程中，我们将介绍如何创建一个可以基于文档问答的链。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/LangChain for LLM Application Development/LangChain_L3_v02.srt",
+  "ouputBasePath": "input/LangChain for LLM Application Development/LangChain_L3_v02",
+  "totalCost": 0.36168000000000006,
+  "translationPath": "input/LangChain for LLM Application Development/LangChain_L3_v02/translation.json"
+}

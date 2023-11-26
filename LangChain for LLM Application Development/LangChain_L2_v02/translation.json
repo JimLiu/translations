@@ -1,0 +1,3572 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "When you interact with these models,"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 160
+          },
+          "text": "naturally they don't remember what you say before or any of the previous conversation,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 680
+          },
+          "text": "which is an issue when you're building some applications like Chatbot and you want to have a conversation with them."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 520
+          },
+          "text": "And so in this section, we'll cover memory,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 240
+          },
+          "text": "which is basically how do you remember previous parts of the conversation and feed that into the language model,"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 440
+          },
+          "text": "so that they can have this conversational flow as you're interacting with them."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 40
+          },
+          "text": "Yep. So, LangChain offers multiple sophisticated options for managing these memories."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 40
+          },
+          "text": "Let's jump in and take a look."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "text": "So, let me start off by importing my OpenAI API key,"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 440
+          },
+          "text": "and then let me import a few tools that I'll need."
+        }
+      ],
+      "source": [
+        "When you interact with these models,",
+        "naturally they don't remember what you say before or any of the previous conversation,",
+        "which is an issue when you're building some applications like Chatbot and you want to have a conversation with them.",
+        "And so in this section, we'll cover memory,",
+        "which is basically how do you remember previous parts of the conversation and feed that into the language model,",
+        "so that they can have this conversational flow as you're interacting with them.",
+        "Yep. So, LangChain offers multiple sophisticated options for managing these memories.",
+        "Let's jump in and take a look.",
+        "So, let me start off by importing my OpenAI API key,",
+        "and then let me import a few tools that I'll need."
+      ],
+      "result": [
+        "当你与这些模型互动时，",
+        "正常情况下它们无法记住\\N你之前说过的话或之前的对话，",
+        "这对构建像聊天机器人\\N这样的应用来说是个问题，\\N因为你希望与模型对话时它们能有记忆。",
+        "所以在这一堂课，我们将讨论记忆存储，",
+        "也就是如何记住前面的对话\\N内容，并能将其输入到语言模型中，",
+        "这样聊天机器人在与你\\N互动时就能让对话更流畅。",
+        "LangChain针对复杂的\\N记忆存储管理提供了多种选项。",
+        "让我们深入了解一下。",
+        "首先，让我导入我的OpenAI API密钥，",
+        "然后让我导入一些我需要的工具。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 800
+          },
+          "text": "Let's use as the motivating example for memory,"
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 440
+          },
+          "text": "using LangChain to manage a chat or a chatbot conversation."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 640
+          },
+          "text": "So, to do that, I'm going to set the LLM as a chat interface of OpenAI with temperature equals 0."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 9,
+            "milliseconds": 560
+          },
+          "text": "And, um, I'm going to use the memory as a ConversationBufferMemory."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 9,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 400
+          },
+          "text": "And you'll see later what this means."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 800
+          },
+          "text": "Um, and I'm going to build a conversation chain."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 40
+          },
+          "text": "Again, later in this short course,"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 320
+          },
+          "text": "Harrison will dive much more deeply into what exactly is a chain in LangChain."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 680
+          },
+          "text": "So, don't worry too much about the details of the syntax for now."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 920
+          },
+          "text": "But this builds an LLM."
+        }
+      ],
+      "source": [
+        "Let's use as the motivating example for memory,",
+        "using LangChain to manage a chat or a chatbot conversation.",
+        "So, to do that, I'm going to set the LLM as a chat interface of OpenAI with temperature equals 0.",
+        "And, um, I'm going to use the memory as a ConversationBufferMemory.",
+        "And you'll see later what this means.",
+        "Um, and I'm going to build a conversation chain.",
+        "Again, later in this short course,",
+        "Harrison will dive much more deeply into what exactly is a chain in LangChain.",
+        "So, don't worry too much about the details of the syntax for now.",
+        "But this builds an LLM."
+      ],
+      "result": [
+        "让我们以记忆存储为例子，",
+        "用LangChain管理聊天或聊天机器人对话。",
+        "为此，我将把LLM设置为\\NOpenAI的聊天对话模式，temperature为0。",
+        "嗯，我将memory设置为\\NConversationBufferMemory的实例引用。",
+        "稍后你会明白这样做有什么意义。",
+        "嗯，我要创建一个\\N对话链（ConversationChain）。",
+        "在这个短课程的后面，",
+        "Harrison会更深入地讲解\\NLangChain中的链到底是什么。",
+        "现在不用太担心语法细节。",
+        "但这会构建一个基于LLM的聊天对话。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 120
+          },
+          "text": "And if I start to have a conversation,"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 840
+          },
+          "text": "\"conversation.predict\", give the input, \"Hi, my name is Andrew.\""
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 960
+          },
+          "text": "Let's see what it says."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 400
+          },
+          "text": "\"Hello, Andrew. It's nice to meet you.\""
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 440
+          },
+          "text": "Right? And so on."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 40
+          },
+          "text": "And then, let's say I ask it,"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 640
+          },
+          "text": "\"What is one plus one?\""
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 200
+          },
+          "text": "Um, one plus one is two."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 400
+          },
+          "text": "And then, ask it again,"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "text": "\"You know, what's my name?\""
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 920
+          },
+          "text": "\"Your name is Andrew, as you mentioned earlier.\""
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 680
+          },
+          "text": "\"Hmm, there's a lot of trace of sarcasm there. Not sure.\""
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 5,
+            "milliseconds": 640
+          },
+          "text": "And so if you want, you can change this \"verbose\" variable to \"True\", to see what LangChain is actually doing."
+        }
+      ],
+      "source": [
+        "And if I start to have a conversation,",
+        "\"conversation.predict\", give the input, \"Hi, my name is Andrew.\"",
+        "Let's see what it says.",
+        "\"Hello, Andrew. It's nice to meet you.\"",
+        "Right? And so on.",
+        "And then, let's say I ask it,",
+        "\"What is one plus one?\"",
+        "Um, one plus one is two.",
+        "And then, ask it again,",
+        "\"You know, what's my name?\"",
+        "\"Your name is Andrew, as you mentioned earlier.\"",
+        "\"Hmm, there's a lot of trace of sarcasm there. Not sure.\"",
+        "And so if you want, you can change this \"verbose\" variable to \"True\", to see what LangChain is actually doing."
+      ],
+      "result": [
+        "如果我开始发送消息，",
+        "通过\"conversation.predict\"函数，\\N输入”嗨，我叫Andrew。“",
+        "看看它会说什么。",
+        "“你好，Andrew。很高兴认识你。”",
+        "对吧？然后继续。",
+        "然后，假设我问它，",
+        "“一加一等于几？”",
+        "嗯，“一加一等于二。”",
+        "然后，再问一遍，",
+        "“你知道我的名字吗？”",
+        "“你的名字是Andrew，你之前提到过。”",
+        "嗯，有点嘲讽的意味\\N在里面。但我没有证据：）",
+        "如果你想了解LangChain运行时的\\N更多细节，可以把这个\"verbose\"变量\\N改成\"True\"，看看它实际在做什么。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 5,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 840
+          },
+          "text": "When you run, um, predict, \"Hi, my name is Andrew.\""
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 400
+          },
+          "text": "This is the prompt that LangChain is generating."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 640
+          },
+          "text": "It says, \"The following is a friendly conversation between a human and an AI as talkative,\" and so on."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 920
+          },
+          "text": "So this is a prompt that LangChain has generated to have the system have a hopeful and friendly conversation and it has to say the conversation and here's the response."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 920
+          },
+          "text": "And when you execute this on the,"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 560
+          },
+          "text": "um, second and third parts of the conversations,"
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 560
+          },
+          "text": "it keeps the prompt as follows."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 480
+          },
+          "text": "And notice that by the time I'm uttering, \"What is my name?\""
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 760
+          },
+          "text": "This is the third turn, that's my third input."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 400
+          },
+          "text": "It has stored the current conversation as follows."
+        }
+      ],
+      "source": [
+        "When you run, um, predict, \"Hi, my name is Andrew.\"",
+        "This is the prompt that LangChain is generating.",
+        "It says, \"The following is a friendly conversation between a human and an AI as talkative,\" and so on.",
+        "So this is a prompt that LangChain has generated to have the system have a hopeful and friendly conversation and it has to say the conversation and here's the response.",
+        "And when you execute this on the,",
+        "um, second and third parts of the conversations,",
+        "it keeps the prompt as follows.",
+        "And notice that by the time I'm uttering, \"What is my name?\"",
+        "This is the third turn, that's my third input.",
+        "It has stored the current conversation as follows."
+      ],
+      "result": [
+        "当你输入“嗨，我叫Andrew。”\\N后运行\"conversation.predict\"",
+        "这是LangChain生成的提示词（Prompt）。",
+        "它说，\"以下是人类和\\NAI之间的友好对话，健谈的，\"等等。",
+        "所以这是LangChain生成的提示词，\\N让系统进行愉快友好的对话，\\N并且必须要有回应，这是生成的内容。",
+        "当你在向模型发送第二句话和第三句话时，",
+        "",
+        "它会在提示词中保留这些信息：",
+        "注意到当我说：“我的名字是什么？”的时候，",
+        "这是第三轮对话，也是我的第三次输入。",
+        "它已经按下面的格式存储\\N了当前对话的历史消息："
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 600
+          },
+          "text": "\"Hi, my name is Andrew."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 840
+          },
+          "text": "What is one plus one?\""
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 760
+          },
+          "text": "And so on. And so this memory or this history of a conversation gets longer and longer."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 880
+          },
+          "text": "In fact, up on top, I had used the memory variable to store the memory."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 400
+          },
+          "text": "So if I were to print \"memory.buffer\", it has stored the conversation so far."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 520
+          },
+          "text": "Um, you can also print this out, \"memory.load_memory_variables\"."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 940
+          },
+          "text": "Um, the curly braces here is actually an empty dictionary."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 17,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 920
+          },
+          "text": "There's some more advanced features that you can use with a more sophisticated input, but we won't talk about them in this short course."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 360
+          },
+          "text": "So don't worry about why there's an empty curly braces here."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 440
+          },
+          "text": "But this is what LangChain has remembered in the memory of the conversation so far."
+        }
+      ],
+      "source": [
+        "\"Hi, my name is Andrew.",
+        "What is one plus one?\"",
+        "And so on. And so this memory or this history of a conversation gets longer and longer.",
+        "In fact, up on top, I had used the memory variable to store the memory.",
+        "So if I were to print \"memory.buffer\", it has stored the conversation so far.",
+        "Um, you can also print this out, \"memory.load_memory_variables\".",
+        "Um, the curly braces here is actually an empty dictionary.",
+        "There's some more advanced features that you can use with a more sophisticated input, but we won't talk about them in this short course.",
+        "So don't worry about why there's an empty curly braces here.",
+        "But this is what LangChain has remembered in the memory of the conversation so far."
+      ],
+      "result": [
+        "“嗨，我叫Andrew。”",
+        "“一加一等于几？”",
+        "随着时间的推移，这段对话\\N的记忆或历史变得越来越长。",
+        "实际上，在顶部，我用变量\\N\"memory\"来保存这个记忆。",
+        "所以如果我打印\"memory.buffer\"，\\N它已经存储了到目前为止对话中的所有消息。",
+        "嗯，你也可以用\\N\"memory.load_memory_variables({})\"\\N将\"memory\"中的内容打印出来。",
+        "这对花括号实际上是一个空字典。",
+        "可以通过往这个花括号里面\\N传入一些值来修改选项做一些高级的定制，\\N但在本次课程中我们不打算进一步讨论。",
+        "所以不用担心为什么这里有一个空的花括号。",
+        "这是LangChain到目前为止\\N在对话记忆中所记住的内容。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 120
+          },
+          "text": "It's just everything that the AI or that the human has said."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 120
+          },
+          "text": "I encourage you to pause the video and run the code."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 813
+          },
+          "text": "So the way that LangChain is storing the conversation is with this ConversationBufferMemory."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 814
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 960
+          },
+          "text": "in order to use the ConversationBufferMemory, to specify a couple of inputs and outputs."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 80
+          },
+          "text": "This is how you add new things to the memory if you wish to do so explicitly."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 800
+          },
+          "text": "\"memory.save_context\" says, \"Hi, what's up?\""
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 840
+          },
+          "text": "I know this is not the most exciting conversation, but I wanted to have a short example."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 220
+          },
+          "text": "Um, and with that, this is what the status of the memory is."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 240
+          },
+          "text": "And once again, let me actually show the memory variables."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 240
+          },
+          "text": "Now, if you want to add additional data to the memory,"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 320
+          },
+          "text": "you can keep on saving additional context."
+        }
+      ],
+      "source": [
+        "It's just everything that the AI or that the human has said.",
+        "I encourage you to pause the video and run the code.",
+        "So the way that LangChain is storing the conversation is with this ConversationBufferMemory.",
+        "in order to use the ConversationBufferMemory, to specify a couple of inputs and outputs.",
+        "This is how you add new things to the memory if you wish to do so explicitly.",
+        "\"memory.save_context\" says, \"Hi, what's up?\"",
+        "I know this is not the most exciting conversation, but I wanted to have a short example.",
+        "Um, and with that, this is what the status of the memory is.",
+        "And once again, let me actually show the memory variables.",
+        "Now, if you want to add additional data to the memory,",
+        "you can keep on saving additional context."
+      ],
+      "result": [
+        "这就是目前人类和AI之间的所有对话内容。",
+        "我建议你暂停视频，运行代码。",
+        "LangChain提供了一个\\NConversationBufferMemory\\N方法来临时存储对话记忆。",
+        "要使用ConversationBufferMemory\\N存储消息，可以往其中添加输入和输出。",
+        "如果你想要往存储里面添加\\N新内容，按照这样的方法做就好了。",
+        "通过\"memory.save_context\"加入：\\N“嗨“，”最近怎么样？”",
+        "我知道这对话内容平淡无奇，\\N但我只是想举个简短的例子。",
+        "嗯，有了这个，这就是记忆存储的状态。",
+        "让我再来打印一下记忆存储中的内容。",
+        "现在，如果你想向记忆存储中添加更多数据，",
+        "你可以继续保存更多的上下文。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 680
+          },
+          "text": "So conversation goes on, not much, just hanging, cool."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 40
+          },
+          "text": "And if you print out the memory, you know, there's now more stuff in it."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 640
+          },
+          "text": "So when you use a large language model for a chat conversation,"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 620
+          },
+          "text": "um, the large language model itself is actually stateless."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 600
+          },
+          "text": "The language model itself does not remember the conversation you've had so far."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 51,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 400
+          },
+          "text": "And each transaction, each call to the API endpoint is independent."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 400
+          },
+          "text": "And chatbots appear to have memory only because there's usually rapid code that provides the full conversation that's been had so far as context to the LLM."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "text": "And so the memory can store explicitly the terms or the utterances so far, \"Hi, my name is Andrew.\""
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "text": "\"Hello, it's just nice to meet you,\" and so on."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 800
+          },
+          "text": "And this memory storage is used as input or additional context to the LLM,"
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 860
+          },
+          "text": "so that it can generate an output as if it's just having the next conversational turn knowing what's been said before."
+        }
+      ],
+      "source": [
+        "So conversation goes on, not much, just hanging, cool.",
+        "And if you print out the memory, you know, there's now more stuff in it.",
+        "So when you use a large language model for a chat conversation,",
+        "um, the large language model itself is actually stateless.",
+        "The language model itself does not remember the conversation you've had so far.",
+        "And each transaction, each call to the API endpoint is independent.",
+        "And chatbots appear to have memory only because there's usually rapid code that provides the full conversation that's been had so far as context to the LLM.",
+        "And so the memory can store explicitly the terms or the utterances so far, \"Hi, my name is Andrew.\"",
+        "\"Hello, it's just nice to meet you,\" and so on.",
+        "And this memory storage is used as input or additional context to the LLM,",
+        "so that it can generate an output as if it's just having the next conversational turn knowing what's been said before."
+      ],
+      "result": [
+        "聊天继续：“没什么，\\N就这样”，“挺好的”。",
+        "如果你把记忆中存储的信息\\N打印出来，现在里面有更多的内容。",
+        "当你使用大语言模型进行聊天对话中时，",
+        "大语言模型自身实际上是无状态的。",
+        "语言模型自身不会记住\\N和你对话之间的历史消息。",
+        "每个请求交互，每次\\N调用API都是独立的。",
+        "聊天机器人之所以看起来好像\\N有记忆，是因为借助代码的帮助，提供\\N历史消息作为和LLM对话的上下文。",
+        "所以记忆存储可以明确地存储到目前为止的\\N对话消息，比如“嗨，我叫Andrew。”",
+        "“你好，很高兴认识你”等等。",
+        "这个记忆存储被用作\\NLLM的输入或额外上下文，",
+        "这样它在生成输出时，就可以基于之前\\N所说过的会话内容，再生成新的会话，\\N让你感觉它好像“记得”你说过的话。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 640
+          },
+          "text": "And as the conversation becomes long,"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 240
+          },
+          "text": "the amounts of memory needed becomes really, really long and does the cost of sending a lot of tokens to the LLM,"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 40,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 480
+          },
+          "text": "which usually charges based on the number of tokens it needs to process, will also become more expensive."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 240
+          },
+          "text": "So LangChain provides several convenient kinds of memory to store and accumulate the conversation."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 900
+          },
+          "text": "So far, we've been looking at the conversation buffer memory."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 57,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 360
+          },
+          "text": "Let's look at a different type of memory."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 800
+          },
+          "text": "I'm going to import the ConversationBufferWindowMemory, that only keeps a window of memory."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 280
+          },
+          "text": "If I set memory to ConversationBufferWindowMemory with k equals 1,"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 520
+          },
+          "text": "the variable k equals 1 specifies that I wanted to remember just one conversational exchange."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 360
+          },
+          "text": "That is, one utterance from me and one utterance from the chatbot."
+        }
+      ],
+      "source": [
+        "And as the conversation becomes long,",
+        "the amounts of memory needed becomes really, really long and does the cost of sending a lot of tokens to the LLM,",
+        "which usually charges based on the number of tokens it needs to process, will also become more expensive.",
+        "So LangChain provides several convenient kinds of memory to store and accumulate the conversation.",
+        "So far, we've been looking at the conversation buffer memory.",
+        "Let's look at a different type of memory.",
+        "I'm going to import the ConversationBufferWindowMemory, that only keeps a window of memory.",
+        "If I set memory to ConversationBufferWindowMemory with k equals 1,",
+        "the variable k equals 1 specifies that I wanted to remember just one conversational exchange.",
+        "That is, one utterance from me and one utterance from the chatbot."
+      ],
+      "result": [
+        "随着对话变得越来越长，",
+        "所需的记忆存储量也变得非常\\N非常大，而向LLM发送大量\\N令牌（Token）的成本也会增加，",
+        "因为它通常根据需要处理的令牌数量收费。",
+        "所以LangChain提供了几种便捷的记忆\\N存储方案来存储对话消息和累积对话内容。",
+        "到目前为止，我们一直\\N在研究对话的记忆存储方案。",
+        "现在让我们看看另一种类型的记忆存储方案：",
+        "ConversationBufferWindowMemory，\\N保留窗口记忆，也就是\\N仅保留最后若干轮对话消息。",
+        "如果我将传入\\NConversationBufferWindowMemory\\N的k参数设置为1，",
+        "变量k等于1表示我只想记住最后一轮对话，",
+        "也就是：我最后发出的一句话\\N和聊天机器人的最后一句话。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 31,
+            "milliseconds": 280
+          },
+          "text": "So now if I were to have it save context, \"Hi, what's up? No much, just hanging.\""
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 31,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 820
+          },
+          "text": "If I were to look at \"memory.load_variables\", it only remembers the most recent utterance."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 760
+          },
+          "text": "Notice it's dropped, \"Hi, what's up?\""
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 40,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 45,
+            "milliseconds": 440
+          },
+          "text": "It's just saying, \"Human says not much, just hanging\" and the AI says, \"Cool.\""
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 45,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 920
+          },
+          "text": "So that's because k was equal to 1."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 47,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 160
+          },
+          "text": "So this is a nice feature because it lets you keep track of just the most recent few conversational terms."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 56,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 920
+          },
+          "text": "In practice, you probably won't use this with k equals 1, you use this with k set to a larger number."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 2,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 10,
+            "milliseconds": 420
+          },
+          "text": "But still, this prevents the memory from growing without limit, as the conversation goes longer."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 10,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 580
+          },
+          "text": "And so if I were to rerun the conversation that we had just now, we'll say, \"Hi, my name is Andrew. What is 1 plus 1?\""
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 980
+          },
+          "text": "And now I ask it, \"What is my name?\""
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 30,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 540
+          },
+          "text": "Because k equals 1,"
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 240
+          },
+          "text": "it only remembers the last exchange versus what is 1 plus 1?"
+        }
+      ],
+      "source": [
+        "So now if I were to have it save context, \"Hi, what's up? No much, just hanging.\"",
+        "If I were to look at \"memory.load_variables\", it only remembers the most recent utterance.",
+        "Notice it's dropped, \"Hi, what's up?\"",
+        "It's just saying, \"Human says not much, just hanging\" and the AI says, \"Cool.\"",
+        "So that's because k was equal to 1.",
+        "So this is a nice feature because it lets you keep track of just the most recent few conversational terms.",
+        "In practice, you probably won't use this with k equals 1, you use this with k set to a larger number.",
+        "But still, this prevents the memory from growing without limit, as the conversation goes longer.",
+        "And so if I were to rerun the conversation that we had just now, we'll say, \"Hi, my name is Andrew. What is 1 plus 1?\"",
+        "And now I ask it, \"What is my name?\"",
+        "Because k equals 1,",
+        "it only remembers the last exchange versus what is 1 plus 1?"
+      ],
+      "result": [
+        "现在如果我让它保存上下文，\\N“嗨，最近怎么样？”，\\N“没什么，就这样。”",
+        "如果我查看\"memory.load_variables\"，\\N它只记得最近的话语。",
+        "注意它已经丢掉了\\N“嗨，最近怎么样？”",
+        "它只是说，人类说：\\N“没什么，就这样。”，\\NAI说：“酷”",
+        "这是因为k等于1。",
+        "这是一个很好的功能，\\N因为它让你跟踪最近的几个对话。",
+        "你在实际使用这个功能时，\\N可能不会用k等于1，\\N而是将k设置为一个较大的数字。",
+        "但是一样可以防止记忆存储量\\N随着对话的进行而无限增长。",
+        "所以如果我再来一次刚才的对话，\\N我们会说，“嗨，我叫Andrew”，\\N“1加1等于几？”",
+        "现在我问它：“我的名字是什么？”",
+        "因为k等于1，它只记得上一次的\\N会话，关于1加1等于几？",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 37,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 260
+          },
+          "text": "The answer is 1 plus 1 equals 2, and it's forgotten this early exchange which is now,"
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 60
+          },
+          "text": "now says, \"Sorry, don't have access to that information.\""
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 660
+          },
+          "text": "One thing I hope you will do is pause the video, change this to \"True\" in the code on the left, and rerun this conversation with verbose equals \"True\"."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 540
+          },
+          "text": "And then you will see the prompts actually used to generate this."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 840
+          },
+          "text": "And hopefully you'll see that the memory, when you're calling the LLM on what is my name,"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 7,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 920
+          },
+          "text": "that the memory has dropped this exchange where it learned what is my name, which is why it now says it doesn't know what is my name."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 320
+          },
+          "text": "With the ConversationalTokenBufferMemory, the memory will limit the number of tokens saved."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 580
+          },
+          "text": "And because a lot of LLM pricing is based on tokens, this maps more directly to the cost of the LLM calls."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 60
+          },
+          "text": "So if I were to say the \"max_token_limit\" is equal to 50, and actually let me inject a few comments."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 47,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 140
+          },
+          "text": "So let's say the conversation is, \"AI is what?\", \"Amazing!\"."
+        }
+      ],
+      "source": [
+        "The answer is 1 plus 1 equals 2, and it's forgotten this early exchange which is now,",
+        "now says, \"Sorry, don't have access to that information.\"",
+        "One thing I hope you will do is pause the video, change this to \"True\" in the code on the left, and rerun this conversation with verbose equals \"True\".",
+        "And then you will see the prompts actually used to generate this.",
+        "And hopefully you'll see that the memory, when you're calling the LLM on what is my name,",
+        "that the memory has dropped this exchange where it learned what is my name, which is why it now says it doesn't know what is my name.",
+        "With the ConversationalTokenBufferMemory, the memory will limit the number of tokens saved.",
+        "And because a lot of LLM pricing is based on tokens, this maps more directly to the cost of the LLM calls.",
+        "So if I were to say the \"max_token_limit\" is equal to 50, and actually let me inject a few comments.",
+        "So let's say the conversation is, \"AI is what?\", \"Amazing!\"."
+      ],
+      "result": [
+        "答案是1加1等于2，但现在\\N已经忘记了之前交流的内容，",
+        "现在说：“抱歉，无法获取那些信息。”",
+        "我建议你暂停视频，在左侧代码中\\N将\"verbose\"参数设置为\"True\"，\\N然后重新运行这个对话。",
+        "然后你会看到实际运行时用到的提示词。",
+        "希望你能看到，\\N当你问LLM：“我的名字是什么？”时，",
+        "在它的提示词中，已经丢失了\\N前面有关名字的交流，所以\\N现在它说不知道我的名字是什么。",
+        "使用ConversationalTokenBufferMemory，\\N将限制保存在记忆存储的令牌数量。",
+        "由于很多LLM定价是基于令牌的，\\N令牌的数量直接反映了LLM调用的成本。",
+        "如果我设置\"max_token_limit\"\\N为50，实际上让我插入一些消息。",
+        "比如说对话是，“AI是什么？”，“太棒了！”"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 53,
+            "milliseconds": 20
+          },
+          "text": "\"Backpropagation is what?\", \"Beautiful!\"."
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 53,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "text": "\"Chatbot is what?\", \"Charming!\"."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 540
+          },
+          "text": "I use ABC as the first letter of all of these conversational terms."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 620
+          },
+          "text": "We can keep track of, um, what was said when."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 620
+          },
+          "text": "If I run this with a high token limit, um, it has almost the whole conversation."
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 8,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 16,
+            "milliseconds": 300
+          },
+          "text": "If I increase the token limit to 100, it now has the whole conversation starting with \"AI is what?\"."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 16,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 29,
+            "milliseconds": 260
+          },
+          "text": "If I decrease it, then, you know, it chops off the earlier parts of this conversation to retain the number of tokens corresponding to the most recent exchanges, um,"
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 29,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 31,
+            "milliseconds": 940
+          },
+          "text": "but subject to not exceeding the token limit."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 31,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 39,
+            "milliseconds": 180
+          },
+          "text": "And in case you're wondering why we needed to specify an LLM, is because different LLMs use different ways of counting tokens."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 39,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 46,
+            "milliseconds": 500
+          },
+          "text": "So this tells it to use the way of counting tokens that the, um, ChatOpenAI LLM uses."
+        }
+      ],
+      "source": [
+        "\"Backpropagation is what?\", \"Beautiful!\".",
+        "\"Chatbot is what?\", \"Charming!\".",
+        "I use ABC as the first letter of all of these conversational terms.",
+        "We can keep track of, um, what was said when.",
+        "If I run this with a high token limit, um, it has almost the whole conversation.",
+        "If I increase the token limit to 100, it now has the whole conversation starting with \"AI is what?\".",
+        "If I decrease it, then, you know, it chops off the earlier parts of this conversation to retain the number of tokens corresponding to the most recent exchanges, um,",
+        "but subject to not exceeding the token limit.",
+        "And in case you're wondering why we needed to specify an LLM, is because different LLMs use different ways of counting tokens.",
+        "So this tells it to use the way of counting tokens that the, um, ChatOpenAI LLM uses."
+      ],
+      "result": [
+        "“反向传播是什么？”, “美丽！”",
+        "“聊天机器人是什么？”,“迷人！”",
+        "我用ABC作为所有\\N这些对话单词的第一个字母。",
+        "这样我们可以记录\\N什么时候说了什么。",
+        "如果我把令牌限制的值调的比较高，\\N运行这段代码，它几乎可以包含整个对话。",
+        "如果我把令牌限制的值提高到100，\\N现在它有整个从“AI是什么？”开始的对话。",
+        "如果我减少值，那么它会删掉这个\\N对话的最早的那部分消息，只保留\\N最近对话的消息，并且保证总的消息\\N内容长度不超过设置的令牌限制的值。",
+        "",
+        "如果你想知道为什么我们需要\\N指定一个LLM参数，那是因为不同的\\NLLM使用不同的令牌计算方法。",
+        "所以这告诉它使用ChatOpenAI \\NLLM使用的计算令牌的方法。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 46,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 420
+          },
+          "text": "I encourage you to pause the video and run the code, and also try modifying the prompt to see if you can get a different output."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 54,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 58,
+            "milliseconds": 300
+          },
+          "text": "Finally, there's one last type of memory I want to illustrate here,"
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 58,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 320
+          },
+          "text": "which is the ConversationSummaryBufferMemory."
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 4,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 15,
+            "milliseconds": 40
+          },
+          "text": "And the idea is, instead of limiting the memory to fixed number of tokens based on the most recent utterances or a fixed number of conversational exchanges,"
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 15,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 23,
+            "milliseconds": 900
+          },
+          "text": "let's use an LLM to write a summary of the conversation so far, and let that be the memory."
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 23,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 700
+          },
+          "text": "So here's an example where I'm going to create a long string with someone's schedule."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 720
+          },
+          "text": "You know, there's meeting at 8AM with your product team, you need your PowerPoint presentation, and so on and so on."
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 33,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 920
+          },
+          "text": "So this is a long string saying what's your schedule, you know,"
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 46,
+            "milliseconds": 240
+          },
+          "text": "maybe ending with a noon lunch at the Italian restaurant with a customer, bring your laptop, show the latest LLM demo."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 46,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "text": "And so let me use a ConversationSummaryBufferMemory,"
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 880
+          },
+          "text": "um, with a max token limits of 400 in this case, pretty high token limit."
+        }
+      ],
+      "source": [
+        "I encourage you to pause the video and run the code, and also try modifying the prompt to see if you can get a different output.",
+        "Finally, there's one last type of memory I want to illustrate here,",
+        "which is the ConversationSummaryBufferMemory.",
+        "And the idea is, instead of limiting the memory to fixed number of tokens based on the most recent utterances or a fixed number of conversational exchanges,",
+        "let's use an LLM to write a summary of the conversation so far, and let that be the memory.",
+        "So here's an example where I'm going to create a long string with someone's schedule.",
+        "You know, there's meeting at 8AM with your product team, you need your PowerPoint presentation, and so on and so on.",
+        "So this is a long string saying what's your schedule, you know,",
+        "maybe ending with a noon lunch at the Italian restaurant with a customer, bring your laptop, show the latest LLM demo.",
+        "And so let me use a ConversationSummaryBufferMemory,",
+        "um, with a max token limits of 400 in this case, pretty high token limit."
+      ],
+      "result": [
+        "我建议你暂停视频，\\N运行代码，尝试修改提示词，\\N看看能否得到不同的输出。",
+        "我想在这里说明的\\N最后一种记忆存储类型是",
+        "那就是\\NConversationSummaryBufferMemory。",
+        "这个想法是，与其将记忆的存储量限制在\\N最近若干对话数量上，或限制在令牌数量上，",
+        "不如让LLM为所有历史消息生成摘要，\\N在记忆中存储历史消息的摘要。",
+        "来举一个例子，我将创建一个\\N关于某人日程安排的长字符串。",
+        "比如说，早上8点与产品\\N团队有一个会议，需要\\NPowerPoint演示文稿，等等。",
+        "这是一个长字符串，说的是你的日程安排，",
+        "可能以中午在意大利餐厅与\\N客户共进午餐结束，带上你的笔记本\\N电脑，展示最新的LLM演示。",
+        "那么，让我使用\\NConversationSummaryBufferMemory，",
+        "在这种情况下，最大令牌限制\\N为400，相当高的令牌限制。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 57,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 143
+          },
+          "text": "And I'm going to insert in a few conversational terms in which we start with, \"Hello\", \"what's up\". \"Not much, just hanging\", \"uh, cool.\""
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 144
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 440
+          },
+          "text": "And then, \"What is on the schedule today?\""
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 13,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 40
+          },
+          "text": "And the response is, you know, that long schedule."
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 17,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 440
+          },
+          "text": "So this memory now has quite a lot of text in it."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 200
+          },
+          "text": "In fact, let's take a look, um, at the memory variables, it contains that entire, um, piece of text because 400 tokens was sufficient to store all this text."
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 46,
+            "milliseconds": 580
+          },
+          "text": "But now, if I were to reduce the max_token_limit, say to 100 tokens, remember this stores the entire conversational history."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 46,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 57,
+            "milliseconds": 640
+          },
+          "text": "If I reduce the number of tokens to 100, then the ConversationSummaryBufferMemory has actually used an LLM,"
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 57,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 360
+          },
+          "text": "the OpenAI endpoint in this case because that's what we have set the LLM to, to actually generate a summary of the conversation so far."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 5,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "text": "So the summary is, \"The human and AI engage in small talk before discussing the day's schedule, and AI informs the human of a morning meeting, blah, blah, blah,"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 920
+          },
+          "text": "um, and a lunch meeting with a customer interested in the latest AI developments.\""
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 32,
+            "milliseconds": 880
+          },
+          "text": "And so, if we were to have a conversation using this LLM, then create a conversation chain, same as before."
+        }
+      ],
+      "source": [
+        "And I'm going to insert in a few conversational terms in which we start with, \"Hello\", \"what's up\". \"Not much, just hanging\", \"uh, cool.\"",
+        "And then, \"What is on the schedule today?\"",
+        "And the response is, you know, that long schedule.",
+        "So this memory now has quite a lot of text in it.",
+        "In fact, let's take a look, um, at the memory variables, it contains that entire, um, piece of text because 400 tokens was sufficient to store all this text.",
+        "But now, if I were to reduce the max_token_limit, say to 100 tokens, remember this stores the entire conversational history.",
+        "If I reduce the number of tokens to 100, then the ConversationSummaryBufferMemory has actually used an LLM,",
+        "the OpenAI endpoint in this case because that's what we have set the LLM to, to actually generate a summary of the conversation so far.",
+        "So the summary is, \"The human and AI engage in small talk before discussing the day's schedule, and AI informs the human of a morning meeting, blah, blah, blah,",
+        "um, and a lunch meeting with a customer interested in the latest AI developments.\"",
+        "And so, if we were to have a conversation using this LLM, then create a conversation chain, same as before."
+      ],
+      "result": [
+        "我要加入一些对话内容，比如：\\N\"你好\"，\"最近怎么样\"，\\N\"没什么，就这样\"，\"嗯，酷。\"",
+        "然后是：\\N\"今天的日程安排是什么？\"",
+        "回答是，前面那个很长的日程安排字符串。",
+        "所以现在这个记忆存储里有很多文本。",
+        "事实上，让我们看一下记忆存储中的\\N内容，它包含了所有的文本，因为\\N400个令牌足以存储所有这些文本。",
+        "但是，如果我现在把最大令牌数\\N限制减少到100个令牌，\\N记住这里存储了整个对话历史。",
+        "如果我把令牌数限制减少到100，\\N那么ConversationSummaryBufferMemory\\N实际会调用LLM，",
+        "在这种情况下是OpenAI API，\\N因为这就是我们设置的LLM，\\N来生成当前所有会话内容的摘要。",
+        "所以摘要是：“人类和AI进行了闲聊，\\N然后讨论了当天的日程安排，AI告诉\\N人类早上有一个会议”，等等，",
+        "嗯，还有一个与客户一起的午餐\\N会议，客户对最新AI发展感兴趣。",
+        "如果我们用这个LLM进行对话，然后创建\\N一个ConversationChain，就像之前一样。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 32,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 40,
+            "milliseconds": 840
+          },
+          "text": "And, um, let's say that we were to ask, you know, input what would be a good demo to show."
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 40,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 43,
+            "milliseconds": 0
+          },
+          "text": "Um, I set \"variables\" equals \"True\"."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 43,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 720
+          },
+          "text": "So here's the prompt."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 55,
+            "milliseconds": 840
+          },
+          "text": "The LLM thinks the current conversation has had this discussion so far, because that's the summary of the conversation."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 55,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 58,
+            "milliseconds": 400
+          },
+          "text": "And just one note,"
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 58,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "text": "if you're familiar with the OpenAI chat API endpoint, there is a specific system message."
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 14,
+            "milliseconds": 360
+          },
+          "text": "In this example, this is not using the official OpenAI system message, it's just including it as part of the prompt here."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 14,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 600
+          },
+          "text": "But, but it nonetheless works pretty well."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 760
+          },
+          "text": "And given this prompt, you know, the LLM outputs base on customer interest in AI developments, so it's just showcasing our latest NLP capabilities."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 26,
+            "milliseconds": 200
+          },
+          "text": "Okay, that's cool."
+        }
+      ],
+      "source": [
+        "And, um, let's say that we were to ask, you know, input what would be a good demo to show.",
+        "Um, I set \"variables\" equals \"True\".",
+        "So here's the prompt.",
+        "The LLM thinks the current conversation has had this discussion so far, because that's the summary of the conversation.",
+        "And just one note,",
+        "if you're familiar with the OpenAI chat API endpoint, there is a specific system message.",
+        "In this example, this is not using the official OpenAI system message, it's just including it as part of the prompt here.",
+        "But, but it nonetheless works pretty well.",
+        "And given this prompt, you know, the LLM outputs base on customer interest in AI developments, so it's just showcasing our latest NLP capabilities.",
+        "Okay, that's cool."
+      ],
+      "result": [
+        "那么，假设我们要问：\\N“（给客户）演示什么比较好？”",
+        "我设置了“verbose”等于“True”。",
+        "这是提示词。",
+        "这是LLM知道的目前已经进行过的\\N对话讨论，因为这里有对之前对话的总结。",
+        "还有一点需要注意，",
+        "如果你熟悉OpenAI Chat API，\\N通常要设置一个特定的系统消息。",
+        "在这个例子中，这并不是一个\\NOpenAI Chat的系统消息，而是\\N提示词中用来描述历史会话摘要的部分。",
+        "但是，它还是效果很好。",
+        "有了这个提示词，基于客户\\N对AI发展很有兴趣，LLM建议向客户\\N演示我们最新的自然语言处理能力。",
+        "好的，这很酷。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 26,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 29,
+            "milliseconds": 800
+          },
+          "text": "Um, well, it's, you know,"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 29,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 34,
+            "milliseconds": 240
+          },
+          "text": "making some suggestions to the cool demos and makes you think, if I was meeting a customer,"
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 34,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 42,
+            "milliseconds": 760
+          },
+          "text": "I would say, boy, if only there were open source framework available to help me build cool NLP applications using LLMs."
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 42,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 44,
+            "milliseconds": 920
+          },
+          "text": "Hmm, good things are launching."
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 44,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 920
+          },
+          "text": "Um, and the interesting thing is, if you now look at what has happened to the memory."
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 54,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 240
+          },
+          "text": "So notice that, um, here it has incorporated the most recent AI system output,"
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 920
+          },
+          "text": "whereas my utterance asking it, what would be a good demo to show, has been incorporated into the system message."
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 240
+          },
+          "text": "Um, you know, the overall summary of the conversation so far."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 27,
+            "milliseconds": 240
+          },
+          "text": "With the ConversationSummaryBufferMemory, what it tries to do is keep the explicit storage of the messages up to the number of tokens we have specified as a limit."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 27,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 34,
+            "milliseconds": 120
+          },
+          "text": "So, you know, this part, the explicit storage, we're trying to cap at 100 tokens because that's what we're asked for."
+        }
+      ],
+      "source": [
+        "Um, well, it's, you know,",
+        "making some suggestions to the cool demos and makes you think, if I was meeting a customer,",
+        "I would say, boy, if only there were open source framework available to help me build cool NLP applications using LLMs.",
+        "Hmm, good things are launching.",
+        "Um, and the interesting thing is, if you now look at what has happened to the memory.",
+        "So notice that, um, here it has incorporated the most recent AI system output,",
+        "whereas my utterance asking it, what would be a good demo to show, has been incorporated into the system message.",
+        "Um, you know, the overall summary of the conversation so far.",
+        "With the ConversationSummaryBufferMemory, what it tries to do is keep the explicit storage of the messages up to the number of tokens we have specified as a limit.",
+        "So, you know, this part, the explicit storage, we're trying to cap at 100 tokens because that's what we're asked for."
+      ],
+      "result": [
+        "嗯，这个就是，",
+        "一个让LLM给你的酷炫演示\\N提供建议的例子，这可能\\N会让你想：“如果我在见客户的时候，",
+        "我会说，哇，如果有\\N开源框架可以帮我用\\NLLM构建酷炫的NLP应用就好了！”",
+        "嗯，这样优秀的项目正在推出。",
+        "有趣的是，现在看看\\N记忆存储中发生了什么。",
+        "注意到这里，它已经\\N包含了最近的AI系统输出，",
+        "而我问它的问题：“演示什么比较好？”\\N，已经被归纳进了系统消息。",
+        "嗯，到目前为止，整个对话的总结。",
+        "对于ConversationSummaryBufferMemory，\\N它试图将消息的显性记忆保持在\\N我们指定的令牌数上限。",
+        "所以，这部分显性记忆，\\N我们试图将其限制在100个\\N令牌，因为这是我们前面指定的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 34,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 680
+          },
+          "text": "And then anything beyond that, it will use the LLM to generate a summary, which is what is seen up here."
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 40,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 46,
+            "milliseconds": 640
+          },
+          "text": "And even though I've illustrated these different memories using a chat as a running example,"
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 46,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 800
+          },
+          "text": "these memories are useful for other applications too,"
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 54,
+            "milliseconds": 760
+          },
+          "text": "where you might keep on getting new snippets of text, or keep on getting new information,"
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 54,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 59,
+            "milliseconds": 200
+          },
+          "text": "such as if your system repeatedly goes online to search for facts,"
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 59,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 560
+          },
+          "text": "but you want to keep the total memory used to store this growing list of facts as you know, capped and not growing arbitrarily long."
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 360
+          },
+          "text": "I encourage you to pause the video and run the code."
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 10,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 15,
+            "milliseconds": 160
+          },
+          "text": "In this video, you saw a few types of memory,"
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 15,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 26,
+            "milliseconds": 520
+          },
+          "text": "including buffer memories that limits based on number of conversation exchanges or tokens or a memory that can summarize tokens above a certain limit."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 26,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 880
+          },
+          "text": "LangChain actually supports additional memory types as well."
+        }
+      ],
+      "source": [
+        "And then anything beyond that, it will use the LLM to generate a summary, which is what is seen up here.",
+        "And even though I've illustrated these different memories using a chat as a running example,",
+        "these memories are useful for other applications too,",
+        "where you might keep on getting new snippets of text, or keep on getting new information,",
+        "such as if your system repeatedly goes online to search for facts,",
+        "but you want to keep the total memory used to store this growing list of facts as you know, capped and not growing arbitrarily long.",
+        "I encourage you to pause the video and run the code.",
+        "In this video, you saw a few types of memory,",
+        "including buffer memories that limits based on number of conversation exchanges or tokens or a memory that can summarize tokens above a certain limit.",
+        "LangChain actually supports additional memory types as well."
+      ],
+      "result": [
+        "然后，它会使用LLM生成\\N摘要，就像这里看到的那样。",
+        "尽管我用聊天作为例子来\\N说明这些不同的记忆存储方案，",
+        "这些记忆存储方案对\\N其他应用程序也很有用，",
+        "比如你可能会不断收到\\N新的文本片段或新的信息，",
+        "例如，如果你的系统\\N需要经常上网检索内容，",
+        "检索结果会存储在一个列表中，\\N但你希望列表的存储总数保持在一个\\N限定的范围内，而不是无限地增长。",
+        "我建议你暂停视频并运行代码。",
+        "在这个视频中，你看到了\\N几种类型的记忆存储方案，",
+        "包括基于对话次数或令牌数量限制的记忆\\N存储方案，或者可以对超过特定令牌数\\N的会话内容进行总结的方案。",
+        "LangChain实际上还\\N支持其他类型的记忆存储。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 29,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 33,
+            "milliseconds": 160
+          },
+          "text": "One of the most powerful is vector data memory."
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 33,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 39,
+            "milliseconds": 40
+          },
+          "text": "If you're familiar with word embeddings and text embeddings, the vector database actually stores such embeddings."
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 39,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 41,
+            "milliseconds": 480
+          },
+          "text": "If you don't know what that means, don't worry about it."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 41,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 43,
+            "milliseconds": 320
+          },
+          "text": "Harrison will explain it later."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 43,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 51,
+            "milliseconds": 120
+          },
+          "text": "And it can then retrieve the most relevant blocks of text using this type of vector database for its memory."
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 51,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 54,
+            "milliseconds": 480
+          },
+          "text": "And LangChain also supports entity memories,"
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 54,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 0,
+            "milliseconds": 640
+          },
+          "text": "which is applicable when you wanted to remember details about specific people or specific other entities,"
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 0,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 12,
+            "milliseconds": 280
+          },
+          "text": "such as if you talk about a specific friend, you can have LangChain remember facts about that friend, which would be an entity in an explicit way."
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 12,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 14,
+            "milliseconds": 600
+          },
+          "text": "When you're implementing applications using LangChain,"
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 14,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 17,
+            "milliseconds": 240
+          },
+          "text": "you can also use multiple types of memories,"
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 17,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 26,
+            "milliseconds": 480
+          },
+          "text": "such as using one of the types of conversation memory that you saw in this video, plus additionally, entity memory to recall individuals."
+        }
+      ],
+      "source": [
+        "One of the most powerful is vector data memory.",
+        "If you're familiar with word embeddings and text embeddings, the vector database actually stores such embeddings.",
+        "If you don't know what that means, don't worry about it.",
+        "Harrison will explain it later.",
+        "And it can then retrieve the most relevant blocks of text using this type of vector database for its memory.",
+        "And LangChain also supports entity memories,",
+        "which is applicable when you wanted to remember details about specific people or specific other entities,",
+        "such as if you talk about a specific friend, you can have LangChain remember facts about that friend, which would be an entity in an explicit way.",
+        "When you're implementing applications using LangChain,",
+        "you can also use multiple types of memories,",
+        "such as using one of the types of conversation memory that you saw in this video, plus additionally, entity memory to recall individuals."
+      ],
+      "result": [
+        "其中最强大的是向量数据存储。",
+        "如果你熟悉词嵌入\\N（Embeddings）和文本嵌入，向量\\N数据库实际上就是存储这些嵌入的。",
+        "如果你不知道这是什么意思，不用担心。",
+        "Harrison稍后会解释。",
+        "它可以使用这种向量数据库\\N来检索最相关的文本块。",
+        "LangChain还支持实体记忆存储，",
+        "当你想记住关于特定人或其他\\N实体的详细信息时，这是适用的，",
+        "比如，如果你谈论一个特定的朋友，\\N你可以让LangChain记住关于那个朋友\\N的事实，这将以明确的方式成为一个实体。",
+        "当你使用LangChain实现应用程序时，",
+        "你还可以使用多种类型的记忆存储，",
+        "比如使用本视频中看到的\\N某种对话记忆存储类型，再加上\\N实体记忆存储来回忆个人。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 26,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 35,
+            "milliseconds": 160
+          },
+          "text": "So this way, you can remember maybe a summary of the conversation, plus an explicit way of storing important facts about important people in the conversation."
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 35,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "text": "And of course, in addition to using these memory types,"
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 45,
+            "milliseconds": 920
+          },
+          "text": "it's also not uncommon for developers to store the entire conversation in the conventional database, some sort of key-value store or SQL database."
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 45,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 51,
+            "milliseconds": 560
+          },
+          "text": "So you could refer back to the whole conversation for auditing or for improving the system further."
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 51,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 53,
+            "milliseconds": 680
+          },
+          "text": "And so that's memory types."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 53,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "text": "I hope you find this useful building your own applications."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 5,
+            "milliseconds": 200
+          },
+          "text": "And now, let's go on to the next video to learn about the key building block of LangChain, namely, the chain."
+        }
+      ],
+      "source": [
+        "So this way, you can remember maybe a summary of the conversation, plus an explicit way of storing important facts about important people in the conversation.",
+        "And of course, in addition to using these memory types,",
+        "it's also not uncommon for developers to store the entire conversation in the conventional database, some sort of key-value store or SQL database.",
+        "So you could refer back to the whole conversation for auditing or for improving the system further.",
+        "And so that's memory types.",
+        "I hope you find this useful building your own applications.",
+        "And now, let's go on to the next video to learn about the key building block of LangChain, namely, the chain."
+      ],
+      "result": [
+        "这样，你可以记住对话的\\N大致内容，以及明确记录对话\\N中重要人物的重要事实。",
+        "当然，除了使用这些记忆存储类型，",
+        "开发者也经常将整个对话存储\\N在传统数据库中，如键值存储\\N（key-value store）或SQL数据库。",
+        "这样你可以回顾整个对话，\\N进行审计或进一步改进系统。",
+        "这就是记忆存储类型。",
+        "希望这些知识能有效地\\N帮助你更好的构建自己的应用程序。",
+        "现在，让我们继续下一个视频，了解\\NLangChain的关键构建模块，也就是链。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/LangChain for LLM Application Development/LangChain_L2_v02.srt",
+  "ouputBasePath": "input/LangChain for LLM Application Development/LangChain_L2_v02",
+  "totalCost": 0.46760999999999997,
+  "translationPath": "input/LangChain for LLM Application Development/LangChain_L2_v02/translation.json"
+}

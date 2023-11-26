@@ -1,0 +1,684 @@
+1
+00:00:04,000 --> 00:00:07,440
+在这个部分，我们将关注处理输入的任务，
+In this section, we'll focus on tasks to process inputs,
+
+2
+00:00:07,440 --> 00:00:11,000
+即接收输入并生成有用输出的任务，
+i.e. the tasks that take the input and generate a useful output,
+
+3
+00:00:11,000 --> 00:00:13,880
+通常是通过一系列步骤完成的。
+often through a series of steps.
+
+4
+00:00:13,880 --> 00:00:19,400
+有时模型在回答特定问题之前需要详细推理问题，
+It is sometimes important for the model to reason in detail about a problem before answering a specific question.
+
+6
+00:00:19,400 --> 00:00:22,320
+如果你参加过我们之前的课程“ChartGPT Prompt Engineering for
+And if you took our previous course: "ChartGPT Prompt Engineering for
+
+7
+00:00:22,320 --> 00:00:25,720
+Developers”，你会看到很多这方面的例子。
+Developers", you will have seen a number of examples of this.
+
+8
+00:00:25,720 --> 00:00:29,400
+有时模型可能会因为急于得出结论而出现推理错误，
+Sometimes a model might make reasoning errors by rushing to an incorrect
+
+9
+00:00:29,400 --> 00:00:33,520
+所以我们可以重新构建查询，要求模型进行一系列相关的
+conclusion, so we can reframe the query to request a series of relevant
+
+10
+00:00:33,520 --> 00:00:37,640
+推理步骤在给出最终答案之前，这样它就
+reasoning steps before the model provides a final answer, so that it can think
+
+11
+00:00:37,640 --> 00:00:40,560
+可以更长时间、更有条理地思考问题。
+longer and more methodically about the problem.
+
+12
+00:00:40,560 --> 00:00:46,920
+总的来说，我们把让模型分步推理的策略称为链式思维推理（Chain of Thought Reasoning）。
+And in general, we call this strategy of asking the model to reason about a problem in steps, chain of thought reasoning.
+
+14
+00:00:46,920 --> 00:00:54,040
+对于某些应用，模型在得出最终答案的过程中所使用的推理过程可能不适合与用户共享。
+For some applications, the reasoning process that a model uses to arrive at a final answer would be inappropriate to share with the user.
+
+16
+00:00:54,040 --> 00:00:58,520
+例如，在教学辅导应用中，我们可能希望鼓励学生
+For example, in tutoring applications, we may want to encourage students to work
+
+17
+00:00:58,520 --> 00:01:01,680
+自己解答问题，但模型对学生解答的推理过程
+on their own answers, but a model's reasoning process about the student's
+
+18
+00:01:01,680 --> 00:01:04,840
+可能会泄露答案给学生。
+solution could reveal the answer to the student.
+
+19
+00:01:04,840 --> 00:01:08,280
+“内心独白”是一种可以用来缓解这个问题的策略。
+Inner monologue is a tactic that can be used to mitigate this.
+
+20
+00:01:08,280 --> 00:01:11,960
+这只是一种时髦的比喻，意思是将模型的推理过程对用户进行隐藏。
+And this is just a fancy way of saying, hiding the model's reasoning from the user.
+
+21
+00:01:11,960 --> 00:01:17,280
+内心独白的方案是指示模型将输出的某些部分放入结构化格式，
+The idea of inner monologue is to instruct the model to put parts of the output
+
+22
+00:01:17,280 --> 00:01:22,440
+以便将这些内容隐藏起来不让用户看到。
+that are meant to be hidden from the user into a structured format that makes passing them easy.
+
+24
+00:01:22,440 --> 00:01:27,680
+然后，在将输出呈现给用户之前，输出内容会被过滤，只有部分内容对用户可见。
+Then, before presenting the output to the user, the output is passed and only part of the output is made visible.
+
+26
+00:01:28,680 --> 00:01:32,680
+所以请记住前一个教学视频中的分类问题，我们问
+So remember the classification problem from a previous video, where we asked
+
+27
+00:01:32,680 --> 00:01:37,880
+要求模型将客户查询分类为主要和次要类别。
+the model to classify a customer query into a primary and secondary category.
+
+28
+00:01:37,880 --> 00:01:41,760
+根据这个分类，我们可能想采取不同的指示。
+And based on that classification, we might want to take different instructions.
+
+29
+00:01:41,760 --> 00:01:46,880
+想象一下，客户查询已经被归类到产品信息类别。
+Imagine the customer query had been classified into the product information category.
+
+31
+00:01:46,880 --> 00:01:48,200
+在接下来的指示中，
+In the next instructions,
+
+32
+00:01:48,200 --> 00:01:51,600
+我们会想要包含关于我们拥有的产品的信息。
+we'll want to include information about the products we have available.
+
+33
+00:01:51,600 --> 00:01:58,920
+所以，在这种情况下，分类将是：主类，一般查询，次类，产品信息。
+And so, in this case, the classification would have been: "Primary, General Inquiry, Secondary, Product Information".
+
+35
+00:01:58,920 --> 00:02:01,200
+那么让我们从那里开始深入一个例子。
+And so let's dive into an example starting from there.
+
+36
+00:02:01,200 --> 00:02:04,160
+那么让我们从初始设置开始。
+So let's start with our usual setup.
+
+37
+00:02:04,160 --> 00:02:13,040
+对于这个内心独白的例子，
+So for this inner monologue example,
+
+38
+00:02:13,040 --> 00:02:17,240
+我们将从一直在使用的相同分隔符开始。
+we'll start with our same delimiters that we've been using.
+
+39
+00:02:17,240 --> 00:02:19,400
+现在让我们看一下系统消息。
+And now let's go through our system message.
+
+40
+00:02:22,960 --> 00:02:28,560
+所以我们在这里所做的是在得出结论之前要求模型对答案进行推理。
+And so what we're doing here is asking the model to reason about the answer before coming to its conclusion.
+
+42
+00:02:28,560 --> 00:02:34,560
+所以指令是：“按照这些步骤回答客户查询。
+So the instruction is: "Follow these steps to answer the customer queries.
+
+43
+00:02:34,560 --> 00:02:39,280
+客户查询将用四个井号分隔，我们的分隔符。”
+The customer query will be delimited with four hashtags, our delimiter."
+
+44
+00:02:39,280 --> 00:02:42,080
+然后我们把这个分成几步。
+So then we've split this up into steps.
+
+45
+00:02:42,080 --> 00:02:48,280
+所以第一步是：决定用户是否在询问关于特定产品或产品的问题。
+So the first step is to decide whether the user is asking a question about a specific product or products.
+
+47
+00:02:48,280 --> 00:02:49,640
+并且产品类别不算数。
+And a product category doesn't count.
+
+48
+00:02:50,760 --> 00:02:54,640
+第二步，因此，如果用户询问有关特定产品的信息，
+Step two, so if the user is asking about specific products,
+
+49
+00:02:54,640 --> 00:02:57,440
+确定这些产品是否在以下列表中。
+identify whether the products are in the following list.
+
+50
+00:02:57,440 --> 00:03:00,400
+现在我们已经包括了一份可用产品清单。
+And now we've included a list of available products.
+
+51
+00:03:00,400 --> 00:03:09,520
+所以这里我们有五种可用的产品，它们都是各种类型的笔记本电脑，这些都是虚构的产品。
+So here we have five available products that all varieties of laptops and these are all made up products.
+
+53
+00:03:09,520 --> 00:03:11,440
+它们实际上是由GPT-4生成的。
+They were actually generated by GPT-4.
+
+54
+00:03:11,440 --> 00:03:19,440
+在第三步中，如果消息包含上述列表中的产品，
+In step three, if the message contains products in the list above,
+
+55
+00:03:19,440 --> 00:03:22,480
+列出用户在其消息中所做的任何假设。
+list any assumptions that the user is making in their message.
+
+56
+00:03:22,480 --> 00:03:27,320
+例如，笔记本电脑X比笔记本电脑Y大，或者
+For example, that laptop X is bigger than laptop Y or
+
+57
+00:03:27,320 --> 00:03:30,360
+例如，笔记本电脑Z有两年保修期。
+that laptop Z has a two year warranty, for example.
+
+58
+00:03:30,360 --> 00:03:36,280
+第四步是，如果用户有任何假设，
+Step four is if the user made any assumptions,
+
+59
+00:03:36,280 --> 00:03:39,840
+根据您的产品信息判断假设是否正确。
+figure out whether the assumption is true based on your product information.
+
+60
+00:03:39,840 --> 00:03:45,840
+第五步是：“首先，礼貌地纠正客户的错误假设（如果适用）。”
+And step five is: "First, politely correct the customer's incorrect assumptions if applicable."
+
+62
+00:03:45,840 --> 00:03:49,280
+只提及或参考五个可用产品中的产品。
+Only mention or reference products in the list of five available products.
+
+63
+00:03:49,280 --> 00:03:51,880
+因为商店目前仅销售这五款产品。
+As these are the only five products that the store sells.
+
+64
+00:03:51,880 --> 00:03:54,520
+以友好的语气回答客户。
+And answer the customer in a friendly tone.
+
+65
+00:03:54,520 --> 00:04:00,680
+对于像GPT-4这样更高级的语言模型来说，这些非常繁琐的指示可能是不必要的。
+And these kind of very pedantic instructions are probably unnecessary for a more advanced language model like GPT-4.
+
+67
+00:04:00,680 --> 00:04:05,440
+然后我们将要求模型使用以下格式。
+And then we'll ask the model to use the following format.
+
+68
+00:04:05,440 --> 00:04:08,880
+所以第一步，分隔符，它的推理。
+So step one, delimiter, it's reasoning.
+
+69
+00:04:08,880 --> 00:04:12,080
+第二步，分隔符，推理，依此类推。
+Step two, delimiter, reasoning, and so on.
+
+70
+00:04:12,080 --> 00:04:18,280
+使用分隔符意味着我们以后更容易将这个回答提供给客户。
+And using the delimiters will mean that it will be easier for us later to get just this response to the customer.
+
+72
+00:04:18,280 --> 00:04:20,040
+把分隔符之前的所有内容都移除。
+Kind of cut off everything before.
+
+73
+00:04:20,040 --> 00:04:25,800
+现在让我们测试一个用户消息。
+So now let's try an example user message.
+
+74
+00:04:25,800 --> 00:04:34,840
+所以我们的消息是：“BlueWave Chromebook比TechPro台式机贵多少？”
+So our message is: "by how much is the BlueWave Chromebook more expensive than the TechPro Desktop?"
+
+76
+00:04:34,840 --> 00:04:36,720
+那么让我们看看这两款产品。
+So let's take a look at these two products.
+
+77
+00:04:36,720 --> 00:04:44,120
+BlueWave Chromebook售价为249.99美元，
+The BlueWave Chromebook is 249.99,
+
+78
+00:04:44,120 --> 00:04:48,360
+而TechPro台式机实际上售价为999.99美元。
+and the TechPro Desktop is actually 999.99.
+
+79
+00:04:48,360 --> 00:04:49,440
+这实际上并不正确。
+This is not actually true.
+
+80
+00:04:49,440 --> 00:04:54,520
+那么让我们看看模型如何处理这个用户请求。
+And so let's see how the model handles this user request.
+
+81
+00:04:54,520 --> 00:05:00,360
+所以我们将其格式化为我们的消息数组，然后我们会得到返回结果。
+So we'll format into our messages array, and we'll get our response.
+
+82
+00:05:00,360 --> 00:05:09,440
+然后我们会打印出来。
+And then we'll print it.
+
+83
+00:05:09,440 --> 00:05:17,200
+所以我们希望的是
+And so what we're hoping for
+
+84
+00:05:17,200 --> 00:05:21,000
+模型能够理解所有这些不同的步骤，并意识到
+is that the model takes all of these different steps and realizes that
+
+85
+00:05:21,000 --> 00:05:23,560
+用户做出了错误的假设，然后
+the user has made an incorrect assumption, and
+
+86
+00:05:23,560 --> 00:05:27,600
+在最后一步礼貌地纠正用户。
+then follows the final step to politely correct the user.
+
+87
+00:05:27,600 --> 00:05:33,600
+所以在这一个提示（Prompt）中，我们实际上保持了
+And so within this one prompt, we've actually maintained
+
+88
+00:05:33,600 --> 00:05:36,680
+系统可能处于的许多不同的复杂状态。
+a number of different complex states that the system could be in.
+
+89
+00:05:36,680 --> 00:05:41,160
+所以在任何给定的时刻，都可能有来自前一步的不同输出，
+So at any given point, there could be a different output from the previous step,
+
+90
+00:05:41,160 --> 00:05:42,880
+我们会想要做一些不同的事情。
+and we would want to do something different.
+
+91
+00:05:42,880 --> 00:05:47,960
+例如，如果用户在第三步没有做任何假设，
+For example, if the user hadn't made any assumptions in step three,
+
+92
+00:05:47,960 --> 00:05:50,160
+那么在第四步，我们实际上不会有任何输出。
+then in step four, we wouldn't actually have any output.
+
+93
+00:05:50,160 --> 00:05:53,280
+所以这对模型来说是一个相当复杂的指令。
+So this is a pretty complicated instruction for the model.
+
+94
+00:05:53,280 --> 00:05:54,440
+那么让我们看看它是否做对了。
+So let's see if it did it right.
+
+95
+00:05:54,440 --> 00:06:00,240
+所以第一步，用户在询问关于特定产品的问题。
+So step one, the user is asking a question about specific products.
+
+96
+00:06:00,240 --> 00:06:03,600
+他们在询问这两款产品之间的价格差异。
+They're asking about the price difference between these two products.
+
+97
+00:06:03,600 --> 00:06:06,720
+用户认为BlueWave Chromebook比
+The user assumes that the BlueWave Chromebook is more expensive than
+
+98
+00:06:06,720 --> 00:06:10,840
+TechBook Pro更贵，而这个假设实际上是错误的。
+the TechBook Pro, and this assumption is actually incorrect.
+
+99
+00:06:10,840 --> 00:06:14,240
+它通过推理，花更长的时间来思考这个问题。
+It's reasoning through, taking longer to think about the problem.
+
+100
+00:06:14,240 --> 00:06:18,280
+就像人类在回答任何问题时也需要花一些时间来推理一样，
+In the same way that a human would also take some time to reason about
+
+101
+00:06:18,280 --> 00:06:23,640
+如果模型也有时间去思考，它的表现会更好。
+an answer to any given question, the model performs better if it also has time to think.
+
+102
+00:06:23,640 --> 00:06:29,800
+所以最后对用户的回答是BlueWave Chromebook实际上比TechBook Pro便宜。
+And so the final response to the user is the BlueWave Chromebook is actually less expensive than the TechBook Pro.
+
+104
+00:06:29,800 --> 00:06:36,440
+TechBook Pro台式电脑售价为999.99美元，而BlueWave Chromebook售价为249.99美元。
+The TechBook Pro desktop costs $999.99, while the BlueWave Chromebook costs $249.99.
+
+105
+00:06:36,440 --> 00:06:42,760
+让我们看另一个用户消息的例子。
+And so let's see another example of a user message.
+
+106
+00:06:42,760 --> 00:06:46,440
+此时，也可以随时暂停视频，尝试您自己的消息。
+And also at this point, feel free to pause the video and try your own messages.
+
+107
+00:06:46,440 --> 00:06:51,320
+让我们格式化这个用户消息。
+So let's format this user message.
+
+108
+00:06:51,320 --> 00:06:53,720
+所以问题是：“你们卖电视吗？”
+So the question is: "Do you sell TVs?"
+
+109
+00:06:53,720 --> 00:06:58,240
+如果您还记得我们的产品列表中，我们只列出了不同的电脑。
+And if you remember in our product list, we've only listed different computers.
+
+110
+00:06:58,240 --> 00:06:59,960
+让我们看看模型会说什么。
+So let's see what the model says.
+
+111
+00:06:59,960 --> 00:07:06,720
+所以在这种情况下，第一步，用户询问商店是否出售电视，但是
+So in this case, step one, the user is asking if the store sells TVs, but
+
+112
+00:07:06,720 --> 00:07:08,680
+电视并未列在可用产品中。
+TVs are not listed in the available products.
+
+113
+00:07:08,680 --> 00:07:12,840
+因此，如您所见，模型接着跳到回应用户的步骤，因为它
+So as you can see, the model then skips to the response to user step because it
+
+114
+00:07:12,840 --> 00:07:17,960
+意识到中间步骤实际上并不需要。
+realizes that the intermediary steps are not actually necessary.
+
+115
+00:07:17,960 --> 00:07:21,000
+我要说的是，我们确实要求以这种特定格式输出。
+I will say that we did ask for the output in this specific format.
+
+116
+00:07:21,000 --> 00:07:25,000
+从技术上讲，模型并没有完全遵循我们的要求。
+So technically, the model hasn't exactly followed our request.
+
+117
+00:07:25,000 --> 00:07:27,920
+再次强调，更先进的模型会更擅长做到这一点。
+Again, more advanced models will be better at doing that.
+
+118
+00:07:27,920 --> 00:07:31,080
+在这种情况下，我们对用户的回复是：“对不起，但是
+And so in this case, our response to the user is, I'm sorry, but
+
+119
+00:07:31,080 --> 00:07:33,320
+我们商店里不卖电视。”
+we do not sell TVs at the store.
+
+120
+00:07:33,320 --> 00:07:35,000
+然后列出了可用的产品。
+And then it lists the available products.
+
+121
+00:07:35,000 --> 00:07:41,040
+请随意尝试一些您自己的回答。
+So again, feel free to try some of your own responses.
+
+122
+00:07:41,040 --> 00:07:45,040
+现在，我们只想要这部分返回的内容。
+And so now, we only really want this part of the response.
+
+123
+00:07:45,040 --> 00:07:47,880
+我们不想把前面的部分展示给用户。
+We wouldn't want to show the earlier parts to the user.
+
+124
+00:07:47,880 --> 00:07:53,600
+所以我们可以做的实际上就是在最后一次出现
+So what we can do is actually just cut the string at the last occurrence
+
+125
+00:07:53,600 --> 00:07:57,520
+这个分隔符标记或四个井号字符串的地方分割字符串。
+of this delimiter token or string of four hashtags.
+
+126
+00:07:57,520 --> 00:08:01,920
+然后只打印模型输出的最后一部分。
+And then only print the final part of the model output.
+
+127
+00:08:01,920 --> 00:08:06,440
+让我们编写代码来获取这个字符串的最后一部分。
+So let's write some code to get only the final part of this string.
+
+128
+00:08:06,440 --> 00:08:12,920
+因此，我们将使用一个 try except 块来优雅地处理错误，以防
+So we're going to use a try except block to gracefully handle errors in case
+
+129
+00:08:12,920 --> 00:08:15,680
+模型有某种不可预测的输出，而且
+the model has some kind of unpredictable output and
+
+130
+00:08:15,680 --> 00:08:19,080
+实际上并不使用这些字符。
+doesn't actually use these characters.
+
+131
+00:08:19,080 --> 00:08:23,560
+我们要将response变量赋值给final_response。
+And so we're gonna say our final_response is the response.
+
+132
+00:08:23,560 --> 00:08:27,040
+然后我们要使用分隔符来将字符串分割成数组。
+And then we're gonna split the string at the delimiter string.
+
+133
+00:08:27,040 --> 00:08:28,320
+因为我们想要找到它最后一次出现的位置，
+And because we want the final occurrence,
+
+134
+00:08:28,320 --> 00:08:32,880
+然后只想要输出数组中的最后一项。
+we just want to get the last item in the output list.
+
+135
+00:08:32,880 --> 00:08:36,120
+最后再去除前后空格。
+And then we're going to strip any white space.
+
+136
+00:08:36,120 --> 00:08:38,920
+因为如您所见，字符后面可能会有空格。
+Because as you can see, there might be white space after the characters.
+
+137
+00:08:38,920 --> 00:08:42,120
+然后我们要处理任何可能得异常错误。
+Then we're going to catch any errors.
+
+138
+00:08:42,120 --> 00:08:46,560
+并有一个备用返回结果。
+And have a fallback response.
+
+139
+00:08:46,560 --> 00:08:58,600
+那就是：“对不起，我正在，我现在遇到了麻烦。
+Which is, sorry. I'm having. I'm having trouble right now.
+
+142
+00:08:58,600 --> 00:09:05,200
+请尝试提问另一个问题。”
+Please try asking another question.
+
+143
+00:09:05,200 --> 00:09:09,640
+然后让我们打印最终结果。
+And then let's print our final response.
+
+144
+00:09:21,160 --> 00:09:26,840
+如您所见，我们只是对字符串裁剪，从而获得最终输出。
+And so as you can see, we just cut the string to get this final output.
+
+145
+00:09:26,840 --> 00:09:30,440
+如果我们将它集成到应用程序中，这就是我们要向用户展示的内容。
+And so this is what we would show to the user if we were building this into an application.
+
+147
+00:09:30,440 --> 00:09:34,360
+总的来说，我只是想指出，
+And overall, I just want to call out,
+
+148
+00:09:34,360 --> 00:09:38,360
+这个提示（Prompt）对于这个任务可能有些复杂。
+this prompt might be slightly convoluted for this task.
+
+149
+00:09:38,360 --> 00:09:41,480
+你实际上可能不需要所有这些中间步骤。
+You might not actually need all of these intermediate steps.
+
+150
+00:09:41,480 --> 00:09:47,520
+所以，为什么不尝试看看你能否在你自己的提示（Prompt）中找到一种更简单的方法来完成相同的任务。
+And so why don't you try and see if you can find an easier way to do the same task in your own prompt.
+
+152
+00:09:50,000 --> 00:09:55,120
+总的来说，需要反复尝试才能找到提示（Prompt）的最佳平衡点。
+And in general, finding the optimal trade-off in prompt complexity requires some experimentation.
+
+154
+00:09:55,120 --> 00:09:59,000
+所以在决定使用一个提示（Prompt）之前，最好尝试多种不同的提示（Prompt）。
+So definitely good to try a number of different prompts before deciding to use one.
+
+156
+00:09:59,000 --> 00:10:03,720
+在下一个视频中，我们将学习另一种处理复杂任务的策略，
+And in the next video, we'll learn another strategy to handle complex tasks
+
+157
+00:10:03,720 --> 00:10:08,000
+通过将这些复杂任务分解成一系列更简单的子任务，
+by splitting these complex tasks into a series of simpler subtasks,
+
+158
+00:10:08,000 --> 00:10:10,440
+而不是试图在一个提示（Prompt）中完成整个任务。
+rather than trying to do the whole task in one prompt.

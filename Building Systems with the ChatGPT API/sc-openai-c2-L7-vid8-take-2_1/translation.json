@@ -1,0 +1,1381 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 160
+          },
+          "text": "In this video, we'll put together everything we've learned in the previous videos to create"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 200
+          },
+          "text": "an end-to-end example of a customer service assistant."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 520
+          },
+          "text": "We'll go through the following steps."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 0
+          },
+          "text": "First, we'll check the input to see if it flags the moderation API."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 0
+          },
+          "text": "Second, if it doesn't, we'll extract the list of products."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 280
+          },
+          "text": "Third, if the products are found, we'll try to look them up."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 880
+          },
+          "text": "And four, we'll answer the user question with the model."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 80
+          },
+          "text": "And finally, we'll put the answer through the moderation API."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 760
+          },
+          "text": "And if it is not flagged, we'll return it to the user."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 820
+          },
+          "text": "So we have our setup."
+        }
+      ],
+      "source": [
+        "In this video, we'll put together everything we've learned in the previous videos to create",
+        "an end-to-end example of a customer service assistant.",
+        "We'll go through the following steps.",
+        "First, we'll check the input to see if it flags the moderation API.",
+        "Second, if it doesn't, we'll extract the list of products.",
+        "Third, if the products are found, we'll try to look them up.",
+        "And four, we'll answer the user question with the model.",
+        "And finally, we'll put the answer through the moderation API.",
+        "And if it is not flagged, we'll return it to the user.",
+        "So we have our setup."
+      ],
+      "result": [
+        "在这个视频中，我们将把前面几个视频中学到的所有知识整合在一起，创建",
+        "一个端到端的客户服务助手示例。",
+        "我们将执行以下步骤：",
+        "首先，我们会检查输入内容，看是否触发了内容审核 API。",
+        "其次，如果没有，我们将提取产品列表。",
+        "第三，如果找到了产品，我们会尝试查找它们。",
+        "第四，我们将用模型回答用户的问题。",
+        "最后，我们会将答案通过内容审核 API检查。",
+        "如果没有被标记有问题，我们会将答案返回给用户。",
+        "我们已经有了相关设置。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 320
+          },
+          "text": "We have this additional import."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 240
+          },
+          "text": "This is a Python package we'll use for a chatbot UI."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 760
+          },
+          "text": "And so I'm going to paste in a function process_user_message."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 960
+          },
+          "text": "And I'm actually going to run an example first, and then we'll talk through the function."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 920
+          },
+          "text": "So we have our user input that we've been using."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 40
+          },
+          "text": "Tell me about the SmartX pro phone and the camera."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 800
+          },
+          "text": "Also tell me about TVs."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 800
+          },
+          "text": "So let's run this."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 640
+          },
+          "text": "First, let's run this."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 680
+          },
+          "text": "So as you can see, we're going through the steps to answer the user question."
+        }
+      ],
+      "source": [
+        "We have this additional import.",
+        "This is a Python package we'll use for a chatbot UI.",
+        "And so I'm going to paste in a function process_user_message.",
+        "And I'm actually going to run an example first, and then we'll talk through the function.",
+        "So we have our user input that we've been using.",
+        "Tell me about the SmartX pro phone and the camera.",
+        "Also tell me about TVs.",
+        "So let's run this.",
+        "First, let's run this.",
+        "So as you can see, we're going through the steps to answer the user question."
+      ],
+      "result": [
+        "这里新增了一个额外的引用。",
+        "这是一个用于聊天机器人界面的Python包。",
+        "我要粘贴一个处理用户消息的函数。",
+        "实际上，我先运行一个例子，然后我们再讨论这个函数。",
+        "这是一段我们一直在使用的用户输入：",
+        "“告诉我关于SmartX pro手机和相机的信息。",
+        "还告诉我关于电视的信息。”",
+        "那我们来运行这个。",
+        "首先，我们来运行这个。",
+        "正如你所看到的，我们正在通过这些步骤来回答用户的问题。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 560
+          },
+          "text": "So the first step, the moderation step."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 480
+          },
+          "text": "The second step is extracting the list of products."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 880
+          },
+          "text": "The third step is looking up the product information."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 560
+          },
+          "text": "And so now with this product information, the model is trying to answer the question,"
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 360
+          },
+          "text": "as we've seen in the previous videos."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 680
+          },
+          "text": "And then finally, it puts the response through the moderation API again to make sure it's safe to show to the user."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 120
+          },
+          "text": "And so this is the response that we're now familiar with."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 800
+          },
+          "text": "And so let's talk through a little bit of what's happening."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 9,
+            "milliseconds": 320
+          },
+          "text": "So we have our helper function process_user_message."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 9,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 640
+          },
+          "text": "Takes in the user input, which is the current message, and an array of all of the messages so far."
+        }
+      ],
+      "source": [
+        "So the first step, the moderation step.",
+        "The second step is extracting the list of products.",
+        "The third step is looking up the product information.",
+        "And so now with this product information, the model is trying to answer the question,",
+        "as we've seen in the previous videos.",
+        "And then finally, it puts the response through the moderation API again to make sure it's safe to show to the user.",
+        "And so this is the response that we're now familiar with.",
+        "And so let's talk through a little bit of what's happening.",
+        "So we have our helper function process_user_message.",
+        "Takes in the user input, which is the current message, and an array of all of the messages so far."
+      ],
+      "result": [
+        "第一步是审核步骤。",
+        "第二步是提取产品列表。",
+        "第三步是查找产品信息。",
+        "现在有了这些产品信息，模型正试图回答这个问题，",
+        "正如我们在之前的视频中看到的。",
+        "最后，它再次通过审核API处理返回结果，以确保对用户展示的内容是安全的。",
+        "这就是我们现在熟悉的返回结果。",
+        "让我们浏览一下代码看这里发生了什么。",
+        "有一个辅助函数process_user_message。",
+        "它接收用户输入，即当前消息，以及到目前为止的所有消息数组。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 920
+          },
+          "text": "And this is when we build the chatbot UI."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 280
+          },
+          "text": "So the first step, checking to see if the input flags the moderation API."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 600
+          },
+          "text": "We covered this in a previous video."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 25,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 240
+          },
+          "text": "If the input is flagged, then we tell the user that we can't process the request."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 840
+          },
+          "text": "If it is not flagged, we try to extract the list of products, as we did in the previous video."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 800
+          },
+          "text": "Then we try to look up the products."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 320
+          },
+          "text": "And in this case, if no products are found, this will just be an empty string."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 80
+          },
+          "text": "Then we answer the user question."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 47,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "text": "So we give the conversation history and the new messages with the relevant product information."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 360
+          },
+          "text": "So we get the response."
+        }
+      ],
+      "source": [
+        "And this is when we build the chatbot UI.",
+        "So the first step, checking to see if the input flags the moderation API.",
+        "We covered this in a previous video.",
+        "If the input is flagged, then we tell the user that we can't process the request.",
+        "If it is not flagged, we try to extract the list of products, as we did in the previous video.",
+        "Then we try to look up the products.",
+        "And in this case, if no products are found, this will just be an empty string.",
+        "Then we answer the user question.",
+        "So we give the conversation history and the new messages with the relevant product information.",
+        "So we get the response."
+      ],
+      "result": [
+        "这就是我们构建聊天机器人界面的时候。",
+        "首先，检查输入是否触发了审查API。",
+        "我们在之前的视频中讲过这个。",
+        "如果输入被标记，那么告诉用户我们无法处理这个请求。",
+        "如果没有被标记，尝试提取产品列表，就像在之前的视频中那样。",
+        "然后尝试查找产品。",
+        "在这种情况下，如果没有找到产品，这将只是一个空字符串。",
+        "然后我们回答用户的问题。",
+        "我们提供了对话历史和带有相关产品信息的新消息。",
+        "我们得到了返回结果。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 960
+          },
+          "text": "And then we run this response through the moderation API."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 160
+          },
+          "text": "If it's flagged, we tell the user that we can't provide this information."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "text": "Maybe we'll say something, \"Let me connect you to a human.\""
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 320
+          },
+          "text": "And you could take some subsequent step."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 560
+          },
+          "text": "And so let's put this all together with a nice UI and try to have a conversation."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 15,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 200
+          },
+          "text": "So here we have a function that will just accumulate the messages as we interact with the assistant."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 960
+          },
+          "text": "And feel free to pause the video to understand in more detail how this works."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 160
+          },
+          "text": "And of course, feel free to do the same for the really long process user message function"
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 31,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 560
+          },
+          "text": "that we just saw as well."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 80
+          },
+          "text": "So now we're going to paste in our code to display the chatbot UI."
+        }
+      ],
+      "source": [
+        "And then we run this response through the moderation API.",
+        "If it's flagged, we tell the user that we can't provide this information.",
+        "Maybe we'll say something, \"Let me connect you to a human.\"",
+        "And you could take some subsequent step.",
+        "And so let's put this all together with a nice UI and try to have a conversation.",
+        "So here we have a function that will just accumulate the messages as we interact with the assistant.",
+        "And feel free to pause the video to understand in more detail how this works.",
+        "And of course, feel free to do the same for the really long process user message function",
+        "that we just saw as well.",
+        "So now we're going to paste in our code to display the chatbot UI."
+      ],
+      "result": [
+        "然后我们将这个返回结果通过审核 API检查。",
+        "如果被标记，我们会告诉用户我们无法提供这个信息。",
+        "也许我们会说一些类似，“让我帮你转接人工服务。”",
+        "然后你可以采取一些后续步骤。",
+        "让我们用一个漂亮的界面把这些都整合起来，试着进行一次对话。",
+        "这里有一个功能，只要我们与助手互动，这些消息就会被累积起来。",
+        "请随时暂停视频，以更详细地了解这是如何工作的。",
+        "当然，对刚才非常长的处理用户消息功能的那部分，您也可以一样随时暂停去详细了解。",
+        "",
+        "现在我们要粘贴代码来显示聊天机器人界面。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 800
+          },
+          "text": "So if we run this, now let's try and have a conversation with the customer service assistant."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 200
+          },
+          "text": "So let's ask, \"What TVs do you have?\""
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 840
+          },
+          "text": "And under the hood, the assistant is going through all of the steps in the process user message function."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 960
+          },
+          "text": "So it's listed a variety of different TVs."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 440
+          },
+          "text": "So now let's ask, \"Which is the cheapest?\""
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 360
+          },
+          "text": "Again, it's going through all the same steps, but this time it's passing the conversation history as well into the prompts."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 920
+          },
+          "text": "Okay, so it's telling us that this speaker is the cheapest TV-related product we have."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 920
+          },
+          "text": "Interesting."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 840
+          },
+          "text": "Let's see what the most expensive is."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 800
+          },
+          "text": "So the most expensive TV is the Cineview 8K TV."
+        }
+      ],
+      "source": [
+        "So if we run this, now let's try and have a conversation with the customer service assistant.",
+        "So let's ask, \"What TVs do you have?\"",
+        "And under the hood, the assistant is going through all of the steps in the process user message function.",
+        "So it's listed a variety of different TVs.",
+        "So now let's ask, \"Which is the cheapest?\"",
+        "Again, it's going through all the same steps, but this time it's passing the conversation history as well into the prompts.",
+        "Okay, so it's telling us that this speaker is the cheapest TV-related product we have.",
+        "Interesting.",
+        "Let's see what the most expensive is.",
+        "So the most expensive TV is the Cineview 8K TV."
+      ],
+      "result": [
+        "那么，如果我们运行这个，现在让我们尝试和客服助手进行对话。",
+        "那我们问一下：“你们有哪些电视？”",
+        "在后台，助手正在执行处理用户消息功能中的所有步骤。",
+        "它列出了各种不同的电视。",
+        "现在我们再问：“哪个最便宜？”",
+        "同样，它还在执行所有相同的步骤，但这次它还将历史会话一起传递到Prompt中。",
+        "好的，它告诉我们这个扬声器是我们拥有的最便宜的与电视相关的产品。",
+        "有意思。",
+        "我们看看最贵的是什么。",
+        "最贵的电视是 Cineview 8K 电视。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 40,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 43,
+            "milliseconds": 360
+          },
+          "text": "So let's ask for more information about it."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 43,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 600
+          },
+          "text": "Tell me more about it."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 800
+          },
+          "text": "And so we've received some more information about this television."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 400
+          },
+          "text": "So in this example, we've combined the techniques we've learned throughout the course to create"
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 640
+          },
+          "text": "a comprehensive system with a chain of steps that evaluates user inputs, processes them,"
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 560
+          },
+          "text": "and then checks the output."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 844
+          },
+          "text": "By monitoring the quality of the system across a larger number of inputs,"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 845
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 240
+          },
+          "text": "you can alter the steps and improve the overall performance of your system."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 19,
+            "milliseconds": 80
+          },
+          "text": "Maybe we might find that our prompts could be better for some of the steps."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 19,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "text": "Maybe some of the steps aren't even necessary."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 960
+          },
+          "text": "You will find a better retrieval method, and so on."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 24,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 26,
+            "milliseconds": 160
+          },
+          "text": "We'll discuss this more in the next video."
+        }
+      ],
+      "source": [
+        "So let's ask for more information about it.",
+        "Tell me more about it.",
+        "And so we've received some more information about this television.",
+        "So in this example, we've combined the techniques we've learned throughout the course to create",
+        "a comprehensive system with a chain of steps that evaluates user inputs, processes them,",
+        "and then checks the output.",
+        "By monitoring the quality of the system across a larger number of inputs,",
+        "you can alter the steps and improve the overall performance of your system.",
+        "Maybe we might find that our prompts could be better for some of the steps.",
+        "Maybe some of the steps aren't even necessary.",
+        "You will find a better retrieval method, and so on.",
+        "We'll discuss this more in the next video."
+      ],
+      "result": [
+        "那我们来了解更多关于它的信息吧。",
+        "跟我说说更多关于它的事。",
+        "我们收到了关于这台电视的更多信息。",
+        "在这个例子中，我们将在课程中学到的技巧结合起来，创建了",
+        "一个包含一系列步骤的综合系统，用于评估用户输入、处理它们，",
+        "然后检查输出。",
+        "通过监控更多输入的系统质量，",
+        "你可以改变步骤，提高系统的整体性能。",
+        "也许会发现我们的Prompt在某些步骤上可以做得更好。",
+        "也许有些步骤甚至不需要。",
+        "你会找到更好的检索方法，等等。",
+        "我们将在下一个视频中进一步讨论这个问题。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L7-vid8-take-2_1.srt",
+  "ouputBasePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L7-vid8-take-2_1",
+  "totalCost": 0.13122,
+  "translationPath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L7-vid8-take-2_1/translation.json"
+}

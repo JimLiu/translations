@@ -1,0 +1,264 @@
+[Script Info]
+
+Title: Course Introduction
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.0,0:00:01.56,Secondary,,0,0,0,,Welcome to this course on
+Dialogue: 1,0:00:01.56,0:00:04.85,Secondary,,0,0,0,,generative AI with large language models.
+Dialogue: 1,0:00:04.85,0:00:06.96,Secondary,,0,0,0,,Large language models or LLMs
+Dialogue: 1,0:00:06.96,0:00:09.18,Secondary,,0,0,0,,are a very exciting technology.
+Dialogue: 1,0:00:09.18,0:00:11.48,Secondary,,0,0,0,,But despite all the buzz and hype,
+Dialogue: 1,0:00:11.48,0:00:13.95,Secondary,,0,0,0,,one of the thing that is still underestimated by
+Dialogue: 1,0:00:13.95,0:00:17.94,Secondary,,0,0,0,,many people is their power as a developer too.
+Dialogue: 1,0:00:17.94,0:00:19.50,Secondary,,0,0,0,,Specifically, there are
+Dialogue: 1,0:00:19.50,0:00:21.21,Secondary,,0,0,0,,many machine learning and AI
+Dialogue: 1,0:00:21.21,0:00:23.4,Secondary,,0,0,0,,applications that used to take me
+Dialogue: 1,0:00:23.4,0:00:25.52,Secondary,,0,0,0,,many months to build that you can now build
+Dialogue: 1,0:00:25.52,0:00:28.40,Secondary,,0,0,0,,in days or maybe even small numbers of weeks.
+Dialogue: 1,0:00:28.40,0:00:32.40,Secondary,,0,0,0,,This course will take a deep dive with you into how
+Dialogue: 1,0:00:32.40,0:00:34.61,Secondary,,0,0,0,,LLM technology actually works
+Dialogue: 1,0:00:34.61,0:00:38.4,Secondary,,0,0,0,,including going through many of the technical details,
+Dialogue: 1,0:00:38.4,0:00:42.18,Secondary,,0,0,0,,like model training, instruction tuning, fine-tuning,
+Dialogue: 1,0:00:42.18,0:00:45.74,Secondary,,0,0,0,,the generative AI project life cycle framework to
+Dialogue: 1,0:00:45.74,0:00:49.97,Secondary,,0,0,0,,help you plan and execute your projects and so on.
+Dialogue: 1,0:00:49.97,0:00:52.19,Secondary,,0,0,0,,Generative AI and LLMs
+Dialogue: 1,0:00:52.19,0:00:55.45,Secondary,,0,0,0,,specifically are a general purpose technology.
+Dialogue: 1,0:00:55.45,0:00:57.32,Secondary,,0,0,0,,That means that similar to
+Dialogue: 1,0:00:57.32,0:00:59.29,Secondary,,0,0,0,,other general purpose technologies
+Dialogue: 1,0:00:59.29,0:01:01.94,Secondary,,0,0,0,,like deep learning and electricity,
+Dialogue: 1,0:01:01.94,0:01:04.64,Secondary,,0,0,0,,is useful not just for a single application,
+Dialogue: 1,0:01:04.64,0:01:05.69,Secondary,,0,0,0,,but for a lot of
+Dialogue: 1,0:01:05.69,0:01:07.55,Secondary,,0,0,0,,different applications that span
+Dialogue: 1,0:01:07.55,0:01:10.6,Secondary,,0,0,0,,many corners of the economy.
+Dialogue: 1,0:01:10.6,0:01:13.38,Secondary,,0,0,0,,Similar to the rise of deep learning that
+Dialogue: 1,0:01:13.38,0:01:16.56,Secondary,,0,0,0,,started maybe 15 years ago or so,
+Dialogue: 1,0:01:16.56,0:01:19.85,Secondary,,0,0,0,,there's a lot of important where it lies ahead of us that
+Dialogue: 1,0:01:19.85,0:01:23.9,Secondary,,0,0,0,,needs to be done over many years by many people,
+Dialogue: 1,0:01:23.9,0:01:24.32,Secondary,,0,0,0,,I hope including you,
+Dialogue: 1,0:01:24.32,0:01:28.90,Secondary,,0,0,0,,to identify use cases and build specific applications.
+Dialogue: 1,0:01:28.90,0:01:31.76,Secondary,,0,0,0,,Because a lot of with this technology is so
+Dialogue: 1,0:01:31.76,0:01:34.86,Secondary,,0,0,0,,new and so few people really know how to use them,
+Dialogue: 1,0:01:34.86,0:01:36.95,Secondary,,0,0,0,,many companies are also right
+Dialogue: 1,0:01:36.95,0:01:38.90,Secondary,,0,0,0,,now scrambling to try to find and
+Dialogue: 1,0:01:38.90,0:01:40.81,Secondary,,0,0,0,,hire people that actually know
+Dialogue: 1,0:01:40.81,0:01:43.16,Secondary,,0,0,0,,how to build applications with LLMs.
+Dialogue: 1,0:01:43.16,0:01:46.42,Secondary,,0,0,0,,I hope that this course will also help you,
+Dialogue: 1,0:01:46.42,0:01:48.29,Secondary,,0,0,0,,if you wish, better position
+Dialogue: 1,0:01:48.29,0:01:50.53,Secondary,,0,0,0,,yourself to get one of those jobs.
+Dialogue: 1,0:01:50.53,0:01:53.0,Secondary,,0,0,0,,I'm thrilled to bring you this course along with
+Dialogue: 1,0:01:53.0,0:01:56.23,Secondary,,0,0,0,,a group of fantastic instructors from the AWS team,
+Dialogue: 1,0:01:56.23,0:02:01.70,Secondary,,0,0,0,,[inaudible] who are here with me today,
+Dialogue: 1,0:02:01.70,0:02:04.57,Secondary,,0,0,0,,as well as a fourth instructor Chris Freby,
+Dialogue: 1,0:02:04.57,0:02:06.52,Secondary,,0,0,0,,who will be presenting sort of adds.
+Dialogue: 1,0:02:06.52,0:02:11.53,Secondary,,0,0,0,,Antje and Mike above generative AI developer advocates.
+Dialogue: 1,0:02:11.53,0:02:13.72,Secondary,,0,0,0,,Shelbee and Chris above
+Dialogue: 1,0:02:13.72,0:02:16.13,Secondary,,0,0,0,,generative AI solutions architects.
+Dialogue: 1,0:02:16.13,0:02:17.72,Secondary,,0,0,0,,All of them have a lot of
+Dialogue: 1,0:02:17.72,0:02:21.5,Secondary,,0,0,0,,experience helping many different companies build many,
+Dialogue: 1,0:02:21.5,0:02:23.48,Secondary,,0,0,0,,many creative applications using LLMs.
+Dialogue: 1,0:02:23.48,0:02:26.30,Secondary,,0,0,0,,I look forward to all of them sharing
+Dialogue: 1,0:02:26.30,0:02:29.74,Secondary,,0,0,0,,this rich hands-on experience in this course.
+Dialogue: 1,0:02:29.74,0:02:31.40,Secondary,,0,0,0,,We've develop the content for
+Dialogue: 1,0:02:31.40,0:02:33.23,Secondary,,0,0,0,,this course with inputs from
+Dialogue: 1,0:02:33.23,0:02:37.64,Secondary,,0,0,0,,many industry experts and applied scientists at Amazon,
+Dialogue: 1,0:02:37.64,0:02:39.62,Secondary,,0,0,0,,AWS, Hugging Face and
+Dialogue: 1,0:02:39.62,0:02:41.74,Secondary,,0,0,0,,many top universities around the world.
+Dialogue: 1,0:02:41.74,0:02:43.16,Secondary,,0,0,0,,Antje, perhaps you can say a
+Dialogue: 1,0:02:43.16,0:02:44.60,Secondary,,0,0,0,,bit more about this course.
+Dialogue: 1,0:02:44.60,0:02:45.91,Secondary,,0,0,0,,Sure. Thanks Andrew.
+Dialogue: 1,0:02:45.91,0:02:48.56,Secondary,,0,0,0,,It's a pleasure to work with you again on this course and
+Dialogue: 1,0:02:48.56,0:02:51.29,Secondary,,0,0,0,,the exciting area of generative AI.
+Dialogue: 1,0:02:51.29,0:02:52.46,Secondary,,0,0,0,,With this course on
+Dialogue: 1,0:02:52.46,0:02:54.94,Secondary,,0,0,0,,generative AI with large language models,
+Dialogue: 1,0:02:54.94,0:02:56.75,Secondary,,0,0,0,,we've created a series of
+Dialogue: 1,0:02:56.75,0:02:59.15,Secondary,,0,0,0,,lessons meant for AI enthusiasts,
+Dialogue: 1,0:02:59.15,0:03:01.26,Secondary,,0,0,0,,engineers, or data scientists.
+Dialogue: 1,0:03:01.26,0:03:03.100,Secondary,,0,0,0,,Looking to learn the technical foundations
+Dialogue: 1,0:03:03.100,0:03:05.75,Secondary,,0,0,0,,of how LLMs work,
+Dialogue: 1,0:03:05.75,0:03:08.56,Secondary,,0,0,0,,as well as the best practices behind training,
+Dialogue: 1,0:03:08.56,0:03:10.55,Secondary,,0,0,0,,tuning, and deploying them.
+Dialogue: 1,0:03:10.55,0:03:12.5,Secondary,,0,0,0,,In terms of prerequisites,
+Dialogue: 1,0:03:12.5,0:03:14.12,Secondary,,0,0,0,,we assume you are already familiar with
+Dialogue: 1,0:03:14.12,0:03:16.34,Secondary,,0,0,0,,Python programming and at least
+Dialogue: 1,0:03:16.34,0:03:19.45,Secondary,,0,0,0,,basic data science and machine learning concepts.
+Dialogue: 1,0:03:19.45,0:03:21.23,Secondary,,0,0,0,,If you have some experience with
+Dialogue: 1,0:03:21.23,0:03:24.56,Secondary,,0,0,0,,either Python or TensorFlow, that should be enough.
+Dialogue: 1,0:03:24.56,0:03:28.52,Secondary,,0,0,0,,In this course, you will explore in detail the steps that
+Dialogue: 1,0:03:28.52,0:03:32.31,Secondary,,0,0,0,,make up a typical generative AI project lifecycle,
+Dialogue: 1,0:03:32.31,0:03:34.4,Secondary,,0,0,0,,from scoping the problem and
+Dialogue: 1,0:03:34.4,0:03:36.29,Secondary,,0,0,0,,selecting a language model to
+Dialogue: 1,0:03:36.29,0:03:37.49,Secondary,,0,0,0,,optimizing a model for
+Dialogue: 1,0:03:37.49,0:03:40.48,Secondary,,0,0,0,,deployment and integrating into your applications.
+Dialogue: 1,0:03:40.48,0:03:42.71,Secondary,,0,0,0,,This course covers all of the topics,
+Dialogue: 1,0:03:42.71,0:03:44.32,Secondary,,0,0,0,,not just at a shallow level,
+Dialogue: 1,0:03:44.32,0:03:46.88,Secondary,,0,0,0,,but we'll take the time to make sure you come
+Dialogue: 1,0:03:46.88,0:03:49.85,Secondary,,0,0,0,,away with a deep technical understanding of
+Dialogue: 1,0:03:49.85,0:03:53.24,Secondary,,0,0,0,,all of these technologies and be well-positioned to
+Dialogue: 1,0:03:53.24,0:03:55.19,Secondary,,0,0,0,,really know what you're doing when you
+Dialogue: 1,0:03:55.19,0:03:57.26,Secondary,,0,0,0,,build your own generative AI projects.
+Dialogue: 1,0:03:57.26,0:03:58.73,Secondary,,0,0,0,,Mike, why don't you tell us
+Dialogue: 1,0:03:58.73,0:04:00.19,Secondary,,0,0,0,,a little bit more details about
+Dialogue: 1,0:04:00.19,0:04:01.97,Secondary,,0,0,0,,what the learners will see in each week?
+Dialogue: 1,0:04:01.97,0:04:04.28,Secondary,,0,0,0,,Absolutely, Antje. Thank you.
+Dialogue: 1,0:04:04.28,0:04:06.50,Secondary,,0,0,0,,In Week 1, you will examine
+Dialogue: 1,0:04:06.50,0:04:08.45,Secondary,,0,0,0,,the transformer architecture that
+Dialogue: 1,0:04:08.45,0:04:10.60,Secondary,,0,0,0,,powers large language models,
+Dialogue: 1,0:04:10.60,0:04:13.22,Secondary,,0,0,0,,explore how these models are trained,
+Dialogue: 1,0:04:13.22,0:04:15.71,Secondary,,0,0,0,,and understand the compute resources
+Dialogue: 1,0:04:15.71,0:04:18.82,Secondary,,0,0,0,,required to develop these powerful LLMs.
+Dialogue: 1,0:04:18.82,0:04:20.60,Secondary,,0,0,0,,You'll also learn about
+Dialogue: 1,0:04:20.60,0:04:23.47,Secondary,,0,0,0,,a technique called in-context learning.
+Dialogue: 1,0:04:23.47,0:04:26.5,Secondary,,0,0,0,,How to guide the model to output
+Dialogue: 1,0:04:26.5,0:04:29.5,Secondary,,0,0,0,,at inference time with prompt engineering,
+Dialogue: 1,0:04:29.5,0:04:30.68,Secondary,,0,0,0,,and how to tune
+Dialogue: 1,0:04:30.68,0:04:33.28,Secondary,,0,0,0,,the most important generation parameters
+Dialogue: 1,0:04:33.28,0:04:36.35,Secondary,,0,0,0,,of LLMs for tuning your model output.
+Dialogue: 1,0:04:36.35,0:04:37.61,Secondary,,0,0,0,,In Week 2,
+Dialogue: 1,0:04:37.61,0:04:41.45,Secondary,,0,0,0,,you'll explore options for adapting pre-trained models to
+Dialogue: 1,0:04:41.45,0:04:44.0,Secondary,,0,0,0,,specific tasks and datasets via
+Dialogue: 1,0:04:44.0,0:04:47.27,Secondary,,0,0,0,,a process called instruction fine tuning.
+Dialogue: 1,0:04:47.27,0:04:48.68,Secondary,,0,0,0,,Then in Week 3,
+Dialogue: 1,0:04:48.68,0:04:50.12,Secondary,,0,0,0,,you'll see how to align
+Dialogue: 1,0:04:50.12,0:04:52.45,Secondary,,0,0,0,,the output of language models with
+Dialogue: 1,0:04:52.45,0:04:54.89,Secondary,,0,0,0,,human values in order to increase
+Dialogue: 1,0:04:54.89,0:04:58.85,Secondary,,0,0,0,,helpfulness and decrease potential harm and toxicity.
+Dialogue: 1,0:04:58.85,0:05:01.3,Secondary,,0,0,0,,Though we don't stop at the theory.
+Dialogue: 1,0:05:01.3,0:05:03.68,Secondary,,0,0,0,,Each week includes a hands-on lab
+Dialogue: 1,0:05:03.68,0:05:06.8,Secondary,,0,0,0,,where you'll be able to try out these techniques for
+Dialogue: 1,0:05:06.8,0:05:09.61,Secondary,,0,0,0,,yourself in an AWS environment that includes
+Dialogue: 1,0:05:09.61,0:05:12.29,Secondary,,0,0,0,,all the resources you need for working with
+Dialogue: 1,0:05:12.29,0:05:15.40,Secondary,,0,0,0,,large models at no cost to you.
+Dialogue: 1,0:05:15.40,0:05:16.85,Secondary,,0,0,0,,Shelbee, can you tell us a little
+Dialogue: 1,0:05:16.85,0:05:18.35,Secondary,,0,0,0,,bit more about the hands-on labs?
+Dialogue: 1,0:05:18.35,0:05:21.67,Secondary,,0,0,0,,Sure thing, Mike. In the first hands-on lab,
+Dialogue: 1,0:05:21.67,0:05:22.97,Secondary,,0,0,0,,you'll construct a compare
+Dialogue: 1,0:05:22.97,0:05:25.75,Secondary,,0,0,0,,different prompts and inputs for a given generative task,
+Dialogue: 1,0:05:25.75,0:05:27.73,Secondary,,0,0,0,,in this case, dialogue summarization.
+Dialogue: 1,0:05:27.73,0:05:29.96,Secondary,,0,0,0,,You'll also explore different inference parameters
+Dialogue: 1,0:05:29.96,0:05:31.67,Secondary,,0,0,0,,and sampling strategies to gain
+Dialogue: 1,0:05:31.67,0:05:33.50,Secondary,,0,0,0,,intuition on how to further
+Dialogue: 1,0:05:33.50,0:05:36.6,Secondary,,0,0,0,,improve the generative model of responses.
+Dialogue: 1,0:05:36.6,0:05:37.91,Secondary,,0,0,0,,In the second hands-on lab,
+Dialogue: 1,0:05:37.91,0:05:39.44,Secondary,,0,0,0,,you'll find tune it existing
+Dialogue: 1,0:05:39.44,0:05:41.42,Secondary,,0,0,0,,large language model from Hugging Face,
+Dialogue: 1,0:05:41.42,0:05:43.70,Secondary,,0,0,0,,a popular open-source model hub.
+Dialogue: 1,0:05:43.70,0:05:46.31,Secondary,,0,0,0,,You'll play with both full fine-tuning and
+Dialogue: 1,0:05:46.31,0:05:49.22,Secondary,,0,0,0,,parameter efficient fine tuning or path for short.
+Dialogue: 1,0:05:49.22,0:05:51.17,Secondary,,0,0,0,,You'll see how puffed lets you
+Dialogue: 1,0:05:51.17,0:05:53.53,Secondary,,0,0,0,,make your workflow much more efficient.
+Dialogue: 1,0:05:53.53,0:05:56.42,Secondary,,0,0,0,,In the third lab, you get hands-on with reinforcement
+Dialogue: 1,0:05:56.42,0:05:59.11,Secondary,,0,0,0,,learning from human feedback or RLHF,
+Dialogue: 1,0:05:59.11,0:06:01.91,Secondary,,0,0,0,,you'll build a reward model classifier to label
+Dialogue: 1,0:06:01.91,0:06:04.87,Secondary,,0,0,0,,model responses as either toxic or non-toxic.
+Dialogue: 1,0:06:04.87,0:06:06.29,Secondary,,0,0,0,,Don't worry if you don't understand
+Dialogue: 1,0:06:06.29,0:06:08.25,Secondary,,0,0,0,,all these terms and concepts just yet.
+Dialogue: 1,0:06:08.25,0:06:10.10,Secondary,,0,0,0,,You'll dive into each of these topics in
+Dialogue: 1,0:06:10.10,0:06:12.45,Secondary,,0,0,0,,much more detail throughout this course.
+Dialogue: 1,0:06:12.45,0:06:15.35,Secondary,,0,0,0,,I'm thrilled to have Antje, Mike,
+Dialogue: 1,0:06:15.35,0:06:18.74,Secondary,,0,0,0,,Shelbee as well as Tris presenting this course to
+Dialogue: 1,0:06:18.74,0:06:22.67,Secondary,,0,0,0,,you that takes a deep technical dive into LLMs.
+Dialogue: 1,0:06:22.67,0:06:25.85,Secondary,,0,0,0,,You come away from this course having practice with
+Dialogue: 1,0:06:25.85,0:06:27.98,Secondary,,0,0,0,,many different concrete code examples
+Dialogue: 1,0:06:27.98,0:06:29.75,Secondary,,0,0,0,,for how to build or use LLMs.
+Dialogue: 1,0:06:29.75,0:06:32.39,Secondary,,0,0,0,,I'm sure that many of the code snippets will
+Dialogue: 1,0:06:32.39,0:06:35.41,Secondary,,0,0,0,,end up being directly useful in your own work.
+Dialogue: 1,0:06:35.41,0:06:38.12,Secondary,,0,0,0,,I hope you enjoy the course and use what
+Dialogue: 1,0:06:38.12,0:06:41.2,Secondary,,0,0,0,,you learn to build some really exciting applications.
+Dialogue: 1,0:06:41.2,0:06:44.24,Secondary,,0,0,0,,So that, let's go on to the next video where we start
+Dialogue: 1,0:06:44.24,0:06:46.19,Secondary,,0,0,0,,diving into how LLMs
+Dialogue: 1,0:06:46.19,0:06:49.29,Secondary,,0,0,0,,are being used to build applications.
+Dialogue: 1,0:00:00.0,0:00:04.85,Default,,0,0,0,,欢迎参加这门关于大型语言模型的生成式AI课程。
+Dialogue: 1,0:00:04.85,0:00:09.18,Default,,0,0,0,,大型语言模型或LLMs是一项非常令人兴奋的技术。
+Dialogue: 1,0:00:09.18,0:00:17.94,Default,,0,0,0,,然而，尽管各种新闻和炒作满天飞，许多人仍\N然低估了它们作为开发者工具的能力。
+Dialogue: 1,0:00:17.94,0:00:28.40,Default,,0,0,0,,具体来说，过去我需要花费数月时间构建的许多机器学习\N和AI应用，现在你可能只需要几天甚至几周就能完成。
+Dialogue: 1,0:00:28.40,0:00:34.61,Default,,0,0,0,,这门课程将和你一起深入研究LLM技术的工作原理，
+Dialogue: 1,0:00:34.61,0:00:42.18,Default,,0,0,0,,包括详解许多技术细节，如模型训练，指令调整，微调，
+Dialogue: 1,0:00:42.18,0:00:49.97,Default,,0,0,0,,以及生成式AI项目生命周期框架，帮助你规划和执行你的项目等等。
+Dialogue: 1,0:00:49.97,0:00:55.45,Default,,0,0,0,,生成式AI和LLMs是一种通用技术。
+Dialogue: 1,0:00:55.45,0:01:01.94,Default,,0,0,0,,这意味着它们与其他通用技术（如深度学习和电力）类似，
+Dialogue: 1,0:01:01.94,0:01:04.64,Default,,0,0,0,,它不仅对单一应用有用，
+Dialogue: 1,0:01:04.64,0:01:10.6,Default,,0,0,0,,而且对许多不同的应用也有用，这些应用覆盖了经济的许多领域。
+Dialogue: 1,0:01:10.6,0:01:16.56,Default,,0,0,0,,类似于大约15年前深度学习的崛起，
+Dialogue: 1,0:01:16.56,0:01:23.9,Default,,0,0,0,,我们面前还有许多重要的工作需要由许多人花费多年的时间来完成，
+Dialogue: 1,0:01:23.9,0:01:28.90,Default,,0,0,0,,我希望你也能参与其中，去确定使用案例并构建特定的应用。
+Dialogue: 1,0:01:28.90,0:01:34.86,Default,,0,0,0,,因为这项技术还非常新，很少有人真正知道如何使用它，
+Dialogue: 1,0:01:34.86,0:01:43.16,Default,,0,0,0,,许多公司现在也在急着寻找和雇佣那些真\N正懂得如何用LLMs构建应用的人才。
+Dialogue: 1,0:01:43.16,0:01:46.42,Default,,0,0,0,,我希望这门课程也能帮助你，
+Dialogue: 1,0:01:46.42,0:01:50.53,Default,,0,0,0,,如果你愿意的话，可以更好地定位自己去获得一份相关的工作。
+Dialogue: 1,0:01:50.53,0:01:56.23,Default,,0,0,0,,我很高兴能够带来这门课程，一同教授的\N还有来自AWS团队的一群出色的导师，
+Dialogue: 1,0:01:56.23,0:02:04.57,Default,,0,0,0,,他们包括今天在我身边的Antje Barth、Mike Chambers、\NShelbee Eigenbrode，以及第四位导师Chris Fregly，
+Dialogue: 1,0:02:04.57,0:02:06.52,Default,,0,0,0,,他将会进行一些附加的讲解。
+Dialogue: 1,0:02:06.52,0:02:11.53,Default,,0,0,0,,Antje和Mike是生成式AI开发者倡导者。
+Dialogue: 1,0:02:11.53,0:02:16.13,Default,,0,0,0,,Shelbee和Chris是生成式AI解决方案架构师。
+Dialogue: 1,0:02:16.13,0:02:17.72,Default,,0,0,0,,他们都有丰富的经验，
+Dialogue: 1,0:02:17.72,0:02:23.48,Default,,0,0,0,,帮助过许多不同的公司使用LLMs构建了许多创新的应用。
+Dialogue: 1,0:02:23.48,0:02:29.74,Default,,0,0,0,,我期待他们在这门课程中分享这些丰富的实践经验。
+Dialogue: 1,0:02:29.74,0:02:33.23,Default,,0,0,0,,我们在开发这门课程的内容时，
+Dialogue: 1,0:02:33.23,0:02:41.74,Default,,0,0,0,,参考了来自Amazon、AWS、HuggingFace以及世界各地\N顶级大学的许多行业专家和应用科学家的意见。
+Dialogue: 1,0:02:41.74,0:02:44.60,Default,,0,0,0,,Antje，也许你可以进一步介绍一下这门课程。
+Dialogue: 1,0:02:44.60,0:02:45.91,Default,,0,0,0,,好的。谢谢Andrew。
+Dialogue: 1,0:02:45.91,0:02:48.56,Default,,0,0,0,,很高兴再次与你在这门课程上合作，
+Dialogue: 1,0:02:48.56,0:02:51.29,Default,,0,0,0,,这是一个关于生成式AI的激动人心的领域。
+Dialogue: 1,0:02:51.29,0:02:54.94,Default,,0,0,0,,在这门有关大型语言模型生成人工智能的课程中，
+Dialogue: 1,0:02:54.94,0:03:01.26,Default,,0,0,0,,我们为AI爱好者，工程师或数据科学家设计了一系列课程。
+Dialogue: 1,0:03:01.26,0:03:10.55,Default,,0,0,0,,如果你希望学习LLMs的技术基础，以及训练，调整和\N部署它们的最佳实践，那么这门课程正适合你。
+Dialogue: 1,0:03:10.55,0:03:19.45,Default,,0,0,0,,我们假设你已经熟悉Python编程，以及基本的数据科\N学和机器学习概念，这是学习这门课的先决条件。
+Dialogue: 1,0:03:19.45,0:03:24.56,Default,,0,0,0,,如果你已经有一些Python或TensorFlow的经验，那应该足够了。
+Dialogue: 1,0:03:24.56,0:03:32.31,Default,,0,0,0,,在这门课程中，你将详细探讨构成典型\N生成式AI项目生命周期的各个步骤，
+Dialogue: 1,0:03:32.31,0:03:40.48,Default,,0,0,0,,从定义问题和选择语言模型，到优化模型部署和集成到你的应用中。
+Dialogue: 1,0:03:40.48,0:03:42.71,Default,,0,0,0,,这门课程涵盖了所有的主题，
+Dialogue: 1,0:03:42.71,0:03:44.32,Default,,0,0,0,,不仅是浅层次的，
+Dialogue: 1,0:03:44.32,0:03:49.85,Default,,0,0,0,,我们不仅会浅尝辄止，而且会确保你深入理解所有这些技术，
+Dialogue: 1,0:03:49.85,0:03:57.26,Default,,0,0,0,,让你在构建自己的生成式AI项目时真正知道自己在做什么。
+Dialogue: 1,0:03:57.26,0:04:01.97,Default,,0,0,0,,Mike，你能告诉我们的学员每周将看到什么内容吗？
+Dialogue: 1,0:04:01.97,0:04:04.28,Default,,0,0,0,,当然，Antje，谢谢。
+Dialogue: 1,0:04:04.28,0:04:10.60,Default,,0,0,0,,在第一周，你将研究驱动大型语言模型的Transformer架构，
+Dialogue: 1,0:04:10.60,0:04:18.82,Default,,0,0,0,,探索如何训练这些模型，并了解开发这些强大的LLMs所需的计算资源。
+Dialogue: 1,0:04:18.82,0:04:23.47,Default,,0,0,0,,你还会了解一种叫做上下文学习的技术，
+Dialogue: 1,0:04:23.47,0:04:29.5,Default,,0,0,0,,如何通过Prompt工程在推理时引导模型输出，
+Dialogue: 1,0:04:29.5,0:04:36.35,Default,,0,0,0,,以及如何调整LLMs的最重要的生成参数以调整你的模型输出。
+Dialogue: 1,0:04:36.35,0:04:37.61,Default,,0,0,0,,在第二周，
+Dialogue: 1,0:04:37.61,0:04:48.68,Default,,0,0,0,,你将探索如何通过一种称为指令微调的过程，\N将预训练模型适应到特定的任务和数据集。
+Dialogue: 1,0:04:48.68,0:04:50.12,Default,,0,0,0,,然后在第三周，
+Dialogue: 1,0:04:50.12,0:04:54.89,Default,,0,0,0,,你将看到如何将语言模型的输出与人类价值观对齐，
+Dialogue: 1,0:04:54.89,0:05:01.3,Default,,0,0,0,,以增加其实用性并减少潜在的伤害和毒性。
+Dialogue: 1,0:05:01.3,0:05:03.68,Default,,0,0,0,,我们不仅仅停留在理论上。
+Dialogue: 1,0:05:03.68,0:05:06.8,Default,,0,0,0,,每周都包括一个动手实验，
+Dialogue: 1,0:05:06.8,0:05:12.29,Default,,0,0,0,,你将能够在一个包含所有你需要的大模型\N工作资源的AWS环境中尝试这些技术，
+Dialogue: 1,0:05:12.29,0:05:15.40,Default,,0,0,0,,而且你可以免费实验这些技术。
+Dialogue: 1,0:05:15.40,0:05:18.35,Default,,0,0,0,,Shelbee，你能告诉我们更多关于动手实验的信息吗？
+Dialogue: 1,0:05:18.35,0:05:21.67,Default,,0,0,0,,当然可以，Mike。在第一个动手实验中，
+Dialogue: 1,0:05:21.67,0:05:25.75,Default,,0,0,0,,在第一个动手实验中，你将构建并比较\N给定生成任务的不同Prompt和输入，
+Dialogue: 1,0:05:25.75,0:05:27.73,Default,,0,0,0,,在这个案例中，是对话摘要。
+Dialogue: 1,0:05:27.73,0:05:36.6,Default,,0,0,0,,你也会探索不同的推理参数和采样策略，以了\N解如何进一步改善生成模型的返回结果。
+Dialogue: 1,0:05:36.6,0:05:37.91,Default,,0,0,0,,在第二个动手实验室中，
+Dialogue: 1,0:05:37.91,0:05:43.70,Default,,0,0,0,,你将微调一个现有的来自HuggingFace（一\N个流行的开源模型库）的大型语言模型。
+Dialogue: 1,0:05:43.70,0:05:49.22,Default,,0,0,0,,你将同时使用完全微调和参数有效微调（简称PEFT）。
+Dialogue: 1,0:05:49.22,0:05:53.53,Default,,0,0,0,,你将看到PEFT如何让你的工作流程更加高效。
+Dialogue: 1,0:05:53.53,0:05:59.11,Default,,0,0,0,,在第三个实验中，你将通过人类反馈进行强化学习（RLHF），
+Dialogue: 1,0:05:59.11,0:06:04.87,Default,,0,0,0,,你将构建一个奖励模型分类器来标记\N模型的返回结果是有害还是无害。
+Dialogue: 1,0:06:04.87,0:06:08.25,Default,,0,0,0,,如果你现在还不理解所有这些术语和概念，也不用担心。
+Dialogue: 1,0:06:08.25,0:06:12.45,Default,,0,0,0,,你将在这门课程中深入探讨每一个主题。
+Dialogue: 1,0:06:12.45,0:06:22.67,Default,,0,0,0,,我很高兴有Antje，Mike，Shelbee以及Chris\N来向你们介绍这门深入探讨LLMs的课程。
+Dialogue: 1,0:06:22.67,0:06:29.75,Default,,0,0,0,,你将从这门课程中获得很多关于如何构建或\N使用LLMs的具体代码示例的实践经验。
+Dialogue: 1,0:06:29.75,0:06:35.41,Default,,0,0,0,,我相信其中许多代码片段将直接用于你自己的工作。
+Dialogue: 1,0:06:35.41,0:06:41.2,Default,,0,0,0,,我希望你能喜欢这门课程，并利用你学到\N的知识构建一些真正令人兴奋的应用。
+Dialogue: 1,0:06:41.2,0:06:49.29,Default,,0,0,0,,那么，让我们继续下一个视频，开始深入了解如何使用LLMs构建应用。

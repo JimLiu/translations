@@ -1,0 +1,873 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 200
+          },
+          "text": "In this video, we'll go over the neural network, the architecture of it, and how we can incorporate additional information into it."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 960
+          },
+          "text": "So the neural network architecture that we use for diffusion models is a UNet."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 786
+          },
+          "text": "And the most important thing that you need to know about a UNet is that"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 787
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 960
+          },
+          "text": "it is taking as input this image and it's producing as output something of the same size as that image, but here it is that predicted noise."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 40
+          },
+          "text": "UNets have been around for a very long time, since 2015, and it was first used for image segmentation."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 520
+          },
+          "text": "It was first used to take an image and actually segment it into either a pedestrian or a car,"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 480
+          },
+          "text": "so it's used a lot in self-driving car research."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 880
+          },
+          "text": "But what's special about UNets is just that its input and outputs are the same size."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 53,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 886
+          },
+          "text": "And what it does is it first embeds information about this input,"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 887
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 368
+          },
+          "text": "so it downsamples with a lot of convolutional layers into an embedding that compresses all that information into a small amount of space,"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 568
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 880
+          },
+          "text": "and then it upsamples with the same number of upsampling blocks into the output back out for its task."
+        }
+      ],
+      "source": [
+        "In this video, we'll go over the neural network, the architecture of it, and how we can incorporate additional information into it.",
+        "So the neural network architecture that we use for diffusion models is a UNet.",
+        "And the most important thing that you need to know about a UNet is that",
+        "it is taking as input this image and it's producing as output something of the same size as that image, but here it is that predicted noise.",
+        "UNets have been around for a very long time, since 2015, and it was first used for image segmentation.",
+        "It was first used to take an image and actually segment it into either a pedestrian or a car,",
+        "so it's used a lot in self-driving car research.",
+        "But what's special about UNets is just that its input and outputs are the same size.",
+        "And what it does is it first embeds information about this input,",
+        "so it downsamples with a lot of convolutional layers into an embedding that compresses all that information into a small amount of space,",
+        "and then it upsamples with the same number of upsampling blocks into the output back out for its task."
+      ],
+      "result": [
+        "在这个视频中，我们将介绍\\N神经网络和它的架构，以及\\N如何将额外信息融入其中。",
+        "我们用于扩散模型的\\N神经网络架构是一个UNet。",
+        "关于UNet最重要的是，",
+        "它将图像作为输入，\\N输出与图像大小相同的预测噪声。",
+        "UNet已经存在\\N很长时间了，自2015年以来，\\N它首次被用于图像分割。",
+        "它最初被用来\\N将一张图片中的行人或汽车分割出来，",
+        "因此在自动驾驶汽车\\N研究中得到了广泛应用。",
+        "但UNet的特殊之处在于\\N其输入和输出大小相同。",
+        "它首先将这个输入的信息嵌入，",
+        "通过许多卷积层将其降采样\\N到一个压缩了所有信息的嵌入中，",
+        "然后用相同数量的\\N上采样块将输出返回到任务中。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 520
+          },
+          "text": "And in this case, that task is to predict the noise that was applied to this image."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 171
+          },
+          "text": "And if you want to look a little bit deeper, which we'll do together,"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 172
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 280
+          },
+          "text": "is that each of these named blocks here are also shown in the code with the same names."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 760
+          },
+          "text": "And this predicted noise is the same dimension, 16,16 by 3, of the original input image."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 680
+          },
+          "text": "What's also great about this UNet is that it can take in additional information."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "text": "So it's compressed that image to understand what's going on, but it can also take in more information."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 320
+          },
+          "text": "And so what information do we want to include?"
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 940
+          },
+          "text": "Well, one thing that's really important for these models is the time embedding."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 656
+          },
+          "text": "And so this is an embedding that kind of tells the model what the time step is,"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 657
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 720
+          },
+          "text": "and therefore what kind of noise level we need."
+        }
+      ],
+      "source": [
+        "And in this case, that task is to predict the noise that was applied to this image.",
+        "And if you want to look a little bit deeper, which we'll do together,",
+        "is that each of these named blocks here are also shown in the code with the same names.",
+        "And this predicted noise is the same dimension, 16,16 by 3, of the original input image.",
+        "What's also great about this UNet is that it can take in additional information.",
+        "So it's compressed that image to understand what's going on, but it can also take in more information.",
+        "And so what information do we want to include?",
+        "Well, one thing that's really important for these models is the time embedding.",
+        "And so this is an embedding that kind of tells the model what the time step is,",
+        "and therefore what kind of noise level we need."
+      ],
+      "result": [
+        "在这个例子中，它的任务\\N就是预测应用到这个图片上的噪音。",
+        "如果你想深入了解，\\N我们可以一起来看看，",
+        "这些命名块在代码中\\N也用相同的名称显示。",
+        "这个预测的噪声与原始输入\\N图像的尺寸相同，16x16x3。",
+        "UNet的另一个优点是\\N它可以接收额外的信息。",
+        "所以它压缩了图像以了解发生\\N了什么，但也可以接收更多信息。",
+        "那么我们想要包括拿些信息呢？",
+        "对于这些模型来说，\\N一个非常重要的信息就是时间嵌入。",
+        "这是一种告诉模型时间步长的嵌入，",
+        "因此我们需要某种级别的噪音。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 720
+          },
+          "text": "And all you have to do for this time embedding is you embed it into some kind of vector,"
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 320
+          },
+          "text": "and you can add it into these upsampling blocks."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 280
+          },
+          "text": "Another piece of information that could be useful is a context embedding."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 40
+          },
+          "text": "We'll do more of this later, but all that context embedding does is it helps you control what the model generates."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 680
+          },
+          "text": "For example, a text description, like you really want it to be Bob, or some kind of factor like it needs to be a certain color."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 880
+          },
+          "text": "We'll discuss this a bit more later."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 440
+          },
+          "text": "And for that context embedding, you can just multiply it in."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 640
+          },
+          "text": "Great."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 560
+          },
+          "text": "So what does that look like in code?"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 560
+          },
+          "text": "Here you can see a context embedding."
+        }
+      ],
+      "source": [
+        "And all you have to do for this time embedding is you embed it into some kind of vector,",
+        "and you can add it into these upsampling blocks.",
+        "Another piece of information that could be useful is a context embedding.",
+        "We'll do more of this later, but all that context embedding does is it helps you control what the model generates.",
+        "For example, a text description, like you really want it to be Bob, or some kind of factor like it needs to be a certain color.",
+        "We'll discuss this a bit more later.",
+        "And for that context embedding, you can just multiply it in.",
+        "Great.",
+        "So what does that look like in code?",
+        "Here you can see a context embedding."
+      ],
+      "result": [
+        "对于这个时间嵌入，你需要\\N做的就是将它嵌入到一个向量中，",
+        "然后将其添加到这些上采样块中。",
+        "另一个有用的信息是上下文嵌入。",
+        "我们稍后会更深入地讨论\\N这个，但上下文嵌入的作用就是\\N帮助你控制模型生成的内容。",
+        "例如，一个文本描述，\\N你想让它生成的是Bob，或者\\N某种因子，比如需要是某种颜色。",
+        "稍后我们会再讨论这个问题。",
+        "对于这个上下文嵌入，\\N你只需要将它乘进去就可以了。",
+        "很好！",
+        "那么这在代码中是什么样子的呢？",
+        "这里你可以看到一个上下文嵌入。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 940
+          },
+          "text": "This is just one of them."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 960
+          },
+          "text": "And then here you see the time embedding."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 431
+          },
+          "text": "And in the upsampling block, all you have to do again, just like in this diagram,"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 443
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 120
+          },
+          "text": "you multiply the context embedding with the upsampling block, and you add the time embedding."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 120
+          },
+          "text": "Cool."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 960
+          },
+          "text": "So now in the notebook, in the forward pass of the model, so this is running the model,"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 960
+          },
+          "text": "you can see some of these down, down, down blocks, and then also these up, up, up blocks here."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 360
+          },
+          "text": "And again, here are your context and time embeddings."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 560
+          },
+          "text": "We have two of them here for each of those up blocks."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 2,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 120
+          },
+          "text": "And how these down and up blocks are defined is up here in initialization for the UNet."
+        }
+      ],
+      "source": [
+        "This is just one of them.",
+        "And then here you see the time embedding.",
+        "And in the upsampling block, all you have to do again, just like in this diagram,",
+        "you multiply the context embedding with the upsampling block, and you add the time embedding.",
+        "Cool.",
+        "So now in the notebook, in the forward pass of the model, so this is running the model,",
+        "you can see some of these down, down, down blocks, and then also these up, up, up blocks here.",
+        "And again, here are your context and time embeddings.",
+        "We have two of them here for each of those up blocks.",
+        "And how these down and up blocks are defined is up here in initialization for the UNet."
+      ],
+      "result": [
+        "这只是其中之一。",
+        "然后在这里你可以看到时间嵌入。",
+        "在上采样模块中，你需要\\N做的就是像图示中那样，",
+        "把上下文嵌入乘以上采样块，\\N然后加上时间嵌入。",
+        "很好！",
+        "那么现在，在 Notebook 的\\N模型前向传递中，这就是运行模型，",
+        "你可以看到一些这样的下采样块，\\N然后也有这些上采样块。",
+        "再次强调，这里是\\N你的上下文和时间嵌入。",
+        "我们在这里为每一个\\N上采样块都设置了两个。",
+        "这些上采样和下采样块是如何定义\\N的，是在UNet的初始化部分定义的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 0
+          },
+          "text": "And so for the down, this is what a UNet down looks like."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 960
+          },
+          "text": "And we actually do have that in our helper functions if you want to look at them in greater detail."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 20,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 540
+          },
+          "text": "But they are just convolutional blocks."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 800
+          },
+          "text": "And in the next video, you'll learn how to train this neural network."
+        }
+      ],
+      "source": [
+        "And so for the down, this is what a UNet down looks like.",
+        "And we actually do have that in our helper functions if you want to look at them in greater detail.",
+        "But they are just convolutional blocks.",
+        "And in the next video, you'll learn how to train this neural network."
+      ],
+      "result": [
+        "所以对于下采样，这就是\\N一个UNet下采样的样子。",
+        "如果你想详细了解的话我们实际\\N上在我们的辅助函数中也有这个。",
+        "但它们就是卷积块。",
+        "在下一个视频中，你将\\N学会如何训练这个神经网络。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/How Diffusion Models Work/DiffusionModels_L3_v02.srt",
+  "ouputBasePath": "input/How Diffusion Models Work/DiffusionModels_L3_v02",
+  "totalCost": 0.10857000000000001,
+  "translationPath": "input/How Diffusion Models Work/DiffusionModels_L3_v02/translation.json"
+}

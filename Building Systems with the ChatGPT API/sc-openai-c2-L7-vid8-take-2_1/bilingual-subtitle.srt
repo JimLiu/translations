@@ -1,0 +1,354 @@
+1
+00:00:05,000 --> 00:00:08,160
+在这个视频中，我们将把前面几个视频中学到的所有知识整合在一起，创建
+In this video, we'll put together everything we've learned in the previous videos to create
+
+2
+00:00:08,160 --> 00:00:11,200
+一个端到端的客户服务助手示例。
+an end-to-end example of a customer service assistant.
+
+3
+00:00:11,200 --> 00:00:12,520
+我们将执行以下步骤：
+We'll go through the following steps.
+
+4
+00:00:12,520 --> 00:00:16,000
+首先，我们会检查输入内容，看是否触发了内容审核 API。
+First, we'll check the input to see if it flags the moderation API.
+
+5
+00:00:16,000 --> 00:00:20,000
+其次，如果没有，我们将提取产品列表。
+Second, if it doesn't, we'll extract the list of products.
+
+6
+00:00:20,000 --> 00:00:23,280
+第三，如果找到了产品，我们会尝试查找它们。
+Third, if the products are found, we'll try to look them up.
+
+7
+00:00:23,280 --> 00:00:26,880
+第四，我们将用模型回答用户的问题。
+And four, we'll answer the user question with the model.
+
+8
+00:00:26,880 --> 00:00:31,080
+最后，我们会将答案通过内容审核 API检查。
+And finally, we'll put the answer through the moderation API.
+
+9
+00:00:31,080 --> 00:00:34,760
+如果没有被标记有问题，我们会将答案返回给用户。
+And if it is not flagged, we'll return it to the user.
+
+10
+00:00:34,760 --> 00:00:36,820
+我们已经有了相关设置。
+So we have our setup.
+
+11
+00:00:36,820 --> 00:00:39,320
+这里新增了一个额外的引用。
+We have this additional import.
+
+12
+00:00:39,320 --> 00:00:47,240
+这是一个用于聊天机器人界面的Python包。
+This is a Python package we'll use for a chatbot UI.
+
+13
+00:00:47,240 --> 00:00:51,760
+我要粘贴一个处理用户消息的函数。
+And so I'm going to paste in a function process_user_message.
+
+14
+00:00:51,760 --> 00:00:58,960
+实际上，我先运行一个例子，然后我们再讨论这个函数。
+And I'm actually going to run an example first, and then we'll talk through the function.
+
+15
+00:00:58,960 --> 00:01:01,920
+这是一段我们一直在使用的用户输入：
+So we have our user input that we've been using.
+
+16
+00:01:01,920 --> 00:01:05,040
+“告诉我关于SmartX pro手机和相机的信息。
+Tell me about the SmartX pro phone and the camera.
+
+17
+00:01:05,040 --> 00:01:06,800
+还告诉我关于电视的信息。”
+Also tell me about TVs.
+
+18
+00:01:06,800 --> 00:01:07,800
+那我们来运行这个。
+So let's run this.
+
+19
+00:01:07,800 --> 00:01:12,640
+首先，我们来运行这个。
+First, let's run this.
+
+20
+00:01:12,640 --> 00:01:20,680
+正如你所看到的，我们正在通过这些步骤来回答用户的问题。
+So as you can see, we're going through the steps to answer the user question.
+
+21
+00:01:20,680 --> 00:01:24,560
+第一步是审核步骤。
+So the first step, the moderation step.
+
+22
+00:01:24,560 --> 00:01:27,480
+第二步是提取产品列表。
+The second step is extracting the list of products.
+
+23
+00:01:27,480 --> 00:01:31,880
+第三步是查找产品信息。
+The third step is looking up the product information.
+
+24
+00:01:31,880 --> 00:01:39,560
+现在有了这些产品信息，模型正试图回答这个问题，
+And so now with this product information, the model is trying to answer the question,
+
+25
+00:01:39,560 --> 00:01:46,360
+正如我们在之前的视频中看到的。
+as we've seen in the previous videos.
+
+26
+00:01:46,360 --> 00:01:53,680
+最后，它再次通过审核API处理返回结果，以确保对用户展示的内容是安全的。
+And then finally, it puts the response through the moderation API again to make sure it's safe to show to the user.
+
+27
+00:01:53,680 --> 00:01:58,120
+这就是我们现在熟悉的返回结果。
+And so this is the response that we're now familiar with.
+
+28
+00:01:58,120 --> 00:02:01,800
+让我们浏览一下代码看这里发生了什么。
+And so let's talk through a little bit of what's happening.
+
+29
+00:02:01,800 --> 00:02:09,320
+有一个辅助函数process_user_message。
+So we have our helper function process_user_message.
+
+30
+00:02:09,320 --> 00:02:16,640
+它接收用户输入，即当前消息，以及到目前为止的所有消息数组。
+Takes in the user input, which is the current message, and an array of all of the messages so far.
+
+31
+00:02:16,640 --> 00:02:18,920
+这就是我们构建聊天机器人界面的时候。
+And this is when we build the chatbot UI.
+
+32
+00:02:18,920 --> 00:02:23,280
+首先，检查输入是否触发了审查API。
+So the first step, checking to see if the input flags the moderation API.
+
+33
+00:02:23,280 --> 00:02:25,600
+我们在之前的视频中讲过这个。
+We covered this in a previous video.
+
+34
+00:02:25,600 --> 00:02:32,240
+如果输入被标记，那么告诉用户我们无法处理这个请求。
+If the input is flagged, then we tell the user that we can't process the request.
+
+35
+00:02:32,240 --> 00:02:37,840
+如果没有被标记，尝试提取产品列表，就像在之前的视频中那样。
+If it is not flagged, we try to extract the list of products, as we did in the previous video.
+
+36
+00:02:37,840 --> 00:02:40,800
+然后尝试查找产品。
+Then we try to look up the products.
+
+37
+00:02:40,800 --> 00:02:45,320
+在这种情况下，如果没有找到产品，这将只是一个空字符串。
+And in this case, if no products are found, this will just be an empty string.
+
+38
+00:02:45,320 --> 00:02:47,080
+然后我们回答用户的问题。
+Then we answer the user question.
+
+39
+00:02:47,080 --> 00:02:52,000
+我们提供了对话历史和带有相关产品信息的新消息。
+So we give the conversation history and the new messages with the relevant product information.
+
+40
+00:02:52,000 --> 00:02:54,360
+我们得到了返回结果。
+So we get the response.
+
+41
+00:02:54,360 --> 00:02:56,960
+然后我们将这个返回结果通过审核 API检查。
+And then we run this response through the moderation API.
+
+42
+00:02:56,960 --> 00:03:04,160
+如果被标记，我们会告诉用户我们无法提供这个信息。
+If it's flagged, we tell the user that we can't provide this information.
+
+43
+00:03:04,160 --> 00:03:06,720
+也许我们会说一些类似，“让我帮你转接人工服务。”
+Maybe we'll say something, "Let me connect you to a human."
+
+44
+00:03:06,720 --> 00:03:09,320
+然后你可以采取一些后续步骤。
+And you could take some subsequent step.
+
+45
+00:03:09,320 --> 00:03:15,560
+让我们用一个漂亮的界面把这些都整合起来，试着进行一次对话。
+And so let's put this all together with a nice UI and try to have a conversation.
+
+46
+00:03:15,560 --> 00:03:22,200
+这里有一个功能，只要我们与助手互动，这些消息就会被累积起来。
+So here we have a function that will just accumulate the messages as we interact with the assistant.
+
+47
+00:03:22,200 --> 00:03:26,960
+请随时暂停视频，以更详细地了解这是如何工作的。
+And feel free to pause the video to understand in more detail how this works.
+
+48
+00:03:26,960 --> 00:03:33,560
+当然，对刚才非常长的处理用户消息功能的那部分，您也可以一样随时暂停去详细了解。
+And of course, feel free to do the same for the really long process user message function that we just saw as well.
+
+50
+00:03:33,560 --> 00:03:40,080
+现在我们要粘贴代码来显示聊天机器人界面。
+So now we're going to paste in our code to display the chatbot UI.
+
+51
+00:03:40,080 --> 00:03:46,800
+那么，如果我们运行这个，现在让我们尝试和客服助手进行对话。
+So if we run this, now let's try and have a conversation with the customer service assistant.
+
+52
+00:03:46,800 --> 00:03:54,200
+那我们问一下：“你们有哪些电视？”
+So let's ask, "What TVs do you have?"
+
+53
+00:03:54,200 --> 00:04:00,840
+在后台，助手正在执行处理用户消息功能中的所有步骤。
+And under the hood, the assistant is going through all of the steps in the process user message function.
+
+54
+00:04:00,840 --> 00:04:03,960
+它列出了各种不同的电视。
+So it's listed a variety of different TVs.
+
+55
+00:04:03,960 --> 00:04:08,440
+现在我们再问：“哪个最便宜？”
+So now let's ask, "Which is the cheapest?"
+
+56
+00:04:08,440 --> 00:04:20,360
+同样，它还在执行所有相同的步骤，但这次它还将历史会话一起传递到提示（Prompt）中。
+Again, it's going through all the same steps, but this time it's passing the conversation history as well into the prompts.
+
+57
+00:04:20,360 --> 00:04:26,920
+好的，它告诉我们这个扬声器是我们拥有的最便宜的与电视相关的产品。
+Okay, so it's telling us that this speaker is the cheapest TV-related product we have.
+
+58
+00:04:26,920 --> 00:04:27,920
+有意思。
+Interesting.
+
+59
+00:04:28,000 --> 00:04:29,840
+我们看看最贵的是什么。
+Let's see what the most expensive is.
+
+60
+00:04:29,840 --> 00:04:40,800
+最贵的电视是 Cineview 8K 电视。
+So the most expensive TV is the Cineview 8K TV.
+
+61
+00:04:40,800 --> 00:04:43,360
+那我们来了解更多关于它的信息吧。
+So let's ask for more information about it.
+
+62
+00:04:43,360 --> 00:04:46,600
+跟我说说更多关于它的事。
+Tell me more about it.
+
+63
+00:04:46,600 --> 00:04:54,800
+我们收到了关于这台电视的更多信息。
+And so we've received some more information about this television.
+
+64
+00:04:54,800 --> 00:05:00,400
+在这个例子中，我们将在课程中学到的技巧结合起来，创建了
+So in this example, we've combined the techniques we've learned throughout the course to create
+
+65
+00:05:00,400 --> 00:05:05,640
+一个包含一系列步骤的综合系统，用于评估用户输入、处理它们，
+a comprehensive system with a chain of steps that evaluates user inputs, processes them,
+
+66
+00:05:05,640 --> 00:05:07,560
+然后检查输出。
+and then checks the output.
+
+67
+00:05:07,560 --> 00:05:10,844
+通过监控更多输入的系统质量，
+By monitoring the quality of the system across a larger number of inputs,
+
+68
+00:05:10,845 --> 00:05:15,240
+你可以改变步骤，提高系统的整体性能。
+you can alter the steps and improve the overall performance of your system.
+
+69
+00:05:15,240 --> 00:05:19,080
+也许会发现我们的提示（Prompt）在某些步骤上可以做得更好。
+Maybe we might find that our prompts could be better for some of the steps.
+
+70
+00:05:19,080 --> 00:05:21,360
+也许有些步骤甚至不需要。
+Maybe some of the steps aren't even necessary.
+
+71
+00:05:21,360 --> 00:05:24,960
+你会找到更好的检索方法，等等。
+You will find a better retrieval method, and so on.
+
+72
+00:05:24,960 --> 00:05:26,160
+我们将在下一个视频中进一步讨论这个问题。
+We'll discuss this more in the next video.

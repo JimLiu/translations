@@ -1,0 +1,67 @@
+[Script Info]
+
+Title: overview_1
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}作者：{\1c&H80FFFF&\2c&H0000FF&}Andrew Wu, Isa Fulford
+Dialogue: 0,0:00:00.0,0:00:04.88,Secondary,,0,0,0,,Welcome to this course on Building Systems using the ChatGPT API.
+Dialogue: 0,0:00:04.88,0:00:09.92,Secondary,,0,0,0,,Previously, Isa and I had presented a course on how to prompt ChatGPT.
+Dialogue: 0,0:00:09.92,0:00:16.16,Secondary,,0,0,0,,But a system requires much more than a single prompt or a single call to an LLM or large language model.
+Dialogue: 0,0:00:16.16,0:00:23.68,Secondary,,0,0,0,,In this short course, we'd like to share with you best practices for building a complex application using an LLM.
+Dialogue: 0,0:00:23.68,0:00:30.40,Secondary,,0,0,0,,We'll use the running example of building an end-to-end customer service assistance system that chains multiple calls to a language model,
+Dialogue: 0,0:00:30.40,0:00:36.96,Secondary,,0,0,0,,using different instructions depending on the output of the previous call, and sometimes even looking things up from external sources.
+Dialogue: 0,0:00:36.96,0:00:44.96,Secondary,,0,0,0,,So for example, given a user input like "tell me about what TVs are for sale", we'd use the following steps to process this.
+Dialogue: 0,0:00:44.96,0:00:52.32,Secondary,,0,0,0,,First, you can evaluate the input to make sure it doesn't contain any problematic content, such as hateful speech.
+Dialogue: 0,0:00:52.32,0:00:57.4,Secondary,,0,0,0,,Next, the system will process the input. It will identify what type of query this is.
+Dialogue: 0,0:00:57.4,0:01:00.40,Secondary,,0,0,0,,Is it a complaint or a product information request and so on?
+Dialogue: 0,0:01:00.40,0:01:09.36,Secondary,,0,0,0,,Once it has established that it is a product inquiry, it will retrieve the relevant information about TVs and use a language model to write a helpful response.
+Dialogue: 0,0:01:09.36,0:01:15.52,Secondary,,0,0,0,,Finally, you'll check the output to make sure it isn't problematic, such as inaccurate or inappropriate answers.
+Dialogue: 0,0:01:15.52,0:01:23.28,Secondary,,0,0,0,,One theme you see throughout this course is that an application often needs multiple internal steps that are invisible to the end user.
+Dialogue: 0,0:01:23.28,0:01:31.52,Secondary,,0,0,0,,You often want to sequentially process the user input in multiple steps to get to the final output that is then shown to the user.
+Dialogue: 0,0:01:31.52,0:01:39.52,Secondary,,0,0,0,,And as you build complex systems using LLMs, over the long term, you often want to also keep on improving the system.
+Dialogue: 0,0:01:39.52,0:01:49.52,Secondary,,0,0,0,,So I'll also share with you what the process of developing an LLM-based application feels like and some best practices for evaluating and improving a system over time.
+Dialogue: 0,0:01:49.52,0:01:54.0,Secondary,,0,0,0,,We're grateful to many people that have contributed to this short course.
+Dialogue: 0,0:01:54.0,0:02:02.0,Secondary,,0,0,0,,On the OpenAI side, we're grateful to Andrew Kondrich, Joe Palermo, Boris Power, and Ted Sanders.
+Dialogue: 0,0:02:02.0,0:02:09.28,Secondary,,0,0,0,,And from the DeepLearning.ai team, thank you also to Geoff Ladwig, Eddy Shyu, and Tommy Nelson.
+Dialogue: 0,0:02:09.28,0:02:14.72,Secondary,,0,0,0,,Through this short course, we hope you'll come away confident in your abilities to build a complex, multi-step application,
+Dialogue: 0,0:02:14.72,0:02:18.8,Secondary,,0,0,0,,and also be set up to maintain and keep on improving it.
+Dialogue: 0,0:02:18.8,0:02:20.8,Secondary,,0,0,0,,Let's dive in.
+Dialogue: 0,0:00:00.0,0:00:04.88,Default,,0,0,0,,欢迎参加关于使用ChatGPT API构建系统的课程。
+Dialogue: 0,0:00:04.88,0:00:09.92,Default,,0,0,0,,之前，Isa和我介绍了如何提示（Prompt）ChatGPT的课程。
+Dialogue: 0,0:00:09.92,0:00:16.16,Default,,0,0,0,,但是一个系统需要的远不止一个提示\N（Prompt）或一个对LLM（大型语言模型）的调\N用。
+Dialogue: 0,0:00:16.16,0:00:23.68,Default,,0,0,0,,在这个短期课程中，我们想和您分享使用\NLLM构建复杂应用程序的最佳实践。
+Dialogue: 0,0:00:23.68,0:00:30.40,Default,,0,0,0,,我们将以构建一个端到端的客户服务辅助系统\N为例，该系统将多个调用链接到语言模型，
+Dialogue: 0,0:00:30.40,0:00:36.96,Default,,0,0,0,,根据前一个调用的输出使用不同的指\N令，有时甚至从外部来源查找信息。
+Dialogue: 0,0:00:36.96,0:00:44.96,Default,,0,0,0,,例如，对于用户输入的“告诉我有哪些电视\N出售”，我们将使用以下步骤来处理。
+Dialogue: 0,0:00:44.96,0:00:52.32,Default,,0,0,0,,首先，您可以评估输入以确保其不包含\N任何有问题的内容，例如仇恨言论。
+Dialogue: 0,0:00:52.32,0:00:57.4,Default,,0,0,0,,接下来，系统将处理输入。它将确定这是哪种类型的查询。
+Dialogue: 0,0:00:57.4,0:01:00.40,Default,,0,0,0,,这是一个投诉还是产品信息请求等？
+Dialogue: 0,0:01:00.40,0:01:09.36,Default,,0,0,0,,一旦确定这是一个产品查询，它将检索有关电视的相\N关信息，并使用语言模型编写一个有帮助的回答。
+Dialogue: 0,0:01:09.36,0:01:15.52,Default,,0,0,0,,最后，你需要检查输出内容，确保没有\N问题，比如不准确或不适当的答案。
+Dialogue: 0,0:01:15.52,0:01:23.28,Default,,0,0,0,,在这门课程中，你会发现一个主题，那就是一个应用程\N序通常需要多个对最终用户不可见的内部步骤。
+Dialogue: 0,0:01:23.28,0:01:31.52,Default,,0,0,0,,你通常希望按顺序处理用户输入，经过多个\N步骤才能得到最终显示给用户的输出。
+Dialogue: 0,0:01:31.52,0:01:39.52,Default,,0,0,0,,当你使用LLM构建复杂系统时，从长远\N来看，你通常还希望不断改进系统。
+Dialogue: 0,0:01:39.52,0:01:49.52,Default,,0,0,0,,因此，我还将与您分享开发基于LLM的应用程序的\N过程感受以及评估和改进系统的最佳实践。
+Dialogue: 0,0:01:49.52,0:01:54.0,Default,,0,0,0,,我们感谢许多为这门短期课程做出贡献的人。
+Dialogue: 0,0:01:54.0,0:02:02.0,Default,,0,0,0,,在OpenAI方面，我们感谢Andrew Kondrich、\NJoe Palermo、Boris Power和Ted Sanders。
+Dialogue: 0,0:02:02.0,0:02:09.28,Default,,0,0,0,,来自DeepLearning.ai团队的，也感谢Geoff\N Ladwig、Eddy Shyu和Tommy Nelson。
+Dialogue: 0,0:02:09.28,0:02:14.72,Default,,0,0,0,,通过这门短期课程，我们希望你能够对自己建立\N一个复杂的多步应用程序的能力充满信心，
+Dialogue: 0,0:02:14.72,0:02:18.8,Default,,0,0,0,,并且能够维护和不断改进它。
+Dialogue: 0,0:02:18.8,0:02:20.8,Default,,0,0,0,,让我们开始吧。

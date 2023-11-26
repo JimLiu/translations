@@ -1,0 +1,84 @@
+[Script Info]
+
+Title: DiffusionModels
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,方正准圆简体,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Arial,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.92,Secondary,,0,0,0,,I'm thrilled to present to you this short course on diffusion models taught by Sharon Zhou.
+Dialogue: 0,0:00:10.92,0:00:20.0,Secondary,,0,0,0,,Mid-journey, stable diffusion, DALL-E, and others are able to generate an image, sometimes a beautiful image, given only a prompt.
+Dialogue: 0,0:00:20.0,0:00:21.76,Secondary,,0,0,0,,How do these algorithms work?
+Dialogue: 0,0:00:21.76,0:00:27.44,Secondary,,0,0,0,,You may have heard of a vague description of these algorithms learning to subtract noise to generate an image,
+Dialogue: 0,0:00:27.64,0:00:35.33,Secondary,,0,0,0,,but in this short course, Sharon will step you through a concrete implementation of image generation using a diffusion model
+Dialogue: 0,0:00:35.53,0:00:40.32,Secondary,,0,0,0,,so that you understand the technical details of exactly how it works.
+Dialogue: 0,0:00:40.32,0:00:41.80,Secondary,,0,0,0,,Cool, thanks Andrew.
+Dialogue: 0,0:00:41.80,0:00:46.80,Secondary,,0,0,0,,In this course, you'll be learning about the current state and capabilities of diffusion models used today.
+Dialogue: 0,0:00:46.80,0:00:55.44,Secondary,,0,0,0,,You'll start by understanding the sampling process, starting with pure noise and progressively refining it to obtain a final nice-looking image.
+Dialogue: 0,0:00:55.44,0:01:00.8,Secondary,,0,0,0,,You'll build the necessary programming skills to train a diffusion model effectively.
+Dialogue: 0,0:01:00.8,0:01:04.20,Secondary,,0,0,0,,You'll learn how to build a neural network that can predict noise in an image.
+Dialogue: 0,0:01:04.20,0:01:08.16,Secondary,,0,0,0,,You'll add context to the model so that you can control what you want it to generate.
+Dialogue: 0,0:01:08.16,0:01:14.52,Secondary,,0,0,0,,And finally, by implementing advanced algorithms, you'll learn how to accelerate the sampling process by a factor of 10.
+Dialogue: 0,0:01:14.52,0:01:17.34,Secondary,,0,0,0,,This is an intermediate to advanced course.
+Dialogue: 0,0:01:17.34,0:01:21.36,Secondary,,0,0,0,,We assume you're familiar with Python and basic neural network training.
+Dialogue: 0,0:01:21.36,0:01:24.56,Secondary,,0,0,0,,So for example, we'll assume you know what backpropagation is.
+Dialogue: 0,0:01:24.56,0:01:26.48,Secondary,,0,0,0,,We'll use PyTorch throughout.
+Dialogue: 0,0:01:26.48,0:01:32.82,Secondary,,0,0,0,,But if you're familiar with other machine learning frameworks, such as TensorFlow, you should be able to follow along just fine.
+Dialogue: 0,0:01:32.82,0:01:42.62,Secondary,,0,0,0,,And so the running example we'll use for this short course will be generating 16 by 16 sprites, like those little 8-bit characters used in video games.
+Dialogue: 0,0:01:42.62,0:01:47.40,Secondary,,0,0,0,,We chose this example so that it's feasible for you to not just go through the notebooks,
+Dialogue: 0,0:01:47.40,0:01:54.4,Secondary,,0,0,0,,but also run them yourself to generate cute sprites yourself right there in that Jupyter Notebook.
+Dialogue: 0,0:01:54.4,0:02:00.20,Secondary,,0,0,0,,Diffusion models are becoming a foundation for cutting-edge research in the life sciences and other sectors too.
+Dialogue: 0,0:02:00.20,0:02:03.56,Secondary,,0,0,0,,For example, generating molecules for drug discovery.
+Dialogue: 0,0:02:03.56,0:02:07.15,Secondary,,0,0,0,,So when you understand the technical details of diffusion models,
+Dialogue: 0,0:02:07.15,0:02:13.72,Secondary,,0,0,0,,you'll also be in a better position to understand and perhaps apply such models yourself.
+Dialogue: 0,0:02:13.72,0:02:16.68,Secondary,,0,0,0,,Many people worked together to build this short course.
+Dialogue: 0,0:02:16.68,0:02:23.36,Secondary,,0,0,0,,I want to thank Aaron Lou and Mehmet Giray Ogut for their significant contributions.
+Dialogue: 0,0:02:23.36,0:02:29.20,Secondary,,0,0,0,,And on the DeepLearning.ai site, also Geoff Ladwig and Eddy Shyu.
+Dialogue: 0,0:02:29.20,0:02:34.80,Secondary,,0,0,0,,So with that, let me hand it over to Sharon, and I hope you enjoy the course.
+Dialogue: 0,0:02:34.80,0:02:35.80,Secondary,,0,0,0,,Great.
+Dialogue: 0,0:02:35.80,0:02:36.44,Secondary,,0,0,0,,Let's get started.
+Dialogue: 0,0:00:05.0,0:00:10.92,Default,,0,0,0,,我很高兴为您介绍这个由Sharon Zhou\N来主讲的扩散模型（Diffusion Models）短期课程。
+Dialogue: 0,0:00:10.92,0:00:20.0,Default,,0,0,0,,Midjourney，Stable Diffusion、DALL-E等这类产品，\N能够仅通过一个提示（Prompt）生成图像，甚至有时生成的图像非常漂亮。
+Dialogue: 0,0:00:20.0,0:00:21.76,Default,,0,0,0,,这些算法是如何工作的？
+Dialogue: 0,0:00:21.76,0:00:27.44,Default,,0,0,0,,你可能听过这些算法学会减去噪声来生成图像的模糊描述，
+Dialogue: 0,0:00:27.64,0:00:35.33,Default,,0,0,0,,在这个短期课程中，Sharon将带领你了解\N使用扩散模型进行图像生成的具体实现，
+Dialogue: 0,0:00:35.53,0:00:40.32,Default,,0,0,0,,这样你就能明白它究竟是如何工作的。
+Dialogue: 0,0:00:40.32,0:00:41.80,Default,,0,0,0,,太酷了，谢谢Andrew。
+Dialogue: 0,0:00:41.80,0:00:46.80,Default,,0,0,0,,在这门课程中，你将了解到目前扩散模型的现状和能力。
+Dialogue: 0,0:00:46.80,0:00:55.44,Default,,0,0,0,,你将从了解采样过程开始，从纯噪声开始，\N逐步优化，最终获得一个好看的图像。
+Dialogue: 0,0:00:55.44,0:01:00.8,Default,,0,0,0,,你将学会训练扩散模型所需的编程技能。
+Dialogue: 0,0:01:00.8,0:01:04.20,Default,,0,0,0,,你将学会如何构建一个能预测图像中噪声的神经网络。
+Dialogue: 0,0:01:04.20,0:01:08.16,Default,,0,0,0,,你将为模型添加上下文，以便你可以控制想要生成的内容。
+Dialogue: 0,0:01:08.16,0:01:14.52,Default,,0,0,0,,最后，通过实现先进的算法，你将学会如何将采样过程加速10倍。
+Dialogue: 0,0:01:14.52,0:01:17.34,Default,,0,0,0,,这是一个中级到高级的课程。
+Dialogue: 0,0:01:17.34,0:01:21.36,Default,,0,0,0,,我们假设你熟悉Python和基本的神经网络训练。
+Dialogue: 0,0:01:21.36,0:01:24.56,Default,,0,0,0,,所以举个例子，我们会假设你知道\N什么是反向传播（Backpropagation）。
+Dialogue: 0,0:01:24.56,0:01:26.48,Default,,0,0,0,,我们将在整个过程中使用PyTorch。
+Dialogue: 0,0:01:26.48,0:01:32.82,Default,,0,0,0,,但是，如果你熟悉其他机器学习框架，\N如TensorFlow，你应该也能跟上进度。
+Dialogue: 0,0:01:32.82,0:01:42.62,Default,,0,0,0,,我们在这个短期课程中使用的实例将是生成16x16的像素精灵，\N就像那些用在视频游戏中小小的像素角色。
+Dialogue: 0,0:01:42.62,0:01:47.40,Default,,0,0,0,,我们选择这个例子是为了让你不仅能浏览 Notebook，
+Dialogue: 0,0:01:47.40,0:01:54.4,Default,,0,0,0,,还能亲自动手运行它们，\N以便在 Jupyter Notebook 中生成可爱的像素精灵。
+Dialogue: 0,0:01:54.4,0:02:00.20,Default,,0,0,0,,扩散模型正成为生命科学等领域尖端研究的基础。
+Dialogue: 0,0:02:00.20,0:02:03.56,Default,,0,0,0,,比如，生成用于药物发现的分子。
+Dialogue: 0,0:02:03.56,0:02:07.15,Default,,0,0,0,,所以，当你理解扩散模型的技术细节时，
+Dialogue: 0,0:02:07.15,0:02:13.72,Default,,0,0,0,,你也会更好地理解并可能自己应用这些模型。
+Dialogue: 0,0:02:13.72,0:02:16.68,Default,,0,0,0,,很多人共同努力创建了这个短期课程。
+Dialogue: 0,0:02:16.68,0:02:23.36,Default,,0,0,0,,我要感谢Aaron Lou和Mehmet Giray Ogut的重要贡献。
+Dialogue: 0,0:02:23.36,0:02:29.20,Default,,0,0,0,,还有在DeepLearning.ai网站上的\NGeoff Ladwig和Eddy Shyu。
+Dialogue: 0,0:02:29.20,0:02:34.80,Default,,0,0,0,,那么，让我把剩下的时间交给Sharon，希望你能喜欢这门课程。
+Dialogue: 0,0:02:34.80,0:02:35.80,Default,,0,0,0,,太好了。
+Dialogue: 0,0:02:35.80,0:02:36.44,Default,,0,0,0,,我们开始吧。

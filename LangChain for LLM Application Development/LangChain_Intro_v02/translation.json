@@ -1,0 +1,700 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 40
+          },
+          "text": "Welcome to this short course on LangChain for large language model application development."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 600
+          },
+          "text": "By prompting an LLM or large language model, it is now possible to develop AI applications much faster than ever before."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 760
+          },
+          "text": "But an application can require prompting an LLM multiple times and parsing its output."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 240
+          },
+          "text": "And so there's a lot of glue code that needs to be written."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 320
+          },
+          "text": "LangChain created by Harrison Chase makes this development process much easier."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 680
+          },
+          "text": "I'm thrilled to have Harrison here, who had built this short course in collaboration with deeplearning.ai to teach how to use this amazing tool."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 400
+          },
+          "text": "Thanks for having me. I'm really excited to be here."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 760
+          },
+          "text": "LangChain started as an open source framework for building LLM applications."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 520
+          },
+          "text": "It came about when I was talking to a bunch of folks in the field who were building more complex applications and saw some common abstractions in terms of how they were being developed."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 120
+          },
+          "text": "And we've been really thrilled at the community adoption of LangChain so far."
+        }
+      ],
+      "source": [
+        "Welcome to this short course on LangChain for large language model application development.",
+        "By prompting an LLM or large language model, it is now possible to develop AI applications much faster than ever before.",
+        "But an application can require prompting an LLM multiple times and parsing its output.",
+        "And so there's a lot of glue code that needs to be written.",
+        "LangChain created by Harrison Chase makes this development process much easier.",
+        "I'm thrilled to have Harrison here, who had built this short course in collaboration with deeplearning.ai to teach how to use this amazing tool.",
+        "Thanks for having me. I'm really excited to be here.",
+        "LangChain started as an open source framework for building LLM applications.",
+        "It came about when I was talking to a bunch of folks in the field who were building more complex applications and saw some common abstractions in terms of how they were being developed.",
+        "And we've been really thrilled at the community adoption of LangChain so far."
+      ],
+      "result": [
+        "欢迎来到《基于LangChain的大语言模型应用开发》的短期课程。",
+        "通过对大语言模型使用提示（Prompt），\\N现在可以比以往任何时候都更快地开发AI应用程序。",
+        "但是一个应用程序可能需要多次对\\N大语言模型写提示并对它输出的结果进行解析。",
+        "因此，需要编写很多胶水代码。",
+        "Harrison Chase创建的LangChain使这个开发过程变得更容易。",
+        "我很高兴邀请到Harrison，他与deeplearning.ai\\N合作创建了这个短期课程，教大家如何使用这个神奇的工具。",
+        "谢谢Andrew的邀请，我很高兴来到这里。",
+        "LangChain起初是一个用于构建大语言模型应用的开源框架。",
+        "当时有些人在开发LLM的复杂应用，当我与他们交流时，\\N发现了可以从中有一些公共的抽象，于是LangChain应运而生。",
+        "迄今为止，LangChain在社区中的采用情况非常令人激动。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 880
+          },
+          "text": "And so look forward to sharing it with everyone here and look forward to seeing what people build with it."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 800
+          },
+          "text": "And in fact, as a sign of LangChain's momentum, not only does it have numerous users, but there are also many hundreds of contributors to the open source."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 720
+          },
+          "text": "And this has been instrumental for its rapid rate of development."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 440
+          },
+          "text": "This team really ships code and features at an amazing pace."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 680
+          },
+          "text": "So hopefully, after this short course, you'll be able to quickly put together some really cool applications using LangChain."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 760
+          },
+          "text": "And who knows, maybe you even decide to contribute back to the open source LangChain effort."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 39,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 320
+          },
+          "text": "LangChain is an open source development framework for building LLM applications."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 520
+          },
+          "text": "We have two different packages, a Python one and a JavaScript(TypeScript) one."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "text": "They're focused on composition and modularity."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 320
+          },
+          "text": "So they have a lot of individual components that can be used in conjunction with each other or by themselves."
+        }
+      ],
+      "source": [
+        "And so look forward to sharing it with everyone here and look forward to seeing what people build with it.",
+        "And in fact, as a sign of LangChain's momentum, not only does it have numerous users, but there are also many hundreds of contributors to the open source.",
+        "And this has been instrumental for its rapid rate of development.",
+        "This team really ships code and features at an amazing pace.",
+        "So hopefully, after this short course, you'll be able to quickly put together some really cool applications using LangChain.",
+        "And who knows, maybe you even decide to contribute back to the open source LangChain effort.",
+        "LangChain is an open source development framework for building LLM applications.",
+        "We have two different packages, a Python one and a JavaScript(TypeScript) one.",
+        "They're focused on composition and modularity.",
+        "So they have a lot of individual components that can be used in conjunction with each other or by themselves."
+      ],
+      "result": [
+        "期待与大家分享，也期待看到大家用它做出精彩的作品。",
+        "事实上，从一个现象你就可以看到LangChain的良好发展势头：\\N它不仅拥有众多用户，还有数百名贡献者为其开源项目做出了贡献。",
+        "这对于它的快速发展至关重要。",
+        "这个团队更新代码和迭代功能的速度令人惊叹。",
+        "希望在学习完这个短期课程后，你\\N也能迅速用LangChain搭建出很酷的应用。",
+        "说不定你还能一起参与贡献LangChain开源项目。",
+        "LangChain是一个用于构建LLM应用的开源开发框架。",
+        "我们有两个不同的包，一个是Python，\\N另一个是JavaScript（TypeScript）。",
+        "LangChain注重组合和模块化。",
+        "LangChain一个很有价值的地方是有很多\\N可以单独使用或与其他组件结合使用的独立组件。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 80
+          },
+          "text": "And so that's one of the key value adds."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 640
+          },
+          "text": "And then the other key value add is a bunch of different use cases."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 600
+          },
+          "text": "So chains of ways of combining these modular components into more end-to-end applications and making it very easy to get started with those use cases."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 40
+          },
+          "text": "In this class, we'll cover the common components of LangChain."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 480
+          },
+          "text": "So we'll talk about models."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 40
+          },
+          "text": "We'll talk about prompts, which are how you get models to do useful and interesting things."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 920
+          },
+          "text": "We'll talk about indexes, which are ways of ingesting data so that you can combine it with models."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 480
+          },
+          "text": "And then we'll talk about chains,"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 280
+          },
+          "text": "which are more end-to-end use cases along with agents,"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 920
+          },
+          "text": "which are a very exciting type of end-to-end use case,"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 680
+          },
+          "text": "which uses the model as a reasoning engine."
+        }
+      ],
+      "source": [
+        "And so that's one of the key value adds.",
+        "And then the other key value add is a bunch of different use cases.",
+        "So chains of ways of combining these modular components into more end-to-end applications and making it very easy to get started with those use cases.",
+        "In this class, we'll cover the common components of LangChain.",
+        "So we'll talk about models.",
+        "We'll talk about prompts, which are how you get models to do useful and interesting things.",
+        "We'll talk about indexes, which are ways of ingesting data so that you can combine it with models.",
+        "And then we'll talk about chains,",
+        "which are more end-to-end use cases along with agents,",
+        "which are a very exciting type of end-to-end use case,",
+        "which uses the model as a reasoning engine."
+      ],
+      "result": [
+        "",
+        "另一个有价值的地方是有许多不同的用例，",
+        "可以将这些模块化组件链式组合成更完整的应用程序，并且非常容易上手。",
+        "在这个课程中，我们将介绍LangChain的常见组件。",
+        "我们会讨论模型。",
+        "我们会讨论提示，这是让模型做有用和有趣事情的方法。",
+        "我们会讨论索引，也就是检索召回数据，并且将数据与模型结合起来。",
+        "然后我们会讨论链式应用，更多端到端的用例以及代理，",
+        "",
+        "代理一种非常令人兴奋的端到端用例，使用大语言模型作为推理引擎。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 360
+          },
+          "text": "We're also grateful to Ankush Gola,"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 600
+          },
+          "text": "who is the co-founder of LangChain alongside Harrison Chase,"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 480
+          },
+          "text": "for also putting a lot of thoughts into these materials and helping with the creation of this short course."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 840
+          },
+          "text": "And on the deep learning, the AI side, Geoff Ladwig, Eddie Shyu, and Diala Ezzedine have also contributed to these materials."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 960
+          },
+          "text": "And so with that, let's go on to the next video where we'll learn about LangChain's: Models, Prompts, and Parsers."
+        }
+      ],
+      "source": [
+        "We're also grateful to Ankush Gola,",
+        "who is the co-founder of LangChain alongside Harrison Chase,",
+        "for also putting a lot of thoughts into these materials and helping with the creation of this short course.",
+        "And on the deep learning, the AI side, Geoff Ladwig, Eddie Shyu, and Diala Ezzedine have also contributed to these materials.",
+        "And so with that, let's go on to the next video where we'll learn about LangChain's: Models, Prompts, and Parsers."
+      ],
+      "result": [
+        "我们也感谢Ankush Gola，",
+        "他与Harrison Chase共同创立了LangChain，",
+        "他在这些材料的思考和短课程的创建中也做出了很大的贡献。",
+        "在深度学习和AI方面，Geoff Ladwig、\\NEddie Shyu和Diala Ezzedine也为这些材料做出了贡献。",
+        "那么，让我们继续下一个视频，\\N了解LangChain的：模型、提示和解析器。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/LangChain for LLM Application Development/LangChain_Intro_v02.srt",
+  "ouputBasePath": "input/LangChain for LLM Application Development/LangChain_Intro_v02",
+  "totalCost": 0.09747000000000001,
+  "translationPath": "input/LangChain for LLM Application Development/LangChain_Intro_v02/translation.json"
+}

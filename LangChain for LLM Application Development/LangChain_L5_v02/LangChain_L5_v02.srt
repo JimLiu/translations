@@ -1,0 +1,883 @@
+1
+00:00:04,962 --> 00:00:08,129
+When building a complex application using an LLM,
+
+2
+00:00:08,135 --> 00:00:11,414
+one of the important but sometimes tricky steps is
+
+3
+00:00:11,429 --> 00:00:14,367
+how do you evaluate how well your application is doing?
+
+4
+00:00:14,367 --> 00:00:17,149
+Is it meeting some accuracy criteria?
+
+5
+00:00:17,149 --> 00:00:20,854
+And also, if you decide to change your implementation,
+
+6
+00:00:20,855 --> 00:00:23,229
+maybe swap in a different LLM
+
+7
+00:00:23,257 --> 00:00:28,071
+or change the strategy of how you use a vector database or something else to retrieve channels,
+
+8
+00:00:28,072 --> 00:00:30,594
+or change some other parameter to the system.
+
+9
+00:00:30,594 --> 00:00:33,775
+How do you know if you're making it better or worse?
+
+10
+00:00:33,775 --> 00:00:40,356
+In this video, Harrison will dive into some frameworks to how to think about evaluating a LLM based application,
+
+11
+00:00:40,357 --> 00:00:43,366
+as well as some tools that help you do that.
+
+12
+00:00:43,367 --> 00:00:47,589
+These applications are really chains and sequences of a lot of different steps.
+
+13
+00:00:47,589 --> 00:00:50,700
+And so honestly, part of the first thing that you should do is
+
+14
+00:00:50,701 --> 00:00:54,491
+just understand what exactly is going in and coming out of each step.
+
+15
+00:00:54,491 --> 00:00:58,933
+And so some of the tools can really just be thought of as visualizers or debuggers in that thing.
+
+16
+00:00:59,953 --> 00:01:05,418
+But it's often really useful to get a more holistic picture on a lot of different data points of how the model is doing.
+
+17
+00:01:05,418 --> 00:01:07,800
+And one way to do that is by looking at things by eye.
+
+18
+00:01:07,800 --> 00:01:15,927
+But there's also this really cool idea of using language models themselves and chains themselves to evaluate other language models and other chains and other applications.
+
+19
+00:01:15,927 --> 00:01:17,328
+And we'll dive a bunch into that as well.
+
+20
+00:01:17,978 --> 00:01:19,682
+So lots of cool topics,
+
+21
+00:01:19,683 --> 00:01:26,943
+and I find that with a lot of development shifting towards prompting-based development, developing applications using LLMs,
+
+22
+00:01:26,944 --> 00:01:31,326
+this whole workflow evaluation process is being rethought.
+
+23
+00:01:31,326 --> 00:01:34,267
+So lots of exciting concepts in this video.
+
+24
+00:01:34,267 --> 00:01:36,568
+Let's dive in.
+
+25
+00:01:36,568 --> 00:01:38,930
+All right, so let's get set up with evaluation.
+
+26
+00:01:39,877 --> 00:01:45,919
+First, we need to have the chain or the application that we're going to evaluate in the first place.
+
+27
+00:01:45,919 --> 00:01:50,581
+And we're going to use the document question answering chain from the previous lesson.
+
+28
+00:01:50,581 --> 00:01:52,742
+So we're going to import everything we need.
+
+29
+00:01:52,742 --> 00:01:59,125
+We're going to load the same data that we were using.
+
+30
+00:01:59,125 --> 00:02:02,266
+We're going to create that index with one line.
+
+31
+00:02:03,110 --> 00:02:17,273
+And then we're going to create the retrieval QA chain by specifying the language model, the chain type, the retriever, and then the verbosity that we're going to print out.
+
+32
+00:02:17,273 --> 00:02:18,934
+So we've got this application.
+
+33
+00:02:18,934 --> 00:02:21,086
+And the first thing we need to do is
+
+34
+00:02:21,087 --> 00:02:27,455
+we need to really figure out what are some data points that we want to evaluate it on.
+
+35
+00:02:27,455 --> 00:02:29,976
+And so there's a few different methods that we're going to cover for doing this.
+
+36
+00:02:30,953 --> 00:02:33,385
+The first is the most simple,
+
+37
+00:02:33,386 --> 00:02:38,998
+which is basically we're going to come up with data points that we think are good examples ourselves.
+
+38
+00:02:38,999 --> 00:02:43,571
+And so to do that, we can just look at some of the data and come up with example questions
+
+39
+00:02:43,572 --> 00:02:49,766
+and then example ground truth answers that we can later use to evaluate.
+
+40
+00:02:49,766 --> 00:02:51,948
+So if we look at a few of the documents here,
+
+41
+00:02:53,037 --> 00:02:56,338
+We can kind of get a sense of what's going on inside them.
+
+42
+00:02:56,338 --> 00:03:00,220
+It looks like the first one, there's this pullover set.
+
+43
+00:03:00,220 --> 00:03:06,322
+There's this in the second one, there's this jacket as a bunch of details about all of them.
+
+44
+00:03:08,400 --> 00:03:13,223
+And from these details, we can create some example query and answer pairs.
+
+45
+00:03:13,223 --> 00:03:19,107
+So the first one, we can ask a simple, "Does the Cozy Comfort Pullover Set have side pockets?"
+
+46
+00:03:19,107 --> 00:03:25,431
+And we can see by looking above that it does, in fact, have some side pockets in it.
+
+47
+00:03:25,431 --> 00:03:31,794
+And then for the second one, we can see that this Jacket is from a certain collection, the DownTek collection.
+
+48
+00:03:31,794 --> 00:03:35,456
+And so we can ask the question, "What collection is this jacket from?"
+
+49
+00:03:35,456 --> 00:03:37,837
+And have the answer be, "The DownTek collection".
+
+50
+00:03:37,837 --> 00:03:41,138
+And so here we've created two examples.
+
+51
+00:03:41,138 --> 00:03:43,679
+But this doesn't really scale that well.
+
+52
+00:03:43,679 --> 00:03:47,021
+It takes a bit of time to look through each example and figure out what's going on.
+
+53
+00:03:47,021 --> 00:03:50,142
+And so is there a way that we can automate it?
+
+54
+00:03:50,142 --> 00:03:54,064
+And one of the really cool ways that we think we can automate it is with language models themselves.
+
+55
+00:03:55,731 --> 00:03:59,613
+So we have a chain in LangChain that can do exactly that.
+
+56
+00:03:59,613 --> 00:04:01,400
+So we can import the QAGenerationChain
+
+57
+00:04:01,401 --> 00:04:08,216
+and this will take in documents and it will create a question answer pair from each document.
+
+58
+00:04:08,216 --> 00:04:10,638
+It'll do this using a language model itself.
+
+59
+00:04:10,638 --> 00:04:15,640
+So we need to create this chain by passing in the ChatOpenAI language model.
+
+60
+00:04:15,640 --> 00:04:18,321
+And then from there, we can create a bunch of examples.
+
+61
+00:04:19,255 --> 00:04:25,442
+And so we're going to use the apply_and_parse method, because this is applying an output parser to the result.
+
+62
+00:04:25,442 --> 00:04:30,587
+Because we want to get back a dictionary that has the query and answer pair, not just a single string.
+
+63
+00:04:38,006 --> 00:04:41,574
+And so now if we look at what exactly is returned here,
+
+64
+00:04:41,575 --> 00:04:44,428
+we can see a query and we can see an answer.
+
+65
+00:04:44,428 --> 00:04:49,110
+And let's check the document that this is a question and answer for.
+
+66
+00:04:49,110 --> 00:04:51,651
+And we can see that it's asking what the weight of this is.
+
+67
+00:04:51,651 --> 00:04:54,172
+We can see that it's taking the weight from here.
+
+68
+00:04:54,172 --> 00:04:54,752
+And look at that.
+
+69
+00:04:54,752 --> 00:04:57,313
+We just generated a bunch of question answer pairs.
+
+70
+00:04:57,313 --> 00:04:59,474
+We didn't have to write it all ourselves.
+
+71
+00:04:59,474 --> 00:05:02,475
+Saves us a bunch of time and we can do more exciting things.
+
+72
+00:05:04,260 --> 00:05:09,602
+And so now let's go ahead and add these examples into the examples that we already created.
+
+73
+00:05:09,602 --> 00:05:15,343
+So we got these examples now, but how exactly do we evaluate what's going on?
+
+74
+00:05:15,343 --> 00:05:21,865
+The first thing we want to do is just run an example through the chain and take a look at the output it produces.
+
+75
+00:05:21,865 --> 00:05:24,506
+So here we pass in a query and we get back.
+
+76
+00:05:25,965 --> 00:05:32,290
+but this is a little bit limiting in terms of what we can see that's actually happening inside the chain.
+
+77
+00:05:32,290 --> 00:05:35,012
+What is the actual prompt that's going into the language model?
+
+78
+00:05:35,012 --> 00:05:37,754
+What are the documents that it retrieves?
+
+79
+00:05:37,754 --> 00:05:41,957
+If this were a more complex chain with multiple steps in it, what are the intermediate results?
+
+80
+00:05:42,890 --> 00:05:47,214
+It's oftentimes not enough to just look at the final answer to understand
+
+81
+00:05:47,243 --> 00:05:51,435
+what is or could be going wrong in the chain.
+
+82
+00:05:51,435 --> 00:05:59,921
+And to help with that, we have a fun little util in LangChain called LangChain debug.
+
+83
+00:05:59,921 --> 00:06:03,143
+And so if we set "langchain.debug" equals "True",
+
+84
+00:06:03,574 --> 00:06:06,823
+and we now rerun the same example as above,
+
+85
+00:06:08,471 --> 00:06:11,508
+we can see that it starts printing out a lot more information.
+
+86
+00:06:12,455 --> 00:06:14,729
+And so if we look at what exactly it's printing out,
+
+87
+00:06:14,730 --> 00:06:18,920
+we can see that it's diving down first into the RetrievalQA chain.
+
+88
+00:06:18,920 --> 00:06:21,583
+And then it's going down into a StuffDocumentsChain.
+
+89
+00:06:21,583 --> 00:06:25,005
+And so as mentioned, we were using the "stuff" method.
+
+90
+00:06:25,005 --> 00:06:29,389
+And now it's entering the LLMChain where we have a few different inputs.
+
+91
+00:06:29,389 --> 00:06:32,471
+So we can see the original question is right there.
+
+92
+00:06:32,471 --> 00:06:34,393
+And now we're passing in this context.
+
+93
+00:06:34,393 --> 00:06:40,118
+And we can see that this context is created from a bunch of the different documents that we've retrieved.
+
+94
+00:06:40,758 --> 00:06:42,314
+And so when doing question answering,
+
+95
+00:06:42,315 --> 00:06:48,602
+oftentimes when a wrong result is returned, it's not necessarily the language model itself that's messing up.
+
+96
+00:06:48,602 --> 00:06:51,504
+It's actually the retrieval step that's messing up.
+
+97
+00:06:51,504 --> 00:06:54,757
+And so taking a really close look at what exactly the question is
+
+98
+00:06:54,758 --> 00:06:59,808
+and what exactly the context is can help debug what's going wrong.
+
+99
+00:06:59,808 --> 00:07:06,532
+We can then step down one more level and see exactly what is entering the language model, ChatOpenAI, itself.
+
+100
+00:07:07,420 --> 00:07:09,902
+And so here we can see the full prompt that's passed in.
+
+101
+00:07:09,902 --> 00:07:12,384
+So we've got a system message.
+
+102
+00:07:12,384 --> 00:07:14,506
+We've got the description of the prompt that's used.
+
+103
+00:07:14,506 --> 00:07:18,815
+And so this is the prompt that the question answering chain is using under the hood,
+
+104
+00:07:18,816 --> 00:07:21,243
+which we actually haven't even looked at until now.
+
+105
+00:07:21,244 --> 00:07:27,135
+And so we can see the prompt printing out, use the following pieces of context to answer the user's question.
+
+106
+00:07:27,135 --> 00:07:29,297
+If you don't know the answer, just say that you don't know.
+
+107
+00:07:29,297 --> 00:07:30,638
+Don't try to make up an answer.
+
+108
+00:07:30,638 --> 00:07:34,181
+And then we see a bunch of the context as inserted before.
+
+109
+00:07:34,181 --> 00:07:37,123
+And then we see a human question, which is the question that we asked it.
+
+110
+00:07:37,683 --> 00:07:40,705
+We can also see a lot more information about the actual return type.
+
+111
+00:07:40,705 --> 00:07:45,514
+So rather than just a string, we get back a bunch of information like the token usage,
+
+112
+00:07:45,515 --> 00:07:50,951
+so the prompt tokens, the completion tokens, total tokens, and the model name.
+
+113
+00:07:50,951 --> 00:07:58,013
+And this can be really useful to track the tokens that you're using in your chains or calls to language models over time
+
+114
+00:07:58,314 --> 00:08:02,543
+and keep track of the total number of tokens, which corresponds very closely to the total cost.
+
+115
+00:08:03,608 --> 00:08:05,543
+And because this is a relatively simple chain,
+
+116
+00:08:05,557 --> 00:08:07,937
+we can now see that the final response,
+
+117
+00:08:07,957 --> 00:08:11,514
+"The Cozy Comfort Pullover Set, Stripe, does have side pockets.",
+
+118
+00:08:11,515 --> 00:08:16,297
+is getting bubbled up through the chains and getting returned to the user.
+
+119
+00:08:16,297 --> 00:08:19,386
+So we've just walked through how to look at and debug
+
+120
+00:08:19,460 --> 00:08:22,442
+what's going on with a single input to this chain.
+
+121
+00:08:22,442 --> 00:08:24,643
+But what about all the examples we created?
+
+122
+00:08:24,643 --> 00:08:27,005
+How are we going to evaluate those?
+
+123
+00:08:27,005 --> 00:08:30,448
+Similarly to when creating them, one way to do it would be manually.
+
+124
+00:08:31,019 --> 00:08:33,600
+We could run the chain over all the examples,
+
+125
+00:08:33,601 --> 00:08:39,771
+then look at the outputs and try to figure out what's going on, whether it's correct, incorrect, partially correct.
+
+126
+00:08:39,771 --> 00:08:44,177
+Similar to creating the examples, that starts to get a little bit tedious over time.
+
+127
+00:08:44,177 --> 00:08:46,900
+And so let's go back to our favorite solution.
+
+128
+00:08:46,900 --> 00:08:48,883
+Can we ask a language model to do it?
+
+129
+00:08:50,220 --> 00:08:53,382
+First, we need to create predictions for all the examples.
+
+130
+00:08:53,382 --> 00:08:54,300
+Before doing that,
+
+131
+00:08:54,314 --> 00:09:00,943
+I'm actually going to turn off the debug mode in order to just not print everything out onto the screen,
+
+132
+00:09:00,944 --> 00:09:06,152
+and then I'm going to create predictions for all the different examples.
+
+133
+00:09:06,152 --> 00:09:08,743
+And so I think we had seven examples total,
+
+134
+00:09:08,744 --> 00:09:13,718
+and so we're going to loop through this chain seven times, getting a prediction for each one.
+
+135
+00:09:31,559 --> 00:09:35,301
+Now that we've got these examples, we can think about evaluating them.
+
+136
+00:09:35,301 --> 00:09:39,343
+So we're going to import the QA, question answering, eval chain.
+
+137
+00:09:39,343 --> 00:09:42,600
+We are going to create this chain with a language model,
+
+138
+00:09:42,601 --> 00:09:51,849
+because again, we're going to be using a language model to help do the evaluation.
+
+139
+00:09:51,849 --> 00:09:54,450
+And then we're going to call evaluate on this chain.
+
+140
+00:09:54,450 --> 00:09:57,057
+We're going to pass in examples and predictions,
+
+141
+00:09:57,071 --> 00:09:59,273
+and we're going to get back a bunch of graded outputs.
+
+142
+00:10:01,002 --> 00:10:06,656
+And so in order to see what exactly is going on for each example,
+
+143
+00:10:06,657 --> 00:10:08,524
+we're going to loop through them.
+
+144
+00:10:08,524 --> 00:10:10,144
+We're going to print out the question.
+
+145
+00:10:10,144 --> 00:10:13,025
+And again, this was generated by a language model.
+
+146
+00:10:13,025 --> 00:10:15,005
+We're going to print out the real answer.
+
+147
+00:10:15,005 --> 00:10:20,227
+And again, this was also generated by a language model when it had the whole document in front of it.
+
+148
+00:10:20,227 --> 00:10:22,047
+And so it could generate a ground truth answer.
+
+149
+00:10:23,138 --> 00:10:24,819
+We're going to print out the predicted answer.
+
+150
+00:10:24,819 --> 00:10:28,129
+And this is generated by a language model when it's doing the QA chain,
+
+151
+00:10:28,130 --> 00:10:32,929
+when it's doing the retrieval with the embeddings in the vector databases, passing that into a language model,
+
+152
+00:10:32,930 --> 00:10:36,202
+and then trying to guess the predicted answer.
+
+153
+00:10:36,202 --> 00:10:38,123
+And then we're also going to print it out the grade.
+
+154
+00:10:38,123 --> 00:10:40,900
+And again, this is also generated by a language model
+
+155
+00:10:40,901 --> 00:10:45,571
+when it's asking the eval chain to grade what's going on and whether it's correct or incorrect.
+
+156
+00:10:45,985 --> 00:10:48,571
+And so when we loop through all these examples and print them out,
+
+157
+00:10:48,572 --> 00:10:51,687
+we can see those in detail for each example.
+
+158
+00:10:54,612 --> 00:10:57,474
+And looks like here it got everything correct.
+
+159
+00:10:57,474 --> 00:11:02,418
+This is a relatively simple retrieval problem, so that is reassuring.
+
+160
+00:11:02,418 --> 00:11:04,920
+So let's look at the first example.
+
+161
+00:11:04,920 --> 00:11:09,343
+The question here is, "Does the Cozy Comfort Pullover Set have side pockets?"
+
+162
+00:11:09,343 --> 00:11:12,365
+The real answer, and we created this, is "Yes".
+
+163
+00:11:12,365 --> 00:11:16,288
+The predicted answer, which the language model produced, was,
+
+164
+00:11:16,289 --> 00:11:19,751
+"The Cozy Comfort Pullover Set, Stripe does have side pockets".
+
+165
+00:11:20,627 --> 00:11:23,769
+And so we can understand that this is a correct answer.
+
+166
+00:11:23,769 --> 00:11:27,592
+And actually the language model does as well and it creates it correct.
+
+167
+00:11:27,592 --> 00:11:32,215
+But let's think about why we actually need to use the language model in the first place.
+
+168
+00:11:32,215 --> 00:11:35,898
+These two strings are actually nothing alike.
+
+169
+00:11:36,685 --> 00:11:37,445
+They're very different.
+
+170
+00:11:37,445 --> 00:11:39,507
+One's really short, one's really long.
+
+171
+00:11:39,507 --> 00:11:42,828
+I don't even think "Yes" doesn't appear anywhere in this string.
+
+172
+00:11:42,828 --> 00:11:47,657
+So if we were to try to do some string matching or exact matching or even some regexes here,
+
+173
+00:11:47,986 --> 00:11:50,753
+it wouldn't know what to do.
+
+174
+00:11:50,753 --> 00:11:51,953
+They're not the same thing.
+
+175
+00:11:51,953 --> 00:11:56,696
+And that shows off the importance of using the language model to do evaluation here.
+
+176
+00:11:56,696 --> 00:11:58,057
+You've got these answers.
+
+177
+00:11:58,717 --> 00:12:01,639
+which are arbitrary strings.
+
+178
+00:12:01,639 --> 00:12:05,982
+There's no single one-truth string that is the best possible answer.
+
+179
+00:12:05,982 --> 00:12:07,944
+There's many different variants.
+
+180
+00:12:07,944 --> 00:12:10,700
+And as long as they have the same semantic meaning,
+
+181
+00:12:10,701 --> 00:12:13,267
+they should be graded as being similar.
+
+182
+00:12:13,267 --> 00:12:16,970
+And that's what a language model helps with, as opposed to just doing exact matching.
+
+183
+00:12:17,532 --> 00:12:24,718
+This difficulty in comparing strings is what makes evaluation of language models so hard in the first place.
+
+184
+00:12:24,718 --> 00:12:29,062
+We're using them for these really open-ended tasks where they're asked to generate text.
+
+185
+00:12:29,062 --> 00:12:34,206
+This hasn't really been done before as models until recently weren't really good enough to do this.
+
+186
+00:12:34,206 --> 00:12:38,570
+And so a lot of the evaluation metrics that did exist up to this point just aren't good enough.
+
+187
+00:12:38,690 --> 00:12:42,992
+and we're having to invent new ones and invent new heuristics for doing so.
+
+188
+00:12:42,992 --> 00:12:48,241
+And the most interesting and most popular of those heuristics at the moment is actually
+
+189
+00:12:48,242 --> 00:12:50,596
+using a language model to do the evaluation.
+
+190
+00:12:50,596 --> 00:12:56,438
+This finishes the evaluation lesson, but one last thing I want to show you is the LangChain evaluation platform.
+
+191
+00:12:56,438 --> 00:13:02,381
+This is a way to do everything that we just did in the notebook, but persist it and show it in a UI.
+
+192
+00:13:02,381 --> 00:13:03,582
+And so let's check it out.
+
+193
+00:13:04,607 --> 00:13:06,128
+Here, we can see that we have a session.
+
+194
+00:13:06,128 --> 00:13:08,268
+We called it "deeplearningai".
+
+195
+00:13:08,268 --> 00:13:14,411
+And we can see here that we've actually persisted all the runs that we ran in the notebook.
+
+196
+00:13:14,411 --> 00:13:17,886
+And so this is a good way to track the inputs and outputs at a high level,
+
+197
+00:13:17,943 --> 00:13:22,654
+but it's also a really good way to see what exactly is going on underneath.
+
+198
+00:13:22,654 --> 00:13:28,258
+So this is the same information that was printed out in the notebook when we turned on debug mode,
+
+199
+00:13:28,259 --> 00:13:31,917
+but it's just visualized in a UI in a little bit of a nicer way.
+
+200
+00:13:32,497 --> 00:13:36,078
+And so we can see the inputs to the chain and the outputs to the chain at each step.
+
+201
+00:13:36,078 --> 00:13:39,290
+And then we can click further and further down into the chain
+
+202
+00:13:39,490 --> 00:13:43,240
+and see more and more information about what is actually getting passed in.
+
+203
+00:13:43,240 --> 00:13:45,329
+And so if we go all the way down to the bottom,
+
+204
+00:13:45,330 --> 00:13:48,461
+we can now see what's getting passed exactly to the chat model.
+
+205
+00:13:48,461 --> 00:13:50,582
+We've got the system message here.
+
+206
+00:13:50,582 --> 00:13:52,702
+We've got the human question here.
+
+207
+00:13:52,702 --> 00:13:54,783
+We've got the response from the Chat Model here.
+
+208
+00:13:54,783 --> 00:13:56,183
+And we've got some Output Metadata.
+
+209
+00:13:57,462 --> 00:14:02,384
+One other thing that we've added here is the ability to add these examples to a data set.
+
+210
+00:14:02,384 --> 00:14:06,171
+So if you remember, when creating those data sets of examples at the start,
+
+211
+00:14:06,172 --> 00:14:10,567
+we created them partially by hand, partially with a language model.
+
+212
+00:14:10,567 --> 00:14:13,671
+Here we can add it to a data set by clicking on this little button,
+
+213
+00:14:13,672 --> 00:14:18,430
+and we now have the input query and the output results.
+
+214
+00:14:18,430 --> 00:14:20,010
+And so we can create a data set.
+
+215
+00:14:20,010 --> 00:14:22,431
+We can call it deep learning.
+
+216
+00:14:25,371 --> 00:14:28,413
+And then we can start adding examples to this data set.
+
+217
+00:14:28,413 --> 00:14:32,600
+And so again, getting back to the original thing that we tackled at the beginning of the lesson,
+
+218
+00:14:32,601 --> 00:14:36,356
+we need to create these data sets so that we can do evaluation.
+
+219
+00:14:36,356 --> 00:14:40,059
+This is a really good way to have this just running in the background
+
+220
+00:14:40,259 --> 00:14:44,529
+and then add to the example data sets over time and start building up these examples
+
+221
+00:14:44,530 --> 00:14:49,503
+that you can start using for evaluation and have this flywheel of evaluation start turning.

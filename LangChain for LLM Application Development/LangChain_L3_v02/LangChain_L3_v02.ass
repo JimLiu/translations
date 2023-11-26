@@ -1,0 +1,320 @@
+[Script Info]
+
+Title: LangChain_L3_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,16,&H000092FE,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:11.96,Secondary,,0,0,0,,In this lesson, Harrison will teach the most important key building block of LangChain, namely the chain.
+Dialogue: 0,0:00:11.96,0:00:17.44,Secondary,,0,0,0,,The chain usually combines an LLM, large language model, together with a prompt.
+Dialogue: 0,0:00:17.44,0:00:26.56,Secondary,,0,0,0,,And with this building block, you can also put a bunch of these building blocks together to carry out a sequence of operations on your text or on your other data.
+Dialogue: 0,0:00:26.56,0:00:28.40,Secondary,,0,0,0,,I'm excited to dive into it.
+Dialogue: 0,0:00:29.0,0:00:33.68,Secondary,,0,0,0,,All right, to start, we're going to load the environment variables as we have before.
+Dialogue: 0,0:00:33.68,0:00:37.36,Secondary,,0,0,0,,And then we're also going to load some data that we're going to use.
+Dialogue: 0,0:00:37.36,0:00:44.44,Secondary,,0,0,0,,So part of the power of these chains is that you can run them over many inputs at a time.
+Dialogue: 0,0:00:44.44,0:00:46.72,Secondary,,0,0,0,,Here, we're going to load a Pandas DataFrame.
+Dialogue: 0,0:00:46.72,0:00:52.52,Secondary,,0,0,0,,A Pandas DataFrame is just a data structure that contains a bunch of different elements of data.
+Dialogue: 0,0:00:52.52,0:00:54.60,Secondary,,0,0,0,,If you're not familiar with Pandas, don't worry about it.
+Dialogue: 0,0:00:54.60,0:00:58.72,Secondary,,0,0,0,,The main point here is that we're loading some data that we can then use later on.
+Dialogue: 0,0:00:58.76,0:01:04.40,Secondary,,0,0,0,,And so if we look inside this Pandas DataFrame, we can see that there is a product column and then a review column.
+Dialogue: 0,0:01:04.40,0:01:08.68,Secondary,,0,0,0,,And each of these rows is a different data point that we can start passing through our chains.
+Dialogue: 0,0:01:08.68,0:01:12.28,Secondary,,0,0,0,,So the first chain we're going to cover is the LLMChain.
+Dialogue: 0,0:01:12.28,0:01:18.40,Secondary,,0,0,0,,And this is a simple but really powerful chain that underpins a lot of the chains that we'll go over in the future.
+Dialogue: 0,0:01:18.40,0:01:21.36,Secondary,,0,0,0,,And so we're going to import three different things.
+Dialogue: 0,0:01:21.36,0:01:25.8,Secondary,,0,0,0,,We're going to import the OpenAI model, so the LLM.
+Dialogue: 0,0:01:25.8,0:01:27.56,Secondary,,0,0,0,,We're going to import the ChatPromptTemplate.
+Dialogue: 0,0:01:28.64,0:01:30.16,Secondary,,0,0,0,,And then we're going to import the LLMChain.
+Dialogue: 0,0:01:30.16,0:01:36.24,Secondary,,0,0,0,,And so first, what we're going to do is we're going to initialize the language model that we want to use.
+Dialogue: 0,0:01:36.24,0:01:44.12,Secondary,,0,0,0,,So we're going to initialize the ChatOpenAI with a high temperature so that we can get some fun descriptions.
+Dialogue: 0,0:01:44.12,0:01:49.16,Secondary,,0,0,0,,Now we're going to initialize a prompt, and this prompt is going to take in a variable called product.
+Dialogue: 0,0:01:49.16,0:01:54.88,Secondary,,0,0,0,,It's going to ask the LLM to generate what the best name is to describe a company that makes that product.
+Dialogue: 0,0:01:55.72,0:01:59.28,Secondary,,0,0,0,,And then finally, we're going to combine these two things into a chain.
+Dialogue: 0,0:01:59.28,0:02:03.0,Secondary,,0,0,0,,And so this is what we call an LLMChain, and it's quite simple.
+Dialogue: 0,0:02:03.0,0:02:06.28,Secondary,,0,0,0,,It's just the combination of the LLM and the prompt.
+Dialogue: 0,0:02:06.28,0:02:11.56,Secondary,,0,0,0,,But now this chain will let us run through the prompt and into the LLM in a sequential manner.
+Dialogue: 0,0:02:11.56,0:02:17.96,Secondary,,0,0,0,,And so if we have a product called "Queen Size Sheet Set", we can run this through the chain by using "chain.run".
+Dialogue: 0,0:02:17.96,0:02:24.20,Secondary,,0,0,0,,And what    will do is it will format the prompt under the hood, and then it will pass the whole prompt into the LLM.
+Dialogue: 0,0:02:24.60,0:02:29.52,Secondary,,0,0,0,,And so we can see that we get back the name of this hypothetical company called "Royal Beddings".
+Dialogue: 0,0:02:29.52,0:02:37.40,Secondary,,0,0,0,,so here would be a good time to pause, and you can input any product descriptions that you would want, and you can see what the chain will output as a result.
+Dialogue: 0,0:02:37.40,0:02:43.84,Secondary,,0,0,0,,So the LLMChain is the most basic type of chain, and that's going to be used a lot in the future.
+Dialogue: 0,0:02:43.84,0:02:48.60,Secondary,,0,0,0,,And so we can see how this will be used in the next type of chain, which will be "Sequential Chains".
+Dialogue: 0,0:02:48.60,0:02:52.72,Secondary,,0,0,0,,And so Sequential Chains run a sequence of chains one after another.
+Dialogue: 0,0:02:53.20,0:02:57.4,Secondary,,0,0,0,,So to start, you're going to import the SimpleSequentialChain.
+Dialogue: 0,0:02:57.4,0:03:02.20,Secondary,,0,0,0,,And this works well when we have sub chains that expect only one input and return only one output.
+Dialogue: 0,0:03:02.20,0:03:08.36,Secondary,,0,0,0,,And so here we're going to first create one chain, which uses an LLM and a prompt.
+Dialogue: 0,0:03:08.36,0:03:14.84,Secondary,,0,0,0,,And this prompt is going to take in the product and will return the best name to describe that company.
+Dialogue: 0,0:03:14.84,0:03:16.24,Secondary,,0,0,0,,So that will be the first chain.
+Dialogue: 0,0:03:16.24,0:03:19.28,Secondary,,0,0,0,,Then we're going to create a second chain.
+Dialogue: 0,0:03:19.76,0:03:26.32,Secondary,,0,0,0,,And the second chain will take in the company name and then output a 20 word description of that company.
+Dialogue: 0,0:03:26.32,0:03:31.0,Secondary,,0,0,0,,And so you can imagine how these chains might want to be run one after another,
+Dialogue: 0,0:03:31.0,0:03:35.32,Secondary,,0,0,0,,where the output of the first chain, the company name is then passed into the second chain.
+Dialogue: 0,0:03:35.32,0:03:42.68,Secondary,,0,0,0,,We can easily do this by creating a SimpleSequentialChain where we have the two chains described there.
+Dialogue: 0,0:03:42.68,0:03:45.32,Secondary,,0,0,0,,And we'll call this overall_simple_chain.
+Dialogue: 0,0:03:47.24,0:03:52.24,Secondary,,0,0,0,,Now, what you can do is run this chain over any product description.
+Dialogue: 0,0:03:52.24,0:03:57.11,Secondary,,0,0,0,,And so if we use it with the product above the "Queen Size Sheet Set",
+Dialogue: 0,0:03:57.12,0:04:00.56,Secondary,,0,0,0,,we can run it over and we can see that at first outputs "Royal Bedding",
+Dialogue: 0,0:04:00.56,0:04:06.28,Secondary,,0,0,0,,and then it passes it into the second chain and it comes up with this description of what that company could be about.
+Dialogue: 0,0:04:06.28,0:04:12.84,Secondary,,0,0,0,,The simple sequential chain(SimpleSequentialChain) works well when there's only a single input and a single output.
+Dialogue: 0,0:04:12.84,0:04:16.68,Secondary,,0,0,0,,But what about when there are multiple inputs or multiple outputs?
+Dialogue: 0,0:04:16.92,0:04:20.8,Secondary,,0,0,0,,And so we can do this by using just the regular SequentialChain.
+Dialogue: 0,0:04:20.8,0:04:22.12,Secondary,,0,0,0,,So let's import that.
+Dialogue: 0,0:04:22.12,0:04:25.92,Secondary,,0,0,0,,And then you're going to create a bunch of chains that we're going to use one after another.
+Dialogue: 0,0:04:25.92,0:04:29.16,Secondary,,0,0,0,,We're going to be using the data from above, which has a review.
+Dialogue: 0,0:04:29.16,0:04:34.84,Secondary,,0,0,0,,And so the first chain, we're going to take the review and translate it into English.
+Dialogue: 0,0:04:34.84,0:04:41.84,Secondary,,0,0,0,,With a second chain, we're going to create a summary of that review in one sentence.
+Dialogue: 0,0:04:41.84,0:04:46.84,Secondary,,0,0,0,,And this will use the previously generated English review.
+Dialogue: 0,0:04:47.36,0:04:54.20,Secondary,,0,0,0,,The third chain is going to detect what the language of the review was in the first place.
+Dialogue: 0,0:04:54.20,0:05:00.28,Secondary,,0,0,0,,And so if you notice, this is using the review variable that is coming from the original review.
+Dialogue: 0,0:05:00.28,0:05:05.48,Secondary,,0,0,0,,And finally, the fourth chain will take in multiple inputs.
+Dialogue: 0,0:05:05.48,0:05:13.28,Secondary,,0,0,0,,So this will take in the summary variable, which we calculated with the second chain and the language variable, which we calculated with the third chain.
+Dialogue: 0,0:05:13.76,0:05:18.28,Secondary,,0,0,0,,And it's going to ask for a follow up response to the summary in the specified language.
+Dialogue: 0,0:05:18.28,0:05:25.96,Secondary,,0,0,0,,One important thing to note about all these sub chains is that the input keys and output keys need to be pretty precise.
+Dialogue: 0,0:05:25.96,0:05:28.52,Secondary,,0,0,0,,So here we're taking in review.
+Dialogue: 0,0:05:28.52,0:05:31.12,Secondary,,0,0,0,,This is a variable that will be passed in at the start.
+Dialogue: 0,0:05:31.12,0:05:35.32,Secondary,,0,0,0,,We can see that we explicitly set the output key to English review.
+Dialogue: 0,0:05:35.32,0:05:42.4,Secondary,,0,0,0,,This is then used in the next prompt down below, where we take in English review with that same variable name.
+Dialogue: 0,0:05:42.80,0:05:47.84,Secondary,,0,0,0,,And we set the output key of that chain to summary, which we can see is used in the final chain.
+Dialogue: 0,0:05:47.84,0:05:56.8,Secondary,,0,0,0,,The third prompt takes in review, the original variable and output language, which is again used in the final prompt.
+Dialogue: 0,0:05:56.8,0:06:00.76,Secondary,,0,0,0,,It's really important to get these variable names lined up exactly right,
+Dialogue: 0,0:06:03.40,0:06:07.20,Secondary,,0,0,0,,And if you get any key errors, you should definitely check that they are lined up.
+Dialogue: 0,0:06:07.20,0:06:14.68,Secondary,,0,0,0,,So the Simple Sequential Chain takes in multiple chains, where each one has a single input and a single output.
+Dialogue: 0,0:06:14.68,0:06:23.72,Secondary,,0,0,0,,To see a visual representation of this, we can look at the slide where it has one chain feeding into the other chain, one after another.
+Dialogue: 0,0:06:23.72,0:06:29.64,Secondary,,0,0,0,,Here we can see a visual description of the sequential chain, comparing it to the above chain.
+Dialogue: 0,0:06:29.64,0:06:34.36,Secondary,,0,0,0,,You can notice that any step in the chain can take in multiple input variables.
+Dialogue: 0,0:06:34.96,0:06:41.96,Secondary,,0,0,0,,This is useful when you have more complicated downstream chains that need to be a composition of multiple previous chains.
+Dialogue: 0,0:06:41.96,0:06:47.44,Secondary,,0,0,0,,Now that we have all these chains, we can easily combine them in the SequentialChain.
+Dialogue: 0,0:06:47.44,0:06:53.44,Secondary,,0,0,0,,So you'll notice here that we'll pass in the four chains we created into the chains variable.
+Dialogue: 0,0:06:53.44,0:06:58.44,Secondary,,0,0,0,,We'll create the inputs variable with the one human input, which is the review.
+Dialogue: 0,0:06:58.44,0:07:02.68,Secondary,,0,0,0,,And then we want to return all of the intermediate outputs.
+Dialogue: 0,0:07:02.68,0:07:05.52,Secondary,,0,0,0,,So the English review, the summary, and then the follow-up message.
+Dialogue: 0,0:07:05.52,0:07:10.48,Secondary,,0,0,0,,Now we can run this over some of the data.
+Dialogue: 0,0:07:10.48,0:07:15.28,Secondary,,0,0,0,,So let's choose a review and pass it in through the overall chain.
+Dialogue: 0,0:07:15.28,0:07:25.40,Secondary,,0,0,0,,We can see here that the original review looks like it was in French.
+Dialogue: 0,0:07:25.40,0:07:28.48,Secondary,,0,0,0,,We can see the English review as a translation.
+Dialogue: 0,0:07:28.48,0:07:35.8,Secondary,,0,0,0,,We can see a summary of that review, and then we can see a follow-up message in the original language of French.
+Dialogue: 0,0:07:35.8,0:07:39.12,Secondary,,0,0,0,,You should pause the video here and try putting in different inputs.
+Dialogue: 0,0:07:39.12,0:07:43.36,Secondary,,0,0,0,,So far we've covered the LLMChain and then a Sequential Chain.
+Dialogue: 0,0:07:43.36,0:07:46.44,Secondary,,0,0,0,,But what if you want to do something more complicated?
+Dialogue: 0,0:07:46.44,0:07:53.16,Secondary,,0,0,0,,A pretty common but basic operation is to route an input to a chain, depending on what exactly that input is.
+Dialogue: 0,0:07:53.72,0:08:03.0,Secondary,,0,0,0,,A good way to imagine this is if you have multiple subchains, each of which specialized for a particular type of input, you could have a Router Chain,
+Dialogue: 0,0:08:03.0,0:08:07.56,Secondary,,0,0,0,,which first decides which subchain to pass it to, and then passes it to that chain.
+Dialogue: 0,0:08:07.56,0:08:16.96,Secondary,,0,0,0,,For a concrete example, let's look at where we are routing between different types of chains, depending on the subject that seems to come in.
+Dialogue: 0,0:08:16.96,0:08:19.92,Secondary,,0,0,0,,So we have here different prompts.
+Dialogue: 0,0:08:19.92,0:08:22.76,Secondary,,0,0,0,,One prompt is good for answering physics questions.
+Dialogue: 0,0:08:22.88,0:08:28.56,Secondary,,0,0,0,,The second prompt is good for answering math questions, the third for history, and then a fourth for computer science.
+Dialogue: 0,0:08:28.56,0:08:31.16,Secondary,,0,0,0,,Let's define all these prompt templates.
+Dialogue: 0,0:08:31.16,0:08:39.4,Secondary,,0,0,0,,After we have these prompt templates, we can then provide more information about them.
+Dialogue: 0,0:08:39.4,0:08:42.32,Secondary,,0,0,0,,We can give each one a name and then a description.
+Dialogue: 0,0:08:42.32,0:08:46.64,Secondary,,0,0,0,,This description for the physics one is good for answering questions about physics.
+Dialogue: 0,0:08:46.64,0:08:54.8,Secondary,,0,0,0,,This information is going to be passed to the router chain, so the router chain can decide when to use this subchain.
+Dialogue: 0,0:08:59.86,0:09:02.84,Secondary,,0,0,0,,Let's now import the other types of chains that we need.
+Dialogue: 0,0:09:02.84,0:09:05.4,Secondary,,0,0,0,,Here we need a MultiPromptChain.
+Dialogue: 0,0:09:05.4,0:09:10.64,Secondary,,0,0,0,,This is a specific type of chain that is used when routing between multiple different prompt templates.
+Dialogue: 0,0:09:10.64,0:09:17.80,Secondary,,0,0,0,,As you can see, all the options we have are prompt templates themselves, but this is just one type of thing that you can route between.
+Dialogue: 0,0:09:17.84,0:09:20.24,Secondary,,0,0,0,,You can route between any type of chain.
+Dialogue: 0,0:09:20.24,0:09:24.12,Secondary,,0,0,0,,The other classes that we'll import here are an LLMRouterChain.
+Dialogue: 0,0:09:24.12,0:09:28.48,Secondary,,0,0,0,,This uses a language model itself to route between the different subchains.
+Dialogue: 0,0:09:28.48,0:09:32.4,Secondary,,0,0,0,,This is where the description and the name provided above will be used.
+Dialogue: 0,0:09:32.4,0:09:35.4,Secondary,,0,0,0,,We'll also import a RouterOutputParser.
+Dialogue: 0,0:09:35.4,0:09:44.24,Secondary,,0,0,0,,This parses the LLM output into a dictionary that can be used downstream to determine which chain to use and what the input to that chain should be.
+Dialogue: 0,0:09:47.60,0:09:49.4,Secondary,,0,0,0,,Now we can get around to using it.
+Dialogue: 0,0:09:49.4,0:09:53.72,Secondary,,0,0,0,,First, let's import and define the language model that we will use.
+Dialogue: 0,0:09:53.72,0:09:59.4,Secondary,,0,0,0,,We now create the destination chains.
+Dialogue: 0,0:09:59.4,0:10:01.88,Secondary,,0,0,0,,These are the chains that will be called by the router chain.
+Dialogue: 0,0:10:01.88,0:10:07.16,Secondary,,0,0,0,,As you can see, each destination chain itself is a language model chain, an LLMChain.
+Dialogue: 0,0:10:07.16,0:10:12.84,Secondary,,0,0,0,,In addition to the destination chains, we also need a default chain.
+Dialogue: 0,0:10:12.84,0:10:17.84,Secondary,,0,0,0,,This is a chain that's called when the router can't decide which of the subchains to use.
+Dialogue: 0,0:10:17.84,0:10:25.84,Secondary,,0,0,0,,And the example above, this might be called when the input question has nothing to do with physics, math, history, or computer science.
+Dialogue: 0,0:10:25.84,0:10:33.84,Secondary,,0,0,0,,Now we define the template that is used by the LLM to route between the different chains.
+Dialogue: 0,0:10:33.84,0:10:40.44,Secondary,,0,0,0,,This has instructions of the task to be done, as well as the specific formatting that the output should be in.
+Dialogue: 0,0:10:40.44,0:10:44.84,Secondary,,0,0,0,,Let's put a few of these pieces together to build the router chain.
+Dialogue: 0,0:10:45.64,0:10:50.48,Secondary,,0,0,0,,First, we create the full router template by formatting it with the destinations that we defined above.
+Dialogue: 0,0:10:50.48,0:10:54.32,Secondary,,0,0,0,,This template is flexible to a bunch of different types of destinations.
+Dialogue: 0,0:10:54.32,0:10:58.52,Secondary,,0,0,0,,One thing you can do here is pause and add different types of destinations.
+Dialogue: 0,0:10:58.52,0:11:05.0,Secondary,,0,0,0,,So up here, rather than just physics, math, history, and computer science, you could add a different subject like English or Latin.
+Dialogue: 0,0:11:05.0,0:11:14.24,Secondary,,0,0,0,,Next, we create the prompt template from this template, and then we create the router chain by passing in the LLM and the overall router prompt.
+Dialogue: 0,0:11:15.8,0:11:17.44,Secondary,,0,0,0,,Note that here we have the RouterOutputParser.
+Dialogue: 0,0:11:17.44,0:11:23.24,Secondary,,0,0,0,,This is important as it will help this chain decide which subchains to route between.
+Dialogue: 0,0:11:25.56,0:11:30.0,Secondary,,0,0,0,,And finally, putting it all together, we can create the overall chain.
+Dialogue: 0,0:11:30.0,0:11:33.52,Secondary,,0,0,0,,This has a router chain, which is defined here.
+Dialogue: 0,0:11:33.52,0:11:36.28,Secondary,,0,0,0,,It has destination chains, which we pass in here.
+Dialogue: 0,0:11:36.28,0:11:38.28,Secondary,,0,0,0,,And then we also pass in the default chain.
+Dialogue: 0,0:11:38.28,0:11:41.20,Secondary,,0,0,0,,We can now use this chain.
+Dialogue: 0,0:11:41.20,0:11:43.12,Secondary,,0,0,0,,So let's ask it some questions.
+Dialogue: 0,0:11:43.76,0:11:53.90,Secondary,,0,0,0,,If we ask it a question about physics, we should hopefully see that it is routed to the physics chain with the input, "What is black body radiation?",
+Dialogue: 0,0:11:53.90,0:11:56.68,Secondary,,0,0,0,,and then that is passed into the chain down below.
+Dialogue: 0,0:11:56.68,0:12:02.24,Secondary,,0,0,0,,And we can see that the response is very detailed with lots of physics details.
+Dialogue: 0,0:12:02.24,0:12:06.56,Secondary,,0,0,0,,You should pause the video here and try putting in different inputs.
+Dialogue: 0,0:12:06.56,0:12:12.4,Secondary,,0,0,0,,You can try with all the other types of special chains that we have defined above.
+Dialogue: 0,0:12:12.64,0:12:16.6,Secondary,,0,0,0,,So for example, if we ask it a math question,
+Dialogue: 0,0:12:23.33,0:12:27.16,Secondary,,0,0,0,,we should see that it's routed to the math chain and then passed into that.
+Dialogue: 0,0:12:31.97,0:12:37.56,Secondary,,0,0,0,,We can also see what happens when we pass in a question that is not related to any of the subchains.
+Dialogue: 0,0:12:37.56,0:12:43.16,Secondary,,0,0,0,,So here we ask it a question about biology and we can see the chain that it chooses is "None".
+Dialogue: 0,0:12:43.16,0:12:48.76,Secondary,,0,0,0,,This means that it will be passed to the default chain, which itself is just a generic call to the language model.
+Dialogue: 0,0:12:48.76,0:12:52.36,Secondary,,0,0,0,,The language model luckily knows a lot about biology, so it can help us out here.
+Dialogue: 0,0:12:52.36,0:13:00.20,Secondary,,0,0,0,,Now that we've covered these basic building blocks types of chains, we can start to put them together to create really interesting applications.
+Dialogue: 0,0:13:00.20,0:13:06.40,Secondary,,0,0,0,,For example, in the next section, we're going to cover how to create a chain that can do question answering over your documents.
+Dialogue: 0,0:00:05.0,0:00:11.96,Default,,0,0,0,,在这节课中，Harrison将为大家\N讲解LangChain最关键的构建模\N块，也就是链（Chain）。
+Dialogue: 0,0:00:11.96,0:00:17.44,Default,,0,0,0,,链通常将大型语言模型（LLM）与\N提示词（Prompt）结合在一起。
+Dialogue: 0,0:00:17.44,0:00:26.56,Default,,0,0,0,,有了这个构建模块，你还可以将一堆这\N样的构建模块组合在一起，对你的文本\N或其他数据按顺序进行操作。
+Dialogue: 0,0:00:26.56,0:00:28.40,Default,,0,0,0,,我已经等不及想要深入了解它了。
+Dialogue: 0,0:00:29.0,0:00:33.68,Default,,0,0,0,,好的，首先，我们将像以前\N一样加载环境变量。
+Dialogue: 0,0:00:33.68,0:00:37.36,Default,,0,0,0,,然后我们还要加载一些即将使用的数据。
+Dialogue: 0,0:00:37.36,0:00:44.44,Default,,0,0,0,,这些链的强大之处在于，它们\N可以一次处理多个输入。
+Dialogue: 0,0:00:44.44,0:00:46.72,Default,,0,0,0,,这里，我们将加载一个Pandas DataFrame。
+Dialogue: 0,0:00:46.72,0:00:52.52,Default,,0,0,0,,Pandas DataFrame只是一个包含许\N多不同数据元素的数据结构。
+Dialogue: 0,0:00:52.52,0:00:54.60,Default,,0,0,0,,如果你不熟悉Pandas，不用担心。
+Dialogue: 0,0:00:54.60,0:00:58.72,Default,,0,0,0,,这里的重点是，我们正在加载一\N些数据，稍后将会被用到。
+Dialogue: 0,0:00:58.76,0:01:04.40,Default,,0,0,0,,如果我们查看这个Pandas DataFrame，可\N以看到有一个产品列和一个评论列。
+Dialogue: 0,0:01:04.40,0:01:08.68,Default,,0,0,0,,这些行中的每一行都是一个不同的数据记\N录，我们可以开始通过我们的链进行传递。
+Dialogue: 0,0:01:08.68,0:01:12.28,Default,,0,0,0,,首先我们要介绍的链是LLMChain。
+Dialogue: 0,0:01:12.28,0:01:18.40,Default,,0,0,0,,这是一个简单但非常强大的链，后\N面要介绍的很多链它都能支持。
+Dialogue: 0,0:01:18.40,0:01:21.36,Default,,0,0,0,,我们将导入三个不同的库。
+Dialogue: 0,0:01:21.36,0:01:25.8,Default,,0,0,0,,我们将导入OpenAI模型，即LLM。
+Dialogue: 0,0:01:25.8,0:01:28.64,Default,,0,0,0,,我们将导入ChatPromptTemplate，\N这是提示词（Prompt）相关的。
+Dialogue: 0,0:01:28.64,0:01:30.16,Default,,0,0,0,,然后我们将导入LLMChain。
+Dialogue: 0,0:01:30.16,0:01:36.24,Default,,0,0,0,,首先，我们要初始化我们\N想要使用的语言模型。
+Dialogue: 0,0:01:36.24,0:01:44.12,Default,,0,0,0,,我们将用一个比较高的\Ntemperature值来初始化\NChatOpenAI，这样能获得一些有意\N思的结果。
+Dialogue: 0,0:01:44.12,0:01:49.16,Default,,0,0,0,,现在我们要初始化一个提示词模\N板，这个提示词模板将接收一个名\N为产品（product）的变量。
+Dialogue: 0,0:01:49.16,0:01:54.88,Default,,0,0,0,,它会要求LLM根据产品名称，为制作该产品\N的公司取一个最佳的公司描述名称。
+Dialogue: 0,0:01:55.72,0:01:59.28,Default,,0,0,0,,最后，我们将这两者结合成一条链。
+Dialogue: 0,0:01:59.28,0:02:03.0,Default,,0,0,0,,这就是我们所说的LLMChain，非常简单。
+Dialogue: 0,0:02:03.0,0:02:06.28,Default,,0,0,0,,它只是LLM和提示词模板的结合。
+Dialogue: 0,0:02:06.28,0:02:11.56,Default,,0,0,0,,这条链将提示词模板和\NLLM按顺序连接起来。
+Dialogue: 0,0:02:11.56,0:02:17.96,Default,,0,0,0,,如果我们有一个名为“双人床床单套\N装”的产品，我们可以通过使用“chain\N.run”将它传入链，并运行链。
+Dialogue: 0,0:02:17.96,0:02:24.20,Default,,0,0,0,,它会在后台格式化提示词，然后将\N格式化后的提示词传给LLM。
+Dialogue: 0,0:02:24.60,0:02:29.52,Default,,0,0,0,,我们可以看到LLM给这个生产床单的\N公司取了个名字叫做"皇家寝具"。
+Dialogue: 0,0:02:29.52,0:02:37.40,Default,,0,0,0,,建议你暂停视频，去Notebook输入你想要\N的产品描述，看看这条链会输出什么结果。
+Dialogue: 0,0:02:37.40,0:02:43.84,Default,,0,0,0,,LLMChain是最基本的链类\N型，以后经常会被用到。
+Dialogue: 0,0:02:43.84,0:02:48.60,Default,,0,0,0,,我们来看看下一种常用的链，也就是"\N顺序链（Sequential Chains）"。
+Dialogue: 0,0:02:48.60,0:02:52.72,Default,,0,0,0,,顺序链是将一系列链一个接一个地运行。
+Dialogue: 0,0:02:53.20,0:02:57.4,Default,,0,0,0,,首先，你需要导入\NSimpleSequentialChain。
+Dialogue: 0,0:02:57.4,0:03:02.20,Default,,0,0,0,,当我们的子链都只需要一个输入并且只\N返回一个输出时，这个方法很有用。
+Dialogue: 0,0:03:02.20,0:03:08.36,Default,,0,0,0,,这里我们首先创建一条链，它\N使用LLM和提示词模板。
+Dialogue: 0,0:03:08.36,0:03:14.84,Default,,0,0,0,,这个提示词模板将接受输入一个产品参数\N，并返回最佳的产品所属公司描述名称。
+Dialogue: 0,0:03:14.84,0:03:16.24,Default,,0,0,0,,那将是第一条链。
+Dialogue: 0,0:03:16.24,0:03:19.28,Default,,0,0,0,,然后我们要创建第二条链。
+Dialogue: 0,0:03:19.76,0:03:26.32,Default,,0,0,0,,第二条链会接收公司名称，然后\N输出一个20字的公司描述。
+Dialogue: 0,0:03:26.32,0:03:31.0,Default,,0,0,0,,你可以想象这些链需要\N一条接一条地运行，
+Dialogue: 0,0:03:31.0,0:03:35.32,Default,,0,0,0,,其中第一条链会输出公司名称，\N然后会将它传递给第二条链。
+Dialogue: 0,0:03:35.32,0:03:42.68,Default,,0,0,0,,通过创建一个\NSimpleSequentialChain我们可以很\N容易的实现这一点，参数中包含了两\N条链的描述。
+Dialogue: 0,0:03:42.68,0:03:45.32,Default,,0,0,0,,我们将这条链命名为\Noverall_simple_chain。
+Dialogue: 0,0:03:47.24,0:03:52.24,Default,,0,0,0,,现在，你可以在任何产品\N描述上运行这条链。
+Dialogue: 0,0:03:52.24,0:03:57.11,Default,,0,0,0,,我们可以用之前的“双人\N床床单套装”来测试，
+Dialogue: 0,0:03:57.12,0:04:00.56,Default,,0,0,0,,让我们运行它看看，先是\N输出了“皇家寝具”，
+Dialogue: 0,0:04:00.56,0:04:06.28,Default,,0,0,0,,然后将它传递到第二条链，得\N出关于该公司可能的描述。
+Dialogue: 0,0:04:06.28,0:04:12.84,Default,,0,0,0,,简单顺序链（SimpleSequentialChain）在\N只有一个输入和一个输出时表现非常好。
+Dialogue: 0,0:04:12.84,0:04:16.68,Default,,0,0,0,,但是当有多个输入或多\N个输出时该怎么办？
+Dialogue: 0,0:04:16.92,0:04:20.8,Default,,0,0,0,,我们可以通过使用常规的\NSequentialChain来实现这一点。
+Dialogue: 0,0:04:20.8,0:04:22.12,Default,,0,0,0,,让我们导入它。
+Dialogue: 0,0:04:22.12,0:04:25.92,Default,,0,0,0,,然后你可以创建一系列链，后\N面我们将依次调用这些链。
+Dialogue: 0,0:04:25.92,0:04:29.16,Default,,0,0,0,,我们将使用上面的数据，\N其中包含一篇评论。
+Dialogue: 0,0:04:29.16,0:04:34.84,Default,,0,0,0,,首先，我们将用第一条链\N将评论翻译成英语。
+Dialogue: 0,0:04:34.84,0:04:41.84,Default,,0,0,0,,然后用第二条链，我们将用\N一句话总结这篇评论。
+Dialogue: 0,0:04:41.84,0:04:46.84,Default,,0,0,0,,这里用的是之前生成的英语评论。
+Dialogue: 0,0:04:47.36,0:04:54.20,Default,,0,0,0,,第三条链将检测评论最初\N是用什么语言写的。
+Dialogue: 0,0:04:54.20,0:05:00.28,Default,,0,0,0,,注意看，这里使用的是"Review\N"变量，表示原始的评论。
+Dialogue: 0,0:05:00.28,0:05:05.48,Default,,0,0,0,,最后，第四条链将接收多个输入。
+Dialogue: 0,0:05:05.48,0:05:13.28,Default,,0,0,0,,它将接收我们用第二条链得到的摘\N要"summary"变量和我们用第三条链\N得到的语言"language"变量。
+Dialogue: 0,0:05:13.76,0:05:18.28,Default,,0,0,0,,要求后续对摘要回复时，使用指定的语言。
+Dialogue: 0,0:05:18.28,0:05:25.96,Default,,0,0,0,,关于所有这些子链，需要注意的是输入名\N和输出名需要非常精确，这非常重要。
+Dialogue: 0,0:05:25.96,0:05:28.52,Default,,0,0,0,,所以这里我们接收"Review"。
+Dialogue: 0,0:05:28.52,0:05:31.12,Default,,0,0,0,,这是一个在开始时传入的变量。
+Dialogue: 0,0:05:31.12,0:05:35.32,Default,,0,0,0,,我们可以看到我们明确设置了输\N出名为"English_Review"。
+Dialogue: 0,0:05:35.32,0:05:42.4,Default,,0,0,0,,这在下面的下一个提示中使用，我们用相\N同的变量名接收"English_Review"。
+Dialogue: 0,0:05:42.80,0:05:47.84,Default,,0,0,0,,我们将该链的输出名设置为"summary"，我\N们可以看到它在最后一条链中使用。
+Dialogue: 0,0:05:47.84,0:05:56.8,Default,,0,0,0,,第三个提示词模板接收原始的"Review\N"变量和输出"language"，这些在最后\N的提示词模板中会被再次使用。
+Dialogue: 0,0:05:56.8,0:06:03.40,Default,,0,0,0,,因为有很多不同的输入和输出一起运行，\N确保这些变量名称完全一致非常重要。
+Dialogue: 0,0:06:03.40,0:06:07.20,Default,,0,0,0,,如果出现任何关键性的错误，一\N定要检查变量名是否一致。
+Dialogue: 0,0:06:07.20,0:06:14.68,Default,,0,0,0,,简单顺序链（Simple \NSequential Chain）接收多条链\N，每条链都有一个输入和一个输\N出。
+Dialogue: 0,0:06:14.68,0:06:23.72,Default,,0,0,0,,一图胜千言，可以看这张幻灯片\N的图示，一条链的输出传入另一\N条链作为输入，一个接一个。
+Dialogue: 0,0:06:23.72,0:06:29.64,Default,,0,0,0,,在这里，我们可以看到顺序链（\NSequential Chain）的图示，并把它\N跟前面的简单顺序链进行比较。
+Dialogue: 0,0:06:29.64,0:06:34.36,Default,,0,0,0,,你会注意到链中的任何步骤都\N可以接收多个输入变量。
+Dialogue: 0,0:06:34.96,0:06:41.96,Default,,0,0,0,,当你有复杂的下游链需要和多个\N上游链组合，这会非常有用。
+Dialogue: 0,0:06:41.96,0:06:47.44,Default,,0,0,0,,有了所有这些链之后，我们可以轻松地将\N它们组合在顺序链（SequentialChain）中。
+Dialogue: 0,0:06:47.44,0:06:53.44,Default,,0,0,0,,首先，我们将创建的四条链作\N为数组保存到chains变量。
+Dialogue: 0,0:06:53.44,0:06:58.44,Default,,0,0,0,,我们用一个人类输入也就是"Review\N"来创建"inputs_variables"。
+Dialogue: 0,0:06:58.44,0:07:02.68,Default,,0,0,0,,然后我们想返回所有中间输出：
+Dialogue: 0,0:07:02.68,0:07:05.52,Default,,0,0,0,,"English_Review"、"summary"，\N然后是"followup_message"。
+Dialogue: 0,0:07:05.52,0:07:10.48,Default,,0,0,0,,现在我们可以传一些数据来运行试试。
+Dialogue: 0,0:07:10.48,0:07:15.28,Default,,0,0,0,,让我们选择一条评论并传递给整条链。
+Dialogue: 0,0:07:15.28,0:07:25.40,Default,,0,0,0,,我们可以看到原始的"\NReview"似乎是法语的。
+Dialogue: 0,0:07:25.40,0:07:28.48,Default,,0,0,0,,我们可以看到"\NEnglish_Review"作为翻\N译。
+Dialogue: 0,0:07:28.48,0:07:35.8,Default,,0,0,0,,我们可以看到评论的"summary"，然后我们\N可以看到法语的"followup_message"。
+Dialogue: 0,0:07:35.8,0:07:39.12,Default,,0,0,0,,建议你暂停视频，尝试输入不同\N的内容，并运行看看效果。
+Dialogue: 0,0:07:39.12,0:07:43.36,Default,,0,0,0,,到目前为止，我们已经介绍了\NLLMChain和顺序链（Sequential \NChain）。
+Dialogue: 0,0:07:43.36,0:07:46.44,Default,,0,0,0,,但是，如果你想完成更复杂的任务呢？
+Dialogue: 0,0:07:46.44,0:07:53.16,Default,,0,0,0,,一个相当常见的基本操作是，根据输入\N内容路由到某条链来处理你的输入。
+Dialogue: 0,0:07:53.72,0:08:03.0,Default,,0,0,0,,可以想象以下，如果你有多条子链，\N每条子链专门负责处理某种特定类\N型的输入，这种情况下你可以使用\N路由链（Router Chain），
+Dialogue: 0,0:08:03.0,0:08:07.56,Default,,0,0,0,,它首先判断该使用哪条子链，然\N后将输入传递到相应的子链。
+Dialogue: 0,0:08:07.56,0:08:16.96,Default,,0,0,0,,举一个具体的例子来看看我们如何根据\N输入的内容来路由到不同类型的链。
+Dialogue: 0,0:08:16.96,0:08:19.92,Default,,0,0,0,,这里我们有不同的提示词。
+Dialogue: 0,0:08:19.92,0:08:22.76,Default,,0,0,0,,一个提示词适合回答物理问题。
+Dialogue: 0,0:08:22.88,0:08:28.56,Default,,0,0,0,,第二个提示词适合回答数学问题\N，第三个提示词适合历史，第四个\N提示词适合计算机科学。
+Dialogue: 0,0:08:28.56,0:08:31.16,Default,,0,0,0,,让我们定义所有这些提示词模板。
+Dialogue: 0,0:08:31.16,0:08:39.4,Default,,0,0,0,,有了这些提示模板后，我们可以\N提供更多关于它们的信息。
+Dialogue: 0,0:08:39.4,0:08:42.32,Default,,0,0,0,,可以给每个模板起个名字，然后写个描述。
+Dialogue: 0,0:08:42.32,0:08:46.64,Default,,0,0,0,,这个物理模板的描述非常\N适合回答物理问题。
+Dialogue: 0,0:08:46.64,0:08:54.8,Default,,0,0,0,,这些信息将传递给路由链，路由链会根据\N这些信息来决定什么时候该使用哪条子链。
+Dialogue: 0,0:08:59.86,0:09:02.84,Default,,0,0,0,,现在让我们导入其他需要的链类型。
+Dialogue: 0,0:09:02.84,0:09:05.4,Default,,0,0,0,,这里我们需要用MultiPromptChain，
+Dialogue: 0,0:09:05.4,0:09:10.64,Default,,0,0,0,,这是一种特定类型的链，可以用来在\N多个不同提示词模板之间路由。
+Dialogue: 0,0:09:10.64,0:09:17.80,Default,,0,0,0,,如你所见，我们所有的选项都是提示模板，\N但实际上不止是可以路由这一种类型，
+Dialogue: 0,0:09:17.84,0:09:20.24,Default,,0,0,0,,除此之外你也可以在任何其\N他类型的链之间路由。
+Dialogue: 0,0:09:20.24,0:09:24.12,Default,,0,0,0,,这里还需要引用LLMRouterChain。
+Dialogue: 0,0:09:24.12,0:09:28.48,Default,,0,0,0,,这个程序借助大语言模型的帮\N助在不同的子链之间路由。
+Dialogue: 0,0:09:28.48,0:09:32.4,Default,,0,0,0,,这就是为什么上面需要提供名称和描述，\N语言模型根据这些信息判断如何路由。
+Dialogue: 0,0:09:32.4,0:09:35.4,Default,,0,0,0,,我们还要导入一个RouterOutputParser。
+Dialogue: 0,0:09:35.4,0:09:44.24,Default,,0,0,0,,这个解析器将LLM输出解析成一个字典，\N根据字典的内容可以在下游确定使用哪\N条链，以及该链的输入应该是什么。
+Dialogue: 0,0:09:47.60,0:09:49.4,Default,,0,0,0,,现在我们可以开始使用它了。
+Dialogue: 0,0:09:49.4,0:09:53.72,Default,,0,0,0,,首先，让我们导入并定义\N将要使用的语言模型。
+Dialogue: 0,0:09:53.72,0:09:59.4,Default,,0,0,0,,接下来创建目标链，
+Dialogue: 0,0:09:59.4,0:10:01.88,Default,,0,0,0,,路由链会根据输入的内容来\N调用这些目标链之一。
+Dialogue: 0,0:10:01.88,0:10:07.16,Default,,0,0,0,,如你所见，每个目标链本身就是一\N个语言模型链，即LLMChain。
+Dialogue: 0,0:10:07.16,0:10:12.84,Default,,0,0,0,,除了目标链，我们还需要一个默认链。
+Dialogue: 0,0:10:12.84,0:10:17.84,Default,,0,0,0,,默认链是在路由找不到合适的子链\N调用时，用来备用的一条链路。
+Dialogue: 0,0:10:17.84,0:10:25.84,Default,,0,0,0,,在上面的例子中，当输入问题与\N物理、数学、历史或计算机科学无\N关时，就会调用这条链路。
+Dialogue: 0,0:10:25.84,0:10:33.84,Default,,0,0,0,,现在我们定义一个路由的提示词模板，让\NLLM根据提示词的内容在不同链之间路由。
+Dialogue: 0,0:10:33.84,0:10:40.44,Default,,0,0,0,,这里包含了完成任务的说明，\N以及输出内容的的格式。
+Dialogue: 0,0:10:40.44,0:10:44.84,Default,,0,0,0,,让我们把这些部分组合起来，构建路由链。
+Dialogue: 0,0:10:45.64,0:10:50.48,Default,,0,0,0,,首先，我们通过使用上面定义的\N目标来创建完整的路由模板。
+Dialogue: 0,0:10:50.48,0:10:54.32,Default,,0,0,0,,这个模板适用于许多不同类型的目标。
+Dialogue: 0,0:10:54.32,0:10:58.52,Default,,0,0,0,,建议你在这里暂停，然后尝\N试添加不同类型的目标。
+Dialogue: 0,0:10:58.52,0:11:05.0,Default,,0,0,0,,在这里，除了物理、数学、历史和\N计算机科学，你还可以添加其他\N学科，如英语或拉丁语。
+Dialogue: 0,0:11:05.0,0:11:14.24,Default,,0,0,0,,接下来，我们从这个模板创建提\N示词模板，然后传入LLM和整个路\N由器提示词，创建路由链。
+Dialogue: 0,0:11:15.8,0:11:17.44,Default,,0,0,0,,注意这里有RouterOutputParser。
+Dialogue: 0,0:11:17.44,0:11:23.24,Default,,0,0,0,,这很重要，因为它会帮助决定这\N条链在哪些子链之间路由。
+Dialogue: 0,0:11:25.56,0:11:30.0,Default,,0,0,0,,最后，把所有内容放在一起，\N我们可以创建整条链。
+Dialogue: 0,0:11:30.0,0:11:33.52,Default,,0,0,0,,这里有一个路由链，定义在这里，
+Dialogue: 0,0:11:33.52,0:11:36.28,Default,,0,0,0,,它有目标链，我们在这里传入。
+Dialogue: 0,0:11:36.28,0:11:38.28,Default,,0,0,0,,然后传入默认链，
+Dialogue: 0,0:11:38.28,0:11:41.20,Default,,0,0,0,,现在可以使用这条链了。
+Dialogue: 0,0:11:41.20,0:11:43.12,Default,,0,0,0,,让我们向它提问试试。
+Dialogue: 0,0:11:43.76,0:11:53.90,Default,,0,0,0,,如果我们问一个关于物理的问题，\N希望能看到它被路由到物理链，输\N入是“什么是黑体辐射？”
+Dialogue: 0,0:11:53.90,0:11:56.68,Default,,0,0,0,,然后这个问题会传到下面的链。
+Dialogue: 0,0:11:56.68,0:12:02.24,Default,,0,0,0,,可以看到回复非常详细，\N包含了很多物理细节。
+Dialogue: 0,0:12:02.24,0:12:06.56,Default,,0,0,0,,建议你在这里暂停视频，自己\N尝试输入不同的内容试试。
+Dialogue: 0,0:12:06.56,0:12:12.4,Default,,0,0,0,,可以尝试我们之前定义的\N路由链中的其他链。
+Dialogue: 0,0:12:12.64,0:12:16.6,Default,,0,0,0,,比如，如果问一个数学问题，
+Dialogue: 0,0:12:23.33,0:12:27.16,Default,,0,0,0,,应该看到它被路由到数学链，\N然后把问题传入数学链。
+Dialogue: 0,0:12:31.97,0:12:37.56,Default,,0,0,0,,还可以试试当我们提出一个与这些子\N链都无关的问题时会发生什么。
+Dialogue: 0,0:12:37.56,0:12:43.16,Default,,0,0,0,,这里我们问一个关于生物学的问题\N，可以看到它选择的链是“无”。
+Dialogue: 0,0:12:43.16,0:12:48.76,Default,,0,0,0,,这意味着问题会被传递到默认链，也就是\N直接当做一个通用问题去问语言模型。
+Dialogue: 0,0:12:48.76,0:12:52.36,Default,,0,0,0,,幸运的是，语言模型对了解很多\N生物学知识，所以它还是可以帮\N助我们回答这个问题。
+Dialogue: 0,0:12:52.36,0:13:00.20,Default,,0,0,0,,现在我们已经学习了这些基本的构\N建块类型的链，我们可以尝试将它们\N组合在一起，创建有趣的应用。
+Dialogue: 0,0:13:00.20,0:13:06.40,Default,,0,0,0,,在下一节课程中，我们将介绍如何创\N建一个可以基于文档问答的链。

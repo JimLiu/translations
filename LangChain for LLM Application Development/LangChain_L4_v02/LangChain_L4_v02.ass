@@ -1,0 +1,384 @@
+[Script Info]
+
+Title: LangChain_L4_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,14,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,8,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs8\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}作者：{\1c&H80FFFF&\2c&H0000FF&}Harrison Chase, Andrew Wu\N{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 0,0:00:00.0,0:00:05.0,Default,,0,0,0,,{\fs14\an8}{\fad(200,200)\c&HFFFFFF&}基于LangChain的大语言模型应用开发5\N基于文档的问答
+Dialogue: 0,0:00:05.0,0:00:15.24,Secondary,,0,0,0,,One of the most common complex applications that people are building using an LLM is a system that can answer questions on top of or about a document.
+Dialogue: 0,0:00:15.24,0:00:23.89,Secondary,,0,0,0,,So given a piece of text may be extracted from a PDF file or from a webpage or from some company's intranet internal document collection,
+Dialogue: 0,0:00:23.91,0:00:33.46,Secondary,,0,0,0,,can you use an LLM to answer questions about the content of those documents to help users gain a deeper understanding and get access to the information that they need?
+Dialogue: 0,0:00:33.46,0:00:39.30,Secondary,,0,0,0,,This is really powerful because it starts to combine these language models with data that they weren't originally trained on.
+Dialogue: 0,0:00:39.30,0:00:42.54,Secondary,,0,0,0,,So it makes them much more flexible and adaptable to your use case.
+Dialogue: 0,0:00:42.54,0:00:51.54,Secondary,,0,0,0,,It's also really exciting because we'll start to move beyond language models, prompts, and output parsers and start introducing some more of the key components of LangChain,
+Dialogue: 0,0:00:51.56,0:00:54.58,Secondary,,0,0,0,,such as embedding models and vector stores.
+Dialogue: 0,0:00:54.58,0:00:58.62,Secondary,,0,0,0,,As Andrew mentioned, this is one of the more popular chains that we've got, so I hope you're excited.
+Dialogue: 0,0:00:58.62,0:01:03.58,Secondary,,0,0,0,,In fact, embeddings and vector stores are some of the most powerful modern techniques.
+Dialogue: 0,0:01:03.58,0:01:08.30,Secondary,,0,0,0,,So if you have not seen them yet, they are very much worth learning about.
+Dialogue: 0,0:01:08.30,0:01:10.6,Secondary,,0,0,0,,So with that, let's dive in.
+Dialogue: 0,0:01:10.6,0:01:11.6,Secondary,,0,0,0,,Let's do it.
+Dialogue: 0,0:01:11.6,0:01:16.30,Secondary,,0,0,0,,So we're going to start by importing the environment variables as we always do.
+Dialogue: 0,0:01:16.30,0:01:20.6,Secondary,,0,0,0,,Now we're going to import some things that will help us when building this chain.
+Dialogue: 0,0:01:20.6,0:01:24.34,Secondary,,0,0,0,,We're going to import the RetrievalQA chain. This will do retrieval over some documents.
+Dialogue: 0,0:01:24.34,0:01:28.10,Secondary,,0,0,0,,We're going to import our favorite ChatOpenAI language model.
+Dialogue: 0,0:01:28.10,0:01:29.70,Secondary,,0,0,0,,We're going to import a document loader.
+Dialogue: 0,0:01:29.70,0:01:34.50,Secondary,,0,0,0,,This is going to be used to load some proprietary data that we're going to combine with the language model.
+Dialogue: 0,0:01:34.50,0:01:36.38,Secondary,,0,0,0,,In this case, it's going to be in a CSV.
+Dialogue: 0,0:01:36.38,0:01:38.38,Secondary,,0,0,0,,So we're going to import the CSVLoader.
+Dialogue: 0,0:01:38.38,0:01:41.22,Secondary,,0,0,0,,Finally, we're going to import a vector store.
+Dialogue: 0,0:01:41.22,0:01:48.90,Secondary,,0,0,0,,There are many different types of vector stores, and we'll cover what exactly these are later on, but we're going to get started with the DocArrayInMemorySearch vector store.
+Dialogue: 0,0:01:48.90,0:01:57.58,Secondary,,0,0,0,,This is really nice because it's an in-memory vector store, and it doesn't require connecting to an external database of any kind, so it makes it really easy to get started.
+Dialogue: 0,0:01:57.58,0:02:04.50,Secondary,,0,0,0,,We're also going to import display and markdown, two common utilities for displaying information in Jupyter Notebooks.
+Dialogue: 0,0:02:04.50,0:02:10.50,Secondary,,0,0,0,,We've provided a CSV of outdoor clothing that we're going to use to combine with the language model.
+Dialogue: 0,0:02:10.50,0:02:18.18,Secondary,,0,0,0,,Here, we're going to initialize a loader, the CSVLoader, with a path to this file.
+Dialogue: 0,0:02:18.18,0:02:22.80,Secondary,,0,0,0,,We're next going to import an index, the VectorStoreIndexCreator.
+Dialogue: 0,0:02:22.80,0:02:25.98,Secondary,,0,0,0,,This will help us create a vector store really easily.
+Dialogue: 0,0:02:25.98,0:02:33.94,Secondary,,0,0,0,,As we can see below, it'll only be a few lines of code to create this.
+Dialogue: 0,0:02:33.94,0:02:37.2,Secondary,,0,0,0,,To create it, we're going to specify two things.
+Dialogue: 0,0:02:37.2,0:02:40.54,Secondary,,0,0,0,,First, we're going to specify the vector store class.
+Dialogue: 0,0:02:40.54,0:02:46.10,Secondary,,0,0,0,,As mentioned before, we're going to use this vector store, as it's a particularly easy one to get started with.
+Dialogue: 0,0:02:46.10,0:02:51.82,Secondary,,0,0,0,,After it's been created, we're then going to call from loaders, which takes in a list of document loaders.
+Dialogue: 0,0:02:51.82,0:02:58.46,Secondary,,0,0,0,,We've only got one loader that we really care about, so that's what we're passing in here.
+Dialogue: 0,0:02:58.46,0:03:02.22,Secondary,,0,0,0,,It's now been created, and we can start to ask questions about it.
+Dialogue: 0,0:03:02.22,0:03:06.90,Secondary,,0,0,0,,Below we'll cover what exactly happened under the hood, so let's not worry about that for now.
+Dialogue: 0,0:03:06.90,0:03:09.14,Secondary,,0,0,0,,Here, we'll start with a query.
+Dialogue: 0,0:03:09.14,0:03:15.73,Secondary,,0,0,0,,We'll then create a response using "index.query" and pass in this query.
+Dialogue: 0,0:03:16.34,0:03:20.90,Secondary,,0,0,0,,Again, we'll cover what's going on under the hood down below.
+Dialogue: 0,0:03:20.90,0:03:23.10,Secondary,,0,0,0,,For now, we'll just wait for it to respond.
+Dialogue: 0,0:03:30.38,0:03:34.54,Secondary,,0,0,0,,After it finishes, we can now take a look at what exactly was returned.
+Dialogue: 0,0:03:34.54,0:03:40.78,Secondary,,0,0,0,,We've gotten back a table in Markdown with names and descriptions for all shirts with sun protection.
+Dialogue: 0,0:03:40.78,0:03:45.54,Secondary,,0,0,0,,We've also got a nice little summary that the language model has provided us.
+Dialogue: 0,0:03:45.54,0:03:52.18,Secondary,,0,0,0,,So we've gone over how to do question answering over your documents, but what exactly is going on underneath the hood?
+Dialogue: 0,0:03:52.18,0:03:54.34,Secondary,,0,0,0,,First let's think about the general idea.
+Dialogue: 0,0:03:54.34,0:03:59.90,Secondary,,0,0,0,,We want to use language models and combine it with a lot of our documents, but there's a key issue.
+Dialogue: 0,0:03:59.90,0:04:03.46,Secondary,,0,0,0,,Language models can only inspect a few thousand words at a time.
+Dialogue: 0,0:04:03.46,0:04:10.30,Secondary,,0,0,0,,So if we have really large documents, how can we get the language model to answer questions about everything that's in there?
+Dialogue: 0,0:04:10.30,0:04:14.46,Secondary,,0,0,0,,This is where embeddings and vector stores come into play.
+Dialogue: 0,0:04:14.46,0:04:17.78,Secondary,,0,0,0,,First let's talk about embeddings.
+Dialogue: 0,0:04:17.78,0:04:21.74,Secondary,,0,0,0,,Embeddings create numerical representations for pieces of text.
+Dialogue: 0,0:04:21.74,0:04:28.0,Secondary,,0,0,0,,This numerical representation captures the semantic meaning of the piece of text that it's been run over.
+Dialogue: 0,0:04:28.0,0:04:31.92,Secondary,,0,0,0,,Pieces of text with similar content will have similar vectors.
+Dialogue: 0,0:04:31.92,0:04:35.30,Secondary,,0,0,0,,This lets us compare pieces of text in the vector space.
+Dialogue: 0,0:04:35.30,0:04:38.94,Secondary,,0,0,0,,In the example below, we can see that we have three sentences.
+Dialogue: 0,0:04:38.94,0:04:43.22,Secondary,,0,0,0,,The first two are about pets, while the third is about a car.
+Dialogue: 0,0:04:43.22,0:04:54.18,Secondary,,0,0,0,,If we look at the representation in the numeric space, we can see that when we compare the two vectors on the pieces of text corresponding to the sentences about pets, they're very similar.
+Dialogue: 0,0:04:54.18,0:04:58.26,Secondary,,0,0,0,,While if we compare it to the one that talks about a car, they're not similar at all.
+Dialogue: 0,0:04:58.26,0:05:02.10,Secondary,,0,0,0,,This will let us easily figure out which pieces of text are like each other,
+Dialogue: 0,0:05:02.10,0:05:09.94,Secondary,,0,0,0,,which will be very useful as we think about which pieces of text we want to include when passing to the language model to answer a question.
+Dialogue: 0,0:05:09.94,0:05:13.2,Secondary,,0,0,0,,The next component that we're going to cover is the vector database.
+Dialogue: 0,0:05:13.2,0:05:18.6,Secondary,,0,0,0,,A vector database is a way to store these vector representations that we created in the previous step.
+Dialogue: 0,0:05:18.6,0:05:23.78,Secondary,,0,0,0,,The way that we create this vector database is we populate it with chunks of text coming from incoming documents.
+Dialogue: 0,0:05:23.78,0:05:29.2,Secondary,,0,0,0,,When we get a big incoming document, we're first going to break it up into smaller chunks.
+Dialogue: 0,0:05:33.46,0:05:37.90,Secondary,,0,0,0,,which is useful because we may not be able to pass the whole document to the language model.
+Dialogue: 0,0:05:37.90,0:05:43.30,Secondary,,0,0,0,,So we want to create these small chunks so we can only pass the most relevant ones to the language model.
+Dialogue: 0,0:05:43.30,0:05:48.94,Secondary,,0,0,0,,We then create an embedding for each of these chunks, and then we store those in a vector database.
+Dialogue: 0,0:05:48.94,0:05:51.64,Secondary,,0,0,0,,That's what happens when we create the index.
+Dialogue: 0,0:05:51.64,0:05:58.42,Secondary,,0,0,0,,Now that we've got this index, we can use it during runtime to find the pieces of text most relevant to an incoming query.
+Dialogue: 0,0:05:58.42,0:06:02.22,Secondary,,0,0,0,,When a query comes in, we first create an embedding for that query.
+Dialogue: 0,0:06:02.22,0:06:08.0,Secondary,,0,0,0,,We then compare it to all the vectors in the vector database, and we pick the n most similar.
+Dialogue: 0,0:06:08.0,0:06:14.38,Secondary,,0,0,0,,These are then returned, and we can pass those in the prompt to the language model to get back a final answer.
+Dialogue: 0,0:06:14.38,0:06:17.78,Secondary,,0,0,0,,So above, we created this chain and only a few lines of code.
+Dialogue: 0,0:06:17.78,0:06:19.18,Secondary,,0,0,0,,That's great for getting started quickly.
+Dialogue: 0,0:06:19.18,0:06:25.26,Secondary,,0,0,0,,Well, let's now do it a bit more step by step and understand what exactly is going on under the hood.
+Dialogue: 0,0:06:25.26,0:06:27.22,Secondary,,0,0,0,,The first step is similar to above.
+Dialogue: 0,0:06:27.22,0:06:36.56,Secondary,,0,0,0,,We're going to create a document loader, loading from that CSV with all the descriptions of the products that we want to do question answering over.
+Dialogue: 0,0:06:36.56,0:06:41.46,Secondary,,0,0,0,,We can then load documents from this document loader.
+Dialogue: 0,0:06:41.46,0:06:49.74,Secondary,,0,0,0,,If we look at the individual documents, we can see that each document corresponds to one of the products in the CSV.
+Dialogue: 0,0:06:49.74,0:06:53.6,Secondary,,0,0,0,,Previously, we talked about creating chunks.
+Dialogue: 0,0:06:53.6,0:06:57.10,Secondary,,0,0,0,,Because these documents are already so small, we actually don't need to do any chunking here.
+Dialogue: 0,0:06:57.10,0:07:01.14,Secondary,,0,0,0,,And so we can create embeddings directly.
+Dialogue: 0,0:07:01.14,0:07:05.26,Secondary,,0,0,0,,To create embeddings, we're going to use OpenAIEmbedding class.
+Dialogue: 0,0:07:05.26,0:07:08.22,Secondary,,0,0,0,,We can import it and initialize it here.
+Dialogue: 0,0:07:08.22,0:07:15.60,Secondary,,0,0,0,,If we want to see what these embeddings do, we can actually take a look at what happens when we embed a particular piece of text.
+Dialogue: 0,0:07:21.18,0:07:26.20,Secondary,,0,0,0,,Let's use the "embed_query" method on the embeddings object to create embeddings for a particular piece of text.
+Dialogue: 0,0:07:26.20,0:07:28.66,Secondary,,0,0,0,,In this case, the sentence, "Hi, my name is Harrison."
+Dialogue: 0,0:07:31.63,0:07:36.6,Secondary,,0,0,0,,If we take a look at this embedding, we can see that there are over a thousand different elements.
+Dialogue: 0,0:07:42.2,0:07:44.62,Secondary,,0,0,0,,Each of these elements is a different numerical value.
+Dialogue: 0,0:07:44.62,0:07:51.34,Secondary,,0,0,0,,Combined, this creates the overall numerical representation for this piece of text.
+Dialogue: 0,0:07:51.34,0:07:58.50,Secondary,,0,0,0,,We want to create embeddings for all the pieces of text that we just loaded, and then we also want to store them in a vector store.
+Dialogue: 0,0:07:58.50,0:08:03.82,Secondary,,0,0,0,,We can do that by using the from documents method on the vector store.
+Dialogue: 0,0:08:03.82,0:08:12.26,Secondary,,0,0,0,,This method takes in a list of documents, an embedding object, and then we'll create an overall vector store.
+Dialogue: 0,0:08:12.26,0:08:18.2,Secondary,,0,0,0,,We can now use this vector store to find pieces of text similar to an incoming query.
+Dialogue: 0,0:08:18.2,0:08:23.6,Secondary,,0,0,0,,So let's look at the query, "Please suggest a shirt with sunblocking."
+Dialogue: 0,0:08:23.6,0:08:29.10,Secondary,,0,0,0,,If we use the "similarity_search" method on the vector store and pass in a query, we will get back a list of documents.
+Dialogue: 0,0:08:36.86,0:08:47.40,Secondary,,0,0,0,,We can see that it returns four documents, and if we look at the first one, we can see that it is indeed a shirt about sunblocking.
+Dialogue: 0,0:08:48.4,0:08:53.6,Secondary,,0,0,0,,So how do we use this to do question answering over our own documents?
+Dialogue: 0,0:08:53.6,0:08:57.10,Secondary,,0,0,0,,First, we need to create a retriever from this vector store.
+Dialogue: 0,0:08:57.10,0:09:03.82,Secondary,,0,0,0,,A retriever is a generic interface that can be underpinned by any method that takes in a query and returns documents.
+Dialogue: 0,0:09:03.82,0:09:11.26,Secondary,,0,0,0,,Vector stores and embeddings are one such method to do so, although there are plenty of different methods, some less advanced, some more advanced.
+Dialogue: 0,0:09:11.26,0:09:20.92,Secondary,,0,0,0,,Next, because we want to do text generation and return a natural language response, we're going to import a language model, and we're going to use ChatOpenAI.
+Dialogue: 0,0:09:20.92,0:09:28.78,Secondary,,0,0,0,,If we were doing this by hand, what we would do is we would combine the documents into a single piece of text.
+Dialogue: 0,0:09:28.78,0:09:34.73,Secondary,,0,0,0,,So we'd do something like this, where we join all the page content in the documents into a variable,
+Dialogue: 0,0:09:34.74,0:09:48.98,Secondary,,0,0,0,,and then we'd pass this variable or a variant on the question, like "Please list all your shirts with sun protection in a table with markdown," and summarize each one into the language model.
+Dialogue: 0,0:09:48.98,0:09:55.78,Secondary,,0,0,0,,And if we print out the response here, we can see that we get back a table exactly as we asked for.
+Dialogue: 0,0:09:55.78,0:09:59.90,Secondary,,0,0,0,,All of those steps can be encapsulated with the LangChain chain.
+Dialogue: 0,0:09:59.90,0:10:02.98,Secondary,,0,0,0,,So here we can create a RetrievalQA chain.
+Dialogue: 0,0:10:02.98,0:10:06.86,Secondary,,0,0,0,,This does retrieval and then does question answering over the retrieved documents.
+Dialogue: 0,0:10:06.86,0:10:09.86,Secondary,,0,0,0,,To create such a chain, we'll pass in a few different things.
+Dialogue: 0,0:10:09.86,0:10:12.20,Secondary,,0,0,0,,First, we'll pass in the language model.
+Dialogue: 0,0:10:12.20,0:10:15.26,Secondary,,0,0,0,,This will be used for doing the text generation at the end.
+Dialogue: 0,0:10:15.26,0:10:17.66,Secondary,,0,0,0,,Next, we'll pass in the chain type.
+Dialogue: 0,0:10:17.66,0:10:18.66,Secondary,,0,0,0,,We're going to use stuff.
+Dialogue: 0,0:10:18.66,0:10:25.38,Secondary,,0,0,0,,This is the simplest method, as it just stuffs all the documents into context and makes one call to a language model.
+Dialogue: 0,0:10:25.38,0:10:31.94,Secondary,,0,0,0,,There are a few other methods that you can use to do question answering that I'll maybe touch on at the end, but we're not going to look at in detail.
+Dialogue: 0,0:10:31.94,0:10:34.46,Secondary,,0,0,0,,Third, we're going to pass in a retriever.
+Dialogue: 0,0:10:34.46,0:10:38.66,Secondary,,0,0,0,,The retriever we created above is just an interface for fetching documents.
+Dialogue: 0,0:10:38.66,0:10:41.86,Secondary,,0,0,0,,This will be used to fetch documents and pass it to the language model.
+Dialogue: 0,0:10:41.86,0:10:46.34,Secondary,,0,0,0,,And then finally, we're going to set verbose equals to true.
+Dialogue: 0,0:10:46.34,0:10:50.93,Secondary,,0,0,0,,Now we can create a query and we can run the chain on this query.
+Dialogue: 0,0:11:08.46,0:11:14.86,Secondary,,0,0,0,,When we get the response, we can again display it using the display and Markdown utilities.
+Dialogue: 0,0:11:14.86,0:11:20.94,Secondary,,0,0,0,,You can pause the video here and try it out with a bunch of different queries.
+Dialogue: 0,0:11:20.94,0:11:22.24,Secondary,,0,0,0,,So that's how you do it in detail.
+Dialogue: 0,0:11:22.24,0:11:26.56,Secondary,,0,0,0,,But remember that we can still do it pretty easily with just the one line that we had up above.
+Dialogue: 0,0:11:26.56,0:11:30.26,Secondary,,0,0,0,,So these two things equate to the same result.
+Dialogue: 0,0:11:30.26,0:11:32.72,Secondary,,0,0,0,,And that's part of the interesting stuff about LangChain.
+Dialogue: 0,0:11:32.72,0:11:38.14,Secondary,,0,0,0,,You can do it in one line or you can look at the individual things and break it down into five more detailed ones.
+Dialogue: 0,0:11:38.14,0:11:43.0,Secondary,,0,0,0,,The five more detailed ones let you set more specifics about what exactly is going on.
+Dialogue: 0,0:11:43.0,0:11:44.74,Secondary,,0,0,0,,But the one-liner is easy to get started.
+Dialogue: 0,0:11:44.74,0:11:48.42,Secondary,,0,0,0,,So up to you as to how you'd prefer to go forward.
+Dialogue: 0,0:11:48.42,0:11:51.76,Secondary,,0,0,0,,We can also customize the index when we're creating it.
+Dialogue: 0,0:11:51.76,0:11:55.26,Secondary,,0,0,0,,And so if you remember, when we created it by hand, we specified an embedding.
+Dialogue: 0,0:11:55.26,0:11:57.74,Secondary,,0,0,0,,And we can specify an embedding here as well.
+Dialogue: 0,0:11:57.74,0:12:01.86,Secondary,,0,0,0,,And so this will give us flexibility over how the embeddings themselves are created.
+Dialogue: 0,0:12:01.86,0:12:06.62,Secondary,,0,0,0,,And we can also swap out the vector store here for a different type of vector store.
+Dialogue: 0,0:12:06.62,0:12:15.10,Secondary,,0,0,0,,So there's the same level of customization that you did when you created by hand that's also available when you create the index here.
+Dialogue: 0,0:12:15.10,0:12:16.82,Secondary,,0,0,0,,We use the stuff method in this notebook.
+Dialogue: 0,0:12:16.82,0:12:19.38,Secondary,,0,0,0,,The stuff method is really nice because it's pretty simple.
+Dialogue: 0,0:12:19.38,0:12:25.22,Secondary,,0,0,0,,You just put all of it into one prompt and send that to the language model and get back one response.
+Dialogue: 0,0:12:25.22,0:12:27.78,Secondary,,0,0,0,,So it's quite simple to understand what's going on.
+Dialogue: 0,0:12:27.78,0:12:30.50,Secondary,,0,0,0,,It's quite cheap and it works pretty well.
+Dialogue: 0,0:12:30.50,0:12:32.74,Secondary,,0,0,0,,But that doesn't always work okay.
+Dialogue: 0,0:12:32.74,0:12:39.34,Secondary,,0,0,0,,So if you remember, when we fetched the documents in the notebook, we only got four documents back and they were relatively small.
+Dialogue: 0,0:12:39.34,0:12:44.66,Secondary,,0,0,0,,But what if you wanted to do the same type of question answering over lots of different types of chunks?
+Dialogue: 0,0:12:44.66,0:12:47.6,Secondary,,0,0,0,,Then there are a few different methods that we can use.
+Dialogue: 0,0:12:47.6,0:12:48.82,Secondary,,0,0,0,,The first is Map_reduce.
+Dialogue: 0,0:12:48.82,0:12:50.34,Secondary,,0,0,0,,This basically takes all the chunks,
+Dialogue: 0,0:12:55.34,0:13:02.44,Secondary,,0,0,0,,and then uses another language model call to summarize all of the individual responses into a final answer.
+Dialogue: 0,0:13:02.44,0:13:06.90,Secondary,,0,0,0,,This is really powerful because it can operate over any number of documents.
+Dialogue: 0,0:13:06.90,0:13:11.86,Secondary,,0,0,0,,And it's also really powerful because you can do the individual questions in parallel.
+Dialogue: 0,0:13:11.86,0:13:13.66,Secondary,,0,0,0,,But it does take a lot more calls.
+Dialogue: 0,0:13:13.66,0:13:19.6,Secondary,,0,0,0,,And it does treat all the documents as independent, which may not always be the most desired thing.
+Dialogue: 0,0:13:19.6,0:13:24.26,Secondary,,0,0,0,,Refine, which is another method, is again used to loop over many documents.
+Dialogue: 0,0:13:24.26,0:13:25.58,Secondary,,0,0,0,,But it actually does it iteratively.
+Dialogue: 0,0:13:25.58,0:13:28.78,Secondary,,0,0,0,,It builds upon the answer from the previous document.
+Dialogue: 0,0:13:28.78,0:13:33.90,Secondary,,0,0,0,,So this is really good for combining information and building up an answer over time.
+Dialogue: 0,0:13:33.90,0:13:36.58,Secondary,,0,0,0,,It will generally lead to longer answers.
+Dialogue: 0,0:13:36.58,0:13:39.74,Secondary,,0,0,0,,And it's also not as fast because now the calls aren't independent.
+Dialogue: 0,0:13:39.74,0:13:43.38,Secondary,,0,0,0,,They depend on the result of previous calls.
+Dialogue: 0,0:13:43.38,0:13:49.98,Secondary,,0,0,0,,This means that it often takes a good while longer and takes just as many calls as Map_reduce, basically.
+Dialogue: 0,0:13:49.98,0:13:57.98,Secondary,,0,0,0,,Map_rerank is a pretty interesting and a bit more experimental one where you do a single call to the language model for each document.
+Dialogue: 0,0:13:57.98,0:14:00.30,Secondary,,0,0,0,,And you also ask it to return a score.
+Dialogue: 0,0:14:00.30,0:14:02.62,Secondary,,0,0,0,,And then you select the highest score.
+Dialogue: 0,0:14:02.62,0:14:06.22,Secondary,,0,0,0,,This relies on the language model to know what the score should be.
+Dialogue: 0,0:14:06.22,0:14:12.58,Secondary,,0,0,0,,So you often have to tell it, hey, it should be a high score if it's relevant to the document and really refine the instructions there.
+Dialogue: 0,0:14:12.58,0:14:15.14,Secondary,,0,0,0,,Similar to Map_reduce, all the calls are independent.
+Dialogue: 0,0:14:15.14,0:14:16.38,Secondary,,0,0,0,,So you can batch them.
+Dialogue: 0,0:14:16.38,0:14:18.22,Secondary,,0,0,0,,And it's relatively fast.
+Dialogue: 0,0:14:18.22,0:14:20.78,Secondary,,0,0,0,,But again, you're making a bunch of language model calls.
+Dialogue: 0,0:14:20.78,0:14:22.74,Secondary,,0,0,0,,So it will be a bit more expensive.
+Dialogue: 0,0:14:22.74,0:14:29.22,Secondary,,0,0,0,,The most common of these methods is the stuff method, which we used in the notebook to combine it all into one document.
+Dialogue: 0,0:14:29.22,0:14:35.58,Secondary,,0,0,0,,The second most common is the Map_reduce method, which takes these chunks and sends them to the language model.
+Dialogue: 0,0:14:35.58,0:14:42.74,Secondary,,0,0,0,,These methods here, stuff, Map_reduce, refine, and rerank, can also be used for lots of other chains besides just question answering.
+Dialogue: 0,0:14:42.74,0:14:47.63,Secondary,,0,0,0,,For example, a really common use case of the Map_reduce chain is for summarization,
+Dialogue: 0,0:14:47.63,0:14:53.82,Secondary,,0,0,0,,where you have a really long document and you want to recursively summarize pieces of information.
+Dialogue: 0,0:14:53.82,0:14:56.18,Secondary,,0,0,0,,That's it for question answering over documents.
+Dialogue: 0,0:14:56.18,0:15:00.58,Secondary,,0,0,0,,As you may have noticed, there's a lot going on in the different chains that we have here.
+Dialogue: 0,0:15:00.58,0:15:01.89,Secondary,,0,0,0,,And so in the next section,
+Dialogue: 0,0:15:01.89,0:15:06.26,Secondary,,0,0,0,,we'll cover ways to better understand what exactly is going on inside all of these chains.
+Dialogue: 0,0:00:05.0,0:00:15.24,Default,,0,0,0,,文档问答系统是一种常见的用\NLLM构建的复杂应用程序。
+Dialogue: 0,0:00:15.24,0:00:23.89,Default,,0,0,0,,给定一段可能从PDF文件、网页或某公\N司的内部文档库中提取的文本，
+Dialogue: 0,0:00:23.91,0:00:33.46,Default,,0,0,0,,你能否使用LLM回答关于这些文档内容的问题，\N帮助用户深入了解并获取他们需要的信息？
+Dialogue: 0,0:00:33.46,0:00:39.30,Default,,0,0,0,,这样的应用非常强大，因为它可以将大语\N言模型与完全没被训练的数据相结合。
+Dialogue: 0,0:00:39.30,0:00:42.54,Default,,0,0,0,,这使得它们可以灵活的适应你的应用场景。
+Dialogue: 0,0:00:42.54,0:00:51.54,Default,,0,0,0,,这也非常令人兴奋，因为我们将开始超\N越语言模型、Prompt和输出解析器，引\N入LangChain的更多关键组件，
+Dialogue: 0,0:00:51.56,0:00:54.58,Default,,0,0,0,,例如Embedding模型和向量\N存储（Vector Stores）。
+Dialogue: 0,0:00:54.58,0:00:58.62,Default,,0,0,0,,正如Andrew提到的，这是LangChain最受欢\N迎的链之一，希望你能对这个有兴趣。
+Dialogue: 0,0:00:58.62,0:01:03.58,Default,,0,0,0,,事实上，Embedding和向量存储\N是两种强大的前沿技术。
+Dialogue: 0,0:01:03.58,0:01:08.30,Default,,0,0,0,,如果你还没有了解过这些技\N术，那么绝对值得学习。
+Dialogue: 0,0:01:08.30,0:01:10.6,Default,,0,0,0,,那让我们开始吧！
+Dialogue: 0,0:01:10.6,0:01:11.6,Default,,0,0,0,,开始吧！
+Dialogue: 0,0:01:11.6,0:01:16.30,Default,,0,0,0,,首先，我们会像往常一样导入环境变量。
+Dialogue: 0,0:01:16.30,0:01:20.6,Default,,0,0,0,,现在我们要导入一些在构建\N这个链时需要用到的库。
+Dialogue: 0,0:01:20.6,0:01:24.34,Default,,0,0,0,,我们将导入RetrievalQA链，\N它可以帮助检索文档。
+Dialogue: 0,0:01:24.34,0:01:28.10,Default,,0,0,0,,我们将导入大家都喜欢的\NChatOpenAI语言模型。
+Dialogue: 0,0:01:28.10,0:01:29.70,Default,,0,0,0,,我们要导入一个文档加载器，
+Dialogue: 0,0:01:29.70,0:01:34.50,Default,,0,0,0,,后面会用它加载一些专用数据，\N用来与语言模型结合使用。
+Dialogue: 0,0:01:34.50,0:01:36.38,Default,,0,0,0,,在这里我们要加载的是一个CSV文件，
+Dialogue: 0,0:01:36.38,0:01:38.38,Default,,0,0,0,,所以要导入CSVLoader。
+Dialogue: 0,0:01:38.38,0:01:41.22,Default,,0,0,0,,最后，我们要导入一个向量存储。
+Dialogue: 0,0:01:41.22,0:01:48.90,Default,,0,0,0,,有很多不同类型的向量存储，我们稍后\N会介绍它是什么，让我们先从向量存储\NDocArrayInMemorySearch开始。
+Dialogue: 0,0:01:48.90,0:01:57.58,Default,,0,0,0,,这个向量存储非常好用，因为它是内存存储，不\N需要连接任何外部数据库，所以很容易上手。
+Dialogue: 0,0:01:57.58,0:02:04.50,Default,,0,0,0,,我们还将导入"display"和"Markdown"，常\N用来在Jupyter Notebook中显示信息。
+Dialogue: 0,0:02:04.50,0:02:10.50,Default,,0,0,0,,我们提供了一个户外服装产品目录的CSV\N文件，会用它和语言模型结合使用。
+Dialogue: 0,0:02:10.50,0:02:18.18,Default,,0,0,0,,在这里，我们将初始化一个名叫CSVLoader的\N加载器（Loader），并为其指定文件路径。
+Dialogue: 0,0:02:18.18,0:02:22.80,Default,,0,0,0,,接下来，我们要导入一个叫\NVectorStoreIndexCreator\N的索引（Index）。
+Dialogue: 0,0:02:22.80,0:02:25.98,Default,,0,0,0,,借助它们，我们可以很方便\N地创建一个向量存储。
+Dialogue: 0,0:02:25.98,0:02:33.94,Default,,0,0,0,,如下所示，只需几行代码就可以创建。
+Dialogue: 0,0:02:33.94,0:02:37.2,Default,,0,0,0,,要创建向量存储，我们需要指定两件事。
+Dialogue: 0,0:02:37.2,0:02:40.54,Default,,0,0,0,,第一件事是我们要指定一个向量存储类。
+Dialogue: 0,0:02:40.54,0:02:46.10,Default,,0,0,0,,如前所述，我们将使用这个向量\N存储，因为它特别容易上手。
+Dialogue: 0,0:02:46.10,0:02:51.82,Default,,0,0,0,,第二件事是，创建后我们将调用文\N档加载器(Loader)，传入一个包含\N一个或多个加载器的列表。
+Dialogue: 0,0:02:51.82,0:02:58.46,Default,,0,0,0,,我们只需要一个加载器，也就是传入的这个。
+Dialogue: 0,0:02:58.46,0:03:02.22,Default,,0,0,0,,现在已经创建好了向量存储\N，我们可以开始提问了。
+Dialogue: 0,0:03:02.22,0:03:06.90,Default,,0,0,0,,稍后将会向你介绍这背后到底发生了什么。
+Dialogue: 0,0:03:06.90,0:03:09.14,Default,,0,0,0,,我们先定义一个包含查询内容的字符串变量\N"query"。（内容是：“请在表格中列出你所有带\N防晒功能的衬衫，并为这些衬衫写一份摘要。”）
+Dialogue: 0,0:03:09.14,0:03:15.73,Default,,0,0,0,,然后我们用"index.query"生成一\N个响应，并传入"query"变量。
+Dialogue: 0,0:03:16.34,0:03:20.90,Default,,0,0,0,,同样，稍后将会向你介绍这\N背后到底发生了什么
+Dialogue: 0,0:03:20.90,0:03:23.10,Default,,0,0,0,,现在，我们来等等看它返回什么结果。
+Dialogue: 0,0:03:30.38,0:03:34.54,Default,,0,0,0,,在完成后，我们可以看看到底返回了什么。
+Dialogue: 0,0:03:34.54,0:03:40.78,Default,,0,0,0,,我们得到了一个Markdown格式的表格，列出了\N所有具有防晒功能的衬衫的名称和描述。
+Dialogue: 0,0:03:40.78,0:03:45.54,Default,,0,0,0,,我们还得到了一个很好的小结，\N是语言模型为我们生成的。
+Dialogue: 0,0:03:45.54,0:03:52.18,Default,,0,0,0,,我们已经介绍了如何对文档中的内容进\N行问答，但底层到底是怎么实现的呢？
+Dialogue: 0,0:03:52.18,0:03:54.34,Default,,0,0,0,,首先让我们来梳理一下思路。
+Dialogue: 0,0:03:54.34,0:03:59.90,Default,,0,0,0,,想要使用语言模型，并且与大量文\N档相结合，存在一个关键问题：
+Dialogue: 0,0:03:59.90,0:04:03.46,Default,,0,0,0,,语言模型一次只能接收几千个单词。
+Dialogue: 0,0:04:03.46,0:04:10.30,Default,,0,0,0,,那么，如果我们有一个很大的文档，如何让\N语言模型对文档所有内容进行问答呢？
+Dialogue: 0,0:04:10.30,0:04:14.46,Default,,0,0,0,,这里就需要Embedding和向量存储发挥作用了。
+Dialogue: 0,0:04:14.46,0:04:17.78,Default,,0,0,0,,首先让我们谈谈Embedding。
+Dialogue: 0,0:04:17.78,0:04:21.74,Default,,0,0,0,,Embedding将一段文本转换成数字\N，用一组数字表示这段文本。
+Dialogue: 0,0:04:21.74,0:04:28.0,Default,,0,0,0,,这组数字捕捉了它所代表的\N文字片段的内容含义。
+Dialogue: 0,0:04:28.0,0:04:31.92,Default,,0,0,0,,内容相似的文本片段会有相似的向量值。
+Dialogue: 0,0:04:31.92,0:04:35.30,Default,,0,0,0,,这样我们就可以在向量空间中比较文本片段。
+Dialogue: 0,0:04:35.30,0:04:38.94,Default,,0,0,0,,在下面的例子中，我们可以看到有三个句子，
+Dialogue: 0,0:04:38.94,0:04:43.22,Default,,0,0,0,,前两个是关于宠物的，而第三个是关于汽车的。
+Dialogue: 0,0:04:43.22,0:04:54.18,Default,,0,0,0,,如果我们观察数值空间中的表示，可以\N看到当我们比较关于两个关于宠物的句\N子的向量时，它们相似度非常高。
+Dialogue: 0,0:04:54.18,0:04:58.26,Default,,0,0,0,,而如果我们将其中一个与汽车相关的那个\N句子向量进行比较，它们相似度很低。
+Dialogue: 0,0:04:58.26,0:05:02.10,Default,,0,0,0,,利用向量相似度可以让我们轻松\N地找出哪些文本片段相似，
+Dialogue: 0,0:05:02.10,0:05:09.94,Default,,0,0,0,,这对我们非常有用，因为我们可以利用这种\N技术从文档中找出跟问题相似的文本片段，\N一起传递给语言模型来帮助回答问题。
+Dialogue: 0,0:05:09.94,0:05:13.2,Default,,0,0,0,,接下来我们要介绍的组件是向量数据库。
+Dialogue: 0,0:05:13.2,0:05:18.6,Default,,0,0,0,,向量数据库是一种存储方法，可以存储我\N们在前面创建的那种矢量数字数组。
+Dialogue: 0,0:05:18.6,0:05:23.78,Default,,0,0,0,,往向量数据库中新建数据的方式，就是将文\N档拆分成块，每块生成Embedding，然后把\NEmbedding和原始块一起存储到数据库中。
+Dialogue: 0,0:05:23.78,0:05:33.43,Default,,0,0,0,,当我们在处理大一点的文档时，首\N先要将其拆分成较小的文本块，
+Dialogue: 0,0:05:33.46,0:05:37.90,Default,,0,0,0,,因为可能无法将整个文档的\N内容都传给语言模型。
+Dialogue: 0,0:05:37.90,0:05:43.30,Default,,0,0,0,,所以需要把文档拆分成小块，这样每次就只\N用把最相关的几块内容传递给语言模型。
+Dialogue: 0,0:05:43.30,0:05:48.94,Default,,0,0,0,,然后，把每个文本块生成一个Embedding，然后\N将这些Embedding存储在向量数据库中。
+Dialogue: 0,0:05:48.94,0:05:51.64,Default,,0,0,0,,这就是我们创建索引时发生的事情。
+Dialogue: 0,0:05:51.64,0:05:58.42,Default,,0,0,0,,索引创建后，我们可以用它来找到与\N查询内容最相关的几个文本片段。
+Dialogue: 0,0:05:58.42,0:06:02.22,Default,,0,0,0,,当一个查询进来时，我们首先将查询的内\N容生成Embedding，得到一个数字数组。
+Dialogue: 0,0:06:02.22,0:06:08.0,Default,,0,0,0,,然后将这个数字数组与向量数据库中的所有向\N量进行比较，选择最相似的前若干个文本块。
+Dialogue: 0,0:06:08.0,0:06:14.38,Default,,0,0,0,,拿到这些文本块后，将这些文本块和原始的查\N询内容一起传递给语言模型，这样可以让语言\N模型根据检索出来的文档内容生成最终答案。
+Dialogue: 0,0:06:14.38,0:06:17.78,Default,,0,0,0,,在上面，我们用几行代码创建了这个链。
+Dialogue: 0,0:06:17.78,0:06:19.18,Default,,0,0,0,,这对于快速入门非常有帮助。
+Dialogue: 0,0:06:19.18,0:06:25.26,Default,,0,0,0,,好吧，现在让我们详细了解一\N下底层到底发生了什么。
+Dialogue: 0,0:06:25.26,0:06:27.22,Default,,0,0,0,,第一步与上面类似。
+Dialogue: 0,0:06:27.22,0:06:36.56,Default,,0,0,0,,我们将创建一个文档加载器，加载前面提到的\N产品描述的CSV文件，用做后面问答的文档数据。
+Dialogue: 0,0:06:36.56,0:06:41.46,Default,,0,0,0,,然后我们可以借助这个文档\N加载器中加载所有文档。
+Dialogue: 0,0:06:41.46,0:06:49.74,Default,,0,0,0,,如果查看单个文档，可以看到每个文\N档对应CSV文件中的一个产品。
+Dialogue: 0,0:06:49.74,0:06:53.6,Default,,0,0,0,,之前我们讨论过分块。
+Dialogue: 0,0:06:53.6,0:06:57.10,Default,,0,0,0,,因为这些文档已经很小了，所\N以这里我们不需要分块。
+Dialogue: 0,0:06:57.10,0:07:01.14,Default,,0,0,0,,可以直接生成Embedding。
+Dialogue: 0,0:07:01.14,0:07:05.26,Default,,0,0,0,,要生成Embedding，我们将使\N用OpenAIEmbedding类。
+Dialogue: 0,0:07:05.26,0:07:08.22,Default,,0,0,0,,让我们导入并初始化它。
+Dialogue: 0,0:07:08.22,0:07:15.60,Default,,0,0,0,,如果想看看这些Embedding是如何工\N作的，可以实际看看一段特定的文本\N时生成的Embedding是什么。
+Dialogue: 0,0:07:21.18,0:07:26.20,Default,,0,0,0,,让我们使用Embedding对象上的\N"embed_query"方法为特定文本生成\NEmbedding。
+Dialogue: 0,0:07:26.20,0:07:28.66,Default,,0,0,0,,在这种情况下，句子是"嗨，我叫Harrison。"
+Dialogue: 0,0:07:31.63,0:07:36.6,Default,,0,0,0,,如果我们看一下这个Embedding，可以看\N到有超过一千个(1536)不同的元素。
+Dialogue: 0,0:07:42.2,0:07:44.62,Default,,0,0,0,,每个元素都是一个不同的数字。
+Dialogue: 0,0:07:44.62,0:07:51.34,Default,,0,0,0,,这些数字就是这段文字的\NEmbedding，1536维向量数字。
+Dialogue: 0,0:07:51.34,0:07:58.50,Default,,0,0,0,,我们希望给刚刚加载的所有文本片段生成\NEmbedding，并将它们存储在一个向量存储器中。
+Dialogue: 0,0:07:58.50,0:08:03.82,Default,,0,0,0,,通过在向量存储器上调用\N"from_documents"方法来实现这一\N点。
+Dialogue: 0,0:08:03.82,0:08:12.26,Default,,0,0,0,,这个方法需要一个文档列表、一个Embedding\N对象，然后我们将创建一个向量存储器。
+Dialogue: 0,0:08:12.26,0:08:18.2,Default,,0,0,0,,现在我们可以用这个向量存储器来找到\N与输入的查询内容类似的文本片段。
+Dialogue: 0,0:08:18.2,0:08:23.6,Default,,0,0,0,,让我们看一下查询的内容：\N“请推荐一件防晒衣”。
+Dialogue: 0,0:08:23.6,0:08:29.10,Default,,0,0,0,,在向量存储器上调用\N“similarity_search”方法并传入\N查询的内容，就可以查询到一个文\N档列表。
+Dialogue: 0,0:08:36.86,0:08:47.40,Default,,0,0,0,,它返回了四个文档，如果我们看第一个，可\N以看到它确实是一件关于防晒的衣服。
+Dialogue: 0,0:08:48.4,0:08:53.6,Default,,0,0,0,,那么我们如何利用这个来回答\N我们自己文档中的问题呢？
+Dialogue: 0,0:08:53.6,0:08:57.10,Default,,0,0,0,,首先，需要从这个向量存储器创\N建一个检索器（Retriever）。
+Dialogue: 0,0:08:57.10,0:09:03.82,Default,,0,0,0,,检索器是一个通用接口，这个接口定义了一\N个接收查询内容并返回相似文档的方法。
+Dialogue: 0,0:09:03.82,0:09:11.26,Default,,0,0,0,,实现检索器的方法有很多种，基于向量存储\N和Embedding的检索是其中的一种，除此之\N外还有其他方法，有简单的有复杂的。
+Dialogue: 0,0:09:11.26,0:09:20.92,Default,,0,0,0,,接下来，我们想要返回一个自然语\N言的回应，所以要导入一个语言模\N型，我们将使用ChatOpenAI。
+Dialogue: 0,0:09:20.92,0:09:28.78,Default,,0,0,0,,接下来我们将手动把检索出来\N的文档合并成一段文本，
+Dialogue: 0,0:09:28.78,0:09:34.73,Default,,0,0,0,,将所有文档中的内容连接起来，\N并将结果保存到一个变量中，
+Dialogue: 0,0:09:34.74,0:09:48.98,Default,,0,0,0,,然后我们会将这个变量的内容和一个问\N题一起传给LLM，问题内容是：“请用\NMarkdown表格列出所有具有防晒功能的\N衬衫，并为这些衬衫写一份摘要。”
+Dialogue: 0,0:09:48.98,0:09:55.78,Default,,0,0,0,,如果我们在这里打印出返回的结果，可\N以看到一个完全符合要求的表格。
+Dialogue: 0,0:09:55.78,0:09:59.90,Default,,0,0,0,,所有这些步骤都可以用LangChain链来封装。
+Dialogue: 0,0:09:59.90,0:10:02.98,Default,,0,0,0,,在这里我们可以创建一个RetrievalQA链，
+Dialogue: 0,0:10:02.98,0:10:06.86,Default,,0,0,0,,这个链会对查询进行检索，然后\N在检索到的文档上进行问答。
+Dialogue: 0,0:10:06.86,0:10:09.86,Default,,0,0,0,,为了创建这个链，我们需要\N传入一些不同的东西。
+Dialogue: 0,0:10:09.86,0:10:12.20,Default,,0,0,0,,首先，我们要传入语言模型。
+Dialogue: 0,0:10:12.20,0:10:15.26,Default,,0,0,0,,这将用于最后的文本生成。
+Dialogue: 0,0:10:15.26,0:10:17.66,Default,,0,0,0,,接下来，我们要传入链类型。
+Dialogue: 0,0:10:17.66,0:10:18.66,Default,,0,0,0,,我们将使用"stuff"方法。
+Dialogue: 0,0:10:18.66,0:10:25.38,Default,,0,0,0,,这是最简单的方法，因为它只是在调用语言模\N型时将所有文档内容都一起放到上下文中。
+Dialogue: 0,0:10:25.38,0:10:31.94,Default,,0,0,0,,还有一些其他方法可以用来进行问答，我可能\N会在最后简单提一下，但不会详细讨论。
+Dialogue: 0,0:10:31.94,0:10:34.46,Default,,0,0,0,,第三，我们要传入一个检索器。
+Dialogue: 0,0:10:34.46,0:10:38.66,Default,,0,0,0,,我们在上面创建的检索器只\N是一个检索文档的接口，
+Dialogue: 0,0:10:38.66,0:10:41.86,Default,,0,0,0,,它将用于检索文档并将结果传递给语言模型。
+Dialogue: 0,0:10:41.86,0:10:46.34,Default,,0,0,0,,最后，把"verbose"参数设置为\N"True"，这样可以打印详细日志。
+Dialogue: 0,0:10:46.34,0:10:50.93,Default,,0,0,0,,现在我们可以创建一个查询，并\N把查询的内容传入链并运行。
+Dialogue: 0,0:11:08.46,0:11:14.86,Default,,0,0,0,,当我们得到返回结果后，可以再次使用\Ndisaplay和Markdown工具显示结果。
+Dialogue: 0,0:11:14.86,0:11:20.94,Default,,0,0,0,,建议你暂停视频，尝试不同的查\N询内容，并且运行看看结果。
+Dialogue: 0,0:11:20.94,0:11:22.24,Default,,0,0,0,,这就是详细操作方法。
+Dialogue: 0,0:11:22.24,0:11:26.56,Default,,0,0,0,,但如果你还记得一开始我们用这一行\N代码就可以轻松完成文档问答。
+Dialogue: 0,0:11:26.56,0:11:30.26,Default,,0,0,0,,这两种方式得到的结果是相同的。
+Dialogue: 0,0:11:30.26,0:11:32.72,Default,,0,0,0,,这也是LangChain有意思的一点。
+Dialogue: 0,0:11:32.72,0:11:38.14,Default,,0,0,0,,你可以用一行代码完成，也可以把它分成五个\N详细的步骤，可以查看每一步的详细结果。
+Dialogue: 0,0:11:38.14,0:11:43.0,Default,,0,0,0,,五个详细的步骤可以让你更具\N体地知道到底发生了什么。
+Dialogue: 0,0:11:43.0,0:11:44.74,Default,,0,0,0,,一句话总结就是很容易上手。
+Dialogue: 0,0:11:44.74,0:11:48.42,Default,,0,0,0,,由你自己决定如何使用。
+Dialogue: 0,0:11:48.42,0:11:51.76,Default,,0,0,0,,在创建索引时，也可以自定义索引。
+Dialogue: 0,0:11:51.76,0:11:55.26,Default,,0,0,0,,如果你还记得，我们手动创建索\N引时指定了一个Embedding。
+Dialogue: 0,0:11:55.26,0:11:57.74,Default,,0,0,0,,我们也可以在这里指定一个Embedding。
+Dialogue: 0,0:11:57.74,0:12:01.86,Default,,0,0,0,,这将使我们在生成\NEmbedding时具有更大的灵\N活性。
+Dialogue: 0,0:12:01.86,0:12:06.62,Default,,0,0,0,,我们还可以将这里的向量存储替\N换为其他类型的向量存储。
+Dialogue: 0,0:12:06.62,0:12:15.10,Default,,0,0,0,,在手动创建向量存储时，跟创建索\N引一样也可以很灵活的定制。
+Dialogue: 0,0:12:15.10,0:12:16.82,Default,,0,0,0,,在这个Notebook中我们使用"stuff"方法。
+Dialogue: 0,0:12:16.82,0:12:19.38,Default,,0,0,0,,"stuff"方法非常好，因为它很简单。
+Dialogue: 0,0:12:19.38,0:12:25.22,Default,,0,0,0,,你只需把所有内容放到Prompt里，然后\N发送给语言模型，得到返回结果。
+Dialogue: 0,0:12:25.22,0:12:27.78,Default,,0,0,0,,这很容易理解发生了什么。
+Dialogue: 0,0:12:27.78,0:12:30.50,Default,,0,0,0,,非常便宜，效果也相当好。
+Dialogue: 0,0:12:30.50,0:12:32.74,Default,,0,0,0,,但这并不总是有效。
+Dialogue: 0,0:12:32.74,0:12:39.34,Default,,0,0,0,,如果你还记得，在Notebook中获取文档时，\N我们只得到了四个相对较小的文档。
+Dialogue: 0,0:12:39.34,0:12:44.66,Default,,0,0,0,,但如果你想在许多不同类型的分块\N上进行同样类型的问题回答呢？
+Dialogue: 0,0:12:44.66,0:12:47.6,Default,,0,0,0,,那么我们可以使用几种不同的方法。
+Dialogue: 0,0:12:47.6,0:12:48.82,Default,,0,0,0,,第一个是Map_reduce。
+Dialogue: 0,0:12:48.82,0:12:55.34,Default,,0,0,0,,基本就是对所有的分块，把每一块\N的内容连同问题一起传递给语言模\N型，得到一个独立返回结果，
+Dialogue: 0,0:12:55.34,0:13:02.44,Default,,0,0,0,,然后每一块得到的结果都合并在\N一起，再使用语言模型来对这些结\N果进行总结，得到最终答案。
+Dialogue: 0,0:13:02.44,0:13:06.90,Default,,0,0,0,,这真的很强大，因为它可以\N处理任意数量的文档。
+Dialogue: 0,0:13:06.90,0:13:11.86,Default,,0,0,0,,而且它也很强大，因为你可以并\N行处理，同时处理多个分块。
+Dialogue: 0,0:13:11.86,0:13:13.66,Default,,0,0,0,,但是这种方法需要更多的调用语言模型。
+Dialogue: 0,0:13:13.66,0:13:19.6,Default,,0,0,0,,而且它把所有文档都独立处理，这\N可能并不总是最理想的结果。
+Dialogue: 0,0:13:19.6,0:13:24.26,Default,,0,0,0,,另一种方法是"Refine"，也\N是用来处理多个文档的。
+Dialogue: 0,0:13:24.26,0:13:25.58,Default,,0,0,0,,但它实际上是迭代进行的。
+Dialogue: 0,0:13:25.58,0:13:28.78,Default,,0,0,0,,它基于前一个文档的答案。
+Dialogue: 0,0:13:28.78,0:13:33.90,Default,,0,0,0,,所以这对于需要整合信息，以及随\N着时间推移构建答案非常有用。
+Dialogue: 0,0:13:33.90,0:13:36.58,Default,,0,0,0,,但它通常会导致更长的答案，
+Dialogue: 0,0:13:36.58,0:13:39.74,Default,,0,0,0,,而且速度也不那么快，因为现在\N每一个文档无法被独立调用，
+Dialogue: 0,0:13:39.74,0:13:43.38,Default,,0,0,0,,必须依赖前面的结果。
+Dialogue: 0,0:13:43.38,0:13:49.98,Default,,0,0,0,,这意味着它通常需要更长的时间，而\N且调用次数与Map_reduce一样多。
+Dialogue: 0,0:13:49.98,0:13:57.98,Default,,0,0,0,,"Map_rerank"是一个相当有趣但还处\N于实验阶段的方法，对于每个文档，你\N只需对语言模型进行一次调用。
+Dialogue: 0,0:13:57.98,0:14:00.30,Default,,0,0,0,,另外还需要让它返回一个评分。
+Dialogue: 0,0:14:00.30,0:14:02.62,Default,,0,0,0,,然后选择最高分的结果。
+Dialogue: 0,0:14:02.62,0:14:06.22,Default,,0,0,0,,这依赖于语言模型知道分数应该是多少。
+Dialogue: 0,0:14:06.22,0:14:12.58,Default,,0,0,0,,所以你需要告诉给它指令：“嘿，如\N果与文档相关，分数应该很高”，并\N且需要具体优化那部分指令。
+Dialogue: 0,0:14:12.58,0:14:15.14,Default,,0,0,0,,与"Map_reduce"方法类似，\N所有调用都是独立的。
+Dialogue: 0,0:14:15.14,0:14:16.38,Default,,0,0,0,,所以你可以批量处理它们。
+Dialogue: 0,0:14:16.38,0:14:18.22,Default,,0,0,0,,而且速度相对较快。
+Dialogue: 0,0:14:18.22,0:14:20.78,Default,,0,0,0,,不过，你要调用很多次语言模型。
+Dialogue: 0,0:14:20.78,0:14:22.74,Default,,0,0,0,,所以会有点贵。
+Dialogue: 0,0:14:22.74,0:14:29.22,Default,,0,0,0,,这些方法中最常见的是"stuff"方法，我们在\NNotebook中用它把所有内容合并成一个文档。
+Dialogue: 0,0:14:29.22,0:14:35.58,Default,,0,0,0,,第二常见的是"Map_reduce"方法，它\N将这些块分别发送到语言模型。
+Dialogue: 0,0:14:35.58,0:14:42.74,Default,,0,0,0,,除了问答之外，像stuff、Map_reduce、refine\N和rerank这些方法，你也可用于其他链上。
+Dialogue: 0,0:14:42.74,0:14:47.63,Default,,0,0,0,,比如说"Map_reduce"链用来生成摘要，
+Dialogue: 0,0:14:47.63,0:14:53.82,Default,,0,0,0,,在你需要对一个长文档分段\N递归生成摘要时很常用。
+Dialogue: 0,0:14:53.82,0:14:56.18,Default,,0,0,0,,关于文档问答就讲到这里了。
+Dialogue: 0,0:14:56.18,0:15:00.58,Default,,0,0,0,,你可能已经注意到，这些链都可以做很多事情。
+Dialogue: 0,0:15:00.58,0:15:01.89,Default,,0,0,0,,接下来的部分，
+Dialogue: 0,0:15:01.89,0:15:06.26,Default,,0,0,0,,我们将介绍如何更好地理解这\N些链内部到底发生了什么。

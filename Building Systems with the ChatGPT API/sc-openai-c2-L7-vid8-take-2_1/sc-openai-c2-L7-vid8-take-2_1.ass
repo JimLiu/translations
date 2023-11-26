@@ -1,0 +1,166 @@
+[Script Info]
+
+Title: sc-openai-c2-L7-vid8-take-2_1
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,16,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs10\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:05.0,0:00:08.16,Secondary,,0,0,0,,In this video, we'll put together everything we've learned in the previous videos to create
+Dialogue: 1,0:00:08.16,0:00:11.20,Secondary,,0,0,0,,an end-to-end example of a customer service assistant.
+Dialogue: 1,0:00:11.20,0:00:12.52,Secondary,,0,0,0,,We'll go through the following steps.
+Dialogue: 1,0:00:12.52,0:00:16.0,Secondary,,0,0,0,,First, we'll check the input to see if it flags the moderation API.
+Dialogue: 1,0:00:16.0,0:00:20.0,Secondary,,0,0,0,,Second, if it doesn't, we'll extract the list of products.
+Dialogue: 1,0:00:20.0,0:00:23.28,Secondary,,0,0,0,,Third, if the products are found, we'll try to look them up.
+Dialogue: 1,0:00:23.28,0:00:26.88,Secondary,,0,0,0,,And four, we'll answer the user question with the model.
+Dialogue: 1,0:00:26.88,0:00:31.8,Secondary,,0,0,0,,And finally, we'll put the answer through the moderation API.
+Dialogue: 1,0:00:31.8,0:00:34.76,Secondary,,0,0,0,,And if it is not flagged, we'll return it to the user.
+Dialogue: 1,0:00:34.76,0:00:36.82,Secondary,,0,0,0,,So we have our setup.
+Dialogue: 1,0:00:36.82,0:00:39.32,Secondary,,0,0,0,,We have this additional import.
+Dialogue: 1,0:00:39.32,0:00:47.24,Secondary,,0,0,0,,This is a Python package we'll use for a chatbot UI.
+Dialogue: 1,0:00:47.24,0:00:51.76,Secondary,,0,0,0,,And so I'm going to paste in a function process_user_message.
+Dialogue: 1,0:00:51.76,0:00:58.96,Secondary,,0,0,0,,And I'm actually going to run an example first, and then we'll talk through the function.
+Dialogue: 1,0:00:58.96,0:01:01.92,Secondary,,0,0,0,,So we have our user input that we've been using.
+Dialogue: 1,0:01:01.92,0:01:05.4,Secondary,,0,0,0,,Tell me about the SmartX pro phone and the camera.
+Dialogue: 1,0:01:05.4,0:01:06.80,Secondary,,0,0,0,,Also tell me about TVs.
+Dialogue: 1,0:01:06.80,0:01:07.80,Secondary,,0,0,0,,So let's run this.
+Dialogue: 1,0:01:07.80,0:01:12.64,Secondary,,0,0,0,,First, let's run this.
+Dialogue: 1,0:01:12.64,0:01:20.68,Secondary,,0,0,0,,So as you can see, we're going through the steps to answer the user question.
+Dialogue: 1,0:01:20.68,0:01:24.56,Secondary,,0,0,0,,So the first step, the moderation step.
+Dialogue: 1,0:01:24.56,0:01:27.48,Secondary,,0,0,0,,The second step is extracting the list of products.
+Dialogue: 1,0:01:27.48,0:01:31.88,Secondary,,0,0,0,,The third step is looking up the product information.
+Dialogue: 1,0:01:31.88,0:01:39.56,Secondary,,0,0,0,,And so now with this product information, the model is trying to answer the question,
+Dialogue: 1,0:01:39.56,0:01:46.36,Secondary,,0,0,0,,as we've seen in the previous videos.
+Dialogue: 1,0:01:46.36,0:01:53.68,Secondary,,0,0,0,,And then finally, it puts the response through the moderation API again to make sure it's safe to show to the user.
+Dialogue: 1,0:01:53.68,0:01:58.12,Secondary,,0,0,0,,And so this is the response that we're now familiar with.
+Dialogue: 1,0:01:58.12,0:02:01.80,Secondary,,0,0,0,,And so let's talk through a little bit of what's happening.
+Dialogue: 1,0:02:01.80,0:02:09.32,Secondary,,0,0,0,,So we have our helper function process_user_message.
+Dialogue: 1,0:02:09.32,0:02:16.64,Secondary,,0,0,0,,Takes in the user input, which is the current message, and an array of all of the messages so far.
+Dialogue: 1,0:02:16.64,0:02:18.92,Secondary,,0,0,0,,And this is when we build the chatbot UI.
+Dialogue: 1,0:02:18.92,0:02:23.28,Secondary,,0,0,0,,So the first step, checking to see if the input flags the moderation API.
+Dialogue: 1,0:02:23.28,0:02:25.60,Secondary,,0,0,0,,We covered this in a previous video.
+Dialogue: 1,0:02:25.60,0:02:32.24,Secondary,,0,0,0,,If the input is flagged, then we tell the user that we can't process the request.
+Dialogue: 1,0:02:32.24,0:02:37.84,Secondary,,0,0,0,,If it is not flagged, we try to extract the list of products, as we did in the previous video.
+Dialogue: 1,0:02:37.84,0:02:40.80,Secondary,,0,0,0,,Then we try to look up the products.
+Dialogue: 1,0:02:40.80,0:02:45.32,Secondary,,0,0,0,,And in this case, if no products are found, this will just be an empty string.
+Dialogue: 1,0:02:45.32,0:02:47.8,Secondary,,0,0,0,,Then we answer the user question.
+Dialogue: 1,0:02:47.8,0:02:52.0,Secondary,,0,0,0,,So we give the conversation history and the new messages with the relevant product information.
+Dialogue: 1,0:02:52.0,0:02:54.36,Secondary,,0,0,0,,So we get the response.
+Dialogue: 1,0:02:54.36,0:02:56.96,Secondary,,0,0,0,,And then we run this response through the moderation API.
+Dialogue: 1,0:02:56.96,0:03:04.16,Secondary,,0,0,0,,If it's flagged, we tell the user that we can't provide this information.
+Dialogue: 1,0:03:04.16,0:03:06.72,Secondary,,0,0,0,,Maybe we'll say something, "Let me connect you to a human."
+Dialogue: 1,0:03:06.72,0:03:09.32,Secondary,,0,0,0,,And you could take some subsequent step.
+Dialogue: 1,0:03:09.32,0:03:15.56,Secondary,,0,0,0,,And so let's put this all together with a nice UI and try to have a conversation.
+Dialogue: 1,0:03:15.56,0:03:22.20,Secondary,,0,0,0,,So here we have a function that will just accumulate the messages as we interact with the assistant.
+Dialogue: 1,0:03:22.20,0:03:26.96,Secondary,,0,0,0,,And feel free to pause the video to understand in more detail how this works.
+Dialogue: 1,0:03:26.96,0:03:31.16,Secondary,,0,0,0,,And of course, feel free to do the same for the really long process user message function
+Dialogue: 1,0:03:31.16,0:03:33.56,Secondary,,0,0,0,,that we just saw as well.
+Dialogue: 1,0:03:33.56,0:03:40.8,Secondary,,0,0,0,,So now we're going to paste in our code to display the chatbot UI.
+Dialogue: 1,0:03:40.8,0:03:46.80,Secondary,,0,0,0,,So if we run this, now let's try and have a conversation with the customer service assistant.
+Dialogue: 1,0:03:46.80,0:03:54.20,Secondary,,0,0,0,,So let's ask, "What TVs do you have?"
+Dialogue: 1,0:03:54.20,0:04:00.84,Secondary,,0,0,0,,And under the hood, the assistant is going through all of the steps in the process user message function.
+Dialogue: 1,0:04:00.84,0:04:03.96,Secondary,,0,0,0,,So it's listed a variety of different TVs.
+Dialogue: 1,0:04:03.96,0:04:08.44,Secondary,,0,0,0,,So now let's ask, "Which is the cheapest?"
+Dialogue: 1,0:04:08.44,0:04:20.36,Secondary,,0,0,0,,Again, it's going through all the same steps, but this time it's passing the conversation history as well into the prompts.
+Dialogue: 1,0:04:20.36,0:04:26.92,Secondary,,0,0,0,,Okay, so it's telling us that this speaker is the cheapest TV-related product we have.
+Dialogue: 1,0:04:26.92,0:04:27.92,Secondary,,0,0,0,,Interesting.
+Dialogue: 1,0:04:28.0,0:04:29.84,Secondary,,0,0,0,,Let's see what the most expensive is.
+Dialogue: 1,0:04:29.84,0:04:40.80,Secondary,,0,0,0,,So the most expensive TV is the Cineview 8K TV.
+Dialogue: 1,0:04:40.80,0:04:43.36,Secondary,,0,0,0,,So let's ask for more information about it.
+Dialogue: 1,0:04:43.36,0:04:46.60,Secondary,,0,0,0,,Tell me more about it.
+Dialogue: 1,0:04:46.60,0:04:54.80,Secondary,,0,0,0,,And so we've received some more information about this television.
+Dialogue: 1,0:04:54.80,0:05:00.40,Secondary,,0,0,0,,So in this example, we've combined the techniques we've learned throughout the course to create
+Dialogue: 1,0:05:00.40,0:05:05.64,Secondary,,0,0,0,,a comprehensive system with a chain of steps that evaluates user inputs, processes them,
+Dialogue: 1,0:05:05.64,0:05:07.56,Secondary,,0,0,0,,and then checks the output.
+Dialogue: 1,0:05:07.56,0:05:10.84,Secondary,,0,0,0,,By monitoring the quality of the system across a larger number of inputs,
+Dialogue: 1,0:05:10.85,0:05:15.24,Secondary,,0,0,0,,you can alter the steps and improve the overall performance of your system.
+Dialogue: 1,0:05:15.24,0:05:19.8,Secondary,,0,0,0,,Maybe we might find that our prompts could be better for some of the steps.
+Dialogue: 1,0:05:19.8,0:05:21.36,Secondary,,0,0,0,,Maybe some of the steps aren't even necessary.
+Dialogue: 1,0:05:21.36,0:05:24.96,Secondary,,0,0,0,,You will find a better retrieval method, and so on.
+Dialogue: 1,0:05:24.96,0:05:26.16,Secondary,,0,0,0,,We'll discuss this more in the next video.
+Dialogue: 1,0:00:05.0,0:00:08.16,Default,,0,0,0,,在这个视频中，我们将把前面几个视频\N中学到的所有知识整合在一起，创建
+Dialogue: 1,0:00:08.16,0:00:11.20,Default,,0,0,0,,一个端到端的客户服务助手示例。
+Dialogue: 1,0:00:11.20,0:00:12.52,Default,,0,0,0,,我们将执行以下步骤：
+Dialogue: 1,0:00:12.52,0:00:16.0,Default,,0,0,0,,首先，我们会检查输入内容，看\N是否触发了内容审核 API。
+Dialogue: 1,0:00:16.0,0:00:20.0,Default,,0,0,0,,其次，如果没有，我们将提取产品列表。
+Dialogue: 1,0:00:20.0,0:00:23.28,Default,,0,0,0,,第三，如果找到了产品，我们会尝试查找它们。
+Dialogue: 1,0:00:23.28,0:00:26.88,Default,,0,0,0,,第四，我们将用模型回答用户的问题。
+Dialogue: 1,0:00:26.88,0:00:31.8,Default,,0,0,0,,最后，我们会将答案通过内容审核 API检查。
+Dialogue: 1,0:00:31.8,0:00:34.76,Default,,0,0,0,,如果没有被标记有问题，我\N们会将答案返回给用户。
+Dialogue: 1,0:00:34.76,0:00:36.82,Default,,0,0,0,,我们已经有了相关设置。
+Dialogue: 1,0:00:36.82,0:00:39.32,Default,,0,0,0,,这里新增了一个额外的引用。
+Dialogue: 1,0:00:39.32,0:00:47.24,Default,,0,0,0,,这是一个用于聊天机器人界面的Python包。
+Dialogue: 1,0:00:47.24,0:00:51.76,Default,,0,0,0,,我要粘贴一个处理用户消息的函数。
+Dialogue: 1,0:00:51.76,0:00:58.96,Default,,0,0,0,,实际上，我先运行一个例子，然\N后我们再讨论这个函数。
+Dialogue: 1,0:00:58.96,0:01:01.92,Default,,0,0,0,,这是一段我们一直在使用的用户输入：
+Dialogue: 1,0:01:01.92,0:01:05.4,Default,,0,0,0,,“告诉我关于SmartX pro手机和相机的信息。
+Dialogue: 1,0:01:05.4,0:01:06.80,Default,,0,0,0,,还告诉我关于电视的信息。”
+Dialogue: 1,0:01:06.80,0:01:07.80,Default,,0,0,0,,那我们来运行这个。
+Dialogue: 1,0:01:07.80,0:01:12.64,Default,,0,0,0,,首先，我们来运行这个。
+Dialogue: 1,0:01:12.64,0:01:20.68,Default,,0,0,0,,正如你所看到的，我们正在通过\N这些步骤来回答用户的问题。
+Dialogue: 1,0:01:20.68,0:01:24.56,Default,,0,0,0,,第一步是审核步骤。
+Dialogue: 1,0:01:24.56,0:01:27.48,Default,,0,0,0,,第二步是提取产品列表。
+Dialogue: 1,0:01:27.48,0:01:31.88,Default,,0,0,0,,第三步是查找产品信息。
+Dialogue: 1,0:01:31.88,0:01:39.56,Default,,0,0,0,,现在有了这些产品信息，模\N型正试图回答这个问题，
+Dialogue: 1,0:01:39.56,0:01:46.36,Default,,0,0,0,,正如我们在之前的视频中看到的。
+Dialogue: 1,0:01:46.36,0:01:53.68,Default,,0,0,0,,最后，它再次通过审核API处理返回结果，\N以确保对用户展示的内容是安全的。
+Dialogue: 1,0:01:53.68,0:01:58.12,Default,,0,0,0,,这就是我们现在熟悉的返回结果。
+Dialogue: 1,0:01:58.12,0:02:01.80,Default,,0,0,0,,让我们浏览一下代码看这里发生了什么。
+Dialogue: 1,0:02:01.80,0:02:09.32,Default,,0,0,0,,有一个辅助函数process_user_message。
+Dialogue: 1,0:02:09.32,0:02:16.64,Default,,0,0,0,,它接收用户输入，即当前消息，以及\N到目前为止的所有消息数组。
+Dialogue: 1,0:02:16.64,0:02:18.92,Default,,0,0,0,,这就是我们构建聊天机器人界面的时候。
+Dialogue: 1,0:02:18.92,0:02:23.28,Default,,0,0,0,,首先，检查输入是否触发了审查API。
+Dialogue: 1,0:02:23.28,0:02:25.60,Default,,0,0,0,,我们在之前的视频中讲过这个。
+Dialogue: 1,0:02:25.60,0:02:32.24,Default,,0,0,0,,如果输入被标记，那么告诉用\N户我们无法处理这个请求。
+Dialogue: 1,0:02:32.24,0:02:37.84,Default,,0,0,0,,如果没有被标记，尝试提取产品列\N表，就像在之前的视频中那样。
+Dialogue: 1,0:02:37.84,0:02:40.80,Default,,0,0,0,,然后尝试查找产品。
+Dialogue: 1,0:02:40.80,0:02:45.32,Default,,0,0,0,,在这种情况下，如果没有找到产\N品，这将只是一个空字符串。
+Dialogue: 1,0:02:45.32,0:02:47.8,Default,,0,0,0,,然后我们回答用户的问题。
+Dialogue: 1,0:02:47.8,0:02:52.0,Default,,0,0,0,,我们提供了对话历史和带有\N相关产品信息的新消息。
+Dialogue: 1,0:02:52.0,0:02:54.36,Default,,0,0,0,,我们得到了返回结果。
+Dialogue: 1,0:02:54.36,0:02:56.96,Default,,0,0,0,,然后我们将这个返回结果通过审核 API检查。
+Dialogue: 1,0:02:56.96,0:03:04.16,Default,,0,0,0,,如果被标记，我们会告诉用户\N我们无法提供这个信息。
+Dialogue: 1,0:03:04.16,0:03:06.72,Default,,0,0,0,,也许我们会说一些类似，“让\N我帮你转接人工服务。”
+Dialogue: 1,0:03:06.72,0:03:09.32,Default,,0,0,0,,然后你可以采取一些后续步骤。
+Dialogue: 1,0:03:09.32,0:03:15.56,Default,,0,0,0,,让我们用一个漂亮的界面把这些都\N整合起来，试着进行一次对话。
+Dialogue: 1,0:03:15.56,0:03:22.20,Default,,0,0,0,,这里有一个功能，只要我们与助手互\N动，这些消息就会被累积起来。
+Dialogue: 1,0:03:22.20,0:03:26.96,Default,,0,0,0,,请随时暂停视频，以更详细\N地了解这是如何工作的。
+Dialogue: 1,0:03:26.96,0:03:33.56,Default,,0,0,0,,当然，对刚才非常长的处理用户消息功能的那\N部分，您也可以一样随时暂停去详细了解。
+Dialogue: 1,0:03:33.56,0:03:40.8,Default,,0,0,0,,现在我们要粘贴代码来显示聊天机器人界面。
+Dialogue: 1,0:03:40.8,0:03:46.80,Default,,0,0,0,,那么，如果我们运行这个，现在让我\N们尝试和客服助手进行对话。
+Dialogue: 1,0:03:46.80,0:03:54.20,Default,,0,0,0,,那我们问一下：“你们有哪些电视？”
+Dialogue: 1,0:03:54.20,0:04:00.84,Default,,0,0,0,,在后台，助手正在执行处理用\N户消息功能中的所有步骤。
+Dialogue: 1,0:04:00.84,0:04:03.96,Default,,0,0,0,,它列出了各种不同的电视。
+Dialogue: 1,0:04:03.96,0:04:08.44,Default,,0,0,0,,现在我们再问：“哪个最便宜？”
+Dialogue: 1,0:04:08.44,0:04:20.36,Default,,0,0,0,,同样，它还在执行所有相同的步骤，但这次\N它还将历史会话一起传递到Prompt中。
+Dialogue: 1,0:04:20.36,0:04:26.92,Default,,0,0,0,,好的，它告诉我们这个扬声器是我们拥\N有的最便宜的与电视相关的产品。
+Dialogue: 1,0:04:26.92,0:04:27.92,Default,,0,0,0,,有意思。
+Dialogue: 1,0:04:28.0,0:04:29.84,Default,,0,0,0,,我们看看最贵的是什么。
+Dialogue: 1,0:04:29.84,0:04:40.80,Default,,0,0,0,,最贵的电视是 Cineview 8K 电视。
+Dialogue: 1,0:04:40.80,0:04:43.36,Default,,0,0,0,,那我们来了解更多关于它的信息吧。
+Dialogue: 1,0:04:43.36,0:04:46.60,Default,,0,0,0,,跟我说说更多关于它的事。
+Dialogue: 1,0:04:46.60,0:04:54.80,Default,,0,0,0,,我们收到了关于这台电视的更多信息。
+Dialogue: 1,0:04:54.80,0:05:00.40,Default,,0,0,0,,在这个例子中，我们将在课程中\N学到的技巧结合起来，创建了
+Dialogue: 1,0:05:00.40,0:05:05.64,Default,,0,0,0,,一个包含一系列步骤的综合系统，\N用于评估用户输入、处理它们，
+Dialogue: 1,0:05:05.64,0:05:07.56,Default,,0,0,0,,然后检查输出。
+Dialogue: 1,0:05:07.56,0:05:10.84,Default,,0,0,0,,通过监控更多输入的系统质量，
+Dialogue: 1,0:05:10.85,0:05:15.24,Default,,0,0,0,,你可以改变步骤，提高系统的整体性能。
+Dialogue: 1,0:05:15.24,0:05:19.8,Default,,0,0,0,,也许会发现我们的Prompt在某\N些步骤上可以做得更好。
+Dialogue: 1,0:05:19.8,0:05:21.36,Default,,0,0,0,,也许有些步骤甚至不需要。
+Dialogue: 1,0:05:21.36,0:05:24.96,Default,,0,0,0,,你会找到更好的检索方法，等等。
+Dialogue: 1,0:05:24.96,0:05:26.16,Default,,0,0,0,,我们将在下一个视频中进一步讨论这个问题。

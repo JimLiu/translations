@@ -1,0 +1,599 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 920
+          },
+          "text": "I'm thrilled to present to you this short course on diffusion models taught by Sharon Zhou."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 0
+          },
+          "text": "Mid-journey, stable diffusion, DALL-E, and others are able to generate an image, sometimes a beautiful image, given only a prompt."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 760
+          },
+          "text": "How do these algorithms work?"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 444
+          },
+          "text": "You may have heard of a vague description of these algorithms learning to subtract noise to generate an image,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 644
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 329
+          },
+          "text": "but in this short course, Sharon will step you through a concrete implementation of image generation using a diffusion model"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 529
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 320
+          },
+          "text": "so that you understand the technical details of exactly how it works."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 800
+          },
+          "text": "Cool, thanks Andrew."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 800
+          },
+          "text": "In this course, you'll be learning about the current state and capabilities of diffusion models used today."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 440
+          },
+          "text": "You'll start by understanding the sampling process, starting with pure noise and progressively refining it to obtain a final nice-looking image."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 0,
+            "milliseconds": 80
+          },
+          "text": "You'll build the necessary programming skills to train a diffusion model effectively."
+        }
+      ],
+      "source": [
+        "I'm thrilled to present to you this short course on diffusion models taught by Sharon Zhou.",
+        "Midjourney, Stable Diffusion, DALL-E, and others are able to generate an image, sometimes a beautiful image, given only a prompt.",
+        "How do these algorithms work?",
+        "You may have heard of a vague description of these algorithms learning to subtract noise to generate an image,",
+        "but in this short course, Sharon will step you through a concrete implementation of image generation using a diffusion model",
+        "so that you understand the technical details of exactly how it works.",
+        "Cool, thanks Andrew.",
+        "In this course, you'll be learning about the current state and capabilities of diffusion models used today.",
+        "You'll start by understanding the sampling process, starting with pure noise and progressively refining it to obtain a final nice-looking image.",
+        "You'll build the necessary programming skills to train a diffusion model effectively."
+      ],
+      "result": [
+        "我很高兴为您介绍这个由Sharon Zhou\\N来主讲的扩散模型（Diffusion Models）短期课程。",
+        "Midjourney，Stable Diffusion、DALL-E等这类产品，\\N能够仅通过一个提示（Prompt）生成图像，甚至有时生成的图像非常漂亮。",
+        "这些算法是如何工作的？",
+        "你可能听过这些算法学会减去噪声来生成图像的模糊描述，",
+        "在这个短期课程中，Sharon将带领你了解\\N使用扩散模型进行图像生成的具体实现，",
+        "这样你就能明白它究竟是如何工作的。",
+        "太酷了，谢谢Andrew。",
+        "在这门课程中，你将了解到目前扩散模型的现状和能力。",
+        "你将从了解采样过程开始，从纯噪声开始，\\N逐步优化，最终获得一个好看的图像。",
+        "你将学会训练扩散模型所需的编程技能。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 0,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 200
+          },
+          "text": "You'll learn how to build a neural network that can predict noise in an image."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 160
+          },
+          "text": "You'll add context to the model so that you can control what you want it to generate."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 520
+          },
+          "text": "And finally, by implementing advanced algorithms, you'll learn how to accelerate the sampling process by a factor of 10."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 14,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 340
+          },
+          "text": "This is an intermediate to advanced course."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "text": "We assume you're familiar with Python and basic neural network training."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 560
+          },
+          "text": "So for example, we'll assume you know what backpropagation is."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 480
+          },
+          "text": "We'll use PyTorch throughout."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 820
+          },
+          "text": "But if you're familiar with other machine learning frameworks, such as TensorFlow, you should be able to follow along just fine."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 42,
+            "milliseconds": 620
+          },
+          "text": "And so the running example we'll use for this short course will be generating 16 by 16 sprites, like those little 8-bit characters used in video games."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 42,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 400
+          },
+          "text": "We chose this example so that it's feasible for you to not just go through the notebooks,"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 40
+          },
+          "text": "but also run them yourself to generate cute sprites yourself right there in that Jupyter Notebook."
+        }
+      ],
+      "source": [
+        "You'll learn how to build a neural network that can predict noise in an image.",
+        "You'll add context to the model so that you can control what you want it to generate.",
+        "And finally, by implementing advanced algorithms, you'll learn how to accelerate the sampling process by a factor of 10.",
+        "This is an intermediate to advanced course.",
+        "We assume you're familiar with Python and basic neural network training.",
+        "So for example, we'll assume you know what backpropagation is.",
+        "We'll use PyTorch throughout.",
+        "But if you're familiar with other machine learning frameworks, such as TensorFlow, you should be able to follow along just fine.",
+        "And so the running example we'll use for this short course will be generating 16 by 16 sprites, like those little 8-bit characters used in video games.",
+        "We chose this example so that it's feasible for you to not just go through the notebooks,",
+        "but also run them yourself to generate cute sprites yourself right there in that Jupyter Notebook."
+      ],
+      "result": [
+        "你将学会如何构建一个能预测图像中噪声的神经网络。",
+        "你将为模型添加上下文，以便你可以控制想要生成的内容。",
+        "最后，通过实现先进的算法，你将学会如何将采样过程加速10倍。",
+        "这是一个中级到高级的课程。",
+        "我们假设你熟悉Python和基本的神经网络训练。",
+        "所以举个例子，我们会假设你知道\\N什么是反向传播（Backpropagation）。",
+        "我们将在整个过程中使用PyTorch。",
+        "但是，如果你熟悉其他机器学习框架，\\N如TensorFlow，你应该也能跟上进度。",
+        "我们在这个短期课程中使用的实例将是生成16x16的像素精灵，\\N就像那些用在视频游戏中小小的像素角色。",
+        "我们选择这个例子是为了让你不仅能浏览 Notebook，",
+        "还能亲自动手运行它们，\\N以便在 Jupyter Notebook 中生成可爱的像素精灵。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 54,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 200
+          },
+          "text": "Diffusion models are becoming a foundation for cutting-edge research in the life sciences and other sectors too."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 560
+          },
+          "text": "For example, generating molecules for drug discovery."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 146
+          },
+          "text": "So when you understand the technical details of diffusion models,"
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 7,
+            "milliseconds": 147
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 720
+          },
+          "text": "you'll also be in a better position to understand and perhaps apply such models yourself."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "text": "Many people worked together to build this short course."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 360
+          },
+          "text": "I want to thank Aaron Lou and Mehmet Giray Ogut for their significant contributions."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 200
+          },
+          "text": "And on the DeepLearning.ai site, also Geoff Ladwig and Eddy Shyu."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 800
+          },
+          "text": "So with that, let me hand it over to Sharon, and I hope you enjoy the course."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 800
+          },
+          "text": "Great."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 35,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 440
+          },
+          "text": "Let's get started."
+        }
+      ],
+      "source": [
+        "Diffusion models are becoming a foundation for cutting-edge research in the life sciences and other sectors too.",
+        "For example, generating molecules for drug discovery.",
+        "So when you understand the technical details of diffusion models,",
+        "you'll also be in a better position to understand and perhaps apply such models yourself.",
+        "Many people worked together to build this short course.",
+        "I want to thank Aaron Lou and Mehmet Giray Ogut for their significant contributions.",
+        "And on the DeepLearning.ai site, also Geoff Ladwig and Eddy Shyu.",
+        "So with that, let me hand it over to Sharon, and I hope you enjoy the course.",
+        "Great.",
+        "Let's get started."
+      ],
+      "result": [
+        "扩散模型正成为生命科学等领域尖端研究的基础。",
+        "比如，生成用于药物发现的分子。",
+        "所以，当你理解扩散模型的技术细节时，",
+        "你也会更好地理解并可能自己应用这些模型。",
+        "很多人共同努力创建了这个短期课程。",
+        "我要感谢Aaron Lou和Mehmet Giray Ogut的重要贡献。",
+        "还有在DeepLearning.ai网站上的\\NGeoff Ladwig和Eddy Shyu。",
+        "那么，让我把剩下的时间交给Sharon，希望你能喜欢这门课程。",
+        "太好了。",
+        "我们开始吧。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/How Diffusion Models Work/DiffusionModels_Intro_v02.srt",
+  "ouputBasePath": "input/How Diffusion Models Work/DiffusionModels_Intro_v02",
+  "totalCost": 0.07275,
+  "translationPath": "input/How Diffusion Models Work/DiffusionModels_Intro_v02/translation.json"
+}

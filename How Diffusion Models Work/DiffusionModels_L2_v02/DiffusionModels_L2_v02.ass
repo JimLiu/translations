@@ -1,0 +1,206 @@
+[Script Info]
+
+Title: DiffusionModels_L2_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,方正准圆简体,16,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Arial,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:12.0,Secondary,,0,0,0,,In this video, we'll talk about sampling, we'll get into the details of it and how it works across multiple different iterations.
+Dialogue: 0,0:00:12.0,0:00:16.95,Secondary,,0,0,0,,So before we talk about how to train this neural network, let's talk about sampling,
+Dialogue: 0,0:00:16.96,0:00:21.0,Secondary,,0,0,0,,or what we do with the neural network after it's trained at inference time.
+Dialogue: 0,0:00:21.0,0:00:23.40,Secondary,,0,0,0,,So what happens is you have that noise sample,
+Dialogue: 0,0:00:23.41,0:00:28.0,Secondary,,0,0,0,,you put it through your trained neural network that has understood what a sprite kind of looks like,
+Dialogue: 0,0:00:28.0,0:00:30.35,Secondary,,0,0,0,,and what it does is it predicts noise.
+Dialogue: 0,0:00:30.55,0:00:33.0,Secondary,,0,0,0,,It predicts noise as opposed to the sprite.
+Dialogue: 0,0:00:33.0,0:00:39.0,Secondary,,0,0,0,,And then we subtract that predicted noise from the noise sample to get something a little bit more sprite-like.
+Dialogue: 0,0:00:39.0,0:00:44.0,Secondary,,0,0,0,,Now realistically, that is just a prediction of noise, and it doesn't fully remove all the noise,
+Dialogue: 0,0:00:44.0,0:00:47.0,Secondary,,0,0,0,,so you need multiple steps to get high-quality samples.
+Dialogue: 0,0:00:47.0,0:00:52.0,Secondary,,0,0,0,,That's after 500 iterations, we're able to get something that looks very sprite-like.
+Dialogue: 0,0:00:52.0,0:00:55.0,Secondary,,0,0,0,,So now let's step through this algorithmically.
+Dialogue: 0,0:00:55.0,0:01:02.0,Secondary,,0,0,0,,So first, you can sample a random noise sample, and that was that original noise you had in the beginning.
+Dialogue: 0,0:01:02.0,0:01:06.0,Secondary,,0,0,0,,And then you want to step through time, and actually you're stepping backwards through time,
+Dialogue: 0,0:01:06.0,0:01:12.0,Secondary,,0,0,0,,all the way from the last iteration, 500, where it's completely noisy, all the way down to 1.
+Dialogue: 0,0:01:12.0,0:01:15.0,Secondary,,0,0,0,,And just think of your ink drop, you're actually going backwards in time.
+Dialogue: 0,0:01:15.0,0:01:22.0,Secondary,,0,0,0,,It's fully diffused initially, and then you're going back all the way up to when it was first dropped into the water.
+Dialogue: 0,0:01:22.0,0:01:28.0,Secondary,,0,0,0,,Next, you'll sample some extra noise. We'll actually touch on this in a minute, so don't worry about this just now.
+Dialogue: 0,0:01:28.0,0:01:35.0,Secondary,,0,0,0,,Here is where you actually pass that original noise, that sample, back into your neural network, and you get some predicted noise.
+Dialogue: 0,0:01:35.0,0:01:43.0,Secondary,,0,0,0,,And this predicted noise is noise that the trained neural network wants to subtract from the original noise to get something that looks more sprite-like.
+Dialogue: 0,0:01:43.0,0:01:51.0,Secondary,,0,0,0,,And finally, there's a sampling algorithm called DDPM, which stands for Denoising Diffusion Probabilistic Models,
+Dialogue: 0,0:01:51.0,0:01:57.0,Secondary,,0,0,0,,and it's a paper written by Jonathan Ho, Ajay Jain, and one of my good friends, Pieter Abbeel.
+Dialogue: 0,0:01:57.0,0:02:01.0,Secondary,,0,0,0,,And this sampling algorithm essentially is able to get a few numbers for scale.
+Dialogue: 0,0:02:01.0,0:02:10.0,Secondary,,0,0,0,,That's not super important, but what is important is that this is where you are actually subtracting out that predicted noise from the original noise sample.
+Dialogue: 0,0:02:10.0,0:02:14.0,Secondary,,0,0,0,,And again, you're adding that little extra noise back in, which we'll return to in a moment.
+Dialogue: 0,0:02:14.0,0:02:15.99,Secondary,,0,0,0,,All right, let's jump to the notebook.
+Dialogue: 0,0:02:15.99,0:02:18.0,Secondary,,0,0,0,,So you'll see here some setup code.
+Dialogue: 0,0:02:18.0,0:02:24.0,Secondary,,0,0,0,,I think all that's really important here is that you're importing PyTorch and a lot of utilities from PyTorch.
+Dialogue: 0,0:02:24.0,0:02:29.0,Secondary,,0,0,0,,We also import some helper functions here that we had written for the neural network.
+Dialogue: 0,0:02:29.0,0:02:34.0,Secondary,,0,0,0,,So I'm just going to hit Shift+Enter to run that cell so that we import everything.
+Dialogue: 0,0:02:34.0,0:02:37.0,Secondary,,0,0,0,,And now here's setting up the neural network, which we're going to use for sampling.
+Dialogue: 0,0:02:37.0,0:02:40.0,Secondary,,0,0,0,,We'll go into the details of this later.
+Dialogue: 0,0:02:40.0,0:02:46.0,Secondary,,0,0,0,,So I'm just going to run this, and no need to really follow everything that's going on there just yet.
+Dialogue: 0,0:02:46.0,0:02:51.0,Secondary,,0,0,0,,Here we're setting up some hyperparameters, and that includes those time steps that you've seen there.
+Dialogue: 0,0:02:51.0,0:02:53.0,Secondary,,0,0,0,,So that's the 500 time steps.
+Dialogue: 0,0:02:53.0,0:02:59.0,Secondary,,0,0,0,,Beta 1 and Beta 2 are just some hyperparameters for DDPM.
+Dialogue: 0,0:02:59.0,0:03:03.0,Secondary,,0,0,0,,And here you can also see the height. This is the 16 by 16 image.
+Dialogue: 0,0:03:03.0,0:03:07.0,Secondary,,0,0,0,,And again, it's just a square image. So I'm going to run this Shift+Enter again.
+Dialogue: 0,0:03:07.0,0:03:10.0,Secondary,,0,0,0,,And this is just a noise schedule defined in the DDPM paper.
+Dialogue: 0,0:03:10.0,0:03:17.0,Secondary,,0,0,0,,And all a noise schedule is, is it determines what level of noise to apply to the image at a certain time step.
+Dialogue: 0,0:03:17.0,0:03:28.0,Secondary,,0,0,0,,So this part is just constructing some of the parameters for the DDPM algorithm that you remember, those scaling factors, those scaling values, S1, S2, S3.
+Dialogue: 0,0:03:28.0,0:03:34.0,Secondary,,0,0,0,,That's being computed here in the noise schedule, and it's called a schedule because it is dependent on the time step.
+Dialogue: 0,0:03:34.0,0:03:41.0,Secondary,,0,0,0,,Remember, you're looking through 500 time steps because you're going through those 500 iterations that you see here of slowly removing noise.
+Dialogue: 0,0:03:41.0,0:03:43.6,Secondary,,0,0,0,,So I'm just going to run that here.
+Dialogue: 0,0:03:43.6,0:03:45.0,Secondary,,0,0,0,,So just dependent on that time step that we're on.
+Dialogue: 0,0:03:45.0,0:03:51.0,Secondary,,0,0,0,,Next, I'm just going to instantiate the model, that unit, which we will come back to.
+Dialogue: 0,0:03:51.0,0:03:56.0,Secondary,,0,0,0,,And then here is the sampling algorithm, the denoise add noise that you had seen previously,
+Dialogue: 0,0:03:56.0,0:04:01.0,Secondary,,0,0,0,,which is really the main important part is that it is removing the predicted noise,
+Dialogue: 0,0:04:01.0,0:04:07.0,Secondary,,0,0,0,,which is what the model thinks is not a sprite, from the original noise.
+Dialogue: 0,0:04:07.0,0:04:12.0,Secondary,,0,0,0,,So we can run that Shift+Enter to load that model.
+Dialogue: 0,0:04:12.0,0:04:17.0,Secondary,,0,0,0,,And then here is what we had just stepped through, that sampling algorithm.
+Dialogue: 0,0:04:17.0,0:04:22.0,Secondary,,0,0,0,,And specifically here is running the model to get the predicted noise.
+Dialogue: 0,0:04:22.0,0:04:24.0,Secondary,,0,0,0,,And then running the denoise.
+Dialogue: 0,0:04:24.0,0:04:28.0,Secondary,,0,0,0,,Now let's visualize what sampling looks like over time.
+Dialogue: 0,0:04:28.0,0:04:32.0,Secondary,,0,0,0,,This may take a few minutes depending on what kind of hardware you're running on,
+Dialogue: 0,0:04:32.0,0:04:34.0,Secondary,,0,0,0,,and we're going to speed this up in the video.
+Dialogue: 0,0:04:34.0,0:04:38.0,Secondary,,0,0,0,,But in the next video, you'll also see a more efficient sampling technique as well.
+Dialogue: 0,0:04:38.0,0:04:41.0,Secondary,,0,0,0,,All right, let's see it in action.
+Dialogue: 0,0:04:41.0,0:04:44.0,Secondary,,0,0,0,,Wow, look at those sprites.
+Dialogue: 0,0:04:44.0,0:04:47.0,Secondary,,0,0,0,,So you should definitely pause and try these yourself.
+Dialogue: 0,0:04:47.0,0:04:49.0,Secondary,,0,0,0,,All right, so there's one more extra detail.
+Dialogue: 0,0:04:49.0,0:04:53.0,Secondary,,0,0,0,,So right now you have your neural network that's predicting noise from your original noise sample.
+Dialogue: 0,0:04:53.0,0:04:57.0,Secondary,,0,0,0,,You subtract it out. Great. And you get something a little bit more sprite-like.
+Dialogue: 0,0:04:57.0,0:05:04.0,Secondary,,0,0,0,,But the thing is, this neural network expects this noisy sample, this normally distributed noisy sample, as input.
+Dialogue: 0,0:05:04.0,0:05:09.0,Secondary,,0,0,0,,And once you've denoised it like this, it's no longer distributed in that way.
+Dialogue: 0,0:05:09.0,0:05:13.3,Secondary,,0,0,0,,So actually what you have to do after each step and before each next step
+Dialogue: 0,0:05:13.3,0:05:17.6,Secondary,,0,0,0,,is to add in additional noise that's scaled based on what time step you're at
+Dialogue: 0,0:05:17.6,0:05:24.0,Secondary,,0,0,0,,to get passed in as the next sample, the next iteration into your trained neural network.
+Dialogue: 0,0:05:24.0,0:05:28.4,Secondary,,0,0,0,,And empirically, this actually helps stabilize the neural network
+Dialogue: 0,0:05:28.4,0:05:31.46,Secondary,,0,0,0,,so it doesn't collapse to something that's close to the average of the data set,
+Dialogue: 0,0:05:31.46,0:05:34.0,Secondary,,0,0,0,,meaning it doesn't look like this thing on the left.
+Dialogue: 0,0:05:34.0,0:05:40.0,Secondary,,0,0,0,,When we don't add that noise back in, the neural network just produces these average-looking blobs of sprites,
+Dialogue: 0,0:05:40.0,0:05:45.0,Secondary,,0,0,0,,versus when we go add it back in, it actually is able to produce these beautiful images of sprites.
+Dialogue: 0,0:05:45.0,0:05:48.0,Secondary,,0,0,0,,So here in the algorithm is where this happens.
+Dialogue: 0,0:05:48.0,0:05:54.0,Secondary,,0,0,0,,So we actually sample a random noise again at each time step based on the time step.
+Dialogue: 0,0:05:54.0,0:06:00.0,Secondary,,0,0,0,,And then down here, we actually add it back in with that scaling factor S3.
+Dialogue: 0,0:06:00.0,0:06:02.0,Secondary,,0,0,0,,So now let's take a look at the notebook.
+Dialogue: 0,0:06:02.0,0:06:07.0,Secondary,,0,0,0,,So now in this function denoise add noise, we are talking about the add noise part.
+Dialogue: 0,0:06:07.0,0:06:12.0,Secondary,,0,0,0,,And what that is, is this Z that you randomly sample, that's that extra noise.
+Dialogue: 0,0:06:12.0,0:06:18.0,Secondary,,0,0,0,,And you scale it by some factor, and then you actually do add it back in.
+Dialogue: 0,0:06:18.0,0:06:22.0,Secondary,,0,0,0,,And again, that all happens down here in your main algorithm.
+Dialogue: 0,0:06:22.0,0:06:25.0,Secondary,,0,0,0,,All right, so let's pick up where we left off then.
+Dialogue: 0,0:06:25.0,0:06:33.0,Secondary,,0,0,0,,So for the incorrect way where we don't add the noise back in, we actually just set Z to 0, and we pass that in.
+Dialogue: 0,0:06:33.0,0:06:39.0,Secondary,,0,0,0,,It only subtracts the predicted noise from the original noise, and it doesn't add any extra noise back in.
+Dialogue: 0,0:06:39.0,0:06:43.0,Secondary,,0,0,0,,And let's run this with Shift+Enter.
+Dialogue: 0,0:06:43.0,0:06:46.0,Secondary,,0,0,0,,And again, this will take a couple minutes.
+Dialogue: 0,0:06:46.0,0:06:52.0,Secondary,,0,0,0,,All right, so let's take a look at what this does instead.
+Dialogue: 0,0:06:52.0,0:06:56.0,Secondary,,0,0,0,,Oh no, blobs!
+Dialogue: 0,0:06:56.0,0:06:58.0,Secondary,,0,0,0,,So this is obviously not what you want.
+Dialogue: 0,0:06:58.0,0:07:01.0,Secondary,,0,0,0,,So make sure you add that extra noise back in.
+Dialogue: 0,0:07:01.0,0:07:07.0,Secondary,,0,0,0,,And so you should definitely pause and try these yourself and compare it to the other method where you do add that extra noise.
+Dialogue: 0,0:07:07.0,0:07:13.0,Secondary,,0,0,0,,And in the next video, we're going to cover that neural network architecture, that U-Net.
+Dialogue: 0,0:00:05.0,0:00:12.0,Default,,0,0,0,,在这个视频里，我们将讨论采样，\N我们将深入了解它的细节以及\N它在多个不同迭代中如何工作。
+Dialogue: 0,0:00:12.0,0:00:16.95,Default,,0,0,0,,在我们讨论如何训练\N这个神经网络之前，先来谈谈采样，
+Dialogue: 0,0:00:16.96,0:00:21.0,Default,,0,0,0,,也就是我们在神经网络\N训练完成后，在推理时会做什么。
+Dialogue: 0,0:00:21.0,0:00:23.40,Default,,0,0,0,,你会有一个噪声样本，
+Dialogue: 0,0:00:23.41,0:00:28.0,Default,,0,0,0,,把它放进已经理解了\N游戏角色样子的训练好的神经网络里，
+Dialogue: 0,0:00:28.0,0:00:30.35,Default,,0,0,0,,然后它预测噪声。
+Dialogue: 0,0:00:30.55,0:00:33.0,Default,,0,0,0,,它预测噪声，而不是游戏角色。
+Dialogue: 0,0:00:33.0,0:00:39.0,Default,,0,0,0,,然后我们从噪声样本中减去预测的噪声，\N得到的东西就更像游戏角色一些。
+Dialogue: 0,0:00:39.0,0:00:44.0,Default,,0,0,0,,现实情况是，这只是噪声的预测，\N并没有完全消除所有的噪声，
+Dialogue: 0,0:00:44.0,0:00:47.0,Default,,0,0,0,,你需要多次迭代才能得到高质量的样本。
+Dialogue: 0,0:00:47.0,0:00:52.0,Default,,0,0,0,,经过500次迭代后，\N我们得到了非常像游戏角色的图像。
+Dialogue: 0,0:00:52.0,0:00:55.0,Default,,0,0,0,,现在让我们逐步了解这个算法。
+Dialogue: 0,0:00:55.0,0:01:02.0,Default,,0,0,0,,首先，你可以采样一个\N随机噪声样本，这就是你一开始有的原始噪声。
+Dialogue: 0,0:01:02.0,0:01:06.0,Default,,0,0,0,,然后你要逐步穿越时间，\N实际上就像在时光倒流，
+Dialogue: 0,0:01:06.0,0:01:12.0,Default,,0,0,0,,从最后一次迭代，第500次，\N完全噪声的状态，一直倒退到第1次。
+Dialogue: 0,0:01:12.0,0:01:15.0,Default,,0,0,0,,想象一下上一部视频中讲的\N墨水滴的例子，我们让时光倒流。
+Dialogue: 0,0:01:15.0,0:01:22.0,Default,,0,0,0,,一开始它是完全扩散的，然后\N你一直倒退回到它刚刚滴入水中的时候。
+Dialogue: 0,0:01:22.0,0:01:28.0,Default,,0,0,0,,接下来，你需要采样一些额外的噪声。\N我们稍后会详细讲解这个，所以现在不用担心。
+Dialogue: 0,0:01:28.0,0:01:35.0,Default,,0,0,0,,这里你真正要做的是把那个\N原始的噪声，那个样本，再次输入\N你的神经网络，然后你得到一些预测的噪声。
+Dialogue: 0,0:01:35.0,0:01:43.0,Default,,0,0,0,,这个预测的噪声就是\N训练过的神经网络想从原始噪声中\N减去的，从而得到更像游戏角色的图像。
+Dialogue: 0,0:01:43.0,0:01:51.0,Default,,0,0,0,,最后，有一个叫做DDPM的采样算法，\N也就是噪扩散概率模型（Denoising Diffusion Probabilistic Models），
+Dialogue: 0,0:01:51.0,0:01:57.0,Default,,0,0,0,,这是由Jonathan Ho、Ajay Jain和我的\N好朋友Pieter Abbeel共同撰写的一篇论文。
+Dialogue: 0,0:01:57.0,0:02:01.0,Default,,0,0,0,,这个采样算法基本上能够得到一些规模的数字。
+Dialogue: 0,0:02:01.0,0:02:10.0,Default,,0,0,0,,那不是非常重要，但\N重要的是这里你实际上是\N在从原始噪声样本中减去预测的噪声。
+Dialogue: 0,0:02:10.0,0:02:14.0,Default,,0,0,0,,而且，你还要再加回那一点\N额外的噪声，我们稍后会回到这一点。
+Dialogue: 0,0:02:14.0,0:02:15.99,Default,,0,0,0,,好了，让我们回到Notebook。
+Dialogue: 0,0:02:15.99,0:02:18.0,Default,,0,0,0,,你会看到这里有一些设置代码。
+Dialogue: 0,0:02:18.0,0:02:24.0,Default,,0,0,0,,我认为这里真正重要的是\N你要导入PyTorch和很多PyTorch的实用工具。
+Dialogue: 0,0:02:24.0,0:02:29.0,Default,,0,0,0,,我们还导入了一些为神经网络编写的辅助函数。
+Dialogue: 0,0:02:29.0,0:02:34.0,Default,,0,0,0,,我只需按Shift+Enter运行\N这个单元格，以便我们导入所有内容。
+Dialogue: 0,0:02:34.0,0:02:37.0,Default,,0,0,0,,现在这里我们设置了用于采样的神经网络，
+Dialogue: 0,0:02:37.0,0:02:40.0,Default,,0,0,0,,稍后我们会详细讨论这个。
+Dialogue: 0,0:02:40.0,0:02:46.0,Default,,0,0,0,,我现在就运行它，\N不用刚开始就关注所有细节。
+Dialogue: 0,0:02:46.0,0:02:51.0,Default,,0,0,0,,这里我们设置了一些\N超参数（Hyperparameters），\N包括你在那里看到的那些时间步长。
+Dialogue: 0,0:02:51.0,0:02:53.0,Default,,0,0,0,,就是那500个时间步长。
+Dialogue: 0,0:02:53.0,0:02:59.0,Default,,0,0,0,,Beta 1和Beta 2只是DDPM的一些超参数。
+Dialogue: 0,0:02:59.0,0:03:03.0,Default,,0,0,0,,这里你还可以看到高度。\N这是16乘16的图像。
+Dialogue: 0,0:03:03.0,0:03:07.0,Default,,0,0,0,,再次说明，这只是一个正方形图像。\N我再按Shift+Enter运行。
+Dialogue: 0,0:03:07.0,0:03:10.0,Default,,0,0,0,,这只是DDPM论文中定义的\N噪声调度（Noise Schedule）。
+Dialogue: 0,0:03:10.0,0:03:17.0,Default,,0,0,0,,噪声调度的作用就是\N确定在某个时间步长应用于图像的噪声级别。
+Dialogue: 0,0:03:17.0,0:03:28.0,Default,,0,0,0,,这部分主要是构建 DDPM 算法\N的一些参数，你还记得那些\N缩放因子（Scaling Factors）、\N缩放值（Scaling Values） S1、S2、S3 吧。
+Dialogue: 0,0:03:28.0,0:03:34.0,Default,,0,0,0,,那些在噪声调度（Noise Schedule）中\N被计算，它被称为调度是因为它依赖于时间步长。
+Dialogue: 0,0:03:34.0,0:03:41.0,Default,,0,0,0,,记住，你要看 500 个时间步长，因为\N你要经历这里的 500 次迭代，慢慢去除噪声。
+Dialogue: 0,0:03:41.0,0:03:43.6,Default,,0,0,0,,我现在就运行一下。
+Dialogue: 0,0:03:43.6,0:03:45.0,Default,,0,0,0,,这取决于我们所在的时间步长。
+Dialogue: 0,0:03:45.0,0:03:51.0,Default,,0,0,0,,接下来，我将实例化模型，\N那个单元，我们稍后会回来。
+Dialogue: 0,0:03:51.0,0:03:56.0,Default,,0,0,0,,然后这里就是那个采样算法，\N之前你看到的去噪加噪，
+Dialogue: 0,0:03:56.0,0:04:01.0,Default,,0,0,0,,这真的是最重要的部分，\N因为它正在移除预测的噪声，
+Dialogue: 0,0:04:01.0,0:04:07.0,Default,,0,0,0,,也就是模型认为不是游戏角色的部分，\N从原始噪声中去除。
+Dialogue: 0,0:04:07.0,0:04:12.0,Default,,0,0,0,,我们可以通过 Shift+Enter 来运行以加载模型。
+Dialogue: 0,0:04:12.0,0:04:17.0,Default,,0,0,0,,然后这就是我们刚刚讲过的那个采样算法。
+Dialogue: 0,0:04:17.0,0:04:22.0,Default,,0,0,0,,特别是在这里运行模型以获取预测的噪声。
+Dialogue: 0,0:04:22.0,0:04:24.0,Default,,0,0,0,,然后进行去噪。
+Dialogue: 0,0:04:24.0,0:04:28.0,Default,,0,0,0,,现在让我们看看\N随着时间的推移采样是什么样子的。
+Dialogue: 0,0:04:28.0,0:04:32.0,Default,,0,0,0,,这可能需要几分钟，取决于你用的硬件，
+Dialogue: 0,0:04:32.0,0:04:34.0,Default,,0,0,0,,我们会在视频里加速这个过程。
+Dialogue: 0,0:04:34.0,0:04:38.0,Default,,0,0,0,,但在下一个视频里，\N你还会看到更高效的采样技巧。
+Dialogue: 0,0:04:38.0,0:04:41.0,Default,,0,0,0,,好了，让我们看看实际效果。
+Dialogue: 0,0:04:41.0,0:04:44.0,Default,,0,0,0,,哇，看看这些游戏图像。
+Dialogue: 0,0:04:44.0,0:04:47.0,Default,,0,0,0,,你绝对应该暂停并自己试试。
+Dialogue: 0,0:04:47.0,0:04:49.0,Default,,0,0,0,,好吧，还有一个额外的细节。
+Dialogue: 0,0:04:49.0,0:04:53.0,Default,,0,0,0,,现在你有个神经网络，\N它从原始噪声样本中预测噪声。
+Dialogue: 0,0:04:53.0,0:04:57.0,Default,,0,0,0,,减去它，很好，你把它减去。\N很好。你得到的图像就更像游戏角色图像。
+Dialogue: 0,0:04:57.0,0:05:04.0,Default,,0,0,0,,但问题是，这个神经网络需要这个\N噪声样本，这个正常分布的噪声样本，作为输入。
+Dialogue: 0,0:05:04.0,0:05:09.0,Default,,0,0,0,,一旦你像这样去噪，\N它就不再按照那种方式分布了。
+Dialogue: 0,0:05:09.0,0:05:13.3,Default,,0,0,0,,实际上，在每一步之后和下一步之前，\N你需要做的是
+Dialogue: 0,0:05:13.3,0:05:17.6,Default,,0,0,0,,根据你所处的时间步长添加额外的噪声
+Dialogue: 0,0:05:17.6,0:05:24.0,Default,,0,0,0,,然后作为下一个样本，\N下一个迭代输入你的训练过的神经网络。
+Dialogue: 0,0:05:24.0,0:05:28.4,Default,,0,0,0,,从经验上看，这实际上有助于稳定神经网络，
+Dialogue: 0,0:05:28.4,0:05:31.46,Default,,0,0,0,,使它不会坍塌成接近数据集平均值的样子，
+Dialogue: 0,0:05:31.46,0:05:34.0,Default,,0,0,0,,意味着它看起来不会像左边的那些图像。
+Dialogue: 0,0:05:34.0,0:05:40.0,Default,,0,0,0,,当我们不把噪音加回去时，神经网络\N只会生成这些看起来很普通的游戏角色图像，
+Dialogue: 0,0:05:40.0,0:05:45.0,Default,,0,0,0,,而当我们把噪音加回去时，\N它就能生成这些漂亮的游戏角色图像。
+Dialogue: 0,0:05:45.0,0:05:48.0,Default,,0,0,0,,这个算法就是在这里发生的。
+Dialogue: 0,0:05:48.0,0:05:54.0,Default,,0,0,0,,我们实际上在每个时间步长都再次采样\N一个随机噪声，这个噪声是根据时间步长来的。
+Dialogue: 0,0:05:54.0,0:06:00.0,Default,,0,0,0,,然后在这里，我们用缩放因子S3把它加回去。
+Dialogue: 0,0:06:00.0,0:06:02.0,Default,,0,0,0,,现在让我们看看 Notebook。
+Dialogue: 0,0:06:02.0,0:06:07.0,Default,,0,0,0,,现在在这个去噪加噪的函数里，\N我们讨论的是加噪部分。
+Dialogue: 0,0:06:07.0,0:06:12.0,Default,,0,0,0,,那就是你随机抽取的这个Z，\N就是那个额外的噪音。
+Dialogue: 0,0:06:12.0,0:06:18.0,Default,,0,0,0,,你用某个因子来缩放它，\N然后实际上把它加回去。
+Dialogue: 0,0:06:18.0,0:06:22.0,Default,,0,0,0,,再次强调，这一切都发生在你的主要算法里。
+Dialogue: 0,0:06:22.0,0:06:25.0,Default,,0,0,0,,好的，让我们继续之前的话题。
+Dialogue: 0,0:06:25.0,0:06:33.0,Default,,0,0,0,,错误的方法是不加噪声回去，\N我们只需把Z设为0，然后传进去。
+Dialogue: 0,0:06:33.0,0:06:39.0,Default,,0,0,0,,它只从原始噪声中减去预测的噪声，\N而不会加回任何额外的噪声。
+Dialogue: 0,0:06:39.0,0:06:43.0,Default,,0,0,0,,让我们用Shift+Enter运行这个。
+Dialogue: 0,0:06:43.0,0:06:46.0,Default,,0,0,0,,这个过程又要花几分钟。
+Dialogue: 0,0:06:46.0,0:06:52.0,Default,,0,0,0,,好了，我们来看看这个方法的效果。
+Dialogue: 0,0:06:52.0,0:06:56.0,Default,,0,0,0,,哦不，一团糟！
+Dialogue: 0,0:06:56.0,0:06:58.0,Default,,0,0,0,,这显然不是我们想要的。
+Dialogue: 0,0:06:58.0,0:07:01.0,Default,,0,0,0,,一定要把那些额外的噪声加回去。
+Dialogue: 0,0:07:01.0,0:07:07.0,Default,,0,0,0,,建议你先暂停，自己试试这个方法，\N然后跟另一个加回额外噪声的方法比较。
+Dialogue: 0,0:07:07.0,0:07:13.0,Default,,0,0,0,,下一个视频我们会讲解\N神经网络架构，那个U-Net。

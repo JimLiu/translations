@@ -1,0 +1,968 @@
+1
+00:00:05,000 --> 00:00:10,400
+In this video, we'll learn how to split complex tasks into a series of simpler subtasks by
+
+2
+00:00:10,400 --> 00:00:12,920
+chaining multiple prompts together.
+
+3
+00:00:12,920 --> 00:00:16,680
+You might be wondering, why would you split up a task into multiple prompts when you could
+
+4
+00:00:16,680 --> 00:00:21,520
+achieve it with one prompt and chain of thought reasoning like we learned in the previous video?
+
+5
+00:00:21,520 --> 00:00:25,440
+We've already shown that language models are very good at following complex instructions,
+
+6
+00:00:25,440 --> 00:00:28,620
+especially the more advanced models like GPT-4.
+
+7
+00:00:28,620 --> 00:00:35,040
+So let me explain why we would do this with two analogies comparing chain of thought reasoning and chaining multiple prompts.
+
+8
+00:00:35,040 --> 00:00:42,200
+The first analogy to compare the two is the difference between cooking a complex meal in one go versus cooking it in stages.
+
+9
+00:00:42,200 --> 00:00:46,560
+Using one long, complicated instruction can be like trying to cook a complex meal all
+
+10
+00:00:46,560 --> 00:00:52,040
+at once where you have to manage multiple ingredients, cooking techniques, and timings simultaneously.
+
+11
+00:00:52,040 --> 00:00:57,720
+It can be challenging to keep track of everything and ensure that each component is cooked perfectly.
+
+12
+00:00:57,720 --> 00:01:01,420
+Chaining prompts, on the other hand, is like cooking the meal in stages where you focus
+
+13
+00:01:01,420 --> 00:01:06,820
+on one component at a time, ensuring that each part is cooked correctly before moving on to the next.
+
+14
+00:01:06,820 --> 00:01:12,620
+This approach breaks down the complexity of the task, making it easier to manage and reducing the likelihood of errors.
+
+15
+00:01:12,620 --> 00:01:17,780
+However, this approach might be unnecessary and overcomplicated for a very simple recipe.
+
+16
+00:01:17,780 --> 00:01:21,360
+A slightly better analogy for the same thing is the difference between reading spaghetti
+
+17
+00:01:21,360 --> 00:01:25,780
+code with everything in one long file and a simple modular program.
+
+18
+00:01:25,780 --> 00:01:30,160
+The thing that can make spaghetti code bad and difficult to debug is ambiguity and complex
+
+19
+00:01:30,160 --> 00:01:32,740
+dependencies between different parts of the logic.
+
+20
+00:01:32,740 --> 00:01:37,600
+The same can be true of a complex single-step task submitted to a language model.
+
+21
+00:01:37,600 --> 00:01:41,540
+Chaining prompts is a powerful strategy when you have a workflow where you can maintain
+
+22
+00:01:41,540 --> 00:01:46,660
+the state of the system at any given point and take different actions depending on the current state.
+
+23
+00:01:46,660 --> 00:01:52,420
+An example of the current state would be after you've classified an incoming customer query,
+
+24
+00:01:52,420 --> 00:01:58,020
+the state would be the classification, so it's an account question or it's a product question.
+
+25
+00:01:58,020 --> 00:02:01,980
+And then based on the state, you might do something different.
+
+26
+00:02:01,980 --> 00:02:06,380
+Each subtask contains only the instructions required for a single state of the task, which
+
+27
+00:02:06,380 --> 00:02:10,500
+makes the system easier to manage, makes sure the model has all the information it needs
+
+28
+00:02:10,500 --> 00:02:15,560
+to carry out a task, and reduces the likelihood of errors, as I mentioned.
+
+29
+00:02:15,560 --> 00:02:20,060
+This approach can also reduce and lower costs, since longer prompts with more tokens cost
+
+30
+00:02:20,060 --> 00:02:24,940
+more to run, and outlining all steps might be unnecessary in some cases.
+
+31
+00:02:24,940 --> 00:02:28,980
+Another benefit of this approach is that it is also easier to test which steps might be
+
+32
+00:02:28,980 --> 00:02:33,380
+failing more often, or to have a human in the loop at a specific step.
+
+33
+00:02:33,380 --> 00:02:37,900
+So to summarize, because this was a long explanation, instead of describing a whole complex workflow
+
+34
+00:02:37,900 --> 00:02:42,420
+in dozens of bullet points or several paragraphs in one prompt, like in the previous video,
+
+35
+00:02:42,420 --> 00:02:48,480
+it might be better to keep track of the state externally and then inject relevant instructions as needed.
+
+36
+00:02:48,480 --> 00:02:50,220
+And what makes a problem complex?
+
+37
+00:02:50,220 --> 00:02:54,420
+I think in general a problem is complex if there are many different instructions, and
+
+38
+00:02:54,420 --> 00:02:58,620
+potentially all of them could apply to any given situation, as these are the cases where
+
+39
+00:02:58,620 --> 00:03:01,500
+it could become hard for the model to reason about what to do.
+
+40
+00:03:01,500 --> 00:03:04,760
+And as you build with and interact with these models more, you'll gain an intuition for
+
+41
+00:03:04,760 --> 00:03:07,540
+when to use this strategy versus the previous.
+
+42
+00:03:07,540 --> 00:03:12,140
+And one additional benefit that I didn't mention yet, is that it also allows the model to use
+
+43
+00:03:12,140 --> 00:03:16,380
+external tools at certain points of the workflow if necessary.
+
+44
+00:03:16,380 --> 00:03:23,220
+For example, it might decide to look something up in a product catalog, or call an API, or search a knowledge base.
+
+45
+00:03:23,220 --> 00:03:26,140
+Something that could not be achieved with a single prompt.
+
+46
+00:03:26,140 --> 00:03:29,200
+So with that, let's dive into an example.
+
+47
+00:03:29,200 --> 00:03:32,780
+So we're going to use the same example as in the previous video, where we want to answer
+
+48
+00:03:32,780 --> 00:03:35,460
+a customer's question about a specific product.
+
+49
+00:03:35,460 --> 00:03:42,560
+But this time we'll use more products, and also break the steps down into a number of different prompts.
+
+50
+00:03:42,560 --> 00:03:47,900
+So we'll use the same delimiter that we've been using in the previous videos.
+
+51
+00:03:47,900 --> 00:03:53,180
+And let's read through our system message.
+
+52
+00:03:53,180 --> 00:03:55,600
+You will be provided with customer service queries.
+
+53
+00:03:55,600 --> 00:04:00,780
+The customer service query will be delimited with four hashtag characters.
+
+54
+00:04:00,780 --> 00:04:04,900
+Output a Python list of objects where each object has the following format.
+
+55
+00:04:04,900 --> 00:04:09,260
+Category, which is one of these predefined fields.
+
+56
+00:04:09,260 --> 00:04:11,080
+Or products.
+
+57
+00:04:11,080 --> 00:04:14,580
+And this is a list of products that must be found in the allowed products below.
+
+58
+00:04:14,580 --> 00:04:19,780
+Where the categories and products must be found in the customer service query.
+
+59
+00:04:19,780 --> 00:04:24,740
+If a product is mentioned, it must be associated with the correct category in the allowed products list below.
+
+60
+00:04:24,740 --> 00:04:27,500
+If no products or categories are found, output an empty list.
+
+61
+00:04:27,500 --> 00:04:30,700
+And so now we have our allowed list of products.
+
+62
+00:04:30,700 --> 00:04:36,060
+So we have the categories and then the products within those categories.
+
+63
+00:04:36,060 --> 00:04:43,780
+And our final instruction is only output the list of objects with nothing else.
+
+64
+00:04:43,780 --> 00:04:46,180
+So next we have our user message.
+
+65
+00:04:46,180 --> 00:04:53,460
+And so this message is: "tell me about the smartx pro phone and the fotosnap camera, the dslr one.
+
+66
+00:04:53,460 --> 00:04:55,420
+Also tell me about your TVs."
+
+67
+00:04:55,420 --> 00:04:59,020
+So we're asking about two specific products.
+
+68
+00:04:59,020 --> 00:05:03,860
+And also this general category of televisions.
+
+69
+00:05:03,860 --> 00:05:07,420
+And both of these products are mentioned in the allowed products list.
+
+70
+00:05:07,420 --> 00:05:11,620
+And then we have a television section as well.
+
+71
+00:05:11,620 --> 00:05:18,420
+Then we format the system message and user message into the messages array.
+
+72
+00:05:18,420 --> 00:05:25,060
+And then we get the completion from the model.
+
+73
+00:05:25,060 --> 00:05:30,980
+So as you can see, for our output, we have a list of objects.
+
+74
+00:05:30,980 --> 00:05:35,180
+And each object has category and products.
+
+75
+00:05:35,180 --> 00:05:42,140
+So we have the SmartX Pro phone and the FotoSnap DSLR Camera.
+
+76
+00:05:42,140 --> 00:05:48,060
+And then in the final object, we actually only have a category because we didn't mention any specific TVs.
+
+77
+00:05:48,060 --> 00:05:58,660
+And so the benefit of outputting this structured response is that we can then read it into a list in Python, which is very nice.
+
+78
+00:05:58,660 --> 00:06:01,660
+And so let's try another example.
+
+79
+00:06:01,660 --> 00:06:07,980
+So our second user message is: "my router isn't working."
+
+80
+00:06:07,980 --> 00:06:12,020
+And if you notice in the list, we don't actually have any routers.
+
+81
+00:06:12,020 --> 00:06:20,580
+And then let's format this correctly and get the completion.
+
+82
+00:06:20,580 --> 00:06:25,460
+And so as you can see, in this case, the output is an empty list.
+
+83
+00:06:25,460 --> 00:06:28,841
+And so now that we have this step to identify the category and products, 
+
+84
+00:06:28,842 --> 00:06:34,100
+if we find any products and categories, we want to load some information about those requested products
+
+85
+00:06:34,100 --> 00:06:38,420
+and categories into the prompt so that we can better answer the customer question.
+
+86
+00:06:38,420 --> 00:06:46,060
+And so in our workflow, the state now after this prompt is run is either products have been listed or they haven't been listed.
+
+87
+00:06:46,060 --> 00:06:51,100
+And in that case, we wouldn't try to look anything up because there's nothing to look up.
+
+88
+00:06:51,100 --> 00:06:55,757
+And so if I were to actually build this into a system, I might use category names, 
+
+89
+00:06:55,758 --> 00:07:05,260
+maybe something like computers and laptops or something to avoid any weirdness with spaces and special characters.
+
+90
+00:07:05,260 --> 00:07:07,500
+But this should work for now.
+
+91
+00:07:07,500 --> 00:07:11,160
+So now we want to look up some information about the products that the user mentioned.
+
+92
+00:07:11,160 --> 00:07:15,100
+So about this phone, this camera, and about the TVs in general.
+
+93
+00:07:15,100 --> 00:07:19,020
+And so we need to have some kind of product catalog to look up this information from.
+
+94
+00:07:19,020 --> 00:07:24,620
+So here we have our product information that I just pasted in.
+
+95
+00:07:24,620 --> 00:07:32,660
+So as you can see, we have a large number of products available at our store.
+
+96
+00:07:32,660 --> 00:07:38,100
+And all of these products are fake and were actually generated by GPT-4.
+
+97
+00:07:38,100 --> 00:07:41,020
+And so for each product, we have a couple of different fields.
+
+98
+00:07:41,020 --> 00:07:46,960
+We have name, category, brand, warranty, and so on.
+
+99
+00:07:46,960 --> 00:07:55,700
+And so the products is just a dictionary from product name to this object that contains the information about the product.
+
+100
+00:07:55,700 --> 00:07:57,780
+Notice that each product has a category.
+
+101
+00:07:57,780 --> 00:08:01,580
+So remember, we want to look up information about the products that the user asks about.
+
+102
+00:08:01,580 --> 00:08:08,820
+So we need to define some helper functions to allow us to look up product information by product name.
+
+103
+00:08:08,820 --> 00:08:14,700
+So let's create a function, get product by name.
+
+104
+00:08:14,700 --> 00:08:17,100
+We input the name.
+
+105
+00:08:17,100 --> 00:08:26,560
+And then we're going to return products dictionary, and we're going to get the value for the item with the name as the key.
+
+106
+00:08:26,560 --> 00:08:29,440
+And then our fallback is just going to be none.
+
+107
+00:08:29,440 --> 00:08:34,340
+And so we also want to define another helper function to get all of the products for a certain category.
+
+108
+00:08:34,340 --> 00:08:37,606
+For example, when the user is asking about the TVs we have, 
+
+109
+00:08:37,607 --> 00:08:42,560
+we'd want to load all of the information about all of the different TVs.
+
+110
+00:08:42,560 --> 00:08:51,220
+So get products by category, input the category name string.
+
+111
+00:08:51,220 --> 00:08:57,560
+And to do this, we want to loop through all of the products in the products dictionary,
+
+112
+00:08:57,560 --> 00:09:02,500
+and check each one to see if the category is equal to the input category.
+
+113
+00:09:02,500 --> 00:09:04,840
+And if so, we want to return that.
+
+114
+00:09:04,840 --> 00:09:07,920
+So we'll do this as follows.
+
+115
+00:09:07,920 --> 00:09:12,520
+So first, we want to loop through each product, and we have to get the values because we need
+
+116
+00:09:12,520 --> 00:09:18,300
+to actually access the category, which is in the value.
+
+117
+00:09:18,300 --> 00:09:37,060
+And then we'll return this product if the product category is equal to our input category.
+
+118
+00:09:37,060 --> 00:09:42,220
+So let's do an example for each of these helper functions.
+
+119
+00:09:42,220 --> 00:09:47,300
+So first, we have a product called the TechPro Ultrabook.
+
+120
+00:09:47,300 --> 00:09:51,860
+So let's get the product information by name.
+
+121
+00:09:51,860 --> 00:09:57,260
+So here you can see we've just fetched all of the product information.
+
+122
+00:09:57,260 --> 00:10:00,660
+And let's do an example to get all of the products for a category.
+
+123
+00:10:00,660 --> 00:10:07,020
+So let's get all of the products in the computers and laptops category.
+
+124
+00:10:07,020 --> 00:10:17,020
+So here you see we fetched all of the products with this category.
+
+125
+00:10:17,020 --> 00:10:20,980
+So let's continue our example.
+
+126
+00:10:20,980 --> 00:10:24,420
+And just to remember where we are, let's print the user message.
+
+127
+00:10:24,420 --> 00:10:30,540
+So the user message was: "Tell me about the SmartX Pro phone and the camera and the TVs."
+
+128
+00:10:30,540 --> 00:10:36,260
+And then the initial output from the model from the first step was this.
+
+129
+00:10:36,260 --> 00:10:41,220
+And so what we also need to do is read this output from the model, which is a string.
+
+130
+00:10:41,220 --> 00:10:49,300
+We need to pass that into a list so that we can use it as input to the helper functions that we just wrote.
+
+131
+00:10:49,300 --> 00:10:54,940
+So let's write a helper function to do this.
+
+132
+00:10:54,940 --> 00:10:58,420
+So we're going to use the Python JSON module.
+
+133
+00:10:58,420 --> 00:11:09,860
+And we're going to write a function called readStringToList, a very descriptive title, and input string.
+
+134
+00:11:09,860 --> 00:11:16,020
+And so first we'll just check if the input string is none.
+
+135
+00:11:16,020 --> 00:11:22,300
+In case something in a previous step failed, we're just going to return nothing.
+
+136
+00:11:22,300 --> 00:11:29,520
+And now we're going to have a try except block to make sure that we catch any errors.
+
+137
+00:11:29,520 --> 00:11:37,020
+And so first we replace any single quotes with double quotes in the input string to
+
+138
+00:11:37,020 --> 00:11:39,180
+make sure we can pass the JSON.
+
+139
+00:11:39,180 --> 00:11:47,380
+And then we're going to use the JSON loads function to read the input string into the array or the list.
+
+140
+00:11:47,380 --> 00:11:49,580
+And then we're going to return this.
+
+141
+00:11:49,580 --> 00:11:55,720
+And if there's a decode error, we're going to print the error and then return none.
+
+142
+00:11:55,720 --> 00:11:58,540
+So let's try this with our example.
+
+143
+00:11:58,540 --> 00:12:07,000
+So we're going to get our category and product list using the readStringToList helper function
+
+144
+00:12:07,000 --> 00:12:10,500
+and apply it to this response from the model.
+
+145
+00:12:10,500 --> 00:12:13,200
+And then we're going to print this list.
+
+146
+00:12:13,200 --> 00:12:15,340
+So it should look the same.
+
+147
+00:12:15,340 --> 00:12:17,380
+Let me run this first.
+
+148
+00:12:17,380 --> 00:12:25,860
+And so as you can see, it's just the same thing except now the type of this variable is actually a list instead of a string.
+
+149
+00:12:25,860 --> 00:12:29,760
+So the whole point of what we're doing is to get the product information into a list
+
+150
+00:12:29,760 --> 00:12:34,020
+that we can add to the next instruction to the model, which is going to be the instruction
+
+151
+00:12:34,020 --> 00:12:36,740
+where we ask it to answer the user question.
+
+152
+00:12:36,740 --> 00:12:41,620
+And so to do this, we need to put the product information into a nice string format that
+
+153
+00:12:41,620 --> 00:12:42,940
+we can add to the prompt.
+
+154
+00:12:42,940 --> 00:12:47,460
+And so let's also create a helper function to do this.
+
+155
+00:12:47,460 --> 00:12:50,460
+So we're going to call it generate_output_string.
+
+156
+00:12:50,460 --> 00:12:54,180
+And it's going to take in the list of data that we just created.
+
+157
+00:12:54,180 --> 00:12:56,620
+So this.
+
+158
+00:12:56,620 --> 00:13:00,740
+And then I'm going to copy in some code and then we'll walk through what it's doing.
+
+159
+00:13:00,740 --> 00:13:06,260
+So now I'm going to paste in some code and show you an example and then we'll talk about what this function is doing.
+
+160
+00:13:06,260 --> 00:13:12,220
+So we're going to get the product information from our first user message.
+
+161
+00:13:12,220 --> 00:13:16,823
+And so we're going to use this helper function generate_output_string on our category and product list, 
+
+162
+00:13:16,824 --> 00:13:23,600
+which if we remember was this.
+
+163
+00:13:23,600 --> 00:13:31,860
+And so here we have all of the product information for the products that were mentioned in the user message.
+
+164
+00:13:31,860 --> 00:13:36,020
+So we have the phone that they mentioned, we have the camera that they mentioned, and
+
+165
+00:13:36,020 --> 00:13:42,220
+then we have all of the product information for all of our TVs.
+
+166
+00:13:42,220 --> 00:13:49,060
+And this is information that will be helpful for the model to be able to answer the user's initial question.
+
+167
+00:13:49,061 --> 00:13:51,347
+And if you're interested in how this function works, 
+
+168
+00:13:51,348 --> 00:13:57,260
+I'll give a brief overview, but you can feel free to pause the video and read it more thoroughly.
+
+169
+00:13:57,260 --> 00:14:03,660
+So it basically just loops through all of the objects in this list and first checks if there are products.
+
+170
+00:14:03,660 --> 00:14:09,260
+If so, it gets the information for each product and then it checks if there's a category,
+
+171
+00:14:09,260 --> 00:14:10,460
+if there weren't any products.
+
+172
+00:14:10,460 --> 00:14:14,640
+So that would be for this object, for example.
+
+173
+00:14:14,640 --> 00:14:22,520
+And then it gets all of the product information for the products in that category and it just adds them to this string.
+
+174
+00:14:22,520 --> 00:14:24,760
+And then that's what it returns.
+
+175
+00:14:24,760 --> 00:14:29,960
+So at this point, we've found the relevant product information to answer the user question.
+
+176
+00:14:29,960 --> 00:14:32,920
+Now it's time for the model to actually answer the question.
+
+177
+00:14:32,920 --> 00:14:36,440
+So let's have our system message.
+
+178
+00:14:36,440 --> 00:14:38,600
+So this is the instruction.
+
+179
+00:14:38,600 --> 00:14:41,720
+You're a customer service assistant for a large electronics store.
+
+180
+00:14:41,720 --> 00:14:47,000
+Respond in a friendly and helpful tone with, let's say, with very concise answers.
+
+181
+00:14:47,000 --> 00:14:49,200
+Make sure to ask the user relevant follow-up questions.
+
+182
+00:14:49,200 --> 00:14:52,820
+So we want this to be an interactive experience for the user.
+
+183
+00:14:52,820 --> 00:14:56,640
+And so just as a reminder, this was our initial user message.
+
+184
+00:14:56,640 --> 00:15:00,200
+I'll just add it again.
+
+185
+00:15:00,200 --> 00:15:04,560
+And so now we're going to have our messages array.
+
+186
+00:15:04,560 --> 00:15:06,160
+And this is the input to the model.
+
+187
+00:15:06,160 --> 00:15:07,200
+So let's go through this.
+
+188
+00:15:07,200 --> 00:15:11,920
+We have our first message, which is the system message as usual.
+
+189
+00:15:11,920 --> 00:15:14,800
+We have the user message.
+
+190
+00:15:14,800 --> 00:15:20,280
+And then we have this additional assistant message.
+
+191
+00:15:20,280 --> 00:15:24,680
+And this is the message that contains all of the product information that we just looked up.
+
+192
+00:15:24,680 --> 00:15:32,840
+And so we're saying relevant product information, new line, and then this product information that we just found.
+
+193
+00:15:32,840 --> 00:15:38,360
+And so now the model has the relevant context it needs to be able to answer this user's question.
+
+194
+00:15:38,360 --> 00:15:45,040
+So let's get the final response and print it.
+
+195
+00:15:45,040 --> 00:15:58,160
+And we're hoping that the model is going to use relevant information from the product information in order to answer the user in a helpful way.
+
+196
+00:15:58,160 --> 00:16:04,919
+So first it tells the user about the Smart X Pro phone, tells the user about the FotoSnap camera, 
+
+197
+00:16:05,953 --> 00:16:13,920
+and then talks about the different televisions that we have in stock, and then asks the follow-up question.
+
+198
+00:16:13,920 --> 00:16:17,395
+So as you can see, by breaking this up into a series of steps, 
+
+199
+00:16:17,396 --> 00:16:20,670
+we were able to load information relevant to the user query 
+
+200
+00:16:20,671 --> 00:16:25,120
+to give the model the relevant context it needed to answer the question effectively.
+
+201
+00:16:25,120 --> 00:16:29,320
+So you might be wondering, why are we selectively loading product descriptions into the prompt
+
+202
+00:16:29,320 --> 00:16:33,600
+instead of including all of them and letting the model use the information it needs?
+
+203
+00:16:33,600 --> 00:16:38,519
+And so what I mean by this is, why didn't we just include all of this product information in the prompt,
+
+204
+00:16:39,000 --> 00:16:45,240
+ and we wouldn't have to bother with all of those intermediate steps to actually look up the product information?
+
+205
+00:16:45,240 --> 00:16:47,360
+There's a couple of reasons for this.
+
+206
+00:16:47,360 --> 00:16:51,839
+Firstly, including all of the product descriptions might make the context more confusing for the model, 
+
+207
+00:16:52,000 --> 00:16:57,000
+just as it would for a person trying to process a large amount of information at once.
+
+208
+00:16:57,000 --> 00:17:01,430
+I will say this is a lot less relevant for more advanced models like GPT-4, 
+
+209
+00:17:01,431 --> 00:17:04,724
+especially when the context is well-structured like it is in this example, 
+
+210
+00:17:04,725 --> 00:17:10,240
+and the model is smart enough just to ignore the information that clearly isn't relevant.
+
+211
+00:17:10,240 --> 00:17:12,080
+The next reasons are more compelling.
+
+212
+00:17:12,080 --> 00:17:15,825
+So the second reason is that language models have context limitations, 
+
+213
+00:17:15,826 --> 00:17:20,120
+i.e. a fixed number of tokens allowed as input and output.
+
+214
+00:17:20,120 --> 00:17:24,000
+So if you have a large number of products, imagine you had a huge product catalogue,
+
+215
+00:17:24,000 --> 00:17:28,000
+you wouldn't even be able to fit all of the descriptions into the context window.
+
+216
+00:17:28,000 --> 00:17:32,320
+And the final reason is that including all of the product descriptions could be expensive
+
+217
+00:17:32,320 --> 00:17:35,060
+as you pay per token when using language models.
+
+218
+00:17:35,060 --> 00:17:40,880
+So by selectively loading information, you can reduce the cost of generating responses.
+
+219
+00:17:40,880 --> 00:17:44,760
+In general, determining when to dynamically load information into the model's context
+
+220
+00:17:44,760 --> 00:17:50,880
+and allowing the model to decide when it needs more information is one of the best ways to augment the capabilities of these models.
+
+221
+00:17:50,880 --> 00:17:54,640
+And to reiterate, you should think of a language model as a reasoning agent that requires the
+
+222
+00:17:54,640 --> 00:17:59,320
+necessary context to draw useful conclusions and perform useful tasks.
+
+223
+00:17:59,320 --> 00:18:03,501
+And so in this case, we had to give the model the product information, 
+
+224
+00:18:03,502 --> 00:18:09,520
+and then it was able to reason about that product information to create a useful answer for the user.
+
+225
+00:18:09,520 --> 00:18:13,559
+And in this example, we only added a call to a specific function or functions to get the product description by product name, 
+
+226
+00:18:15,446 --> 00:18:18,520
+or to get the category products by category name.
+
+227
+00:18:18,520 --> 00:18:23,040
+But the models are actually good at deciding when to use a variety of different tools,
+
+228
+00:18:23,040 --> 00:18:25,400
+and can use them properly with instructions.
+
+229
+00:18:25,400 --> 00:18:28,160
+And this is the idea behind chatGPT plugins.
+
+230
+00:18:28,160 --> 00:18:31,233
+We tell the model what tools it has access to and what they do, 
+
+231
+00:18:31,234 --> 00:18:37,360
+and it chooses to use them when it needs information from a specific source or wants to take some other appropriate action.
+
+232
+00:18:37,360 --> 00:18:42,640
+In our example, we can only look up information by exact product and category name match,
+
+233
+00:18:42,640 --> 00:18:46,000
+but there are also more advanced techniques for information retrieval.
+
+234
+00:18:46,000 --> 00:18:50,160
+One of the most effective ways to retrieve information is using text embeddings.
+
+235
+00:18:50,160 --> 00:18:56,880
+Embeddings can be used to implement efficient knowledge retrieval over a large corpus to find information related to a given query.
+
+236
+00:18:56,880 --> 00:19:02,160
+One of the key advantages of using text embeddings is that they enable fuzzy or semantic search,
+
+237
+00:19:02,160 --> 00:19:06,280
+which allows you to find relevant information without using the exact keywords.
+
+238
+00:19:06,280 --> 00:19:09,509
+So in our example, we wouldn't necessarily need the exact name of the product, 
+
+239
+00:19:09,510 --> 00:19:16,280
+but we could do a more a search with a more general query like a mobile phone.
+
+240
+00:19:16,280 --> 00:19:21,960
+We're planning to create a comprehensive course on how to use embeddings for various applications soon, so stay tuned.
+
+241
+00:19:21,960 --> 00:19:25,282
+And with that, let's move on to the next video where we're going to talk about:
+
+242
+00:19:25,283 --> 00:19:28,800
+how to evaluate the outputs from the language model.
+

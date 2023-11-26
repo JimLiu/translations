@@ -1,0 +1,204 @@
+1
+00:00:05,000 --> 00:00:12,000
+在本节中，我们将关注输入评估相关的任务，这对于确保系统的质量和安全性非常重要。
+In this section, we'll focus on tasks to evaluate inputs, which can be important for ensuring the quality and safety of the system.
+
+2
+00:00:12,000 --> 00:00:16,000
+对于需要大量独立指令集来处理不同情况的任务，
+For tasks in which lots of independent sets of instructions are needed to handle different cases,
+
+3
+00:00:16,000 --> 00:00:23,000
+首先对查询类型进行分类，然后根据该分类确定要使用哪些指令可能是有益的。
+it can be beneficial to first classify the type of query and then use that classification to determine which instructions to use.
+
+4
+00:00:23,000 --> 00:00:30,000
+这可以通过定义固定类别并硬编码与处理给定类别任务相关的指令来实现。
+This can be achieved by defining fixed categories and hard-coding instructions that are relevant for handling tasks in a given category.
+
+5
+00:00:30,000 --> 00:00:36,000
+例如，在构建客户服务助手时，首先对查询类型进行分类可能很重要，
+For instance, when building a customer service assistant, it might be important to first classify the type of query
+
+6
+00:00:36,000 --> 00:00:39,000
+然后根据该分类确定要使用哪些指令。
+and then determine which instructions to use based on that classification.
+
+7
+00:00:39,000 --> 00:00:48,000
+因此，例如，如果用户要求关闭他们的帐户，您可能会给出不同的二级指令，而如果用户询问特定产品，则可能会给出不同的二级指令。
+So, for example, you might give different secondary instructions if a user asks to close their account versus if a user asks about a specific product.
+
+8
+00:00:48,000 --> 00:00:52,000
+所以在第一个情况下，您可能会添加有关如何关闭帐户的其他指令，
+So in the first case, you'd maybe add additional instructions about how to close the account,
+
+9
+00:00:52,000 --> 00:00:55,000
+然后在第二个情况下，您可能会添加其他产品信息。
+and then in the second case, you might add additional product information.
+
+10
+00:00:55,000 --> 00:00:58,000
+但让我们看一个例子，我认为这会让它更清楚。
+But let's see an example, and I think it will make it more clear.
+
+11
+00:00:58,000 --> 00:01:06,000
+所以这里有我们的系统消息，这是整个系统的指令，我们正在使用这个分隔符。
+So here we have our system message, which is the instruction for the overall system, and we're using this delimiter.
+
+12
+00:01:06,000 --> 00:01:11,000
+分隔符只是一种分隔指令或输出的不同部分的方法，
+And a delimiter is just a way to separate different parts of an instruction or output,
+
+13
+00:01:11,000 --> 00:01:15,000
+它有助于模型确定不同的部分。
+and it helps the model kind of determine the different sections.
+
+14
+00:01:15,000 --> 00:01:25,000
+所以在这个例子中，我们将使用井号作为分隔符，这是一个很好的分隔符，因为它实际上是一个标记（Token）。
+And so for this example, we'll use the delimiter for hashtags, and this is a nice delimiter because it's actually represented as one token.
+
+15
+00:01:25,000 --> 00:01:27,000
+所以这是我们的系统消息。
+And so here's our system message.
+
+16
+00:01:27,000 --> 00:01:31,000
+我们要求模型：“您将提供客户服务查询，
+We're asking the model, so you will be provided with customer service queries.
+
+17
+00:01:31,000 --> 00:01:36,000
+客户服务查询将用这些井号字符分隔。”
+The customer service query will be delimited with these hashtag characters.
+
+18
+00:01:36,000 --> 00:01:40,000
+将每个查询分类为一个主要类别和一个次要类别，
+Classify each query into a primary category and a secondary category,
+
+19
+00:01:40,000 --> 00:01:44,000
+然后以JSON格式提供输出，键为primary和secondary。
+and then provide the output in a JSON format with the keys primary and secondary.
+
+20
+00:01:44,000 --> 00:01:51,000
+所以我们在这里列出了我们的主要类别，如计费、技术支持、账户管理或一般查询。
+And so we have our primary categories listed here, so billing, technical support, account management, or general inquiry.
+
+21
+00:01:51,000 --> 00:01:59,000
+然后在下面，我们有次要类别的列表，取消订阅、升级等。
+And then below, we have the list of secondary categories, unsubscrible upgrade, et cetera.
+
+22
+00:01:59,000 --> 00:02:04,000
+那么现在让我们举一个用户消息的例子。
+And so now let's do an example of a user message.
+
+23
+00:02:04,000 --> 00:02:12,000
+所以我们的第一条用户消息，我们将使用以下内容。
+So for our first user message, we'll use the following.
+
+24
+00:02:12,000 --> 00:02:20,000
+所以用户消息是：“我希望你删除我的个人资料和所有用户数据”。
+So the user message is: "I want you to delete my profile and all of my user data".
+
+25
+00:02:20,000 --> 00:02:30,000
+然后我们将用这些井号分隔系统消息和用户消息，将其格式化为消息列表。
+And then we'll just format this into a messages list with the system message and the user message delimited with these hashtags.
+
+26
+00:02:30,000 --> 00:02:33,000
+让我们看一下，看看我们认为这可能是什么。
+And let's just take a look and see what we think this might be.
+
+27
+00:02:33,000 --> 00:02:36,000
+所以我希望你删除我的个人资料。
+So I want you to delete my profile.
+
+28
+00:02:36,000 --> 00:02:41,000
+这看起来有点像账户管理，也许是关闭账户。
+This kind of looks like account management, maybe close account.
+
+29
+00:02:41,000 --> 00:02:48,000
+让我们看看模型的想法。
+Let's see what the model thinks.
+
+30
+00:02:48,000 --> 00:02:55,000
+很好，所以模型的分类结果是“账户管理”作为主要类别，然后“关闭账户”作为次要类别。
+Great, so the classification from the model is account management as the primary category and then close account as a secondary.
+
+31
+00:02:55,000 --> 00:03:03,000
+关于要求一个结构化输出，比如 JSON 的好处是，你可以轻松地将其读入某种对象。
+And the nice thing about asking for a structured output like a JSON is that you can then read this easily into some kind of object.
+
+32
+00:03:03,000 --> 00:03:08,000
+所以，例如，在 Python 中可以使用Dictionary，或者在其他语言中使用其他东西。
+So a dictionary, for example, in Python or something else if you're using a different language.
+
+33
+00:03:08,000 --> 00:03:13,000
+然后你可以将其作为后续步骤的输入。
+And then you can use this as the input to a subsequent step.
+
+34
+00:03:13,000 --> 00:03:23,000
+我会给你展示另一个例子，但也可以随时暂停视频，尝试你自己的用户问题，看看模型如何对它们进行分类。
+I'll show you another example, but also feel free to pause the video now and just try your own user questions and see how the model categorizes them.
+
+35
+00:03:23,000 --> 00:03:27,000
+这是另一个用户留言。告诉我更多关于你们的平板电视的信息。
+So here's another user message. Tell me more about your flat screen TVs.
+
+36
+00:03:27,000 --> 00:03:33,000
+我们只需从模型中获得相同的消息列表响应，然后打印出来。
+And we just have the same messages list response from the model and then we'll just print it.
+
+37
+00:03:33,000 --> 00:03:40,000
+这里我们有第二个分类，看起来是正确的。
+And here we have our second categorization, which seems correct.
+
+38
+00:03:40,000 --> 00:03:49,000
+所以，总的来说，根据客户询问的分类，我们现在可以提供一组更具体的指示来处理下一步。
+And so in general, based on the categorization of the customer inquiry, we can now provide a set of more specific instructions to handle the next steps.
+
+39
+00:03:49,000 --> 00:03:58,000
+在这种情况下，我们可能会添加关于电视的额外信息，而在这种情况下，我们可能想要提供一个关闭帐户的链接之类的东西。
+In this case, we might add kind of additional information about the TVs versus in this case, we might want to give a link to closing the account or something like that.
+
+40
+00:03:58,000 --> 00:04:03,000
+我们将在后面的视频中了解更多关于处理输入的不同方法。
+We'll learn more about different ways to process inputs in a later video.
+
+41
+00:04:03,000 --> 00:04:12,000
+在下一个视频中，我们将探讨更多评估输入的方法，特别是确保用户以负责任的方式使用系统的方法。
+And in the next video, we'll look at more ways to evaluate inputs and specifically ways to ensure that your users are using the system in a responsible way.

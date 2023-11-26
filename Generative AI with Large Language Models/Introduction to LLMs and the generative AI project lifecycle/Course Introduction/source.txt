@@ -1,0 +1,164 @@
+Welcome to this course on
+generative AI with large language models.
+Large language models or LLMs
+are a very exciting technology.
+But despite all the buzz and hype,
+one of the thing that is still underestimated by
+many people is their power as a developer too.
+Specifically, there are
+many machine learning and AI
+applications that used to take me
+many months to build that you can now build
+in days or maybe even small numbers of weeks.
+This course will take a deep dive with you into how
+LLM technology actually works
+including going through many of the technical details,
+like model training, instruction tuning, fine-tuning,
+the generative AI project life cycle framework to
+help you plan and execute your projects and so on.
+Generative AI and LLMs
+specifically are a general purpose technology.
+That means that similar to
+other general purpose technologies
+like deep learning and electricity,
+is useful not just for a single application,
+but for a lot of
+different applications that span
+many corners of the economy.
+Similar to the rise of deep learning that
+started maybe 15 years ago or so,
+there's a lot of important where it lies ahead of us that
+needs to be done over many years by many people,
+I hope including you,
+to identify use cases and build specific applications.
+Because a lot of with this technology is so
+new and so few people really know how to use them,
+many companies are also right
+now scrambling to try to find and
+hire people that actually know
+how to build applications with LLMs.
+I hope that this course will also help you,
+if you wish, better position
+yourself to get one of those jobs.
+I'm thrilled to bring you this course along with
+a group of fantastic instructors from the AWS team,
+[inaudible] who are here with me today,
+as well as a fourth instructor Chris Freby,
+who will be presenting sort of adds.
+Antje and Mike above generative AI developer advocates.
+Shelbee and Chris above
+generative AI solutions architects.
+All of them have a lot of
+experience helping many different companies build many,
+many creative applications using LLMs.
+I look forward to all of them sharing
+this rich hands-on experience in this course.
+We've develop the content for
+this course with inputs from
+many industry experts and applied scientists at Amazon,
+AWS, Hugging Face and
+many top universities around the world.
+Antje, perhaps you can say a
+bit more about this course.
+Sure. Thanks Andrew.
+It's a pleasure to work with you again on this course and
+the exciting area of generative AI.
+With this course on
+generative AI with large language models,
+we've created a series of
+lessons meant for AI enthusiasts,
+engineers, or data scientists.
+Looking to learn the technical foundations
+of how LLMs work,
+as well as the best practices behind training,
+tuning, and deploying them.
+In terms of prerequisites,
+we assume you are already familiar with
+Python programming and at least
+basic data science and machine learning concepts.
+If you have some experience with
+either Python or TensorFlow, that should be enough.
+In this course, you will explore in detail the steps that
+make up a typical generative AI project lifecycle,
+from scoping the problem and
+selecting a language model to
+optimizing a model for
+deployment and integrating into your applications.
+This course covers all of the topics,
+not just at a shallow level,
+but we'll take the time to make sure you come
+away with a deep technical understanding of
+all of these technologies and be well-positioned to
+really know what you're doing when you
+build your own generative AI projects.
+Mike, why don't you tell us
+a little bit more details about
+what the learners will see in each week?
+Absolutely, Antje. Thank you.
+In Week 1, you will examine
+the transformer architecture that
+powers large language models,
+explore how these models are trained,
+and understand the compute resources
+required to develop these powerful LLMs.
+You'll also learn about
+a technique called in-context learning.
+How to guide the model to output
+at inference time with prompt engineering,
+and how to tune
+the most important generation parameters
+of LLMs for tuning your model output.
+In Week 2,
+you'll explore options for adapting pre-trained models to
+specific tasks and datasets via
+a process called instruction fine tuning.
+Then in Week 3,
+you'll see how to align
+the output of language models with
+human values in order to increase
+helpfulness and decrease potential harm and toxicity.
+Though we don't stop at the theory.
+Each week includes a hands-on lab
+where you'll be able to try out these techniques for
+yourself in an AWS environment that includes
+all the resources you need for working with
+large models at no cost to you.
+Shelbee, can you tell us a little
+bit more about the hands-on labs?
+Sure thing, Mike. In the first hands-on lab,
+you'll construct a compare
+different prompts and inputs for a given generative task,
+in this case, dialogue summarization.
+You'll also explore different inference parameters
+and sampling strategies to gain
+intuition on how to further
+improve the generative model of responses.
+In the second hands-on lab,
+you'll find tune it existing
+large language model from Hugging Face,
+a popular open-source model hub.
+You'll play with both full fine-tuning and
+parameter efficient fine tuning or path for short.
+You'll see how puffed lets you
+make your workflow much more efficient.
+In the third lab, you get hands-on with reinforcement
+learning from human feedback or RLHF,
+you'll build a reward model classifier to label
+model responses as either toxic or non-toxic.
+Don't worry if you don't understand
+all these terms and concepts just yet.
+You'll dive into each of these topics in
+much more detail throughout this course.
+I'm thrilled to have Antje, Mike,
+Shelbee as well as Tris presenting this course to
+you that takes a deep technical dive into LLMs.
+You come away from this course having practice with
+many different concrete code examples
+for how to build or use LLMs.
+I'm sure that many of the code snippets will
+end up being directly useful in your own work.
+I hope you enjoy the course and use what
+you learn to build some really exciting applications.
+So that, let's go on to the next video where we start
+diving into how LLMs
+are being used to build applications.

@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:04,880
+Welcome to this course on Building Systems using the ChatGPT API.
+
+2
+00:00:04,880 --> 00:00:09,920
+Previously, Isa and I had presented a course on how to prompt ChatGPT.
+
+3
+00:00:09,920 --> 00:00:16,160
+But a system requires much more than a single prompt or a single call to an LLM or large language model.
+
+4
+00:00:16,160 --> 00:00:23,680
+In this short course, we'd like to share with you best practices for building a complex application using an LLM.
+
+5
+00:00:23,680 --> 00:00:30,400
+We'll use the running example of building an end-to-end customer service assistance system that chains multiple calls to a language model,
+
+6
+00:00:30,400 --> 00:00:36,960
+using different instructions depending on the output of the previous call, and sometimes even looking things up from external sources.
+
+7
+00:00:36,960 --> 00:00:44,960
+So for example, given a user input like "tell me about what TVs are for sale", we'd use the following steps to process this.
+
+8
+00:00:44,960 --> 00:00:52,320
+First, you can evaluate the input to make sure it doesn't contain any problematic content, such as hateful speech.
+
+9
+00:00:52,320 --> 00:00:57,040
+Next, the system will process the input. It will identify what type of query this is.
+
+10
+00:00:57,040 --> 00:01:00,400
+Is it a complaint or a product information request and so on?
+
+11
+00:01:00,400 --> 00:01:09,360
+Once it has established that it is a product inquiry, it will retrieve the relevant information about TVs and use a language model to write a helpful response.
+
+12
+00:01:09,360 --> 00:01:15,520
+Finally, you'll check the output to make sure it isn't problematic, such as inaccurate or inappropriate answers.
+
+13
+00:01:15,520 --> 00:01:23,280
+One theme you see throughout this course is that an application often needs multiple internal steps that are invisible to the end user.
+
+14
+00:01:23,280 --> 00:01:31,520
+You often want to sequentially process the user input in multiple steps to get to the final output that is then shown to the user.
+
+15
+00:01:31,520 --> 00:01:39,520
+And as you build complex systems using LLMs, over the long term, you often want to also keep on improving the system.
+
+16
+00:01:39,520 --> 00:01:49,520
+So I'll also share with you what the process of developing an LLM-based application feels like and some best practices for evaluating and improving a system over time.
+
+17
+00:01:49,520 --> 00:01:54,000
+We're grateful to many people that have contributed to this short course.
+
+18
+00:01:54,000 --> 00:02:02,000
+On the OpenAI side, we're grateful to Andrew Kondrich, Joe Palermo, Boris Power, and Ted Sanders.
+
+19
+00:02:02,000 --> 00:02:09,280
+And from the DeepLearning.ai team, thank you also to Geoff Ladwig, Eddy Shyu, and Tommy Nelson.
+
+20
+00:02:09,280 --> 00:02:14,720
+Through this short course, we hope you'll come away confident in your abilities to build a complex, multi-step application,
+
+21
+00:02:14,720 --> 00:02:18,080
+and also be set up to maintain and keep on improving it.
+
+22
+00:02:18,080 --> 00:02:20,080
+Let's dive in.

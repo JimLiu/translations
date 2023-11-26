@@ -1,0 +1,3727 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 275
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 191
+          },
+          "text": "Sometimes people think of a large language model as a knowledge store,"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 192
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 14
+          },
+          "text": "as if it's learned to memorize a lot of information, maybe off the internet,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 15
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 686
+          },
+          "text": "so when you ask the question, it can answer the question."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 686
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 56
+          },
+          "text": "But I think an even more useful way to think of a large language model is sometimes as a reasoning engine"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 57
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 315
+          },
+          "text": "in which you can give it chunks of text or other sources of information."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 315
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 554
+          },
+          "text": "And then the large language model, LLM,"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 555
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 986
+          },
+          "text": "will maybe use this background knowledge that's learned off the internet,"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 987
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 209
+          },
+          "text": "but to use the new information you give it to help you answer questions or reason through content or decide even what to do next."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 41,
+            "milliseconds": 209
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 612
+          },
+          "text": "And that's what LangChain's agents framework helps you to do."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 674
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 317
+          },
+          "text": "Agents are probably my favorite part of LangChain."
+        }
+      ],
+      "source": [
+        "Sometimes people think of a large language model as a knowledge store,",
+        "as if it's learned to memorize a lot of information, maybe off the internet,",
+        "so when you ask the question, it can answer the question.",
+        "But I think an even more useful way to think of a large language model is sometimes as a reasoning engine",
+        "in which you can give it chunks of text or other sources of information.",
+        "And then the large language model, LLM,",
+        "will maybe use this background knowledge that's learned off the internet,",
+        "but to use the new information you give it to help you answer questions or reason through content or decide even what to do next.",
+        "And that's what LangChain's agents framework helps you to do.",
+        "Agents are probably my favorite part of LangChain."
+      ],
+      "result": [
+        "有时候人们把大语言模型看作是知识库，",
+        "就好像它学会并记忆了大量的从互联网上获取的信息，",
+        "所以当你问问题时，它可以回答问题。",
+        "但我认为更有用的方式是把大语言模型看作是一个推理引擎，",
+        "你可以给它提供一些文本或其他信息来源。",
+        "然后大型语言模型，LLM，",
+        "可能会使用它从互联网上学习的这些背景知识，",
+        "但是也会利用你提供的新信息来帮助你回答问题，或者推理内容，甚至决定接下来要做什么。",
+        "这就是LangChain的代理框架能帮助你做的事。",
+        "代理可能是我最喜欢的LangChain功能。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 317
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 280
+          },
+          "text": "I think they're also one of the most powerful parts, but they're also one of the newer parts."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 64
+          },
+          "text": "So we're seeing a lot of stuff emerge here that's really new to everyone in the field."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 64
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 899
+          },
+          "text": "And so this should be a very exciting lesson as we dive into what agents are,"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 513
+          },
+          "text": "how to create and how to use agents,"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 514
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 874
+          },
+          "text": "how to equip them with different types of tools like search engines that come built into LangChain."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 406
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 32
+          },
+          "text": "and then also how to create your own tools so that you can let agents interact with any data stores, any APIs, any functions that you might want them to."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 32
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 216
+          },
+          "text": "So this is exciting, cutting-edge stuff, but already with emerging important use cases."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 216
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 598
+          },
+          "text": "So with that, let's dive in."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 26,
+            "milliseconds": 598
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 22
+          },
+          "text": "First, we're going to set the environment variables and import a bunch of stuff that we will use later on."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 33,
+            "milliseconds": 22
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 163
+          },
+          "text": "Next, we're going to initialize a language model"
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 777
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 497
+          },
+          "text": "We're going to use ChatOpenAI."
+        }
+      ],
+      "source": [
+        "I think they're also one of the most powerful parts, but they're also one of the newer parts.",
+        "So we're seeing a lot of stuff emerge here that's really new to everyone in the field.",
+        "And so this should be a very exciting lesson as we dive into what agents are,",
+        "how to create and how to use agents,",
+        "how to equip them with different types of tools like search engines that come built into LangChain.",
+        "and then also how to create your own tools so that you can let agents interact with any data stores, any APIs, any functions that you might want them to.",
+        "So this is exciting, cutting-edge stuff, but already with emerging important use cases.",
+        "So with that, let's dive in.",
+        "First, we're going to set the environment variables and import a bunch of stuff that we will use later on.",
+        "Next, we're going to initialize a language model",
+        "We're going to use ChatOpenAI."
+      ],
+      "result": [
+        "我认为代理也是最强大的功能之一，但也是较新的功能。",
+        "对于这个领域的每个人来说，涌现了很多新的技术，",
+        "这节课程将会令人期待，因为我们将会深入了解什么是代理，",
+        "如何创建和使用代理，",
+        "如何配备不同类型的工具，比如内置在LangChain中的搜索引擎。",
+        "然后还有如何创建自己的工具，这样你就可以让代理与任何数据存储、API、或者功能进行互动。",
+        "这是令人兴奋的前沿技术，而且已经有了一些重要的应用案例。",
+        "那么，让我们开始吧。",
+        "首先，我们将设置环境变量并导入一些内容，稍后将会用到。",
+        "接下来，我们将初始化一个语言模型。",
+        "我们将使用ChatOpenAI。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 497
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 278
+          },
+          "text": "And importantly, we're going to set the temperature equal to zero."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 278
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 100
+          },
+          "text": "This is important because we're going to be using the language model as the reasoning engine of an agent where it's connecting to other sources of data and computation."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 281
+          },
+          "text": "And so we want this reasoning engine to be as good and as precise as possible."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 281
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 502
+          },
+          "text": "And so we're going to set it to zero to get rid of any randomness that might arise."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 2,
+            "milliseconds": 502
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 2
+          },
+          "text": "Next, we're going to load some tools."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 5,
+            "milliseconds": 48
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 911
+          },
+          "text": "The two tools that we're going to load are the LLM math tool and the Wikipedia tool."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 911
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 656
+          },
+          "text": "The LLM math tool is actually a chain itself, which uses a language model in conjunction with a calculator to do math problems."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 656
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 156
+          },
+          "text": "The Wikipedia tool is an API that connects to Wikipedia,"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 157
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 781
+          },
+          "text": "allowing you to run search queries against Wikipedia and get back results."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 686
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 767
+          },
+          "text": "Next, we're going to initialize an agent."
+        }
+      ],
+      "source": [
+        "And importantly, we're going to set the temperature equal to zero.",
+        "This is important because we're going to be using the language model as the reasoning engine of an agent where it's connecting to other sources of data and computation.",
+        "And so we want this reasoning engine to be as good and as precise as possible.",
+        "And so we're going to set it to zero to get rid of any randomness that might arise.",
+        "Next, we're going to load some tools.",
+        "The two tools that we're going to load are the LLM math tool and the Wikipedia tool.",
+        "The LLM math tool is actually a chain itself, which uses a language model in conjunction with a calculator to do math problems.",
+        "The Wikipedia tool is an API that connects to Wikipedia,",
+        "allowing you to run search queries against Wikipedia and get back results.",
+        "Next, we're going to initialize an agent."
+      ],
+      "result": [
+        "首先，我们要把temperature参数设为0。",
+        "这点很重要，因为我们将使用语言模型作为代理的推理引擎，它会连接到其他数据和计算资源，",
+        "所以，我们希望这个推理引擎尽可能地好并且尽可能精确。",
+        "所以我们把temperature参数设为0，消除任何可能出现的随机性。",
+        "接下来，我们要加载一些工具。",
+        "我们要加载的两个工具是llm-math工具和维基百科工具。",
+        "llm-math工具实际上是一个链，它结合了语言模型和计算器来解决数学问题。",
+        "维基百科工具是一个连接到维基百科API的程序，",
+        "允许你查询维基百科上的内容，并返回搜索结果。",
+        "最后，我们将初始化一个代理。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 767
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 469
+          },
+          "text": "We're going to initialize the agent with the tools, the language model, and then an agent type."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 469
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 550
+          },
+          "text": "Here, we're going to use CHAT_ZERO_SHOT_REACT_DESCRIPTION."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 871
+          },
+          "text": "The important things to note here are first chat."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 871
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 812
+          },
+          "text": "This is an agent that has been optimized to work with chat models."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 812
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 713
+          },
+          "text": "And second react."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 713
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 495
+          },
+          "text": "This is a prompting technique designed to get the best reasoning performance out of language models."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 818
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 783
+          },
+          "text": "We're also going to pass in handle_parsing_errors equals true."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 783
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 716
+          },
+          "text": "This is useful when the language model might output something that is not able to be parsed into an action input, which is the desired output."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 716
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 862
+          },
+          "text": "When this happens, we'll actually pass the misformatted text back to the language model and ask it to correct itself."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 95
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 98
+          },
+          "text": "Finally, we're going to pass in verbose equals true."
+        }
+      ],
+      "source": [
+        "We're going to initialize the agent with the tools, the language model, and then an agent type.",
+        "Here, we're going to use CHAT_ZERO_SHOT_REACT_DESCRIPTION.",
+        "The important things to note here are first chat.",
+        "This is an agent that has been optimized to work with chat models.",
+        "And second react.",
+        "This is a prompting technique designed to get the best reasoning performance out of language models.",
+        "We're also going to pass in handle_parsing_errors equals true.",
+        "This is useful when the language model might output something that is not able to be parsed into an action input, which is the desired output.",
+        "When this happens, we'll actually pass the misformatted text back to the language model and ask it to correct itself.",
+        "Finally, we're going to pass in verbose equals true."
+      ],
+      "result": [
+        "我们将用“工具列表”、“语言模型”和“代理类型”初始化代理。",
+        "这里，我们将使用名为CHAT_ZERO_SHOT_REACT_DESCRIPTION的代理类型。",
+        "这里面首先要注意的是CHAT。",
+        "这是一个专为与Chat模型一起工作而优化的代理。",
+        "其次是REACT。",
+        "REACT是一种组织Prompt的技术，能最大化语言模型的推理能力。",
+        "我们还将设置handle_parsing_errors参数的值为True。",
+        "当语言模型输出的内容无法被正常解析时，这很有用。",
+        "实际上就是遇到内容无法被正常解析时，将格式错误的内容传回语言模型，并要求它自行纠正。",
+        "最后，我们将设置verbose参数的值为True。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 98
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 683
+          },
+          "text": "This is going to print out a bunch of steps that makes it really clear to us in the Jupyter notebook what's going on."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 683
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 34,
+            "milliseconds": 986
+          },
+          "text": "We'll also set debug equals True at the global level later on in the notebook"
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 689
+          },
+          "text": "so we can see in more detail what exactly is happening."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 38,
+            "milliseconds": 689
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 31
+          },
+          "text": "First, we're going to ask the agent a math question."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 31
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 513
+          },
+          "text": "What is 25% of 300?"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 513
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 897
+          },
+          "text": "This is a pretty simple question, but it will be good to understand what exactly is going on."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 234
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 17
+          },
+          "text": "So we can see here that when it enters the AgentExecutor chain, that it first thinks about what it needs to do."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 56,
+            "milliseconds": 17
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 314
+          },
+          "text": "So it has a thought."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 958
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 514
+          },
+          "text": "It then has an action."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 59,
+            "milliseconds": 579
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 429
+          },
+          "text": "And this action is actually a JSON blob corresponding to two things, an action and an action input."
+        }
+      ],
+      "source": [
+        "This is going to print out a bunch of steps that makes it really clear to us in the Jupyter notebook what's going on.",
+        "We'll also set debug equals True at the global level later on in the notebook",
+        "so we can see in more detail what exactly is happening.",
+        "First, we're going to ask the agent a math question.",
+        "What is 25% of 300?",
+        "This is a pretty simple question, but it will be good to understand what exactly is going on.",
+        "So we can see here that when it enters the AgentExecutor chain, that it first thinks about what it needs to do.",
+        "So it has a thought.",
+        "It then has an action.",
+        "And this action is actually a JSON blob corresponding to two things, an action and an action input."
+      ],
+      "result": [
+        "这会打印出每一个步骤的详细记录，让我们可以在Jupyter Notebook中清楚地了解正在发生的事情。",
+        "稍后我们还会在全局级别设置debug为True",
+        "这样我们可以更详细地了解到底发生了什么。",
+        "首先，我们要问代理一个数学问题：",
+        "“300的25%是多少？”",
+        "这是一个相当简单的问题，但对于我们了解具体发生了什么非常有帮助。",
+        "我们可以看到，当它进入AgentExecutor链时，首先会考虑需要做什么。",
+        "所以它有一个THOUGHT（思考）。",
+        "然后它有一个ACTION（操作）。",
+        "这个ACTION实际上是一个JSON对象，其中有两部分内容：一个action（操作）和一个action_input（操作输入）。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 622
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 103
+          },
+          "text": "The action corresponds to the tool to use."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 103
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 204
+          },
+          "text": "So here it says calculator."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 204
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 5
+          },
+          "text": "The action input is the input to that tool."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 5
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 806
+          },
+          "text": "And here it's a string of 300 times 0.25."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 19,
+            "milliseconds": 275
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 59
+          },
+          "text": "Next, we can see that there's observation with answer in a separate color."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 59
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 467
+          },
+          "text": "This observation, answer equals 75.0, is actually coming from the calculator tool itself."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 467
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 351
+          },
+          "text": "Next, we go back to the language model when the text turns to green."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 351
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 39,
+            "milliseconds": 12
+          },
+          "text": "We have the answer to the question."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 39,
+            "milliseconds": 12
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 43,
+            "milliseconds": 416
+          },
+          "text": "Final answer, 75.0, and that's the output that we get."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 42
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 246
+          },
+          "text": "This is a good time to pause and try out different math problems of your own."
+        }
+      ],
+      "source": [
+        "The action corresponds to the tool to use.",
+        "So here it says calculator.",
+        "The action input is the input to that tool.",
+        "And here it's a string of 300 times 0.25.",
+        "Next, we can see that there's observation with answer in a separate color.",
+        "This observation, answer equals 75.0, is actually coming from the calculator tool itself.",
+        "Next, we go back to the language model when the text turns to green.",
+        "We have the answer to the question.",
+        "Final answer, 75.0, and that's the output that we get.",
+        "This is a good time to pause and try out different math problems of your own."
+      ],
+      "result": [
+        "action对应的是要使用的工具，",
+        "这里写的是计算器。",
+        "action_input对应的是该工具的输入，",
+        "这里是一个“300*0.25”的字符串。",
+        "接下来，我们可以看到Observation（观察结果）和Answer（答案）是用不同颜色显示的。",
+        "这个Observation后面的“Answer: 75.0”，实际上是来自计算器工具返回的结果。",
+        "接下来我们回到语言模型，文字变为绿色，语言模型Thought（思考）：",
+        "“我们得到了问题的答案。",
+        "最后答案是75.0”。这就是我们得到的输出结果。",
+        "建议你现在暂停一下，自己尝试测试一些不同的数学问题。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 246
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 490
+          },
+          "text": "Next, we're going to go through an example using the Wikipedia API."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 57,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 957
+          },
+          "text": "Here, we're going to ask it a question about Tom Mitchell,"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 86
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 94
+          },
+          "text": "and we can look at the intermediate steps to see what it does."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 4,
+            "milliseconds": 95
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 8,
+            "milliseconds": 371
+          },
+          "text": "We can see once again that it thinks and it correctly realizes that it should use Wikipedia."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 419
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 682
+          },
+          "text": "It says action equal to Wikipedia and action input equal to Tom M. Mitchell."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 962
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 929
+          },
+          "text": "The observation that comes back in yellow this time,"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 19,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 29
+          },
+          "text": "and we use different colors to denote different tools,"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 143
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 267
+          },
+          "text": "is the Wikipedia summary result for the Tom M. Mitchell page."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 28,
+            "milliseconds": 267
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 605
+          },
+          "text": "The observation that comes back from Wikipedia"
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 657
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 742
+          },
+          "text": "is actually two results, two pages,"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 32,
+            "milliseconds": 743
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 570
+          },
+          "text": "as there's two different Tom M. Mitchells."
+        }
+      ],
+      "source": [
+        "Next, we're going to go through an example using the Wikipedia API.",
+        "Here, we're going to ask it a question about Tom Mitchell,",
+        "and we can look at the intermediate steps to see what it does.",
+        "We can see once again that it thinks and it correctly realizes that it should use Wikipedia.",
+        "It says action equal to Wikipedia and action input equal to Tom M. Mitchell.",
+        "The observation that comes back in yellow this time,",
+        "and we use different colors to denote different tools,",
+        "is the Wikipedia summary result for the Tom M. Mitchell page.",
+        "The observation that comes back from Wikipedia",
+        "is actually two results, two pages,",
+        "as there's two different Tom M. Mitchells."
+      ],
+      "result": [
+        "接下来，我们将展示一个使用维基百科API的示例。",
+        "在这里，我们将向它问一个关于Tom Mitchell的问题（Tom M. Mitchell是美国计算机科学家，卡内基梅隆大学的教授。他写了什么书？），",
+        "我们可以查看中间步骤，了解它的工作原理。",
+        "我们再次看到它在思考，并正确地意识到应该使用维基百科工具。",
+        "它显示action是“维基百科”，action_input是“Tom M. Mitchell”。",
+        "这次返回的Observation（观察结果）是黄色的，",
+        "我们用不同的颜色表示不同的工具，",
+        "这是Tom M. Mitchell页面的维基百科摘要结果。",
+        "从维基百科返回的Observation",
+        "实际上是两个结果，两个页面，",
+        "因为有两个不同的Tom M. Mitchell。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 34,
+            "milliseconds": 570
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 659
+          },
+          "text": "We can see the first one covers the computer scientist,"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 671
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 253
+          },
+          "text": "and the second one, it looks like it's an Australian footballer."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 938
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 843
+          },
+          "text": "We can see that the information needed to answer this question,"
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 45,
+            "milliseconds": 844
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 49,
+            "milliseconds": 186
+          },
+          "text": "namely the name of the book that he wrote, Machine Learning,"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 49,
+            "milliseconds": 386
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 55,
+            "milliseconds": 144
+          },
+          "text": "is present in the summary of the first Tom Mitchell."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 55,
+            "milliseconds": 144
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 59,
+            "milliseconds": 586
+          },
+          "text": "We can see next that the agent tries to look up more information about this book."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 59,
+            "milliseconds": 586
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 88
+          },
+          "text": "So it looks up Machine Learning book in Wikipedia."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 88
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 635
+          },
+          "text": "This isn't strictly necessary,"
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 643
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 811
+          },
+          "text": "and it's an interesting example to show how agents aren't perfectly reliable yet."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 9,
+            "milliseconds": 968
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 11,
+            "milliseconds": 729
+          },
+          "text": "We can see that after this lookup,"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 11,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 400
+          },
+          "text": "the agent recognizes that it has all the information it needs to answer and responds with the correct answer, machine learning."
+        }
+      ],
+      "source": [
+        "We can see the first one covers the computer scientist,",
+        "and the second one, it looks like it's an Australian footballer.",
+        "We can see that the information needed to answer this question,",
+        "namely the name of the book that he wrote, Machine Learning,",
+        "is present in the summary of the first Tom Mitchell.",
+        "We can see next that the agent tries to look up more information about this book.",
+        "So it looks up Machine Learning book in Wikipedia.",
+        "This isn't strictly necessary,",
+        "and it's an interesting example to show how agents aren't perfectly reliable yet.",
+        "We can see that after this lookup,",
+        "the agent recognizes that it has all the information it needs to answer and responds with the correct answer, machine learning."
+      ],
+      "result": [
+        "我们可以看到第一个结果是一位计算机科学家，",
+        "第二个结果看起来像是一位澳大利亚足球运动员。",
+        "我们可以看到回答这个问题所需的关键信息，",
+        "也就是他写的那本书的名字：《机器学习》，",
+        "出现在第一个Tom Mitchell的摘要中。",
+        "接下来我们可以看到代理试图查找关于这本书的更多信息。",
+        "所以它在维基百科上查找了《机器学习》这本书。",
+        "这其实没太有必要，",
+        "这是一个有趣的例子，说明代理还不完全可靠。",
+        "我们可以看到在这次查找之后，",
+        "代理意识到它已经有了回答所需的所有信息，并给出了正确答案：《机器学习》。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 19,
+            "milliseconds": 471
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 952
+          },
+          "text": "The next example we're going to go through is a really cool one."
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 21,
+            "milliseconds": 952
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 943
+          },
+          "text": "If you've seen things like copilot or even ChatGPT with the code interpreter plugin enabled,"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 536
+          },
+          "text": "one of the things they're doing is they're using the language model to write code and then executing that code."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 536
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 35,
+            "milliseconds": 997
+          },
+          "text": "We can do the same exact thing here."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 37,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 343
+          },
+          "text": "So we're going to create a Python agent and we're going to use the same LLM as before."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 43,
+            "milliseconds": 343
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 764
+          },
+          "text": "And we're going to give it a tool, the PythonREPLTool."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 764
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 245
+          },
+          "text": "A REPL is basically a way to interact with code."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 245
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 766
+          },
+          "text": "You can think of it as a Jupyter Notebook."
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 766
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 588
+          },
+          "text": "So the agent can execute code with this REPL."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 588
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 4,
+            "milliseconds": 232
+          },
+          "text": "It will then run and then we'll get back some results and those results will be passed back into the agent so it can decide what to do next."
+        }
+      ],
+      "source": [
+        "The next example we're going to go through is a really cool one.",
+        "If you've seen things like copilot or even ChatGPT with the code interpreter plugin enabled,",
+        "one of the things they're doing is they're using the language model to write code and then executing that code.",
+        "We can do the same exact thing here.",
+        "So we're going to create a Python agent and we're going to use the same LLM as before.",
+        "And we're going to give it a tool, the PythonREPLTool.",
+        "A REPL is basically a way to interact with code.",
+        "You can think of it as a Jupyter Notebook.",
+        "So the agent can execute code with this REPL.",
+        "It will then run and then we'll get back some results and those results will be passed back into the agent so it can decide what to do next."
+      ],
+      "result": [
+        "我们接下来要讲的例子非常酷。",
+        "如果你见过像GitHub Copilot，或者ChatGPT的代码解释器插件这样的东西，",
+        "它们所做的就是用语言模型写代码，然后执行生成的代码。",
+        "我们在这里也可以做同样的事情。",
+        "所以我们要创建一个Python代理，使用之前一样的LLM。",
+        "我们会给它一个工具，PythonREPLTool。",
+        "REPL基本上是一种与代码互动的方式，",
+        "你可以把它想象成一个Jupyter Notebook，",
+        "代理可以用这个REPL执行代码。",
+        "然后我们会得到代码运行结果，这些结果会传回给代理，让它决定接下来要做什么。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 593
+          },
+          "text": "The problem that we're going to have this agent solve is we're going to give it a list of names and then ask it to sort them."
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 593
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 936
+          },
+          "text": "So you can see here we have a list of names, \"Harrison Chase\", \"Lang Chain\", \"Elle Elem\", \"Geoff Fusion\", \"Trance Former\", \"Jen Ayai\"."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 936
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 959
+          },
+          "text": "And we're going to ask the agent to first sort these names by last name and then first name and then print the output."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 28,
+            "milliseconds": 959
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 801
+          },
+          "text": "Importantly, we're asking it to print the output so that it can actually see what the result is."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 187
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 39,
+            "milliseconds": 543
+          },
+          "text": "These printed statements are what's going to be fed back into the language model later on,"
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 39,
+            "milliseconds": 909
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 194
+          },
+          "text": "so it can reason about the output of the code that it just ran."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 195
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 49,
+            "milliseconds": 19
+          },
+          "text": "Let's give this a try."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 49,
+            "milliseconds": 19
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 51,
+            "milliseconds": 743
+          },
+          "text": "We can see that when we go into the AgentExecutor chain,"
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 52,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 56,
+            "milliseconds": 345
+          },
+          "text": "it first realizes that it can use the sorted function to list the customers."
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 0,
+            "milliseconds": 408
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 2,
+            "milliseconds": 356
+          },
+          "text": "It's using a different agent type under the hood,"
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 2,
+            "milliseconds": 357
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 375
+          },
+          "text": "which is why you can see that the action and action input is actually formatted slightly differently."
+        }
+      ],
+      "source": [
+        "The problem that we're going to have this agent solve is we're going to give it a list of names and then ask it to sort them.",
+        "So you can see here we have a list of names, \"Harrison Chase\", \"Lang Chain\", \"Elle Elem\", \"Geoff Fusion\", \"Trance Former\", \"Jen Ayai\".",
+        "And we're going to ask the agent to first sort these names by last name and then first name and then print the output.",
+        "Importantly, we're asking it to print the output so that it can actually see what the result is.",
+        "These printed statements are what's going to be fed back into the language model later on,",
+        "so it can reason about the output of the code that it just ran.",
+        "Let's give this a try.",
+        "We can see that when we go into the AgentExecutor chain,",
+        "it first realizes that it can use the sorted function to list the customers.",
+        "It's using a different agent type under the hood,",
+        "which is why you can see that the action and action input is actually formatted slightly differently."
+      ],
+      "result": [
+        "我们需要这个代理解决的问题是让它给一组客户名单排序。",
+        "可以看到我们这里有一组名字，\"Harrison Chase\"，\"Lang Chain\"，\"Elle Elem\"，\"Geoff Fusion\"，\"Trance Former\"，\"Jen Ayai\"。",
+        "我们要求代理先按姓氏再按名字对这些名字进行排序，然后打印输出结果。",
+        "重要的是，我们要求它打印输出结果，以便可以看到实际结果是什么。",
+        "这些打印出来的内容将在后面被反馈到语言模型中，",
+        "这样它就可以对代码输出的结果进行推理。",
+        "让我们试试看。",
+        "我们可以看到当进入AgentExecutor链时，",
+        "它首先意识到可以使用sorted函数对名单进行排序。",
+        "它在底层使用了不同类型的代理，",
+        "这就是为什么你可以看到Action和Action Input实际上格式有些不同。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 375
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 600
+          },
+          "text": "Here, the action that it takes is to use the Python REPL,"
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 11,
+            "milliseconds": 601
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 370
+          },
+          "text": "and then the action input that you can see is code,"
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 371
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 686
+          },
+          "text": "where it first writes out customers equals this list, it then sorts the customers,"
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 687
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 21,
+            "milliseconds": 971
+          },
+          "text": "and then it goes through this list and print it."
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 527
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 870
+          },
+          "text": "You can see the agent thinks about what to do and realizes that it needs to write some code."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 405
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 447
+          },
+          "text": "The format that it's using of action and action input is actually slightly different than before."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 33,
+            "milliseconds": 447
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 969
+          },
+          "text": "It's using a different agent type under the hood."
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 969
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 350
+          },
+          "text": "For the action, it's going to use the Python REPL."
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 39,
+            "milliseconds": 350
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 291
+          },
+          "text": "And for the action input, it's going to have a bunch of code."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 291
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 48,
+            "milliseconds": 94
+          },
+          "text": "And so if we look at what this code is doing, it's first creating a variable to list out these customer names."
+        }
+      ],
+      "source": [
+        "Here, the action that it takes is to use the Python REPL,",
+        "and then the action input that you can see is code,",
+        "where it first writes out customers equals this list, it then sorts the customers,",
+        "and then it goes through this list and print it.",
+        "You can see the agent thinks about what to do and realizes that it needs to write some code.",
+        "The format that it's using of action and action input is actually slightly different than before.",
+        "It's using a different agent type under the hood.",
+        "For the action, it's going to use the Python REPL.",
+        "And for the action input, it's going to have a bunch of code.",
+        "And so if we look at what this code is doing, it's first creating a variable to list out these customer names."
+      ],
+      "result": [
+        "这里，它使用的Action是Python REPL，",
+        "然后你可以看到Action Input是一段代码，",
+        "它首先写出customers等于这个列表，然后对customers进行排序，",
+        "然后遍历这个列表并打印它。",
+        "你可以看到代理在Thought（思考）该做什么，并意识到需要写一段代码。",
+        "它使用的Action和Action Input的格式实际上与以前略有不同。",
+        "它在底层使用了不同的代理类型。",
+        "对于Action，它将使用Python REPL。",
+        "对于Action Input，有一段代码。",
+        "如果我们看看这段代码在做什么，它首先创建一个\"customers\"变量来列出这些客户名称。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 48,
+            "milliseconds": 94
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 735
+          },
+          "text": "It's then sorting that and creating a new variable."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 50,
+            "milliseconds": 735
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 56,
+            "milliseconds": 298
+          },
+          "text": "And it's then iterating through that new variable and printing out each line, just like we asked it to."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 57,
+            "milliseconds": 408
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 512
+          },
+          "text": "We can see that we get the observation back and this is a list of names."
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 1,
+            "milliseconds": 512
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 7,
+            "milliseconds": 198
+          },
+          "text": "And then the agent realizes that it's done and it returns these names."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 7,
+            "milliseconds": 198
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 0
+          },
+          "text": "We can see from the stuff that's printed out,"
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 57
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 11,
+            "milliseconds": 71
+          },
+          "text": "the high level of what's going on,"
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 11,
+            "milliseconds": 72
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 16,
+            "milliseconds": 267
+          },
+          "text": "but let's dig a little bit deeper and run this with \"langchain.debug\" set to \"True\"."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 19,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 23,
+            "milliseconds": 714
+          },
+          "text": "As this prints out all the levels, all the different chains that are going on,"
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 23,
+            "milliseconds": 715
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 27,
+            "milliseconds": 158
+          },
+          "text": "let's go through them and see what exactly is happening."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 27,
+            "milliseconds": 158
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 29,
+            "milliseconds": 680
+          },
+          "text": "So first, we start with the agent executor."
+        }
+      ],
+      "source": [
+        "It's then sorting that and creating a new variable.",
+        "And it's then iterating through that new variable and printing out each line, just like we asked it to.",
+        "We can see that we get the observation back and this is a list of names.",
+        "And then the agent realizes that it's done and it returns these names.",
+        "We can see from the stuff that's printed out,",
+        "the high level of what's going on,",
+        "but let's dig a little bit deeper and run this with \"langchain.debug\" set to \"True\".",
+        "As this prints out all the levels, all the different chains that are going on,",
+        "let's go through them and see what exactly is happening.",
+        "So first, we start with the agent executor."
+      ],
+      "result": [
+        "首先对其进行排序并创建一个新变量\"sorted_customers\"。",
+        "然后遍历这个新变量，按照我们的要求逐行打印出排序后的名单。",
+        "我们可以看到我们得到了Observation（观察结果），这是一份名单列表。",
+        "然后代理意识到任务完成，返回这份名单。",
+        "我们可以从打印出来的内容看到一些大概的情况，",
+        "",
+        "但让我们再深入一点，将“langchain.debug”设置为“True”并运行。",
+        "因为这会打印出所有级别，所有正在运行的不同的链，",
+        "让我们逐一查看究竟发生了什么。",
+        "首先，我们从AgentExecutor开始。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 29,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 31,
+            "milliseconds": 362
+          },
+          "text": "This is the top level agent runner."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 31,
+            "milliseconds": 362
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 33,
+            "milliseconds": 500
+          },
+          "text": "And we can see that we have here our input,"
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 33,
+            "milliseconds": 501
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 368
+          },
+          "text": "sort these customers by last name and then first name and print the output."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 368
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 41,
+            "milliseconds": 11
+          },
+          "text": "From here, we call an LLMChain."
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 41,
+            "milliseconds": 11
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 43,
+            "milliseconds": 533
+          },
+          "text": "This is the LLMChain that the agent is using."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 44,
+            "milliseconds": 576
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 838
+          },
+          "text": "The LLMChain, remember, is a combination of prompt and an LLM."
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 48,
+            "milliseconds": 838
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 657
+          },
+          "text": "At this point, it's only got the input, an agent scratchpad,"
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 52,
+            "milliseconds": 658
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 400
+          },
+          "text": "we'll get back to that later, and then some stop sequences to tell the language model when to stop doing its generations."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 945
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 5,
+            "milliseconds": 447
+          },
+          "text": "At the next level, we see the exact call to the language model."
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 5,
+            "milliseconds": 447
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 432
+          },
+          "text": "We can see the fully formatted prompt,"
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 457
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 12,
+            "milliseconds": 551
+          },
+          "text": "which includes instructions about what tools it has access to as well as how to format its output."
+        }
+      ],
+      "source": [
+        "This is the top level agent runner.",
+        "And we can see that we have here our input,",
+        "sort these customers by last name and then first name and print the output.",
+        "From here, we call an LLMChain.",
+        "This is the LLMChain that the agent is using.",
+        "The LLMChain, remember, is a combination of prompt and an LLM.",
+        "At this point, it's only got the input, an agent scratchpad,",
+        "we'll get back to that later, and then some stop sequences to tell the language model when to stop doing its generations.",
+        "At the next level, we see the exact call to the language model.",
+        "We can see the fully formatted prompt,",
+        "which includes instructions about what tools it has access to as well as how to format its output."
+      ],
+      "result": [
+        "这是第一级的代理运行器。",
+        "我们可以看到这里有我们的输入，",
+        "按姓氏和名字对这些客户进行排序，然后打印输出。",
+        "从这里，我们调用一个LLMChain。",
+        "这是代理正在使用的LLMChain。",
+        "LLMChain，记住，是Prompt和LLM的组合。",
+        "目前，它只有input和agent_scratchpad，",
+        "稍后我们会回到这个问题，然后是\"stop\"参数，告诉语言模型何时停止生成。",
+        "在下一级，我们看到了对语言模型的调用。",
+        "可以看到完整的格式化了的Prompt，",
+        "其中包括关于它可以访问哪些工具的说明，以及返回何种格式的输出。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 15,
+            "milliseconds": 297
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 19,
+            "milliseconds": 260
+          },
+          "text": "From there, we can then see the exact output of the language model."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 19,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 128
+          },
+          "text": "So we can see the text key where it has the thought and the action and the action input all in one string."
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 28,
+            "milliseconds": 128
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 412
+          },
+          "text": "It then wraps up the LLMChain as it exits through there."
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 32,
+            "milliseconds": 412
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 34,
+            "milliseconds": 294
+          },
+          "text": "And the next thing that it calls is a tool."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 34,
+            "milliseconds": 294
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 296
+          },
+          "text": "And here we can see the exact input to the tool."
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 37,
+            "milliseconds": 296
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 39,
+            "milliseconds": 629
+          },
+          "text": "We can also see the name of the tool, Python REPL,"
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 39,
+            "milliseconds": 658
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 620
+          },
+          "text": "and then we can see the input, which is this code."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 43,
+            "milliseconds": 968
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 46,
+            "milliseconds": 889
+          },
+          "text": "We can then see the output of this tool, which is this printed out string."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 46,
+            "milliseconds": 889
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 212
+          },
+          "text": "And again, this happens because we specifically ask the Python REPL to print out what is going on."
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 212
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 615
+          },
+          "text": "We can then see the next input to the LLMChain, which again, the LLMChain here is the agent."
+        }
+      ],
+      "source": [
+        "From there, we can then see the exact output of the language model.",
+        "So we can see the text key where it has the thought and the action and the action input all in one string.",
+        "It then wraps up the LLMChain as it exits through there.",
+        "And the next thing that it calls is a tool.",
+        "And here we can see the exact input to the tool.",
+        "We can also see the name of the tool, Python REPL,",
+        "and then we can see the input, which is this code.",
+        "We can then see the output of this tool, which is this printed out string.",
+        "And again, this happens because we specifically ask the Python REPL to print out what is going on.",
+        "We can then see the next input to the LLMChain, which again, the LLMChain here is the agent."
+      ],
+      "result": [
+        "从那里，我们可以看到语言模型的详细输出。",
+        "我们可以看到text键，其中包含了Thought（思考）、Action（操作）和Action Input（操作输入）。",
+        "然后它退出LLMChain。",
+        "接下来它调用的是一个工具。",
+        "在这里我们可以看到工具的详细输入。",
+        "我们还可以看到工具的名称：“Python REPL”，",
+        "然后我们可以看到输入，也就是这段代码。",
+        "接着我们可以看到这个工具的输出，也就是这个打印出来的字符串。",
+        "之所以有这段代码是因为我们特意要求Python REPL打印出正在进行的操作。",
+        "然后我们可以看到下一个输入到LLMChain，同样，这里的LLMChain是代理。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 0,
+            "milliseconds": 615
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 877
+          },
+          "text": "So here, if you look at the variables, there's the input."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 4,
+            "milliseconds": 877
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 5,
+            "milliseconds": 657
+          },
+          "text": "This is unchanged."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 5,
+            "milliseconds": 657
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 10,
+            "milliseconds": 359
+          },
+          "text": "This is the high level objective that we're asking, but now there's some new values for agent scratchpad."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 11,
+            "milliseconds": 356
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 461
+          },
+          "text": "You can see here that this is actually a combination of the previous generation plus the tool output."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 19,
+            "milliseconds": 461
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 328
+          },
+          "text": "And so we're passing this back in"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 21,
+            "milliseconds": 329
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 186
+          },
+          "text": "so that the language model can understand what happened previously"
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 24,
+            "milliseconds": 187
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 26,
+            "milliseconds": 629
+          },
+          "text": "and use that to reason about what to do next."
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 28,
+            "milliseconds": 67
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 700
+          },
+          "text": "The next few print statements are covering what happens as the language model realizes that"
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 32,
+            "milliseconds": 701
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 35,
+            "milliseconds": 272
+          },
+          "text": "it is basically finished with its job."
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 35,
+            "milliseconds": 272
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 38,
+            "milliseconds": 134
+          },
+          "text": "So we can see here the fully formatted prompt to the language model."
+        }
+      ],
+      "source": [
+        "So here, if you look at the variables, there's the input.",
+        "This is unchanged.",
+        "This is the high level objective that we're asking, but now there's some new values for agent scratchpad.",
+        "You can see here that this is actually a combination of the previous generation plus the tool output.",
+        "And so we're passing this back in",
+        "so that the language model can understand what happened previously",
+        "and use that to reason about what to do next.",
+        "The next few print statements are covering what happens as the language model realizes that",
+        "it is basically finished with its job.",
+        "So we can see here the fully formatted prompt to the language model."
+      ],
+      "result": [
+        "这里，如果你看\"input\"变量，",
+        "这没有改变，",
+        "这是我们要代理实现的目标。但现在\"agent_scratchpad\"参数有一些新值。",
+        "你可以看到这实际上是之前的输出和工具输出的组合。",
+        "我们把这个传回去",
+        "让语言模型了解之前发生了什么",
+        "并用这些信息来推理出接下来应该做什么。",
+        "接下来的几个打印语句都在讲述语言模型意识到",
+        "它基本上完成了它的工作。",
+        "所以我们可以看到语言模型的完整的格式化了的Prompt。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 273
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 44,
+            "milliseconds": 885
+          },
+          "text": "the response where it realizes that it is done and it says final answer,"
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 44,
+            "milliseconds": 886
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 50,
+            "milliseconds": 380
+          },
+          "text": "which here is the sequence that the agent uses to recognize that it's done with its job."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 50,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 53,
+            "milliseconds": 782
+          },
+          "text": "We can then see it exiting the LLMChain and then exiting the agent executor."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 55,
+            "milliseconds": 93
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 0,
+            "milliseconds": 14
+          },
+          "text": "This should hopefully give you a pretty good idea of what's going on under the hood inside these agents."
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 0,
+            "milliseconds": 394
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 4,
+            "milliseconds": 29
+          },
+          "text": "This should hopefully give you a pretty good idea of what's going on under the hood"
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 4,
+            "milliseconds": 86
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 11,
+            "milliseconds": 657
+          },
+          "text": "and is hopefully instructive as you pause and put your own objectives for this coding agent to try to accomplish."
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 11,
+            "milliseconds": 657
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 16,
+            "milliseconds": 951
+          },
+          "text": "This debug mode can also be used to highlight what's going wrong as shown above in the Wikipedia example,"
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 16,
+            "milliseconds": 952
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 22,
+            "milliseconds": 720
+          },
+          "text": "sometimes agents act a little funny and so having all this information is really helpful for understanding what's going on."
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 23,
+            "milliseconds": 874
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 28,
+            "milliseconds": 575
+          },
+          "text": "So far, we've used tools that come to find in LangChain already."
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 28,
+            "milliseconds": 575
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 35,
+            "milliseconds": 356
+          },
+          "text": "But a big power of agents is that you can connect it to your own sources of information, your own APIs, your own data."
+        }
+      ],
+      "source": [
+        "the response where it realizes that it is done and it says final answer,",
+        "which here is the sequence that the agent uses to recognize that it's done with its job.",
+        "We can then see it exiting the LLMChain and then exiting the agent executor.",
+        "This should hopefully give you a pretty good idea of what's going on under the hood inside these agents.",
+        "This should hopefully give you a pretty good idea of what's going on under the hood",
+        "and is hopefully instructive as you pause and put your own objectives for this coding agent to try to accomplish.",
+        "This debug mode can also be used to highlight what's going wrong as shown above in the Wikipedia example,",
+        "sometimes agents act a little funny and so having all this information is really helpful for understanding what's going on.",
+        "So far, we've used tools that come to find in LangChain already.",
+        "But a big power of agents is that you can connect it to your own sources of information, your own APIs, your own data."
+      ],
+      "result": [
+        "它意识到任务完成并输出了最终答案，",
+        "这是代理用来识别它完成工作的顺序。",
+        "然后我们可以看到它退出LLMChain，然后退出AgentExecutor。",
+        "这应该能让你对代理内部发生了什么有一个很好的了解，",
+        "这应该能让你对代理内部发生了什么有一个很好的了解，",
+        "建议你暂停并为这个编码代理设定自己的目标，希望能对你有启发。",
+        "这种调试模式也可以用来发现出错的地方，就像上面的维基百科示例中调用了不必要的查询，",
+        "有时代理的表现会出人意料，所以这些信息对于帮助你理解发生了什么非常有帮助。",
+        "到目前为止，我们已经使用了LangChain中内置的工具。",
+        "但是代理的一大优势是你可以将其连接到你自己的信息来源，你自己的API，你自己的数据。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 35,
+            "milliseconds": 356
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 40,
+            "milliseconds": 958
+          },
+          "text": "So here, we're going to go over how you can create a custom tool so that you can connect it to whatever you want."
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 40,
+            "milliseconds": 958
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 938
+          },
+          "text": "Let's make a tool that's going to tell us what the current date is."
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 44,
+            "milliseconds": 938
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 739
+          },
+          "text": "First, we're going to import this tool decorator."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 739
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 52,
+            "milliseconds": 180
+          },
+          "text": "This can be applied to any function, and it turns it into a tool that LangChain can use."
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 53,
+            "milliseconds": 425
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 58,
+            "milliseconds": 669
+          },
+          "text": "Next, we're going to write a function called time, which shakes in any text string."
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 58,
+            "milliseconds": 669
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 110
+          },
+          "text": "We're not really going to use that."
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 110
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 5,
+            "milliseconds": 794
+          },
+          "text": "And it's going to return today's date by calling datetime."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 5,
+            "milliseconds": 794
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 10,
+            "milliseconds": 858
+          },
+          "text": "In addition to the name of the function, we're also going to write a really detailed docstring."
+        },
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 10,
+            "milliseconds": 858
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 442
+          },
+          "text": "That's because this is what the agent will use to know when it should call this tool and how it should call this tool."
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 18,
+            "milliseconds": 728
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 22,
+            "milliseconds": 249
+          },
+          "text": "For example, here we say that the input should always be an empty string."
+        }
+      ],
+      "source": [
+        "So here, we're going to go over how you can create a custom tool so that you can connect it to whatever you want.",
+        "Let's make a tool that's going to tell us what the current date is.",
+        "First, we're going to import this tool decorator.",
+        "This can be applied to any function, and it turns it into a tool that LangChain can use.",
+        "Next, we're going to write a function called time, which shakes in any text string.",
+        "We're not really going to use that.",
+        "And it's going to return today's date by calling datetime.",
+        "In addition to the name of the function, we're also going to write a really detailed docstring.",
+        "That's because this is what the agent will use to know when it should call this tool and how it should call this tool.",
+        "For example, here we say that the input should always be an empty string."
+      ],
+      "result": [
+        "那么在这里，我们将介绍如何创建一个自定义工具，以便您可以将其连接到您想要的任何地方。",
+        "让我们制作一个工具，它会告诉我们当前的日期是什么。",
+        "首先，我们要导入这个工具装饰器。",
+        "它可以应用于任何函数，并将其转换为LangChain可以使用的工具。",
+        "接下来，我们将编写一个名为time的函数，它可以接收任何文本字符串。",
+        "我们并不真正使用它。",
+        "它将返回今天的日期。",
+        "除了函数的名称外，我们还写了一份非常详细的DocString格式的注释说明。",
+        "因为代理会利用注释中的信息来知道何时应该调用这个工具（函数），以及应该如何调用这个工具。",
+        "例如，在这里我们说输入应该始终为空字符串。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 22,
+            "milliseconds": 249
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 130
+          },
+          "text": "That's because we don't use it."
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 24,
+            "milliseconds": 130
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 27,
+            "milliseconds": 443
+          },
+          "text": "If we have more stringent requirements on what the input should be,"
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 27,
+            "milliseconds": 586
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 32,
+            "milliseconds": 871
+          },
+          "text": "for example, if we have a function that should always take in a search query or a SQL statement,"
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 32,
+            "milliseconds": 914
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 35,
+            "milliseconds": 286
+          },
+          "text": "you'll want to make sure to mention that here."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 37,
+            "milliseconds": 573
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 39,
+            "milliseconds": 274
+          },
+          "text": "We're now going to create another agent."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 39,
+            "milliseconds": 274
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 42,
+            "milliseconds": 755
+          },
+          "text": "This time we're adding the time tool to the list of existing tools."
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 45,
+            "milliseconds": 897
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 53,
+            "milliseconds": 960
+          },
+          "text": "And finally, let's call the agent and ask it what the date today is."
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 53,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 58,
+            "milliseconds": 461
+          },
+          "text": "It recognizes that it needs to use the time tool, which it specifies here."
+        },
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 58,
+            "milliseconds": 461
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 0,
+            "milliseconds": 602
+          },
+          "text": "It has the action input as an empty string."
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 0,
+            "milliseconds": 602
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 1,
+            "milliseconds": 162
+          },
+          "text": "This is great."
+        }
+      ],
+      "source": [
+        "That's because we don't use it.",
+        "If we have more stringent requirements on what the input should be,",
+        "for example, if we have a function that should always take in a search query or a SQL statement,",
+        "you'll want to make sure to mention that here.",
+        "We're now going to create another agent.",
+        "This time we're adding the time tool to the list of existing tools.",
+        "And finally, let's call the agent and ask it what the date today is.",
+        "It recognizes that it needs to use the time tool, which it specifies here.",
+        "It has the action input as an empty string.",
+        "This is great."
+      ],
+      "result": [
+        "那是因为我们不用它。",
+        "如果我们对输入有更严格的要求，",
+        "比如，如果我们有一个函数，它应该总是接收搜索查询或SQL语句，",
+        "你需要在这里说明。",
+        "我们现在要创建另一个代理。",
+        "这次我们把time工具加到现有工具列表里。",
+        "最后，让我们调用代理，问它今天是什么日期。",
+        "它意识到需要使用time工具，并在这里指定",
+        "它的action_input是一个空字符串。",
+        "这很棒！"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 1,
+            "milliseconds": 162
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 2,
+            "milliseconds": 803
+          },
+          "text": "This is what we told it to do."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 2,
+            "milliseconds": 803
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 963
+          },
+          "text": "And then it returns with an observation."
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 4,
+            "milliseconds": 963
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 5
+          },
+          "text": "And then finally, the language model takes that observation and responds to the user."
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 5
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 905
+          },
+          "text": "Today's date is 2023-05-21."
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 12,
+            "milliseconds": 765
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 17,
+            "milliseconds": 50
+          },
+          "text": "You should pause the video here and try putting in different inputs."
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 17,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 19,
+            "milliseconds": 572
+          },
+          "text": "This wraps up the lesson on agents."
+        },
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 19,
+            "milliseconds": 572
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 25,
+            "milliseconds": 38
+          },
+          "text": "This is one of the newer and more exciting and more experimental pieces of LangChain."
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 25,
+            "milliseconds": 38
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 26,
+            "milliseconds": 820
+          },
+          "text": "So I hope you enjoy using it."
+        },
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 26,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 156
+          },
+          "text": "Hopefully it showed you how you can use a language model as a reasoning engine to take different actions"
+        },
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 157
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 34,
+            "milliseconds": 148
+          },
+          "text": "and connect to other functions and data sources."
+        }
+      ],
+      "source": [
+        "This is what we told it to do.",
+        "And then it returns with an observation.",
+        "And then finally, the language model takes that observation and responds to the user.",
+        "Today's date is 2023-05-21.",
+        "You should pause the video here and try putting in different inputs.",
+        "This wraps up the lesson on agents.",
+        "This is one of the newer and more exciting and more experimental pieces of LangChain.",
+        "So I hope you enjoy using it.",
+        "Hopefully it showed you how you can use a language model as a reasoning engine to take different actions",
+        "and connect to other functions and data sources."
+      ],
+      "result": [
+        "这就是我们让它做的事情。",
+        "然后它返回一个Observation（观察结果）。",
+        "接着，语言模型根据这个Observation回复用户：",
+        "“今天是2023年5月21日。”",
+        "建议你暂停视频，尝试输入不同的内容，看看返回的结果。",
+        "这就是关于代理的课程总结。",
+        "这是LangChain中比较新，也比较激动人心部分，还处于实验性阶段。",
+        "希望你能喜欢！",
+        "希望这堂课向你展示了如何将语言模型作为推理引擎来采取不同的操作，",
+        "并连接到其他函数和数据源。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/LangChain for LLM Application Development/LangChain_L6_v03.srt",
+  "ouputBasePath": "input/LangChain for LLM Application Development/LangChain_L6_v03",
+  "totalCost": 0.44565,
+  "translationPath": "input/LangChain for LLM Application Development/LangChain_L6_v03/translation.json"
+}

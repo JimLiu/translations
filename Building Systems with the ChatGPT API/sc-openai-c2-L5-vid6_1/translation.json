@@ -1,0 +1,4628 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 400
+          },
+          "text": "In this video, we'll learn how to split complex tasks into a series of simpler subtasks by"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 10,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 920
+          },
+          "text": "chaining multiple prompts together."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "text": "You might be wondering, why would you split up a task into multiple prompts when you could"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 520
+          },
+          "text": "achieve it with one prompt and chain of thought reasoning like we learned in the previous video?"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 440
+          },
+          "text": "We've already shown that language models are very good at following complex instructions,"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 620
+          },
+          "text": "especially the more advanced models like GPT-4."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 40
+          },
+          "text": "So let me explain why we would do this with two analogies comparing chain of thought reasoning and chaining multiple prompts."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 35,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 200
+          },
+          "text": "The first analogy to compare the two is the difference between cooking a complex meal in one go versus cooking it in stages."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 560
+          },
+          "text": "Using one long, complicated instruction can be like trying to cook a complex meal all"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 40
+          },
+          "text": "at once where you have to manage multiple ingredients, cooking techniques, and timings simultaneously."
+        }
+      ],
+      "source": [
+        "In this video, we'll learn how to split complex tasks into a series of simpler subtasks by",
+        "chaining multiple prompts together.",
+        "You might be wondering, why would you split up a task into multiple prompts when you could",
+        "achieve it with one prompt and chain of thought reasoning like we learned in the previous video?",
+        "We've already shown that language models are very good at following complex instructions,",
+        "especially the more advanced models like GPT-4.",
+        "So let me explain why we would do this with two analogies comparing chain of thought reasoning and chaining multiple prompts.",
+        "The first analogy to compare the two is the difference between cooking a complex meal in one go versus cooking it in stages.",
+        "Using one long, complicated instruction can be like trying to cook a complex meal all",
+        "at once where you have to manage multiple ingredients, cooking techniques, and timings simultaneously."
+      ],
+      "result": [
+        "在这个视频中，我们将学习如何通过将多个Prompt链接在一起，将复杂任务分解为一系列更简单的子任务。",
+        "",
+        "你可能会想，为什么要将任务分解为多个Prompt，而不是",
+        "通过一个Prompt和一系列思维推理来实现呢？就像我们在上一个视频中学到的那样。",
+        "我们已经证明，语言模型非常擅长遵循复杂的指令，",
+        "尤其是像GPT-4这样的更先进的模型。",
+        "那么让我用两个类比来解释为什么我们要比较思维链推理和多个Prompt链。",
+        "第一个类比是一次性做好一桌饭菜与分阶段做好一桌饭菜之间的区别。",
+        "使用一个长而复杂的指令就像一次性做一桌丰盛的饭菜，",
+        "你必须同时使用多种食材、利用高超的烹饪技巧和掌握好火候。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 720
+          },
+          "text": "It can be challenging to keep track of everything and ensure that each component is cooked perfectly."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 420
+          },
+          "text": "Chaining prompts, on the other hand, is like cooking the meal in stages where you focus"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 820
+          },
+          "text": "on one component at a time, ensuring that each part is cooked correctly before moving on to the next."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 620
+          },
+          "text": "This approach breaks down the complexity of the task, making it easier to manage and reducing the likelihood of errors."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 780
+          },
+          "text": "However, this approach might be unnecessary and overcomplicated for a very simple recipe."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "text": "A slightly better analogy for the same thing is the difference between reading spaghetti"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 21,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 780
+          },
+          "text": "code with everything in one long file and a simple modular program."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 160
+          },
+          "text": "The thing that can make spaghetti code bad and difficult to debug is ambiguity and complex"
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 740
+          },
+          "text": "dependencies between different parts of the logic."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 600
+          },
+          "text": "The same can be true of a complex single-step task submitted to a language model."
+        }
+      ],
+      "source": [
+        "It can be challenging to keep track of everything and ensure that each component is cooked perfectly.",
+        "Chaining prompts, on the other hand, is like cooking the meal in stages where you focus",
+        "on one component at a time, ensuring that each part is cooked correctly before moving on to the next.",
+        "This approach breaks down the complexity of the task, making it easier to manage and reducing the likelihood of errors.",
+        "However, this approach might be unnecessary and overcomplicated for a very simple recipe.",
+        "A slightly better analogy for the same thing is the difference between reading spaghetti",
+        "code with everything in one long file and a simple modular program.",
+        "The thing that can make spaghetti code bad and difficult to debug is ambiguity and complex",
+        "dependencies between different parts of the logic.",
+        "The same can be true of a complex single-step task submitted to a language model."
+      ],
+      "result": [
+        "同时使用所有食材，并要确保每个菜都煮得火候刚好，这是一件非常有挑战的事。",
+        "另一方面，链式Prompt（Chaining prompts）就像分阶段做一桌饭菜，你可以集中注意力",
+        "一次处理一个菜，确保每个菜在做下一个菜之前都煮好了。",
+        "这种方法将任务的复杂性分解，使其更易于管理，降低出错的可能性。",
+        "当然，要是做一顿非常简单的饭菜，这种方法可能是不必要的，过于复杂。",
+        "对于这件事，对于有些程序经验的同学来说，一个更好的类比是",
+        "意大利面条式代码，所有代码都在一个长文件中，整个程序只有一个模块。",
+        "之所以意大利面条式代码难以阅读并且难以调试，主要原因是其模糊性和复杂的",
+        "逻辑部分之间的依赖关系。",
+        "对于提交给语言模型的复杂单步任务，也是类似的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 540
+          },
+          "text": "Chaining prompts is a powerful strategy when you have a workflow where you can maintain"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 660
+          },
+          "text": "the state of the system at any given point and take different actions depending on the current state."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 420
+          },
+          "text": "An example of the current state would be after you've classified an incoming customer query,"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 20
+          },
+          "text": "the state would be the classification, so it's an account question or it's a product question."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 980
+          },
+          "text": "And then based on the state, you might do something different."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 380
+          },
+          "text": "Each subtask contains only the instructions required for a single state of the task, which"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 500
+          },
+          "text": "makes the system easier to manage, makes sure the model has all the information it needs"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 10,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 560
+          },
+          "text": "to carry out a task, and reduces the likelihood of errors, as I mentioned."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 15,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 60
+          },
+          "text": "This approach can also reduce and lower costs, since longer prompts with more tokens cost"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 940
+          },
+          "text": "more to run, and outlining all steps might be unnecessary in some cases."
+        }
+      ],
+      "source": [
+        "Chaining prompts is a powerful strategy when you have a workflow where you can maintain",
+        "the state of the system at any given point and take different actions depending on the current state.",
+        "An example of the current state would be after you've classified an incoming customer query,",
+        "the state would be the classification, so it's an account question or it's a product question.",
+        "And then based on the state, you might do something different.",
+        "Each subtask contains only the instructions required for a single state of the task, which",
+        "makes the system easier to manage, makes sure the model has all the information it needs",
+        "to carry out a task, and reduces the likelihood of errors, as I mentioned.",
+        "This approach can also reduce and lower costs, since longer prompts with more tokens cost",
+        "more to run, and outlining all steps might be unnecessary in some cases."
+      ],
+      "result": [
+        "链式Prompt这种策略很强大，你设计一个工作流，",
+        "把各种中间状态保存下来，然后根据当前的状态决定后续操作。",
+        "举一个例子，当客户查询后，你根据查询的内容对它进行分类，",
+        "那么当前的状态将是分类，从分类结果可以得知它是一个账户问题或者是一个产品问题。",
+        "然后根据这个状态的分类结果，你可以采取不同的行动。",
+        "每个子任务很单一，只需要包含执行子任务所需的指令，这使得",
+        "系统更容易管理，确保模型具有执行任务所需的所有信息",
+        "并减少错误的可能性，正如我前面提到的那样。",
+        "这种方法还可以降低成本，因为Prompt越长，消耗的Token就越多，成本越高，",
+        "而在某些情况下，在Prompt中列出所有步骤可能是不必要的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 24,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 980
+          },
+          "text": "Another benefit of this approach is that it is also easier to test which steps might be"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 380
+          },
+          "text": "failing more often, or to have a human in the loop at a specific step."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 900
+          },
+          "text": "So to summarize, because this was a long explanation, instead of describing a whole complex workflow"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 420
+          },
+          "text": "in dozens of bullet points or several paragraphs in one prompt, like in the previous video,"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 480
+          },
+          "text": "it might be better to keep track of the state externally and then inject relevant instructions as needed."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 220
+          },
+          "text": "And what makes a problem complex?"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 420
+          },
+          "text": "I think in general a problem is complex if there are many different instructions, and"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 620
+          },
+          "text": "potentially all of them could apply to any given situation, as these are the cases where"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 58,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 500
+          },
+          "text": "it could become hard for the model to reason about what to do."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 760
+          },
+          "text": "And as you build with and interact with these models more, you'll gain an intuition for"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 4,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 540
+          },
+          "text": "when to use this strategy versus the previous."
+        }
+      ],
+      "source": [
+        "Another benefit of this approach is that it is also easier to test which steps might be",
+        "failing more often, or to have a human in the loop at a specific step.",
+        "So to summarize, because this was a long explanation, instead of describing a whole complex workflow",
+        "in dozens of bullet points or several paragraphs in one prompt, like in the previous video,",
+        "it might be better to keep track of the state externally and then inject relevant instructions as needed.",
+        "And what makes a problem complex?",
+        "I think in general a problem is complex if there are many different instructions, and",
+        "potentially all of them could apply to any given situation, as these are the cases where",
+        "it could become hard for the model to reason about what to do.",
+        "And as you build with and interact with these models more, you'll gain an intuition for",
+        "when to use this strategy versus the previous."
+      ],
+      "result": [
+        "这种方法的另一个好处是，它也更容易测试哪些步骤可能",
+        "更容易出错，或者在特定步骤中让人工介入。",
+        "所以总结一下，因为这是一个很长的解释，与其在一个Prompt中",
+        "用几十个要点或几段文字描述一个复杂的工作流程，就像在之前的视频中那样，",
+        "不如在外部跟踪状态，然后根据需要注入相应的指令。",
+        "那么，是什么使问题变得复杂？",
+        "我认为一般来说，如果有很多不同的指令，并且",
+        "潜在地所有这些指令都可能适用于任何给定的情况，那么问题就会",
+        "变得复杂，因为这些情况可能会让模型难以推理该做什么。",
+        "随着您与这些模型的构建和互动越来越多，您将能",
+        "更直观的了解，何时使用这种链式Prompt的策略还是之前一条复杂Prompt的策略。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 140
+          },
+          "text": "And one additional benefit that I didn't mention yet, is that it also allows the model to use"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 380
+          },
+          "text": "external tools at certain points of the workflow if necessary."
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 220
+          },
+          "text": "For example, it might decide to look something up in a product catalog, or call an API, or search a knowledge base."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 140
+          },
+          "text": "Something that could not be achieved with a single prompt."
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 29,
+            "milliseconds": 200
+          },
+          "text": "So with that, let's dive into an example."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 29,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 780
+          },
+          "text": "So we're going to use the same example as in the previous video, where we want to answer"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 460
+          },
+          "text": "a customer's question about a specific product."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 35,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 560
+          },
+          "text": "But this time we'll use more products, and also break the steps down into a number of different prompts."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 900
+          },
+          "text": "So we'll use the same delimiter that we've been using in the previous videos."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 47,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 180
+          },
+          "text": "And let's read through our system message."
+        }
+      ],
+      "source": [
+        "And one additional benefit that I didn't mention yet, is that it also allows the model to use",
+        "external tools at certain points of the workflow if necessary.",
+        "For example, it might decide to look something up in a product catalog, or call an API, or search a knowledge base.",
+        "Something that could not be achieved with a single prompt.",
+        "So with that, let's dive into an example.",
+        "So we're going to use the same example as in the previous video, where we want to answer",
+        "a customer's question about a specific product.",
+        "But this time we'll use more products, and also break the steps down into a number of different prompts.",
+        "So we'll use the same delimiter that we've been using in the previous videos.",
+        "And let's read through our system message."
+      ],
+      "result": [
+        "还有一点我没提到的额外好处：它还允许",
+        "模型在必要时在工作流程的某些点调用外部工具。",
+        "例如，它可以在产品目录中查找某些信息，或者调用API，或者搜索知识库。",
+        "这是单个Prompt无法实现的。",
+        "接下来让我们通过一个例子来深入了解。",
+        "我们将使用与上一个视频相同的例子，我们想回答",
+        "关于特定产品的客户问题。",
+        "但这次我们将使用更多的产品，并将步骤分解为多个不同的Prompt。",
+        "我们将使用与之前视频相同的分隔符。",
+        "让我们阅读一下系统消息。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 600
+          },
+          "text": "You will be provided with customer service queries."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 780
+          },
+          "text": "The customer service query will be delimited with four hashtag characters."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 900
+          },
+          "text": "Output a Python list of objects where each object has the following format."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 260
+          },
+          "text": "Category, which is one of these predefined fields."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 80
+          },
+          "text": "Or products."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 580
+          },
+          "text": "And this is a list of products that must be found in the allowed products below."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 19,
+            "milliseconds": 780
+          },
+          "text": "Where the categories and products must be found in the customer service query."
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 19,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 740
+          },
+          "text": "If a product is mentioned, it must be associated with the correct category in the allowed products list below."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 500
+          },
+          "text": "If no products or categories are found, output an empty list."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 27,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 700
+          },
+          "text": "And so now we have our allowed list of products."
+        }
+      ],
+      "source": [
+        "You will be provided with customer service queries.",
+        "The customer service query will be delimited with four hashtag characters.",
+        "Output a Python list of objects where each object has the following format.",
+        "Category, which is one of these predefined fields.",
+        "Or products.",
+        "And this is a list of products that must be found in the allowed products below.",
+        "Where the categories and products must be found in the customer service query.",
+        "If a product is mentioned, it must be associated with the correct category in the allowed products list below.",
+        "If no products or categories are found, output an empty list.",
+        "And so now we have our allowed list of products."
+      ],
+      "result": [
+        "您将要处理一段客户服务查询。",
+        "客户服务查询内容会以四个井号字符分隔。",
+        "输出一个Python对象列表，其中每个对象具有以下格式：",
+        "类别，这是以下预定义字段之一。",
+        "或产品。",
+        "这是一个产品列表，必须在下面的允许产品中找到。",
+        "类别和产品必须在客户服务查询中找到。",
+        "如果提到了产品，必须将其与下面允许产品列表中的正确类别关联。",
+        "如果没有找到产品或类别，请输出一个空列表。",
+        "现在我们有了允许的产品列表。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 36,
+            "milliseconds": 60
+          },
+          "text": "So we have the categories and then the products within those categories."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 36,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 43,
+            "milliseconds": 780
+          },
+          "text": "And our final instruction is only output the list of objects with nothing else."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 43,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 180
+          },
+          "text": "So next we have our user message."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 460
+          },
+          "text": "And so this message is: \"tell me about the smartx pro phone and the fotosnap camera, the dslr one."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 53,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 420
+          },
+          "text": "Also tell me about your TVs.\""
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 55,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 20
+          },
+          "text": "So we're asking about two specific products."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 860
+          },
+          "text": "And also this general category of televisions."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 420
+          },
+          "text": "And both of these products are mentioned in the allowed products list."
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 7,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 11,
+            "milliseconds": 620
+          },
+          "text": "And then we have a television section as well."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 11,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 420
+          },
+          "text": "Then we format the system message and user message into the messages array."
+        }
+      ],
+      "source": [
+        "So we have the categories and then the products within those categories.",
+        "And our final instruction is only output the list of objects with nothing else.",
+        "So next we have our user message.",
+        "And so this message is: \"tell me about the smartx pro phone and the fotosnap camera, the dslr one.",
+        "Also tell me about your TVs.\"",
+        "So we're asking about two specific products.",
+        "And also this general category of televisions.",
+        "And both of these products are mentioned in the allowed products list.",
+        "And then we have a television section as well.",
+        "Then we format the system message and user message into the messages array."
+      ],
+      "result": [
+        "所以我们有类别，然后是这些类别中的产品。",
+        "我们最后的指示是仅输出对象列表，不包含其他内容。",
+        "接下来我们有用户消息。",
+        "所以这个消息是：“告诉我关于smartx pro手机和fotosnap相机，那个单反的。",
+        "还告诉我你们有哪些电视。”",
+        "用户询问了两个特定的产品（手机和相机）。",
+        "还有电视这个类别。",
+        "这两个产品都在允许的产品列表中。",
+        "然后还有一个电视部分。",
+        "将系统消息和用户消息格式化为消息数组。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 60
+          },
+          "text": "And then we get the completion from the model."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 980
+          },
+          "text": "So as you can see, for our output, we have a list of objects."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 30,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 180
+          },
+          "text": "And each object has category and products."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 35,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 140
+          },
+          "text": "So we have the SmartX Pro phone and the FotoSnap DSLR Camera."
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 60
+          },
+          "text": "And then in the final object, we actually only have a category because we didn't mention any specific TVs."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 48,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 660
+          },
+          "text": "And so the benefit of outputting this structured response is that we can then read it into a list in Python, which is very nice."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 58,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 660
+          },
+          "text": "And so let's try another example."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 980
+          },
+          "text": "So our second user message is: \"my router isn't working.\""
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 7,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 20
+          },
+          "text": "And if you notice in the list, we don't actually have any routers."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 580
+          },
+          "text": "And then let's format this correctly and get the completion."
+        }
+      ],
+      "source": [
+        "And then we get the completion from the model.",
+        "So as you can see, for our output, we have a list of objects.",
+        "And each object has category and products.",
+        "So we have the SmartX Pro phone and the FotoSnap DSLR Camera.",
+        "And then in the final object, we actually only have a category because we didn't mention any specific TVs.",
+        "And so the benefit of outputting this structured response is that we can then read it into a list in Python, which is very nice.",
+        "And so let's try another example.",
+        "So our second user message is: \"my router isn't working.\"",
+        "And if you notice in the list, we don't actually have any routers.",
+        "And then let's format this correctly and get the completion."
+      ],
+      "result": [
+        "然后我们从模型中得到结果。",
+        "如你所见，对于我们的输出，我们有一个对象列表。",
+        "每个对象都有类别和产品。",
+        "我们有SmartX Pro手机和FotoSnap DSLR相机。",
+        "在最后一个对象中，我们实际上只有一个类别，因为我们没有提到任何特定的电视。",
+        "输出这种结构化响应的好处是我们可以将其读入并解析为一个Python列表，这非常好。",
+        "那么让我们再试一个例子。",
+        "我们的第二个用户消息是：“我的路由器不能用。”",
+        "如果你注意到我们的列表中，实际上没有任何路由器。",
+        "让我们组织好消息内容，并从模型获得结果。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 20,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 460
+          },
+          "text": "And so as you can see, in this case, the output is an empty list."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 841
+          },
+          "text": "And so now that we have this step to identify the category and products,"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 28,
+            "milliseconds": 842
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 100
+          },
+          "text": "if we find any products and categories, we want to load some information about those requested products"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 34,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 420
+          },
+          "text": "and categories into the prompt so that we can better answer the customer question."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 60
+          },
+          "text": "And so in our workflow, the state now after this prompt is run is either products have been listed or they haven't been listed."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 100
+          },
+          "text": "And in that case, we wouldn't try to look anything up because there's nothing to look up."
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 757
+          },
+          "text": "And so if I were to actually build this into a system, I might use category names,"
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 55,
+            "milliseconds": 758
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 260
+          },
+          "text": "maybe something like computers and laptops or something to avoid any weirdness with spaces and special characters."
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 5,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 500
+          },
+          "text": "But this should work for now."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 7,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 11,
+            "milliseconds": 160
+          },
+          "text": "So now we want to look up some information about the products that the user mentioned."
+        }
+      ],
+      "source": [
+        "And so as you can see, in this case, the output is an empty list.",
+        "And so now that we have this step to identify the category and products,",
+        "if we find any products and categories, we want to load some information about those requested products",
+        "and categories into the prompt so that we can better answer the customer question.",
+        "And so in our workflow, the state now after this prompt is run is either products have been listed or they haven't been listed.",
+        "And in that case, we wouldn't try to look anything up because there's nothing to look up.",
+        "And so if I were to actually build this into a system, I might use category names,",
+        "maybe something like computers and laptops or something to avoid any weirdness with spaces and special characters.",
+        "But this should work for now.",
+        "So now we want to look up some information about the products that the user mentioned."
+      ],
+      "result": [
+        "如您所见，在这种情况下，输出是一个空列表。",
+        "现在我们有了这个步骤来识别类别和产品，",
+        "如果找到了任何产品和类别，我们希望将有关这些请求产品的一些信息",
+        "和类别，都加入到Prompt中，以便我们更好地回答客户问题。",
+        "在我们的工作流程中，现在在这个Prompt运行之后的状态，要么是列出了产品，要么是没有列出产品。",
+        "如果是没有列出产品的情况，我们不会尝试查找任何东西，因为没有东西可供查找。",
+        "如果我要把这个功能真正地构建成一个系统，我可能会使用类别名称，",
+        "也许像计算机和笔记本电脑之类的东西，以避免空格和特殊字符带来的奇怪问题。",
+        "但现在这应该可以工作。",
+        "现在我们想查找一些关于用户提到的产品的信息。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 11,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 100
+          },
+          "text": "So about this phone, this camera, and about the TVs in general."
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 15,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 19,
+            "milliseconds": 20
+          },
+          "text": "And so we need to have some kind of product catalog to look up this information from."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 19,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 24,
+            "milliseconds": 620
+          },
+          "text": "So here we have our product information that I just pasted in."
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 24,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 660
+          },
+          "text": "So as you can see, we have a large number of products available at our store."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 32,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 100
+          },
+          "text": "And all of these products are fake and were actually generated by GPT-4."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 38,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 20
+          },
+          "text": "And so for each product, we have a couple of different fields."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 960
+          },
+          "text": "We have name, category, brand, warranty, and so on."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 46,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 700
+          },
+          "text": "And so the products is just a dictionary from product name to this object that contains the information about the product."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 55,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 57,
+            "milliseconds": 780
+          },
+          "text": "Notice that each product has a category."
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 57,
+            "milliseconds": 780
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 580
+          },
+          "text": "So remember, we want to look up information about the products that the user asks about."
+        }
+      ],
+      "source": [
+        "So about this phone, this camera, and about the TVs in general.",
+        "And so we need to have some kind of product catalog to look up this information from.",
+        "So here we have our product information that I just pasted in.",
+        "So as you can see, we have a large number of products available at our store.",
+        "And all of these products are fake and were actually generated by GPT-4.",
+        "And so for each product, we have a couple of different fields.",
+        "We have name, category, brand, warranty, and so on.",
+        "And so the products is just a dictionary from product name to this object that contains the information about the product.",
+        "Notice that each product has a category.",
+        "So remember, we want to look up information about the products that the user asks about."
+      ],
+      "result": [
+        "关于这种手机、这种相机和电视机。",
+        "我们需要有个产品目录来查找这些信息。",
+        "这里有我刚刚粘贴的产品信息。",
+        "如您所见，我们的商店有大量的产品。",
+        "而所有这些产品都是假的，实际上是由GPT-4生成的。",
+        "对于每个产品，我们有几个不同的字段，",
+        "有：名称、类别、品牌、保修等等。",
+        "\"products\"只是一个从产品名称到包含产品信息的对象的字典。",
+        "注意每个产品都有一个类别。",
+        "请记住，我们要查找用户询问的产品的信息。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 820
+          },
+          "text": "So we need to define some helper functions to allow us to look up product information by product name."
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 8,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 14,
+            "milliseconds": 700
+          },
+          "text": "So let's create a function, get product by name."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 14,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 17,
+            "milliseconds": 100
+          },
+          "text": "We input the name."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 17,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 560
+          },
+          "text": "And then we're going to return products dictionary, and we're going to get the value for the item with the name as the key."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 26,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 29,
+            "milliseconds": 440
+          },
+          "text": "And then our fallback is just going to be none."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 29,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 34,
+            "milliseconds": 340
+          },
+          "text": "And so we also want to define another helper function to get all of the products for a certain category."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 34,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 37,
+            "milliseconds": 606
+          },
+          "text": "For example, when the user is asking about the TVs we have,"
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 37,
+            "milliseconds": 607
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 560
+          },
+          "text": "we'd want to load all of the information about all of the different TVs."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 220
+          },
+          "text": "So get products by category, input the category name string."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 51,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 57,
+            "milliseconds": 560
+          },
+          "text": "And to do this, we want to loop through all of the products in the products dictionary,"
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 57,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "text": "and check each one to see if the category is equal to the input category."
+        }
+      ],
+      "source": [
+        "So we need to define some helper functions to allow us to look up product information by product name.",
+        "So let's create a function, get product by name.",
+        "We input the name.",
+        "And then we're going to return products dictionary, and we're going to get the value for the item with the name as the key.",
+        "And then our fallback is just going to be none.",
+        "And so we also want to define another helper function to get all of the products for a certain category.",
+        "For example, when the user is asking about the TVs we have,",
+        "we'd want to load all of the information about all of the different TVs.",
+        "So get products by category, input the category name string.",
+        "And to do this, we want to loop through all of the products in the products dictionary,",
+        "and check each one to see if the category is equal to the input category."
+      ],
+      "result": [
+        "我们需要定义一些辅助函数，以便根据产品名称查找产品信息。",
+        "让我们创建一个函数，可以用来根据名称获取产品。",
+        "我们输入名称。",
+        "我们将返回产品字典，我们将从字典中获取key是name的值。",
+        "我们的备选方案暂时没有。",
+        "我们还想定义另一个辅助函数，以获取某个类别的所有产品。",
+        "例如，当用户向我们询问电视时，",
+        "我们希望加载所有的不同的电视的所有信息。",
+        "通过输入类别名称来获取类别下的产品。",
+        "为此，我们要遍历产品字典中的所有产品，",
+        "并检查所有离别和要查询类别相同的产品。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 4,
+            "milliseconds": 840
+          },
+          "text": "And if so, we want to return that."
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 4,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 7,
+            "milliseconds": 920
+          },
+          "text": "So we'll do this as follows."
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 7,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 12,
+            "milliseconds": 520
+          },
+          "text": "So first, we want to loop through each product, and we have to get the values because we need"
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 12,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 300
+          },
+          "text": "to actually access the category, which is in the value."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 18,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 37,
+            "milliseconds": 60
+          },
+          "text": "And then we'll return this product if the product category is equal to our input category."
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 37,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 220
+          },
+          "text": "So let's do an example for each of these helper functions."
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 42,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 300
+          },
+          "text": "So first, we have a product called the TechPro Ultrabook."
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 860
+          },
+          "text": "So let's get the product information by name."
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 51,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 260
+          },
+          "text": "So here you can see we've just fetched all of the product information."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 57,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 660
+          },
+          "text": "And let's do an example to get all of the products for a category."
+        }
+      ],
+      "source": [
+        "And if so, we want to return that.",
+        "So we'll do this as follows.",
+        "So first, we want to loop through each product, and we have to get the values because we need",
+        "to actually access the category, which is in the value.",
+        "And then we'll return this product if the product category is equal to our input category.",
+        "So let's do an example for each of these helper functions.",
+        "So first, we have a product called the TechPro Ultrabook.",
+        "So let's get the product information by name.",
+        "So here you can see we've just fetched all of the product information.",
+        "And let's do an example to get all of the products for a category."
+      ],
+      "result": [
+        "如果是这样，我们想要返回这个。",
+        "我们将按照以下方式进行。",
+        "首先，我们要遍历每个产品，我们必须获取值，因为我们需要",
+        "实际访问值中的类别。",
+        "然后，如果产品类别等于我们的输入类别，我们将返回此产品。",
+        "让我们为这些辅助函数的每一个做一个例子。",
+        "首先，我们有一个名为TechPro Ultrabook的产品。",
+        "让我们通过名称获取产品信息。",
+        "在这里，您可以看到我们刚刚获取了所有产品信息。",
+        "让我们举一个例子，获取一个类别的所有产品。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 0,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 20
+          },
+          "text": "So let's get all of the products in the computers and laptops category."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 7,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 20
+          },
+          "text": "So here you see we fetched all of the products with this category."
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 17,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 980
+          },
+          "text": "So let's continue our example."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 20,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 24,
+            "milliseconds": 420
+          },
+          "text": "And just to remember where we are, let's print the user message."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 24,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 30,
+            "milliseconds": 540
+          },
+          "text": "So the user message was: \"Tell me about the SmartX Pro phone and the camera and the TVs.\""
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 30,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 36,
+            "milliseconds": 260
+          },
+          "text": "And then the initial output from the model from the first step was this."
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 36,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 220
+          },
+          "text": "And so what we also need to do is read this output from the model, which is a string."
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 41,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 49,
+            "milliseconds": 300
+          },
+          "text": "We need to pass that into a list so that we can use it as input to the helper functions that we just wrote."
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 49,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 940
+          },
+          "text": "So let's write a helper function to do this."
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 54,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 420
+          },
+          "text": "So we're going to use the Python JSON module."
+        }
+      ],
+      "source": [
+        "So let's get all of the products in the computers and laptops category.",
+        "So here you see we fetched all of the products with this category.",
+        "So let's continue our example.",
+        "And just to remember where we are, let's print the user message.",
+        "So the user message was: \"Tell me about the SmartX Pro phone and the camera and the TVs.\"",
+        "And then the initial output from the model from the first step was this.",
+        "And so what we also need to do is read this output from the model, which is a string.",
+        "We need to pass that into a list so that we can use it as input to the helper functions that we just wrote.",
+        "So let's write a helper function to do this.",
+        "So we're going to use the Python JSON module."
+      ],
+      "result": [
+        "那么让我们获取计算机和笔记本电脑类别中的所有产品。",
+        "在这里你可以看到我们获取了这个类别下的所有产品。",
+        "那么让我们继续我们的例子。",
+        "为了记住我们在哪里，让我们打印用户消息。",
+        "用户消息是：\"告诉我关于SmartX Pro手机、相机和电视的信息。\"",
+        "这就是第一步模型的初始输出。",
+        "还需要做的是阅读模型的这个输出，它是一个字符串。",
+        "我们需要将其解析成一个列表，以便输入到刚刚编写的辅助函数中。",
+        "让我们编写一个辅助函数来完成这个任务。",
+        "我们将使用Python的JSON模块。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 58,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 860
+          },
+          "text": "And we're going to write a function called read_string_to_list, a very descriptive title, and input string."
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 9,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 20
+          },
+          "text": "And so first we'll just check if the input string is none."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 16,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 300
+          },
+          "text": "In case something in a previous step failed, we're just going to return nothing."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 22,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 520
+          },
+          "text": "And now we're going to have a try except block to make sure that we catch any errors."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 29,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 20
+          },
+          "text": "And so first we replace any single quotes with double quotes in the input string to"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 37,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 180
+          },
+          "text": "make sure we can pass the JSON."
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 39,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 47,
+            "milliseconds": 380
+          },
+          "text": "And then we're going to use the JSON loads function to read the input string into the array or the list."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 47,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 49,
+            "milliseconds": 580
+          },
+          "text": "And then we're going to return this."
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 49,
+            "milliseconds": 580
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 55,
+            "milliseconds": 720
+          },
+          "text": "And if there's a decode error, we're going to print the error and then return none."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 55,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 540
+          },
+          "text": "So let's try this with our example."
+        }
+      ],
+      "source": [
+        "And we're going to write a function called read_string_to_list, a very descriptive title, and input string.",
+        "And so first we'll just check if the input string is none.",
+        "In case something in a previous step failed, we're just going to return nothing.",
+        "And now we're going to have a try except block to make sure that we catch any errors.",
+        "And so first we replace any single quotes with double quotes in the input string to",
+        "make sure we can pass the JSON.",
+        "And then we're going to use the JSON loads function to read the input string into the array or the list.",
+        "And then we're going to return this.",
+        "And if there's a decode error, we're going to print the error and then return none.",
+        "So let's try this with our example."
+      ],
+      "result": [
+        "我们将编写一个名为read_string_to_list的函数，这是函数名很直观，读取字符串到列表。",
+        "首先，我们将检查输入字符串是否为空。",
+        "如果前面的步骤中出现了问题，返回空。",
+        "现在我们将加上try except块来确保捕获任何错误。",
+        "将输入字符串中的任何单引号替换为双引号，以便",
+        "确保我们可以解析JSON。",
+        "然后使用JSON loads函数将输入的字符串解析成数组或列表。",
+        "然后将结果返回。",
+        "如果出现解码错误，就打印错误，返回none。",
+        "让我们用之前的例子测试一下。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 11,
+            "seconds": 58,
+            "milliseconds": 540
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "text": "So we're going to get our category and product list using the read_string_to_list helper function"
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 7,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 10,
+            "milliseconds": 500
+          },
+          "text": "and apply it to this response from the model."
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 10,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 200
+          },
+          "text": "And then we're going to print this list."
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 13,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 15,
+            "milliseconds": 340
+          },
+          "text": "So it should look the same."
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 15,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 380
+          },
+          "text": "Let me run this first."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 17,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 860
+          },
+          "text": "And so as you can see, it's just the same thing except now the type of this variable is actually a list instead of a string."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 25,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 29,
+            "milliseconds": 760
+          },
+          "text": "So the whole point of what we're doing is to get the product information into a list"
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 29,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 20
+          },
+          "text": "that we can add to the next instruction to the model, which is going to be the instruction"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 34,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 36,
+            "milliseconds": 740
+          },
+          "text": "where we ask it to answer the user question."
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 36,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 41,
+            "milliseconds": 620
+          },
+          "text": "And so to do this, we need to put the product information into a nice string format that"
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 41,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 940
+          },
+          "text": "we can add to the prompt."
+        }
+      ],
+      "source": [
+        "So we're going to get our category and product list using the read_string_to_list helper function",
+        "and apply it to this response from the model.",
+        "And then we're going to print this list.",
+        "So it should look the same.",
+        "Let me run this first.",
+        "And so as you can see, it's just the same thing except now the type of this variable is actually a list instead of a string.",
+        "So the whole point of what we're doing is to get the product information into a list",
+        "that we can add to the next instruction to the model, which is going to be the instruction",
+        "where we ask it to answer the user question.",
+        "And so to do this, we need to put the product information into a nice string format that",
+        "we can add to the prompt."
+      ],
+      "result": [
+        "我们将使用read_string_to_list辅助函数获取类别和产品列表",
+        "并将模型的返回结果传给它。",
+        "然后打印解析出来的列表。",
+        "它应该看起来是一样的。",
+        "让我先运行这个。",
+        "正如你所看到的，两者的内容是一样的，只是现在这个变量的类型是列表而不是字符串。",
+        "这么做的目的是用一个列表来保存这些产品信息",
+        "接下来将其添加到下一条指令给模型，生成",
+        "回答用户问题的指令。",
+        "为了做到这一点，我们需要将产品信息格式化成字符串，",
+        "然后将其添加到Prompt中。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 42,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 460
+          },
+          "text": "And so let's also create a helper function to do this."
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 47,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 460
+          },
+          "text": "So we're going to call it generate_output_string."
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 50,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 54,
+            "milliseconds": 180
+          },
+          "text": "And it's going to take in the list of data that we just created."
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 54,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 620
+          },
+          "text": "So this."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 12,
+            "seconds": 56,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 740
+          },
+          "text": "And then I'm going to copy in some code and then we'll walk through what it's doing."
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 0,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 260
+          },
+          "text": "So now I'm going to paste in some code and show you an example and then we'll talk about what this function is doing."
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 6,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 12,
+            "milliseconds": 220
+          },
+          "text": "So we're going to get the product information from our first user message."
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 12,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 823
+          },
+          "text": "And so we're going to use this helper function generate_output_string on our category and product list,"
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 16,
+            "milliseconds": 824
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 23,
+            "milliseconds": 600
+          },
+          "text": "which if we remember was this."
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 23,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 860
+          },
+          "text": "And so here we have all of the product information for the products that were mentioned in the user message."
+        }
+      ],
+      "source": [
+        "And so let's also create a helper function to do this.",
+        "So we're going to call it generate_output_string.",
+        "And it's going to take in the list of data that we just created.",
+        "So this.",
+        "And then I'm going to copy in some code and then we'll walk through what it's doing.",
+        "So now I'm going to paste in some code and show you an example and then we'll talk about what this function is doing.",
+        "So we're going to get the product information from our first user message.",
+        "And so we're going to use this helper function generate_output_string on our category and product list,",
+        "which if we remember was this.",
+        "And so here we have all of the product information for the products that were mentioned in the user message."
+      ],
+      "result": [
+        "让我们创建另一个辅助函数来完成这个任务。",
+        "我们将它命名为generate_output_string。",
+        "它将接收我们刚刚生成的数据列表。",
+        "就像这样。",
+        "然后我将复制一些代码，然后来讲解它的功能。",
+        "现在我将粘贴一些代码，给你们看一个例子，然后我们将讨论这个函数的作用。",
+        "我们将从第一个用户消息中获取产品信息。",
+        "接下来我们将在类别和产品列表上使用这个辅助函数generate_output_string，",
+        "如果你还记得的话，就是这个。",
+        "在这里，我们有了用户消息中提到的所有产品的产品信息。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 31,
+            "milliseconds": 860
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 20
+          },
+          "text": "So we have the phone that they mentioned, we have the camera that they mentioned, and"
+        },
+        {
+          "id": "165",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 36,
+            "milliseconds": 20
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 42,
+            "milliseconds": 220
+          },
+          "text": "then we have all of the product information for all of our TVs."
+        },
+        {
+          "id": "166",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 42,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 49,
+            "milliseconds": 60
+          },
+          "text": "And this is information that will be helpful for the model to be able to answer the user's initial question."
+        },
+        {
+          "id": "167",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 49,
+            "milliseconds": 61
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 51,
+            "milliseconds": 347
+          },
+          "text": "And if you're interested in how this function works,"
+        },
+        {
+          "id": "168",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 51,
+            "milliseconds": 348
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 57,
+            "milliseconds": 260
+          },
+          "text": "I'll give a brief overview, but you can feel free to pause the video and read it more thoroughly."
+        },
+        {
+          "id": "169",
+          "startTime": {
+            "hours": 0,
+            "minutes": 13,
+            "seconds": 57,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 660
+          },
+          "text": "So it basically just loops through all of the objects in this list and first checks if there are products."
+        },
+        {
+          "id": "170",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 3,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 260
+          },
+          "text": "If so, it gets the information for each product and then it checks if there's a category,"
+        },
+        {
+          "id": "171",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 9,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 460
+          },
+          "text": "if there weren't any products."
+        },
+        {
+          "id": "172",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 10,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 640
+          },
+          "text": "So that would be for this object, for example."
+        },
+        {
+          "id": "173",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 14,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 22,
+            "milliseconds": 520
+          },
+          "text": "And then it gets all of the product information for the products in that category and it just adds them to this string."
+        }
+      ],
+      "source": [
+        "So we have the phone that they mentioned, we have the camera that they mentioned, and",
+        "then we have all of the product information for all of our TVs.",
+        "And this is information that will be helpful for the model to be able to answer the user's initial question.",
+        "And if you're interested in how this function works,",
+        "I'll give a brief overview, but you can feel free to pause the video and read it more thoroughly.",
+        "So it basically just loops through all of the objects in this list and first checks if there are products.",
+        "If so, it gets the information for each product and then it checks if there's a category,",
+        "if there weren't any products.",
+        "So that would be for this object, for example.",
+        "And then it gets all of the product information for the products in that category and it just adds them to this string."
+      ],
+      "result": [
+        "我们有用户提到的手机，有用户提到的相机，还有",
+        "然后我们有所有电视的产品信息。",
+        "这些信息将有助于模型回答用户的初始问题。",
+        "如果您对这个功能的工作原理感兴趣，",
+        "我会简要概述一下，但您可以随时暂停视频并仔细阅读。",
+        "它基本上只是遍历这个列表中的所有对象，首先检查是否有产品。",
+        "如果有，它会获取每个产品的信息，然后检查是否有类别，",
+        "如果没有找到任何产品。",
+        "举例来说，这就是类别的对象。",
+        "然后它获取该类别中所有产品的产品信息，并将它们添加到此字符串中。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "174",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 22,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 24,
+            "milliseconds": 760
+          },
+          "text": "And then that's what it returns."
+        },
+        {
+          "id": "175",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 24,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 29,
+            "milliseconds": 960
+          },
+          "text": "So at this point, we've found the relevant product information to answer the user question."
+        },
+        {
+          "id": "176",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 29,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 920
+          },
+          "text": "Now it's time for the model to actually answer the question."
+        },
+        {
+          "id": "177",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 32,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 440
+          },
+          "text": "So let's have our system message."
+        },
+        {
+          "id": "178",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 36,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 38,
+            "milliseconds": 600
+          },
+          "text": "So this is the instruction."
+        },
+        {
+          "id": "179",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 38,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 41,
+            "milliseconds": 720
+          },
+          "text": "You're a customer service assistant for a large electronics store."
+        },
+        {
+          "id": "180",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 41,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 47,
+            "milliseconds": 0
+          },
+          "text": "Respond in a friendly and helpful tone with, let's say, with very concise answers."
+        },
+        {
+          "id": "181",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 47,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 200
+          },
+          "text": "Make sure to ask the user relevant follow-up questions."
+        },
+        {
+          "id": "182",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 49,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 52,
+            "milliseconds": 820
+          },
+          "text": "So we want this to be an interactive experience for the user."
+        },
+        {
+          "id": "183",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 52,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 56,
+            "milliseconds": 640
+          },
+          "text": "And so just as a reminder, this was our initial user message."
+        }
+      ],
+      "source": [
+        "And then that's what it returns.",
+        "So at this point, we've found the relevant product information to answer the user question.",
+        "Now it's time for the model to actually answer the question.",
+        "So let's have our system message.",
+        "So this is the instruction.",
+        "You're a customer service assistant for a large electronics store.",
+        "Respond in a friendly and helpful tone with, let's say, with very concise answers.",
+        "Make sure to ask the user relevant follow-up questions.",
+        "So we want this to be an interactive experience for the user.",
+        "And so just as a reminder, this was our initial user message."
+      ],
+      "result": [
+        "然后就是它返回的内容。",
+        "目前为止，我们已经找到了相关的产品信息来回答用户的问题。",
+        "现在是时候让模型来正式回复这个问题了。",
+        "那么让我们来看看系统消息。",
+        "这是指示：",
+        "“你是一家大型电子商店的客户服务助手。",
+        "以友好、有帮助的语气回答，我们可以说，非常简洁的答案。",
+        "确保向用户提出相关的后续问题。”",
+        "我们希望这对用户来说是一种互动体验。",
+        "那么，作为提醒，这是我们最初的用户消息。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "184",
+          "startTime": {
+            "hours": 0,
+            "minutes": 14,
+            "seconds": 56,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 0,
+            "milliseconds": 200
+          },
+          "text": "I'll just add it again."
+        },
+        {
+          "id": "185",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 0,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 4,
+            "milliseconds": 560
+          },
+          "text": "And so now we're going to have our messages array."
+        },
+        {
+          "id": "186",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 4,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 6,
+            "milliseconds": 160
+          },
+          "text": "And this is the input to the model."
+        },
+        {
+          "id": "187",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 6,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 200
+          },
+          "text": "So let's go through this."
+        },
+        {
+          "id": "188",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 7,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 11,
+            "milliseconds": 920
+          },
+          "text": "We have our first message, which is the system message as usual."
+        },
+        {
+          "id": "189",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 11,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 14,
+            "milliseconds": 800
+          },
+          "text": "We have the user message."
+        },
+        {
+          "id": "190",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 14,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 20,
+            "milliseconds": 280
+          },
+          "text": "And then we have this additional assistant message."
+        },
+        {
+          "id": "191",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 20,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 24,
+            "milliseconds": 680
+          },
+          "text": "And this is the message that contains all of the product information that we just looked up."
+        },
+        {
+          "id": "192",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 24,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 32,
+            "milliseconds": 840
+          },
+          "text": "And so we're saying relevant product information, new line, and then this product information that we just found."
+        },
+        {
+          "id": "193",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 32,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 38,
+            "milliseconds": 360
+          },
+          "text": "And so now the model has the relevant context it needs to be able to answer this user's question."
+        }
+      ],
+      "source": [
+        "I'll just add it again.",
+        "And so now we're going to have our messages array.",
+        "And this is the input to the model.",
+        "So let's go through this.",
+        "We have our first message, which is the system message as usual.",
+        "We have the user message.",
+        "And then we have this additional assistant message.",
+        "And this is the message that contains all of the product information that we just looked up.",
+        "And so we're saying relevant product information, new line, and then this product information that we just found.",
+        "And so now the model has the relevant context it needs to be able to answer this user's question."
+      ],
+      "result": [
+        "我再加一次。",
+        "现在有了消息数组。",
+        "就是输入到模型的内容。",
+        "让我们来看看这个。",
+        "第一条消息，像以前一样是系统消息。",
+        "我们有用户消息。",
+        "然后还有这个额外的助手消息。",
+        "这里包含了刚刚找到的所有产品信息的消息。",
+        "这里是相关的产品信息，另起一行，然后是刚刚找到的这些产品信息。",
+        "现在模型具有回答用户问题所需的相关上下文。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "194",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 38,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 45,
+            "milliseconds": 40
+          },
+          "text": "So let's get the final response and print it."
+        },
+        {
+          "id": "195",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 45,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 58,
+            "milliseconds": 160
+          },
+          "text": "And we're hoping that the model is going to use relevant information from the product information in order to answer the user in a helpful way."
+        },
+        {
+          "id": "196",
+          "startTime": {
+            "hours": 0,
+            "minutes": 15,
+            "seconds": 58,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 4,
+            "milliseconds": 919
+          },
+          "text": "So first it tells the user about the Smart X Pro phone, tells the user about the FotoSnap camera,"
+        },
+        {
+          "id": "197",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 5,
+            "milliseconds": 953
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 13,
+            "milliseconds": 920
+          },
+          "text": "and then talks about the different televisions that we have in stock, and then asks the follow-up question."
+        },
+        {
+          "id": "198",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 13,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 17,
+            "milliseconds": 395
+          },
+          "text": "So as you can see, by breaking this up into a series of steps,"
+        },
+        {
+          "id": "199",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 17,
+            "milliseconds": 396
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 20,
+            "milliseconds": 670
+          },
+          "text": "we were able to load information relevant to the user query"
+        },
+        {
+          "id": "200",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 20,
+            "milliseconds": 671
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 25,
+            "milliseconds": 120
+          },
+          "text": "to give the model the relevant context it needed to answer the question effectively."
+        },
+        {
+          "id": "201",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 25,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 29,
+            "milliseconds": 320
+          },
+          "text": "So you might be wondering, why are we selectively loading product descriptions into the prompt"
+        },
+        {
+          "id": "202",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 29,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "text": "instead of including all of them and letting the model use the information it needs?"
+        },
+        {
+          "id": "203",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 38,
+            "milliseconds": 519
+          },
+          "text": "And so what I mean by this is, why didn't we just include all of this product information in the prompt,"
+        },
+        {
+          "id": "204",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 45,
+            "milliseconds": 240
+          },
+          "text": "and we wouldn't have to bother with all of those intermediate steps to actually look up the product information?"
+        }
+      ],
+      "source": [
+        "So let's get the final response and print it.",
+        "And we're hoping that the model is going to use relevant information from the product information in order to answer the user in a helpful way.",
+        "So first it tells the user about the Smart X Pro phone, tells the user about the FotoSnap camera,",
+        "and then talks about the different televisions that we have in stock, and then asks the follow-up question.",
+        "So as you can see, by breaking this up into a series of steps,",
+        "we were able to load information relevant to the user query",
+        "to give the model the relevant context it needed to answer the question effectively.",
+        "So you might be wondering, why are we selectively loading product descriptions into the prompt",
+        "instead of including all of them and letting the model use the information it needs?",
+        "And so what I mean by this is, why didn't we just include all of this product information in the prompt,",
+        "and we wouldn't have to bother with all of those intermediate steps to actually look up the product information?"
+      ],
+      "result": [
+        "那么让我们看看最后返回的结果，并打印出来。",
+        "我们希望模型能够利用产品信息中的相关信息来帮助用户。",
+        "首先，它告诉用户关于Smart X Pro手机的信息，告诉用户关于FotoSnap相机的信息，",
+        "然后谈论我们现有的不同电视，最后提出后续问题。",
+        "如您所见，通过将其分解为一系列步骤，",
+        "我们能够加载与用户查询相关的信息",
+        "为模型提供回答问题所需的相关上下文。",
+        "你可能会想，为什么我们只选择一部分产品的描述信息加载到Prompt中，",
+        "而不是包含所有产品的描述信息，让模型可以从中获取它所需的信息？",
+        "我的意思是，为什么我们不把所有产品的信息都包含在Prompt中，",
+        "这样我们就不用费心去做那些中间步骤，不用去查找产品信息了？"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "205",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 45,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 47,
+            "milliseconds": 360
+          },
+          "text": "There's a couple of reasons for this."
+        },
+        {
+          "id": "206",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 47,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 51,
+            "milliseconds": 839
+          },
+          "text": "Firstly, including all of the product descriptions might make the context more confusing for the model,"
+        },
+        {
+          "id": "207",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "text": "just as it would for a person trying to process a large amount of information at once."
+        },
+        {
+          "id": "208",
+          "startTime": {
+            "hours": 0,
+            "minutes": 16,
+            "seconds": 57,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 1,
+            "milliseconds": 430
+          },
+          "text": "I will say this is a lot less relevant for more advanced models like GPT-4,"
+        },
+        {
+          "id": "209",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 1,
+            "milliseconds": 431
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 4,
+            "milliseconds": 724
+          },
+          "text": "especially when the context is well-structured like it is in this example,"
+        },
+        {
+          "id": "210",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 4,
+            "milliseconds": 725
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 10,
+            "milliseconds": 240
+          },
+          "text": "and the model is smart enough just to ignore the information that clearly isn't relevant."
+        },
+        {
+          "id": "211",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 10,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 12,
+            "milliseconds": 80
+          },
+          "text": "The next reasons are more compelling."
+        },
+        {
+          "id": "212",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 12,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 15,
+            "milliseconds": 825
+          },
+          "text": "So the second reason is that language models have context limitations,"
+        },
+        {
+          "id": "213",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 15,
+            "milliseconds": 826
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 20,
+            "milliseconds": 120
+          },
+          "text": "i.e. a fixed number of tokens allowed as input and output."
+        },
+        {
+          "id": "214",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 20,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "text": "So if you have a large number of products, imagine you had a huge product catalogue,"
+        },
+        {
+          "id": "215",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 24,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "text": "you wouldn't even be able to fit all of the descriptions into the context window."
+        }
+      ],
+      "source": [
+        "There's a couple of reasons for this.",
+        "Firstly, including all of the product descriptions might make the context more confusing for the model,",
+        "just as it would for a person trying to process a large amount of information at once.",
+        "I will say this is a lot less relevant for more advanced models like GPT-4,",
+        "especially when the context is well-structured like it is in this example,",
+        "and the model is smart enough just to ignore the information that clearly isn't relevant.",
+        "The next reasons are more compelling.",
+        "So the second reason is that language models have context limitations,",
+        "i.e. a fixed number of tokens allowed as input and output.",
+        "So if you have a large number of products, imagine you had a huge product catalogue,",
+        "you wouldn't even be able to fit all of the descriptions into the context window."
+      ],
+      "result": [
+        "这其中有几个原因。",
+        "首先，包含所有产品描述可能会使模型的上下文更加混乱，",
+        "就像一个人试图一次处理大量信息。",
+        "我要说的是，对于像GPT-4这样更先进的模型，这一点相对不那么重要，",
+        "尤其是当上下文结构良好，就像这个例子中一样，",
+        "而且模型足够智能，可以忽略那些显然不相关的信息。",
+        "接下来的原因更有说服力。",
+        "第二个原因是，语言模型有上下文限制，",
+        "即允许输入和输出的固定数量的标记。",
+        "如果你有大量的产品，想象一下你有一个庞大的产品目录，",
+        "你甚至无法将所有描述放入上下文窗口中。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "216",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 28,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 32,
+            "milliseconds": 320
+          },
+          "text": "And the final reason is that including all of the product descriptions could be expensive"
+        },
+        {
+          "id": "217",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 32,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 35,
+            "milliseconds": 60
+          },
+          "text": "as you pay per token when using language models."
+        },
+        {
+          "id": "218",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 35,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 40,
+            "milliseconds": 880
+          },
+          "text": "So by selectively loading information, you can reduce the cost of generating responses."
+        },
+        {
+          "id": "219",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 40,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 44,
+            "milliseconds": 760
+          },
+          "text": "In general, determining when to dynamically load information into the model's context"
+        },
+        {
+          "id": "220",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 44,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 50,
+            "milliseconds": 880
+          },
+          "text": "and allowing the model to decide when it needs more information is one of the best ways to augment the capabilities of these models."
+        },
+        {
+          "id": "221",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 50,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 54,
+            "milliseconds": 640
+          },
+          "text": "And to reiterate, you should think of a language model as a reasoning agent that requires the"
+        },
+        {
+          "id": "222",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 54,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 59,
+            "milliseconds": 320
+          },
+          "text": "necessary context to draw useful conclusions and perform useful tasks."
+        },
+        {
+          "id": "223",
+          "startTime": {
+            "hours": 0,
+            "minutes": 17,
+            "seconds": 59,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 3,
+            "milliseconds": 501
+          },
+          "text": "And so in this case, we had to give the model the product information,"
+        },
+        {
+          "id": "224",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 3,
+            "milliseconds": 502
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 9,
+            "milliseconds": 520
+          },
+          "text": "and then it was able to reason about that product information to create a useful answer for the user."
+        },
+        {
+          "id": "225",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 9,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 15,
+            "milliseconds": 446
+          },
+          "text": "And in this example, we only added a call to a specific function or functions to get the product description by product name,"
+        },
+        {
+          "id": "226",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 15,
+            "milliseconds": 446
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 18,
+            "milliseconds": 520
+          },
+          "text": "or to get the category products by category name."
+        }
+      ],
+      "source": [
+        "And the final reason is that including all of the product descriptions could be expensive",
+        "as you pay per token when using language models.",
+        "So by selectively loading information, you can reduce the cost of generating responses.",
+        "In general, determining when to dynamically load information into the model's context",
+        "and allowing the model to decide when it needs more information is one of the best ways to augment the capabilities of these models.",
+        "And to reiterate, you should think of a language model as a reasoning agent that requires the",
+        "necessary context to draw useful conclusions and perform useful tasks.",
+        "And so in this case, we had to give the model the product information,",
+        "and then it was able to reason about that product information to create a useful answer for the user.",
+        "And in this example, we only added a call to a specific function or functions to get the product description by product name,",
+        "or to get the category products by category name."
+      ],
+      "result": [
+        "最后一个原因是包含所有产品描述可能会很昂贵",
+        "因为在使用语言模型时，您需要按消耗的Token付费。",
+        "因此，通过有选择地加载部分产品信息，可以降低调用的成本。",
+        "总的来说，确定何时将信息动态加载到模型的上下文中",
+        "并允许模型决定何时需要更多信息，是增强这些模型能力的最佳方法之一。",
+        "再次强调，您应该将语言模型视为一个",
+        "需要必要的上下文来推理出有用结论和执行有用任务的代理。",
+        "所以在这个例子中，我们必须给模型提供产品信息，",
+        "然后它能够根据该产品信息进行推理，为用户创建有用的答案。",
+        "在这个例子中，我们只添加了一个调用特定功能或功能的方法，根据产品名称获取产品描述，",
+        "或者根据类别名称获取类别产品。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "227",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 18,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 23,
+            "milliseconds": 40
+          },
+          "text": "But the models are actually good at deciding when to use a variety of different tools,"
+        },
+        {
+          "id": "228",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 23,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 25,
+            "milliseconds": 400
+          },
+          "text": "and can use them properly with instructions."
+        },
+        {
+          "id": "229",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 25,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 28,
+            "milliseconds": 160
+          },
+          "text": "And this is the idea behind chatGPT plugins."
+        },
+        {
+          "id": "230",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 28,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 31,
+            "milliseconds": 233
+          },
+          "text": "We tell the model what tools it has access to and what they do,"
+        },
+        {
+          "id": "231",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 31,
+            "milliseconds": 234
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 37,
+            "milliseconds": 360
+          },
+          "text": "and it chooses to use them when it needs information from a specific source or wants to take some other appropriate action."
+        },
+        {
+          "id": "232",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 37,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 42,
+            "milliseconds": 640
+          },
+          "text": "In our example, we can only look up information by exact product and category name match,"
+        },
+        {
+          "id": "233",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 42,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 46,
+            "milliseconds": 0
+          },
+          "text": "but there are also more advanced techniques for information retrieval."
+        },
+        {
+          "id": "234",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 46,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 50,
+            "milliseconds": 160
+          },
+          "text": "One of the most effective ways to retrieve information is using text embeddings."
+        },
+        {
+          "id": "235",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 50,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 56,
+            "milliseconds": 880
+          },
+          "text": "Embeddings can be used to implement efficient knowledge retrieval over a large corpus to find information related to a given query."
+        },
+        {
+          "id": "236",
+          "startTime": {
+            "hours": 0,
+            "minutes": 18,
+            "seconds": 56,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 2,
+            "milliseconds": 160
+          },
+          "text": "One of the key advantages of using text embeddings is that they enable fuzzy or semantic search,"
+        },
+        {
+          "id": "237",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 2,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 6,
+            "milliseconds": 280
+          },
+          "text": "which allows you to find relevant information without using the exact keywords."
+        }
+      ],
+      "source": [
+        "But the models are actually good at deciding when to use a variety of different tools,",
+        "and can use them properly with instructions.",
+        "And this is the idea behind chatGPT plugins.",
+        "We tell the model what tools it has access to and what they do,",
+        "and it chooses to use them when it needs information from a specific source or wants to take some other appropriate action.",
+        "In our example, we can only look up information by exact product and category name match,",
+        "but there are also more advanced techniques for information retrieval.",
+        "One of the most effective ways to retrieve information is using text embeddings.",
+        "Embeddings can be used to implement efficient knowledge retrieval over a large corpus to find information related to a given query.",
+        "One of the key advantages of using text embeddings is that they enable fuzzy or semantic search,",
+        "which allows you to find relevant information without using the exact keywords."
+      ],
+      "result": [
+        "但是，这些模型实际上擅长决定何时使用各种不同的工具，",
+        "并且可以在有指示的情况下正确使用它们。",
+        "这就是ChatGPT插件背后的原理。",
+        "我们告诉模型它可以使用哪些工具以及每个工具的功能，",
+        "当它需要从特定来源获取信息或采取其他适当行动时，它会选择使用这些工具。",
+        "在我们的例子中，我们只能通过精确的产品和类别名称来查找信息，",
+        "但还有更先进的信息检索技术。",
+        "使用文本嵌入（Text Embedding）是检索信息最有效的方法之一。",
+        "嵌入（Embedding）可以用于在大型语料库上实现高效的知识检索，以找到与给定查询相关的信息。",
+        "使用文本嵌入的一个优势是它支持模糊或语义搜索，",
+        "这样你可以使用自然语言而不是关键词找到相关信息。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "238",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 6,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 9,
+            "milliseconds": 509
+          },
+          "text": "So in our example, we wouldn't necessarily need the exact name of the product,"
+        },
+        {
+          "id": "239",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 9,
+            "milliseconds": 510
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 16,
+            "milliseconds": 280
+          },
+          "text": "but we could do a more a search with a more general query like a mobile phone."
+        },
+        {
+          "id": "240",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 16,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 21,
+            "milliseconds": 960
+          },
+          "text": "We're planning to create a comprehensive course on how to use embeddings for various applications soon, so stay tuned."
+        },
+        {
+          "id": "241",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 21,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 25,
+            "milliseconds": 282
+          },
+          "text": "And with that, let's move on to the next video where we're going to talk about:"
+        },
+        {
+          "id": "242",
+          "startTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 25,
+            "milliseconds": 283
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 19,
+            "seconds": 28,
+            "milliseconds": 800
+          },
+          "text": "how to evaluate the outputs from the language model."
+        }
+      ],
+      "source": [
+        "So in our example, we wouldn't necessarily need the exact name of the product,",
+        "but we could do a more a search with a more general query like a mobile phone.",
+        "We're planning to create a comprehensive course on how to use embeddings for various applications soon, so stay tuned.",
+        "And with that, let's move on to the next video where we're going to talk about:",
+        "how to evaluate the outputs from the language model."
+      ],
+      "result": [
+        "所以在我们的例子中，不一定需要产品的确切名称，",
+        "但我们可以使用更通用的查询进行搜索，例如“手机”。",
+        "我们计划不久后开一个关于如何将嵌入（Embeddings）应用于各种应用的全面课程，敬请期待！",
+        "好了，让我们继续观看下一个视频，接下来我们将讨论：",
+        "“如何评估语言模型的输出结果。”"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L5-vid6_1.srt",
+  "ouputBasePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L5-vid6_1",
+  "totalCost": 0.48744,
+  "translationPath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L5-vid6_1/translation.json"
+}

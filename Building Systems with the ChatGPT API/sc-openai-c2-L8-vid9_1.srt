@@ -1,0 +1,828 @@
+1
+00:00:05,000 --> 00:00:08,749
+In the previous few videos, Isa showed how to build an application 
+
+2
+00:00:08,750 --> 00:00:19,000
+using an LLM from evaluating the inputs to processing the inputs to then doing final output checking before you show the output to a user.
+
+3
+00:00:19,000 --> 00:00:22,880
+After you've built such a system, how do you know how it's working?
+
+4
+00:00:22,880 --> 00:00:26,516
+And maybe even as you deploy it and let users use it, 
+
+5
+00:00:26,517 --> 00:00:35,000
+how can you track how it's doing and find any shortcomings and continue to improve the quality of the answers of your system?
+
+6
+00:00:35,000 --> 00:00:41,380
+In this video, I'd like to share with you some best practices for evaluating the output of an LLM.
+
+7
+00:00:41,380 --> 00:00:46,440
+And I want to share with you specifically what it feels like to build one of these systems.
+
+8
+00:00:46,440 --> 00:00:49,848
+One key distinction between what you hear me talk about in this video
+
+9
+00:00:49,849 --> 00:00:55,550
+ and what you may have seen in more traditional machine learning, supervised learning applications is 
+
+10
+00:00:55,551 --> 00:01:03,520
+because you can build such an application so quickly, the methods of evaluating it, it tends not to start off with a test set.
+
+11
+00:01:03,520 --> 00:01:08,840
+Instead, you often end up gradually building up a set of test examples.
+
+12
+00:01:08,840 --> 00:01:10,880
+Let me share with you what I mean by that.
+
+13
+00:01:10,880 --> 00:01:18,386
+You will remember this diagram from the second video about how prompt-based development speeds up the core parts of model development
+
+14
+00:01:18,387 --> 00:01:25,640
+ from maybe months to just minutes or hours or at most a very small number of days.
+
+15
+00:01:25,641 --> 00:01:32,515
+In the traditional supervised learning approach, if you needed to collect, say, 10,000 labeled examples anyway, 
+
+16
+00:01:32,516 --> 00:01:38,279
+then the incremental cost of collecting another 1,000 test examples isn't that bad.
+
+17
+00:01:38,280 --> 00:01:41,224
+So in the traditional supervised learning setting, 
+
+18
+00:01:41,225 --> 00:01:48,674
+it was not unusual to collect a training set, collect a development set or holdout cross-validation set in the test set,
+
+19
+00:01:48,675 --> 00:01:52,760
+ and then tap those at hand throughout this development process.
+
+20
+00:01:52,760 --> 00:01:57,857
+But if you're able to specify a prompt in just minutes and get something working in hours, 
+
+21
+00:01:57,858 --> 00:02:05,075
+then it would seem like a huge pain if you had to pause for a long time to collect 1,000 test examples
+
+22
+00:02:05,076 --> 00:02:09,560
+ because you can now get this working with zero training examples.
+
+23
+00:02:09,560 --> 00:02:14,880
+So when building an application using an LLM, this is what it often feels like.
+
+24
+00:02:14,880 --> 00:02:18,928
+First, you would tune the prompts on just a small handful of examples, 
+
+25
+00:02:18,929 --> 00:02:25,120
+maybe one to three to five examples, and try to get a prompt that works on them.
+
+26
+00:02:25,120 --> 00:02:32,560
+And then as you have the system undergo additional testing, you occasionally run into a few examples that are tricky.
+
+27
+00:02:32,560 --> 00:02:35,720
+The prompt doesn't work on them or the algorithm doesn't work on them.
+
+28
+00:02:35,720 --> 00:02:42,634
+And in that case, you can take these additional one or two or three or five examples and add them to the set that you're testing on
+
+29
+00:02:42,635 --> 00:02:46,240
+ to just add additional tricky examples opportunistically.
+
+30
+00:02:46,240 --> 00:02:53,908
+Eventually, you have enough of these examples you've added to your slowly growing development set 
+
+31
+00:02:53,909 --> 00:03:00,480
+that it becomes a bit inconvenient to manually run every example through the prompt every time you change the prompt.
+
+32
+00:03:00,480 --> 00:03:08,040
+And then you start to develop metrics to measure performance on this small set of examples, such as maybe average accuracy.
+
+33
+00:03:08,040 --> 00:03:16,843
+And one interesting aspect of this process is if you decide at any moment in time your system is working well enough, 
+
+34
+00:03:16,876 --> 00:03:19,880
+you can stop right there and not go on to the next bullet.
+
+35
+00:03:19,880 --> 00:03:30,440
+And in fact, there are many deploy applications that stops at maybe the first or the second bullet and are running just fine.
+
+36
+00:03:30,440 --> 00:03:37,029
+Now if your hand-built development set that you're evaluating the model on
+
+37
+00:03:37,030 --> 00:03:40,843
+ isn't giving you sufficient confidence yet in the performance of your system, 
+
+38
+00:03:40,844 --> 00:03:49,760
+then that's when you may go to the next step of collecting a randomly sampled set of examples to tune the model to.
+
+39
+00:03:49,760 --> 00:03:54,057
+And this would continue to be a development set or a holdout cross-validation set, 
+
+40
+00:03:54,100 --> 00:04:00,120
+because it would be quite common to continue to tune your prompt to this.
+
+41
+00:04:00,120 --> 00:04:05,680
+And only if you need even higher fidelity estimate of the performance of your system,
+
+42
+00:04:05,680 --> 00:04:14,520
+then might you collect and use a holdout test sets that you don't even look at yourself when you're tuning the model.
+
+43
+00:04:14,520 --> 00:04:18,500
+And so step four tends to be more important if, say, 
+
+44
+00:04:18,501 --> 00:04:28,920
+your system is getting the right answer 91% of the time and you want to tune it to get it to give the right answer 92 or 93% of the time.
+
+45
+00:04:28,920 --> 00:04:36,800
+Then you do need a larger set of examples to measure those differences between 91 and 93% performance.
+
+46
+00:04:36,800 --> 00:04:42,480
+And then only if you really need an unbiased, fair estimate of how was the system doing,
+
+47
+00:04:42,480 --> 00:04:47,680
+then do you need to go beyond the development set to also collect a holdout test set.
+
+48
+00:04:47,680 --> 00:04:49,100
+One important caveat, 
+
+49
+00:04:49,120 --> 00:04:55,485
+I've seen a lot of applications of large language models where there isn't meaningful risk of harm
+
+50
+00:04:55,486 --> 00:04:59,080
+ if it gives not quite the right answer.
+
+51
+00:04:59,080 --> 00:05:08,013
+But obviously for any high-stakes applications, if there's a risk of bias or an inappropriate output causing harm to someone,
+
+52
+00:05:08,014 --> 00:05:13,486
+ then the responsibility to collect a test set to rigorously evaluate the performance of your system 
+
+53
+00:05:13,487 --> 00:05:19,040
+to make sure it's doing the right thing before you use it, that becomes much more important.
+
+54
+00:05:19,040 --> 00:05:26,114
+But if, for example, if you are using it to summarize articles just for yourself to read and no one else, 
+
+55
+00:05:26,115 --> 00:05:28,614
+then maybe the risk of harm is more modest 
+
+56
+00:05:28,615 --> 00:05:38,480
+and you can stop early in this process without going to the expense of bullets four and five and collecting larger data sets on which to evaluate your algorithm.
+
+57
+00:05:38,480 --> 00:05:48,600
+So in this example, let me start with the usual helper functions.
+
+58
+00:05:48,600 --> 00:05:53,320
+Use a utils function to get a list of products and categories.
+
+59
+00:05:53,320 --> 00:06:00,800
+So in the computers and laptop category, there's a list of computers and laptops and the smartphones and accessories category.
+
+60
+00:06:00,800 --> 00:06:05,757
+Here's a list of smartphones and accessories and so on for other categories.
+
+61
+00:06:12,040 --> 00:06:26,028
+Now let's say the task of an address is given a user input such as what TV can I buy if I'm on a budget 
+
+62
+00:06:26,029 --> 00:06:35,080
+to retrieve the relevant categories and products so that we have the right info to answer the user's query.
+
+63
+00:06:35,080 --> 00:06:36,080
+So here's a prompt.
+
+64
+00:06:36,080 --> 00:06:39,520
+Feel free to pause the video and read through this in detail if you wish.
+
+65
+00:06:39,520 --> 00:06:47,360
+But the prompt specifies a set of instructions and it actually gives the language model one example of a good output.
+
+66
+00:06:47,360 --> 00:06:50,500
+This is sometimes called a few shot or technically one shot prompting 
+
+67
+00:06:50,501 --> 00:06:56,640
+because we're actually using a user message and a system message to give it one example of a good output.
+
+68
+00:06:56,640 --> 00:07:03,800
+If someone says I want the most expensive computer, let's just return all the computers because we don't have pricing information.
+
+69
+00:07:03,800 --> 00:07:15,560
+Now let's use this prompt on the customer message, which TV can I buy if I'm on a budget.
+
+70
+00:07:15,560 --> 00:07:22,760
+And so we're passing in to this both the prompt customer message zero as well as the products and category.
+
+71
+00:07:22,760 --> 00:07:26,880
+This is the information that we have retrieved up top using the utils function.
+
+72
+00:07:26,880 --> 00:07:34,220
+And here it lists out the relevant information to this query, which is under the category televisions and whole theater systems.
+
+73
+00:07:34,220 --> 00:07:38,220
+This is a list of TVs and whole theater systems that seem relevant.
+
+74
+00:07:38,220 --> 00:07:43,920
+To see how well the prompt is doing, you may evaluate it on a second prompt.
+
+75
+00:07:43,920 --> 00:07:47,480
+Someone says I need a charger for my smartphone.
+
+76
+00:07:47,480 --> 00:07:56,400
+It looks like it's correctly retrieving this data, how to be a smartphone's accessories and list the relevant products.
+
+77
+00:07:56,400 --> 00:08:00,680
+And here's another one.
+
+78
+00:08:00,680 --> 00:08:03,080
+So what computers do you have?
+
+79
+00:08:03,080 --> 00:08:06,620
+And hopefully you'll retrieve a list of the computers.
+
+80
+00:08:06,620 --> 00:08:08,960
+So here I have three prompts.
+
+81
+00:08:08,960 --> 00:08:12,700
+And if you are developing this prompt for the first time,
+
+82
+00:08:12,701 --> 00:08:18,286
+ it would be quite reasonable to have one or two or three examples like this 
+
+83
+00:08:18,329 --> 00:08:22,686
+and to keep on tuning the prompt until it gives appropriate outputs 
+
+84
+00:08:22,687 --> 00:08:30,200
+until the prompt is retrieving the relevant products and categories to the customer requests for all of your prompts, 
+
+85
+00:08:30,400 --> 00:08:32,414
+all three of them in this example.
+
+86
+00:08:34,960 --> 00:08:38,486
+And if the prompt had been missing some products or something, 
+
+87
+00:08:38,487 --> 00:08:44,300
+then what we would do is probably go back to edit the prompt a few times until it gets it right on all three of these prompts.
+
+88
+00:08:45,400 --> 00:08:53,199
+After you've gotten the system to this point, you might then start running the system in testing, 
+
+89
+00:08:53,200 --> 00:09:00,840
+maybe send it to internal test users or try using it yourself and just run it for a while to see what happens.
+
+90
+00:09:00,840 --> 00:09:06,120
+And sometimes you will run across a prompt that it fails on.
+
+91
+00:09:06,120 --> 00:09:07,840
+So here's an example of a prompt.
+
+92
+00:09:07,840 --> 00:09:12,120
+Tell me about the SmartX profile and the Photoshop camera, also what TVs you have.
+
+93
+00:09:12,120 --> 00:09:16,500
+So when I run it on this prompt, it looks like it's outputting the right data, 
+
+94
+00:09:16,501 --> 00:09:20,320
+but it also outputs a bunch of text here, this extra junk.
+
+95
+00:09:20,320 --> 00:09:26,820
+It makes it harder to parse this into a Python list of dictionaries.
+
+96
+00:09:26,820 --> 00:09:30,080
+So we don't like that it's outputting this extra junk.
+
+97
+00:09:30,080 --> 00:09:34,786
+So when you run across one example that the system fails on, 
+
+98
+00:09:34,787 --> 00:09:39,280
+then common practice is to just note down that this is a somewhat tricky example.
+
+99
+00:09:39,280 --> 00:09:45,040
+So let's add this to our set of examples that we're going to test the system on systematically.
+
+100
+00:09:45,040 --> 00:09:49,720
+And if you keep on running the system for a while longer, maybe it works on those examples.
+
+101
+00:09:49,720 --> 00:09:53,640
+We did tune the prompt to three examples, so maybe it will work on many examples.
+
+102
+00:09:53,640 --> 00:09:58,960
+But just by chance, you might run across another example where it generates an error.
+
+103
+00:09:58,960 --> 00:10:07,920
+So this customer message four also causes the system to output a bunch of junk text at the end that we don't want.
+
+104
+00:10:07,920 --> 00:10:13,680
+Trying to be helpful to get all this extra text, but we actually don't want this.
+
+105
+00:10:13,680 --> 00:10:17,914
+And so at this point, you may have run this prompt maybe on hundreds of examples, 
+
+106
+00:10:17,915 --> 00:10:23,920
+maybe you have test users, but you would just take the examples, the tricky ones, it's doing poorly on.
+
+107
+00:10:23,920 --> 00:10:28,671
+And now I have this set of five examples indexed from zero to four,
+
+108
+00:10:28,672 --> 00:10:34,440
+ have this set of five examples that you use to further fine tune the prompts.
+
+109
+00:10:34,440 --> 00:10:44,560
+And in both of these examples, the LLM had output a bunch of extra junk text at the end that we don't want.
+
+110
+00:10:44,560 --> 00:10:51,400
+And after a little bit of trial and error, you might decide to modify the prompts as follows.
+
+111
+00:10:51,400 --> 00:10:54,640
+So here's a new prompt, this is called prompt v2.
+
+112
+00:10:54,640 --> 00:11:00,556
+But what we did here was we added to the prompt, do not output any additional text that's not in JSON format,
+
+113
+00:11:00,557 --> 00:11:03,640
+ just to emphasize, please don't output this JSON stuff.
+
+114
+00:11:03,640 --> 00:11:09,680
+And added a second example, using the user and assistant message for few-shot prompting,
+
+115
+00:11:09,680 --> 00:11:12,600
+where the user asked the cheapest computer.
+
+116
+00:11:12,600 --> 00:11:14,857
+And in both of the few-shot examples, 
+
+117
+00:11:14,858 --> 00:11:21,040
+we're demonstrating to the system a response where it gives only JSON outputs.
+
+118
+00:11:21,040 --> 00:11:23,414
+So here's the extra thing that we just added to the prompt, 
+
+119
+00:11:23,415 --> 00:11:26,000
+do not output any additional text that's not in JSON format.
+
+120
+00:11:26,000 --> 00:11:31,342
+And we use few-shot user one, few-shot assistant one, and few-shot user two, few-shot assistant two, 
+
+121
+00:11:31,343 --> 00:11:35,640
+to give it two of these few-shot prompts.
+
+122
+00:11:35,640 --> 00:11:39,160
+So let me hit shift enter to find that prompt.
+
+123
+00:11:39,160 --> 00:11:44,056
+And you were to go back and manually rerun this prompt on all five of the examples of user inputs,
+
+124
+00:11:44,057 --> 00:11:47,357
+ including this one that previously had given a broken output, 
+
+125
+00:11:47,358 --> 00:11:51,280
+you find that it now gives a correct output.
+
+126
+00:11:51,280 --> 00:11:55,943
+And if you were to go back and rerun this new prompt, this is prompt version v2, 
+
+127
+00:11:55,944 --> 00:12:03,670
+on that customer message example that had resulted in the broken output with extra junk after the JSON output,
+
+128
+00:12:03,671 --> 00:12:08,880
+then this will generate a better output.
+
+129
+00:12:08,880 --> 00:12:16,442
+And I'm not going to do it here, but I encourage you to pause the video and rerun it yourself on customer message four as well on this prompt v2, 
+
+130
+00:12:16,443 --> 00:12:20,280
+see if it also generates the correct output.
+
+131
+00:12:20,280 --> 00:12:24,600
+And hopefully it will, I think it should.
+
+132
+00:12:24,600 --> 00:12:26,957
+And of course, when you modify the prompts,
+
+133
+00:12:26,958 --> 00:12:36,760
+ it's also useful to do a bit of regression testing to make sure that when fixing the incorrect outputs on prompts three and four,
+
+134
+00:12:36,760 --> 00:12:41,480
+it didn't break the output on prompt zero either.
+
+135
+00:12:41,480 --> 00:12:50,570
+Now you can kind of tell that if I had to copy paste five prompts, customer message zero, one, two, three, and four into my Jupyter Notebook
+
+136
+00:12:50,571 --> 00:12:55,813
+ and run them and then manually look at them to see if they all put in the right categories and products, 
+
+137
+00:12:55,814 --> 00:12:57,320
+you can kind of do it.
+
+138
+00:12:57,320 --> 00:13:00,080
+I can look at this and go yep, category TV and home theater systems products.
+
+139
+00:13:00,080 --> 00:13:02,160
+Yep, looks like you got all of them.
+
+140
+00:13:02,160 --> 00:13:04,657
+But it's actually a little bit painful to do this manually, 
+
+141
+00:13:04,658 --> 00:13:12,280
+to manually inspect or to look at this output to make sure with your eyes that this is exactly the right output.
+
+142
+00:13:12,280 --> 00:13:19,199
+So when the development set that you're tuning to becomes more than just a small handful of examples,
+
+143
+00:13:19,200 --> 00:13:27,200
+ it then becomes useful to start to automate the testing process.
+
+144
+00:13:27,200 --> 00:13:35,780
+So here is a set of 10 examples where I'm specifying 10 customer messages.
+
+145
+00:13:35,780 --> 00:13:39,260
+So here's the customer message, what TV can I buy from a budget?
+
+146
+00:13:39,260 --> 00:13:41,880
+As well as what's the ideal answer?
+
+147
+00:13:41,880 --> 00:13:45,429
+Think of this as the right answer in the test set, 
+
+148
+00:13:45,430 --> 00:13:49,240
+or really I should say development set because we're actually tuning to this.
+
+149
+00:13:49,240 --> 00:13:54,700
+And so we've collected here 10 examples indexed from zero through nine, 
+
+150
+00:13:54,701 --> 00:14:03,720
+where the last one is if the user says I would like hot tub time machine, we have no relevant products to that, really sorry.
+
+151
+00:14:03,720 --> 00:14:07,040
+The ideal answer is the empty set.
+
+152
+00:14:07,040 --> 00:14:13,343
+And now, if you want to evaluate automatically, 
+
+153
+00:14:13,344 --> 00:14:19,920
+what a prompt is doing on any of these 10 examples, here is a function to do so.
+
+154
+00:14:19,920 --> 00:14:24,280
+It's kind of a long function, feel free to pause the video and read through it if you wish.
+
+155
+00:14:24,280 --> 00:14:28,020
+But let me just demonstrate what it is actually doing.
+
+156
+00:14:28,020 --> 00:14:32,440
+So let me print out the customer message for customer message zero.
+
+157
+00:14:32,440 --> 00:14:38,080
+Right, so customer messages, which TV can I buy if I'm on a budget?
+
+158
+00:14:38,080 --> 00:14:42,280
+And let's also print out the ideal answer.
+
+159
+00:14:42,280 --> 00:14:49,400
+So the ideal answer is here are all the TVs that we want the prompt to retrieve.
+
+160
+00:14:49,400 --> 00:14:56,920
+And let me now call the prompt, this is prompt v2 on this customer message with that user products and category information.
+
+161
+00:14:56,920 --> 00:14:57,920
+Let's print it out.
+
+162
+00:14:57,920 --> 00:15:01,680
+And then we'll call the eval.
+
+163
+00:15:01,680 --> 00:15:09,520
+We'll call the eval responsive ideal function to see how well the response matches the ideal answer.
+
+164
+00:15:09,520 --> 00:15:16,460
+And in this case, it did output the category that we wanted and it did output the entire list of products.
+
+165
+00:15:16,460 --> 00:15:21,800
+And so it's this gives you the score of 1.0.
+
+166
+00:15:21,800 --> 00:15:28,280
+Just to show you one more example, it turns out that I know it gets it wrong on example seven.
+
+167
+00:15:28,280 --> 00:15:36,720
+So if I change this from zero to seven and run it, this is what it gets.
+
+168
+00:15:36,720 --> 00:15:42,300
+Oh, let me update this to seven as well.
+
+169
+00:15:42,300 --> 00:15:50,520
+So under this customer message, this is the ideal answer where it should output under gaming consoles and accessories.
+
+170
+00:15:50,520 --> 00:15:52,600
+So this is gaming consoles and accessories.
+
+171
+00:15:52,600 --> 00:16:01,720
+But whereas the response here has three outputs, it actually should have had one, two, three, four, five outputs.
+
+172
+00:16:01,720 --> 00:16:04,480
+And so it's missing some of the products.
+
+173
+00:16:04,480 --> 00:16:07,357
+So what I would do if I'm tuning the prompt now is
+
+174
+00:16:07,358 --> 00:16:18,970
+ I would then use a for loop to loop over all 10 of the development set examples where we repeatedly pull out the customer message, 
+
+175
+00:16:18,971 --> 00:16:25,800
+get the ideal answer, the right answer, call the arm to get a response, evaluate it,
+
+176
+00:16:25,800 --> 00:16:27,880
+and then you know, accumulate it in average.
+
+177
+00:16:27,880 --> 00:16:32,200
+And let me just run this.
+
+178
+00:16:32,200 --> 00:16:35,960
+So this will take a while to run, but when it's done running, this is the result.
+
+179
+00:16:35,960 --> 00:16:38,320
+We're running through the 10 examples.
+
+180
+00:16:38,320 --> 00:16:41,240
+It looks like example seven was wrong.
+
+181
+00:16:41,240 --> 00:16:46,120
+And so the fraction correct of 10 was 90% correct.
+
+182
+00:16:46,120 --> 00:16:53,760
+And so if you were to tune the prompts, you can rerun this to see if the percent correct goes up or down.
+
+183
+00:16:53,760 --> 00:17:00,480
+What you just saw in this Notebook is going through steps one, two, and three of this bulleted list.
+
+184
+00:17:00,480 --> 00:17:09,060
+And this already gives a pretty good development sets of 10 examples with which to tune and validate the prompts is working.
+
+185
+00:17:09,060 --> 00:17:11,243
+If you needed an additional level of rigor, 
+
+186
+00:17:11,244 --> 00:17:20,020
+then you now have the software needed to collect a randomly sample sets of maybe 100 examples with their ideal outputs.
+
+187
+00:17:20,020 --> 00:17:25,800
+And maybe even go beyond that to the rigor of a holdout test set that you don't even look at while you're tuning the prompt.
+
+188
+00:17:25,800 --> 00:17:29,714
+But for a lot of applications, stopping at bullet three, 
+
+189
+00:17:29,715 --> 00:17:35,929
+but there are also certainly applications where you could do what you just saw me do in Jupyter Notebook
+
+190
+00:17:36,440 --> 00:17:39,840
+ and get a pretty performance system quite quickly.
+
+191
+00:17:39,840 --> 00:17:46,600
+And again, the important caveat that if you're working on a safety critical application or
+
+192
+00:17:46,600 --> 00:17:50,900
+an application where there's non-trivial risk of harm, 
+
+193
+00:17:50,901 --> 00:17:56,000
+then of course it would be the responsible thing to do to actually get a much larger test set
+
+194
+00:17:56,001 --> 00:17:59,340
+ to really verify the performance before you use it anywhere.
+
+195
+00:17:59,340 --> 00:18:00,340
+And so that's it.
+
+196
+00:18:00,340 --> 00:18:06,340
+I find that the workflow of building applications using prompts is very different than a workflow
+
+197
+00:18:06,340 --> 00:18:12,860
+of building applications using supervised learning and the pace of iteration feels much faster.
+
+198
+00:18:12,860 --> 00:18:14,757
+And if you have not yet done it before, 
+
+199
+00:18:14,758 --> 00:18:22,380
+you might be surprised at how well an evaluation method built on just a few hand curated tricky examples.
+
+200
+00:18:22,380 --> 00:18:27,400
+You think with 10 examples and this is not statistically valid for almost anything, 
+
+201
+00:18:27,401 --> 00:18:33,140
+but you might be surprised when you actually use this procedure, how effective adding a handful,
+
+202
+00:18:33,140 --> 00:18:36,643
+a handful of tricky examples into your development sets might be 
+
+203
+00:18:36,644 --> 00:18:43,500
+in terms of helping you and your team get to an effective set of prompts and effective system.
+
+204
+00:18:43,500 --> 00:18:45,029
+In this video, 
+
+205
+00:18:45,030 --> 00:18:55,500
+the outputs could be evaluated quantitatively as in there was a desired output and you could tell if it gave this desired output or not.
+
+206
+00:18:55,500 --> 00:18:56,229
+So the next video,
+
+207
+00:18:56,230 --> 00:19:04,900
+ let's take a look at how you can evaluate output in that setting where what is the right answer is a bit more ambiguous.
+

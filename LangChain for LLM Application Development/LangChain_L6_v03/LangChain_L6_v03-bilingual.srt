@@ -1,0 +1,969 @@
+1
+00:00:05,275 --> 00:00:09,191
+有时候人们把大语言模型看作是知识库，
+Sometimes people think of a large language model as a knowledge store,
+
+2
+00:00:09,192 --> 00:00:13,014
+就好像它学会并记忆了大量的从互联网上获取的信息，
+as if it's learned to memorize a lot of information, maybe off the internet,
+
+3
+00:00:13,015 --> 00:00:16,686
+所以当你问问题时，它可以回答问题。
+so when you ask the question, it can answer the question.
+
+4
+00:00:16,686 --> 00:00:23,056
+但我认为更有用的方式是把大语言模型看作是一个推理引擎，
+But I think an even more useful way to think of a large language model is sometimes as a reasoning engine
+
+5
+00:00:23,057 --> 00:00:27,315
+你可以给它提供一些文本或其他信息来源。
+in which you can give it chunks of text or other sources of information.
+
+6
+00:00:27,315 --> 00:00:29,554
+然后大型语言模型，LLM，
+And then the large language model, LLM,
+
+7
+00:00:29,555 --> 00:00:32,986
+可能会使用它从互联网上学习的这些背景知识，
+will maybe use this background knowledge that's learned off the internet,
+
+8
+00:00:32,987 --> 00:00:41,209
+但是也会利用你提供的新信息来帮助你回答问题，或者推理内容，甚至决定接下来要做什么。
+but to use the new information you give it to help you answer questions or reason through content or decide even what to do next.
+
+9
+00:00:41,209 --> 00:00:44,612
+这就是LangChain的代理框架能帮助你做的事。
+And that's what LangChain's agents framework helps you to do.
+
+10
+00:00:45,674 --> 00:00:48,317
+代理可能是我最喜欢的LangChain功能。
+Agents are probably my favorite part of LangChain.
+
+11
+00:00:48,317 --> 00:00:52,280
+我认为代理也是最强大的功能之一，但也是较新的功能。
+I think they're also one of the most powerful parts, but they're also one of the newer parts.
+
+12
+00:00:52,280 --> 00:00:56,064
+对于这个领域的每个人来说，涌现了很多新的技术，
+So we're seeing a lot of stuff emerge here that's really new to everyone in the field.
+
+13
+00:00:56,064 --> 00:00:59,899
+这节课程将会令人期待，因为我们将会深入了解什么是代理，
+And so this should be a very exciting lesson as we dive into what agents are,
+
+14
+00:00:59,900 --> 00:01:02,513
+如何创建和使用代理，
+how to create and how to use agents,
+
+15
+00:01:02,514 --> 00:01:06,874
+如何配备不同类型的工具，比如内置在LangChain中的搜索引擎。
+how to equip them with different types of tools like search engines that come built into LangChain.
+
+16
+00:01:07,406 --> 00:01:17,032
+然后还有如何创建自己的工具，这样你就可以让代理与任何数据存储、API、或者功能进行互动。
+and then also how to create your own tools so that you can let agents interact with any data stores, any APIs, any functions that you might want them to.
+
+17
+00:01:17,032 --> 00:01:23,216
+这是令人兴奋的前沿技术，而且已经有了一些重要的应用案例。
+So this is exciting, cutting-edge stuff, but already with emerging important use cases.
+
+18
+00:01:23,216 --> 00:01:26,598
+那么，让我们开始吧。
+So with that, let's dive in.
+
+19
+00:01:26,598 --> 00:01:33,022
+首先，我们将设置环境变量并导入一些内容，稍后将会用到。
+First, we're going to set the environment variables and import a bunch of stuff that we will use later on.
+
+20
+00:01:33,022 --> 00:01:35,163
+接下来，我们将初始化一个语言模型。
+Next, we're going to initialize a language model
+
+21
+00:01:35,777 --> 00:01:37,497
+我们将使用ChatOpenAI。
+We're going to use ChatOpenAI.
+
+22
+00:01:37,497 --> 00:01:41,278
+首先，我们要把temperature参数设为0。
+And importantly, we're going to set the temperature equal to zero.
+
+23
+00:01:41,278 --> 00:01:51,100
+这点很重要，因为我们将使用语言模型作为代理的推理引擎，它会连接到其他数据和计算资源，
+This is important because we're going to be using the language model as the reasoning engine of an agent where it's connecting to other sources of data and computation.
+
+24
+00:01:51,100 --> 00:01:56,281
+所以，我们希望这个推理引擎尽可能地好并且尽可能精确。
+And so we want this reasoning engine to be as good and as precise as possible.
+
+25
+00:01:56,281 --> 00:02:02,502
+所以我们把temperature参数设为0，消除任何可能出现的随机性。
+And so we're going to set it to zero to get rid of any randomness that might arise.
+
+26
+00:02:02,502 --> 00:02:04,002
+接下来，我们要加载一些工具。
+Next, we're going to load some tools.
+
+27
+00:02:05,048 --> 00:02:10,911
+我们要加载的两个工具是llm-math工具和维基百科工具。
+The two tools that we're going to load are the LLM math tool and the Wikipedia tool.
+
+28
+00:02:10,911 --> 00:02:20,656
+llm-math工具实际上是一个链，它结合了语言模型和计算器来解决数学问题。
+The LLM math tool is actually a chain itself, which uses a language model in conjunction with a calculator to do math problems.
+
+29
+00:02:20,656 --> 00:02:24,156
+维基百科工具是一个连接到维基百科API的程序，
+The Wikipedia tool is an API that connects to Wikipedia,
+
+30
+00:02:24,157 --> 00:02:28,781
+允许你查询维基百科上的内容，并返回搜索结果。
+allowing you to run search queries against Wikipedia and get back results.
+
+31
+00:02:31,686 --> 00:02:33,767
+最后，我们将初始化一个代理。
+Next, we're going to initialize an agent.
+
+32
+00:02:33,767 --> 00:02:39,469
+我们将用“工具列表”、“语言模型”和“代理类型”初始化代理。
+We're going to initialize the agent with the tools, the language model, and then an agent type.
+
+33
+00:02:39,469 --> 00:02:43,550
+这里，我们将使用名为CHAT_ZERO_SHOT_REACT_DESCRIPTION的代理类型。
+Here, we're going to use CHAT_ZERO_SHOT_REACT_DESCRIPTION.
+
+34
+00:02:43,550 --> 00:02:46,871
+这里面首先要注意的是CHAT。
+The important things to note here are first chat.
+
+35
+00:02:46,871 --> 00:02:50,812
+这是一个专为与Chat模型一起工作而优化的代理。
+This is an agent that has been optimized to work with chat models.
+
+36
+00:02:50,812 --> 00:02:52,713
+其次是REACT。
+And second react.
+
+37
+00:02:52,713 --> 00:02:58,495
+REACT是一种组织Prompt的技术，能最大化语言模型的推理能力。
+This is a prompting technique designed to get the best reasoning performance out of language models.
+
+38
+00:02:59,818 --> 00:03:03,783
+我们还将设置handle_parsing_errors参数的值为True。
+We're also going to pass in handle_parsing_errors equals true.
+
+39
+00:03:03,783 --> 00:03:14,716
+当语言模型输出的内容无法被正常解析时，这很有用。
+This is useful when the language model might output something that is not able to be parsed into an action input, which is the desired output.
+
+40
+00:03:14,716 --> 00:03:19,862
+实际上就是遇到内容无法被正常解析时，将格式错误的内容传回语言模型，并要求它自行纠正。
+When this happens, we'll actually pass the misformatted text back to the language model and ask it to correct itself.
+
+41
+00:03:21,095 --> 00:03:24,098
+最后，我们将设置verbose参数的值为True。
+Finally, we're going to pass in verbose equals true.
+
+42
+00:03:24,098 --> 00:03:30,683
+这会打印出每一个步骤的详细记录，让我们可以在Jupyter Notebook中清楚地了解正在发生的事情。
+This is going to print out a bunch of steps that makes it really clear to us in the Jupyter notebook what's going on.
+
+43
+00:03:30,683 --> 00:03:34,986
+稍后我们还会在全局级别设置debug为True
+We'll also set debug equals True at the global level later on in the notebook
+
+44
+00:03:35,000 --> 00:03:38,689
+这样我们可以更详细地了解到底发生了什么。
+so we can see in more detail what exactly is happening.
+
+45
+00:03:38,689 --> 00:03:41,031
+首先，我们要问代理一个数学问题：
+First, we're going to ask the agent a math question.
+
+46
+00:03:41,031 --> 00:03:42,513
+“300的25%是多少？”
+What is 25% of 300?
+
+47
+00:03:42,513 --> 00:03:47,897
+这是一个相当简单的问题，但对于我们了解具体发生了什么非常有帮助。
+This is a pretty simple question, but it will be good to understand what exactly is going on.
+
+48
+00:03:49,234 --> 00:03:56,017
+我们可以看到，当它进入AgentExecutor链时，首先会考虑需要做什么。
+So we can see here that when it enters the AgentExecutor chain, that it first thinks about what it needs to do.
+
+49
+00:03:56,017 --> 00:03:57,314
+所以它有一个THOUGHT（思考）。
+So it has a thought.
+
+50
+00:03:57,958 --> 00:03:59,514
+然后它有一个ACTION（操作）。
+It then has an action.
+
+51
+00:03:59,579 --> 00:04:06,429
+这个ACTION实际上是一个JSON对象，其中有两部分内容：一个action（操作）和一个action_input（操作输入）。
+And this action is actually a JSON blob corresponding to two things, an action and an action input.
+
+52
+00:04:06,622 --> 00:04:09,103
+action对应的是要使用的工具，
+The action corresponds to the tool to use.
+
+53
+00:04:09,103 --> 00:04:11,204
+这里写的是计算器。
+So here it says calculator.
+
+54
+00:04:11,204 --> 00:04:14,005
+action_input对应的是该工具的输入，
+The action input is the input to that tool.
+
+55
+00:04:14,005 --> 00:04:15,806
+这里是一个“300*0.25”的字符串。
+And here it's a string of 300 times 0.25.
+
+56
+00:04:19,275 --> 00:04:24,059
+接下来，我们可以看到Observation（观察结果）和Answer（答案）是用不同颜色显示的。
+Next, we can see that there's observation with answer in a separate color.
+
+57
+00:04:24,059 --> 00:04:33,467
+这个Observation后面的“Answer: 75.0”，实际上是来自计算器工具返回的结果。
+This observation, answer equals 75.0, is actually coming from the calculator tool itself.
+
+58
+00:04:33,467 --> 00:04:37,351
+接下来我们回到语言模型，文字变为绿色，语言模型Thought（思考）：
+Next, we go back to the language model when the text turns to green.
+
+59
+00:04:37,351 --> 00:04:39,012
+“我们得到了问题的答案。
+We have the answer to the question.
+
+60
+00:04:39,012 --> 00:04:43,416
+最后答案是75.0”。这就是我们得到的输出结果。
+Final answer, 75.0, and that's the output that we get.
+
+61
+00:04:47,042 --> 00:04:53,246
+建议你现在暂停一下，自己尝试测试一些不同的数学问题。
+This is a good time to pause and try out different math problems of your own.
+
+62
+00:04:53,246 --> 00:04:57,490
+接下来，我们将展示一个使用维基百科API的示例。
+Next, we're going to go through an example using the Wikipedia API.
+
+63
+00:04:57,490 --> 00:04:59,957
+在这里，我们将向它问一个关于Tom Mitchell的问题（Tom M. Mitchell是美国计算机科学家，卡内基梅隆大学的教授。他写了什么书？），
+Here, we're going to ask it a question about Tom Mitchell,
+
+64
+00:05:00,086 --> 00:05:04,094
+我们可以查看中间步骤，了解它的工作原理。
+and we can look at the intermediate steps to see what it does.
+
+65
+00:05:04,095 --> 00:05:08,371
+我们再次看到它在思考，并正确地意识到应该使用维基百科工具。
+We can see once again that it thinks and it correctly realizes that it should use Wikipedia.
+
+66
+00:05:10,419 --> 00:05:14,682
+它显示action是“维基百科”，action_input是“Tom M. Mitchell”。
+It says action equal to Wikipedia and action input equal to Tom M. Mitchell.
+
+67
+00:05:15,962 --> 00:05:18,929
+这次返回的Observation（观察结果）是黄色的，
+The observation that comes back in yellow this time,
+
+68
+00:05:19,100 --> 00:05:22,029
+我们用不同的颜色表示不同的工具，
+and we use different colors to denote different tools,
+
+69
+00:05:22,143 --> 00:05:28,267
+这是Tom M. Mitchell页面的维基百科摘要结果。
+is the Wikipedia summary result for the Tom M. Mitchell page.
+
+70
+00:05:28,267 --> 00:05:30,605
+从维基百科返回的Observation
+The observation that comes back from Wikipedia
+
+71
+00:05:30,657 --> 00:05:32,742
+实际上是两个结果，两个页面，
+is actually two results, two pages,
+
+72
+00:05:32,743 --> 00:05:34,570
+因为有两个不同的Tom M. Mitchell。
+as there's two different Tom M. Mitchells.
+
+73
+00:05:34,570 --> 00:05:37,659
+我们可以看到第一个结果是一位计算机科学家，
+We can see the first one covers the computer scientist,
+
+74
+00:05:37,671 --> 00:05:41,253
+第二个结果看起来像是一位澳大利亚足球运动员。
+and the second one, it looks like it's an Australian footballer.
+
+75
+00:05:42,938 --> 00:05:45,843
+我们可以看到回答这个问题所需的关键信息，
+We can see that the information needed to answer this question,
+
+76
+00:05:45,844 --> 00:05:49,186
+也就是他写的那本书的名字：《机器学习》，
+namely the name of the book that he wrote, Machine Learning,
+
+77
+00:05:49,386 --> 00:05:55,144
+出现在第一个Tom Mitchell的摘要中。
+is present in the summary of the first Tom Mitchell.
+
+78
+00:05:55,144 --> 00:05:59,586
+接下来我们可以看到代理试图查找关于这本书的更多信息。
+We can see next that the agent tries to look up more information about this book.
+
+79
+00:05:59,586 --> 00:06:03,088
+所以它在维基百科上查找了《机器学习》这本书。
+So it looks up Machine Learning book in Wikipedia.
+
+80
+00:06:03,088 --> 00:06:04,635
+这其实没太有必要，
+This isn't strictly necessary,
+
+81
+00:06:04,643 --> 00:06:08,811
+这是一个有趣的例子，说明代理还不完全可靠。
+and it's an interesting example to show how agents aren't perfectly reliable yet.
+
+82
+00:06:09,968 --> 00:06:11,729
+我们可以看到在这次查找之后，
+We can see that after this lookup,
+
+83
+00:06:11,800 --> 00:06:18,400
+代理意识到它已经有了回答所需的所有信息，并给出了正确答案：《机器学习》。
+the agent recognizes that it has all the information it needs to answer and responds with the correct answer, machine learning.
+
+84
+00:06:19,471 --> 00:06:21,952
+我们接下来要讲的例子非常酷。
+The next example we're going to go through is a really cool one.
+
+85
+00:06:21,952 --> 00:06:28,943
+如果你见过像GitHub Copilot，或者ChatGPT的代码解释器插件这样的东西，
+If you've seen things like copilot or even ChatGPT with the code interpreter plugin enabled,
+
+86
+00:06:29,100 --> 00:06:34,536
+它们所做的就是用语言模型写代码，然后执行生成的代码。
+one of the things they're doing is they're using the language model to write code and then executing that code.
+
+87
+00:06:34,536 --> 00:06:35,997
+我们在这里也可以做同样的事情。
+We can do the same exact thing here.
+
+88
+00:06:37,380 --> 00:06:43,343
+所以我们要创建一个Python代理，使用之前一样的LLM。
+So we're going to create a Python agent and we're going to use the same LLM as before.
+
+89
+00:06:43,343 --> 00:06:46,764
+我们会给它一个工具，PythonREPLTool。
+And we're going to give it a tool, the PythonREPLTool.
+
+90
+00:06:46,764 --> 00:06:49,245
+REPL基本上是一种与代码互动的方式，
+A REPL is basically a way to interact with code.
+
+91
+00:06:49,245 --> 00:06:51,766
+你可以把它想象成一个Jupyter Notebook，
+You can think of it as a Jupyter Notebook.
+
+92
+00:06:51,766 --> 00:06:55,588
+代理可以用这个REPL执行代码。
+So the agent can execute code with this REPL.
+
+93
+00:06:55,588 --> 00:07:04,232
+然后我们会得到代码运行结果，这些结果会传回给代理，让它决定接下来要做什么。
+It will then run and then we'll get back some results and those results will be passed back into the agent so it can decide what to do next.
+
+94
+00:07:05,750 --> 00:07:12,593
+我们需要这个代理解决的问题是让它给一组客户名单排序。
+The problem that we're going to have this agent solve is we're going to give it a list of names and then ask it to sort them.
+
+95
+00:07:12,593 --> 00:07:21,936
+可以看到我们这里有一组名字，"Harrison Chase"，"Lang Chain"，"Elle Elem"，"Geoff Fusion"，"Trance Former"，"Jen Ayai"。
+So you can see here we have a list of names, "Harrison Chase", "Lang Chain", "Elle Elem", "Geoff Fusion", "Trance Former", "Jen Ayai".
+
+96
+00:07:21,936 --> 00:07:28,959
+我们要求代理先按姓氏再按名字对这些名字进行排序，然后打印输出结果。
+And we're going to ask the agent to first sort these names by last name and then first name and then print the output.
+
+97
+00:07:28,959 --> 00:07:33,801
+重要的是，我们要求它打印输出结果，以便可以看到实际结果是什么。
+Importantly, we're asking it to print the output so that it can actually see what the result is.
+
+98
+00:07:35,187 --> 00:07:39,543
+这些打印出来的内容将在后面被反馈到语言模型中，
+These printed statements are what's going to be fed back into the language model later on,
+
+99
+00:07:39,909 --> 00:07:45,194
+这样它就可以对代码输出的结果进行推理。
+so it can reason about the output of the code that it just ran.
+
+100
+00:07:45,195 --> 00:07:49,019
+让我们试试看。
+Let's give this a try.
+
+101
+00:07:49,019 --> 00:07:51,743
+我们可以看到当进入AgentExecutor链时，
+We can see that when we go into the AgentExecutor chain,
+
+102
+00:07:52,800 --> 00:07:56,345
+它首先意识到可以使用sorted函数对名单进行排序。
+it first realizes that it can use the sorted function to list the customers.
+
+103
+00:08:00,408 --> 00:08:02,356
+它在底层使用了不同类型的代理，
+It's using a different agent type under the hood,
+
+104
+00:08:02,357 --> 00:08:08,375
+这就是为什么你可以看到Action和Action Input实际上格式有些不同。
+which is why you can see that the action and action input is actually formatted slightly differently.
+
+105
+00:08:08,375 --> 00:08:11,600
+这里，它使用的Action是Python REPL，
+Here, the action that it takes is to use the Python REPL,
+
+106
+00:08:11,601 --> 00:08:15,370
+然后你可以看到Action Input是一段代码，
+and then the action input that you can see is code,
+
+107
+00:08:15,371 --> 00:08:19,686
+它首先写出customers等于这个列表，然后对customers进行排序，
+where it first writes out customers equals this list, it then sorts the customers,
+
+108
+00:08:19,687 --> 00:08:21,971
+然后遍历这个列表并打印它。
+and then it goes through this list and print it.
+
+109
+00:08:23,527 --> 00:08:26,870
+你可以看到代理在Thought（思考）该做什么，并意识到需要写一段代码。
+You can see the agent thinks about what to do and realizes that it needs to write some code.
+
+110
+00:08:28,405 --> 00:08:33,447
+它使用的Action和Action Input的格式实际上与以前略有不同。
+The format that it's using of action and action input is actually slightly different than before.
+
+111
+00:08:33,447 --> 00:08:36,969
+它在底层使用了不同的代理类型。
+It's using a different agent type under the hood.
+
+112
+00:08:36,969 --> 00:08:39,350
+对于Action，它将使用Python REPL。
+For the action, it's going to use the Python REPL.
+
+113
+00:08:39,350 --> 00:08:42,291
+对于Action Input，有一段代码。
+And for the action input, it's going to have a bunch of code.
+
+114
+00:08:42,291 --> 00:08:48,094
+如果我们看看这段代码在做什么，它首先创建一个"customers"变量来列出这些客户名称。
+And so if we look at what this code is doing, it's first creating a variable to list out these customer names.
+
+115
+00:08:48,094 --> 00:08:50,735
+首先对其进行排序并创建一个新变量"sorted_customers"。
+It's then sorting that and creating a new variable.
+
+116
+00:08:50,735 --> 00:08:56,298
+然后遍历这个新变量，按照我们的要求逐行打印出排序后的名单。
+And it's then iterating through that new variable and printing out each line, just like we asked it to.
+
+117
+00:08:57,408 --> 00:09:01,512
+我们可以看到我们得到了Observation（观察结果），这是一份名单列表。
+We can see that we get the observation back and this is a list of names.
+
+118
+00:09:01,512 --> 00:09:07,198
+然后代理意识到任务完成，返回这份名单。
+And then the agent realizes that it's done and it returns these names.
+
+119
+00:09:07,198 --> 00:09:11,071
+我们可以从打印出来的内容看到一些大概的情况，
+We can see from the stuff that's printed out, the high level of what's going on,
+
+121
+00:09:11,072 --> 00:09:16,267
+但让我们再深入一点，将“langchain.debug”设置为“True”并运行。
+but let's dig a little bit deeper and run this with "langchain.debug" set to "True".
+
+122
+00:09:19,210 --> 00:09:23,714
+因为这会打印出所有级别，所有正在运行的不同的链，
+As this prints out all the levels, all the different chains that are going on,
+
+123
+00:09:23,715 --> 00:09:27,158
+让我们逐一查看究竟发生了什么。
+let's go through them and see what exactly is happening.
+
+124
+00:09:27,158 --> 00:09:29,680
+首先，我们从AgentExecutor开始。
+So first, we start with the agent executor.
+
+125
+00:09:29,680 --> 00:09:31,362
+这是第一级的代理运行器。
+This is the top level agent runner.
+
+126
+00:09:31,362 --> 00:09:33,500
+我们可以看到这里有我们的输入，
+And we can see that we have here our input,
+
+127
+00:09:33,501 --> 00:09:38,368
+按姓氏和名字对这些客户进行排序，然后打印输出。
+sort these customers by last name and then first name and print the output.
+
+128
+00:09:38,368 --> 00:09:41,011
+从这里，我们调用一个LLMChain。
+From here, we call an LLMChain.
+
+129
+00:09:41,011 --> 00:09:43,533
+这是代理正在使用的LLMChain。
+This is the LLMChain that the agent is using.
+
+130
+00:09:44,576 --> 00:09:48,838
+LLMChain，记住，是Prompt和LLM的组合。
+The LLMChain, remember, is a combination of prompt and an LLM.
+
+131
+00:09:48,838 --> 00:09:52,657
+目前，它只有input和agent_scratchpad，
+At this point, it's only got the input, an agent scratchpad,
+
+132
+00:09:52,658 --> 00:09:59,400
+稍后我们会回到这个问题，然后是"stop"参数，告诉语言模型何时停止生成。
+we'll get back to that later, and then some stop sequences to tell the language model when to stop doing its generations.
+
+133
+00:10:00,945 --> 00:10:05,447
+在下一级，我们看到了对语言模型的调用。
+At the next level, we see the exact call to the language model.
+
+134
+00:10:05,447 --> 00:10:07,432
+可以看到完整的格式化了的Prompt，
+We can see the fully formatted prompt,
+
+135
+00:10:07,457 --> 00:10:12,551
+其中包括关于它可以访问哪些工具的说明，以及返回何种格式的输出。
+which includes instructions about what tools it has access to as well as how to format its output.
+
+136
+00:10:15,297 --> 00:10:19,260
+从那里，我们可以看到语言模型的详细输出。
+From there, we can then see the exact output of the language model.
+
+137
+00:10:19,260 --> 00:10:28,128
+我们可以看到text键，其中包含了Thought（思考）、Action（操作）和Action Input（操作输入）。
+So we can see the text key where it has the thought and the action and the action input all in one string.
+
+138
+00:10:28,128 --> 00:10:32,412
+然后它退出LLMChain。
+It then wraps up the LLMChain as it exits through there.
+
+139
+00:10:32,412 --> 00:10:34,294
+接下来它调用的是一个工具。
+And the next thing that it calls is a tool.
+
+140
+00:10:34,294 --> 00:10:37,296
+在这里我们可以看到工具的详细输入。
+And here we can see the exact input to the tool.
+
+141
+00:10:37,296 --> 00:10:39,629
+我们还可以看到工具的名称：“Python REPL”，
+We can also see the name of the tool, Python REPL,
+
+142
+00:10:39,658 --> 00:10:41,620
+然后我们可以看到输入，也就是这段代码。
+and then we can see the input, which is this code.
+
+143
+00:10:43,968 --> 00:10:46,889
+接着我们可以看到这个工具的输出，也就是这个打印出来的字符串。
+We can then see the output of this tool, which is this printed out string.
+
+144
+00:10:46,889 --> 00:10:54,212
+之所以有这段代码是因为我们特意要求Python REPL打印出正在进行的操作。
+And again, this happens because we specifically ask the Python REPL to print out what is going on.
+
+145
+00:10:54,212 --> 00:11:00,615
+然后我们可以看到下一个输入到LLMChain，同样，这里的LLMChain是代理。
+We can then see the next input to the LLMChain, which again, the LLMChain here is the agent.
+
+146
+00:11:00,615 --> 00:11:04,877
+这里，如果你看"input"变量，
+So here, if you look at the variables, there's the input.
+
+147
+00:11:04,877 --> 00:11:05,657
+这没有改变，
+This is unchanged.
+
+148
+00:11:05,657 --> 00:11:10,359
+这是我们要代理实现的目标。但现在"agent_scratchpad"参数有一些新值。
+This is the high level objective that we're asking, but now there's some new values for agent scratchpad.
+
+149
+00:11:11,356 --> 00:11:19,461
+你可以看到这实际上是之前的输出和工具输出的组合。
+You can see here that this is actually a combination of the previous generation plus the tool output.
+
+150
+00:11:19,461 --> 00:11:21,328
+我们把这个传回去
+And so we're passing this back in
+
+151
+00:11:21,329 --> 00:11:24,186
+让语言模型了解之前发生了什么
+so that the language model can understand what happened previously
+
+152
+00:11:24,187 --> 00:11:26,629
+并用这些信息来推理出接下来应该做什么。
+and use that to reason about what to do next.
+
+153
+00:11:28,067 --> 00:11:32,700
+接下来的几个打印语句都在讲述语言模型意识到
+The next few print statements are covering what happens as the language model realizes that
+
+154
+00:11:32,701 --> 00:11:35,272
+它基本上完成了它的工作。
+it is basically finished with its job.
+
+155
+00:11:35,272 --> 00:11:38,134
+所以我们可以看到语言模型的完整的格式化了的Prompt。
+So we can see here the fully formatted prompt to the language model.
+
+156
+00:11:39,273 --> 00:11:44,885
+它意识到任务完成并输出了最终答案，
+the response where it realizes that it is done and it says final answer,
+
+157
+00:11:44,886 --> 00:11:50,380
+这是代理用来识别它完成工作的顺序。
+which here is the sequence that the agent uses to recognize that it's done with its job.
+
+158
+00:11:50,380 --> 00:11:53,782
+然后我们可以看到它退出LLMChain，然后退出AgentExecutor。
+We can then see it exiting the LLMChain and then exiting the agent executor.
+
+159
+00:11:55,093 --> 00:12:00,014
+这应该能让你对代理内部发生了什么有一个很好的了解，
+This should hopefully give you a pretty good idea of what's going on under the hood inside these agents.
+
+160
+00:12:00,394 --> 00:12:04,029
+这应该能让你对代理内部发生了什么有一个很好的了解，
+This should hopefully give you a pretty good idea of what's going on under the hood
+
+161
+00:12:04,086 --> 00:12:11,657
+建议你暂停并为这个编码代理设定自己的目标，希望能对你有启发。
+and is hopefully instructive as you pause and put your own objectives for this coding agent to try to accomplish.
+
+162
+00:12:11,657 --> 00:12:16,951
+这种调试模式也可以用来发现出错的地方，就像上面的维基百科示例中调用了不必要的查询，
+This debug mode can also be used to highlight what's going wrong as shown above in the Wikipedia example,
+
+163
+00:12:16,952 --> 00:12:22,720
+有时代理的表现会出人意料，所以这些信息对于帮助你理解发生了什么非常有帮助。
+sometimes agents act a little funny and so having all this information is really helpful for understanding what's going on.
+
+164
+00:12:23,874 --> 00:12:28,575
+到目前为止，我们已经使用了LangChain中内置的工具。
+So far, we've used tools that come to find in LangChain already.
+
+165
+00:12:28,575 --> 00:12:35,356
+但是代理的一大优势是你可以将其连接到你自己的信息来源，你自己的API，你自己的数据。
+But a big power of agents is that you can connect it to your own sources of information, your own APIs, your own data.
+
+166
+00:12:35,356 --> 00:12:40,958
+那么在这里，我们将介绍如何创建一个自定义工具，以便您可以将其连接到您想要的任何地方。
+So here, we're going to go over how you can create a custom tool so that you can connect it to whatever you want.
+
+167
+00:12:40,958 --> 00:12:44,938
+让我们制作一个工具，它会告诉我们当前的日期是什么。
+Let's make a tool that's going to tell us what the current date is.
+
+168
+00:12:44,938 --> 00:12:47,739
+首先，我们要导入这个工具装饰器。
+First, we're going to import this tool decorator.
+
+169
+00:12:47,739 --> 00:12:52,180
+它可以应用于任何函数，并将其转换为LangChain可以使用的工具。
+This can be applied to any function, and it turns it into a tool that LangChain can use.
+
+170
+00:12:53,425 --> 00:12:58,669
+接下来，我们将编写一个名为time的函数，它可以接收任何文本字符串。
+Next, we're going to write a function called time, which shakes in any text string.
+
+171
+00:12:58,669 --> 00:13:00,110
+我们并不真正使用它。
+We're not really going to use that.
+
+172
+00:13:00,110 --> 00:13:05,794
+它将返回今天的日期。
+And it's going to return today's date by calling datetime.
+
+173
+00:13:05,794 --> 00:13:10,858
+除了函数的名称外，我们还写了一份非常详细的DocString格式的注释说明。
+In addition to the name of the function, we're also going to write a really detailed docstring.
+
+174
+00:13:10,858 --> 00:13:16,442
+因为代理会利用注释中的信息来知道何时应该调用这个工具（函数），以及应该如何调用这个工具。
+That's because this is what the agent will use to know when it should call this tool and how it should call this tool.
+
+175
+00:13:18,728 --> 00:13:22,249
+例如，在这里我们说输入应该始终为空字符串。
+For example, here we say that the input should always be an empty string.
+
+176
+00:13:22,249 --> 00:13:24,130
+那是因为我们不用它。
+That's because we don't use it.
+
+177
+00:13:24,130 --> 00:13:27,443
+如果我们对输入有更严格的要求，
+If we have more stringent requirements on what the input should be,
+
+178
+00:13:27,586 --> 00:13:32,871
+比如，如果我们有一个函数，它应该总是接收搜索查询或SQL语句，
+for example, if we have a function that should always take in a search query or a SQL statement,
+
+179
+00:13:32,914 --> 00:13:35,286
+你需要在这里说明。
+you'll want to make sure to mention that here.
+
+180
+00:13:37,573 --> 00:13:39,274
+我们现在要创建另一个代理。
+We're now going to create another agent.
+
+181
+00:13:39,274 --> 00:13:42,755
+这次我们把time工具加到现有工具列表里。
+This time we're adding the time tool to the list of existing tools.
+
+182
+00:13:45,897 --> 00:13:53,960
+最后，让我们调用代理，问它今天是什么日期。
+And finally, let's call the agent and ask it what the date today is.
+
+183
+00:13:53,960 --> 00:13:58,461
+它意识到需要使用time工具，并在这里指定
+It recognizes that it needs to use the time tool, which it specifies here.
+
+184
+00:13:58,461 --> 00:14:00,602
+它的action_input是一个空字符串。
+It has the action input as an empty string.
+
+185
+00:14:00,602 --> 00:14:01,162
+这很棒！
+This is great.
+
+186
+00:14:01,162 --> 00:14:02,803
+这就是我们让它做的事情。
+This is what we told it to do.
+
+187
+00:14:02,803 --> 00:14:04,963
+然后它返回一个Observation（观察结果）。
+And then it returns with an observation.
+
+188
+00:14:04,963 --> 00:14:09,005
+接着，语言模型根据这个Observation回复用户：
+And then finally, the language model takes that observation and responds to the user.
+
+189
+00:14:09,005 --> 00:14:09,905
+“今天是2023年5月21日。”
+Today's date is 2023-05-21.
+
+190
+00:14:12,765 --> 00:14:17,050
+建议你暂停视频，尝试输入不同的内容，看看返回的结果。
+You should pause the video here and try putting in different inputs.
+
+191
+00:14:17,050 --> 00:14:19,572
+这就是关于代理的课程总结。
+This wraps up the lesson on agents.
+
+192
+00:14:19,572 --> 00:14:25,038
+这是LangChain中比较新，也比较激动人心部分，还处于实验性阶段。
+This is one of the newer and more exciting and more experimental pieces of LangChain.
+
+193
+00:14:25,038 --> 00:14:26,820
+希望你能喜欢！
+So I hope you enjoy using it.
+
+194
+00:14:26,820 --> 00:14:32,156
+希望这堂课向你展示了如何将语言模型作为推理引擎来采取不同的操作，
+Hopefully it showed you how you can use a language model as a reasoning engine to take different actions
+
+195
+00:14:32,157 --> 00:14:34,148
+并连接到其他函数和数据源。
+and connect to other functions and data sources.

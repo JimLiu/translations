@@ -1,0 +1,180 @@
+1
+00:00:05,000 --> 00:00:13,200
+In this video, we'll go over the neural network, the architecture of it, and how we can incorporate additional information into it.
+
+2
+00:00:13,200 --> 00:00:18,960
+So the neural network architecture that we use for diffusion models is a unit.
+
+3
+00:00:18,960 --> 00:00:21,786
+And the most important thing that you need to know about a unit is that
+
+4
+00:00:21,787 --> 00:00:32,960
+it is taking as input this image and it's producing as output something of the same size as that image, but here it is that predicted noise.
+
+5
+00:00:32,960 --> 00:00:40,040
+Units have been around for a very long time, since 2015, and it was first used for image segmentation.
+
+6
+00:00:40,040 --> 00:00:45,520
+It was first used to take an image and actually segment it into either a pedestrian or a car,
+
+7
+00:00:45,520 --> 00:00:48,480
+so it's used a lot in self-driving car research.
+
+8
+00:00:48,480 --> 00:00:53,880
+But what's special about units is just that its input and outputs are the same size.
+
+9
+00:00:53,880 --> 00:00:57,886
+And what it does is it first embeds information about this input,
+
+10
+00:00:57,887 --> 00:01:06,368
+so it down samples with a lot of convolutional layers into an embedding that compresses all that information into a small amount of space,
+
+11
+00:01:06,568 --> 00:01:13,880
+and then it upsamples with the same number of upsampling blocks into the output back out for its task.
+
+12
+00:01:13,880 --> 00:01:18,520
+And in this case, that task is to predict the noise that was applied to this image.
+
+13
+00:01:18,520 --> 00:01:21,171
+And if you want to look a little bit deeper, which we'll do together,
+
+14
+00:01:21,172 --> 00:01:27,280
+is that each of these named blocks here are also shown in the code with the same names.
+
+15
+00:01:27,280 --> 00:01:34,760
+And this predicted noise is the same dimension, 16,16 by 3, of the original input image.
+
+16
+00:01:34,760 --> 00:01:38,680
+What's also great about this unit is that it can take in additional information.
+
+17
+00:01:38,680 --> 00:01:44,240
+So it's compressed that image to understand what's going on, but it can also take in more information.
+
+18
+00:01:44,240 --> 00:01:46,320
+And so what information do we want to include?
+
+19
+00:01:46,320 --> 00:01:50,940
+Well, one thing that's really important for these models is the time embedding.
+
+20
+00:01:50,940 --> 00:01:55,656
+And so this is an embedding that kind of tells the model what the time step is,
+
+21
+00:01:55,657 --> 00:01:58,720
+and therefore what kind of noise level we need.
+
+22
+00:01:58,720 --> 00:02:02,720
+And all you have to do for this time embedding is you embed it into some kind of vector,
+
+23
+00:02:02,720 --> 00:02:06,320
+and you can add it into these upsampling blocks.
+
+24
+00:02:06,320 --> 00:02:10,280
+Another piece of information that could be useful is a context embedding.
+
+25
+00:02:10,280 --> 00:02:16,040
+We'll do more of this later, but all that context embedding does is it helps you control what the model generates.
+
+26
+00:02:16,040 --> 00:02:22,680
+For example, a text description, like you really want it to be Bob, or some kind of factor like it needs to be a certain color.
+
+27
+00:02:22,680 --> 00:02:24,880
+We'll discuss this a bit more later.
+
+28
+00:02:24,880 --> 00:02:27,440
+And for that context embedding, you can just multiply it in.
+
+29
+00:02:27,440 --> 00:02:28,640
+Great.
+
+30
+00:02:28,640 --> 00:02:30,560
+So what does that look like in code?
+
+31
+00:02:30,560 --> 00:02:32,560
+Here you can see a context embedding.
+
+32
+00:02:32,560 --> 00:02:33,940
+This is just one of them.
+
+33
+00:02:33,940 --> 00:02:35,960
+And then here you see the time embedding.
+
+34
+00:02:35,960 --> 00:02:39,431
+And in the upsampling block, all you have to do again, just like in this diagram,
+
+35
+00:02:39,443 --> 00:02:45,120
+you multiply the context embedding with the upsampling block, and you add the time embedding.
+
+36
+00:02:45,120 --> 00:02:46,120
+Cool.
+
+37
+00:02:46,120 --> 00:02:49,960
+So now in the notebook, in the forward pass of the model, so this is running the model,
+
+38
+00:02:49,960 --> 00:02:56,960
+you can see some of these down, down, down blocks, and then also these up, up, up blocks here.
+
+39
+00:02:56,960 --> 00:02:59,360
+And again, here are your context and time embeddings.
+
+40
+00:02:59,360 --> 00:03:02,560
+We have two of them here for each of those up blocks.
+
+41
+00:03:02,560 --> 00:03:13,120
+And how these down and up blocks are defined is up here in initialization for the unit.
+
+42
+00:03:13,120 --> 00:03:16,000
+And so for the down, this is what a unit down looks like.
+
+43
+00:03:16,000 --> 00:03:20,960
+And we actually do have that in our helper functions if you want to look at them in greater detail.
+
+44
+00:03:20,960 --> 00:03:23,540
+But they are just convolutional blocks.
+
+45
+00:03:23,540 --> 00:03:26,800
+And in the next video, you'll learn how to train this neural network.
+

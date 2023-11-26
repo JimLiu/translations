@@ -1,0 +1,1014 @@
+1
+00:00:05,000 --> 00:00:10,074
+在前几个视频中，Isa展示了如何使用大型语言模型（LLM）来构建应用，
+In the previous few videos, Isa showed how to build an application using an LLM
+
+2
+00:00:10,075 --> 00:00:19,000
+从评估输入到处理输入，然后在向用户展示输出之前进行最终的输出检查。
+from evaluating the inputs to processing the inputs to then doing final output checking before you show the output to a user.
+
+3
+00:00:19,000 --> 00:00:22,880
+在你构建了这样一个系统之后，你怎么知道它的运行情况呢？
+After you've built such a system, how do you know how it's working?
+
+4
+00:00:22,880 --> 00:00:26,516
+甚至当你部署并让用户使用它时，
+And maybe even as you deploy it and let users use it,
+
+5
+00:00:26,517 --> 00:00:35,000
+你如何跟踪它的表现，发现不足之处，并继续提高系统答案的质量呢？
+how can you track how it's doing and find any shortcomings and continue to improve the quality of the answers of your system?
+
+6
+00:00:35,000 --> 00:00:41,380
+在这个视频中，我想和大家分享一些评估LLM输出的最佳实践。
+In this video, I'd like to share with you some best practices for evaluating the output of an LLM.
+
+7
+00:00:41,380 --> 00:00:46,440
+我特别想和你分享构建这些系统的感觉是什么样的。
+And I want to share with you specifically what it feels like to build one of these systems.
+
+8
+00:00:46,440 --> 00:00:49,848
+你在这个视频中听我讲述的内容
+One key distinction between what you hear me talk about in this video
+
+9
+00:00:49,849 --> 00:00:55,550
+和你在更传统的机器学习，监督学习应用中可能看到的内容之间的一个关键区别是
+and what you may have seen in more traditional machine learning, supervised learning applications is
+
+10
+00:00:55,551 --> 00:01:03,520
+因为你可以快速构建这样的应用程序，所以评估它的方法通常不会从测试数据集开始。
+because you can build such an application so quickly, the methods of evaluating it, it tends not to start off with a test set.
+
+11
+00:01:03,520 --> 00:01:08,840
+相反，你通常最终会逐渐建立一套测试例子。
+Instead, you often end up gradually building up a set of test examples.
+
+12
+00:01:08,840 --> 00:01:10,880
+让我向你解释我这么说的原因。
+Let me share with you what I mean by that.
+
+13
+00:01:10,880 --> 00:01:18,386
+你还记得第二个视频中的这个图表，它展示了”如何通过基于提示的开发加快模型开发“的核心部分，
+You will remember this diagram from the second video about how prompt-based development speeds up the core parts of model development
+
+14
+00:01:18,387 --> 00:01:25,640
+从可能需要几个月到仅仅几分钟、几小时或者最多几天。
+from maybe months to just minutes or hours or at most a very small number of days.
+
+15
+00:01:25,641 --> 00:01:32,515
+在传统的监督学习方法中，如果你需要收集，比如说，10,000个标记了的数据示例，
+In the traditional supervised learning approach, if you needed to collect, say, 10,000 labeled examples anyway,
+
+16
+00:01:32,516 --> 00:01:38,279
+那么收集另外1,000个测试示例的增量成本并不算高。
+then the incremental cost of collecting another 1,000 test examples isn't that bad.
+
+17
+00:01:38,280 --> 00:01:41,224
+所以在传统的监督学习环境中，
+So in the traditional supervised learning setting,
+
+18
+00:01:41,225 --> 00:01:48,674
+收集训练数据集、收集开发数据集、保留交叉验证数据集和测试数据集是很常见的，
+it was not unusual to collect a training set, collect a development set or holdout cross-validation set in the test set,
+
+19
+00:01:48,675 --> 00:01:52,760
+然后在整个开发过程中随时要使用这些数据。
+and then tap those at hand throughout this development process.
+
+20
+00:01:52,760 --> 00:01:57,857
+但是，如果你使用Prompt-based AI，你只要几分钟内就可以写好一个提示（Prompt），并在几个小时内使其工作，
+But if you're able to specify a prompt in just minutes and get something working in hours,
+
+21
+00:01:57,858 --> 00:02:05,075
+那么如果你必须暂停很长时间去收集1000个测试示例，就会觉得非常麻烦，
+then it would seem like a huge pain if you had to pause for a long time to collect 1,000 test examples
+
+22
+00:02:05,076 --> 00:02:09,560
+因为你现在完全不需要训练数据就可以让它正常工作。
+because you can now get this working with zero training examples.
+
+23
+00:02:09,560 --> 00:02:14,880
+所以在使用LLM构建应用程序时，通常会有这种感觉：
+So when building an application using an LLM, this is what it often feels like.
+
+24
+00:02:14,880 --> 00:02:18,928
+首先，你会在少量的例子上调整提示（Prompt），
+First, you would tune the prompts on just a small handful of examples,
+
+25
+00:02:18,929 --> 00:02:25,120
+可能是一到三到五个例子，尝试找到一个适用于它们的提示。
+maybe one to three to five examples, and try to get a prompt that works on them.
+
+26
+00:02:25,120 --> 00:02:32,560
+然后，在系统调试过程中，你偶尔会遇到一些棘手的案例。
+And then as you have the system undergo additional testing, you occasionally run into a few examples that are tricky.
+
+27
+00:02:32,560 --> 00:02:35,720
+提示或者算法在这些案例上不起作用。
+The prompt doesn't work on them or the algorithm doesn't work on them.
+
+28
+00:02:35,720 --> 00:02:42,634
+在这种情况下，你可以把这些额外的一两个或三五个例子加入到你正在测试的数据集中，
+And in that case, you can take these additional one or two or three or five examples and add them to the set that you're testing on
+
+29
+00:02:42,635 --> 00:02:46,240
+慢慢的收集更多棘手的例子形成一个开发数据集。
+to just add additional tricky examples opportunistically.
+
+30
+00:02:46,240 --> 00:02:53,908
+最后，你添加到开发数据集的例子足够多了，
+Eventually, you have enough of these examples you've added to your slowly growing development set
+
+31
+00:02:53,909 --> 00:03:00,480
+以至于每次对提示修改后，要手动把数据集的例子挨个运行一遍都有点麻烦了。
+that it becomes a bit inconvenient to manually run every example through the prompt every time you change the prompt.
+
+32
+00:03:00,480 --> 00:03:08,040
+然后你可以开始制定指标来衡量这些例子的运行情况，比如说平均准确率如何。
+And then you start to develop metrics to measure performance on this small set of examples, such as maybe average accuracy.
+
+33
+00:03:08,040 --> 00:03:16,843
+而这个过程中，如果在任何时候你觉得系统运行得足够好了，
+And one interesting aspect of this process is if you decide at any moment in time your system is working well enough,
+
+34
+00:03:16,876 --> 00:03:19,880
+你可以就此停止，不需要再进行下一个步骤。
+you can stop right there and not go on to the next bullet.
+
+35
+00:03:19,880 --> 00:03:30,440
+事实上，有很多应用可能只进行到第一或第二步，运行得也很好。
+And in fact, there are many deploy applications that stops at maybe the first or the second bullet and are running just fine.
+
+36
+00:03:30,440 --> 00:03:37,029
+现在，如果你手工收集的用来评估模型的数据集，
+Now if your hand-built development set that you're evaluating the model on
+
+37
+00:03:37,030 --> 00:03:40,843
+还不能让你对系统的表现有足够的信心，
+isn't giving you sufficient confidence yet in the performance of your system,
+
+38
+00:03:40,844 --> 00:03:49,760
+那么你可能需要进行下一步，收集随机抽样的数据集来调整模型。
+then that's when you may go to the next step of collecting a randomly sampled set of examples to tune the model to.
+
+39
+00:03:49,760 --> 00:03:54,057
+这将继续作为一个开发数据集或保留交叉验证数据集，
+And this would continue to be a development set or a holdout cross-validation set,
+
+40
+00:03:54,100 --> 00:04:00,120
+因为继续调整你的提示以适应数据集合是很常见的。
+because it would be quite common to continue to tune your prompt to this.
+
+41
+00:04:00,120 --> 00:04:05,680
+只有当你需要对系统的表现做很高精准度的评估时，
+And only if you need even higher fidelity estimate of the performance of your system,
+
+42
+00:04:05,680 --> 00:04:14,520
+你才需要收集和使用一个保留测试数据集，通常在调整模型时，你是不应该使用这个保留测试集的（甚至看都不要看一眼）。
+then might you collect and use a holdout test sets that you don't even look at yourself when you're tuning the model.
+
+43
+00:04:14,520 --> 00:04:18,500
+所以第四步在某种程度上更重要，比如说：
+And so step four tends to be more important if, say,
+
+44
+00:04:18,501 --> 00:04:28,920
+如果你的系统正确率为91%，你想调整它使正确率达到92%或93%。
+your system is getting the right answer 91% of the time and you want to tune it to get it to give the right answer 92 or 93% of the time.
+
+45
+00:04:28,920 --> 00:04:36,800
+那么你确实需要更多的例子来衡量91%和93%之间的准确率差异。
+Then you do need a larger set of examples to measure those differences between 91 and 93% performance.
+
+46
+00:04:36,800 --> 00:04:42,480
+只有在你真的需要一个公正、无偏的估计来评估系统的表现时，
+And then only if you really need an unbiased, fair estimate of how was the system doing,
+
+47
+00:04:42,480 --> 00:04:47,680
+你才需要在开发数据集之外再收集一个保留测试数据集。
+then do you need to go beyond the development set to also collect a holdout test set.
+
+48
+00:04:47,680 --> 00:04:49,100
+有一个重要的注意事项：
+One important caveat,
+
+49
+00:04:49,120 --> 00:04:59,080
+我见过很多大型语言模型的应用，其中如果给出的答案不太准确，并没有实质性的危害风险。
+I've seen a lot of applications of large language models where there isn't meaningful risk of harm if it gives not quite the right answer.
+
+51
+00:04:59,080 --> 00:05:08,013
+但显然对于任何高风险的应用，如果存在偏见风险或不恰当的输出对某人造成伤害，
+But obviously for any high-stakes applications, if there's a risk of bias or an inappropriate output causing harm to someone,
+
+52
+00:05:08,014 --> 00:05:13,486
+那么收集一个测试集来严格评估你的系统的表现，
+then the responsibility to collect a test set to rigorously evaluate the performance of your system
+
+53
+00:05:13,487 --> 00:05:19,040
+确保在使用之前它能做正确的事情，这就变得更加重要了。
+to make sure it's doing the right thing before you use it, that becomes much more important.
+
+54
+00:05:19,040 --> 00:05:26,114
+但是，举个例子，如果你只是用它来为自己阅读的文章做总结，而不是给别人看，
+But if, for example, if you are using it to summarize articles just for yourself to read and no one else,
+
+55
+00:05:26,115 --> 00:05:28,614
+那么可能造成的危害风险就相对较小
+then maybe the risk of harm is more modest
+
+56
+00:05:28,615 --> 00:05:38,480
+你可以在这个过程的早期就停止，而不用花费第四和第五点的成本，收集更大的数据集来评估你的算法。
+and you can stop early in this process without going to the expense of bullets four and five and collecting larger data sets on which to evaluate your algorithm.
+
+57
+00:05:38,480 --> 00:05:48,600
+所以在这个例子中，让我从常用的辅助函数开始。
+So in this example, let me start with the usual helper functions.
+
+58
+00:05:48,600 --> 00:05:53,320
+使用一个utils函数来获取产品和类别的列表。
+Use a utils function to get a list of products and categories.
+
+59
+00:05:53,320 --> 00:06:00,800
+所以在计算机和笔记本电脑类别中，有一个计算机和笔记本电脑的列表，还有智能手机和配件类别。
+So in the computers and laptop category, there's a list of computers and laptops and the smartphones and accessories category.
+
+60
+00:06:00,800 --> 00:06:05,757
+这里有一个智能手机和配件的列表，以及其他类别的列表。
+Here's a list of smartphones and accessories and so on for other categories.
+
+61
+00:06:12,040 --> 00:06:26,028
+现在假设一个任务是：“根据用户输入，比如我有预算限制要买什么电视
+Now let's say the task of an address is given a user input such as what TV can I buy if I'm on a budget
+
+62
+00:06:26,029 --> 00:06:35,080
+来检索相关的类别和产品，以便我们有正确的信息来回答用户的查询。”
+to retrieve the relevant categories and products so that we have the right info to answer the user's query.
+
+63
+00:06:35,080 --> 00:06:36,080
+那么这里有一个提示。
+So here's a prompt.
+
+64
+00:06:36,080 --> 00:06:39,520
+如果需要的话请随时暂停视频，以便你可以详细阅读这个Prompt的详细信息。
+Feel free to pause the video and read through this in detail if you wish.
+
+65
+00:06:39,520 --> 00:06:47,360
+但是提示中指定了一组说明，并且实际上给了语言模型一个好的输出示例。
+But the prompt specifies a set of instructions and it actually gives the language model one example of a good output.
+
+66
+00:06:47,360 --> 00:06:50,500
+这有时被称为少量示例（Few-shot）或者从技术上说是单示例提示（One-shot prompting）
+This is sometimes called a few shot or technically one shot prompting
+
+67
+00:06:50,501 --> 00:06:56,640
+因为我们实际上使用用户消息和系统消息给它一个好的输出示例。
+because we're actually using a user message and a system message to give it one example of a good output.
+
+68
+00:06:56,640 --> 00:07:03,800
+如果有人说我想要最贵的电脑，那我们就返回所有电脑，因为我们没有价格信息。
+If someone says I want the most expensive computer, let's just return all the computers because we don't have pricing information.
+
+69
+00:07:03,800 --> 00:07:15,560
+现在让我们在客户留言上使用这个提示：“如果我预算有限，我可以买哪台电视？”
+Now let's use this prompt on the customer message, which TV can I buy if I'm on a budget.
+
+70
+00:07:15,560 --> 00:07:22,760
+所以我们把提示、customer_msg_0和产品类别都传递给它。
+And so we're passing in to this both the prompt customer_msg_0 as well as the products and category.
+
+71
+00:07:22,760 --> 00:07:26,880
+这是我们在上面使用utils函数检索到的信息。
+This is the information that we have retrieved up top using the utils function.
+
+72
+00:07:26,880 --> 00:07:34,220
+这里列出了与此查询相关的信息，即电视和整个影院系统类别下的信息。
+And here it lists out the relevant information to this query, which is under the category televisions and whole theater systems.
+
+73
+00:07:34,220 --> 00:07:38,220
+这是一份看起来相关的电视和整个影院系统列表。
+This is a list of TVs and whole theater systems that seem relevant.
+
+74
+00:07:38,220 --> 00:07:43,920
+要查看提示的效果如何，可以在第二个提示上进行评估。
+To see how well the prompt is doing, you may evaluate it on a second prompt.
+
+75
+00:07:43,920 --> 00:07:47,480
+有人说我需要一个智能手机充电器。
+Someone says I need a charger for my smartphone.
+
+76
+00:07:47,480 --> 00:07:56,400
+看起来它正确地获取了这些数据，如何成为智能手机配件并列出相关产品。
+It looks like it's correctly retrieving this data, how to be a smartphone's accessories and list the relevant products.
+
+77
+00:07:56,400 --> 00:08:00,680
+还有另一个：
+And here's another one.
+
+78
+00:08:00,680 --> 00:08:03,080
+“那么你们有哪些电脑？”
+So what computers do you have?
+
+79
+00:08:03,080 --> 00:08:06,620
+希望你能找到一份电脑列表。
+And hopefully you'll retrieve a list of the computers.
+
+80
+00:08:06,620 --> 00:08:08,960
+所以这里我有三个提示。
+So here I have three prompts.
+
+81
+00:08:08,960 --> 00:08:12,700
+如果你是第一次开发这个提示，
+And if you are developing this prompt for the first time,
+
+82
+00:08:12,701 --> 00:08:18,286
+这样的一两个或三个例子是相当合理的
+it would be quite reasonable to have one or two or three examples like this
+
+83
+00:08:18,329 --> 00:08:22,686
+并不断调整提示，直到它给出适当的输出
+and to keep on tuning the prompt until it gives appropriate outputs
+
+84
+00:08:22,687 --> 00:08:30,200
+直到提示能够根据客户的请求，检索出所有提示所需的相关产品和类别，
+until the prompt is retrieving the relevant products and categories to the customer requests for all of your prompts,
+
+85
+00:08:30,400 --> 00:08:32,414
+就像这个例子中的所有三个提示一样。
+all three of them in this example.
+
+86
+00:08:34,960 --> 00:08:38,486
+如果提示缺少一些产品之类的东西，
+And if the prompt had been missing some products or something,
+
+87
+00:08:38,487 --> 00:08:44,300
+那么我们可能会回去修改几次提示，直到它在这三个提示上都正确。
+then what we would do is probably go back to edit the prompt a few times until it gets it right on all three of these prompts.
+
+88
+00:08:45,400 --> 00:08:53,199
+在将系统调整到这个程度之后，你可能会开始测试你的系统，
+After you've gotten the system to this point, you might then start running the system in testing,
+
+89
+00:08:53,200 --> 00:09:00,840
+也许将其发送给内部测试用户或尝试自己使用它，然后运行一段时间看看会发生什么。
+maybe send it to internal test users or try using it yourself and just run it for a while to see what happens.
+
+90
+00:09:00,840 --> 00:09:06,120
+有时候你会遇到一个它无法解决的提示。
+And sometimes you will run across a prompt that it fails on.
+
+91
+00:09:06,120 --> 00:09:07,840
+这里有一个提示的例子。
+So here's an example of a prompt.
+
+92
+00:09:07,840 --> 00:09:12,120
+告诉我关于SmartX Pro手机和Fotoshop相机，还有你们有哪些电视。
+Tell me about the SmartX pro phone and the Fotoshop camera, also what TVs you have.
+
+93
+00:09:12,120 --> 00:09:16,500
+当我在这个提示上运行它时，看起来它输出了正确的数据，
+So when I run it on this prompt, it looks like it's outputting the right data,
+
+94
+00:09:16,501 --> 00:09:20,320
+但它也输出了一堆额外的垃圾文字。
+but it also outputs a bunch of text here, this extra junk.
+
+95
+00:09:20,320 --> 00:09:26,820
+这使得要这段字符串很难被解析成Python对象列表。
+It makes it harder to parse this into a Python list of dictionaries.
+
+96
+00:09:26,820 --> 00:09:30,080
+我们不喜欢它输出这些额外的废话。
+So we don't like that it's outputting this extra junk.
+
+97
+00:09:30,080 --> 00:09:34,786
+当你遇到一个系统处理失败的例子时，
+So when you run across one example that the system fails on,
+
+98
+00:09:34,787 --> 00:09:39,280
+通常的做法就是记下这是一个有点棘手的例子。
+then common practice is to just note down that this is a somewhat tricky example.
+
+99
+00:09:39,280 --> 00:09:45,040
+那么让我们把这个加入到我们要测试系统的例子集合里。
+So let's add this to our set of examples that we're going to test the system on systematically.
+
+100
+00:09:45,040 --> 00:09:49,720
+如果你继续运行系统一段时间，也许它能处理那些例子。
+And if you keep on running the system for a while longer, maybe it works on those examples.
+
+101
+00:09:49,720 --> 00:09:53,640
+我们确实调整了三个示例的提示，它可能会在很多例子上都能工作。
+We did tune the prompt to three examples, so maybe it will work on many examples.
+
+102
+00:09:53,640 --> 00:09:58,960
+但是碰巧，你可能会遇到另一个它产生错误的例子。
+But just by chance, you might run across another example where it generates an error.
+
+103
+00:09:58,960 --> 00:10:07,920
+这个customer_msg_4也导致系统在最后输出了一堆我们不想要的垃圾文本。
+So this customer_msg_4 also causes the system to output a bunch of junk text at the end that we don't want.
+
+104
+00:10:07,920 --> 00:10:13,680
+试图帮助我们得到所有这些额外的文本，但实际上我们并不需要这些。
+Trying to be helpful to get all this extra text, but we actually don't want this.
+
+105
+00:10:13,680 --> 00:10:17,914
+在这一点上，你可能已经在数百个例子上运行了这个提示，
+And so at this point, you may have run this prompt maybe on hundreds of examples,
+
+106
+00:10:17,915 --> 00:10:23,920
+也许你有测试用户，但你只需要拿那些棘手的例子，它做得不好的那些。
+maybe you have test users, but you would just take the examples, the tricky ones, it's doing poorly on.
+
+107
+00:10:23,920 --> 00:10:28,671
+现在我有这一组5个例子，从0到4编号，
+And now I have this set of five examples indexed from zero to four,
+
+108
+00:10:28,672 --> 00:10:34,440
+有这一组5个例子，你可以用来进一步微调提示。
+have this set of five examples that you use to further fine tune the prompts.
+
+109
+00:10:34,440 --> 00:10:44,560
+在这两个例子中，LLM 都输出了一堆我们不想要的额外垃圾文本。
+And in both of these examples, the LLM had output a bunch of extra junk text at the end that we don't want.
+
+110
+00:10:44,560 --> 00:10:51,400
+经过一点尝试和错误，你可能会决定修改提示如下：
+And after a little bit of trial and error, you might decide to modify the prompts as follows.
+
+111
+00:10:51,400 --> 00:10:54,640
+这里有一个新版本的提示，叫做Prompt v2。
+So here's a new prompt, this is called prompt v2.
+
+112
+00:10:54,640 --> 00:11:00,556
+但我们在这里做的是，我们在提示中添加了：“不要输出任何不是 JSON 格式的额外文本”。
+But what we did here was we added to the prompt, do not output any additional text that's not in JSON format,
+
+113
+00:11:00,557 --> 00:11:03,640
+就是强调一下：请不要输出JSON之外的内容。
+just to emphasize, please don't output this JSON stuff.
+
+114
+00:11:03,640 --> 00:11:09,680
+并添加了第2个例子，使用用户和助手消息进行少量示例提示（Few-shot prompting），
+And added a second example, using the user and assistant message for few-shot prompting,
+
+115
+00:11:09,680 --> 00:11:12,600
+用户询问最便宜的电脑。
+where the user asked the cheapest computer.
+
+116
+00:11:12,600 --> 00:11:14,857
+在这两个少量示例提示的例子中，
+And in both of the few-shot examples,
+
+117
+00:11:14,858 --> 00:11:21,040
+我们向系统展示了一个示例，这个示例只返回 JSON 格式的结果。
+we're demonstrating to the system a response where it gives only JSON outputs.
+
+118
+00:11:21,040 --> 00:11:23,414
+这是我们刚刚添加到提示中的额外内容：
+So here's the extra thing that we just added to the prompt,
+
+119
+00:11:23,415 --> 00:11:26,000
+不要输出任何不是JSON格式的额外文本。
+do not output any additional text that's not in JSON format.
+
+120
+00:11:26,000 --> 00:11:31,342
+我们使用few_shot_user1, few_shot_assistant1, few_shot_user2 和 few_shot_assistant2，
+And we use few_shot_user1, few_shot_assistant1, and few_shot_user2, few_shot_assistant2,
+
+121
+00:11:31,343 --> 00:11:35,640
+给它两个这样的少量示例提示。
+to give it two of these few-shot prompts.
+
+122
+00:11:35,640 --> 00:11:39,160
+那么让我按shift enter找到那个提示。
+So let me hit shift enter to find that prompt.
+
+123
+00:11:39,160 --> 00:11:44,056
+如果你回头手动重新运行这个提示，对所有五个用户输入示例，
+And you were to go back and manually rerun this prompt on all five of the examples of user inputs,
+
+124
+00:11:44,057 --> 00:11:47,357
+包括之前给出了错误输出的这个，
+including this one that previously had given a broken output,
+
+125
+00:11:47,358 --> 00:11:51,280
+你会发现它现在给出了正确的输出。
+you find that it now gives a correct output.
+
+126
+00:11:51,280 --> 00:11:55,943
+如果你回头重新运行这个新提示，这是提示版本v2，
+And if you were to go back and rerun this new prompt, this is prompt version v2,
+
+127
+00:11:55,944 --> 00:12:03,670
+在那个客户留言示例上，之前的版本在JSON输出之后还有额外垃圾文本，导致输出错误。
+on that customer message example that had resulted in the broken output with extra junk after the JSON output,
+
+128
+00:12:03,671 --> 00:12:08,880
+新版本生成了更好的输出结果。
+then this will generate a better output.
+
+129
+00:12:08,880 --> 00:12:16,442
+我不会在这里做，但我鼓励你暂停视频，然后自己重新运行customer_msg_4，还有这个提示v2，
+And I'm not going to do it here, but I encourage you to pause the video and rerun it yourself on customer_msg_4 as well on this prompt v2,
+
+130
+00:12:16,443 --> 00:12:20,280
+看看它是否也能生成正确的输出。
+see if it also generates the correct output.
+
+131
+00:12:20,280 --> 00:12:24,600
+希望它能，我觉得应该可以。
+And hopefully it will, I think it should.
+
+132
+00:12:24,600 --> 00:12:26,957
+当然，当你修改提示时，
+And of course, when you modify the prompts,
+
+133
+00:12:26,958 --> 00:12:36,760
+也有必要做一些回归测试，以确保在修复提示3和4的错误输出时，
+it's also useful to do a bit of regression testing to make sure that when fixing the incorrect outputs on prompts three and four,
+
+134
+00:12:36,760 --> 00:12:41,480
+没有破坏提示0的输出。
+it didn't break the output on prompt zero either.
+
+135
+00:12:41,480 --> 00:12:50,570
+现在你可以看出，如果我必须复制粘贴五个提示，customer_msg_0、1、2、3和4到我的Jupyter Notebook，
+Now you can kind of tell that if I had to copy paste five prompts, customer_msg_0, 1, 2, 3, and 4 into my Jupyter Notebook
+
+136
+00:12:50,571 --> 00:12:55,813
+运行它们，然后手动查看它们，看看它们是否都放在了正确的类别和产品中，
+and run them and then manually look at them to see if they all put in the right categories and products,
+
+137
+00:12:55,814 --> 00:12:57,320
+你可以这么做。
+you can kind of do it.
+
+138
+00:12:57,320 --> 00:13:00,080
+我可以看着这个说：是的，类别是电视和家庭影院系统产品。
+I can look at this and go yep, category TV and home theater systems products.
+
+139
+00:13:00,080 --> 00:13:02,160
+嗯，看起来你把它们都找到了。
+Yep, looks like you got all of them.
+
+140
+00:13:02,160 --> 00:13:04,657
+但实际上，手动做这个有点痛苦，
+But it's actually a little bit painful to do this manually,
+
+141
+00:13:04,658 --> 00:13:12,280
+需要用眼睛仔细检查输出结果，确保这确实是正确的输出。
+to manually inspect or to look at this output to make sure with your eyes that this is exactly the right output.
+
+142
+00:13:12,280 --> 00:13:19,199
+当你调整的开发集不再只有少数几个例子时，
+So when the development set that you're tuning to becomes more than just a small handful of examples,
+
+143
+00:13:19,200 --> 00:13:27,200
+自动化测试流程就变得很有用了。
+it then becomes useful to start to automate the testing process.
+
+144
+00:13:27,200 --> 00:13:35,780
+这里有10个例子，我指定了10条客户留言。
+So here is a set of 10 examples where I'm specifying 10 customer messages.
+
+145
+00:13:35,780 --> 00:13:39,260
+这是客户的留言，我有预算可以买什么电视？
+So here's the customer message, what TV can I buy from a budget?
+
+146
+00:13:39,260 --> 00:13:41,880
+还有什么是理想的答案？
+As well as what's the ideal answer?
+
+147
+00:13:41,880 --> 00:13:45,429
+把这个当作测试数据集里的正确答案，
+Think of this as the right answer in the test set,
+
+148
+00:13:45,430 --> 00:13:49,240
+或者我应该说开发数据集，因为我们实际上是在调整这个。
+or really I should say development set because we're actually tuning to this.
+
+149
+00:13:49,240 --> 00:13:54,700
+我们在这里收集了10个例子，索引编号从0到9，
+And so we've collected here 10 examples indexed from zero through nine,
+
+150
+00:13:54,701 --> 00:14:03,720
+最后一个是：“如果用户说我想要热水浴缸时间机器，我们真的没有相关产品，非常抱歉。”
+where the last one is if the user says I would like hot tub time machine, we have no relevant products to that, really sorry.
+
+151
+00:14:03,720 --> 00:14:07,040
+理想的答案是空集。
+The ideal answer is the empty set.
+
+152
+00:14:07,040 --> 00:14:13,343
+现在，如果你想自动评估
+And now, if you want to evaluate automatically,
+
+153
+00:14:13,344 --> 00:14:19,920
+某个提示在这10个例子中的某个例子上的运行结果，这里有一个函数可以实现。
+what a prompt is doing on any of these 10 examples, here is a function to do so.
+
+154
+00:14:19,920 --> 00:14:24,280
+这是一个有点长的函数，如果你愿意的话，可以暂停视频并仔细阅读。
+It's kind of a long function, feel free to pause the video and read through it if you wish.
+
+155
+00:14:24,280 --> 00:14:28,020
+让我演示一下它实际上在做什么。
+But let me just demonstrate what it is actually doing.
+
+156
+00:14:28,020 --> 00:14:32,440
+让我打印出索引是0的客户留言。
+So let me print out the customer message for customer message 0.
+
+157
+00:14:32,440 --> 00:14:38,080
+客户留言：“如果我预算有限，我可以买哪台电视？”
+Right, so customer messages, which TV can I buy if I'm on a budget?
+
+158
+00:14:38,080 --> 00:14:42,280
+我们也来打印一下这个留言理想的答案是什么。
+And let's also print out the ideal answer.
+
+159
+00:14:42,280 --> 00:14:49,400
+所以理想的答案是根据提示列出所有我们希望获取的电视。
+So the ideal answer is here are all the TVs that we want the prompt to retrieve.
+
+160
+00:14:49,400 --> 00:14:56,920
+现在让我调用这个提示，这是在这个客户消息上使用该用户产品和类别信息的提示符v2。
+And let me now call the prompt, this is prompt v2 on this customer message with that user products and category information.
+
+161
+00:14:56,920 --> 00:14:57,920
+我们打印出来。
+Let's print it out.
+
+162
+00:14:57,920 --> 00:15:01,680
+然后我们将调用eval。
+And then we'll call the eval.
+
+163
+00:15:01,680 --> 00:15:09,520
+我们将调用eval_responsive_with_ideal函数，看看返回结果与理想答案的匹配程度如何。
+We'll call the eval_responsive_with_ideal function to see how well the response matches the ideal answer.
+
+164
+00:15:09,520 --> 00:15:16,460
+在这种情况下，它确实输出了我们想要的类别，也输出了整个产品列表。
+And in this case, it did output the category that we wanted and it did output the entire list of products.
+
+165
+00:15:16,460 --> 00:15:21,800
+所以这给你一个1.0的分数。
+And so it's this gives you the score of 1.0.
+
+166
+00:15:21,800 --> 00:15:28,280
+再给你们举个例子，事实证明我知道它在第7个例子上出错了。
+Just to show you one more example, it turns out that I know it gets it wrong on example seven.
+
+167
+00:15:28,280 --> 00:15:36,720
+所以如果我把这个从0改成7然后运行，这就是它得到的。
+So if I change this from zero to seven and run it, this is what it gets.
+
+168
+00:15:36,720 --> 00:15:42,300
+哦，让我把这个也更新成7。
+Oh, let me update this to seven as well.
+
+169
+00:15:42,300 --> 00:15:50,520
+在这个客户留言下面，这是理想的答案，它应该输出在”游戏机和配件“分类下面。
+So under this customer message, this is the ideal answer where it should output under gaming consoles and accessories.
+
+170
+00:15:50,520 --> 00:15:52,600
+这是游戏机和配件。
+So this is gaming consoles and accessories.
+
+171
+00:15:52,600 --> 00:16:01,720
+但是这里的回应有三个输出，实际上应该有一、二、三、四、五个输出。
+But whereas the response here has three outputs, it actually should have had one, two, three, four, five outputs.
+
+172
+00:16:01,720 --> 00:16:04,480
+它缺少了一些产品。
+And so it's missing some of the products.
+
+173
+00:16:04,480 --> 00:16:07,357
+如果我现在要调整提示的话，
+So what I would do if I'm tuning the prompt now is
+
+174
+00:16:07,358 --> 00:16:18,970
+我会用一个for循环来遍历所有10个来自开发数据集的示例，我们逐个获取客户留言，
+I would then use a for loop to loop over all 10 of the development set examples where we repeatedly pull out the customer message,
+
+175
+00:16:18,971 --> 00:16:25,800
+得到理想答案，正确答案，调用函数得到返回结果，并对结果进行评估，
+get the ideal answer, the right answer, call the arm to get a response, evaluate it,
+
+176
+00:16:25,800 --> 00:16:27,880
+然后你知道，累积平均。
+and then you know, accumulate it in average.
+
+177
+00:16:27,880 --> 00:16:32,200
+让我运行一下这个。
+And let me just run this.
+
+178
+00:16:32,200 --> 00:16:35,960
+这个运行起来需要一段时间，但当它运行完毕时，这就是结果。
+So this will take a while to run, but when it's done running, this is the result.
+
+179
+00:16:35,960 --> 00:16:38,320
+我们正在浏览10个示例。
+We're running through the 10 examples.
+
+180
+00:16:38,320 --> 00:16:41,240
+看起来第7个示例是错误的。
+It looks like example seven was wrong.
+
+181
+00:16:41,240 --> 00:16:46,120
+所以在10个示例的测试中，正确的比例是90%。
+And so the fraction correct of 10 was 90% correct.
+
+182
+00:16:46,120 --> 00:16:53,760
+因此，如果你调整提示，可以重新运行以查看正确百分比是上升还是下降。
+And so if you were to tune the prompts, you can rerun this to see if the percent correct goes up or down.
+
+183
+00:16:53,760 --> 00:17:00,480
+你刚才在这个笔记本中看到的是完成这个项目符号列表中的第一、二、三步。
+What you just saw in this Notebook is going through steps one, two, and three of this bulleted list.
+
+184
+00:17:00,480 --> 00:17:09,060
+这已经提供了一个相当好的开发数据集，包括10个示例，用于调整和验证提示是否有效。
+And this already gives a pretty good development sets of 10 examples with which to tune and validate the prompts is working.
+
+185
+00:17:09,060 --> 00:17:11,243
+如果你需要更高的严谨性，
+If you needed an additional level of rigor,
+
+186
+00:17:11,244 --> 00:17:20,020
+那么你现在已经有了需要的软件，可以收集一个随机抽样的示例数据集，比如100个示例及其理想输出。
+then you now have the software needed to collect a randomly sample sets of maybe 100 examples with their ideal outputs.
+
+187
+00:17:20,020 --> 00:17:25,800
+甚至可以做的更好，用一个你在调整提示时完全没有测试过的保留测试集，以保证严谨性。
+And maybe even go beyond that to the rigor of a holdout test set that you don't even look at while you're tuning the prompt.
+
+188
+00:17:25,800 --> 00:17:29,714
+但对于很多应用来说，做到第三点就足够了，
+But for a lot of applications, stopping at bullet three,
+
+189
+00:17:29,715 --> 00:17:35,929
+像我刚才在Jupyter Notebook做的这些，你也可以应用，
+but there are also certainly applications where you could do what you just saw me do in Jupyter Notebook
+
+190
+00:17:36,440 --> 00:17:39,840
+帮你快速将系统准确率优化到很好。
+and get a pretty performance system quite quickly.
+
+191
+00:17:39,840 --> 00:17:46,600
+再次强调，如果你正在开发对安全性要求很高的应用或者
+And again, the important caveat that if you're working on a safety critical application or
+
+192
+00:17:46,600 --> 00:17:50,900
+可能存在实质性伤害风险的应用，
+an application where there's non-trivial risk of harm,
+
+193
+00:17:50,901 --> 00:17:59,340
+那么负责任的做法当然是在任何地方使用它之前，进行大规模的测试集验证以严格验证其准确性。
+then of course it would be the responsible thing to do to actually get a much larger test set to really verify the performance before you use it anywhere.
+
+195
+00:17:59,340 --> 00:18:00,340
+就是这样。
+And so that's it.
+
+196
+00:18:00,340 --> 00:18:12,860
+我发现，使用提示构建应用程序的工作流程与使用监督学习构建应用程序的工作流程非常不同，迭代的步伐感觉快了很多。
+I find that the workflow of building applications using prompts is very different than a workflow of building applications using supervised learning and the pace of iteration feels much faster.
+
+198
+00:18:12,860 --> 00:18:14,757
+如果你还没有尝试过这种方法，
+And if you have not yet done it before,
+
+199
+00:18:14,758 --> 00:18:22,380
+你可能会对只用几个精心策划的棘手例子构建的评估方法的效果感到惊讶。
+you might be surprised at how well an evaluation method built on just a few hand curated tricky examples.
+
+200
+00:18:22,380 --> 00:18:27,400
+你可能会认为，10个例子对于几乎所有事情来说，这在统计上都是不成立的，
+You think with 10 examples and this is not statistically valid for almost anything,
+
+201
+00:18:27,401 --> 00:18:36,643
+但你可能会在实际使用这个程序时惊讶地发现，将一小部分棘手的例子加入到你的开发集中，
+but you might be surprised when you actually use this procedure, how effective adding a handful, a handful of tricky examples into your development sets might be
+
+203
+00:18:36,644 --> 00:18:43,500
+可能会在帮助你和你的团队得到一套有效的提示和有效的系统方面，效果出奇的好。
+in terms of helping you and your team get to an effective set of prompts and effective system.
+
+204
+00:18:43,500 --> 00:18:45,029
+在这个视频中，
+In this video,
+
+205
+00:18:45,030 --> 00:18:55,500
+输出可以定量地进行评估，因为有一个期望的输出，你可以判断它是否生成了期望的输出。
+the outputs could be evaluated quantitatively as in there was a desired output and you could tell if it gave this desired output or not.
+
+206
+00:18:55,500 --> 00:18:56,229
+那么下一个视频中，
+So the next video,
+
+207
+00:18:56,230 --> 00:19:04,900
+让我们一起看看在那种没有标准答案的情况下，如何评估输出。
+let's take a look at how you can evaluate output in that setting where what is the right answer is a bit more ambiguous.

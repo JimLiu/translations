@@ -1,0 +1,790 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "In this section, we'll focus on tasks to evaluate inputs, which can be important for ensuring the quality and safety of the system."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 0
+          },
+          "text": "For tasks in which lots of independent sets of instructions are needed to handle different cases,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 0
+          },
+          "text": "it can be beneficial to first classify the type of query and then use that classification to determine which instructions to use."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "This can be achieved by defining fixed categories and hard-coding instructions that are relevant for handling tasks in a given category."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "text": "For instance, when building a customer service assistant, it might be important to first classify the type of query"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "text": "and then determine which instructions to use based on that classification."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "text": "So, for example, you might give different secondary instructions if a user asks to close their account versus if a user asks about a specific product."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "text": "So in the first case, you'd maybe add additional instructions about how to close the account,"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 0
+          },
+          "text": "and then in the second case, you might add additional product information."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 0
+          },
+          "text": "But let's see an example, and I think it will make it more clear."
+        }
+      ],
+      "source": [
+        "In this section, we'll focus on tasks to evaluate inputs, which can be important for ensuring the quality and safety of the system.",
+        "For tasks in which lots of independent sets of instructions are needed to handle different cases,",
+        "it can be beneficial to first classify the type of query and then use that classification to determine which instructions to use.",
+        "This can be achieved by defining fixed categories and hard-coding instructions that are relevant for handling tasks in a given category.",
+        "For instance, when building a customer service assistant, it might be important to first classify the type of query",
+        "and then determine which instructions to use based on that classification.",
+        "So, for example, you might give different secondary instructions if a user asks to close their account versus if a user asks about a specific product.",
+        "So in the first case, you'd maybe add additional instructions about how to close the account,",
+        "and then in the second case, you might add additional product information.",
+        "But let's see an example, and I think it will make it more clear."
+      ],
+      "result": [
+        "在本节中，我们将关注输入评估相关的任务，这对于确保系统的质量和安全性非常重要。",
+        "对于需要大量独立指令集来处理不同情况的任务，",
+        "首先对查询类型进行分类，然后根据该分类确定要使用哪些指令可能是有益的。",
+        "这可以通过定义固定类别并硬编码与处理给定类别任务相关的指令来实现。",
+        "例如，在构建客户服务助手时，首先对查询类型进行分类可能很重要，",
+        "然后根据该分类确定要使用哪些指令。",
+        "因此，例如，如果用户要求关闭他们的帐户，您可能会给出不同的二级指令，而如果用户询问特定产品，则可能会给出不同的二级指令。",
+        "所以在第一个情况下，您可能会添加有关如何关闭帐户的其他指令，",
+        "然后在第二个情况下，您可能会添加其他产品信息。",
+        "但让我们看一个例子，我认为这会让它更清楚。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 0
+          },
+          "text": "So here we have our system message, which is the instruction for the overall system, and we're using this delimiter."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "text": "And a delimiter is just a way to separate different parts of an instruction or output,"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "text": "and it helps the model kind of determine the different sections."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "text": "And so for this example, we'll use the delimiter for hashtags, and this is a nice delimiter because it's actually represented as one token."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "text": "And so here's our system message."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 0
+          },
+          "text": "We're asking the model, so you will be provided with customer service queries."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "text": "The customer service query will be delimited with these hashtag characters."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "text": "Classify each query into a primary category and a secondary category,"
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "text": "and then provide the output in a JSON format with the keys primary and secondary."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "text": "And so we have our primary categories listed here, so billing, technical support, account management, or general inquiry."
+        }
+      ],
+      "source": [
+        "So here we have our system message, which is the instruction for the overall system, and we're using this delimiter.",
+        "And a delimiter is just a way to separate different parts of an instruction or output,",
+        "and it helps the model kind of determine the different sections.",
+        "And so for this example, we'll use the delimiter for hashtags, and this is a nice delimiter because it's actually represented as one token.",
+        "And so here's our system message.",
+        "We're asking the model: \"you will be provided with customer service queries.",
+        "The customer service query will be delimited with these hashtag characters.\"",
+        "Classify each query into a primary category and a secondary category,",
+        "and then provide the output in a JSON format with the keys primary and secondary.",
+        "And so we have our primary categories listed here, so billing, technical support, account management, or general inquiry."
+      ],
+      "result": [
+        "所以这里有我们的系统消息，这是整个系统的指令，我们正在使用这个分隔符。",
+        "分隔符只是一种分隔指令或输出的不同部分的方法，",
+        "它有助于模型确定不同的部分。",
+        "所以在这个例子中，我们将使用井号作为分隔符，这是一个很好的分隔符，因为它实际上是一个标记（Token）。",
+        "所以这是我们的系统消息。",
+        "我们要求模型：“您将提供客户服务查询，",
+        "客户服务查询将用这些井号字符分隔。”",
+        "将每个查询分类为一个主要类别和一个次要类别，",
+        "然后以JSON格式提供输出，键为primary和secondary。",
+        "所以我们在这里列出了我们的主要类别，如计费、技术支持、账户管理或一般查询。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "text": "And then below, we have the list of secondary categories, unsubscrible upgrade, et cetera."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "text": "And so now let's do an example of a user message."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "So for our first user message, we'll use the following."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 0
+          },
+          "text": "So the user message is: \"I want you to delete my profile and all of my user data\"."
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 20,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "And then we'll just format this into a messages list with the system message and the user message delimited with these hashtags."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "text": "And let's just take a look and see what we think this might be."
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "text": "So I want you to delete my profile."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "text": "This kind of looks like account management, maybe close account."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "text": "Let's see what the model thinks."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 55,
+            "milliseconds": 0
+          },
+          "text": "Great, so the classification from the model is account management as the primary category and then close account as a secondary."
+        }
+      ],
+      "source": [
+        "And then below, we have the list of secondary categories, unsubscrible upgrade, et cetera.",
+        "And so now let's do an example of a user message.",
+        "So for our first user message, we'll use the following.",
+        "So the user message is: \"I want you to delete my profile and all of my user data\".",
+        "And then we'll just format this into a messages list with the system message and the user message delimited with these hashtags.",
+        "And let's just take a look and see what we think this might be.",
+        "So I want you to delete my profile.",
+        "This kind of looks like account management, maybe close account.",
+        "Let's see what the model thinks.",
+        "Great, so the classification from the model is \"Account Management\" as the primary category and then \"Close account\" as a secondary."
+      ],
+      "result": [
+        "然后在下面，我们有次要类别的列表，取消订阅、升级等。",
+        "那么现在让我们举一个用户消息的例子。",
+        "所以我们的第一条用户消息，我们将使用以下内容。",
+        "所以用户消息是：“我希望你删除我的个人资料和所有用户数据”。",
+        "然后我们将用这些井号分隔系统消息和用户消息，将其格式化为消息列表。",
+        "让我们看一下，看看我们认为这可能是什么。",
+        "所以我希望你删除我的个人资料。",
+        "这看起来有点像账户管理，也许是关闭账户。",
+        "让我们看看模型的想法。",
+        "很好，所以模型的分类结果是“账户管理”作为主要类别，然后“关闭账户”作为次要类别。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 55,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "text": "And the nice thing about asking for a structured output like a JSON is that you can then read this easily into some kind of object."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "text": "So a dictionary, for example, in Python or something else if you're using a different language."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 0
+          },
+          "text": "And then you can use this as the input to a subsequent step."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 0
+          },
+          "text": "I'll show you another example, but also feel free to pause the video now and just try your own user questions and see how the model categorizes them."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 23,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "text": "So here's another user message. Tell me more about your flat screen TVs."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "text": "And we just have the same messages list response from the model and then we'll just print it."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 33,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "text": "And here we have our second categorization, which seems correct."
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 0
+          },
+          "text": "And so in general, based on the categorization of the customer inquiry, we can now provide a set of more specific instructions to handle the next steps."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 0
+          },
+          "text": "In this case, we might add kind of additional information about the TVs versus in this case, we might want to give a link to closing the account or something like that."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "text": "We'll learn more about different ways to process inputs in a later video."
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 0
+          },
+          "text": "And in the next video, we'll look at more ways to evaluate inputs and specifically ways to ensure that your users are using the system in a responsible way."
+        }
+      ],
+      "source": [
+        "And the nice thing about asking for a structured output like a JSON is that you can then read this easily into some kind of object.",
+        "So a dictionary, for example, in Python or something else if you're using a different language.",
+        "And then you can use this as the input to a subsequent step.",
+        "I'll show you another example, but also feel free to pause the video now and just try your own user questions and see how the model categorizes them.",
+        "So here's another user message. Tell me more about your flat screen TVs.",
+        "And we just have the same messages list response from the model and then we'll just print it.",
+        "And here we have our second categorization, which seems correct.",
+        "And so in general, based on the categorization of the customer inquiry, we can now provide a set of more specific instructions to handle the next steps.",
+        "In this case, we might add kind of additional information about the TVs versus in this case, we might want to give a link to closing the account or something like that.",
+        "We'll learn more about different ways to process inputs in a later video.",
+        "And in the next video, we'll look at more ways to evaluate inputs and specifically ways to ensure that your users are using the system in a responsible way."
+      ],
+      "result": [
+        "关于要求一个结构化输出，比如 JSON 的好处是，你可以轻松地将其读入某种对象。",
+        "所以，例如，在 Python 中可以使用Dictionary，或者在其他语言中使用其他东西。",
+        "然后你可以将其作为后续步骤的输入。",
+        "我会给你展示另一个例子，但也可以随时暂停视频，尝试你自己的用户问题，看看模型如何对它们进行分类。",
+        "这是另一个用户留言。告诉我更多关于你们的平板电视的信息。",
+        "我们只需从模型中获得相同的消息列表响应，然后打印出来。",
+        "这里我们有第二个分类，看起来是正确的。",
+        "所以，总的来说，根据客户询问的分类，我们现在可以提供一组更具体的指示来处理下一步。",
+        "在这种情况下，我们可能会添加关于电视的额外信息，而在这种情况下，我们可能想要提供一个关闭帐户的链接之类的东西。",
+        "我们将在后面的视频中了解更多关于处理输入的不同方法。",
+        "在下一个视频中，我们将探讨更多评估输入的方法，特别是确保用户以负责任的方式使用系统的方法。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L2-vid3_1.srt",
+  "ouputBasePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L2-vid3_1",
+  "totalCost": 0.10041,
+  "translationPath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L2-vid3_1/translation.json"
+}

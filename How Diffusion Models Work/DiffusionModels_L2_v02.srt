@@ -1,0 +1,368 @@
+1
+00:00:00,000 --> 00:00:12,000
+In this video, we'll talk about sampling, we'll get into the details of it and how it works across multiple different iterations.
+
+2
+00:00:12,000 --> 00:00:16,954
+So before we talk about how to train this neural network, let's talk about sampling,
+
+3
+00:00:16,955 --> 00:00:21,000
+or what we do with the neural network after it's trained at inference time.
+
+4
+00:00:21,000 --> 00:00:23,404
+So what happens is you have that noise sample,
+
+5
+00:00:23,405 --> 00:00:28,000
+you put it through your trained neural network that has understood what a sprite kind of looks like,
+
+6
+00:00:28,000 --> 00:00:30,346
+and what it does is it predicts noise.
+
+7
+00:00:30,546 --> 00:00:33,000
+It predicts noise as opposed to the sprite.
+
+8
+00:00:33,000 --> 00:00:39,000
+And then we subtract that predicted noise from the noise sample to get something a little bit more sprite-like.
+
+9
+00:00:39,000 --> 00:00:44,000
+Now realistically, that is just a prediction of noise, and it doesn't fully remove all the noise,
+
+10
+00:00:44,000 --> 00:00:47,000
+so you need multiple steps to get high-quality samples.
+
+11
+00:00:47,000 --> 00:00:52,000
+That's after 500 iterations, we're able to get something that looks very sprite-like.
+
+12
+00:00:52,000 --> 00:00:55,000
+So now let's step through this algorithmically.
+
+13
+00:00:55,000 --> 00:01:02,000
+So first, you can sample a random noise sample, and that was that original noise you had in the beginning.
+
+14
+00:01:02,000 --> 00:01:06,000
+And then you want to step through time, and actually you're stepping backwards through time,
+
+15
+00:01:06,000 --> 00:01:12,000
+all the way from the last iteration, 500, where it's completely noisy, all the way down to 1.
+
+16
+00:01:12,000 --> 00:01:15,000
+And just think of your ink drop, you're actually going backwards in time.
+
+17
+00:01:15,000 --> 00:01:22,000
+It's fully diffused initially, and then you're going back all the way up to when it was first dropped into the water.
+
+18
+00:01:22,000 --> 00:01:28,000
+Next, you'll sample some extra noise. We'll actually touch on this in a minute, so don't worry about this just now.
+
+19
+00:01:28,000 --> 00:01:35,000
+Here is where you actually pass that original noise, that sample, back into your neural network, and you get some predicted noise.
+
+20
+00:01:35,000 --> 00:01:43,000
+And this predicted noise is noise that the trained neural network wants to subtract from the original noise to get something that looks more sprite-like.
+
+21
+00:01:43,000 --> 00:01:51,000
+And finally, there's a sampling algorithm called DDPM, which stands for Denoising Diffusion Probabilistic Models,
+
+22
+00:01:51,000 --> 00:01:57,000
+and it's a paper written by Jonathan Ho, Ajay Jain, and one of my good friends, Pieter Abbeel.
+
+23
+00:01:57,000 --> 00:02:01,000
+And this sampling algorithm essentially is able to get a few numbers for scale.
+
+24
+00:02:01,000 --> 00:02:10,000
+That's not super important, but what is important is that this is where you are actually subtracting out that predicted noise from the original noise sample.
+
+25
+00:02:10,000 --> 00:02:14,000
+And again, you're adding that little extra noise back in, which we'll return to in a moment.
+
+26
+00:02:14,000 --> 00:02:15,985
+All right, let's jump to the notebook.
+
+27
+00:02:15,986 --> 00:02:18,000
+So you'll see here some setup code.
+
+28
+00:02:18,000 --> 00:02:24,000
+I think all that's really important here is that you're importing PyTorch and a lot of utilities from PyTorch.
+
+29
+00:02:24,000 --> 00:02:29,000
+We also import some helper functions here that we had written for the neural network.
+
+30
+00:02:29,000 --> 00:02:34,000
+So I'm just going to hit Shift+Enter to run that cell so that we import everything.
+
+31
+00:02:34,000 --> 00:02:37,000
+And now here's setting up the neural network, which we're going to use for sampling.
+
+32
+00:02:37,000 --> 00:02:40,000
+We'll go into the details of this later.
+
+33
+00:02:40,000 --> 00:02:46,000
+So I'm just going to run this, and no need to really follow everything that's going on there just yet.
+
+34
+00:02:46,000 --> 00:02:51,000
+Here we're setting up some hyperparameters, and that includes those time steps that you've seen there.
+
+35
+00:02:51,000 --> 00:02:53,000
+So that's the 500 time steps.
+
+36
+00:02:53,000 --> 00:02:59,000
+Beta 1 and Beta 2 are just some hyperparameters for DDPM.
+
+37
+00:02:59,000 --> 00:03:03,000
+And here you can also see the height. This is the 16 by 16 image.
+
+38
+00:03:03,000 --> 00:03:07,000
+And again, it's just a square image. So I'm going to run this Shift+Enter again.
+
+39
+00:03:07,000 --> 00:03:10,000
+And this is just a noise schedule defined in the DDPM paper.
+
+40
+00:03:10,000 --> 00:03:17,000
+And all a noise schedule is, is it determines what level of noise to apply to the image at a certain time step.
+
+41
+00:03:17,000 --> 00:03:28,000
+So this part is just constructing some of the parameters for the DDPM algorithm that you remember, those scaling factors, those scaling values, S1, S2, S3.
+
+42
+00:03:28,000 --> 00:03:34,000
+That's being computed here in the noise schedule, and it's called a schedule because it is dependent on the time step.
+
+43
+00:03:34,000 --> 00:03:41,000
+Remember, you're looking through 500 time steps because you're going through those 500 iterations that you see here of slowly removing noise.
+
+44
+00:03:41,000 --> 00:03:43,056
+So I'm just going to run that here.
+
+45
+00:03:43,057 --> 00:03:45,000
+So just dependent on that time step that we're on.
+
+46
+00:03:45,000 --> 00:03:51,000
+Next, I'm just going to instantiate the model, that unit, which we will come back to.
+
+47
+00:03:51,000 --> 00:03:56,000
+And then here is the sampling algorithm, the denoise add noise that you had seen previously,
+
+48
+00:03:56,000 --> 00:04:01,000
+which is really the main important part is that it is removing the predicted noise,
+
+49
+00:04:01,000 --> 00:04:07,000
+which is what the model thinks is not a sprite, from the original noise.
+
+50
+00:04:07,000 --> 00:04:12,000
+So we can run that Shift+Enter to load that model.
+
+51
+00:04:12,000 --> 00:04:17,000
+And then here is what we had just stepped through, that sampling algorithm.
+
+52
+00:04:17,000 --> 00:04:22,000
+And specifically here is running the model to get the predicted noise.
+
+53
+00:04:22,000 --> 00:04:24,000
+And then running the denoise.
+
+54
+00:04:24,000 --> 00:04:28,000
+Now let's visualize what sampling looks like over time.
+
+55
+00:04:28,000 --> 00:04:32,000
+This may take a few minutes depending on what kind of hardware you're running on,
+
+56
+00:04:32,000 --> 00:04:34,000
+and we're going to speed this up in the video.
+
+57
+00:04:34,000 --> 00:04:38,000
+But in the next video, you'll also see a more efficient sampling technique as well.
+
+58
+00:04:38,000 --> 00:04:41,000
+All right, let's see it in action.
+
+59
+00:04:41,000 --> 00:04:44,000
+Wow, look at those sprites.
+
+60
+00:04:44,000 --> 00:04:47,000
+So you should definitely pause and try these yourself.
+
+61
+00:04:47,000 --> 00:04:49,000
+All right, so there's one more extra detail.
+
+62
+00:04:49,000 --> 00:04:53,000
+So right now you have your neural network that's predicting noise from your original noise sample.
+
+63
+00:04:53,000 --> 00:04:57,000
+You subtract it out. Great. And you get something a little bit more sprite-like.
+
+64
+00:04:57,000 --> 00:05:04,000
+But the thing is, this neural network expects this noisy sample, this normally distributed noisy sample, as input.
+
+65
+00:05:04,000 --> 00:05:09,000
+And once you've denoised it like this, it's no longer distributed in that way.
+
+66
+00:05:09,000 --> 00:05:13,029
+So actually what you have to do after each step and before each next step
+
+67
+00:05:13,030 --> 00:05:17,057
+is to add in additional noise that's scaled based on what time step you're at 
+
+68
+00:05:17,058 --> 00:05:24,000
+to get passed in as the next sample, the next iteration into your trained neural network.
+
+69
+00:05:24,000 --> 00:05:28,042
+And empirically, this actually helps stabilize the neural network
+
+70
+00:05:28,043 --> 00:05:31,457
+so it doesn't collapse to something that's close to the average of the data set,
+
+71
+00:05:31,458 --> 00:05:34,000
+meaning it doesn't look like this thing on the left.
+
+72
+00:05:34,000 --> 00:05:40,000
+When we don't add that noise back in, the neural network just produces these average-looking blobs of sprites,
+
+73
+00:05:40,000 --> 00:05:45,000
+versus when we go add it back in, it actually is able to produce these beautiful images of sprites.
+
+74
+00:05:45,000 --> 00:05:48,000
+So here in the algorithm is where this happens.
+
+75
+00:05:48,000 --> 00:05:54,000
+So we actually sample a random noise again at each time step based on the time step.
+
+76
+00:05:54,000 --> 00:06:00,000
+And then down here, we actually add it back in with that scaling factor S3.
+
+77
+00:06:00,000 --> 00:06:02,000
+So now let's take a look at the notebook.
+
+78
+00:06:02,000 --> 00:06:07,000
+So now in this function denoise add noise, we are talking about the add noise part.
+
+79
+00:06:07,000 --> 00:06:12,000
+And what that is, is this Z that you randomly sample, that's that extra noise.
+
+80
+00:06:12,000 --> 00:06:18,000
+And you scale it by some factor, and then you actually do add it back in.
+
+81
+00:06:18,000 --> 00:06:22,000
+And again, that all happens down here in your main algorithm.
+
+82
+00:06:22,000 --> 00:06:25,000
+All right, so let's pick up where we left off then.
+
+83
+00:06:25,000 --> 00:06:33,000
+So for the incorrect way where we don't add the noise back in, we actually just set Z to 0, and we pass that in.
+
+84
+00:06:33,000 --> 00:06:39,000
+It only subtracts the predicted noise from the original noise, and it doesn't add any extra noise back in.
+
+85
+00:06:39,000 --> 00:06:43,000
+And let's run this with Shift+Enter.
+
+86
+00:06:43,000 --> 00:06:46,000
+And again, this will take a couple minutes.
+
+87
+00:06:46,000 --> 00:06:52,000
+All right, so let's take a look at what this does instead.
+
+88
+00:06:52,000 --> 00:06:56,000
+Oh no, blobs!
+
+89
+00:06:56,000 --> 00:06:58,000
+So this is obviously not what you want.
+
+90
+00:06:58,000 --> 00:07:01,000
+So make sure you add that extra noise back in.
+
+91
+00:07:01,000 --> 00:07:07,000
+And so you should definitely pause and try these yourself and compare it to the other method where you do add that extra noise.
+
+92
+00:07:07,000 --> 00:07:13,000
+And in the next video, we're going to cover that neural network architecture, that UNet.
+

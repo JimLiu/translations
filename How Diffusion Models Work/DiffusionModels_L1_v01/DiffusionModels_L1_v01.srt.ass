@@ -1,0 +1,148 @@
+[Script Info]
+
+Title: DiffusionModels_L1_v01.srt
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,方正准圆简体,16,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Arial,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:08.50,Secondary,,0,0,0,,In this video, your goal is to gain some intuition of diffusion models.
+Dialogue: 0,0:00:08.50,0:00:11.0,Secondary,,0,0,0,,First, we'll talk about the goal of the diffusion model,
+Dialogue: 0,0:00:11.0,0:00:15.0,Secondary,,0,0,0,,then we'll talk through how the training data that you have of different sprites
+Dialogue: 0,0:00:16.50,0:00:19.50,Secondary,,0,0,0,,and then we'll talk about training the models themselves on this data.
+Dialogue: 0,0:00:19.50,0:00:22.50,Secondary,,0,0,0,,What is the goal of diffusion models?
+Dialogue: 0,0:00:22.50,0:00:25.13,Secondary,,0,0,0,,Well, you have a lot of training data,
+Dialogue: 0,0:00:25.33,0:00:30.0,Secondary,,0,0,0,,such as these sprite images that you see down here of video game characters.
+Dialogue: 0,0:00:30.0,0:00:32.0,Secondary,,0,0,0,,And this is your training dataset.
+Dialogue: 0,0:00:32.0,0:00:38.0,Secondary,,0,0,0,,And what you want is you want even more of these sprites that are not represented in your training dataset.
+Dialogue: 0,0:00:38.0,0:00:44.50,Secondary,,0,0,0,,And you can use a neural network that can generate more of these sprites for you following the diffusion model process.
+Dialogue: 0,0:00:44.50,0:00:48.0,Secondary,,0,0,0,,So now, how do we make these images useful to the neural network?
+Dialogue: 0,0:00:48.0,0:00:52.50,Secondary,,0,0,0,,Well, you want the neural network to learn generally the concept of a sprite, what it is.
+Dialogue: 0,0:00:52.50,0:00:59.50,Secondary,,0,0,0,,And that could be finer details, such as, you know, the hair color of the sprite or that it's wearing a buckle for its belt.
+Dialogue: 0,0:00:59.50,0:01:06.50,Secondary,,0,0,0,,But it also could be general outlines, like of its head and body, and everything in between that.
+Dialogue: 0,0:01:06.50,0:01:12.96,Secondary,,0,0,0,,And one way to do that, one way to kind of take your data and be able to emphasize either finer details
+Dialogue: 0,0:01:13.16,0:01:17.0,Secondary,,0,0,0,,or general outlines is actually to add different levels of noise.
+Dialogue: 0,0:01:17.0,0:01:19.50,Secondary,,0,0,0,,So this is just adding noise to the image.
+Dialogue: 0,0:01:19.50,0:01:22.0,Secondary,,0,0,0,,And it's known as a noising process.
+Dialogue: 0,0:01:22.0,0:01:23.50,Secondary,,0,0,0,,And this is inspired by physics.
+Dialogue: 0,0:01:23.50,0:01:27.0,Secondary,,0,0,0,,You can imagine an ink drop into a glass of water.
+Dialogue: 0,0:01:27.0,0:01:30.0,Secondary,,0,0,0,,Initially, you know exactly where the ink drop landed.
+Dialogue: 0,0:01:30.0,0:01:35.0,Secondary,,0,0,0,,But over time, you actually see it diffuse into the water until it disappears.
+Dialogue: 0,0:01:35.0,0:01:38.50,Secondary,,0,0,0,,And that's the same idea here, where you start with Bob the sprite,
+Dialogue: 0,0:01:38.50,0:01:45.0,Secondary,,0,0,0,,and as you add noise, it will disappear until you have no idea which sprite it actually was.
+Dialogue: 0,0:01:45.0,0:01:49.50,Secondary,,0,0,0,,And so what should the neural network really be thinking at each of these levels of noise
+Dialogue: 0,0:01:52.50,0:01:56.50,Secondary,,0,0,0,,Well, when it's Bob the sprite, you want the neural network to say,
+Dialogue: 0,0:01:56.50,0:01:59.0,Secondary,,0,0,0,,"Yeah, that's Bob the sprite, to keep Bob as is.
+Dialogue: 0,0:01:59.0,0:02:00.50,Secondary,,0,0,0,,That is a sprite."
+Dialogue: 0,0:02:00.50,0:02:03.50,Secondary,,0,0,0,,If it's probably Bob, if it's likely to be Bob,
+Dialogue: 0,0:02:03.50,0:02:06.50,Secondary,,0,0,0,,then you probably want the neural network to say, you know,
+Dialogue: 0,0:02:06.50,0:02:08.0,Secondary,,0,0,0,,"There's some noise on here.
+Dialogue: 0,0:02:08.0,0:02:12.50,Secondary,,0,0,0,,Suggest possible details to make it look just like Bob the sprite."
+Dialogue: 0,0:02:12.50,0:02:14.50,Secondary,,0,0,0,,And if it's just an outline of a sprite now,
+Dialogue: 0,0:02:14.50,0:02:18.50,Secondary,,0,0,0,,here you can only get a sense that this is probably a sprite person,
+Dialogue: 0,0:02:18.50,0:02:22.0,Secondary,,0,0,0,,but it could be Bob or Fred or maybe even Nancy,
+Dialogue: 0,0:02:22.0,0:02:27.0,Secondary,,0,0,0,,then you want to suggest more general details for possible likely sprites.
+Dialogue: 0,0:02:27.0,0:02:30.0,Secondary,,0,0,0,,So maybe you'll suggest some details for Bob based on this,
+Dialogue: 0,0:02:30.0,0:02:32.50,Secondary,,0,0,0,,or you'll suggest some details for Fred.
+Dialogue: 0,0:02:32.50,0:02:36.50,Secondary,,0,0,0,,And finally, if you have no idea, if it looks like absolutely nothing,
+Dialogue: 0,0:02:36.50,0:02:39.0,Secondary,,0,0,0,,you still want it to look more like a sprite.
+Dialogue: 0,0:02:39.0,0:02:41.0,Secondary,,0,0,0,,You still want the neural network to say, "You know what?
+Dialogue: 0,0:02:41.0,0:02:45.0,Secondary,,0,0,0,,I'm going to still take this completely noisy image,
+Dialogue: 0,0:02:45.0,0:02:48.0,Secondary,,0,0,0,,and I'm going to turn this into something that's slightly more sprite-like
+Dialogue: 0,0:02:48.0,0:02:51.50,Secondary,,0,0,0,,by proposing an outline of what a sprite might look like."
+Dialogue: 0,0:02:51.50,0:02:54.50,Secondary,,0,0,0,,All right, so let's take a look at what that noising process,
+Dialogue: 0,0:02:54.50,0:02:59.50,Secondary,,0,0,0,,that process of adding noise progressively, looks like over time.
+Dialogue: 0,0:02:59.50,0:03:05.50,Secondary,,0,0,0,,And there it goes, an ink drop that's fully diffused in a glass of water.
+Dialogue: 0,0:03:05.50,0:03:07.50,Secondary,,0,0,0,,So now on to training that neural network.
+Dialogue: 0,0:03:07.50,0:03:11.50,Secondary,,0,0,0,,So it learns to take different noisy images and turn them back into sprites.
+Dialogue: 0,0:03:11.50,0:03:13.0,Secondary,,0,0,0,,That is your goal.
+Dialogue: 0,0:03:13.0,0:03:16.50,Secondary,,0,0,0,,And how it does that is it learns to remove the noise you added,
+Dialogue: 0,0:03:16.50,0:03:21.50,Secondary,,0,0,0,,starting with the no idea level, where it is just pure noise,
+Dialogue: 0,0:03:21.50,0:03:25.50,Secondary,,0,0,0,,to starting to give a semblance of maybe there's a person in there,
+Dialogue: 0,0:03:25.50,0:03:30.50,Secondary,,0,0,0,,to looking like Fred, and then finally a sprite that looks like Fred.
+Dialogue: 0,0:03:30.50,0:03:37.50,Secondary,,0,0,0,,And I just want to call out that the no idea level of noise is really important because it is normally distributed.
+Dialogue: 0,0:03:37.50,0:03:41.50,Secondary,,0,0,0,,And what I mean by that is each of those pixels is sampled from a normal distribution,
+Dialogue: 0,0:03:41.50,0:03:45.50,Secondary,,0,0,0,,also known as a Gaussian distribution or a bell-shaped curve.
+Dialogue: 0,0:03:45.50,0:03:50.50,Secondary,,0,0,0,,So when you want to ask the neural network for a new sprite, such as Fred here,
+Dialogue: 0,0:03:50.50,0:03:54.50,Secondary,,0,0,0,,you can sample noise from that normal distribution,
+Dialogue: 0,0:03:54.50,0:04:00.50,Secondary,,0,0,0,,and then you can get a completely new sprite by using the neural network to just remove that noise progressively.
+Dialogue: 0,0:04:00.50,0:04:02.50,Secondary,,0,0,0,,So now you've reached your goal.
+Dialogue: 0,0:04:02.50,0:04:06.50,Secondary,,0,0,0,,You can get even more sprites beyond all those that you had trained on.
+Dialogue: 0,0:04:06.50,0:04:09.50,Secondary,,0,0,0,,In the next video, we'll cover sampling.
+Dialogue: 0,0:00:05.0,0:00:08.50,Default,,0,0,0,,在这个视频中，你的目标是\N了解一些扩散模型的基础知识。
+Dialogue: 0,0:00:08.50,0:00:11.0,Default,,0,0,0,,首先，我们将讨论扩散模型的目标，
+Dialogue: 0,0:00:11.0,0:00:16.50,Default,,0,0,0,,然后我们将探讨如何利用你手中的各种\N游戏角色图片训练数据对这些模型有用，
+Dialogue: 0,0:00:16.50,0:00:19.50,Default,,0,0,0,,最后我们会讨论如何在这些数据上训练模型。
+Dialogue: 0,0:00:19.50,0:00:22.50,Default,,0,0,0,,那么，扩散模型的目标是什么呢？
+Dialogue: 0,0:00:22.50,0:00:25.13,Default,,0,0,0,,好吧，你有很多的训练数据，
+Dialogue: 0,0:00:25.33,0:00:30.0,Default,,0,0,0,,比如你在这里看到的视频游戏角色的图像。
+Dialogue: 0,0:00:30.0,0:00:32.0,Default,,0,0,0,,这就是你的训练数据集。
+Dialogue: 0,0:00:32.0,0:00:38.0,Default,,0,0,0,,你想要的是更多\N在你的训练数据集中没有的角色图片。
+Dialogue: 0,0:00:38.0,0:00:44.50,Default,,0,0,0,,你可以使用一个神经网络，\N通过扩散模型过程为你生成更多这样的角色。
+Dialogue: 0,0:00:44.50,0:00:48.0,Default,,0,0,0,,那么现在，我们如何\N让这些图像对神经网络有用呢？
+Dialogue: 0,0:00:48.0,0:00:52.50,Default,,0,0,0,,嗯，你希望神经网络能够\N学习到游戏角色的一般概念，就是它是什么。
+Dialogue: 0,0:00:52.50,0:00:59.50,Default,,0,0,0,,这可能是更细微的细节，比如，\N你知道，游戏角色的头发颜色或者它的腰带扣。
+Dialogue: 0,0:00:59.50,0:01:06.50,Default,,0,0,0,,也可能是大概的轮廓，\N像头和身体的轮廓，以及所有在这之间的东西。
+Dialogue: 0,0:01:06.50,0:01:12.96,Default,,0,0,0,,有一种方法可以做到这一点，\N就是用你的数据强调细节或者大概轮廓。
+Dialogue: 0,0:01:13.16,0:01:17.0,Default,,0,0,0,,实际上，这就是在不同程度上添加噪声。
+Dialogue: 0,0:01:17.0,0:01:19.50,Default,,0,0,0,,也就是对图像添加噪声，
+Dialogue: 0,0:01:19.50,0:01:22.0,Default,,0,0,0,,这被称为噪声过程。
+Dialogue: 0,0:01:22.0,0:01:23.50,Default,,0,0,0,,这其实是受物理学的启发。
+Dialogue: 0,0:01:23.50,0:01:27.0,Default,,0,0,0,,你可以想象一滴墨水滴入一杯水中。
+Dialogue: 0,0:01:27.0,0:01:30.0,Default,,0,0,0,,一开始，你确切地知道墨水滴在哪里落下。
+Dialogue: 0,0:01:30.0,0:01:35.0,Default,,0,0,0,,但随着时间的推移，\N你会看到它在水中扩散，直到消失。
+Dialogue: 0,0:01:35.0,0:01:38.50,Default,,0,0,0,,这里的想法也是一样的，\N从Bob这个游戏角色开始，
+Dialogue: 0,0:01:38.50,0:01:45.0,Default,,0,0,0,,当你添加噪声时，它会消失，\N直到你不知道它究竟是哪个游戏角色。
+Dialogue: 0,0:01:45.0,0:01:52.50,Default,,0,0,0,,那么，当你逐渐给图像添加更多的噪声时，\N神经网络应该在每个噪声级别上想些什么呢？
+Dialogue: 0,0:01:52.50,0:01:56.50,Default,,0,0,0,,嗯，当它是角色Bob的时候，\N你希望神经网络能说，
+Dialogue: 0,0:01:56.50,0:01:59.0,Default,,0,0,0,,“对，这就是角色Bob！\N保持Bob的原样，
+Dialogue: 0,0:01:59.0,0:02:00.50,Default,,0,0,0,,这是一个角色。”
+Dialogue: 0,0:02:00.50,0:02:03.50,Default,,0,0,0,,如果它可能是Bob，\N如果它很可能是Bob，
+Dialogue: 0,0:02:03.50,0:02:06.50,Default,,0,0,0,,那么你可能希望神经网络能说：
+Dialogue: 0,0:02:06.50,0:02:08.0,Default,,0,0,0,,“这上面有一些噪声。
+Dialogue: 0,0:02:08.0,0:02:12.50,Default,,0,0,0,,建议可能的细节，\N使它看起来就像角色Bob。”
+Dialogue: 0,0:02:12.50,0:02:14.50,Default,,0,0,0,,如果它现在只是一个角色的轮廓，
+Dialogue: 0,0:02:14.50,0:02:18.50,Default,,0,0,0,,你只能感觉到这可能是一个角色人物，
+Dialogue: 0,0:02:18.50,0:02:22.0,Default,,0,0,0,,但它可能是Bob，\N或者Fred，甚至可能是Nancy，
+Dialogue: 0,0:02:22.0,0:02:27.0,Default,,0,0,0,,那么你就想要为\N可能的角色建议更普遍的细节。
+Dialogue: 0,0:02:27.0,0:02:30.0,Default,,0,0,0,,所以，你可能会\N根据这个为Bob提供一些细节，
+Dialogue: 0,0:02:30.0,0:02:32.50,Default,,0,0,0,,或者你会为Fred提供一些细节。
+Dialogue: 0,0:02:32.50,0:02:36.50,Default,,0,0,0,,最后，如果你一点也不清楚，\N如果它看起来完全不像什么，
+Dialogue: 0,0:02:36.50,0:02:39.0,Default,,0,0,0,,你还是希望它更像一个游戏角色。
+Dialogue: 0,0:02:39.0,0:02:41.0,Default,,0,0,0,,你仍然希望神经网络说：“你知道吗？
+Dialogue: 0,0:02:41.0,0:02:45.0,Default,,0,0,0,,我仍然会拿这个完全有噪声的图像，
+Dialogue: 0,0:02:45.0,0:02:48.0,Default,,0,0,0,,我会把它变成稍微像游戏角色一点的东西，
+Dialogue: 0,0:02:48.0,0:02:51.50,Default,,0,0,0,,我会提出一个游戏角色可能看起来的轮廓。”
+Dialogue: 0,0:02:51.50,0:02:54.50,Default,,0,0,0,,好了，那么让我们看看这个添加噪声的过程，
+Dialogue: 0,0:02:54.50,0:02:59.50,Default,,0,0,0,,随着时间的推移，\N逐渐添加噪声的过程是什么样子的。
+Dialogue: 0,0:02:59.50,0:03:05.50,Default,,0,0,0,,然后它就消失了，\N一滴墨水在一杯水里完全扩散开来。
+Dialogue: 0,0:03:05.50,0:03:07.50,Default,,0,0,0,,那么现在让我们\N开始训练那个神经网络吧。
+Dialogue: 0,0:03:07.50,0:03:11.50,Default,,0,0,0,,它学会将不同的噪声图像变回游戏角色。
+Dialogue: 0,0:03:11.50,0:03:13.0,Default,,0,0,0,,这就是你的目标。
+Dialogue: 0,0:03:13.0,0:03:16.50,Default,,0,0,0,,它是如何做到这一点的呢？\N它学会移除你添加的噪声，
+Dialogue: 0,0:03:16.50,0:03:21.50,Default,,0,0,0,,从完全没有主意的级别开始，\N那里只有纯粹的噪声，
+Dialogue: 0,0:03:21.50,0:03:25.50,Default,,0,0,0,,开始让人感觉可能有一个人在里面，
+Dialogue: 0,0:03:25.50,0:03:30.50,Default,,0,0,0,,看起来像Fred，\N然后最后是一个看起来像Fred的游戏角色。
+Dialogue: 0,0:03:30.50,0:03:37.50,Default,,0,0,0,,我想强调的是，没有主意的噪声级别\N非常重要，因为它是正态分布的。
+Dialogue: 0,0:03:37.50,0:03:41.50,Default,,0,0,0,,我的意思是，每一个像素\N都是从一个正态分布中抽样的，
+Dialogue: 0,0:03:41.50,0:03:45.50,Default,,0,0,0,,也被称为高斯分布或者钟形曲线。
+Dialogue: 0,0:03:45.50,0:03:50.50,Default,,0,0,0,,所以当你想要让神经网络\N给你一个新的角色，比如这里的Fred，
+Dialogue: 0,0:03:50.50,0:03:54.50,Default,,0,0,0,,你可以从那个正态分布中抽样噪声，
+Dialogue: 0,0:03:54.50,0:04:00.50,Default,,0,0,0,,然后你可以通过让神经网络\N逐渐移除那个噪声来得到一个全新的游戏角色。
+Dialogue: 0,0:04:00.50,0:04:02.50,Default,,0,0,0,,所以现在你达到了你的目标：
+Dialogue: 0,0:04:02.50,0:04:06.50,Default,,0,0,0,,得到更多的、你没有训练过的游戏角色。
+Dialogue: 0,0:04:06.50,0:04:09.50,Default,,0,0,0,,在下一个视频中，我们将介绍抽样。

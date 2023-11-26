@@ -1,0 +1,49 @@
+[Script Info]
+
+Title: sc-openai-c2-Summary v2
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:00.0,0:00:03.56,Secondary,,0,0,0,,Congratulations and thank you for getting to the end of this short course.
+Dialogue: 1,0:00:03.56,0:00:07.24,Secondary,,0,0,0,,As we conclude the course, let's recap the main topics we covered.
+Dialogue: 1,0:00:07.24,0:00:14.96,Secondary,,0,0,0,,We went over details of how an LM works, including subtleties like the tokenizer and why it can't reverse lollipop.
+Dialogue: 1,0:00:14.96,0:00:20.57,Secondary,,0,0,0,,We learned methods for evaluating user inputs to ensure the quality and safety of the system,
+Dialogue: 1,0:00:20.57,0:00:29.20,Secondary,,0,0,0,,processing inputs using both chain of thought reasoning and splitting tasks into subtasks with chain prompts and checking outputs before showing them to users.
+Dialogue: 1,0:00:29.76,0:00:37.0,Secondary,,0,0,0,,We also took a look at methods for evaluating the system over time, so as to monitor and improve its performance.
+Dialogue: 1,0:00:37.0,0:00:41.67,Secondary,,0,0,0,,Throughout the course, we also discussed the importance of building responsibly with these tools,
+Dialogue: 1,0:00:41.67,0:00:47.24,Secondary,,0,0,0,,ensuring that the model is safe and provides appropriate responses that are accurate, relevant, and in the tone you want.
+Dialogue: 1,0:00:47.24,0:00:53.20,Secondary,,0,0,0,,As always, practice is key to mastering these concepts, so we hope you'll apply what you've learned in your own projects.
+Dialogue: 1,0:00:53.20,0:00:55.56,Secondary,,0,0,0,,And so that's it.
+Dialogue: 1,0:00:55.56,0:00:59.24,Secondary,,0,0,0,,There are so many exciting applications that are yet to be built.
+Dialogue: 1,0:00:59.64,0:01:03.27,Secondary,,0,0,0,,The world needs more people like you building useful applications,
+Dialogue: 1,0:01:03.27,0:01:07.24,Secondary,,0,0,0,,and we look forward to hearing about the amazing things you build.
+Dialogue: 1,0:00:00.0,0:00:03.56,Default,,0,0,0,,恭喜你完成了这个短期课程，感谢你的参与。
+Dialogue: 1,0:00:03.56,0:00:07.24,Default,,0,0,0,,在课程结束之际，让我们回顾一下我们所涵盖的主要话题：
+Dialogue: 1,0:00:07.24,0:00:14.96,Default,,0,0,0,,我们详细了解了LM的工作原理，包括诸如分词器之类的细微\N之处，以及为什么它无法将单词lollipop中的字符翻转。
+Dialogue: 1,0:00:14.96,0:00:20.57,Default,,0,0,0,,我们学习了评估用户输入的方法，以确保系统的质量和安全，
+Dialogue: 1,0:00:20.57,0:00:29.20,Default,,0,0,0,,使用思维链推理和链式Prompt将任务切分成子任务来\N处理输入，并在将结果展示给用户之前检查输出。
+Dialogue: 1,0:00:29.76,0:00:37.0,Default,,0,0,0,,我们还研究了随着时间的推移评估系统的方法，以监控和提升其性能。
+Dialogue: 1,0:00:37.0,0:00:41.67,Default,,0,0,0,,在整个课程中，我们也讨论了负责任地使用这些工具的重要性，
+Dialogue: 1,0:00:41.67,0:00:47.24,Default,,0,0,0,,确保模型安全，提供准确、相关，且符合你期望的语调的回答。
+Dialogue: 1,0:00:47.24,0:00:53.20,Default,,0,0,0,,一如既往，实践是掌握这些概念的关键，所以我们希\N望你能在自己的项目中应用你所学到的知识。
+Dialogue: 1,0:00:53.20,0:00:55.56,Default,,0,0,0,,就是这样。
+Dialogue: 1,0:00:55.56,0:00:59.24,Default,,0,0,0,,还有许多令人兴奋的应用等待着你去开发。
+Dialogue: 1,0:00:59.64,0:01:03.27,Default,,0,0,0,,世界需要更多像你这样的人去构建有价值的应用，
+Dialogue: 1,0:01:03.27,0:01:07.24,Default,,0,0,0,,我们期待看到你创造出的了不起的作品。

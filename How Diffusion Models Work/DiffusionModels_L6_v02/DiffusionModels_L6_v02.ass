@@ -1,0 +1,166 @@
+[Script Info]
+
+Title: DiffusionModels_L6_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H000092FE,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:13.64,Secondary,,0,0,0,,In this video, you'll learn about a new sampling method that is over 10 times   efficient than DDPM, which is what we've been using so far.
+Dialogue: 0,0:00:13.64,0:00:16.36,Secondary,,0,0,0,,And this new method is called DDIM.
+Dialogue: 0,0:00:16.36,0:00:20.68,Secondary,,0,0,0,,So your goal is that you want more images, and you want them quickly.
+Dialogue: 0,0:00:20.68,0:00:26.0,Secondary,,0,0,0,,But sampling so far has been slow because, one, there are many time steps involved,
+Dialogue: 0,0:00:26.0,0:00:29.96,Secondary,,0,0,0,,you know, 500, there are even more sometimes to get a good sample.
+Dialogue: 0,0:00:29.96,0:00:33.8,Secondary,,0,0,0,,And also each time step is dependent on the previous one.
+Dialogue: 0,0:00:33.8,0:00:36.60,Secondary,,0,0,0,,It follows a Markov chain process.
+Dialogue: 0,0:00:36.60,0:00:43.96,Secondary,,0,0,0,,But thankfully, there are many new samplers here to address this problem, since this has been a long standing problem with diffusion models.
+Dialogue: 0,0:00:43.96,0:00:49.61,Secondary,,0,0,0,,It's that you can train them and they can create amazing, beautiful images that are both diverse and realistic,
+Dialogue: 0,0:00:49.62,0:00:52.52,Secondary,,0,0,0,,but it's so slow to get something out of them.
+Dialogue: 0,0:00:52.52,0:01:01.40,Secondary,,0,0,0,,And one of these samplers that has been very popular is called DDIM, or Denoising Diffusion Implicit Models, which is just the name of the paper.
+Dialogue: 0,0:01:01.40,0:01:08.12,Secondary,,0,0,0,,And this paper was written by Jiaming Song, Chenlin Meng, and my PhD co-advisor, Stefano Ermon.
+Dialogue: 0,0:01:08.12,0:01:12.44,Secondary,,0,0,0,,DDIM is faster because it's able to skip time steps.
+Dialogue: 0,0:01:12.44,0:01:19.28,Secondary,,0,0,0,,So instead of going from time step 500 to 499 to 498, it's able to skip all these time steps.
+Dialogue: 0,0:01:19.28,0:01:23.84,Secondary,,0,0,0,,And it's able to skip quite a bit, because it breaks the Markov assumption.
+Dialogue: 0,0:01:23.84,0:01:26.76,Secondary,,0,0,0,,Markov chains are only used for probabilistic processes.
+Dialogue: 0,0:01:26.76,0:01:33.80,Secondary,,0,0,0,,But DDIM actually removes all the randomness from this sampling process, and is therefore deterministic.
+Dialogue: 0,0:01:33.80,0:01:40.14,Secondary,,0,0,0,,And what it does, essentially, is it predicts a rough sketch of the final output.
+Dialogue: 0,0:01:40.14,0:01:44.56,Secondary,,0,0,0,,And then it refines it with the denoising process.
+Dialogue: 0,0:01:44.56,0:01:51.20,Secondary,,0,0,0,,So let's compare DDPM here on the left, which is what we've been doing so far, and DDIM here on the right.
+Dialogue: 0,0:01:51.20,0:01:54.76,Secondary,,0,0,0,,Yes, it is much faster with DDIM.
+Dialogue: 0,0:01:54.76,0:02:00.56,Secondary,,0,0,0,,You immediately see a buck there after time step 19.
+Dialogue: 0,0:02:00.56,0:02:02.48,Secondary,,0,0,0,,And we're still going for DDPM.
+Dialogue: 0,0:02:02.48,0:02:04.24,Secondary,,0,0,0,,We're still going.
+Dialogue: 0,0:02:04.24,0:02:08.76,Secondary,,0,0,0,,And this goes all the way up to 500 with DDPM, as you know.
+Dialogue: 0,0:02:08.76,0:02:11.76,Secondary,,0,0,0,,Great, so here's the lab.
+Dialogue: 0,0:02:11.76,0:02:13.36,Secondary,,0,0,0,,A lot of the setup will look the same.
+Dialogue: 0,0:02:13.36,0:02:22.56,Secondary,,0,0,0,,So I'm just going to run this cell here, set up the unit again, our hyperparameters.
+Dialogue: 0,0:02:22.56,0:02:24.36,Secondary,,0,0,0,,Here's the DDPM noise schedule.
+Dialogue: 0,0:02:24.36,0:02:27.56,Secondary,,0,0,0,,We'll use it to compare it to DDIM later.
+Dialogue: 0,0:02:27.56,0:02:30.0,Secondary,,0,0,0,,Now I'm instantiating the model.
+Dialogue: 0,0:02:30.0,0:02:32.60,Secondary,,0,0,0,,And here's where fast sampling comes in with DDIM.
+Dialogue: 0,0:02:32.60,0:02:35.56,Secondary,,0,0,0,,So here's the function for DDIM.
+Dialogue: 0,0:02:35.56,0:02:42.8,Secondary,,0,0,0,,You can look at the paper for the details, but this implements that with its scaling factors.
+Dialogue: 0,0:02:42.8,0:02:44.48,Secondary,,0,0,0,,And then we load up our trained model here.
+Dialogue: 0,0:02:44.48,0:02:49.60,Secondary,,0,0,0,,So what's cool is that we can actually just load up the trained model and use either DDIM or DDPM.
+Dialogue: 0,0:02:49.60,0:02:50.60,Secondary,,0,0,0,,It doesn't matter.
+Dialogue: 0,0:02:50.60,0:02:53.4,Secondary,,0,0,0,,This is just a sampling process after training.
+Dialogue: 0,0:02:53.4,0:02:55.36,Secondary,,0,0,0,,And this is the sampling algorithm using DDIM.
+Dialogue: 0,0:02:55.36,0:02:58.48,Secondary,,0,0,0,,And the only thing to call out is that there is a step size involved.
+Dialogue: 0,0:02:58.48,0:03:00.72,Secondary,,0,0,0,,We're not going through every single time step.
+Dialogue: 0,0:03:00.72,0:03:02.80,Secondary,,0,0,0,,We're actually skipping steps here.
+Dialogue: 0,0:03:02.80,0:03:05.60,Secondary,,0,0,0,,And here is where n is 20.
+Dialogue: 0,0:03:05.60,0:03:08.20,Secondary,,0,0,0,,So this is 500 over 20.
+Dialogue: 0,0:03:08.20,0:03:10.80,Secondary,,0,0,0,,We'll run that here.
+Dialogue: 0,0:03:10.80,0:03:11.96,Secondary,,0,0,0,,And then we can sample.
+Dialogue: 0,0:03:11.96,0:03:13.24,Secondary,,0,0,0,,That was much, much faster.
+Dialogue: 0,0:03:13.24,0:03:16.4,Secondary,,0,0,0,,I could barely even see that there.
+Dialogue: 0,0:03:16.4,0:03:19.8,Secondary,,0,0,0,,And now the GIF is just being composed.
+Dialogue: 0,0:03:19.8,0:03:21.44,Secondary,,0,0,0,,We'll speed up the video for the GIF.
+Dialogue: 0,0:03:21.44,0:03:22.72,Secondary,,0,0,0,,All right.
+Dialogue: 0,0:03:22.72,0:03:26.12,Secondary,,0,0,0,,So here's what that looks like.
+Dialogue: 0,0:03:26.12,0:03:31.64,Secondary,,0,0,0,,And it's very fast that it's able to instantly turn into these sprites.
+Dialogue: 0,0:03:31.64,0:03:38.48,Secondary,,0,0,0,,Now with this faster sampling method, you don't always get the same level of quality as if you were to run DDPM.
+Dialogue: 0,0:03:38.48,0:03:40.56,Secondary,,0,0,0,,These actually do look quite good.
+Dialogue: 0,0:03:40.56,0:03:46.8,Secondary,,0,0,0,,Empirically, people have found that with a model trained on these 500 steps, for example,
+Dialogue: 0,0:03:46.8,0:03:49.60,Secondary,,0,0,0,,DDPM will perform better if you sample for 500 steps.
+Dialogue: 0,0:03:49.60,0:03:54.72,Secondary,,0,0,0,,But for any number under 500 steps, DDIM will do much better.
+Dialogue: 0,0:03:54.72,0:03:57.56,Secondary,,0,0,0,,And so now here's the same, but with a context model.
+Dialogue: 0,0:03:57.56,0:03:58.92,Secondary,,0,0,0,,So you can load in that context.
+Dialogue: 0,0:04:02.92,0:04:03.68,Secondary,,0,0,0,,Great.
+Dialogue: 0,0:04:03.68,0:04:05.60,Secondary,,0,0,0,,So these are just random contexts here.
+Dialogue: 0,0:04:05.60,0:04:07.44,Secondary,,0,0,0,,But you can set them yourselves as well.
+Dialogue: 0,0:04:07.44,0:04:10.20,Secondary,,0,0,0,,And this is what they look like.
+Dialogue: 0,0:04:10.20,0:04:15.4,Secondary,,0,0,0,,So now your question is probably, how does the speed compare?
+Dialogue: 0,0:04:15.4,0:04:21.44,Secondary,,0,0,0,,So we can load up the original DDPM functions and sampling algorithm.
+Dialogue: 0,0:04:21.44,0:04:24.12,Secondary,,0,0,0,,And we can compare it using  timeit  in this notebook.
+Dialogue: 0,0:04:24.12,0:04:26.28,Secondary,,0,0,0,,So we're going to compare DDIM with DDPM.
+Dialogue: 0,0:04:31.28,0:04:32.84,Secondary,,0,0,0,,All right.
+Dialogue: 0,0:04:32.84,0:04:34.4,Secondary,,0,0,0,,Look at that speed up.
+Dialogue: 0,0:04:34.4,0:04:35.12,Secondary,,0,0,0,,Wow.
+Dialogue: 0,0:04:35.12,0:04:37.88,Secondary,,0,0,0,,So try running these in your own notebook and see what you get.
+Dialogue: 0,0:00:05.0,0:00:13.64,Default,,0,0,0,,在这个视频中，你将了解一种\N新的采样方法，它比我们迄今\N为止使用的DDPM高效10倍以上。
+Dialogue: 0,0:00:13.64,0:00:16.36,Default,,0,0,0,,这种新方法叫做DDIM。
+Dialogue: 0,0:00:16.36,0:00:20.68,Default,,0,0,0,,你的目标是想要更多\N的图片，并且快速得到它们。
+Dialogue: 0,0:00:20.68,0:00:26.0,Default,,0,0,0,,但是到目前为止，采样速度\N很慢，因为涉及到很多时间步骤，
+Dialogue: 0,0:00:26.0,0:00:29.96,Default,,0,0,0,,比如500个，有时甚至\N更多才能得到一个好的样本。
+Dialogue: 0,0:00:29.96,0:00:33.8,Default,,0,0,0,,而且每个时间步骤都依赖于前一个。
+Dialogue: 0,0:00:33.8,0:00:36.60,Default,,0,0,0,,它遵循一个马尔可夫链过程。
+Dialogue: 0,0:00:36.60,0:00:43.96,Default,,0,0,0,,但幸运的是，有许多新的\N采样器来解决这个问题，因为\N这一直是扩散模型的一个长期问题。
+Dialogue: 0,0:00:43.96,0:00:49.61,Default,,0,0,0,,你可以训练它们，它们可以创造出\N既多样又逼真的惊人美丽的图像，
+Dialogue: 0,0:00:49.62,0:00:52.52,Default,,0,0,0,,但从它们那里\N得到结果的速度非常慢。
+Dialogue: 0,0:00:52.52,0:01:01.40,Default,,0,0,0,,其中一种非常受欢迎的\N采样器叫做DDIM，即去噪扩散\N隐式模型，这只是论文的名字。
+Dialogue: 0,0:01:01.40,0:01:08.12,Default,,0,0,0,,这篇论文是由Jiaming Song、\NChenlin Meng和我的博士联合\N导师Stefano Ermon共同完成的。
+Dialogue: 0,0:01:08.12,0:01:12.44,Default,,0,0,0,,DDIM之所以更快，\N是因为它能跳过时间步长。
+Dialogue: 0,0:01:12.44,0:01:19.28,Default,,0,0,0,,所以它不是从500步\N到499步再到498步，而是\N能跳过所有这些步骤。
+Dialogue: 0,0:01:19.28,0:01:23.84,Default,,0,0,0,,它能跳过很多步骤，\N因为它打破了马尔可夫假设。
+Dialogue: 0,0:01:23.84,0:01:26.76,Default,,0,0,0,,马尔可夫链只用于概率过程。
+Dialogue: 0,0:01:26.76,0:01:33.80,Default,,0,0,0,,但DDIM实际上从这个\N采样过程中去除了所有的\N随机性，因此是确定性的。
+Dialogue: 0,0:01:33.80,0:01:40.14,Default,,0,0,0,,它所做的，本质上就是\N预测最终输出的粗略草图。
+Dialogue: 0,0:01:40.14,0:01:44.56,Default,,0,0,0,,然后用去噪过程对其进行细化。
+Dialogue: 0,0:01:44.56,0:01:51.20,Default,,0,0,0,,那么让我们比较一下左边\N的DDPM，这是我们迄今为止\N一直在做的，和右边的DDIM。
+Dialogue: 0,0:01:51.20,0:01:54.76,Default,,0,0,0,,是的，使用DDIM速度快很多。
+Dialogue: 0,0:01:54.76,0:02:00.56,Default,,0,0,0,,在时间步19之后，你\N立即就能看到一个有形的结果。
+Dialogue: 0,0:02:00.56,0:02:02.48,Default,,0,0,0,,我们还在继续使用DDPM。
+Dialogue: 0,0:02:02.48,0:02:04.24,Default,,0,0,0,,我们还在继续。
+Dialogue: 0,0:02:04.24,0:02:08.76,Default,,0,0,0,,而且这一直可以\N用DDPM达到500。
+Dialogue: 0,0:02:08.76,0:02:11.76,Default,,0,0,0,,好的，这里是实验课。
+Dialogue: 0,0:02:11.76,0:02:13.36,Default,,0,0,0,,很多设置看起来都一样。
+Dialogue: 0,0:02:13.36,0:02:22.56,Default,,0,0,0,,我只是在这里运行这个单元格，\N重新设置单位，我们的超参数。
+Dialogue: 0,0:02:22.56,0:02:24.36,Default,,0,0,0,,这是DDPM噪声计划。
+Dialogue: 0,0:02:24.36,0:02:27.56,Default,,0,0,0,,稍后我们会用\N它来和DDIM进行比较。
+Dialogue: 0,0:02:27.56,0:02:30.0,Default,,0,0,0,,现在我正在实例化模型。
+Dialogue: 0,0:02:30.0,0:02:32.60,Default,,0,0,0,,这里是用DDIM进行快速采样的地方。
+Dialogue: 0,0:02:32.60,0:02:35.56,Default,,0,0,0,,这是DDIM的功能。
+Dialogue: 0,0:02:35.56,0:02:42.8,Default,,0,0,0,,可以查看论文了解细节，\N但这里实现了相应的缩放因子。
+Dialogue: 0,0:02:42.8,0:02:44.48,Default,,0,0,0,,然后我们在这里\N加载训练好的模型。
+Dialogue: 0,0:02:44.48,0:02:49.60,Default,,0,0,0,,很酷的是，我们可以\N直接加载训练好的模型，\N使用DDIM或DDPM。
+Dialogue: 0,0:02:49.60,0:02:50.60,Default,,0,0,0,,这都没关系。
+Dialogue: 0,0:02:50.60,0:02:53.4,Default,,0,0,0,,这只是训练后的采样过程。
+Dialogue: 0,0:02:53.4,0:02:55.36,Default,,0,0,0,,这是使用DDIM的采样算法。
+Dialogue: 0,0:02:55.36,0:02:58.48,Default,,0,0,0,,需要指出的是，这里涉及到一个步长。
+Dialogue: 0,0:02:58.48,0:03:00.72,Default,,0,0,0,,我们没有逐个\N时间步骤地进行。
+Dialogue: 0,0:03:00.72,0:03:02.80,Default,,0,0,0,,实际上我们在\N这里跳过了一些步骤。
+Dialogue: 0,0:03:02.80,0:03:05.60,Default,,0,0,0,,这里的n是20。
+Dialogue: 0,0:03:05.60,0:03:08.20,Default,,0,0,0,,所以这是500除以20。
+Dialogue: 0,0:03:08.20,0:03:10.80,Default,,0,0,0,,我们将在这里运行。
+Dialogue: 0,0:03:10.80,0:03:11.96,Default,,0,0,0,,然后我们可以进行采样。
+Dialogue: 0,0:03:11.96,0:03:13.24,Default,,0,0,0,,这速度快了很多。
+Dialogue: 0,0:03:13.24,0:03:16.4,Default,,0,0,0,,我几乎看不到那里。
+Dialogue: 0,0:03:16.4,0:03:19.8,Default,,0,0,0,,现在正在合成GIF。
+Dialogue: 0,0:03:19.8,0:03:21.44,Default,,0,0,0,,我们会加快合成GIF的视频速度。
+Dialogue: 0,0:03:21.44,0:03:22.72,Default,,0,0,0,,好了！
+Dialogue: 0,0:03:22.72,0:03:26.12,Default,,0,0,0,,这就是它的样子。
+Dialogue: 0,0:03:26.12,0:03:31.64,Default,,0,0,0,,它能够瞬间变成这些\N游戏角色，速度非常快。
+Dialogue: 0,0:03:31.64,0:03:38.48,Default,,0,0,0,,现在用这种更快的\N采样方法，你并不总能\N得到和使用DDPM一样的质量。
+Dialogue: 0,0:03:38.48,0:03:40.56,Default,,0,0,0,,但这些实际上看起来相当不错。
+Dialogue: 0,0:03:40.56,0:03:46.8,Default,,0,0,0,,实际上，人们发现，用在\N这500步上训练的模型，例如，
+Dialogue: 0,0:03:46.8,0:03:49.60,Default,,0,0,0,,如果你采样500步，\NDDPM的表现会更好。
+Dialogue: 0,0:03:49.60,0:03:54.72,Default,,0,0,0,,但对于任何小于500步\N的数字，DDIM的表现会好得多。
+Dialogue: 0,0:03:54.72,0:03:57.56,Default,,0,0,0,,现在这里是相同的，\N但带有上下文模型。
+Dialogue: 0,0:03:57.56,0:03:58.92,Default,,0,0,0,,所以你可以加载那个上下文。
+Dialogue: 0,0:04:02.92,0:04:03.68,Default,,0,0,0,,太棒了！
+Dialogue: 0,0:04:03.68,0:04:05.60,Default,,0,0,0,,这些只是随机的上下文。
+Dialogue: 0,0:04:05.60,0:04:07.44,Default,,0,0,0,,但你们也可以自己设置。
+Dialogue: 0,0:04:07.44,0:04:10.20,Default,,0,0,0,,它们是这样的。
+Dialogue: 0,0:04:10.20,0:04:15.4,Default,,0,0,0,,那么现在你们可能\N会问速度如何对比？
+Dialogue: 0,0:04:15.4,0:04:21.44,Default,,0,0,0,,我们可以加载原始的\NDDPM函数和采样算法。
+Dialogue: 0,0:04:21.44,0:04:24.12,Default,,0,0,0,,然后我们可以在这个\NNotebook中使用 timeit 进行比较。
+Dialogue: 0,0:04:24.12,0:04:26.28,Default,,0,0,0,,我们将比较DDIM和DDPM。
+Dialogue: 0,0:04:31.28,0:04:32.84,Default,,0,0,0,,好了
+Dialogue: 0,0:04:32.84,0:04:34.4,Default,,0,0,0,,看看这个速度提升。
+Dialogue: 0,0:04:34.4,0:04:35.12,Default,,0,0,0,,哇！
+Dialogue: 0,0:04:35.12,0:04:37.88,Default,,0,0,0,,试着在你们自己的Notebook\N中运行这些，看看结果如何。

@@ -1,0 +1,131 @@
+1
+00:00:05,000 --> 00:00:10,040
+Welcome to this short course on LangChain for large language model application development.
+
+2
+00:00:10,040 --> 00:00:18,600
+By prompting an LLM or large language model, it is now possible to develop AI applications much faster than ever before.
+
+3
+00:00:18,600 --> 00:00:24,760
+But an application can require prompting an LLM multiple times and parsing its output.
+
+4
+00:00:24,760 --> 00:00:28,240
+And so there's a lot of glue code that needs to be written.
+
+5
+00:00:28,240 --> 00:00:34,320
+LangChain created by Harrison Chase makes this development process much easier.
+
+6
+00:00:34,320 --> 00:00:42,680
+I'm thrilled to have Harrison here, who had built this short course in collaboration with deeplearning.ai to teach how to use this amazing tool.
+
+7
+00:00:42,680 --> 00:00:45,400
+Thanks for having me. I'm really excited to be here.
+
+8
+00:00:45,400 --> 00:00:49,760
+LangChain started as an open source framework for building LLM applications.
+
+9
+00:00:49,760 --> 00:00:59,520
+It came about when I was talking to a bunch of folks in the field who were building more complex applications and saw some common abstractions in terms of how they were being developed.
+
+10
+00:00:59,520 --> 00:01:04,120
+And we've been really thrilled at the community adoption of LangChain so far.
+
+11
+00:01:04,120 --> 00:01:08,880
+And so look forward to sharing it with everyone here and look forward to seeing what people build with it.
+
+12
+00:01:08,880 --> 00:01:18,800
+And in fact, as a sign of LangChain's momentum, not only does it have numerous users, but there are also many hundreds of contributors to the open source.
+
+13
+00:01:18,800 --> 00:01:22,720
+And this has been instrumental for its rapid rate of development.
+
+14
+00:01:22,720 --> 00:01:26,440
+This team really ships code and features at an amazing pace.
+
+15
+00:01:26,440 --> 00:01:33,680
+So hopefully, after this short course, you'll be able to quickly put together some really cool applications using LangChain.
+
+16
+00:01:33,680 --> 00:01:39,760
+And who knows, maybe you even decide to contribute back to the open source LangChain effort.
+
+17
+00:01:39,760 --> 00:01:45,320
+LangChain is an open source development framework for building LLM applications.
+
+18
+00:01:45,320 --> 00:01:49,520
+We have two different packages, a Python one and a JavaScript(TypeScript) one.
+
+19
+00:01:49,520 --> 00:01:52,600
+They're focused on composition and modularity.
+
+20
+00:01:52,600 --> 00:01:58,320
+So they have a lot of individual components that can be used in conjunction with each other or by themselves.
+
+22
+00:02:00,080 --> 00:02:03,640
+And then the other key value add is a bunch of different use cases.
+
+23
+00:02:03,640 --> 00:02:12,600
+So chains of ways of combining these modular components into more end-to-end applications and making it very easy to get started with those use cases.
+
+24
+00:02:12,600 --> 00:02:16,040
+In this class, we'll cover the common components of LangChain.
+
+25
+00:02:16,040 --> 00:02:17,480
+So we'll talk about models.
+
+26
+00:02:17,480 --> 00:02:22,040
+We'll talk about prompts, which are how you get models to do useful and interesting things.
+
+27
+00:02:22,040 --> 00:02:27,920
+We'll talk about indexes, which are ways of ingesting data so that you can combine it with models.
+
+28
+00:02:27,920 --> 00:02:29,480
+And then we'll talk about chains,
+
+30
+00:02:32,280 --> 00:02:34,920
+which are a very exciting type of end-to-end use case,
+
+32
+00:02:37,680 --> 00:02:40,360
+We're also grateful to Ankush Gola,
+
+33
+00:02:40,360 --> 00:02:44,600
+who is the co-founder of LangChain alongside Harrison Chase,
+
+34
+00:02:44,600 --> 00:02:50,480
+for also putting a lot of thoughts into these materials and helping with the creation of this short course.
+
+35
+00:02:50,480 --> 00:02:58,840
+And on the deep learning, the AI side, Geoff Ladwig, Eddie Shyu, and Diala Ezzedine have also contributed to these materials.
+
+36
+00:02:58,840 --> 00:03:05,960
+And so with that, let's go on to the next video where we'll learn about LangChain's: Models, Prompts, and Parsers.

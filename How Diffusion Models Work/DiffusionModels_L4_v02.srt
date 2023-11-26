@@ -1,0 +1,388 @@
+1
+00:00:05,000 --> 00:00:12,000
+In this video, we'll discuss how to train this U-Net neural network and get it to predict noise.
+
+2
+00:00:12,000 --> 00:00:18,043
+So the goal of the neural network is for it to predict noise, and really it learns the distribution of what is noise on the image,
+
+3
+00:00:18,044 --> 00:00:20,999
+but also what is not noise, what is sprite likeness, right?
+
+4
+00:00:21,000 --> 00:00:28,000
+And so how we do that is that we take a sprite from our training data and we actually add noise to it.
+
+5
+00:00:28,000 --> 00:00:32,000
+We add noise to it and we give it to the neural network and we ask the neural network to predict that noise.
+
+6
+00:00:32,000 --> 00:00:37,000
+And then we compare the predicted noise against the actual noise that was added to that image.
+
+7
+00:00:37,000 --> 00:00:39,000
+And that's how we compute the loss.
+
+8
+00:00:39,000 --> 00:00:44,000
+And that backprops through the neural network so that the neural network learns to predict that noise better.
+
+9
+00:00:44,000 --> 00:00:47,000
+So how do you determine what this noise here is?
+
+10
+00:00:47,000 --> 00:00:51,000
+You could just go through time and sampling and give it different noise levels.
+
+11
+00:00:51,000 --> 00:00:56,000
+But realistically in training, we don't want the neural network to be looking at the same sprite all the time.
+
+12
+00:00:56,000 --> 00:01:02,000
+It helps it to be more stable if it looks at different sprites across an epoch and it's just more uniform.
+
+13
+00:01:02,000 --> 00:01:05,000
+So actually what we do is we randomly sample what this time step could be.
+
+14
+00:01:05,000 --> 00:01:08,000
+We then get the noise level appropriate to that time step.
+
+15
+00:01:08,000 --> 00:01:11,000
+We add it to this image and then we have the neural network predict it.
+
+16
+00:01:11,000 --> 00:01:14,000
+We take the next sprite image in our training data.
+
+17
+00:01:14,000 --> 00:01:17,000
+We again sample a random time step.
+
+18
+00:01:17,000 --> 00:01:19,000
+It could be totally different like you see here.
+
+19
+00:01:19,000 --> 00:01:24,000
+And then we add it to this sprite image and again we have the neural network predict the noise that was added.
+
+20
+00:01:24,000 --> 00:01:27,000
+And this results in a much more stable training scheme.
+
+21
+00:01:27,000 --> 00:01:29,000
+So what does training actually look like?
+
+22
+00:01:29,000 --> 00:01:32,000
+Here is a wizard hat sprite.
+
+23
+00:01:32,000 --> 00:01:35,000
+And here is what a noised input would look like.
+
+24
+00:01:35,000 --> 00:01:43,000
+And when you first put it into the neural network at epoch zero, the neural network hasn't really learned what a sprite is yet.
+
+25
+00:01:43,000 --> 00:01:46,000
+So the predicted noise doesn't quite change what the input looks like.
+
+26
+00:01:46,000 --> 00:01:50,000
+And when it's subtracted out, it actually just turns into this which looks about the same.
+
+27
+00:01:50,000 --> 00:01:56,000
+But by the time you get to epoch 31, the neural network has a better understanding of what this sprite looks like.
+
+28
+00:01:56,000 --> 00:02:04,000
+So then it predicts noise that is then subtracted from this input to produce something that does look like this wizard hat sprite.
+
+29
+00:02:04,000 --> 00:02:06,000
+Cool, so that was for one sample.
+
+30
+00:02:06,000 --> 00:02:12,000
+This is for multiple different samples, multiple different sprites across many epochs and what that looks like.
+
+31
+00:02:12,000 --> 00:02:15,000
+As you can see in this first epoch, it is quite far from sprites.
+
+32
+00:02:15,000 --> 00:02:22,000
+But by the time you get to epoch 32 here, it looks quite like little video game characters and even before that.
+
+33
+00:02:22,000 --> 00:02:26,000
+All right, so now we'll go through the training algorithm with some code.
+
+34
+00:02:26,000 --> 00:02:29,000
+So first you want to sample a training image.
+
+35
+00:02:29,000 --> 00:02:32,000
+So here we are loading up all the data into the data loader.
+
+36
+00:02:32,000 --> 00:02:35,000
+We're putting into a progress bar so that we can visualize it.
+
+37
+00:02:35,000 --> 00:02:37,000
+But essentially imagine all the data here.
+
+38
+00:02:37,000 --> 00:02:39,000
+We're then iterating through all of the data samples.
+
+39
+00:02:39,000 --> 00:02:42,000
+So X here is a training image.
+
+40
+00:02:42,000 --> 00:02:44,000
+So just looking at X now.
+
+41
+00:02:44,000 --> 00:02:48,000
+Within this loop, we are sampling a time step T.
+
+42
+00:02:48,000 --> 00:02:51,000
+And this determines the level of noise.
+
+43
+00:02:51,000 --> 00:02:55,000
+We're not going through all the time steps, just sampling a time step T.
+
+44
+00:02:55,000 --> 00:02:57,000
+We sample a noise.
+
+45
+00:02:57,000 --> 00:03:01,000
+We add that noise to the image based on that time step.
+
+46
+00:03:01,000 --> 00:03:05,000
+And then we input that noised image into the neural network.
+
+47
+00:03:05,000 --> 00:03:10,000
+We also put in the time step because we also care about adding that time embedding in.
+
+48
+00:03:10,000 --> 00:03:13,000
+And the neural network predicts the noise as output.
+
+49
+00:03:13,000 --> 00:03:20,000
+Comparing that predicted noise with the noise that we actually added, we can compute the loss using mean squared error, MSE.
+
+50
+00:03:20,000 --> 00:03:23,000
+And then all we have to do is back prop and learn.
+
+51
+00:03:23,000 --> 00:03:27,000
+So the model will then learn what is noise and what is sprite.
+
+52
+00:03:27,000 --> 00:03:30,000
+Cool, so on to our training notebook here.
+
+53
+00:03:30,000 --> 00:03:39,000
+So this is all the same as before, just hitting shift enter, setting things up with the unit.
+
+54
+00:03:39,000 --> 00:03:43,000
+Here what's interesting is, you know, our training hyperparameters, our batch size of 100,
+
+55
+00:03:43,000 --> 00:03:47,000
+and we are going through 32 different epochs and our learning rate.
+
+56
+00:03:47,000 --> 00:03:50,000
+I'm just going to shift enter there to run it.
+
+57
+00:03:50,000 --> 00:03:59,000
+Again, similar things here of setting up the model and the noise schedule for those scaling parameters.
+
+58
+00:03:59,000 --> 00:04:00,000
+Now here's where you get into training.
+
+59
+00:04:00,000 --> 00:04:05,000
+So you can load your data set, and we're loading it into that data loader here.
+
+60
+00:04:05,000 --> 00:04:09,000
+It's this 16 by 16 sprites data set.
+
+61
+00:04:09,000 --> 00:04:12,000
+And we're also loading up our optimizer.
+
+62
+00:04:12,000 --> 00:04:17,000
+And here's the function that perturbs our input, meaning that it takes the image,
+
+63
+00:04:17,000 --> 00:04:23,000
+it adds the right noise level for that specific time step to that image, and returns it.
+
+64
+00:04:23,000 --> 00:04:26,000
+So I can hit Shift+Enter here.
+
+65
+00:04:26,000 --> 00:04:31,000
+So here we won't actually step through training because it takes many hours on CPU,
+
+66
+00:04:31,000 --> 00:04:33,000
+and that's where these notebooks are hosted.
+
+67
+00:04:33,000 --> 00:04:36,000
+But I really recommend that you do go through this.
+
+68
+00:04:36,000 --> 00:04:41,000
+This is the exact code that we had just looked at together.
+
+69
+00:04:41,000 --> 00:04:45,000
+But what we can do is that we did train this model and save the model at different epochs,
+
+70
+00:04:45,000 --> 00:04:50,000
+such that you can then run sampling and be able to see how it does at each epoch.
+
+71
+00:04:50,000 --> 00:04:54,000
+So this is, again, the same sampling code you saw before.
+
+72
+00:04:54,000 --> 00:04:56,000
+I'm just going to breeze through that.
+
+73
+00:04:56,000 --> 00:05:00,000
+And here is where you would load the model for epoch zero.
+
+74
+00:05:00,000 --> 00:05:05,000
+So this is the path to that model checkpoint, model_0 for epoch zero.
+
+75
+00:05:05,000 --> 00:05:08,000
+I'm going to load that model.
+
+76
+00:05:08,000 --> 00:05:10,000
+And then here you can just visualize the samples.
+
+77
+00:05:10,000 --> 00:05:16,000
+And, again, this is running the same sampling method as before called DDPM that you learned in the previous video.
+
+78
+00:05:16,000 --> 00:05:19,000
+This takes a couple minutes, and we'll speed this up in the video.
+
+79
+00:05:19,000 --> 00:05:20,000
+Great.
+
+80
+00:05:20,000 --> 00:05:25,000
+So we can hit play here.
+
+81
+00:05:25,000 --> 00:05:31,000
+A bit amorphous still, but, you know, starting to understand the general outlines of sprites.
+
+82
+00:05:31,000 --> 00:05:32,000
+It's not pure noise.
+
+83
+00:05:32,000 --> 00:05:35,000
+So we also have epoch four here for you to see.
+
+84
+00:05:35,000 --> 00:05:37,000
+So you can see the model improving.
+
+85
+00:05:37,000 --> 00:05:40,000
+These look a little bit more like sprites.
+
+86
+00:05:40,000 --> 00:05:43,000
+And epoch eight.
+
+87
+00:05:43,000 --> 00:05:45,000
+A little bit more.
+
+88
+00:05:45,000 --> 00:05:50,000
+See some books in there, actually.
+
+89
+00:05:50,000 --> 00:05:54,000
+And, finally, Epoch 31.
+
+90
+00:05:54,000 --> 00:05:57,000
+Or this might actually be 32 when we index from zero.
+
+91
+00:05:57,000 --> 00:05:59,000
+So these look a lot more like sprites.
+
+92
+00:05:59,000 --> 00:06:01,000
+You can see a sword here.
+
+93
+00:06:01,000 --> 00:06:04,000
+This is probably the wizard hat.
+
+94
+00:06:04,000 --> 00:06:06,000
+See a potion here.
+
+95
+00:06:06,000 --> 00:06:09,000
+But, of course, there are still some blobs here and there, some people here.
+
+96
+00:06:09,000 --> 00:06:12,000
+So it's not perfect, and it could keep going.
+
+97
+00:06:12,000 --> 00:06:19,000
+So in the next video, you'll get to control what you generate, meaning you can tell it to generate objects or these people, for example.
+

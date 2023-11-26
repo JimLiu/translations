@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:10,920
+I'm thrilled to present to you this short course on diffusion models taught by Sharon Zhou.
+
+2
+00:00:10,920 --> 00:00:20,000
+Mid-journey, stable diffusion, DALL-E, and others are able to generate an image, sometimes a beautiful image, given only a prompt.
+
+3
+00:00:20,000 --> 00:00:21,760
+How do these algorithms work?
+
+4
+00:00:21,760 --> 00:00:27,444
+You may have heard of a vague description of these algorithms learning to subtract noise to generate an image,
+
+5
+00:00:27,644 --> 00:00:35,329
+but in this short course, Sharon will step you through a concrete implementation of image generation using a diffusion model
+
+6
+00:00:35,529 --> 00:00:40,320
+so that you understand the technical details of exactly how it works.
+
+7
+00:00:40,320 --> 00:00:41,800
+Cool, thanks Andrew.
+
+8
+00:00:41,800 --> 00:00:46,800
+In this course, you'll be learning about the current state and capabilities of diffusion models used today.
+
+9
+00:00:46,800 --> 00:00:55,440
+You'll start by understanding the sampling process, starting with pure noise and progressively refining it to obtain a final nice-looking image.
+
+10
+00:00:55,440 --> 00:01:00,080
+You'll build the necessary programming skills to train a diffusion model effectively.
+
+11
+00:01:00,080 --> 00:01:04,200
+You'll learn how to build a neural network that can predict noise in an image.
+
+12
+00:01:04,200 --> 00:01:08,160
+You'll add context to the model so that you can control what you want it to generate.
+
+13
+00:01:08,160 --> 00:01:14,520
+And finally, by implementing advanced algorithms, you'll learn how to accelerate the sampling process by a factor of 10.
+
+14
+00:01:14,520 --> 00:01:17,340
+This is an intermediate to advanced course.
+
+15
+00:01:17,340 --> 00:01:21,360
+We assume you're familiar with Python and basic neural network training.
+
+16
+00:01:21,360 --> 00:01:24,560
+So for example, we'll assume you know what backpropagation is.
+
+17
+00:01:24,560 --> 00:01:26,480
+We'll use PyTorch throughout.
+
+18
+00:01:26,480 --> 00:01:32,820
+But if you're familiar with other machine learning frameworks, such as TensorFlow, you should be able to follow along just fine.
+
+19
+00:01:32,820 --> 00:01:42,620
+And so the running example we'll use for this short course will be generating 16 by 16 sprites, like those little 8-bit characters used in video games.
+
+20
+00:01:42,620 --> 00:01:47,400
+We chose this example so that it's feasible for you to not just go through the notebooks,
+
+21
+00:01:47,400 --> 00:01:54,040
+but also run them yourself to generate cute sprites yourself right there in that Jupyter Notebook.
+
+22
+00:01:54,040 --> 00:02:00,200
+Diffusion models are becoming a foundation for cutting-edge research in the life sciences and other sectors too.
+
+23
+00:02:00,200 --> 00:02:03,560
+For example, generating molecules for drug discovery.
+
+24
+00:02:03,560 --> 00:02:07,146
+So when you understand the technical details of diffusion models,
+
+25
+00:02:07,147 --> 00:02:13,720
+you'll also be in a better position to understand and perhaps apply such models yourself.
+
+26
+00:02:13,720 --> 00:02:16,680
+Many people worked together to build this short course.
+
+27
+00:02:16,680 --> 00:02:23,360
+I want to thank Aaron Lou and Mehmet Giray Ogut for their significant contributions.
+
+28
+00:02:23,360 --> 00:02:29,200
+And on the DeepLearning.ai site, also Geoff Ladwig and Eddy Shyu.
+
+29
+00:02:29,200 --> 00:02:34,800
+So with that, let me hand it over to Sharon, and I hope you enjoy the course.
+
+30
+00:02:34,800 --> 00:02:35,800
+Great.
+
+31
+00:02:35,800 --> 00:02:36,440
+Let's get started.
+

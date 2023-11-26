@@ -1,0 +1,216 @@
+[Script Info]
+
+Title: DiffusionModels_L4_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,方正准圆简体,16,&H000092FE,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Arial,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:12.0,Secondary,,0,0,0,,In this video, we'll discuss how to train this U-Net neural network and get it to predict noise.
+Dialogue: 0,0:00:12.0,0:00:18.4,Secondary,,0,0,0,,So the goal of the neural network is for it to predict noise, and really it learns the distribution of what is noise on the image,
+Dialogue: 0,0:00:18.4,0:00:20.100,Secondary,,0,0,0,,but also what is not noise, what is sprite likeness, right?
+Dialogue: 0,0:00:21.0,0:00:28.0,Secondary,,0,0,0,,And so how we do that is that we take a sprite from our training data and we actually add noise to it.
+Dialogue: 0,0:00:28.0,0:00:32.0,Secondary,,0,0,0,,We add noise to it and we give it to the neural network and we ask the neural network to predict that noise.
+Dialogue: 0,0:00:32.0,0:00:37.0,Secondary,,0,0,0,,And then we compare the predicted noise against the actual noise that was added to that image.
+Dialogue: 0,0:00:37.0,0:00:39.0,Secondary,,0,0,0,,And that's how we compute the loss.
+Dialogue: 0,0:00:39.0,0:00:44.0,Secondary,,0,0,0,,And that backprops through the neural network so that the neural network learns to predict that noise better.
+Dialogue: 0,0:00:44.0,0:00:47.0,Secondary,,0,0,0,,So how do you determine what this noise here is?
+Dialogue: 0,0:00:47.0,0:00:51.0,Secondary,,0,0,0,,You could just go through time and sampling and give it different noise levels.
+Dialogue: 0,0:00:51.0,0:00:56.0,Secondary,,0,0,0,,But realistically in training, we don't want the neural network to be looking at the same sprite all the time.
+Dialogue: 0,0:00:56.0,0:01:02.0,Secondary,,0,0,0,,It helps it to be more stable if it looks at different sprites across an epoch and it's just more uniform.
+Dialogue: 0,0:01:02.0,0:01:05.0,Secondary,,0,0,0,,So actually what we do is we randomly sample what this time step could be.
+Dialogue: 0,0:01:05.0,0:01:08.0,Secondary,,0,0,0,,We then get the noise level appropriate to that time step.
+Dialogue: 0,0:01:08.0,0:01:11.0,Secondary,,0,0,0,,We add it to this image and then we have the neural network predict it.
+Dialogue: 0,0:01:11.0,0:01:14.0,Secondary,,0,0,0,,We take the next sprite image in our training data.
+Dialogue: 0,0:01:14.0,0:01:17.0,Secondary,,0,0,0,,We again sample a random time step.
+Dialogue: 0,0:01:17.0,0:01:19.0,Secondary,,0,0,0,,It could be totally different like you see here.
+Dialogue: 0,0:01:19.0,0:01:24.0,Secondary,,0,0,0,,And then we add it to this sprite image and again we have the neural network predict the noise that was added.
+Dialogue: 0,0:01:24.0,0:01:27.0,Secondary,,0,0,0,,And this results in a much more stable training scheme.
+Dialogue: 0,0:01:27.0,0:01:29.0,Secondary,,0,0,0,,So what does training actually look like?
+Dialogue: 0,0:01:29.0,0:01:32.0,Secondary,,0,0,0,,Here is a wizard hat sprite.
+Dialogue: 0,0:01:32.0,0:01:35.0,Secondary,,0,0,0,,And here is what a noised input would look like.
+Dialogue: 0,0:01:35.0,0:01:43.0,Secondary,,0,0,0,,And when you first put it into the neural network at epoch zero, the neural network hasn't really learned what a sprite is yet.
+Dialogue: 0,0:01:43.0,0:01:46.0,Secondary,,0,0,0,,So the predicted noise doesn't quite change what the input looks like.
+Dialogue: 0,0:01:46.0,0:01:50.0,Secondary,,0,0,0,,And when it's subtracted out, it actually just turns into this which looks about the same.
+Dialogue: 0,0:01:50.0,0:01:56.0,Secondary,,0,0,0,,But by the time you get to epoch 31, the neural network has a better understanding of what this sprite looks like.
+Dialogue: 0,0:01:56.0,0:02:04.0,Secondary,,0,0,0,,So then it predicts noise that is then subtracted from this input to produce something that does look like this wizard hat sprite.
+Dialogue: 0,0:02:04.0,0:02:06.0,Secondary,,0,0,0,,Cool, so that was for one sample.
+Dialogue: 0,0:02:06.0,0:02:12.0,Secondary,,0,0,0,,This is for multiple different samples, multiple different sprites across many epochs and what that looks like.
+Dialogue: 0,0:02:12.0,0:02:15.0,Secondary,,0,0,0,,As you can see in this first epoch, it is quite far from sprites.
+Dialogue: 0,0:02:15.0,0:02:22.0,Secondary,,0,0,0,,But by the time you get to epoch 32 here, it looks quite like little video game characters and even before that.
+Dialogue: 0,0:02:22.0,0:02:26.0,Secondary,,0,0,0,,All right, so now we'll go through the training algorithm with some code.
+Dialogue: 0,0:02:26.0,0:02:29.0,Secondary,,0,0,0,,So first you want to sample a training image.
+Dialogue: 0,0:02:29.0,0:02:32.0,Secondary,,0,0,0,,So here we are loading up all the data into the data loader.
+Dialogue: 0,0:02:32.0,0:02:35.0,Secondary,,0,0,0,,We're putting into a progress bar so that we can visualize it.
+Dialogue: 0,0:02:35.0,0:02:37.0,Secondary,,0,0,0,,But essentially imagine all the data here.
+Dialogue: 0,0:02:37.0,0:02:39.0,Secondary,,0,0,0,,We're then iterating through all of the data samples.
+Dialogue: 0,0:02:39.0,0:02:42.0,Secondary,,0,0,0,,So X here is a training image.
+Dialogue: 0,0:02:42.0,0:02:44.0,Secondary,,0,0,0,,So just looking at X now.
+Dialogue: 0,0:02:44.0,0:02:48.0,Secondary,,0,0,0,,Within this loop, we are sampling a time step T.
+Dialogue: 0,0:02:48.0,0:02:51.0,Secondary,,0,0,0,,And this determines the level of noise.
+Dialogue: 0,0:02:51.0,0:02:55.0,Secondary,,0,0,0,,We're not going through all the time steps, just sampling a time step T.
+Dialogue: 0,0:02:55.0,0:02:57.0,Secondary,,0,0,0,,We sample a noise.
+Dialogue: 0,0:02:57.0,0:03:01.0,Secondary,,0,0,0,,We add that noise to the image based on that time step.
+Dialogue: 0,0:03:01.0,0:03:05.0,Secondary,,0,0,0,,And then we input that noised image into the neural network.
+Dialogue: 0,0:03:05.0,0:03:10.0,Secondary,,0,0,0,,We also put in the time step because we also care about adding that time embedding in.
+Dialogue: 0,0:03:10.0,0:03:13.0,Secondary,,0,0,0,,And the neural network predicts the noise as output.
+Dialogue: 0,0:03:13.0,0:03:20.0,Secondary,,0,0,0,,Comparing that predicted noise with the noise that we actually added, we can compute the loss using mean squared error, MSE.
+Dialogue: 0,0:03:20.0,0:03:23.0,Secondary,,0,0,0,,And then all we have to do is back prop and learn.
+Dialogue: 0,0:03:23.0,0:03:27.0,Secondary,,0,0,0,,So the model will then learn what is noise and what is sprite.
+Dialogue: 0,0:03:27.0,0:03:30.0,Secondary,,0,0,0,,Cool, so on to our training notebook here.
+Dialogue: 0,0:03:30.0,0:03:39.0,Secondary,,0,0,0,,So this is all the same as before, just hitting shift enter, setting things up with the unit.
+Dialogue: 0,0:03:39.0,0:03:43.0,Secondary,,0,0,0,,Here what's interesting is, you know, our training hyperparameters, our batch size of 100,
+Dialogue: 0,0:03:43.0,0:03:47.0,Secondary,,0,0,0,,and we are going through 32 different epochs and our learning rate.
+Dialogue: 0,0:03:47.0,0:03:50.0,Secondary,,0,0,0,,I'm just going to shift enter there to run it.
+Dialogue: 0,0:03:50.0,0:03:59.0,Secondary,,0,0,0,,Again, similar things here of setting up the model and the noise schedule for those scaling parameters.
+Dialogue: 0,0:03:59.0,0:04:00.0,Secondary,,0,0,0,,Now here's where you get into training.
+Dialogue: 0,0:04:00.0,0:04:05.0,Secondary,,0,0,0,,So you can load your data set, and we're loading it into that data loader here.
+Dialogue: 0,0:04:05.0,0:04:09.0,Secondary,,0,0,0,,It's this 16 by 16 sprites data set.
+Dialogue: 0,0:04:09.0,0:04:12.0,Secondary,,0,0,0,,And we're also loading up our optimizer.
+Dialogue: 0,0:04:12.0,0:04:17.0,Secondary,,0,0,0,,And here's the function that perturbs our input, meaning that it takes the image,
+Dialogue: 0,0:04:17.0,0:04:23.0,Secondary,,0,0,0,,it adds the right noise level for that specific time step to that image, and returns it.
+Dialogue: 0,0:04:23.0,0:04:26.0,Secondary,,0,0,0,,So I can hit Shift+Enter here.
+Dialogue: 0,0:04:26.0,0:04:31.0,Secondary,,0,0,0,,So here we won't actually step through training because it takes many hours on CPU,
+Dialogue: 0,0:04:31.0,0:04:33.0,Secondary,,0,0,0,,and that's where these notebooks are hosted.
+Dialogue: 0,0:04:33.0,0:04:36.0,Secondary,,0,0,0,,But I really recommend that you do go through this.
+Dialogue: 0,0:04:36.0,0:04:41.0,Secondary,,0,0,0,,This is the exact code that we had just looked at together.
+Dialogue: 0,0:04:41.0,0:04:45.0,Secondary,,0,0,0,,But what we can do is that we did train this model and save the model at different epochs,
+Dialogue: 0,0:04:45.0,0:04:50.0,Secondary,,0,0,0,,such that you can then run sampling and be able to see how it does at each epoch.
+Dialogue: 0,0:04:50.0,0:04:54.0,Secondary,,0,0,0,,So this is, again, the same sampling code you saw before.
+Dialogue: 0,0:04:54.0,0:04:56.0,Secondary,,0,0,0,,I'm just going to breeze through that.
+Dialogue: 0,0:04:56.0,0:05:00.0,Secondary,,0,0,0,,And here is where you would load the model for epoch zero.
+Dialogue: 0,0:05:00.0,0:05:05.0,Secondary,,0,0,0,,So this is the path to that model checkpoint, model_0 for epoch zero.
+Dialogue: 0,0:05:05.0,0:05:08.0,Secondary,,0,0,0,,I'm going to load that model.
+Dialogue: 0,0:05:08.0,0:05:10.0,Secondary,,0,0,0,,And then here you can just visualize the samples.
+Dialogue: 0,0:05:10.0,0:05:16.0,Secondary,,0,0,0,,And, again, this is running the same sampling method as before called DDPM that you learned in the previous video.
+Dialogue: 0,0:05:16.0,0:05:19.0,Secondary,,0,0,0,,This takes a couple minutes, and we'll speed this up in the video.
+Dialogue: 0,0:05:19.0,0:05:20.0,Secondary,,0,0,0,,Great.
+Dialogue: 0,0:05:20.0,0:05:25.0,Secondary,,0,0,0,,So we can hit play here.
+Dialogue: 0,0:05:25.0,0:05:31.0,Secondary,,0,0,0,,A bit amorphous still, but, you know, starting to understand the general outlines of sprites.
+Dialogue: 0,0:05:31.0,0:05:32.0,Secondary,,0,0,0,,It's not pure noise.
+Dialogue: 0,0:05:32.0,0:05:35.0,Secondary,,0,0,0,,So we also have epoch four here for you to see.
+Dialogue: 0,0:05:35.0,0:05:37.0,Secondary,,0,0,0,,So you can see the model improving.
+Dialogue: 0,0:05:37.0,0:05:40.0,Secondary,,0,0,0,,These look a little bit more like sprites.
+Dialogue: 0,0:05:40.0,0:05:43.0,Secondary,,0,0,0,,And epoch eight.
+Dialogue: 0,0:05:43.0,0:05:45.0,Secondary,,0,0,0,,A little bit more.
+Dialogue: 0,0:05:45.0,0:05:50.0,Secondary,,0,0,0,,See some books in there, actually.
+Dialogue: 0,0:05:50.0,0:05:54.0,Secondary,,0,0,0,,And, finally, Epoch 31.
+Dialogue: 0,0:05:54.0,0:05:57.0,Secondary,,0,0,0,,Or this might actually be 32 when we index from zero.
+Dialogue: 0,0:05:57.0,0:05:59.0,Secondary,,0,0,0,,So these look a lot more like sprites.
+Dialogue: 0,0:05:59.0,0:06:01.0,Secondary,,0,0,0,,You can see a sword here.
+Dialogue: 0,0:06:01.0,0:06:04.0,Secondary,,0,0,0,,This is probably the wizard hat.
+Dialogue: 0,0:06:04.0,0:06:06.0,Secondary,,0,0,0,,See a potion here.
+Dialogue: 0,0:06:06.0,0:06:09.0,Secondary,,0,0,0,,But, of course, there are still some blobs here and there, some people here.
+Dialogue: 0,0:06:09.0,0:06:12.0,Secondary,,0,0,0,,So it's not perfect, and it could keep going.
+Dialogue: 0,0:06:12.0,0:06:19.0,Secondary,,0,0,0,,So in the next video, you'll get to control what you generate, meaning you can tell it to generate objects or these people, for example.
+Dialogue: 0,0:00:05.0,0:00:12.0,Default,,0,0,0,,在这个视频中，我们将讨论如何\N训练这个U-Net神经网络并让它预测噪声。
+Dialogue: 0,0:00:12.0,0:00:18.4,Default,,0,0,0,,我们的目标是让网络预测噪声，\N真正的任务是让它学习图像上的噪声分布，
+Dialogue: 0,0:00:18.4,0:00:20.100,Default,,0,0,0,,但也要学习什么不是噪声，\N像是游戏角色的特征。
+Dialogue: 0,0:00:21.0,0:00:28.0,Default,,0,0,0,,我们的做法是从训练数据中\N取一个游戏角色，然后给它加噪声。
+Dialogue: 0,0:00:28.0,0:00:32.0,Default,,0,0,0,,我们给它加噪声，然后\N让神经网络预测这个噪声。
+Dialogue: 0,0:00:32.0,0:00:37.0,Default,,0,0,0,,然后我们将预测的噪声\N与实际添加到图像上的噪声进行比较。
+Dialogue: 0,0:00:37.0,0:00:39.0,Default,,0,0,0,,这就是我们计算损失的方式。
+Dialogue: 0,0:00:39.0,0:00:44.0,Default,,0,0,0,,然后通过反向传播\N让神经网络学会更好地预测噪声。
+Dialogue: 0,0:00:44.0,0:00:47.0,Default,,0,0,0,,那么如何确定这里的噪声是什么呢？
+Dialogue: 0,0:00:47.0,0:00:51.0,Default,,0,0,0,,你可以通过时间和采样，\N给它不同的噪声级别。
+Dialogue: 0,0:00:51.0,0:00:56.0,Default,,0,0,0,,但在实际训练中，我们不希望\N神经网络一直观察同一个游戏角色图像。
+Dialogue: 0,0:00:56.0,0:01:02.0,Default,,0,0,0,,如果在一个周期内观察不同的\N游戏角色图像，它会更稳定，更均匀。
+Dialogue: 0,0:01:02.0,0:01:05.0,Default,,0,0,0,,所以我们实际上是\N随机采样一个可能的时间步长，
+Dialogue: 0,0:01:05.0,0:01:08.0,Default,,0,0,0,,然后获取相应的噪声级别，
+Dialogue: 0,0:01:08.0,0:01:11.0,Default,,0,0,0,,添加到图像中，再让神经网络预测。
+Dialogue: 0,0:01:11.0,0:01:14.0,Default,,0,0,0,,然后我们取下一个\N训练数据中的游戏角色图像。
+Dialogue: 0,0:01:14.0,0:01:17.0,Default,,0,0,0,,再次随机采样一个时间步长，
+Dialogue: 0,0:01:17.0,0:01:19.0,Default,,0,0,0,,它可能完全不同，就像你在这里看到的。
+Dialogue: 0,0:01:19.0,0:01:24.0,Default,,0,0,0,,然后我们把它加到这个游戏角色图像上，\N再次让神经网络预测添加的噪声。
+Dialogue: 0,0:01:24.0,0:01:27.0,Default,,0,0,0,,这样就得到了一个更稳定的训练方案。
+Dialogue: 0,0:01:27.0,0:01:29.0,Default,,0,0,0,,那么训练实际上是什么样子？
+Dialogue: 0,0:01:29.0,0:01:32.0,Default,,0,0,0,,这是一个巫师帽子图像。
+Dialogue: 0,0:01:32.0,0:01:35.0,Default,,0,0,0,,这是一个添加了噪声的输入图像。
+Dialogue: 0,0:01:35.0,0:01:43.0,Default,,0,0,0,,当你刚把它放入神经网络时，\N神经网络还没有真正学会什么是图像。
+Dialogue: 0,0:01:43.0,0:01:46.0,Default,,0,0,0,,所以预测的噪声并没有改变输入的样子。
+Dialogue: 0,0:01:46.0,0:01:50.0,Default,,0,0,0,,当它被减去时，\N实际上就变成了这个，看起来差不多。
+Dialogue: 0,0:01:50.0,0:01:56.0,Default,,0,0,0,,但到了第31轮时，\N神经网络对这个图像有了更好的理解。
+Dialogue: 0,0:01:56.0,0:02:04.0,Default,,0,0,0,,然后它预测的噪声就能从这个输入中\N减去，产生一个看起来像这个巫师帽的图像。
+Dialogue: 0,0:02:04.0,0:02:06.0,Default,,0,0,0,,酷，这是一个样本。
+Dialogue: 0,0:02:06.0,0:02:12.0,Default,,0,0,0,,这是多个不同样本，\N多个不同图像经过多轮训练的样子。
+Dialogue: 0,0:02:12.0,0:02:15.0,Default,,0,0,0,,如你所见，在第一轮训练中，这些模型\N与我们的目标（游戏角色）还相距甚远。
+Dialogue: 0,0:02:15.0,0:02:22.0,Default,,0,0,0,,但是，到了第32轮，\N你会发现这些模型已经很像小游戏角色了，\N即便在那之前，其实也已经有了一些形状。
+Dialogue: 0,0:02:22.0,0:02:26.0,Default,,0,0,0,,好的，现在我们\N通过一些代码来了解训练算法。
+Dialogue: 0,0:02:26.0,0:02:29.0,Default,,0,0,0,,首先，你需要选择一个训练图像。
+Dialogue: 0,0:02:29.0,0:02:32.0,Default,,0,0,0,,这里我们将所有数据加载到数据加载器中，
+Dialogue: 0,0:02:32.0,0:02:35.0,Default,,0,0,0,,然后将其放入一个进度条，\N以便我们可以看到它的变化。
+Dialogue: 0,0:02:35.0,0:02:37.0,Default,,0,0,0,,你可以将这里想象成所有的数据。
+Dialogue: 0,0:02:37.0,0:02:39.0,Default,,0,0,0,,然后我们逐个处理所有的数据样本，
+Dialogue: 0,0:02:39.0,0:02:42.0,Default,,0,0,0,,x 在这里表示一个训练图片。
+Dialogue: 0,0:02:42.0,0:02:44.0,Default,,0,0,0,,现在我们来看看 x。
+Dialogue: 0,0:02:44.0,0:02:48.0,Default,,0,0,0,,在这个循环中，我们会选择一个时间步长 T，
+Dialogue: 0,0:02:48.0,0:02:51.0,Default,,0,0,0,,它决定了噪声的级别。
+Dialogue: 0,0:02:51.0,0:02:55.0,Default,,0,0,0,,我们不会遍历所有时间步长，\N只采样一个时间步长 T。
+Dialogue: 0,0:02:55.0,0:02:57.0,Default,,0,0,0,,我们产生一个噪音，
+Dialogue: 0,0:02:57.0,0:03:01.0,Default,,0,0,0,,然后根据时间步长将这个噪音加到图片上，
+Dialogue: 0,0:03:01.0,0:03:05.0,Default,,0,0,0,,然后我们将这个加入了\N噪音的图片输入到神经网络中。
+Dialogue: 0,0:03:05.0,0:03:10.0,Default,,0,0,0,,我们还输入时间步长，\N因为我们也要将时间嵌入进去。
+Dialogue: 0,0:03:10.0,0:03:13.0,Default,,0,0,0,,然后神经网络预测噪音的输出。
+Dialogue: 0,0:03:13.0,0:03:20.0,Default,,0,0,0,,通过比较预测的噪音\N和我们实际加入的噪音，我们可以使用\N均方误差（MSE）计算损失。
+Dialogue: 0,0:03:20.0,0:03:23.0,Default,,0,0,0,,然后我们所要做的就是反向传播并学习。
+Dialogue: 0,0:03:23.0,0:03:27.0,Default,,0,0,0,,这样，模型就会学习\N什么是噪音，什么是游戏角色了。
+Dialogue: 0,0:03:27.0,0:03:30.0,Default,,0,0,0,,好的，接下来我们来看\N我们训练用的 Notebook。
+Dialogue: 0,0:03:30.0,0:03:39.0,Default,,0,0,0,,这些都是之前的内容，\N只需按 Shift+Enter 键进行设置即可。
+Dialogue: 0,0:03:39.0,0:03:43.0,Default,,0,0,0,,这里的训练超参数\N比较有趣，我们的批次大小是100，
+Dialogue: 0,0:03:43.0,0:03:47.0,Default,,0,0,0,,我们将进行32个轮次的训练，\N还有我们的学习速率。
+Dialogue: 0,0:03:47.0,0:03:50.0,Default,,0,0,0,,我将按 Shift + Enter 键来运行它。
+Dialogue: 0,0:03:50.0,0:03:59.0,Default,,0,0,0,,这里的设置模型和噪音计划与之前相似。
+Dialogue: 0,0:03:59.0,0:04:00.0,Default,,0,0,0,,现在开始训练。
+Dialogue: 0,0:04:00.0,0:04:05.0,Default,,0,0,0,,你可以加载你的数据集，\N我们将它加载到数据加载器中。
+Dialogue: 0,0:04:05.0,0:04:09.0,Default,,0,0,0,,这是一个16x16的游戏角色数据集。
+Dialogue: 0,0:04:09.0,0:04:12.0,Default,,0,0,0,,我们也加载了优化器。
+Dialogue: 0,0:04:12.0,0:04:17.0,Default,,0,0,0,,这里有一个函数，\N它会扰乱我们的输入，
+Dialogue: 0,0:04:17.0,0:04:23.0,Default,,0,0,0,,意思是它会根据特定的时间步长\N向图像添加适当级别的噪音，并返回图像。
+Dialogue: 0,0:04:23.0,0:04:26.0,Default,,0,0,0,,我可以在这里按 Shift + Enter 键。
+Dialogue: 0,0:04:26.0,0:04:31.0,Default,,0,0,0,,由于在 CPU 上进行训练需要很多小时，\N因此我们在这里实际上不会逐步进行训练，
+Dialogue: 0,0:04:31.0,0:04:33.0,Default,,0,0,0,,这也是这些 Notebook 托管的位置。
+Dialogue: 0,0:04:33.0,0:04:36.0,Default,,0,0,0,,但我非常建议你走一遍这个过程。
+Dialogue: 0,0:04:36.0,0:04:41.0,Default,,0,0,0,,这就是我们刚刚一起看过的那段代码。
+Dialogue: 0,0:04:41.0,0:04:45.0,Default,,0,0,0,,但我们可以做的是，我们确实训练了这个\N模型，并在不同的训练轮次中保存了模型，
+Dialogue: 0,0:04:45.0,0:04:50.0,Default,,0,0,0,,这样你就可以运行采样，并能够\N看到它在每个训练轮次中的表现。
+Dialogue: 0,0:04:50.0,0:04:54.0,Default,,0,0,0,,这是你之前看到的相同的采样代码。
+Dialogue: 0,0:04:54.0,0:04:56.0,Default,,0,0,0,,我会快速过一下。
+Dialogue: 0,0:04:56.0,0:05:00.0,Default,,0,0,0,,这里是你加载第零轮次的模型的地方。
+Dialogue: 0,0:05:00.0,0:05:05.0,Default,,0,0,0,,这是模型检查点\N的路径，第零轮次的模型。
+Dialogue: 0,0:05:05.0,0:05:08.0,Default,,0,0,0,,我要加载这个模型。
+Dialogue: 0,0:05:08.0,0:05:10.0,Default,,0,0,0,,然后你可以直接可视化这些样本。
+Dialogue: 0,0:05:10.0,0:05:16.0,Default,,0,0,0,,再次运行之前相同的采样方法，\N这个方法在上一个视频中有讲解，叫做DDPM。
+Dialogue: 0,0:05:16.0,0:05:19.0,Default,,0,0,0,,这需要几分钟，\N我们将在视频中加快这个过程。
+Dialogue: 0,0:05:19.0,0:05:20.0,Default,,0,0,0,,非常好！
+Dialogue: 0,0:05:20.0,0:05:25.0,Default,,0,0,0,,我们可以在这里点击播放。
+Dialogue: 0,0:05:25.0,0:05:31.0,Default,,0,0,0,,虽然还有点不清晰，\N但已经开始理解游戏角色的大致轮廓。
+Dialogue: 0,0:05:31.0,0:05:32.0,Default,,0,0,0,,它并不是纯粹的噪音。
+Dialogue: 0,0:05:32.0,0:05:35.0,Default,,0,0,0,,我们也有第四轮的模型让你参考。
+Dialogue: 0,0:05:35.0,0:05:37.0,Default,,0,0,0,,你可以看到模型在改进，
+Dialogue: 0,0:05:37.0,0:05:40.0,Default,,0,0,0,,这些看起来更像游戏角色了。
+Dialogue: 0,0:05:40.0,0:05:43.0,Default,,0,0,0,,接下来是第八轮。
+Dialogue: 0,0:05:43.0,0:05:45.0,Default,,0,0,0,,再进一步，
+Dialogue: 0,0:05:45.0,0:05:50.0,Default,,0,0,0,,你可以看到里面有些书。
+Dialogue: 0,0:05:50.0,0:05:54.0,Default,,0,0,0,,最后，这是第31轮，
+Dialogue: 0,0:05:54.0,0:05:57.0,Default,,0,0,0,,或者当我们从零开始计数时，\N可能实际上是第32轮。
+Dialogue: 0,0:05:57.0,0:05:59.0,Default,,0,0,0,,这些看起来更像游戏角色图像了。
+Dialogue: 0,0:05:59.0,0:06:01.0,Default,,0,0,0,,你可以看到这里有一把剑。
+Dialogue: 0,0:06:01.0,0:06:04.0,Default,,0,0,0,,这可能是巫师帽。
+Dialogue: 0,0:06:04.0,0:06:06.0,Default,,0,0,0,,这里有个药水。
+Dialogue: 0,0:06:06.0,0:06:09.0,Default,,0,0,0,,但当然，这里还有一些斑点，一些人物。
+Dialogue: 0,0:06:09.0,0:06:12.0,Default,,0,0,0,,它还不够完美，还可以继续优化。
+Dialogue: 0,0:06:12.0,0:06:19.0,Default,,0,0,0,,在下一个视频中，\N你将可以控制你生成的内容，\N也就是你可以指定它生成物体或者这些人物。

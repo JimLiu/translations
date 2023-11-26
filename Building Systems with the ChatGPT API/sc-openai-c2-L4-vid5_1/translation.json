@@ -1,0 +1,2758 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 440
+          },
+          "text": "In this section, we'll focus on tasks to process inputs,"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 7,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "text": "i.e. the tasks that take the input and generate a useful output,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 880
+          },
+          "text": "often through a series of steps."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 320
+          },
+          "text": "It is sometimes important for the model to reason in detail about a problem"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 400
+          },
+          "text": "before answering a specific question."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 320
+          },
+          "text": "And if you took our previous course: \"ChartGPT Prompt Engineering for"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 720
+          },
+          "text": "Developers\", you will have seen a number of examples of this."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 400
+          },
+          "text": "Sometimes a model might make reasoning errors by rushing to an incorrect"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 29,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 520
+          },
+          "text": "conclusion, so we can reframe the query to request a series of relevant"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 640
+          },
+          "text": "reasoning steps before the model provides a final answer, so that it can think"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 37,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 560
+          },
+          "text": "longer and more methodically about the problem."
+        }
+      ],
+      "source": [
+        "In this section, we'll focus on tasks to process inputs,",
+        "i.e. the tasks that take the input and generate a useful output,",
+        "often through a series of steps.",
+        "It is sometimes important for the model to reason in detail about a problem",
+        "before answering a specific question.",
+        "And if you took our previous course, ChartGPT Prompt Engineering for",
+        "Developers, you will have seen a number of examples of this.",
+        "Sometimes a model might make reasoning errors by rushing to an incorrect",
+        "conclusion, so we can reframe the query to request a series of relevant",
+        "reasoning steps before the model provides a final answer, so that it can think",
+        "longer and more methodically about the problem."
+      ],
+      "result": [
+        "在这个部分，我们将关注处理输入的任务，",
+        "即接收输入并生成有用输出的任务，",
+        "通常是通过一系列步骤完成的。",
+        "有时模型在回答特定问题之前需要详细推理问题，",
+        "",
+        "如果你参加过我们之前的课程\\N“ChartGPT Prompt Engineering for",
+        "Developers”，你会看到很多这方面的例子。",
+        "有时模型可能会因为急于得出结论而出现推理错误，",
+        "所以我们可以重新构建查询，\\N要求模型进行一系列相关的",
+        "推理步骤在给出最终答案之前，这样它就",
+        "可以更长时间、更有条理地思考问题。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 920
+          },
+          "text": "And in general, we call this strategy of asking the model to reason about"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 43,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 920
+          },
+          "text": "a problem in steps, chain of thought reasoning."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 46,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 560
+          },
+          "text": "For some applications, the reasoning process that a model uses to arrive at"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 50,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 40
+          },
+          "text": "a final answer would be inappropriate to share with the user."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 520
+          },
+          "text": "For example, in tutoring applications, we may want to encourage students to work"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 680
+          },
+          "text": "on their own answers, but a model's reasoning process about the student's"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 840
+          },
+          "text": "solution could reveal the answer to the student."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 280
+          },
+          "text": "Inner monologue is a tactic that can be used to mitigate this."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 960
+          },
+          "text": "And this is just a fancy way of saying, hiding the model's reasoning from the user."
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 11,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 280
+          },
+          "text": "The idea of inner monologue is to instruct the model to put parts of the output"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 440
+          },
+          "text": "that are meant to be hidden from the user into a structured format that makes passing them easy."
+        }
+      ],
+      "source": [
+        "And in general, we call this strategy of asking the model to reason about",
+        "a problem in steps, chain of thought reasoning.",
+        "For some applications, the reasoning process that a model uses to arrive at",
+        "a final answer would be inappropriate to share with the user.",
+        "For example, in tutoring applications, we may want to encourage students to work",
+        "on their own answers, but a model's reasoning process about the student's",
+        "solution could reveal the answer to the student.",
+        "Inner monologue is a tactic that can be used to mitigate this.",
+        "And this is just a fancy way of saying, hiding the model's reasoning from the user.",
+        "The idea of inner monologue is to instruct the model to put parts of the output",
+        "that are meant to be hidden from the user into a structured format that makes passing them easy."
+      ],
+      "result": [
+        "总的来说，我们把让模型分步推理的策略\\N称为链式思维推理（Chain of Thought Reasoning）。",
+        "",
+        "对于某些应用，模型在得出最终答案的过程中\\N所使用的推理过程可能不适合与用户共享。",
+        "",
+        "例如，在教学辅导应用中，我们可能希望鼓励学生",
+        "自己解答问题，但模型对学生解答的推理过程",
+        "可能会泄露答案给学生。",
+        "“内心独白”是一种可以用来缓解这个问题的策略。",
+        "这只是一种时髦的比喻，\\N意思是将模型的推理过程对用户进行隐藏。",
+        "内心独白的方案是指示模型\\N将输出的某些部分放入结构化格式，",
+        "以便将这些内容隐藏起来不让用户看到。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 680
+          },
+          "text": "Then, before presenting the output to the user, the output is passed and only part of the output is made visible."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 680
+          },
+          "text": "So remember the classification problem from a previous video, where we asked"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 880
+          },
+          "text": "the model to classify a customer query into a primary and secondary category."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 37,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 760
+          },
+          "text": "And based on that classification, we might want to take different instructions."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 880
+          },
+          "text": "Imagine the customer query had been classified into the product information category."
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 48,
+            "milliseconds": 200
+          },
+          "text": "In the next instructions,"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 48,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 600
+          },
+          "text": "we'll want to include information about the products we have available."
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 200
+          },
+          "text": "And so, in this case, the classification would have been: \"Primary,"
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 920
+          },
+          "text": "General Inquiry, Secondary, Product Information\"."
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 58,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 200
+          },
+          "text": "And so let's dive into an example starting from there."
+        }
+      ],
+      "source": [
+        "Then, before presenting the output to the user, the output is passed and only part of the output is made visible.",
+        "So remember the classification problem from a previous video, where we asked",
+        "the model to classify a customer query into a primary and secondary category.",
+        "And based on that classification, we might want to take different instructions.",
+        "Imagine the customer query had been classified into the product information category.",
+        "In the next instructions,",
+        "we'll want to include information about the products we have available.",
+        "And so, in this case, the classification would have been primary,",
+        "general inquiry, secondary, product information.",
+        "And so let's dive into an example starting from there."
+      ],
+      "result": [
+        "然后，在将输出呈现给用户之前，\\N输出内容会被过滤，只有部分内容对用户可见。",
+        "所以请记住前一个教学视频中的分类问题，我们",
+        "要求模型将客户查询分类为主要和次要类别。",
+        "根据这个分类，我们可能想采取不同的指示。",
+        "想象一下，客户查询已经被归类到产品信息类别。",
+        "在接下来的指示中，",
+        "我们会想要包含关于我们拥有的产品的信息。",
+        "所以，在这种情况下，分类将是：\\N主类，一般查询，次类，产品信息。",
+        "",
+        "那么让我们从那里开始深入一个例子。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 160
+          },
+          "text": "So let's start with our usual setup."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 40
+          },
+          "text": "So for this inner monologue example,"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 240
+          },
+          "text": "we'll start with our same delimiters that we've been using."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 19,
+            "milliseconds": 400
+          },
+          "text": "And now let's go through our system message."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 560
+          },
+          "text": "And so what we're doing here is asking the model to reason about the answer before coming to its conclusion."
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 28,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 560
+          },
+          "text": "So the instruction is: \"Follow these steps to answer the customer queries."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 34,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 280
+          },
+          "text": "The customer query will be delimited with four hashtags, our delimiter.\""
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 80
+          },
+          "text": "So then we've split this up into steps."
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 42,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 840
+          },
+          "text": "So the first step is to decide whether the user is asking a question"
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 280
+          },
+          "text": "about a specific product or products."
+        }
+      ],
+      "source": [
+        "So let's start with our usual setup.",
+        "So for this inner monologue example,",
+        "we'll start with our same delimiters that we've been using.",
+        "And now let's go through our system message.",
+        "And so what we're doing here is asking the model to reason about the answer before coming to its conclusion.",
+        "So the instruction is, follow these steps to answer the customer queries.",
+        "The customer query will be delimited with four hashtags, our delimiter.",
+        "So then we've split this up into steps.",
+        "So the first step is to decide whether the user is asking a question",
+        "about a specific product or products."
+      ],
+      "result": [
+        "那么让我们从初始设置开始。",
+        "对于这个内心独白的例子，",
+        "我们将从一直在使用的相同分隔符开始。",
+        "现在让我们看一下系统消息。",
+        "所以我们在这里所做的是\\N在得出结论之前要求模型对答案进行推理。",
+        "所以指令是：“按照这些步骤回答客户查询。",
+        "客户查询将用四个井号分隔，我们的分隔符。”",
+        "然后我们把这个分成几步。",
+        "所以第一步是：决定用户\\N是否在询问关于特定产品或产品的问题。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 49,
+            "milliseconds": 640
+          },
+          "text": "And a product category doesn't count."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 50,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 640
+          },
+          "text": "Step two, so if the user is asking about specific products,"
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 57,
+            "milliseconds": 440
+          },
+          "text": "identify whether the products are in the following list."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 57,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 400
+          },
+          "text": "And now we've included a list of available products."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 0,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 520
+          },
+          "text": "So here we have five available products that all varieties of laptops and these are all made up products."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 9,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 440
+          },
+          "text": "They were actually generated by GPT-4."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 440
+          },
+          "text": "In step three, if the message contains products in the list above,"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 480
+          },
+          "text": "list any assumptions that the user is making in their message."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 320
+          },
+          "text": "For example, that laptop X is bigger than laptop Y or"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 27,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 360
+          },
+          "text": "that laptop Z has a two year warranty, for example."
+        }
+      ],
+      "source": [
+        "And a product category doesn't count.",
+        "Step two, so if the user is asking about specific products,",
+        "identify whether the products are in the following list.",
+        "And now we've included a list of available products.",
+        "So here we have five available products that all varieties of laptops and these are all made up products.",
+        "They were actually generated by GPT-4.",
+        "In step three, if the message contains products in the list above,",
+        "list any assumptions that the user is making in their message.",
+        "For example, that laptop X is bigger than laptop Y or",
+        "that laptop Z has a two year warranty, for example."
+      ],
+      "result": [
+        "并且产品类别不算数。",
+        "第二步，因此，\\N如果用户询问有关特定产品的信息，",
+        "确定这些产品是否在以下列表中。",
+        "现在我们已经包括了一份可用产品清单。",
+        "所以这里我们有五种可用的产品，\\N它们都是各种类型的笔记本电脑，这些都是虚构的产品。",
+        "它们实际上是由GPT-4生成的。",
+        "在第三步中，如果消息包含上述列表中的产品，",
+        "列出用户在其消息中所做的任何假设。",
+        "例如，笔记本电脑X比笔记本电脑Y大，或者",
+        "例如，笔记本电脑Z有两年保修期。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 280
+          },
+          "text": "Step four is if the user made any assumptions,"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 840
+          },
+          "text": "figure out whether the assumption is true based on your product information."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 39,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 840
+          },
+          "text": "And step five is: \"First, politely correct the customer's incorrect assumptions if applicable.\""
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 280
+          },
+          "text": "Only mention or reference products in the list of five available products."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 880
+          },
+          "text": "As these are the only five products that the store sells."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 51,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 520
+          },
+          "text": "And answer the customer in a friendly tone."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 680
+          },
+          "text": "And these kind of very pedantic instructions are probably unnecessary for a more advanced language model like GPT-4."
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 440
+          },
+          "text": "And then we'll ask the model to use the following format."
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 5,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 880
+          },
+          "text": "So step one, delimiter, it's reasoning."
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 80
+          },
+          "text": "Step two, delimiter, reasoning, and so on."
+        }
+      ],
+      "source": [
+        "Step four is if the user made any assumptions,",
+        "figure out whether the assumption is true based on your product information.",
+        "And step five is: \"First, politely correct the customer's incorrect assumptions if applicable.\"",
+        "Only mention or reference products in the list of five available products.",
+        "As these are the only five products that the store sells.",
+        "And answer the customer in a friendly tone.",
+        "And these kind of very pedantic instructions are probably unnecessary for a more advanced language model like GPT-4.",
+        "And then we'll ask the model to use the following format.",
+        "So step one, delimiter, it's reasoning.",
+        "Step two, delimiter, reasoning, and so on."
+      ],
+      "result": [
+        "第四步是，如果用户有任何假设，",
+        "根据您的产品信息判断假设是否正确。",
+        "第五步是：“首先，\\N礼貌地纠正客户的错误假设（如果适用）。”",
+        "只提及或参考五个可用产品中的产品。",
+        "因为商店目前仅销售这五款产品。",
+        "以友好的语气回答客户。",
+        "对于像GPT-4这样更高级的语言模型\\N来说，这些非常繁琐的指示可能是不必要的。",
+        "然后我们将要求模型使用以下格式。",
+        "所以第一步，分隔符，它的推理。",
+        "第二步，分隔符，推理，依此类推。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 12,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 280
+          },
+          "text": "And using the delimiters will mean that it will be easier for us later to get just this response to the customer."
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 40
+          },
+          "text": "Kind of cut off everything before."
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 800
+          },
+          "text": "So now let's try an example user message."
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 25,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 840
+          },
+          "text": "So our message is: \"by how much is the BlueWave Chromebook more expensive than the TechPro Desktop?\""
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 36,
+            "milliseconds": 720
+          },
+          "text": "So let's take a look at these two products."
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 36,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 120
+          },
+          "text": "The BlueWave Chromebook is 249.99,"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 360
+          },
+          "text": "and the TechPro Desktop is actually 999.99."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 440
+          },
+          "text": "This is not actually true."
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 520
+          },
+          "text": "And so let's see how the model handles this user request."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 360
+          },
+          "text": "So we'll format into our messages array, and we'll get our response."
+        }
+      ],
+      "source": [
+        "And using the delimiters will mean that it will be easier for us later to get just this response to the customer.",
+        "Kind of cut off everything before.",
+        "So now let's try an example user message.",
+        "So our message is: \"by how much is the BlueWave Chromebook more expensive than the TechPro Desktop?\"",
+        "So let's take a look at these two products.",
+        "The BlueWave Chromebook is 249.99,",
+        "and the TechPro Desktop is actually 999.99.",
+        "This is not actually true.",
+        "And so let's see how the model handles this user request.",
+        "So we'll format into our messages array, and we'll get our response."
+      ],
+      "result": [
+        "使用分隔符意味着我们以后\\N更容易将这个回答提供给客户。",
+        "把分隔符之前的所有内容都移除。",
+        "现在让我们测试一个用户消息。",
+        "所以我们的消息是：\\N“BlueWave Chromebook比TechPro台式机贵多少？”",
+        "那么让我们看看这两款产品。",
+        "BlueWave Chromebook售价为249.99美元，",
+        "而TechPro台式机实际上售价为999.99美元。",
+        "这实际上并不正确。",
+        "那么让我们看看模型如何处理这个用户请求。",
+        "所以我们将其格式化为\\N我们的消息数组，然后我们会得到返回结果。"
+      ],
+      "status": "success",
+      "errors": [
+        "Thu Jun 01 2023 11:40:36 GMT-0500 (Central Daylight Time)\nRequest failed with status code 500\nError: Request failed with status code 500\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 0,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 440
+          },
+          "text": "And then we'll print it."
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 200
+          },
+          "text": "And so what we're hoping for"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 17,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "text": "is that the model takes all of these different steps and realizes that"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 560
+          },
+          "text": "the user has made an incorrect assumption, and"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 23,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 600
+          },
+          "text": "then follows the final step to politely correct the user."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "text": "And so within this one prompt, we've actually maintained"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 36,
+            "milliseconds": 680
+          },
+          "text": "a number of different complex states that the system could be in."
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 36,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 160
+          },
+          "text": "So at any given point, there could be a different output from the previous step,"
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 880
+          },
+          "text": "and we would want to do something different."
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 42,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 960
+          },
+          "text": "For example, if the user hadn't made any assumptions in step three,"
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 47,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 160
+          },
+          "text": "then in step four, we wouldn't actually have any output."
+        }
+      ],
+      "source": [
+        "And then we'll print it.",
+        "And so what we're hoping for",
+        "is that the model takes all of these different steps and realizes that",
+        "the user has made an incorrect assumption, and",
+        "then follows the final step to politely correct the user.",
+        "And so within this one prompt, we've actually maintained",
+        "a number of different complex states that the system could be in.",
+        "So at any given point, there could be a different output from the previous step,",
+        "and we would want to do something different.",
+        "For example, if the user hadn't made any assumptions in step three,",
+        "then in step four, we wouldn't actually have any output."
+      ],
+      "result": [
+        "然后我们会打印出来。",
+        "所以我们希望的是",
+        "模型能够理解所有这些\\N不同的步骤，并意识到",
+        "用户做出了错误的假设，然后",
+        "在最后一步礼貌地纠正用户。",
+        "所以在这一个提示（Prompt）中，\\N我们实际上保持了",
+        "系统可能处于的许多不同的复杂状态。",
+        "所以在任何给定的时刻，\\N都可能有来自前一步的不同输出，",
+        "我们会想要做一些不同的事情。",
+        "例如，如果用户在第三步没有做任何假设，",
+        "那么在第四步，\\N我们实际上不会有任何输出。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 50,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 53,
+            "milliseconds": 280
+          },
+          "text": "So this is a pretty complicated instruction for the model."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 53,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 440
+          },
+          "text": "So let's see if it did it right."
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 54,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 240
+          },
+          "text": "So step one, the user is asking a question about specific products."
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 0,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 600
+          },
+          "text": "They're asking about the price difference between these two products."
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 3,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "text": "The user assumes that the BlueWave Chromebook is more expensive than"
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 840
+          },
+          "text": "the TechBook Pro, and this assumption is actually incorrect."
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 240
+          },
+          "text": "It's reasoning through, taking longer to think about the problem."
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 14,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 280
+          },
+          "text": "In the same way that a human would also take some time to reason about"
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 280
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 640
+          },
+          "text": "an answer to any given question, the model performs better if it also has time to think."
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 23,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 800
+          },
+          "text": "And so the final response to the user is the BlueWave Chromebook is actually less expensive than the TechBook Pro."
+        }
+      ],
+      "source": [
+        "So this is a pretty complicated instruction for the model.",
+        "So let's see if it did it right.",
+        "So step one, the user is asking a question about specific products.",
+        "They're asking about the price difference between these two products.",
+        "The user assumes that the BlueWave Chromebook is more expensive than",
+        "the TechBook Pro, and this assumption is actually incorrect.",
+        "It's reasoning through, taking longer to think about the problem.",
+        "In the same way that a human would also take some time to reason about",
+        "an answer to any given question, the model performs better if it also has time to think.",
+        "And so the final response to the user is the BlueWave Chromebook is actually less expensive than the TechBook Pro."
+      ],
+      "result": [
+        "所以这对模型来说是一个相当复杂的指令。",
+        "那么让我们看看它是否做对了。",
+        "所以第一步，用户在询问关于特定产品的问题。",
+        "他们在询问这两款产品之间的价格差异。",
+        "用户认为BlueWave Chromebook比",
+        "TechBook Pro更贵，\\N而这个假设实际上是错误的。",
+        "它通过推理，花更长的时间来思考这个问题。",
+        "就像人类在回答任何问题时\\N也需要花一些时间来推理一样，",
+        "如果模型也有时间去思考，它的表现会更好。",
+        "所以最后对用户的回答是\\NBlueWave Chromebook实际上比TechBook Pro便宜。"
+      ],
+      "status": "success",
+      "errors": [
+        "Thu Jun 01 2023 11:40:45 GMT-0500 (Central Daylight Time)\nRequest failed with status code 500\nError: Request failed with status code 500\n    at createError (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/createError.js:16:15)\n    at settle (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/core/settle.js:17:12)\n    at IncomingMessage.handleStreamEnd (/Users/junminliu/GitHub/subtitle-translator/node_modules/axios/lib/adapters/http.js:322:11)\n    at IncomingMessage.emit (node:events:524:35)\n    at IncomingMessage.emit (node:domain:489:12)\n    at endReadableNT (node:internal/streams/readable:1359:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n[object Object]"
+      ],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 36,
+            "milliseconds": 440
+          },
+          "text": "The TechBook Pro desktop costs $999.99, while the BlueWave Chromebook costs $249.99."
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 36,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 760
+          },
+          "text": "And so let's see another example of a user message."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 42,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 440
+          },
+          "text": "And also at this point, feel free to pause the video and try your own messages."
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 320
+          },
+          "text": "So let's format this user message."
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 51,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 53,
+            "milliseconds": 720
+          },
+          "text": "So the question is: \"Do you sell TVs?\""
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 53,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 240
+          },
+          "text": "And if you remember in our product list, we've only listed different computers."
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 58,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 960
+          },
+          "text": "So let's see what the model says."
+        },
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 59,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "text": "So in this case, step one, the user is asking if the store sells TVs, but"
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 6,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 8,
+            "milliseconds": 680
+          },
+          "text": "TVs are not listed in the available products."
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 8,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "text": "So as you can see, the model then skips to the response to user step because it"
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 12,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 960
+          },
+          "text": "realizes that the intermediary steps are not actually necessary."
+        }
+      ],
+      "source": [
+        "The TechBook Pro desktop costs $999.99, while the BlueWave Chromebook costs $249.99.",
+        "And so let's see another example of a user message.",
+        "And also at this point, feel free to pause the video and try your own messages.",
+        "So let's format this user message.",
+        "So the question is: \"Do you sell TVs?\"",
+        "And if you remember in our product list, we've only listed different computers.",
+        "So let's see what the model says.",
+        "So in this case, step one, the user is asking if the store sells TVs, but",
+        "TVs are not listed in the available products.",
+        "So as you can see, the model then skips to the response to user step because it",
+        "realizes that the intermediary steps are not actually necessary."
+      ],
+      "result": [
+        "TechBook Pro台式电脑售价为999.99美元，\\N而BlueWave Chromebook售价为249.99美元。",
+        "让我们看另一个用户消息的例子。",
+        "此时，也可以随时暂停视频，\\N尝试您自己的消息。",
+        "让我们格式化这个用户消息。",
+        "所以问题是：“你们卖电视吗？”",
+        "如果您还记得我们的产品列表中，\\N我们只列出了不同的电脑。",
+        "让我们看看模型会说什么。",
+        "所以在这种情况下，第一步，\\N用户询问商店是否出售电视，但是",
+        "电视并未列在可用产品中。",
+        "因此，如您所见，模型\\N接着跳到回应用户的步骤，因为它",
+        "意识到中间步骤实际上并不需要。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 17,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "text": "I will say that we did ask for the output in this specific format."
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 21,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "text": "So technically, the model hasn't exactly followed our request."
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 25,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 27,
+            "milliseconds": 920
+          },
+          "text": "Again, more advanced models will be better at doing that."
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 27,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 31,
+            "milliseconds": 80
+          },
+          "text": "And so in this case, our response to the user is, I'm sorry, but"
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 31,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 320
+          },
+          "text": "we do not sell TVs at the store."
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 33,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "text": "And then it lists the available products."
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 40
+          },
+          "text": "So again, feel free to try some of your own responses."
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 41,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 40
+          },
+          "text": "And so now, we only really want this part of the response."
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 45,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 880
+          },
+          "text": "We wouldn't want to show the earlier parts to the user."
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 47,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 600
+          },
+          "text": "So what we can do is actually just cut the string at the last occurrence"
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 53,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 57,
+            "milliseconds": 520
+          },
+          "text": "of this delimiter token or string of four hashtags."
+        }
+      ],
+      "source": [
+        "I will say that we did ask for the output in this specific format.",
+        "So technically, the model hasn't exactly followed our request.",
+        "Again, more advanced models will be better at doing that.",
+        "And so in this case, our response to the user is, I'm sorry, but",
+        "we do not sell TVs at the store.",
+        "And then it lists the available products.",
+        "So again, feel free to try some of your own responses.",
+        "And so now, we only really want this part of the response.",
+        "We wouldn't want to show the earlier parts to the user.",
+        "So what we can do is actually just cut the string at the last occurrence",
+        "of this delimiter token or string of four hashtags."
+      ],
+      "result": [
+        "我要说的是，我们确实要求以这种特定格式输出。",
+        "从技术上讲，模型并没有完全遵循我们的要求。",
+        "再次强调，更先进的模型会更擅长做到这一点。",
+        "在这种情况下，\\N我们对用户的回复是：“对不起，但是",
+        "我们商店里不卖电视。”",
+        "然后列出了可用的产品。",
+        "请随意尝试一些您自己的回答。",
+        "现在，我们只想要这部分返回的内容。",
+        "我们不想把前面的部分展示给用户。",
+        "所以我们可以做的\\N实际上就是在最后一次出现",
+        "这个分隔符标记\\N或四个井号字符串的地方分割字符串。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 7,
+            "seconds": 57,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 920
+          },
+          "text": "And then only print the final part of the model output."
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 1,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 6,
+            "milliseconds": 440
+          },
+          "text": "So let's write some code to get only the final part of this string."
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 6,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 12,
+            "milliseconds": 920
+          },
+          "text": "So we're going to use a try except block to gracefully handle errors in case"
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 12,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 680
+          },
+          "text": "the model has some kind of unpredictable output and"
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 15,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 80
+          },
+          "text": "doesn't actually use these characters."
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 19,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 560
+          },
+          "text": "And so we're gonna say our final_response is the response."
+        },
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 23,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 27,
+            "milliseconds": 40
+          },
+          "text": "And then we're gonna split the string at the delimiter string."
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 27,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 320
+          },
+          "text": "And because we want the final occurrence,"
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 28,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 880
+          },
+          "text": "we just want to get the last item in the output list."
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 32,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 120
+          },
+          "text": "And then we're going to strip any white space."
+        }
+      ],
+      "source": [
+        "And then only print the final part of the model output.",
+        "So let's write some code to get only the final part of this string.",
+        "So we're going to use a try except block to gracefully handle errors in case",
+        "the model has some kind of unpredictable output and",
+        "doesn't actually use these characters.",
+        "And so we're gonna say our final response is the response.",
+        "And then we're gonna split the string at the delimiter string.",
+        "And because we want the final occurrence,",
+        "we just want to get the last item in the output list.",
+        "And then we're going to strip any white space."
+      ],
+      "result": [
+        "然后只打印模型输出的最后一部分。",
+        "让我们编写代码来获取这个字符串的最后一部分。",
+        "因此，我们将使用一个\\N try except 块来优雅地处理错误，以防",
+        "模型有某种不可预测的输出，而且",
+        "实际上并不使用这些字符。",
+        "我们要将response变量\\N赋值给final_response。",
+        "然后我们要使用分隔符来将字符串分割成数组。",
+        "因为我们想要找到它最后一次出现的位置，",
+        "然后只想要输出数组中的最后一项。",
+        "最后再去除前后空格。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 36,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 920
+          },
+          "text": "Because as you can see, there might be white space after the characters."
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 38,
+            "milliseconds": 920
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 120
+          },
+          "text": "Then we're going to catch any errors."
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 42,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 560
+          },
+          "text": "And have a fallback response."
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 46,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 40
+          },
+          "text": "Which is, sorry."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 52,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 55,
+            "milliseconds": 600
+          },
+          "text": "I'm having."
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 56,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 600
+          },
+          "text": "I'm having trouble right now."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 8,
+            "seconds": 58,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 200
+          },
+          "text": "Please try asking another question."
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 5,
+            "milliseconds": 200
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 9,
+            "milliseconds": 640
+          },
+          "text": "And then let's print our final response."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 21,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 840
+          },
+          "text": "And so as you can see, we just cut the string to get this final output."
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 26,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 440
+          },
+          "text": "And so this is what we would show to the user if we were building this into an application."
+        }
+      ],
+      "source": [
+        "Because as you can see, there might be white space after the characters.",
+        "Then we're going to catch any errors.",
+        "And have a fallback response.",
+        "Which is, sorry,",
+        "I'm having,",
+        "I'm having trouble right now.",
+        "Please try asking another question.",
+        "And then let's print our final response.",
+        "And so as you can see, we just cut the string to get this final output.",
+        "And so this is what we would show to the user if we were building this into an application."
+      ],
+      "result": [
+        "因为如您所见，字符后面可能会有空格。",
+        "然后我们要处理任何可能得异常错误。",
+        "并有一个备用返回结果。",
+        "那就是：\\N“对不起，我现在遇到了麻烦。",
+        "",
+        "",
+        "请尝试提问另一个问题。”",
+        "然后让我们打印最终结果。",
+        "如您所见，我们只是\\N对字符串裁剪，从而获得最终输出。",
+        "如果我们将它集成到应用程序中，\\N这就是我们要向用户展示的内容。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 30,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 34,
+            "milliseconds": 360
+          },
+          "text": "And overall, I just want to call out,"
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 34,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 360
+          },
+          "text": "this prompt might be slightly convoluted for this task."
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 38,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 41,
+            "milliseconds": 480
+          },
+          "text": "You might not actually need all of these intermediate steps."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 41,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 47,
+            "milliseconds": 520
+          },
+          "text": "And so why don't you try and see if you can find an easier way to do the same task in your own prompt."
+        },
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 50,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 55,
+            "milliseconds": 120
+          },
+          "text": "And in general, finding the optimal trade-off in prompt complexity requires some experimentation."
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 55,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "text": "So definitely good to try a number of different prompts before deciding to use one."
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 9,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 3,
+            "milliseconds": 720
+          },
+          "text": "And in the next video, we'll learn another strategy to handle complex tasks"
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 3,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "text": "by splitting these complex tasks into a series of simpler subtasks,"
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 10,
+            "seconds": 10,
+            "milliseconds": 440
+          },
+          "text": "rather than trying to do the whole task in one prompt."
+        }
+      ],
+      "source": [
+        "And overall, I just want to call out,",
+        "this prompt might be slightly convoluted for this task.",
+        "You might not actually need all of these intermediate steps.",
+        "And so why don't you try and see if you can find an easier way to do the same task in your own prompt.",
+        "And in general, finding the optimal trade-off in prompt complexity requires some experimentation.",
+        "So definitely good to try a number of different prompts before deciding to use one.",
+        "And in the next video, we'll learn another strategy to handle complex tasks",
+        "by splitting these complex tasks into a series of simpler subtasks,",
+        "rather than trying to do the whole task in one prompt."
+      ],
+      "result": [
+        "总的来说，我只是想指出，",
+        "这个提示（Prompt）\\N对于这个任务可能有些复杂。",
+        "你实际上可能不需要所有这些中间步骤。",
+        "所以，为什么不尝试看看\\N你能否在你自己的提示（Prompt）中\\N找到一种更简单的方法来完成相同的任务。",
+        "总的来说，需要反复尝试\\N才能找到提示（Prompt）\\N的最佳平衡点。",
+        "所以在决定使用一个\\N提示（Prompt）之前，最好尝试\\N多种不同的提示（Prompt）。",
+        "在下一个视频中，\\N我们将学习另一种处理复杂任务的策略，",
+        "通过将这些复杂任务分解成\\N一系列更简单的子任务，",
+        "而不是试图在一个\\N提示（Prompt）中完成整个任务。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L4-vid5_1.srt",
+  "ouputBasePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L4-vid5_1",
+  "totalCost": 0.2586,
+  "translationPath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L4-vid5_1/translation.json"
+}

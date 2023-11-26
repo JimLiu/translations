@@ -1,0 +1,374 @@
+1
+00:00:05,000 --> 00:00:09,540
+在这个视频中，你将学习如何控制模型和生成的内容。
+In this video, you'll learn how to control the model and what it generates.
+
+2
+00:00:09,540 --> 00:00:17,300
+对很多人来说，这是最令人兴奋的部分，因为你可以告诉模型想要什么，然后它帮你实现你想要的。
+For many, this is the most exciting piece because you get to tell the model what you want and it gets to imagine it for you.
+
+3
+00:00:17,300 --> 00:00:22,660
+在控制这些模型时，我们实际上想要使用嵌入（Embeddings）。
+When it comes to controlling these models, we actually want to use embeddings.
+
+4
+00:00:22,660 --> 00:00:28,457
+嵌入是什么呢？我们在之前的视频中稍微了解过时间嵌入和上下文嵌入，
+And what embeddings are, which we looked at a little bit in previous videos of a time embedding and a context embedding,
+
+5
+00:00:28,458 --> 00:00:34,340
+嵌入就是向量，是能够捕捉意义的数字。
+what embeddings are is they're vectors, they're numbers that are able to capture a meaning.
+
+6
+00:00:34,340 --> 00:00:40,060
+在这里，它捕捉了这个句子或这个笑话的意义，可能是针对扩散模型的。
+And here it's capturing the meaning of this sentence or this joke, perhaps, for diffusion models.
+
+7
+00:00:40,060 --> 00:00:42,500
+布朗运动的粒子经常相互碰撞。
+Brownians often bump into each other.
+
+8
+00:00:42,500 --> 00:00:47,500
+所以它将这个意义编码到这个嵌入中，也就是向量中的一组数字。
+So it encodes that into this embedding, which is this set of numbers in a vector.
+
+9
+00:00:47,500 --> 00:00:53,700
+嵌入的特殊之处在于，因为它们可以捕捉语义意义，内容相似的文本将具有相似的向量。
+And what's special about embeddings is because they can capture the semantic meaning, text with similar content will have similar vectors.
+
+10
+00:00:53,700 --> 00:00:59,280
+关于嵌入的神奇之处之一是，你甚至可以用它进行向量运算。
+And one of the kind of magical things about embeddings is you can almost do this vector arithmetic with it.
+
+11
+00:00:59,280 --> 00:01:04,180
+例如：将巴黎的嵌入减去法国的嵌入加上英国的嵌入等于伦敦的嵌入。
+So Paris minus France plus England equals the London embedding, for example.
+
+12
+00:01:04,180 --> 00:01:09,740
+那么，在训练过程中，这些嵌入是如何成为模型的上下文的？
+Okay, so how do these embeddings actually become context to the model during training?
+
+13
+00:01:09,740 --> 00:01:14,460
+好吧，这里有一个牛油果图片，你希望神经网络能理解它。
+Well, here you have an avocado image, which you want the neural network to understand.
+
+14
+00:01:14,460 --> 00:01:17,760
+还有一个关于它的标题，一个成熟的牛油果。
+And you also have a caption for it, a ripe avocado.
+
+15
+00:01:17,760 --> 00:01:22,328
+实际上，你可以将其传递，获得一个嵌入并将其输入到神经网络中。
+And you can actually pass that through, get an embedding and input that into the neural network
+
+16
+00:01:22,329 --> 00:01:28,940
+然后预测添加到这个牛油果图像的噪声，然后计算损失并像以前一样做同样的事情。
+to then predict the noise that was added to this avocado image, and then compute the loss and do the same thing as before.
+
+17
+00:01:28,940 --> 00:01:33,220
+你可以在很多不同的带有标题的图片上做这个。
+And you could do this across a lot of different images with captions.
+
+18
+00:01:33,220 --> 00:01:39,780
+这里有一个舒适的扶手椅，你可以将其通过嵌入，传递到模型中，并成为训练的一部分。
+So here is a comfy armchair, you can pass it through an embedding, pass it into the model and have that be part of training.
+
+19
+00:01:39,780 --> 00:01:48,200
+现在这部分的神奇之处在于，虽然你能够从互联网上抓取这些牛油果和扶手椅的图片和标题，
+Now the magic of this section is that while you were able to scrape these images of avocados and armchairs off the internet with those captions,
+
+20
+00:01:48,201 --> 00:01:55,140
+但在抽样时，你能够生成模型从未见过的东西。
+you're able to at sample time, be able to generate things that the model has never seen before.
+
+21
+00:01:55,140 --> 00:01:57,280
+那可能是个牛油果扶手椅。
+And that could be an avocado armchair.
+
+22
+00:01:57,280 --> 00:02:03,099
+这个的神奇之处在于，你可以把牛油果扶手椅这几个词嵌入到这个词嵌入中，
+And the magic of this is because you can embed the words avocado armchair into this embedding that has,
+
+23
+00:02:03,100 --> 00:02:05,643
+里面有一点牛油果，一点扶手椅，
+you know, a bit of avocado in there, a bit of armchair in there,
+
+24
+00:02:05,644 --> 00:02:14,220
+通过神经网络预测噪音，减去噪音，然后得到一个牛油果扶手椅。
+put that through the neural network, have it predict noise, subtract that noise out and get lo and behold, an avocado armchair.
+
+25
+00:02:14,220 --> 00:02:18,180
+从更广泛的角度来看，上下文是一个可以控制生成的向量。
+So more broadly, context is a vector that can control generation.
+
+26
+00:02:18,180 --> 00:02:23,420
+上下文可以是我们现在看到的文本嵌入，比如牛油果扶手椅，
+Context can be just as we have seen now, the text embeddings that of that avocado armchair,
+
+27
+00:02:23,420 --> 00:02:26,900
+虽然很长，但上下文不一定要那么长。
+that's very long, but context doesn't have to be that long.
+
+28
+00:02:26,900 --> 00:02:30,335
+上下文也可以是五个不同的类别，比如，
+Context can also be different categories that are five in length, you know,
+
+29
+00:02:30,336 --> 00:02:37,140
+五个不同的维度，如英雄或非英雄，比如火球和蘑菇这样的物体。
+five different dimensions such as having a hero or being a non-hero like these objects of a fireball and a mushroom.
+
+30
+00:02:37,140 --> 00:02:41,140
+还可以是食物，比如苹果、橙子、西瓜。
+It could be food items, you know, apple, orange, watermelon.
+
+31
+00:02:41,140 --> 00:02:44,460
+这可能是像这弓箭或蜡烛这样的法术和武器。
+It could be spells and weapons like this bow and arrow or this candle.
+
+32
+00:02:44,460 --> 00:02:48,360
+最后，这可能是这些游戏角色是否侧面的问题。
+And finally, it could be whether these sprites are side facing or not.
+
+33
+00:02:48,360 --> 00:02:52,820
+现在让我们在下一个实验室中看看如何为您的模型添加上下文。
+So now let's take a look at adding context to your model in the next lab.
+
+34
+00:02:52,820 --> 00:03:02,940
+在我们的实验室里，我们只需为所有这些东西运行设置，就像之前一样。
+Onto our lab, we can just run the setup here for all these things, just setting up the same things as before.
+
+35
+00:03:02,940 --> 00:03:08,980
+然后在这里的上下文中，我想再次实例化我们的神经网络。
+And then down here in context, I want to instantiate our neural network again.
+
+36
+00:03:08,980 --> 00:03:13,700
+同样，我们没有进行训练，但我会指出我们在哪里添加了上下文。
+And again, we're not training, but I'm going to call out a few places where we do add the context.
+
+37
+00:03:13,700 --> 00:03:21,620
+所以当我们在这里加载数据时，我们现在遍历数据点和与之相关的上下文因素。
+So when we do load the data here, we now iterate through both the data point and the context factor associated with it.
+
+38
+00:03:21,620 --> 00:03:28,700
+我们拥有的上下文是这些英雄、非英雄、食物、法术和武器以及侧面的独热编码向量。
+And the context that we do have are these one hot encoded vectors of hero, non-hero, food, spells and weapons and side facing.
+
+39
+00:03:28,700 --> 00:03:30,180
+我们创建一个上下文遮罩。
+We create a context mask.
+
+40
+00:03:30,180 --> 00:03:34,660
+这里重要的是，实际上，我们用一些随机性完全遮住
+And what's important here is that actually with some randomness, we completely mask out
+
+41
+00:03:34,660 --> 00:03:39,460
+上下文，以便模型能够学习到什么是游戏角色。
+the context so that the model is able to learn generally what a sprite is as well.
+
+42
+00:03:39,460 --> 00:03:42,040
+这对扩散模型来说是很常见的。
+It's pretty common for diffusion models.
+
+43
+00:03:42,040 --> 00:03:45,980
+然后我们在这里调用神经网络时添加上下文。
+And then we add context when we call the neural network right here.
+
+44
+00:03:45,980 --> 00:03:49,940
+让我们加载一个带有上下文训练的模型检查点。
+So let's load a checkpoint where we did train the model with context.
+
+45
+00:03:49,940 --> 00:03:54,580
+加载这个模型，运行它。
+So just loading that model here, running that.
+
+46
+00:03:54,580 --> 00:03:56,020
+再次运行我们的采样代码。
+Running our sampling code again.
+
+47
+00:03:56,020 --> 00:03:58,100
+这个Notebook就有了。
+So we have that for this notebook.
+
+48
+00:03:58,100 --> 00:04:00,464
+你可以看到运行时，
+And here you can see that when you run this,
+
+49
+00:04:00,465 --> 00:04:05,360
+这里实际上是完全随机选择的上下文。
+this is actually choosing completely random context right here, completely randomly.
+
+50
+00:04:05,360 --> 00:04:12,980
+你可以看到不同类型的物体和人物输出。
+You can see the different types of outputs of objects and people.
+
+51
+00:04:12,980 --> 00:04:16,220
+现在稍微控制一下，你可以在这里定义它。
+And now controlling it a bit, you can actually define it here.
+
+52
+00:04:16,220 --> 00:04:20,900
+我在这里定义了两个英雄，第一个和第二个。
+So here I just defined, oh, hero, a couple heroes, the first two.
+
+53
+00:04:20,900 --> 00:04:21,900
+这两个都是英雄。
+So these two are heroes.
+
+54
+00:04:21,900 --> 00:04:23,720
+接下来的两个是侧面的。
+The next two are side facing.
+
+55
+00:04:23,720 --> 00:04:28,580
+最后一个值是侧面的。
+So it's one hot with this last value here for side facing.
+
+56
+00:04:28,580 --> 00:04:30,300
+接下来的两个不是英雄。
+The next two are non-heroes.
+
+57
+00:04:30,300 --> 00:04:31,700
+有点像野兽。
+So kind of beasts.
+
+58
+00:04:32,140 --> 00:04:35,620
+它们看起来很胖乎乎的。
+They look very blobby here.
+
+59
+00:04:35,620 --> 00:04:37,660
+最后两个是食物。
+And the last two are food items.
+
+60
+00:04:37,660 --> 00:04:40,060
+这个看起来像苹果。
+So this kind of looks like an apple.
+
+61
+00:04:40,060 --> 00:04:42,940
+这个看起来像梨子。
+And this kind of looks like a pear.
+
+62
+00:04:42,940 --> 00:04:48,580
+现在我们可以混合这些一下，就像牛油果扶手椅的感觉那样。
+And now getting into the avocado armchair vibe, we can actually mix and match these a bit.
+
+63
+00:04:48,580 --> 00:04:51,833
+虽然我们在一个热编码的向量上训练了它，
+So while we trained it on one hot encoded vectors,
+
+64
+00:04:51,857 --> 00:04:57,780
+但我们也可以用0到1之间的浮点数来获得各种混合效果。
+we can also provide it with these float numbers between 0 and 1 to get a mix of things.
+
+65
+00:04:57,780 --> 00:05:03,380
+所以这里的第二个是英雄和部分食物。
+So here for the second one here, it is a hero and partially food.
+
+66
+00:05:03,380 --> 00:05:05,260
+现在它看起来像个土豆人。
+And so now it looks like a potato man.
+
+67
+00:05:05,260 --> 00:05:07,020
+第三个也有点古怪。
+The third one is also a little bit quirky.
+
+68
+00:05:07,020 --> 00:05:08,820
+它是部分食物和部分法术。
+It is part food and part spells.
+
+69
+00:05:08,820 --> 00:05:10,020
+所以它看起来像这种药水。
+So it kind of looks like this potion.
+
+70
+00:05:10,020 --> 00:05:12,280
+不过，你可以自己试试。
+But yeah, you can play with these yourself.
+
+71
+00:05:12,280 --> 00:05:19,080
+你可以尝试输入一些矛盾的东西，比如它应该是个英雄，但同时又是侧面的，就像正面和侧面都有。
+You can try to put in something contradictory, like it's supposed to be a hero, but also side facing, like both front facing and side facing.
+
+72
+00:05:19,080 --> 00:05:21,700
+这很有趣。
+So this is good fun.
+
+73
+00:05:21,700 --> 00:05:27,529
+建议你随时停下来，暂停，玩几次，尝试改变这些值。
+Feel free to stop, pause, and play with this a few times and start changing these values up.
+
+74
+00:05:27,530 --> 00:05:30,364
+现在你可以创建所有这些样本并控制它们，
+So now that you can create all these samples, control them,
+
+75
+00:05:30,365 --> 00:05:36,320
+在下一个视频中，你将学习如何加速采样过程，这样不用等待太久就能看到这些精彩的样本了。
+in the next video you'll explore speeding up the sampling process so that you don't have to wait so long to see these amazing samples.

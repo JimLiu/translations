@@ -1,0 +1,2084 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 330
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 996
+          },
+          "text": "Welcome back."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 996
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 907
+          },
+          "text": "There's a lot of exciting material to go over this week, and"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 907
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 661
+          },
+          "text": "one of the first topics that Mike will share with you in a little bit is a deep"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 661
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 252
+          },
+          "text": "dive into how transformer networks actually work."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 252
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 532
+          },
+          "text": "Yeah, so look, it's a complicated topic, right?"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 532
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 30
+          },
+          "text": "In 2017, the paper came out, Tension is all You Need, and"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 20,
+            "milliseconds": 30
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 254
+          },
+          "text": "it laid out all of these fairly complex data processes which are going to happen"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 254
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 594
+          },
+          "text": "inside the transformer architecture."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 26,
+            "milliseconds": 594
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 298
+          },
+          "text": "So we take a little bit of a high level view, but we do go down into some depths."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 31,
+            "milliseconds": 298
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 682
+          },
+          "text": "We talk about things like self-attention and"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 33,
+            "milliseconds": 682
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 354
+          },
+          "text": "the multi-headed self-attention mechanism."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 36,
+            "milliseconds": 354
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 316
+          },
+          "text": "So we can see why it is that these models actually work,"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 40,
+            "milliseconds": 316
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 126
+          },
+          "text": "how it is that they actually gain an understanding of language."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 126
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 870
+          },
+          "text": "And it's amazing how long the transformer architecture has been around"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 870
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 494
+          },
+          "text": "and it's still state of the art for many models."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 51,
+            "milliseconds": 494
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 289
+          },
+          "text": "I remember after I saw the transformer paper when it first came out, I thought,"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 289
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 58
+          },
+          "text": "yep, I get this equation."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 58,
+            "milliseconds": 58
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 0,
+            "milliseconds": 538
+          },
+          "text": "I acknowledge this is a math equation."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 0,
+            "milliseconds": 538
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "text": "But what's it actually doing?"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 154
+          },
+          "text": "And it's always seemed a little bit magical."
+        }
+      ],
+      "source": [
+        "Welcome back.",
+        "There's a lot of exciting material to go over this week, and",
+        "one of the first topics that Mike will share with you in a little bit is a deep",
+        "dive into how transformer networks actually work.",
+        "Yeah, so look, it's a complicated topic, right?",
+        "In 2017, the paper came out, Attension is all You Need, and",
+        "it laid out all of these fairly complex data processes which are going to happen",
+        "inside the transformer architecture.",
+        "So we take a little bit of a high level view, but we do go down into some depths.",
+        "We talk about things like self-attention and",
+        "the multi-headed self-attention mechanism.",
+        "So we can see why it is that these models actually work,",
+        "how it is that they actually gain an understanding of language.",
+        "And it's amazing how long the transformer architecture has been around",
+        "and it's still state of the art for many models.",
+        "I remember after I saw the transformer paper when it first came out, I thought,",
+        "yep, I get this equation.",
+        "I acknowledge this is a math equation.",
+        "But what's it actually doing?",
+        "And it's always seemed a little bit magical."
+      ],
+      "result": [
+        "欢迎回来。",
+        "本周有很多令人激动的内容要学习讨论，",
+        "Mike将在稍后与你分享的第一个主题是：深入了解Transformer网络的工作原理。",
+        "",
+        "是的，这是一个复杂的话题，对吗？",
+        "2017年发表的论文《Attension is all You Need》详细阐述了在Transformer架构中会发生的一系列相当复杂的数据处理过程。",
+        "",
+        "",
+        "我们会从高层次的角度进行讨论，但也会深入探究一些内容。",
+        "我们会讨论自注意力和多头自注意力机制等内容。",
+        "",
+        "这样我们就能理解这些模型为什么有效，它们是如何理解语言的。",
+        "",
+        "Transformer已经存在了很长时间，令人惊奇的是，它仍然是许多模型的最先进技术。",
+        "",
+        "我记得当我第一次看到Transformer论文时，我觉得，是的，我懂这个等式。",
+        "",
+        "我承认这是一个数学等式。",
+        "但它实际上是做什么的？",
+        "这一直似乎有点神奇。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "欢迎回来。",
+          "sources": [
+            "Welcome back."
+          ]
+        },
+        {
+          "translated": "这周有很多令人兴奋的材料要讨论，",
+          "sources": [
+            "There's a lot of exciting material to go over this week, and"
+          ]
+        },
+        {
+          "translated": "迈克将在稍后与你分享的第一个主题是深入了解Transformer网络的工作原理。",
+          "sources": [
+            "one of the first topics that Mike will share with you in a little bit is a deep",
+            "dive into how transformer networks actually work."
+          ]
+        },
+        {
+          "translated": "是的，看，这是一个复杂的话题，对吗？",
+          "sources": [
+            "Yeah, so look, it's a complicated topic, right?"
+          ]
+        },
+        {
+          "translated": "2017年，出版了论文《紧张就是你所需要的》，",
+          "sources": [
+            "In 2017, the paper came out, Tension is all You Need, and"
+          ]
+        },
+        {
+          "translated": "它详细阐述了所有这些相当复杂的数据处理过程，这些过程将在Transformer架构内部发生。",
+          "sources": [
+            "it laid out all of these fairly complex data processes which are going to happen",
+            "inside the transformer architecture."
+          ]
+        },
+        {
+          "translated": "所以我们采取了一种较高层次的观点，但我们确实深入了解了一些深度。",
+          "sources": [
+            "So we take a little bit of a high level view, but we do go down into some depths."
+          ]
+        },
+        {
+          "translated": "我们谈论了像自我注意力和多头自我注意力机制这样的事情。",
+          "sources": [
+            "We talk about things like self-attention and",
+            "the multi-headed self-attention mechanism."
+          ]
+        },
+        {
+          "translated": "所以我们可以看到为什么这些模型实际上是有效的，",
+          "sources": [
+            "So we can see why it is that these models actually work,"
+          ]
+        },
+        {
+          "translated": "它们是如何真正理解语言的。",
+          "sources": [
+            "how it is that they actually gain an understanding of language."
+          ]
+        },
+        {
+          "translated": "Transformer架构存在已经很长时间了，令人惊奇的是，它仍然是许多模型的最新技术。",
+          "sources": [
+            "And it's amazing how long the transformer architecture has been around",
+            "and it's still state of the art for many models."
+          ]
+        },
+        {
+          "translated": "我记得当我第一次看到Transformer论文时，我想，",
+          "sources": [
+            "I remember after I saw the transformer paper when it first came out, I thought,"
+          ]
+        },
+        {
+          "translated": "是的，我明白这个等式。",
+          "sources": [
+            "yep, I get this equation."
+          ]
+        },
+        {
+          "translated": "我承认这是一个数学等式。",
+          "sources": [
+            "I acknowledge this is a math equation."
+          ]
+        },
+        {
+          "translated": "但它实际上在做什么？",
+          "sources": [
+            "But what's it actually doing?"
+          ]
+        },
+        {
+          "translated": "它总是显得有点神奇。",
+          "sources": [
+            "And it's always seemed a little bit magical."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 154
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 56
+          },
+          "text": "It took me a long time playing with it to finally go, okay, this is why it works."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 56
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 106
+          },
+          "text": "And so I think in this first week, you learn the intuitions behind"
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 106
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 102
+          },
+          "text": "some of these terms you may have heard before, like multi-headed attention."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 102
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 116
+          },
+          "text": "What is that and why does it make sense?"
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 116
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 276
+          },
+          "text": "And why did the transformer architecture really take off?"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 276
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 38
+          },
+          "text": "I think attention had been around for a long time, but actually thought it was,"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 38
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 29,
+            "milliseconds": 788
+          },
+          "text": "one of the things that really made to take off was it allowed"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 29,
+            "milliseconds": 788
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 92
+          },
+          "text": "attention to work in a massively parallel way."
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 32,
+            "milliseconds": 92
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 628
+          },
+          "text": "So it made it work on modern GPUs and could scale it up."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 628
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 274
+          },
+          "text": "I think these nuances around transformers are not well-understood by many, so"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 274
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 188
+          },
+          "text": "looking forward to when you deep dive into that."
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 188
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 353
+          },
+          "text": "Absolutely, I mean, the scale is part of it and"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 353
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 220
+          },
+          "text": "how it's able to take in all that data."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 47,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 820
+          },
+          "text": "I just want to say as well, though, that we're not going to go into this at such"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 820
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 370
+          },
+          "text": "a level which is going to make people's heads explode."
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 370
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 644
+          },
+          "text": "If they want to do that, then they can go ahead and read that paper too."
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 644
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 302
+          },
+          "text": "What we're going to do is we're going to look at the really important"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 302
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 528
+          },
+          "text": "parts of that transformer architecture that gives you the intuition you need so"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 528
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 490
+          },
+          "text": "that you can actually make practical use out of these models."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 775
+          },
+          "text": "One thing I've been surprised and delighted by is how transformers,"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 775
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 566
+          },
+          "text": "even though this course focuses on text, it's been really interesting to see"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 566
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 850
+          },
+          "text": "how that basic transformer architecture is creating a foundation for"
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 792
+          },
+          "text": "vision transformers as well."
+        }
+      ],
+      "source": [
+        "It took me a long time playing with it to finally go, okay, this is why it works.",
+        "And so I think in this first week, you learn the intuitions behind",
+        "some of these terms you may have heard before, like multi-headed attention.",
+        "What is that and why does it make sense?",
+        "And why did the transformer architecture really take off?",
+        "I think attention had been around for a long time, but actually thought it was,",
+        "one of the things that really made to take off was it allowed",
+        "attention to work in a massively parallel way.",
+        "So it made it work on modern GPUs and could scale it up.",
+        "I think these nuances around transformers are not well-understood by many, so",
+        "looking forward to when you deep dive into that.",
+        "Absolutely, I mean, the scale is part of it and",
+        "how it's able to take in all that data.",
+        "I just want to say as well, though, that we're not going to go into this at such",
+        "a level which is going to make people's heads explode.",
+        "If they want to do that, then they can go ahead and read that paper too.",
+        "What we're going to do is we're going to look at the really important",
+        "parts of that transformer architecture that gives you the intuition you need so",
+        "that you can actually make practical use out of these models.",
+        "One thing I've been surprised and delighted by is how transformers,",
+        "even though this course focuses on text, it's been really interesting to see",
+        "how that basic transformer architecture is creating a foundation for",
+        "vision transformers as well."
+      ],
+      "result": [
+        "我花了很长时间去研究它，最后终于明白，这就是它有效的原因。",
+        "所以我认为在第一周，你会学习到一些你可能听过的专业名词背后的知识，比如多头注意力（Multi-headed Attention）。",
+        "",
+        "那是什么，它的意义是什么？",
+        "为什么Transformer架构真正流行起来？",
+        "我认为注意力机制（Attention）已经存在了很长时间，但我认为真正让它流行起来的是，它允许注意力以大规模并行的方式工作。",
+        "",
+        "",
+        "所以它使得现代GPU上的工作成为可能，并且可以扩大其规模。",
+        "我认为很多人并不了解关于Transformer的这些细微之处，所以我期待你们能深入研究这个问题。",
+        "",
+        "绝对的，我想说的是，规模是一部分，它能够处理所有的数据。",
+        "",
+        "我只是想说，我们不会在这个问题上深入到让人头疼的程度。",
+        "",
+        "如果他们想这样做，他们可以去阅读那篇论文。",
+        "我们要做的是，我们要看看那个Transformer架构的真正重要的部分，",
+        "让你得到你需要的知识，这样你就可以实际地利用这些模型。",
+        "",
+        "一件让我感到惊讶和高兴的事情是，虽然这个课程主要关注文本，",
+        "",
+        "但看到基础的Transformer架构如何为视觉Transformer创建基础实在是非常有趣。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "我花了很长时间去玩它，最后才明白，这就是它为什么有效。",
+          "sources": [
+            "It took me a long time playing with it to finally go, okay, this is why it works."
+          ]
+        },
+        {
+          "translated": "所以我认为在这第一周，你会学到背后的直觉，",
+          "sources": [
+            "And so I think in this first week, you learn the intuitions behind"
+          ]
+        },
+        {
+          "translated": "你可能听过的一些术语，比如多头注意力。",
+          "sources": [
+            "some of these terms you may have heard before, like multi-headed attention."
+          ]
+        },
+        {
+          "translated": "那是什么，为什么它有意义？",
+          "sources": [
+            "What is that and why does it make sense?"
+          ]
+        },
+        {
+          "translated": "为什么Transformer架构真的起飞了？",
+          "sources": [
+            "And why did the transformer architecture really take off?"
+          ]
+        },
+        {
+          "translated": "我认为注意力已经存在了很长时间，但实际上我认为，",
+          "sources": [
+            "I think attention had been around for a long time, but actually thought it was,"
+          ]
+        },
+        {
+          "translated": "真正让它起飞的一件事是它允许",
+          "sources": [
+            "one of the things that really made to take off was it allowed"
+          ]
+        },
+        {
+          "translated": "注意力以大规模并行的方式工作。",
+          "sources": [
+            "attention to work in a massively parallel way."
+          ]
+        },
+        {
+          "translated": "所以它使它在现代GPU上工作，并能够扩大规模。",
+          "sources": [
+            "So it made it work on modern GPUs and could scale it up."
+          ]
+        },
+        {
+          "translated": "我认为许多人对Transformer的细微差别理解不深，所以",
+          "sources": [
+            "I think these nuances around transformers are not well-understood by many, so"
+          ]
+        },
+        {
+          "translated": "期待你深入研究那个。",
+          "sources": [
+            "looking forward to when you deep dive into that."
+          ]
+        },
+        {
+          "translated": ">>绝对，我的意思是，规模是其中的一部分，",
+          "sources": [
+            "Absolutely, I mean, the scale is part of it and"
+          ]
+        },
+        {
+          "translated": "它如何能够接收所有的数据。",
+          "sources": [
+            "how it's able to take in all that data."
+          ]
+        },
+        {
+          "translated": "我只是想说，我们不会深入到这个层次，",
+          "sources": [
+            "I just want to say as well, though, that we're not going to go into this at such"
+          ]
+        },
+        {
+          "translated": "让人们的头炸掉。",
+          "sources": [
+            "a level which is going to make people's heads explode."
+          ]
+        },
+        {
+          "translated": "如果他们想那样做，那么他们可以去阅读那篇论文。",
+          "sources": [
+            "If they want to do that, then they can go ahead and read that paper too."
+          ]
+        },
+        {
+          "translated": "我们要做的是，我们要看看那个Transformer架构的真正重要的部分，",
+          "sources": [
+            "What we're going to do is we're going to look at the really important"
+          ]
+        },
+        {
+          "translated": "给你你需要的直觉，",
+          "sources": [
+            "parts of that transformer architecture that gives you the intuition you need so"
+          ]
+        },
+        {
+          "translated": "这样你就可以实际使用这些模型。",
+          "sources": [
+            "that you can actually make practical use out of these models."
+          ]
+        },
+        {
+          "translated": ">>我感到惊讶和高兴的一件事是，即使这门课程关注的是文本，",
+          "sources": [
+            "One thing I've been surprised and delighted by is how transformers,"
+          ]
+        },
+        {
+          "translated": "看到基本的Transformer架构如何为视觉Transformer创建基础，真的很有趣。",
+          "sources": [
+            "even though this course focuses on text, it's been really interesting to see",
+            "how that basic transformer architecture is creating a foundation for",
+            "vision transformers as well."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 792
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 986
+          },
+          "text": "So even though in this course you learn mostly about large language models,"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 986
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 378
+          },
+          "text": "models about text, I think understanding transformers is also helping people"
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 378
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 92
+          },
+          "text": "understand this really exciting vision transformer and other modalities as well."
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 92
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 313
+          },
+          "text": "It's going to be a really critical building block for"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 313
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 660
+          },
+          "text": "a lot of machine learning."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 40,
+            "milliseconds": 660
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 396
+          },
+          "text": "Absolutely."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 396
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 688
+          },
+          "text": "And then beyond transformers, there's a second major topic that looking forward"
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 46,
+            "milliseconds": 688
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 934
+          },
+          "text": "to having this first week cover, which is the Generative AI project Lifecycle."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 934
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 216
+          },
+          "text": "I know a lot of people are thinking, boy, does all this LM stuff, what I do of it?"
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 216
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 599
+          },
+          "text": "And the Generative AI project Lifecycle, which will talk about in a little bit,"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 599
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 810
+          },
+          "text": "helps you plan out how to think about building your own Generative AI project."
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 6,
+            "milliseconds": 810
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 59
+          },
+          "text": "That's right, and"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 59
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 56
+          },
+          "text": "the Generative AI project Lifecycle walks you through the individual stages and"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 56
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 18,
+            "milliseconds": 140
+          },
+          "text": "decisions you have to make when you're developing Generative AI applications."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 18,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 33
+          },
+          "text": "So one of the first things you have to decide is whether you're taking"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 22,
+            "milliseconds": 33
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 869
+          },
+          "text": "a foundation model off the shelf or you're actually pre-training your own model and"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 26,
+            "milliseconds": 869
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 29,
+            "milliseconds": 756
+          },
+          "text": "then as a follow up, whether you want to fine tune and"
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 29,
+            "milliseconds": 756
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 852
+          },
+          "text": "customize that model maybe for your specific data."
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 852
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 45
+          },
+          "text": "Yeah, in fact, there's so many large language model options out there,"
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 45
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 567
+          },
+          "text": "some open source, some not open source, that I see many developers wondering,"
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 567
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 752
+          },
+          "text": "which of these models do I want to use?"
+        }
+      ],
+      "source": [
+        "So even though in this course you learn mostly about large language models,",
+        "models about text, I think understanding transformers is also helping people",
+        "understand this really exciting vision transformer and other modalities as well.",
+        "It's going to be a really critical building block for",
+        "a lot of machine learning.",
+        "Absolutely.",
+        "And then beyond transformers, there's a second major topic that looking forward",
+        "to having this first week cover, which is the Generative AI project Lifecycle.",
+        "I know a lot of people are thinking, boy, does all this LM stuff, what I do of it?",
+        "And the Generative AI project Lifecycle, which will talk about in a little bit,",
+        "helps you plan out how to think about building your own Generative AI project.",
+        "That's right, and",
+        "the Generative AI project Lifecycle walks you through the individual stages and",
+        "decisions you have to make when you're developing Generative AI applications.",
+        "So one of the first things you have to decide is whether you're taking",
+        "a foundation model off the shelf or you're actually pre-training your own model and",
+        "then as a follow up, whether you want to fine tune and",
+        "customize that model maybe for your specific data.",
+        "Yeah, in fact, there's so many large language model options out there,",
+        "some open source, some not open source, that I see many developers wondering,",
+        "which of these models do I want to use?"
+      ],
+      "result": [
+        "所以，虽然在这门课程中你主要学习的是大语言模型、关于文本的模型，",
+        "我认为理解Transformer也有助于人们理解这种非常激动人心的视觉Transformer以及其他形式。",
+        "",
+        "这将是很多机器学习的重要基础。",
+        "",
+        "绝对的。",
+        "然后，除了Transformer，还有第二个主要的话题，",
+        "期待在这第一周覆盖，那就是生成式AI项目生命周期。",
+        "我知道很多人在想，哇，所有这些LLM的项目，我该怎么去构建呢？",
+        "生成式AI项目生命周期，我们稍后会谈到，它可以帮助你规划如何构建你自己的生成式AI项目。",
+        "",
+        "没错，生成式AI项目生命周期会引导你了解在开发生成式AI应用时需要做出的各个阶段和决定。",
+        "",
+        "",
+        "所以你首先需要决定的是，是选择一个现成的基础模型，还是实际上要预训练你自己的模型，",
+        "",
+        "然后作为后续，你是否希望微调和定制该模型以适应你的特定数据。",
+        "",
+        "是的，事实上，现在有很多大语言模型可供选择，",
+        "有些是开源的，有些不是，我看到很多开发人员在纠结，我应该选择哪些模型？",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "所以，尽管在这门课程中，你主要学习的是大语言模型，",
+          "sources": [
+            "So even though in this course you learn mostly about large language models,"
+          ]
+        },
+        {
+          "translated": "关于文本的模型，我认为理解Transformer也有助于人们理解这个真正令人兴奋的视觉Transformer和其他模式。",
+          "sources": [
+            "models about text, I think understanding transformers is also helping people",
+            "understand this really exciting vision transformer and other modalities as well."
+          ]
+        },
+        {
+          "translated": "这将是许多机器学习的关键构建块。",
+          "sources": [
+            "It's going to be a really critical building block for",
+            "a lot of machine learning."
+          ]
+        },
+        {
+          "translated": ">>绝对的。",
+          "sources": [
+            "Absolutely."
+          ]
+        },
+        {
+          "translated": "然后，除了Transformer，还有第二个主要的话题，期待在这第一周覆盖，那就是生成AI项目生命周期。",
+          "sources": [
+            "And then beyond transformers, there's a second major topic that looking forward",
+            "to having this first week cover, which is the Generative AI project Lifecycle."
+          ]
+        },
+        {
+          "translated": "我知道很多人在想，哇，所有这些LM的东西，我该怎么做呢？",
+          "sources": [
+            "I know a lot of people are thinking, boy, does all this LM stuff, what I do of it?"
+          ]
+        },
+        {
+          "translated": "生成AI项目生命周期，我们稍后会谈到，它可以帮助你规划如何构建你自己的生成AI项目。",
+          "sources": [
+            "And the Generative AI project Lifecycle, which will talk about in a little bit,",
+            "helps you plan out how to think about building your own Generative AI project."
+          ]
+        },
+        {
+          "translated": ">>没错，生成AI项目生命周期会引导你通过个别阶段和你在开发生成AI应用时必须做出的决定。",
+          "sources": [
+            "That's right, and",
+            "the Generative AI project Lifecycle walks you through the individual stages and",
+            "decisions you have to make when you're developing Generative AI applications."
+          ]
+        },
+        {
+          "translated": "所以你首先要决定的一件事是，你是要从货架上取下一个基础模型，还是实际上要预训练你自己的模型，",
+          "sources": [
+            "So one of the first things you have to decide is whether you're taking",
+            "a foundation model off the shelf or you're actually pre-training your own model and"
+          ]
+        },
+        {
+          "translated": "然后作为后续，是否你想微调和定制那个模型，也许是为了你特定的数据。",
+          "sources": [
+            "then as a follow up, whether you want to fine tune and",
+            "customize that model maybe for your specific data."
+          ]
+        },
+        {
+          "translated": ">>是的，事实上，有这么多的大语言模型选项，",
+          "sources": [
+            "Yeah, in fact, there's so many large language model options out there,"
+          ]
+        },
+        {
+          "translated": "有些是开源的，有些不是，我看到许多开发者在想，我想用这些模型中的哪一个？",
+          "sources": [
+            "some open source, some not open source, that I see many developers wondering,",
+            "which of these models do I want to use?"
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 43,
+            "milliseconds": 752
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 295
+          },
+          "text": "And so having a way to evaluate it and then also choose the right model sizing."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 48,
+            "milliseconds": 295
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 313
+          },
+          "text": "I know in your other work, you've talked about when do you need a giant model, 100"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 313
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 52
+          },
+          "text": "billion or even much bigger versus when can a 1 to 30 billion parameter model or"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 52
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 152
+          },
+          "text": "even sub 1 billion parameter model be just fantastic for a specific application?"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 3,
+            "milliseconds": 152
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 750
+          },
+          "text": "Exactly, so there might be use cases where you really need the model to be very"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 7,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 862
+          },
+          "text": "comprehensive and able to generalize to a lot of different tasks."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 11,
+            "milliseconds": 862
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 932
+          },
+          "text": "And there might be use cases where you're just optimizing for"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 14,
+            "milliseconds": 932
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 16,
+            "milliseconds": 417
+          },
+          "text": "a single-use case, right?"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 16,
+            "milliseconds": 417
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 137
+          },
+          "text": "And you can potentially work with a smaller model and achieving similar or"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 137
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 466
+          },
+          "text": "even very good results."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 21,
+            "milliseconds": 466
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 683
+          },
+          "text": "Yeah, I think that might be one of the really surprising things for"
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 24,
+            "milliseconds": 683
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 72
+          },
+          "text": "some people to learn is that you can actually use quite small models and"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 28,
+            "milliseconds": 72
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 488
+          },
+          "text": "still get quite a lot of capability out of them."
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 488
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 420
+          },
+          "text": "Yeah, I think when you want your large language model to have a lot of general"
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 34,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 290
+          },
+          "text": "knowledge about the world, when you wanted to know stuff about history and"
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 38,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 60
+          },
+          "text": "philosophy and the sizes and how to write Python code and so on and so on."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 42,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 543
+          },
+          "text": "It helps to have a giant model with hundreds of billions of parameters."
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 46,
+            "milliseconds": 543
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 680
+          },
+          "text": "But for a single task like summarizing dialogue or"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 49,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 833
+          },
+          "text": "acting as a customer service agent for one company, for applications like that,"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 833
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 27
+          },
+          "text": "sometimes you can use hundreds of billions of parameters models."
+        }
+      ],
+      "source": [
+        "And so having a way to evaluate it and then also choose the right model sizing.",
+        "I know in your other work, you've talked about when do you need a giant model, 100",
+        "billion or even much bigger versus when can a 1 to 30 billion parameter model or",
+        "even sub 1 billion parameter model be just fantastic for a specific application?",
+        "Exactly, so there might be use cases where you really need the model to be very",
+        "comprehensive and able to generalize to a lot of different tasks.",
+        "And there might be use cases where you're just optimizing for",
+        "a single-use case, right?",
+        "And you can potentially work with a smaller model and achieving similar or",
+        "even very good results.",
+        "Yeah, I think that might be one of the really surprising things for",
+        "some people to learn is that you can actually use quite small models and",
+        "still get quite a lot of capability out of them.",
+        "Yeah, I think when you want your large language model to have a lot of general",
+        "knowledge about the world, when you wanted to know stuff about history and",
+        "philosophy and the sizes and how to write Python code and so on and so on.",
+        "It helps to have a giant model with hundreds of billions of parameters.",
+        "But for a single task like summarizing dialogue or",
+        "acting as a customer service agent for one company, for applications like that,",
+        "sometimes you can use hundreds of billions of parameters models."
+      ],
+      "result": [
+        "因此，有一个评估并选择正确模型大小的方式是非常重要的。",
+        "我知道在你的其他工作中，你谈到过何时需要一个巨大的模型，比如1000亿甚至更大的模型，",
+        "相对的，何时一个1到30亿参数的模型或者小于10亿参数的模型对于特定的应用来说就足够好？",
+        "",
+        "确实，可能有一些使用场景，你真的需要模型非常全面，",
+        "能够适应很多不同的任务。",
+        "也可能有一些使用场景，你只是为了单一的使用场景进行优化，对吧？",
+        "",
+        "你可能只需要使用一个小一些的模型就能获得相似甚至非常好的结果。",
+        "",
+        "是的，我认为这可能是一些人会感到非常惊讶的事情，",
+        "那就是你实际上可以使用相当小的模型，仍然能够从中获取很多的能力。",
+        "",
+        "是的，我认为当你希望你的大语言模型具有很多关于世界的通用知识，",
+        "当你希望它知道关于历史和哲学的东西，知道大小，知道如何编写Python代码等等时。",
+        "",
+        "拥有一个拥有上千亿参数的巨大模型是有帮助的。",
+        "但是对于像对话总结或者作为一家公司的客户服务代理这样的单一任务，对于这样的应用，",
+        "",
+        "有时候你可以使用上百亿参数的模型。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "因此，有一种评估方式，然后也选择合适的模型大小。",
+          "sources": [
+            "And so having a way to evaluate it and then also choose the right model sizing."
+          ]
+        },
+        {
+          "translated": "我知道在你的其他工作中，你谈到了什么时候需要一个巨大的模型，100",
+          "sources": [
+            "I know in your other work, you've talked about when do you need a giant model, 100"
+          ]
+        },
+        {
+          "translated": "十亿甚至更大的模型，或者1到30亿参数的模型，",
+          "sources": [
+            "billion or even much bigger versus when can a 1 to 30 billion parameter model or"
+          ]
+        },
+        {
+          "translated": "甚至不到10亿参数的模型对于特定的应用来说就已经非常好了？",
+          "sources": [
+            "even sub 1 billion parameter model be just fantastic for a specific application?"
+          ]
+        },
+        {
+          "translated": "确实，可能有一些使用场景，你真的需要模型非常全面，",
+          "sources": [
+            "Exactly, so there might be use cases where you really need the model to be very"
+          ]
+        },
+        {
+          "translated": "能够适应很多不同的任务。",
+          "sources": [
+            "comprehensive and able to generalize to a lot of different tasks."
+          ]
+        },
+        {
+          "translated": "也可能有一些使用场景，你只是为了",
+          "sources": [
+            "And there might be use cases where you're just optimizing for"
+          ]
+        },
+        {
+          "translated": "一个单一的使用场景，对吧？",
+          "sources": [
+            "a single-use case, right?"
+          ]
+        },
+        {
+          "translated": "你可能可以使用一个较小的模型，达到相似的或者",
+          "sources": [
+            "And you can potentially work with a smaller model and achieving similar or"
+          ]
+        },
+        {
+          "translated": "甚至非常好的结果。",
+          "sources": [
+            "even very good results."
+          ]
+        },
+        {
+          "translated": "是的，我认为这可能是一些人会感到非常惊讶的事情，",
+          "sources": [
+            "Yeah, I think that might be one of the really surprising things for"
+          ]
+        },
+        {
+          "translated": "你实际上可以使用相当小的模型，",
+          "sources": [
+            "some people to learn is that you can actually use quite small models and"
+          ]
+        },
+        {
+          "translated": "仍然能够从中获得很多能力。",
+          "sources": [
+            "still get quite a lot of capability out of them."
+          ]
+        },
+        {
+          "translated": "是的，我认为当你希望你的大语言模型具有很多通用的",
+          "sources": [
+            "Yeah, I think when you want your large language model to have a lot of general"
+          ]
+        },
+        {
+          "translated": "关于世界的知识，当你希望它知道关于历史和",
+          "sources": [
+            "knowledge about the world, when you wanted to know stuff about history and"
+          ]
+        },
+        {
+          "translated": "哲学的大小以及如何编写Python代码等等的知识时，",
+          "sources": [
+            "philosophy and the sizes and how to write Python code and so on and so on."
+          ]
+        },
+        {
+          "translated": "拥有数百亿参数的巨大模型是有帮助的。",
+          "sources": [
+            "It helps to have a giant model with hundreds of billions of parameters."
+          ]
+        },
+        {
+          "translated": "但是对于像对话总结或者",
+          "sources": [
+            "But for a single task like summarizing dialogue or"
+          ]
+        },
+        {
+          "translated": "充当一家公司的客户服务代表这样的应用，",
+          "sources": [
+            "acting as a customer service agent for one company, for applications like that,"
+          ]
+        },
+        {
+          "translated": "有时你可以使用数百亿参数的模型。",
+          "sources": [
+            "sometimes you can use hundreds of billions of parameters models."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 59,
+            "milliseconds": 27
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 114
+          },
+          "text": "But that's not always necessary."
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 114
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 508
+          },
+          "text": "So lots of really exciting material to get into this week."
+        },
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 5,
+            "milliseconds": 508
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 342
+          },
+          "text": "With that, let's go on to the next video when Mike will kick things off with"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 10,
+            "milliseconds": 342
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 14,
+            "milliseconds": 730
+          },
+          "text": "a deep dive into many different use cases of large language models."
+        }
+      ],
+      "source": [
+        "But that's not always necessary.",
+        "So lots of really exciting material to get into this week.",
+        "With that, let's go on to the next video when Mike will kick things off with",
+        "a deep dive into many different use cases of large language models."
+      ],
+      "result": [
+        "但这并不总是必要的。",
+        "所以本周有很多真正令人兴奋的材料要深入研究。",
+        "那么，让我们进入下一个视频，Mike将开始深入探讨大语言模型的许多不同使用案例。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Generative AI with Large Language Models/Introduction to LLMs and the generative AI project lifecycle/Introduction.srt",
+  "ouputBasePath": "input/Generative AI with Large Language Models/Introduction to LLMs and the generative AI project lifecycle/Introduction",
+  "totalCost": 0.27603,
+  "translationPath": "input/Generative AI with Large Language Models/Introduction to LLMs and the generative AI project lifecycle/Introduction/translation.json"
+}

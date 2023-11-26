@@ -1,0 +1,1001 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": "00:00:04,986",
+          "endTime": "00:00:12,642",
+          "text": "In the last video, you saw how to evaluate an LLM output in an example where it had the right answer"
+        },
+        {
+          "id": "2",
+          "startTime": "00:00:12,643",
+          "endTime": "00:00:21,280",
+          "text": "and so could write down a function to explicitly just tell us if the LLM outputs the right categories and list of products."
+        },
+        {
+          "id": "3",
+          "startTime": "00:00:21,280",
+          "endTime": "00:00:26,400",
+          "text": "But what if the LLM is used to generate text and there isn't just one right piece of text?"
+        },
+        {
+          "id": "4",
+          "startTime": "00:00:26,400",
+          "endTime": "00:00:31,840",
+          "text": "Let's take a look at an approach for how to evaluate that type of LLM output."
+        },
+        {
+          "id": "5",
+          "startTime": "00:00:31,840",
+          "endTime": "00:00:36,286",
+          "text": "Here's my usual helper functions and given a customer message,"
+        },
+        {
+          "id": "6",
+          "startTime": "00:00:36,287",
+          "endTime": "00:00:40,240",
+          "text": "tell me about the SmartX Pro phone and the Fotoshop camera and so on."
+        },
+        {
+          "id": "7",
+          "startTime": "00:00:40,240",
+          "endTime": "00:00:44,600",
+          "text": "Here are a few utils to get me the assistant answer."
+        },
+        {
+          "id": "8",
+          "startTime": "00:00:44,600",
+          "endTime": "00:00:48,480",
+          "text": "This is basically the process that Isa has stepped through in earlier videos."
+        },
+        {
+          "id": "9",
+          "startTime": "00:00:48,480",
+          "endTime": "00:00:50,040",
+          "text": "And so here's the assistant answer."
+        },
+        {
+          "id": "10",
+          "startTime": "00:00:50,040",
+          "endTime": "00:00:58,880",
+          "text": "I'm sure we have a whole Smartphone, the SmartX Pro phone and so on and so forth."
+        }
+      ],
+      "source": [
+        "In the last video, you saw how to evaluate an LLM output in an example where it had the right answer",
+        "and so could write down a function to explicitly just tell us if the LLM outputs the right categories and list of products.",
+        "But what if the LLM is used to generate text and there isn't just one right piece of text?",
+        "Let's take a look at an approach for how to evaluate that type of LLM output.",
+        "Here's my usual helper functions and given a customer message,",
+        "tell me about the SmartX Pro phone and the Fotoshop camera and so on.",
+        "Here are a few utils to get me the assistant answer.",
+        "This is basically the process that Isa has stepped through in earlier videos.",
+        "And so here's the assistant answer.",
+        "I'm sure we have a whole Smartphone, the SmartX Pro phone and so on and so forth."
+      ],
+      "result": [
+        "在上个视频中，你看到了如何评估LLM输出，在一个例子中，它给出了正确答案，",
+        "我们可以编写一个函数，明确地告诉我们LLM是否输出了正确的类别和产品列表。",
+        "但是，如果LLM用来生成文本，而且并不只有一种正确的文本呢？",
+        "让我们看一下如何评估这种类型的LLM输出的方法。",
+        "这是我常用的一些辅助函数，给出了一个客户消息，",
+        "告诉我关于SmartX Pro手机和Fotoshop相机等的信息。",
+        "这里有一些工具可以帮助我得到助手的答案。",
+        "这基本上就是Isa在早期的视频中介绍的过程。",
+        "这就是助手的答案。",
+        "我确信我们有整个智能手机，SmartX Pro手机等等。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": "00:00:58,880",
+          "endTime": "00:01:04,520",
+          "text": "So how can you evaluate if this is a good answer or not?"
+        },
+        {
+          "id": "12",
+          "startTime": "00:01:04,520",
+          "endTime": "00:01:07,920",
+          "text": "Seems like there are lots of possible good answers."
+        },
+        {
+          "id": "13",
+          "startTime": "00:01:07,920",
+          "endTime": "00:01:18,799",
+          "text": "One way to evaluate this is to write a rubric, meaning a set of guidelines to evaluate this answer on different dimensions"
+        },
+        {
+          "id": "14",
+          "startTime": "00:01:18,800",
+          "endTime": "00:01:22,600",
+          "text": "and then use that to decide whether or not you're satisfied with this answer."
+        },
+        {
+          "id": "15",
+          "startTime": "00:01:22,600",
+          "endTime": "00:01:26,080",
+          "text": "Let me show you how to do that."
+        },
+        {
+          "id": "16",
+          "startTime": "00:01:26,080",
+          "endTime": "00:01:31,520",
+          "text": "So let me create a little data structure to store the customer message as well as the product info."
+        },
+        {
+          "id": "17",
+          "startTime": "00:01:31,520",
+          "endTime": "00:01:39,240",
+          "text": "So here I'm going to specify a prompt for evaluating the assistant answer using what's called a rubric."
+        },
+        {
+          "id": "18",
+          "startTime": "00:01:39,240",
+          "endTime": "00:01:41,260",
+          "text": "I'll explain in a second what that means."
+        },
+        {
+          "id": "19",
+          "startTime": "00:01:41,260",
+          "endTime": "00:01:43,743",
+          "text": "But this prompt says in the system message,"
+        },
+        {
+          "id": "20",
+          "startTime": "00:01:43,744",
+          "endTime": "00:01:48,300",
+          "text": "you're an assistant evaluates how well the customer service agent answers the user question,"
+        },
+        {
+          "id": "21",
+          "startTime": "00:01:48,301",
+          "endTime": "00:01:52,200",
+          "text": "but look at the context that the customer service agent is using the generated response."
+        }
+      ],
+      "source": [
+        "So how can you evaluate if this is a good answer or not?",
+        "Seems like there are lots of possible good answers.",
+        "One way to evaluate this is to write a rubric, meaning a set of guidelines to evaluate this answer on different dimensions",
+        "and then use that to decide whether or not you're satisfied with this answer.",
+        "Let me show you how to do that.",
+        "So let me create a little data structure to store the customer message as well as the product info.",
+        "So here I'm going to specify a prompt for evaluating the assistant answer using what's called a rubric.",
+        "I'll explain in a second what that means.",
+        "But this prompt says in the system message,",
+        "you're an assistant evaluates how well the customer service agent answers the user question,",
+        "but look at the context that the customer service agent is using the generated response."
+      ],
+      "result": [
+        "那么你如何评估这是不是一个好答案呢？",
+        "看起来有很多可能的好答案。",
+        "评估这个的一种方法是编写一个评分标准，也就是一套评估这个答案在不同维度上的指南，",
+        "然后用它来决定你是否对这个答案满意。",
+        "让我给你演示一下如何做到这一点。",
+        "那么让我创建一个小的数据结构来存储客户消息以及产品信息。",
+        "这里我要指定一个提示（Prompt），用来评估助手答案，使用的是所谓的评分标准。",
+        "我稍后会解释这是什么意思。",
+        "但是这个提示的系统消息中说，",
+        "你是一个助手，评估客户服务代表回答用户问题的效果，",
+        "但是看看客户服务代理是如何使用这个生成的回答的。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "22",
+          "startTime": "00:01:52,200",
+          "endTime": "00:01:55,880",
+          "text": "So this response is what we had further up the notebook."
+        },
+        {
+          "id": "23",
+          "startTime": "00:01:55,880",
+          "endTime": "00:01:58,480",
+          "text": "That was the assistant answer."
+        },
+        {
+          "id": "24",
+          "startTime": "00:01:58,480",
+          "endTime": "00:02:01,760",
+          "text": "And we're going to specify the data in this prompt."
+        },
+        {
+          "id": "25",
+          "startTime": "00:02:01,760",
+          "endTime": "00:02:03,600",
+          "text": "What's the customer message?"
+        },
+        {
+          "id": "26",
+          "startTime": "00:02:03,600",
+          "endTime": "00:02:05,120",
+          "text": "What's the context?"
+        },
+        {
+          "id": "27",
+          "startTime": "00:02:05,120",
+          "endTime": "00:02:08,760",
+          "text": "That is, what's the product and category information that was provided?"
+        },
+        {
+          "id": "28",
+          "startTime": "00:02:08,760",
+          "endTime": "00:02:11,240",
+          "text": "And then what was the output of the LLM?"
+        },
+        {
+          "id": "29",
+          "startTime": "00:02:11,240",
+          "endTime": "00:02:12,600",
+          "text": "And then this is a rubric."
+        },
+        {
+          "id": "30",
+          "startTime": "00:02:12,600",
+          "endTime": "00:02:16,360",
+          "text": "So we want the LLM to compare the factual content and submitted answer to the content."
+        },
+        {
+          "id": "31",
+          "startTime": "00:02:16,360",
+          "endTime": "00:02:19,200",
+          "text": "Ignore differences in style, grammar, punctuation."
+        }
+      ],
+      "source": [
+        "So this response is what we had further up the notebook.",
+        "That was the assistant answer.",
+        "And we're going to specify the data in this prompt.",
+        "What's the customer message?",
+        "What's the context?",
+        "That is, what's the product and category information that was provided?",
+        "And then what was the output of the LLM?",
+        "And then this is a rubric.",
+        "So we want the LLM to compare the factual content and submitted answer to the content.",
+        "Ignore differences in style, grammar, punctuation."
+      ],
+      "result": [
+        "那么这个回答就是我们在Notebook上方看到的。",
+        "那是助手的回答。",
+        "我们将在这个提示中指定数据。",
+        "客户的留言是什么？",
+        "上下文是什么？",
+        "也就是说，提供的产品和类别信息是什么？",
+        "然后LLM的输出是什么？",
+        "接下来这是一个评分标准。",
+        "我们希望LLM将事实内容和提交的答案与内容进行比较。",
+        "忽略语音风格、语法、标点的差异。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "32",
+          "startTime": "00:02:19,200",
+          "endTime": "00:02:25,200",
+          "text": "And then we wanted to check a few things like is the assistant response based only on the context provided?"
+        },
+        {
+          "id": "33",
+          "startTime": "00:02:25,200",
+          "endTime": "00:02:28,800",
+          "text": "Does the answer include information that is not provided in the context?"
+        },
+        {
+          "id": "34",
+          "startTime": "00:02:28,800",
+          "endTime": "00:02:31,980",
+          "text": "Is there any disagreement between response and the context?"
+        },
+        {
+          "id": "35",
+          "startTime": "00:02:31,980",
+          "endTime": "00:02:42,800",
+          "text": "So this is called a rubric and this specifies what we think the answer should get right for us to consider it a good answer."
+        },
+        {
+          "id": "36",
+          "startTime": "00:02:42,800",
+          "endTime": "00:02:47,371",
+          "text": "Then finally we wanted to print out yes or no and so on."
+        },
+        {
+          "id": "37",
+          "startTime": "00:02:50,280",
+          "endTime": "00:02:58,986",
+          "text": "And now if we were to run this evaluation, this is what you get."
+        },
+        {
+          "id": "38",
+          "startTime": "00:02:59,520",
+          "endTime": "00:03:03,200",
+          "text": "So it says the assistant response is based on the context provided."
+        },
+        {
+          "id": "39",
+          "startTime": "00:03:03,200",
+          "endTime": "00:03:06,560",
+          "text": "It does not in this case seem to make up new information."
+        },
+        {
+          "id": "40",
+          "startTime": "00:03:06,560",
+          "endTime": "00:03:07,560",
+          "text": "There isn't disagreements."
+        },
+        {
+          "id": "41",
+          "startTime": "00:03:07,560",
+          "endTime": "00:03:10,920",
+          "text": "The user asked two questions, answered question one and answered question two."
+        }
+      ],
+      "source": [
+        "And then we wanted to check a few things like is the assistant response based only on the context provided?",
+        "Does the answer include information that is not provided in the context?",
+        "Is there any disagreement between response and the context?",
+        "So this is called a rubric and this specifies what we think the answer should get right for us to consider it a good answer.",
+        "Then finally we wanted to print out yes or no and so on.",
+        "And now if we were to run this evaluation, this is what you get.",
+        "So it says the assistant response is based on the context provided.",
+        "It does not in this case seem to make up new information.",
+        "There isn't disagreements.",
+        "The user asked two questions, answered question one and answered question two."
+      ],
+      "result": [
+        "然后我们还想检查一些事情，比如，助手的回应是否只基于提供的上下文？",
+        "答案是否包含上下文中没有提供的信息？",
+        "回应和上下文之间有没有任何分歧？",
+        "这就是所谓的评分标准，它规定了答案应该达到的正确程度，以便我们判断它是不是一个好答案。",
+        "最后我们想打印出“是”或“否”等等",
+        "现在如果我们要运行这个评估，这就是你得到的结果。",
+        "它说，助手的回应是基于提供的上下文。",
+        "在这种情况下，它似乎没有编造新信息。",
+        "没有分歧。",
+        "用户问了两个问题，回答了问题一和问题二。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "42",
+          "startTime": "00:03:10,920",
+          "endTime": "00:03:14,120",
+          "text": "So it answered both questions."
+        },
+        {
+          "id": "43",
+          "startTime": "00:03:14,120",
+          "endTime": "00:03:20,200",
+          "text": "So we would look at this output and maybe conclude that this is a pretty good response."
+        },
+        {
+          "id": "44",
+          "startTime": "00:03:20,200",
+          "endTime": "00:03:28,800",
+          "text": "And one note, here I'm using the ChatGPT-3.5-Turbo model for this evaluation."
+        },
+        {
+          "id": "45",
+          "startTime": "00:03:28,800",
+          "endTime": "00:03:33,529",
+          "text": "For a more robust evaluation, it might be worth considering using GPT-4"
+        },
+        {
+          "id": "46",
+          "startTime": "00:03:33,530",
+          "endTime": "00:03:39,486",
+          "text": "because even if you deploy 3.5 Turbo in production and generate a lot of text,"
+        },
+        {
+          "id": "47",
+          "startTime": "00:03:39,487",
+          "endTime": "00:03:43,786",
+          "text": "if your evaluation is a more sporadic exercise,"
+        },
+        {
+          "id": "48",
+          "startTime": "00:03:43,787",
+          "endTime": "00:03:55,280",
+          "text": "then it may be prudent to pay for the somewhat more expensive GPT-4 API call to get a more rigorous evaluation of the output."
+        },
+        {
+          "id": "49",
+          "startTime": "00:03:55,280",
+          "endTime": "00:03:59,956",
+          "text": "One design pattern that I hope you can take away from this is that when you can specify a rubric,"
+        },
+        {
+          "id": "50",
+          "startTime": "00:03:59,957",
+          "endTime": "00:04:06,100",
+          "text": "meaning a list of criteria by which to evaluate an LLM output,"
+        },
+        {
+          "id": "51",
+          "startTime": "00:04:06,101",
+          "endTime": "00:04:12,400",
+          "text": "then you can actually use another API call to evaluate your first LLM output."
+        }
+      ],
+      "source": [
+        "So it answered both questions.",
+        "So we would look at this output and maybe conclude that this is a pretty good response.",
+        "And one note, here I'm using the ChatGPT-3.5-Turbo model for this evaluation.",
+        "For a more robust evaluation, it might be worth considering using GPT-4",
+        "because even if you deploy 3.5 Turbo in production and generate a lot of text,",
+        "if your evaluation is a more sporadic exercise,",
+        "then it may be prudent to pay for the somewhat more expensive GPT-4 API call to get a more rigorous evaluation of the output.",
+        "One design pattern that I hope you can take away from this is that when you can specify a rubric,",
+        "meaning a list of criteria by which to evaluate an LLM output,",
+        "then you can actually use another API call to evaluate your first LLM output."
+      ],
+      "result": [
+        "它回答了两个问题。",
+        "我们会看这个输出，可能会得出这是一个相当好的回应的结论。",
+        "还有一点需要注意，这里我使用的是ChatGPT-3.5-Turbo模型进行评估。",
+        "为了更全面的评估，可以考虑使用GPT-4，",
+        "因为即使你在生产环境中用ChatGPT-3.5-Turbo并生成了大量文本，",
+        "如果你的评估并不是太频繁，",
+        "那么为了得到一个更严谨的评估结果，使用稍微昂贵一点GPT-4 API还是值得的。",
+        "我希望你们能从这里学到的一个设计模式是：当你可以指定一个评分标准时，",
+        "也就是说，列出一系列评估LLM生成结果的标准，",
+        "你实际上可以使用另一个API调用来评估从LLM获得的结果。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "52",
+          "startTime": "00:04:12,400",
+          "endTime": "00:04:22,980",
+          "text": "There's one other design pattern that could be useful for some applications, which is if you can specify an ideal response."
+        },
+        {
+          "id": "53",
+          "startTime": "00:04:22,980",
+          "endTime": "00:04:27,429",
+          "text": "So here I'm going to specify a test example where the customer message is,"
+        },
+        {
+          "id": "54",
+          "startTime": "00:04:27,430",
+          "endTime": "00:04:31,080",
+          "text": "\"Tell me about the SmartX Pro phone,\" and so on."
+        },
+        {
+          "id": "55",
+          "startTime": "00:04:31,080",
+          "endTime": "00:04:32,800",
+          "text": "And here's an ideal answer."
+        },
+        {
+          "id": "56",
+          "startTime": "00:04:32,800",
+          "endTime": "00:04:39,200",
+          "text": "So this is if you have an expert human customer service representative write a really good answer."
+        },
+        {
+          "id": "57",
+          "startTime": "00:04:39,200",
+          "endTime": "00:04:44,160",
+          "text": "The expert says, this would be a great answer. Of course, the SmartX Pro Phone, and so on."
+        },
+        {
+          "id": "58",
+          "startTime": "00:04:44,160",
+          "endTime": "00:04:47,880",
+          "text": "It goes on to give a lot of helpful information."
+        },
+        {
+          "id": "59",
+          "startTime": "00:04:47,880",
+          "endTime": "00:04:54,600",
+          "text": "Now it is unreasonable to expect any LLM to generate this exact answer word for word."
+        },
+        {
+          "id": "60",
+          "startTime": "00:04:54,600",
+          "endTime": "00:04:57,543",
+          "text": "And in classical natural language processing techniques,"
+        },
+        {
+          "id": "61",
+          "startTime": "00:04:57,544",
+          "endTime": "00:05:06,280",
+          "text": "there are some traditional metrics for measuring if the LLM output is similar to this expert human written output."
+        }
+      ],
+      "source": [
+        "There's one other design pattern that could be useful for some applications, which is if you can specify an ideal response.",
+        "So here I'm going to specify a test example where the customer message is,",
+        "\"Tell me about the SmartX Pro phone,\" and so on.",
+        "And here's an ideal answer.",
+        "So this is if you have an expert human customer service representative write a really good answer.",
+        "The expert says, \"This would be a great answer. Of course, the SmartX Pro phone,\" and so on.",
+        "It goes on to give a lot of helpful information.",
+        "Now it is unreasonable to expect any LLM to generate this exact answer word for word.",
+        "And in classical natural language processing techniques,",
+        "there are some traditional metrics for measuring if the LLM output is similar to this expert human written output."
+      ],
+      "result": [
+        "还有一种设计模式可能对某些应用程序有用，就是如果你能指定一个用来参考的理想标准答案。",
+        "这里我要指定一个测试示例，其中客户的消息是：",
+        "“告诉我关于SmartX Pro 手机的信息，”等等。",
+        "这里有一个理想的答案。",
+        "如果你有一个高水准的人类客服专家，能对客户问题撰写非常专业的回复。",
+        "专家回复的当然是一个很好的答案。SmartX Pro 手机，等等。",
+        "它后面还有很多有用的信息。",
+        "现在，期望LLM生成这样的答案是不现实的。",
+        "在经典的自然语言处理技术中，",
+        "有一些传统的度量标准，用于衡量LLM输出是否与人类专家撰写的结果相似。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "62",
+          "startTime": "00:05:06,280",
+          "endTime": "00:05:12,320",
+          "text": "For example, there's something called the BLEU score, B-L-E-U, that you can search online to read more about."
+        },
+        {
+          "id": "63",
+          "startTime": "00:05:12,320",
+          "endTime": "00:05:17,680",
+          "text": "They can measure how similar one piece of text is from another."
+        },
+        {
+          "id": "64",
+          "startTime": "00:05:17,680",
+          "endTime": "00:05:26,885",
+          "text": "But it turns out there's an even better way, which is you can use a prompt, which I'm going to specify here,"
+        },
+        {
+          "id": "65",
+          "startTime": "00:05:26,886",
+          "endTime": "00:05:32,742",
+          "text": "to ask an LLM to compare how well the automatically generated customer service agent output"
+        },
+        {
+          "id": "66",
+          "startTime": "00:05:32,743",
+          "endTime": "00:05:41,280",
+          "text": "corresponds to the ideal expert response that was written by a human that I just showed up above."
+        },
+        {
+          "id": "67",
+          "startTime": "00:05:41,280",
+          "endTime": "00:05:47,170",
+          "text": "Here's the prompt we can use, which is we're going to use an LLM and tell it to be an assistant"
+        },
+        {
+          "id": "68",
+          "startTime": "00:05:47,171",
+          "endTime": "00:05:52,013",
+          "text": "that evaluates how well the customer service agent answers the user question by comparing the response"
+        },
+        {
+          "id": "69",
+          "startTime": "00:05:52,014",
+          "endTime": "00:05:58,360",
+          "text": "that was the automatically generated one to the ideal expert human written response."
+        },
+        {
+          "id": "70",
+          "startTime": "00:05:58,360",
+          "endTime": "00:06:02,900",
+          "text": "And so we're going to give it the data, which is what was the customer request,"
+        },
+        {
+          "id": "71",
+          "startTime": "00:06:02,901",
+          "endTime": "00:06:09,280",
+          "text": "what was the expert written ideal response, and then what did our LLM actually output."
+        }
+      ],
+      "source": [
+        "For example, there's something called the BLEU score, B-L-E-U, that you can search online to read more about.",
+        "They can measure how similar one piece of text is from another.",
+        "But it turns out there's an even better way, which is you can use a prompt, which I'm going to specify here,",
+        "to ask an LLM to compare how well the automatically generated customer service agent output",
+        "corresponds to the ideal expert response that was written by a human that I just showed up above.",
+        "Here's the prompt we can use, which is we're going to use an LLM and tell it to be an assistant",
+        "that evaluates how well the customer service agent answers the user question by comparing the response",
+        "that was the automatically generated one to the ideal expert human written response.",
+        "And so we're going to give it the data, which is what was the customer request,",
+        "what was the expert written ideal response, and then what did our LLM actually output."
+      ],
+      "result": [
+        "例如，有一种叫做BLEU分数，B-L-E-U，你可以在网上搜索了解更多。",
+        "它们可以衡量一段文字与另一段文字的相似程度。",
+        "但事实证明，还有一个更好的方法，就是你可以使用一个提示（Prompt），我将在这里指定，",
+        "让LLM去比较，由AI自动生成的客服回复，与前面展示的人类客服专家的理想答案之间的相似度。",
+        "",
+        "这是我们可以使用的提示，我们将使用LLM并让它充当一个助理，",
+        "通过比较自动生成的回复和理想的由人类专家编写的回复，评估客服代表回答用户问题的能力。",
+        "",
+        "所以我们将给它提供数据，也就是客户的请求是什么，",
+        "专家编写的理想答案是什么，然后我们的LLM实际上输出了什么。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "72",
+          "startTime": "00:06:09,280",
+          "endTime": "00:06:13,857",
+          "text": "And this rubric comes from the OpenAI open source evals framework,"
+        },
+        {
+          "id": "73",
+          "startTime": "00:06:13,858",
+          "endTime": "00:06:23,320",
+          "text": "which is a fantastic framework with many evaluation methods contributed both by OpenAI developers and by the broader open source community."
+        },
+        {
+          "id": "74",
+          "startTime": "00:06:23,320",
+          "endTime": "00:06:32,840",
+          "text": "In fact, if you want, you could contribute an eval to that framework yourself to help others evaluate their large language model outputs."
+        },
+        {
+          "id": "75",
+          "startTime": "00:06:32,840",
+          "endTime": "00:06:39,499",
+          "text": "So in this rubric, we tell the LLM to compare the factual content of the submitted answer with the expert answer,"
+        },
+        {
+          "id": "76",
+          "startTime": "00:06:39,500",
+          "endTime": "00:06:42,629",
+          "text": "ignore differences in style, grammar, punctuation,"
+        },
+        {
+          "id": "77",
+          "startTime": "00:06:42,630",
+          "endTime": "00:06:46,840",
+          "text": "and feel free to pause the video and read through this in detail."
+        },
+        {
+          "id": "78",
+          "startTime": "00:06:46,840",
+          "endTime": "00:06:53,557",
+          "text": "But the key is we ask it to carry the comparison and output a score from A to E,"
+        },
+        {
+          "id": "79",
+          "startTime": "00:06:53,558",
+          "endTime": "00:06:59,499",
+          "text": "depending on whether the submitted answer is a subset of the expert answer and is fully consistent"
+        },
+        {
+          "id": "80",
+          "startTime": "00:06:59,500",
+          "endTime": "00:07:03,343",
+          "text": "versus the submitted answer is a superset of the expert answer,"
+        },
+        {
+          "id": "81",
+          "startTime": "00:07:03,344",
+          "endTime": "00:07:05,400",
+          "text": "but it's fully consistent with it."
+        }
+      ],
+      "source": [
+        "And this rubric comes from the OpenAI open source evals framework,",
+        "which is a fantastic framework with many evaluation methods contributed both by OpenAI developers and by the broader open source community.",
+        "In fact, if you want, you could contribute an eval to that framework yourself to help others evaluate their large language model outputs.",
+        "So in this rubric, we tell the LLM to compare the factual content of the submitted answer with the expert answer,",
+        "ignore differences in style, grammar, punctuation,",
+        "and feel free to pause the video and read through this in detail.",
+        "But the key is we ask it to carry the comparison and output a score from A to E,",
+        "depending on whether the submitted answer is a subset of the expert answer",
+        "and is fully consistent versus the submitted answer is a superset of the expert answer,",
+        "but it's fully consistent with it."
+      ],
+      "result": [
+        "这个评分标准来自OpenAI的开源评估框架，",
+        "这是一个非常棒的框架，其中包含了许多由OpenAI开发人员和广大开源社区志愿者贡献的评估方法。",
+        "事实上，如果你愿意，你也可以为该框架贡献一个评估方法，以帮助其他人评估他们的大型语言模型输出。",
+        "在这个评分标准中，我们要求LLM对输入的内容与专家写的理想答案进行比较，",
+        "可以忽略风格、语法、标点的差异。",
+        "你可以随时暂停视频，详细阅读这个评分标准。",
+        "但关键是我们要求它进行比较并输出一个从A到E的分数，",
+        "并根据提交的内容是否包含在专家内容中并完全一致，",
+        "或者提交的内容是否超越了专家内容，但完全与之一致。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "82",
+          "startTime": "00:07:05,400",
+          "endTime": "00:07:08,560",
+          "text": "This might mean it hallucinated or made up some additional facts."
+        },
+        {
+          "id": "83",
+          "startTime": "00:07:08,560",
+          "endTime": "00:07:13,729",
+          "text": "Submitted answer contains all the details as a expert answer,"
+        },
+        {
+          "id": "84",
+          "startTime": "00:07:13,730",
+          "endTime": "00:07:22,840",
+          "text": "whether there's disagreement or whether the answers differ, but these differences don't matter from the perspective of factuality."
+        },
+        {
+          "id": "85",
+          "startTime": "00:07:22,840",
+          "endTime": "00:07:27,040",
+          "text": "And the LLM will pick whichever of these seems to be the most appropriate description."
+        },
+        {
+          "id": "86",
+          "startTime": "00:07:27,040",
+          "endTime": "00:07:29,480",
+          "text": "So here's the assistant answer that we had just now."
+        },
+        {
+          "id": "87",
+          "startTime": "00:07:29,480",
+          "endTime": "00:07:31,000",
+          "text": "I think it's a pretty good answer,"
+        },
+        {
+          "id": "88",
+          "startTime": "00:07:31,001",
+          "endTime": "00:07:35,920",
+          "text": "but now let's see what the things when it compares the assistant answer to test set ID."
+        },
+        {
+          "id": "89",
+          "startTime": "00:07:35,920",
+          "endTime": "00:07:37,729",
+          "text": "Ooh, looks like it got an A."
+        },
+        {
+          "id": "90",
+          "startTime": "00:07:37,730",
+          "endTime": "00:07:44,400",
+          "text": "And so it thinks the submitted answer is a subset of the expert answer and is fully consistent with it."
+        },
+        {
+          "id": "91",
+          "startTime": "00:07:44,400",
+          "endTime": "00:07:45,400",
+          "text": "And that sounds right to me."
+        }
+      ],
+      "source": [
+        "This might mean it hallucinated or made up some additional facts.",
+        "Submitted answer contains all the details as a expert answer,",
+        "whether there's disagreement or whether the answers differ, but these differences don't matter from the perspective of factuality.",
+        "And the LLM will pick whichever of these seems to be the most appropriate description.",
+        "So here's the assistant answer that we had just now.",
+        "I think it's a pretty good answer,",
+        "but now let's see what the things when it compares the assistant answer to test set ID.",
+        "Ooh, looks like it got an A.",
+        "And so it thinks the submitted answer is a subset of the expert answer and is fully consistent with it.",
+        "And that sounds right to me."
+      ],
+      "result": [
+        "这可能意味着它产生了幻觉或编造了一些额外的事实。",
+        "提交的内容包含了所有专家内容的细节，",
+        "无论是否存在分歧，或者内容是否有所不同，但从事实性的角度来看，这些差异并不重要。",
+        "而且LLM会选择其中最合适的描述。",
+        "这就是我们刚才得到的内容。",
+        "我认为这是一个相当不错的内容，",
+        "但现在让我们看看它在将得到的内容与测试集进行比较时的想法。",
+        "哦，看起来它得了个A。",
+        "它认为提交的内容是专家内容的子集，并且与之完全一致。",
+        "我觉得这个说法很对。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "92",
+          "startTime": "00:07:45,400",
+          "endTime": "00:07:51,280",
+          "text": "This assistant answer is much shorter than the long expert answer up top, but it does hopefully is consistent."
+        },
+        {
+          "id": "93",
+          "startTime": "00:07:51,280",
+          "endTime": "00:07:59,000",
+          "text": "Once again, I'm using GPT-3.5-turbo in this example, but to get a more rigorous evaluation,"
+        },
+        {
+          "id": "94",
+          "startTime": "00:07:59,000",
+          "endTime": "00:08:04,400",
+          "text": "it might make sense to use GPT 4 in your own application."
+        },
+        {
+          "id": "95",
+          "startTime": "00:08:04,400",
+          "endTime": "00:08:06,160",
+          "text": "Now let's try something totally different."
+        },
+        {
+          "id": "96",
+          "startTime": "00:08:06,160",
+          "endTime": "00:08:10,400",
+          "text": "I'm going to have a very different assistant answer."
+        },
+        {
+          "id": "97",
+          "startTime": "00:08:10,400",
+          "endTime": "00:08:15,520",
+          "text": "\"Life is like a box of chocolate\", quote from a movie called \"Forrest Gump\"."
+        },
+        {
+          "id": "98",
+          "startTime": "00:08:15,520",
+          "endTime": "00:08:20,214",
+          "text": "And if we were to evaluate that, it outputs D"
+        },
+        {
+          "id": "99",
+          "startTime": "00:08:20,215",
+          "endTime": "00:08:28,320",
+          "text": "and it concludes that there's a disagreement between submitted answer, \"life is like a box of chocolate\" and the expert answer."
+        },
+        {
+          "id": "100",
+          "startTime": "00:08:28,320",
+          "endTime": "00:08:32,120",
+          "text": "So it correctly assesses this to be a pretty terrible answer."
+        },
+        {
+          "id": "101",
+          "startTime": "00:08:32,120",
+          "endTime": "00:08:33,320",
+          "text": "And so that's it."
+        }
+      ],
+      "source": [
+        "This assistant answer is much shorter than the long expert answer up top, but it does hopefully is consistent.",
+        "Once again, I'm using GPT-3.5-turbo in this example, but to get a more rigorous evaluation,",
+        "it might make sense to use GPT 4 in your own application.",
+        "Now let's try something totally different.",
+        "I'm going to have a very different assistant answer.",
+        "\"Life is like a box of chocolate\", quote from a movie called \"Forrest Gump\".",
+        "And if we were to evaluate that, it outputs D",
+        "and it concludes that there's a disagreement between submitted answer, \"life is like a box of chocolate\" and the expert answer.",
+        "So it correctly assesses this to be a pretty terrible answer.",
+        "And so that's it."
+      ],
+      "result": [
+        "这个LLM生成的答案比上面长篇大论的专家答案要短得多，但希望它是一致的。",
+        "再次说明，我在这个例子中使用的是 GPT-3.5-turbo，但为了更严谨的评估，",
+        "在你自己的应用中使用 GPT-4 可能更有意义。",
+        "现在让我们尝试一些完全不同的东西。",
+        "我将用一段完全不同的测试答案。",
+        "“生活就像一盒巧克力”，这句话出自一部名为《阿甘正传》的电影。",
+        "如果我们用它来测试，得到的结果是 D",
+        "并得出提交的答案“生活就像一盒巧克力”与专家答案之间存在分歧的结论。",
+        "所以它正确地判断这是一个非常糟糕的答案。",
+        "就是这样。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "102",
+          "startTime": "00:08:33,320",
+          "endTime": "00:08:38,080",
+          "text": "I hope you take away from this video two design patterns."
+        },
+        {
+          "id": "103",
+          "startTime": "00:08:38,081",
+          "endTime": "00:08:42,300",
+          "text": "First is even without an expert provided ideal answer,"
+        },
+        {
+          "id": "104",
+          "startTime": "00:08:42,301",
+          "endTime": "00:08:48,720",
+          "text": "if you can write a rubric, you can use one LLM to evaluate another LLM's output."
+        },
+        {
+          "id": "105",
+          "startTime": "00:08:48,720",
+          "endTime": "00:08:53,029",
+          "text": "And second, if you can provide an expert provided ideal answer,"
+        },
+        {
+          "id": "106",
+          "startTime": "00:08:53,030",
+          "endTime": "00:09:03,280",
+          "text": "then that can help your LLM better compare if a specific assistant output is similar to the expert provided ideal answer."
+        },
+        {
+          "id": "107",
+          "startTime": "00:09:03,280",
+          "endTime": "00:09:09,343",
+          "text": "I hope that helps you to evaluate your LLM systems outputs,"
+        },
+        {
+          "id": "108",
+          "startTime": "00:09:09,344",
+          "endTime": "00:09:16,343",
+          "text": "so that both during development as well as when the system is running and you're getting responses,"
+        },
+        {
+          "id": "109",
+          "startTime": "00:09:16,344",
+          "endTime": "00:09:26,720",
+          "text": "you can continue to monitor its performance and also have these tools to continuously evaluate  and keep on improving the performance of your system."
+        }
+      ],
+      "source": [
+        "I hope you take away from this video two design patterns.",
+        "First is even without an expert provided ideal answer,",
+        "if you can write a rubric, you can use one LLM to evaluate another LLM's output.",
+        "And second, if you can provide an expert provided ideal answer,",
+        "then that can help your LLM better compare if a specific assistant output is similar to the expert provided ideal answer.",
+        "I hope that helps you to evaluate your LLM systems outputs,",
+        "so that both during development as well as when the system is running and you're getting responses,",
+        "you can continue to monitor its performance and also have these tools to continuously evaluate  and keep on improving the performance of your system."
+      ],
+      "result": [
+        "我希望你从这个视频中学到两个设计模式。",
+        "首先，即使没有专家提供的理想答案，",
+        "如果你能编写一个评分标准，你就可以用一个LLM来评估另一个LLM的输出。",
+        "其次，如果你有专家提供的理想答案，",
+        "那么这可以帮助你的LLM更好地比较某一段内容是否与专家提供的理想答案相似。",
+        "我希望这能帮助你评估你的LLM系统的输出，",
+        "以便在开发过程中和系统运行时，你可以对获得的响应进行持续的监控，并利用这些工具来持续评估和提升你的系统性能。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L9-vid10_1.srt",
+  "ouputBasePath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L9-vid10_1",
+  "totalCost": 0.24431999999999998,
+  "translationPath": "input/Building Systems with the ChatGPT API/sc-openai-c2-L9-vid10_1/translation.json"
+}

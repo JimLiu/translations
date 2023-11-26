@@ -1,0 +1,506 @@
+[Script Info]
+
+Title: sc-openai-c2-L5-vid6_1
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,16,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 9,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs10\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 1,0:00:05.0,0:00:10.40,Secondary,,0,0,0,,In this video, we'll learn how to split complex tasks into a series of simpler subtasks by
+Dialogue: 1,0:00:10.40,0:00:12.92,Secondary,,0,0,0,,chaining multiple prompts together.
+Dialogue: 1,0:00:12.92,0:00:16.68,Secondary,,0,0,0,,You might be wondering, why would you split up a task into multiple prompts when you could
+Dialogue: 1,0:00:16.68,0:00:21.52,Secondary,,0,0,0,,achieve it with one prompt and chain of thought reasoning like we learned in the previous video?
+Dialogue: 1,0:00:21.52,0:00:25.44,Secondary,,0,0,0,,We've already shown that language models are very good at following complex instructions,
+Dialogue: 1,0:00:25.44,0:00:28.62,Secondary,,0,0,0,,especially the more advanced models like GPT-4.
+Dialogue: 1,0:00:28.62,0:00:35.4,Secondary,,0,0,0,,So let me explain why we would do this with two analogies comparing chain of thought reasoning and chaining multiple prompts.
+Dialogue: 1,0:00:35.4,0:00:42.20,Secondary,,0,0,0,,The first analogy to compare the two is the difference between cooking a complex meal in one go versus cooking it in stages.
+Dialogue: 1,0:00:42.20,0:00:46.56,Secondary,,0,0,0,,Using one long, complicated instruction can be like trying to cook a complex meal all
+Dialogue: 1,0:00:46.56,0:00:52.4,Secondary,,0,0,0,,at once where you have to manage multiple ingredients, cooking techniques, and timings simultaneously.
+Dialogue: 1,0:00:52.4,0:00:57.72,Secondary,,0,0,0,,It can be challenging to keep track of everything and ensure that each component is cooked perfectly.
+Dialogue: 1,0:00:57.72,0:01:01.42,Secondary,,0,0,0,,Chaining prompts, on the other hand, is like cooking the meal in stages where you focus
+Dialogue: 1,0:01:01.42,0:01:06.82,Secondary,,0,0,0,,on one component at a time, ensuring that each part is cooked correctly before moving on to the next.
+Dialogue: 1,0:01:06.82,0:01:12.62,Secondary,,0,0,0,,This approach breaks down the complexity of the task, making it easier to manage and reducing the likelihood of errors.
+Dialogue: 1,0:01:12.62,0:01:17.78,Secondary,,0,0,0,,However, this approach might be unnecessary and overcomplicated for a very simple recipe.
+Dialogue: 1,0:01:17.78,0:01:21.36,Secondary,,0,0,0,,A slightly better analogy for the same thing is the difference between reading spaghetti
+Dialogue: 1,0:01:21.36,0:01:25.78,Secondary,,0,0,0,,code with everything in one long file and a simple modular program.
+Dialogue: 1,0:01:25.78,0:01:30.16,Secondary,,0,0,0,,The thing that can make spaghetti code bad and difficult to debug is ambiguity and complex
+Dialogue: 1,0:01:30.16,0:01:32.74,Secondary,,0,0,0,,dependencies between different parts of the logic.
+Dialogue: 1,0:01:32.74,0:01:37.60,Secondary,,0,0,0,,The same can be true of a complex single-step task submitted to a language model.
+Dialogue: 1,0:01:37.60,0:01:41.54,Secondary,,0,0,0,,Chaining prompts is a powerful strategy when you have a workflow where you can maintain
+Dialogue: 1,0:01:41.54,0:01:46.66,Secondary,,0,0,0,,the state of the system at any given point and take different actions depending on the current state.
+Dialogue: 1,0:01:46.66,0:01:52.42,Secondary,,0,0,0,,An example of the current state would be after you've classified an incoming customer query,
+Dialogue: 1,0:01:52.42,0:01:58.2,Secondary,,0,0,0,,the state would be the classification, so it's an account question or it's a product question.
+Dialogue: 1,0:01:58.2,0:02:01.98,Secondary,,0,0,0,,And then based on the state, you might do something different.
+Dialogue: 1,0:02:01.98,0:02:06.38,Secondary,,0,0,0,,Each subtask contains only the instructions required for a single state of the task, which
+Dialogue: 1,0:02:06.38,0:02:10.50,Secondary,,0,0,0,,makes the system easier to manage, makes sure the model has all the information it needs
+Dialogue: 1,0:02:10.50,0:02:15.56,Secondary,,0,0,0,,to carry out a task, and reduces the likelihood of errors, as I mentioned.
+Dialogue: 1,0:02:15.56,0:02:20.6,Secondary,,0,0,0,,This approach can also reduce and lower costs, since longer prompts with more tokens cost
+Dialogue: 1,0:02:20.6,0:02:24.94,Secondary,,0,0,0,,more to run, and outlining all steps might be unnecessary in some cases.
+Dialogue: 1,0:02:24.94,0:02:28.98,Secondary,,0,0,0,,Another benefit of this approach is that it is also easier to test which steps might be
+Dialogue: 1,0:02:28.98,0:02:33.38,Secondary,,0,0,0,,failing more often, or to have a human in the loop at a specific step.
+Dialogue: 1,0:02:33.38,0:02:37.90,Secondary,,0,0,0,,So to summarize, because this was a long explanation, instead of describing a whole complex workflow
+Dialogue: 1,0:02:37.90,0:02:42.42,Secondary,,0,0,0,,in dozens of bullet points or several paragraphs in one prompt, like in the previous video,
+Dialogue: 1,0:02:42.42,0:02:48.48,Secondary,,0,0,0,,it might be better to keep track of the state externally and then inject relevant instructions as needed.
+Dialogue: 1,0:02:48.48,0:02:50.22,Secondary,,0,0,0,,And what makes a problem complex?
+Dialogue: 1,0:02:50.22,0:02:54.42,Secondary,,0,0,0,,I think in general a problem is complex if there are many different instructions, and
+Dialogue: 1,0:02:54.42,0:02:58.62,Secondary,,0,0,0,,potentially all of them could apply to any given situation, as these are the cases where
+Dialogue: 1,0:02:58.62,0:03:01.50,Secondary,,0,0,0,,it could become hard for the model to reason about what to do.
+Dialogue: 1,0:03:01.50,0:03:04.76,Secondary,,0,0,0,,And as you build with and interact with these models more, you'll gain an intuition for
+Dialogue: 1,0:03:04.76,0:03:07.54,Secondary,,0,0,0,,when to use this strategy versus the previous.
+Dialogue: 1,0:03:07.54,0:03:12.14,Secondary,,0,0,0,,And one additional benefit that I didn't mention yet, is that it also allows the model to use
+Dialogue: 1,0:03:12.14,0:03:16.38,Secondary,,0,0,0,,external tools at certain points of the workflow if necessary.
+Dialogue: 1,0:03:16.38,0:03:23.22,Secondary,,0,0,0,,For example, it might decide to look something up in a product catalog, or call an API, or search a knowledge base.
+Dialogue: 1,0:03:23.22,0:03:26.14,Secondary,,0,0,0,,Something that could not be achieved with a single prompt.
+Dialogue: 1,0:03:26.14,0:03:29.20,Secondary,,0,0,0,,So with that, let's dive into an example.
+Dialogue: 1,0:03:29.20,0:03:32.78,Secondary,,0,0,0,,So we're going to use the same example as in the previous video, where we want to answer
+Dialogue: 1,0:03:32.78,0:03:35.46,Secondary,,0,0,0,,a customer's question about a specific product.
+Dialogue: 1,0:03:35.46,0:03:42.56,Secondary,,0,0,0,,But this time we'll use more products, and also break the steps down into a number of different prompts.
+Dialogue: 1,0:03:42.56,0:03:47.90,Secondary,,0,0,0,,So we'll use the same delimiter that we've been using in the previous videos.
+Dialogue: 1,0:03:47.90,0:03:53.18,Secondary,,0,0,0,,And let's read through our system message.
+Dialogue: 1,0:03:53.18,0:03:55.60,Secondary,,0,0,0,,You will be provided with customer service queries.
+Dialogue: 1,0:03:55.60,0:04:00.78,Secondary,,0,0,0,,The customer service query will be delimited with four hashtag characters.
+Dialogue: 1,0:04:00.78,0:04:04.90,Secondary,,0,0,0,,Output a Python list of objects where each object has the following format.
+Dialogue: 1,0:04:04.90,0:04:09.26,Secondary,,0,0,0,,Category, which is one of these predefined fields.
+Dialogue: 1,0:04:09.26,0:04:11.8,Secondary,,0,0,0,,Or products.
+Dialogue: 1,0:04:11.8,0:04:14.58,Secondary,,0,0,0,,And this is a list of products that must be found in the allowed products below.
+Dialogue: 1,0:04:14.58,0:04:19.78,Secondary,,0,0,0,,Where the categories and products must be found in the customer service query.
+Dialogue: 1,0:04:19.78,0:04:24.74,Secondary,,0,0,0,,If a product is mentioned, it must be associated with the correct category in the allowed products list below.
+Dialogue: 1,0:04:24.74,0:04:27.50,Secondary,,0,0,0,,If no products or categories are found, output an empty list.
+Dialogue: 1,0:04:27.50,0:04:30.70,Secondary,,0,0,0,,And so now we have our allowed list of products.
+Dialogue: 1,0:04:30.70,0:04:36.6,Secondary,,0,0,0,,So we have the categories and then the products within those categories.
+Dialogue: 1,0:04:36.6,0:04:43.78,Secondary,,0,0,0,,And our final instruction is only output the list of objects with nothing else.
+Dialogue: 1,0:04:43.78,0:04:46.18,Secondary,,0,0,0,,So next we have our user message.
+Dialogue: 1,0:04:46.18,0:04:53.46,Secondary,,0,0,0,,And so this message is: "tell me about the smartx pro phone and the fotosnap camera, the dslr one.
+Dialogue: 1,0:04:53.46,0:04:55.42,Secondary,,0,0,0,,Also tell me about your TVs."
+Dialogue: 1,0:04:55.42,0:04:59.2,Secondary,,0,0,0,,So we're asking about two specific products.
+Dialogue: 1,0:04:59.2,0:05:03.86,Secondary,,0,0,0,,And also this general category of televisions.
+Dialogue: 1,0:05:03.86,0:05:07.42,Secondary,,0,0,0,,And both of these products are mentioned in the allowed products list.
+Dialogue: 1,0:05:07.42,0:05:11.62,Secondary,,0,0,0,,And then we have a television section as well.
+Dialogue: 1,0:05:11.62,0:05:18.42,Secondary,,0,0,0,,Then we format the system message and user message into the messages array.
+Dialogue: 1,0:05:18.42,0:05:25.6,Secondary,,0,0,0,,And then we get the completion from the model.
+Dialogue: 1,0:05:25.6,0:05:30.98,Secondary,,0,0,0,,So as you can see, for our output, we have a list of objects.
+Dialogue: 1,0:05:30.98,0:05:35.18,Secondary,,0,0,0,,And each object has category and products.
+Dialogue: 1,0:05:35.18,0:05:42.14,Secondary,,0,0,0,,So we have the SmartX Pro phone and the FotoSnap DSLR Camera.
+Dialogue: 1,0:05:42.14,0:05:48.6,Secondary,,0,0,0,,And then in the final object, we actually only have a category because we didn't mention any specific TVs.
+Dialogue: 1,0:05:48.6,0:05:58.66,Secondary,,0,0,0,,And so the benefit of outputting this structured response is that we can then read it into a list in Python, which is very nice.
+Dialogue: 1,0:05:58.66,0:06:01.66,Secondary,,0,0,0,,And so let's try another example.
+Dialogue: 1,0:06:01.66,0:06:07.98,Secondary,,0,0,0,,So our second user message is: "my router isn't working."
+Dialogue: 1,0:06:07.98,0:06:12.2,Secondary,,0,0,0,,And if you notice in the list, we don't actually have any routers.
+Dialogue: 1,0:06:12.2,0:06:20.58,Secondary,,0,0,0,,And then let's format this correctly and get the completion.
+Dialogue: 1,0:06:20.58,0:06:25.46,Secondary,,0,0,0,,And so as you can see, in this case, the output is an empty list.
+Dialogue: 1,0:06:25.46,0:06:28.84,Secondary,,0,0,0,,And so now that we have this step to identify the category and products,
+Dialogue: 1,0:06:28.84,0:06:34.10,Secondary,,0,0,0,,if we find any products and categories, we want to load some information about those requested products
+Dialogue: 1,0:06:34.10,0:06:38.42,Secondary,,0,0,0,,and categories into the prompt so that we can better answer the customer question.
+Dialogue: 1,0:06:38.42,0:06:46.6,Secondary,,0,0,0,,And so in our workflow, the state now after this prompt is run is either products have been listed or they haven't been listed.
+Dialogue: 1,0:06:46.6,0:06:51.10,Secondary,,0,0,0,,And in that case, we wouldn't try to look anything up because there's nothing to look up.
+Dialogue: 1,0:06:51.10,0:06:55.76,Secondary,,0,0,0,,And so if I were to actually build this into a system, I might use category names,
+Dialogue: 1,0:06:55.76,0:07:05.26,Secondary,,0,0,0,,maybe something like computers and laptops or something to avoid any weirdness with spaces and special characters.
+Dialogue: 1,0:07:05.26,0:07:07.50,Secondary,,0,0,0,,But this should work for now.
+Dialogue: 1,0:07:07.50,0:07:11.16,Secondary,,0,0,0,,So now we want to look up some information about the products that the user mentioned.
+Dialogue: 1,0:07:11.16,0:07:15.10,Secondary,,0,0,0,,So about this phone, this camera, and about the TVs in general.
+Dialogue: 1,0:07:15.10,0:07:19.2,Secondary,,0,0,0,,And so we need to have some kind of product catalog to look up this information from.
+Dialogue: 1,0:07:19.2,0:07:24.62,Secondary,,0,0,0,,So here we have our product information that I just pasted in.
+Dialogue: 1,0:07:24.62,0:07:32.66,Secondary,,0,0,0,,So as you can see, we have a large number of products available at our store.
+Dialogue: 1,0:07:32.66,0:07:38.10,Secondary,,0,0,0,,And all of these products are fake and were actually generated by GPT-4.
+Dialogue: 1,0:07:38.10,0:07:41.2,Secondary,,0,0,0,,And so for each product, we have a couple of different fields.
+Dialogue: 1,0:07:41.2,0:07:46.96,Secondary,,0,0,0,,We have name, category, brand, warranty, and so on.
+Dialogue: 1,0:07:46.96,0:07:55.70,Secondary,,0,0,0,,And so the products is just a dictionary from product name to this object that contains the information about the product.
+Dialogue: 1,0:07:55.70,0:07:57.78,Secondary,,0,0,0,,Notice that each product has a category.
+Dialogue: 1,0:07:57.78,0:08:01.58,Secondary,,0,0,0,,So remember, we want to look up information about the products that the user asks about.
+Dialogue: 1,0:08:01.58,0:08:08.82,Secondary,,0,0,0,,So we need to define some helper functions to allow us to look up product information by product name.
+Dialogue: 1,0:08:08.82,0:08:14.70,Secondary,,0,0,0,,So let's create a function, get product by name.
+Dialogue: 1,0:08:14.70,0:08:17.10,Secondary,,0,0,0,,We input the name.
+Dialogue: 1,0:08:17.10,0:08:26.56,Secondary,,0,0,0,,And then we're going to return products dictionary, and we're going to get the value for the item with the name as the key.
+Dialogue: 1,0:08:26.56,0:08:29.44,Secondary,,0,0,0,,And then our fallback is just going to be none.
+Dialogue: 1,0:08:29.44,0:08:34.34,Secondary,,0,0,0,,And so we also want to define another helper function to get all of the products for a certain category.
+Dialogue: 1,0:08:34.34,0:08:37.61,Secondary,,0,0,0,,For example, when the user is asking about the TVs we have,
+Dialogue: 1,0:08:37.61,0:08:42.56,Secondary,,0,0,0,,we'd want to load all of the information about all of the different TVs.
+Dialogue: 1,0:08:42.56,0:08:51.22,Secondary,,0,0,0,,So get products by category, input the category name string.
+Dialogue: 1,0:08:51.22,0:08:57.56,Secondary,,0,0,0,,And to do this, we want to loop through all of the products in the products dictionary,
+Dialogue: 1,0:08:57.56,0:09:02.50,Secondary,,0,0,0,,and check each one to see if the category is equal to the input category.
+Dialogue: 1,0:09:02.50,0:09:04.84,Secondary,,0,0,0,,And if so, we want to return that.
+Dialogue: 1,0:09:04.84,0:09:07.92,Secondary,,0,0,0,,So we'll do this as follows.
+Dialogue: 1,0:09:07.92,0:09:12.52,Secondary,,0,0,0,,So first, we want to loop through each product, and we have to get the values because we need
+Dialogue: 1,0:09:12.52,0:09:18.30,Secondary,,0,0,0,,to actually access the category, which is in the value.
+Dialogue: 1,0:09:18.30,0:09:37.6,Secondary,,0,0,0,,And then we'll return this product if the product category is equal to our input category.
+Dialogue: 1,0:09:37.6,0:09:42.22,Secondary,,0,0,0,,So let's do an example for each of these helper functions.
+Dialogue: 1,0:09:42.22,0:09:47.30,Secondary,,0,0,0,,So first, we have a product called the TechPro Ultrabook.
+Dialogue: 1,0:09:47.30,0:09:51.86,Secondary,,0,0,0,,So let's get the product information by name.
+Dialogue: 1,0:09:51.86,0:09:57.26,Secondary,,0,0,0,,So here you can see we've just fetched all of the product information.
+Dialogue: 1,0:09:57.26,0:10:00.66,Secondary,,0,0,0,,And let's do an example to get all of the products for a category.
+Dialogue: 1,0:10:00.66,0:10:07.2,Secondary,,0,0,0,,So let's get all of the products in the computers and laptops category.
+Dialogue: 1,0:10:07.2,0:10:17.2,Secondary,,0,0,0,,So here you see we fetched all of the products with this category.
+Dialogue: 1,0:10:17.2,0:10:20.98,Secondary,,0,0,0,,So let's continue our example.
+Dialogue: 1,0:10:20.98,0:10:24.42,Secondary,,0,0,0,,And just to remember where we are, let's print the user message.
+Dialogue: 1,0:10:24.42,0:10:30.54,Secondary,,0,0,0,,So the user message was: "Tell me about the SmartX Pro phone and the camera and the TVs."
+Dialogue: 1,0:10:30.54,0:10:36.26,Secondary,,0,0,0,,And then the initial output from the model from the first step was this.
+Dialogue: 1,0:10:36.26,0:10:41.22,Secondary,,0,0,0,,And so what we also need to do is read this output from the model, which is a string.
+Dialogue: 1,0:10:41.22,0:10:49.30,Secondary,,0,0,0,,We need to pass that into a list so that we can use it as input to the helper functions that we just wrote.
+Dialogue: 1,0:10:49.30,0:10:54.94,Secondary,,0,0,0,,So let's write a helper function to do this.
+Dialogue: 1,0:10:54.94,0:10:58.42,Secondary,,0,0,0,,So we're going to use the Python JSON module.
+Dialogue: 1,0:10:58.42,0:11:09.86,Secondary,,0,0,0,,And we're going to write a function called read_string_to_list, a very descriptive title, and input string.
+Dialogue: 1,0:11:09.86,0:11:16.2,Secondary,,0,0,0,,And so first we'll just check if the input string is none.
+Dialogue: 1,0:11:16.2,0:11:22.30,Secondary,,0,0,0,,In case something in a previous step failed, we're just going to return nothing.
+Dialogue: 1,0:11:22.30,0:11:29.52,Secondary,,0,0,0,,And now we're going to have a try except block to make sure that we catch any errors.
+Dialogue: 1,0:11:29.52,0:11:37.2,Secondary,,0,0,0,,And so first we replace any single quotes with double quotes in the input string to
+Dialogue: 1,0:11:37.2,0:11:39.18,Secondary,,0,0,0,,make sure we can pass the JSON.
+Dialogue: 1,0:11:39.18,0:11:47.38,Secondary,,0,0,0,,And then we're going to use the JSON loads function to read the input string into the array or the list.
+Dialogue: 1,0:11:47.38,0:11:49.58,Secondary,,0,0,0,,And then we're going to return this.
+Dialogue: 1,0:11:49.58,0:11:55.72,Secondary,,0,0,0,,And if there's a decode error, we're going to print the error and then return none.
+Dialogue: 1,0:11:55.72,0:11:58.54,Secondary,,0,0,0,,So let's try this with our example.
+Dialogue: 1,0:11:58.54,0:12:07.0,Secondary,,0,0,0,,So we're going to get our category and product list using the read_string_to_list helper function
+Dialogue: 1,0:12:07.0,0:12:10.50,Secondary,,0,0,0,,and apply it to this response from the model.
+Dialogue: 1,0:12:10.50,0:12:13.20,Secondary,,0,0,0,,And then we're going to print this list.
+Dialogue: 1,0:12:13.20,0:12:15.34,Secondary,,0,0,0,,So it should look the same.
+Dialogue: 1,0:12:15.34,0:12:17.38,Secondary,,0,0,0,,Let me run this first.
+Dialogue: 1,0:12:17.38,0:12:25.86,Secondary,,0,0,0,,And so as you can see, it's just the same thing except now the type of this variable is actually a list instead of a string.
+Dialogue: 1,0:12:25.86,0:12:29.76,Secondary,,0,0,0,,So the whole point of what we're doing is to get the product information into a list
+Dialogue: 1,0:12:29.76,0:12:34.2,Secondary,,0,0,0,,that we can add to the next instruction to the model, which is going to be the instruction
+Dialogue: 1,0:12:34.2,0:12:36.74,Secondary,,0,0,0,,where we ask it to answer the user question.
+Dialogue: 1,0:12:36.74,0:12:41.62,Secondary,,0,0,0,,And so to do this, we need to put the product information into a nice string format that
+Dialogue: 1,0:12:41.62,0:12:42.94,Secondary,,0,0,0,,we can add to the prompt.
+Dialogue: 1,0:12:42.94,0:12:47.46,Secondary,,0,0,0,,And so let's also create a helper function to do this.
+Dialogue: 1,0:12:47.46,0:12:50.46,Secondary,,0,0,0,,So we're going to call it generate_output_string.
+Dialogue: 1,0:12:50.46,0:12:54.18,Secondary,,0,0,0,,And it's going to take in the list of data that we just created.
+Dialogue: 1,0:12:54.18,0:12:56.62,Secondary,,0,0,0,,So this.
+Dialogue: 1,0:12:56.62,0:13:00.74,Secondary,,0,0,0,,And then I'm going to copy in some code and then we'll walk through what it's doing.
+Dialogue: 1,0:13:00.74,0:13:06.26,Secondary,,0,0,0,,So now I'm going to paste in some code and show you an example and then we'll talk about what this function is doing.
+Dialogue: 1,0:13:06.26,0:13:12.22,Secondary,,0,0,0,,So we're going to get the product information from our first user message.
+Dialogue: 1,0:13:12.22,0:13:16.82,Secondary,,0,0,0,,And so we're going to use this helper function generate_output_string on our category and product list,
+Dialogue: 1,0:13:16.82,0:13:23.60,Secondary,,0,0,0,,which if we remember was this.
+Dialogue: 1,0:13:23.60,0:13:31.86,Secondary,,0,0,0,,And so here we have all of the product information for the products that were mentioned in the user message.
+Dialogue: 1,0:13:31.86,0:13:36.2,Secondary,,0,0,0,,So we have the phone that they mentioned, we have the camera that they mentioned, and
+Dialogue: 1,0:13:36.2,0:13:42.22,Secondary,,0,0,0,,then we have all of the product information for all of our TVs.
+Dialogue: 1,0:13:42.22,0:13:49.6,Secondary,,0,0,0,,And this is information that will be helpful for the model to be able to answer the user's initial question.
+Dialogue: 1,0:13:49.6,0:13:51.35,Secondary,,0,0,0,,And if you're interested in how this function works,
+Dialogue: 1,0:13:51.35,0:13:57.26,Secondary,,0,0,0,,I'll give a brief overview, but you can feel free to pause the video and read it more thoroughly.
+Dialogue: 1,0:13:57.26,0:14:03.66,Secondary,,0,0,0,,So it basically just loops through all of the objects in this list and first checks if there are products.
+Dialogue: 1,0:14:03.66,0:14:09.26,Secondary,,0,0,0,,If so, it gets the information for each product and then it checks if there's a category,
+Dialogue: 1,0:14:09.26,0:14:10.46,Secondary,,0,0,0,,if there weren't any products.
+Dialogue: 1,0:14:10.46,0:14:14.64,Secondary,,0,0,0,,So that would be for this object, for example.
+Dialogue: 1,0:14:14.64,0:14:22.52,Secondary,,0,0,0,,And then it gets all of the product information for the products in that category and it just adds them to this string.
+Dialogue: 1,0:14:22.52,0:14:24.76,Secondary,,0,0,0,,And then that's what it returns.
+Dialogue: 1,0:14:24.76,0:14:29.96,Secondary,,0,0,0,,So at this point, we've found the relevant product information to answer the user question.
+Dialogue: 1,0:14:29.96,0:14:32.92,Secondary,,0,0,0,,Now it's time for the model to actually answer the question.
+Dialogue: 1,0:14:32.92,0:14:36.44,Secondary,,0,0,0,,So let's have our system message.
+Dialogue: 1,0:14:36.44,0:14:38.60,Secondary,,0,0,0,,So this is the instruction.
+Dialogue: 1,0:14:38.60,0:14:41.72,Secondary,,0,0,0,,You're a customer service assistant for a large electronics store.
+Dialogue: 1,0:14:41.72,0:14:47.0,Secondary,,0,0,0,,Respond in a friendly and helpful tone with, let's say, with very concise answers.
+Dialogue: 1,0:14:47.0,0:14:49.20,Secondary,,0,0,0,,Make sure to ask the user relevant follow-up questions.
+Dialogue: 1,0:14:49.20,0:14:52.82,Secondary,,0,0,0,,So we want this to be an interactive experience for the user.
+Dialogue: 1,0:14:52.82,0:14:56.64,Secondary,,0,0,0,,And so just as a reminder, this was our initial user message.
+Dialogue: 1,0:14:56.64,0:15:00.20,Secondary,,0,0,0,,I'll just add it again.
+Dialogue: 1,0:15:00.20,0:15:04.56,Secondary,,0,0,0,,And so now we're going to have our messages array.
+Dialogue: 1,0:15:04.56,0:15:06.16,Secondary,,0,0,0,,And this is the input to the model.
+Dialogue: 1,0:15:06.16,0:15:07.20,Secondary,,0,0,0,,So let's go through this.
+Dialogue: 1,0:15:07.20,0:15:11.92,Secondary,,0,0,0,,We have our first message, which is the system message as usual.
+Dialogue: 1,0:15:11.92,0:15:14.80,Secondary,,0,0,0,,We have the user message.
+Dialogue: 1,0:15:14.80,0:15:20.28,Secondary,,0,0,0,,And then we have this additional assistant message.
+Dialogue: 1,0:15:20.28,0:15:24.68,Secondary,,0,0,0,,And this is the message that contains all of the product information that we just looked up.
+Dialogue: 1,0:15:24.68,0:15:32.84,Secondary,,0,0,0,,And so we're saying relevant product information, new line, and then this product information that we just found.
+Dialogue: 1,0:15:32.84,0:15:38.36,Secondary,,0,0,0,,And so now the model has the relevant context it needs to be able to answer this user's question.
+Dialogue: 1,0:15:38.36,0:15:45.4,Secondary,,0,0,0,,So let's get the final response and print it.
+Dialogue: 1,0:15:45.4,0:15:58.16,Secondary,,0,0,0,,And we're hoping that the model is going to use relevant information from the product information in order to answer the user in a helpful way.
+Dialogue: 1,0:15:58.16,0:16:04.92,Secondary,,0,0,0,,So first it tells the user about the Smart X Pro phone, tells the user about the FotoSnap camera,
+Dialogue: 1,0:16:05.95,0:16:13.92,Secondary,,0,0,0,,and then talks about the different televisions that we have in stock, and then asks the follow-up question.
+Dialogue: 1,0:16:13.92,0:16:17.40,Secondary,,0,0,0,,So as you can see, by breaking this up into a series of steps,
+Dialogue: 1,0:16:17.40,0:16:20.67,Secondary,,0,0,0,,we were able to load information relevant to the user query
+Dialogue: 1,0:16:20.67,0:16:25.12,Secondary,,0,0,0,,to give the model the relevant context it needed to answer the question effectively.
+Dialogue: 1,0:16:25.12,0:16:29.32,Secondary,,0,0,0,,So you might be wondering, why are we selectively loading product descriptions into the prompt
+Dialogue: 1,0:16:29.32,0:16:33.60,Secondary,,0,0,0,,instead of including all of them and letting the model use the information it needs?
+Dialogue: 1,0:16:33.60,0:16:38.52,Secondary,,0,0,0,,And so what I mean by this is, why didn't we just include all of this product information in the prompt,
+Dialogue: 1,0:16:39.0,0:16:45.24,Secondary,,0,0,0,,and we wouldn't have to bother with all of those intermediate steps to actually look up the product information?
+Dialogue: 1,0:16:45.24,0:16:47.36,Secondary,,0,0,0,,There's a couple of reasons for this.
+Dialogue: 1,0:16:47.36,0:16:51.84,Secondary,,0,0,0,,Firstly, including all of the product descriptions might make the context more confusing for the model,
+Dialogue: 1,0:16:52.0,0:16:57.0,Secondary,,0,0,0,,just as it would for a person trying to process a large amount of information at once.
+Dialogue: 1,0:16:57.0,0:17:01.43,Secondary,,0,0,0,,I will say this is a lot less relevant for more advanced models like GPT-4,
+Dialogue: 1,0:17:01.43,0:17:04.72,Secondary,,0,0,0,,especially when the context is well-structured like it is in this example,
+Dialogue: 1,0:17:04.73,0:17:10.24,Secondary,,0,0,0,,and the model is smart enough just to ignore the information that clearly isn't relevant.
+Dialogue: 1,0:17:10.24,0:17:12.8,Secondary,,0,0,0,,The next reasons are more compelling.
+Dialogue: 1,0:17:12.8,0:17:15.83,Secondary,,0,0,0,,So the second reason is that language models have context limitations,
+Dialogue: 1,0:17:15.83,0:17:20.12,Secondary,,0,0,0,,i.e. a fixed number of tokens allowed as input and output.
+Dialogue: 1,0:17:20.12,0:17:24.0,Secondary,,0,0,0,,So if you have a large number of products, imagine you had a huge product catalogue,
+Dialogue: 1,0:17:24.0,0:17:28.0,Secondary,,0,0,0,,you wouldn't even be able to fit all of the descriptions into the context window.
+Dialogue: 1,0:17:28.0,0:17:32.32,Secondary,,0,0,0,,And the final reason is that including all of the product descriptions could be expensive
+Dialogue: 1,0:17:32.32,0:17:35.6,Secondary,,0,0,0,,as you pay per token when using language models.
+Dialogue: 1,0:17:35.6,0:17:40.88,Secondary,,0,0,0,,So by selectively loading information, you can reduce the cost of generating responses.
+Dialogue: 1,0:17:40.88,0:17:44.76,Secondary,,0,0,0,,In general, determining when to dynamically load information into the model's context
+Dialogue: 1,0:17:44.76,0:17:50.88,Secondary,,0,0,0,,and allowing the model to decide when it needs more information is one of the best ways to augment the capabilities of these models.
+Dialogue: 1,0:17:50.88,0:17:54.64,Secondary,,0,0,0,,And to reiterate, you should think of a language model as a reasoning agent that requires the
+Dialogue: 1,0:17:54.64,0:17:59.32,Secondary,,0,0,0,,necessary context to draw useful conclusions and perform useful tasks.
+Dialogue: 1,0:17:59.32,0:18:03.50,Secondary,,0,0,0,,And so in this case, we had to give the model the product information,
+Dialogue: 1,0:18:03.50,0:18:09.52,Secondary,,0,0,0,,and then it was able to reason about that product information to create a useful answer for the user.
+Dialogue: 1,0:18:09.52,0:18:15.45,Secondary,,0,0,0,,And in this example, we only added a call to a specific function or functions to get the product description by product name,
+Dialogue: 1,0:18:15.45,0:18:18.52,Secondary,,0,0,0,,or to get the category products by category name.
+Dialogue: 1,0:18:18.52,0:18:23.4,Secondary,,0,0,0,,But the models are actually good at deciding when to use a variety of different tools,
+Dialogue: 1,0:18:23.4,0:18:25.40,Secondary,,0,0,0,,and can use them properly with instructions.
+Dialogue: 1,0:18:25.40,0:18:28.16,Secondary,,0,0,0,,And this is the idea behind chatGPT plugins.
+Dialogue: 1,0:18:28.16,0:18:31.23,Secondary,,0,0,0,,We tell the model what tools it has access to and what they do,
+Dialogue: 1,0:18:31.23,0:18:37.36,Secondary,,0,0,0,,and it chooses to use them when it needs information from a specific source or wants to take some other appropriate action.
+Dialogue: 1,0:18:37.36,0:18:42.64,Secondary,,0,0,0,,In our example, we can only look up information by exact product and category name match,
+Dialogue: 1,0:18:42.64,0:18:46.0,Secondary,,0,0,0,,but there are also more advanced techniques for information retrieval.
+Dialogue: 1,0:18:46.0,0:18:50.16,Secondary,,0,0,0,,One of the most effective ways to retrieve information is using text embeddings.
+Dialogue: 1,0:18:50.16,0:18:56.88,Secondary,,0,0,0,,Embeddings can be used to implement efficient knowledge retrieval over a large corpus to find information related to a given query.
+Dialogue: 1,0:18:56.88,0:19:02.16,Secondary,,0,0,0,,One of the key advantages of using text embeddings is that they enable fuzzy or semantic search,
+Dialogue: 1,0:19:02.16,0:19:06.28,Secondary,,0,0,0,,which allows you to find relevant information without using the exact keywords.
+Dialogue: 1,0:19:06.28,0:19:09.51,Secondary,,0,0,0,,So in our example, we wouldn't necessarily need the exact name of the product,
+Dialogue: 1,0:19:09.51,0:19:16.28,Secondary,,0,0,0,,but we could do a more a search with a more general query like a mobile phone.
+Dialogue: 1,0:19:16.28,0:19:21.96,Secondary,,0,0,0,,We're planning to create a comprehensive course on how to use embeddings for various applications soon, so stay tuned.
+Dialogue: 1,0:19:21.96,0:19:25.28,Secondary,,0,0,0,,And with that, let's move on to the next video where we're going to talk about:
+Dialogue: 1,0:19:25.28,0:19:28.80,Secondary,,0,0,0,,how to evaluate the outputs from the language model.
+Dialogue: 1,0:00:05.0,0:00:12.92,Default,,0,0,0,,在这个视频中，我们将学习如何通过将\N多个Prompt链接在一起，将复杂任务分\N解为一系列更简单的子任务。
+Dialogue: 1,0:00:12.92,0:00:16.68,Default,,0,0,0,,你可能会想，为什么要将任务\N分解为多个Prompt，而不是
+Dialogue: 1,0:00:16.68,0:00:21.52,Default,,0,0,0,,通过一个Prompt和一系列思维推理来实现呢\N？就像我们在上一个视频中学到的那样。
+Dialogue: 1,0:00:21.52,0:00:25.44,Default,,0,0,0,,我们已经证明，语言模型非\N常擅长遵循复杂的指令，
+Dialogue: 1,0:00:25.44,0:00:28.62,Default,,0,0,0,,尤其是像GPT-4这样的更先进的模型。
+Dialogue: 1,0:00:28.62,0:00:35.4,Default,,0,0,0,,那么让我用两个类比来解释为什么我们\N要比较思维链推理和多个Prompt链。
+Dialogue: 1,0:00:35.4,0:00:42.20,Default,,0,0,0,,第一个类比是一次性做好一桌饭菜与\N分阶段做好一桌饭菜之间的区别。
+Dialogue: 1,0:00:42.20,0:00:46.56,Default,,0,0,0,,使用一个长而复杂的指令就像\N一次性做一桌丰盛的饭菜，
+Dialogue: 1,0:00:46.56,0:00:52.4,Default,,0,0,0,,你必须同时使用多种食材、利用高\N超的烹饪技巧和掌握好火候。
+Dialogue: 1,0:00:52.4,0:00:57.72,Default,,0,0,0,,同时使用所有食材，并要确保每个菜都煮得\N火候刚好，这是一件非常有挑战的事。
+Dialogue: 1,0:00:57.72,0:01:01.42,Default,,0,0,0,,另一方面，链式Prompt（Chaining prompts）就\N像分阶段做一桌饭菜，你可以集中注意力
+Dialogue: 1,0:01:01.42,0:01:06.82,Default,,0,0,0,,一次处理一个菜，确保每个菜在\N做下一个菜之前都煮好了。
+Dialogue: 1,0:01:06.82,0:01:12.62,Default,,0,0,0,,这种方法将任务的复杂性分解，使其\N更易于管理，降低出错的可能性。
+Dialogue: 1,0:01:12.62,0:01:17.78,Default,,0,0,0,,当然，要是做一顿非常简单的饭菜，这\N种方法可能是不必要的，过于复杂。
+Dialogue: 1,0:01:17.78,0:01:21.36,Default,,0,0,0,,对于这件事，对于有些程序经验的\N同学来说，一个更好的类比是
+Dialogue: 1,0:01:21.36,0:01:25.78,Default,,0,0,0,,意大利面条式代码，所有代码都在一个\N长文件中，整个程序只有一个模块。
+Dialogue: 1,0:01:25.78,0:01:30.16,Default,,0,0,0,,之所以意大利面条式代码难以阅读并且难\N以调试，主要原因是其模糊性和复杂的
+Dialogue: 1,0:01:30.16,0:01:32.74,Default,,0,0,0,,逻辑部分之间的依赖关系。
+Dialogue: 1,0:01:32.74,0:01:37.60,Default,,0,0,0,,对于提交给语言模型的复杂\N单步任务，也是类似的。
+Dialogue: 1,0:01:37.60,0:01:41.54,Default,,0,0,0,,链式Prompt这种策略很强\N大，你设计一个工作流，
+Dialogue: 1,0:01:41.54,0:01:46.66,Default,,0,0,0,,把各种中间状态保存下来，然后根\N据当前的状态决定后续操作。
+Dialogue: 1,0:01:46.66,0:01:52.42,Default,,0,0,0,,举一个例子，当客户查询后，你根\N据查询的内容对它进行分类，
+Dialogue: 1,0:01:52.42,0:01:58.2,Default,,0,0,0,,那么当前的状态将是分类，从分类结果可以得\N知它是一个账户问题或者是一个产品问题。
+Dialogue: 1,0:01:58.2,0:02:01.98,Default,,0,0,0,,然后根据这个状态的分类结果\N，你可以采取不同的行动。
+Dialogue: 1,0:02:01.98,0:02:06.38,Default,,0,0,0,,每个子任务很单一，只需要包含执\N行子任务所需的指令，这使得
+Dialogue: 1,0:02:06.38,0:02:10.50,Default,,0,0,0,,系统更容易管理，确保模型具有\N执行任务所需的所有信息
+Dialogue: 1,0:02:10.50,0:02:15.56,Default,,0,0,0,,并减少错误的可能性，正如我前面提到的那样。
+Dialogue: 1,0:02:15.56,0:02:20.6,Default,,0,0,0,,这种方法还可以降低成本，因为Prompt越\N长，消耗的Token就越多，成本越高，
+Dialogue: 1,0:02:20.6,0:02:24.94,Default,,0,0,0,,而在某些情况下，在Prompt中列\N出所有步骤可能是不必要的。
+Dialogue: 1,0:02:24.94,0:02:28.98,Default,,0,0,0,,这种方法的另一个好处是，它也\N更容易测试哪些步骤可能
+Dialogue: 1,0:02:28.98,0:02:33.38,Default,,0,0,0,,更容易出错，或者在特定步骤中让人工介入。
+Dialogue: 1,0:02:33.38,0:02:37.90,Default,,0,0,0,,所以总结一下，因为这是一个很长\N的解释，与其在一个Prompt中
+Dialogue: 1,0:02:37.90,0:02:42.42,Default,,0,0,0,,用几十个要点或几段文字描述一个复杂的\N工作流程，就像在之前的视频中那样，
+Dialogue: 1,0:02:42.42,0:02:48.48,Default,,0,0,0,,不如在外部跟踪状态，然后根\N据需要注入相应的指令。
+Dialogue: 1,0:02:48.48,0:02:50.22,Default,,0,0,0,,那么，是什么使问题变得复杂？
+Dialogue: 1,0:02:50.22,0:02:54.42,Default,,0,0,0,,我认为一般来说，如果有很多不同的指令，并且
+Dialogue: 1,0:02:54.42,0:02:58.62,Default,,0,0,0,,潜在地所有这些指令都可能适用于\N任何给定的情况，那么问题就会
+Dialogue: 1,0:02:58.62,0:03:01.50,Default,,0,0,0,,变得复杂，因为这些情况可能会\N让模型难以推理该做什么。
+Dialogue: 1,0:03:01.50,0:03:04.76,Default,,0,0,0,,随着您与这些模型的构建和\N互动越来越多，您将能
+Dialogue: 1,0:03:04.76,0:03:07.54,Default,,0,0,0,,更直观的了解，何时使用这种链式Prompt的\N策略还是之前一条复杂Prompt的策略。
+Dialogue: 1,0:03:07.54,0:03:12.14,Default,,0,0,0,,还有一点我没提到的额外好处：它还允许
+Dialogue: 1,0:03:12.14,0:03:16.38,Default,,0,0,0,,模型在必要时在工作流程的\N某些点调用外部工具。
+Dialogue: 1,0:03:16.38,0:03:23.22,Default,,0,0,0,,例如，它可以在产品目录中查找某些信\N息，或者调用API，或者搜索知识库。
+Dialogue: 1,0:03:23.22,0:03:26.14,Default,,0,0,0,,这是单个Prompt无法实现的。
+Dialogue: 1,0:03:26.14,0:03:29.20,Default,,0,0,0,,接下来让我们通过一个例子来深入了解。
+Dialogue: 1,0:03:29.20,0:03:32.78,Default,,0,0,0,,我们将使用与上一个视频相\N同的例子，我们想回答
+Dialogue: 1,0:03:32.78,0:03:35.46,Default,,0,0,0,,关于特定产品的客户问题。
+Dialogue: 1,0:03:35.46,0:03:42.56,Default,,0,0,0,,但这次我们将使用更多的产品，并将\N步骤分解为多个不同的Prompt。
+Dialogue: 1,0:03:42.56,0:03:47.90,Default,,0,0,0,,我们将使用与之前视频相同的分隔符。
+Dialogue: 1,0:03:47.90,0:03:53.18,Default,,0,0,0,,让我们阅读一下系统消息。
+Dialogue: 1,0:03:53.18,0:03:55.60,Default,,0,0,0,,您将要处理一段客户服务查询。
+Dialogue: 1,0:03:55.60,0:04:00.78,Default,,0,0,0,,客户服务查询内容会以四个井号字符分隔。
+Dialogue: 1,0:04:00.78,0:04:04.90,Default,,0,0,0,,输出一个Python对象列表，其\N中每个对象具有以下格式：
+Dialogue: 1,0:04:04.90,0:04:09.26,Default,,0,0,0,,类别，这是以下预定义字段之一。
+Dialogue: 1,0:04:09.26,0:04:11.8,Default,,0,0,0,,或产品。
+Dialogue: 1,0:04:11.8,0:04:14.58,Default,,0,0,0,,这是一个产品列表，必须在\N下面的允许产品中找到。
+Dialogue: 1,0:04:14.58,0:04:19.78,Default,,0,0,0,,类别和产品必须在客户服务查询中找到。
+Dialogue: 1,0:04:19.78,0:04:24.74,Default,,0,0,0,,如果提到了产品，必须将其与下面允\N许产品列表中的正确类别关联。
+Dialogue: 1,0:04:24.74,0:04:27.50,Default,,0,0,0,,如果没有找到产品或类别，请输出一个空列表。
+Dialogue: 1,0:04:27.50,0:04:30.70,Default,,0,0,0,,现在我们有了允许的产品列表。
+Dialogue: 1,0:04:30.70,0:04:36.6,Default,,0,0,0,,所以我们有类别，然后是这些类别中的产品。
+Dialogue: 1,0:04:36.6,0:04:43.78,Default,,0,0,0,,我们最后的指示是仅输出对\N象列表，不包含其他内容。
+Dialogue: 1,0:04:43.78,0:04:46.18,Default,,0,0,0,,接下来我们有用户消息。
+Dialogue: 1,0:04:46.18,0:04:53.46,Default,,0,0,0,,所以这个消息是：“告诉我关于smartx \Npro手机和fotosnap相机，那个单反的。
+Dialogue: 1,0:04:53.46,0:04:55.42,Default,,0,0,0,,还告诉我你们有哪些电视。”
+Dialogue: 1,0:04:55.42,0:04:59.2,Default,,0,0,0,,用户询问了两个特定的产品（手机和相机）。
+Dialogue: 1,0:04:59.2,0:05:03.86,Default,,0,0,0,,还有电视这个类别。
+Dialogue: 1,0:05:03.86,0:05:07.42,Default,,0,0,0,,这两个产品都在允许的产品列表中。
+Dialogue: 1,0:05:07.42,0:05:11.62,Default,,0,0,0,,然后还有一个电视部分。
+Dialogue: 1,0:05:11.62,0:05:18.42,Default,,0,0,0,,将系统消息和用户消息格式化为消息数组。
+Dialogue: 1,0:05:18.42,0:05:25.6,Default,,0,0,0,,然后我们从模型中得到结果。
+Dialogue: 1,0:05:25.6,0:05:30.98,Default,,0,0,0,,如你所见，对于我们的输出，\N我们有一个对象列表。
+Dialogue: 1,0:05:30.98,0:05:35.18,Default,,0,0,0,,每个对象都有类别和产品。
+Dialogue: 1,0:05:35.18,0:05:42.14,Default,,0,0,0,,我们有SmartX Pro手机和FotoSnap DSLR相机。
+Dialogue: 1,0:05:42.14,0:05:48.6,Default,,0,0,0,,在最后一个对象中，我们实际上只有一个类\N别，因为我们没有提到任何特定的电视。
+Dialogue: 1,0:05:48.6,0:05:58.66,Default,,0,0,0,,输出这种结构化响应的好处是我们可以将其\N读入并解析为一个Python列表，这非常好。
+Dialogue: 1,0:05:58.66,0:06:01.66,Default,,0,0,0,,那么让我们再试一个例子。
+Dialogue: 1,0:06:01.66,0:06:07.98,Default,,0,0,0,,我们的第二个用户消息是：\N“我的路由器不能用。”
+Dialogue: 1,0:06:07.98,0:06:12.2,Default,,0,0,0,,如果你注意到我们的列表中，\N实际上没有任何路由器。
+Dialogue: 1,0:06:12.2,0:06:20.58,Default,,0,0,0,,让我们组织好消息内容，并从模型获得结果。
+Dialogue: 1,0:06:20.58,0:06:25.46,Default,,0,0,0,,如您所见，在这种情况下，输出是一个空列表。
+Dialogue: 1,0:06:25.46,0:06:28.84,Default,,0,0,0,,现在我们有了这个步骤来识别类别和产品，
+Dialogue: 1,0:06:28.84,0:06:34.10,Default,,0,0,0,,如果找到了任何产品和类别，我们希望\N将有关这些请求产品的一些信息
+Dialogue: 1,0:06:34.10,0:06:38.42,Default,,0,0,0,,和类别，都加入到Prompt中，以便\N我们更好地回答客户问题。
+Dialogue: 1,0:06:38.42,0:06:46.6,Default,,0,0,0,,在我们的工作流程中，现在在这个\NPrompt运行之后的状态，要么是列出\N了产品，要么是没有列出产品。
+Dialogue: 1,0:06:46.6,0:06:51.10,Default,,0,0,0,,如果是没有列出产品的情况，我们不会尝试\N查找任何东西，因为没有东西可供查找。
+Dialogue: 1,0:06:51.10,0:06:55.76,Default,,0,0,0,,如果我要把这个功能真正地构建成一\N个系统，我可能会使用类别名称，
+Dialogue: 1,0:06:55.76,0:07:05.26,Default,,0,0,0,,也许像计算机和笔记本电脑之类的东西，以\N避免空格和特殊字符带来的奇怪问题。
+Dialogue: 1,0:07:05.26,0:07:07.50,Default,,0,0,0,,但现在这应该可以工作。
+Dialogue: 1,0:07:07.50,0:07:11.16,Default,,0,0,0,,现在我们想查找一些关于用\N户提到的产品的信息。
+Dialogue: 1,0:07:11.16,0:07:15.10,Default,,0,0,0,,关于这种手机、这种相机和电视机。
+Dialogue: 1,0:07:15.10,0:07:19.2,Default,,0,0,0,,我们需要有个产品目录来查找这些信息。
+Dialogue: 1,0:07:19.2,0:07:24.62,Default,,0,0,0,,这里有我刚刚粘贴的产品信息。
+Dialogue: 1,0:07:24.62,0:07:32.66,Default,,0,0,0,,如您所见，我们的商店有大量的产品。
+Dialogue: 1,0:07:32.66,0:07:38.10,Default,,0,0,0,,而所有这些产品都是假的，实\N际上是由GPT-4生成的。
+Dialogue: 1,0:07:38.10,0:07:41.2,Default,,0,0,0,,对于每个产品，我们有几个不同的字段，
+Dialogue: 1,0:07:41.2,0:07:46.96,Default,,0,0,0,,有：名称、类别、品牌、保修等等。
+Dialogue: 1,0:07:46.96,0:07:55.70,Default,,0,0,0,,"products"只是一个从产品名称到\N包含产品信息的对象的字典。
+Dialogue: 1,0:07:55.70,0:07:57.78,Default,,0,0,0,,注意每个产品都有一个类别。
+Dialogue: 1,0:07:57.78,0:08:01.58,Default,,0,0,0,,请记住，我们要查找用户询问的产品的信息。
+Dialogue: 1,0:08:01.58,0:08:08.82,Default,,0,0,0,,我们需要定义一些辅助函数，以便\N根据产品名称查找产品信息。
+Dialogue: 1,0:08:08.82,0:08:14.70,Default,,0,0,0,,让我们创建一个函数，可以\N用来根据名称获取产品。
+Dialogue: 1,0:08:14.70,0:08:17.10,Default,,0,0,0,,我们输入名称。
+Dialogue: 1,0:08:17.10,0:08:26.56,Default,,0,0,0,,我们将返回产品字典，我们将从\N字典中获取key是name的值。
+Dialogue: 1,0:08:26.56,0:08:29.44,Default,,0,0,0,,我们的备选方案暂时没有。
+Dialogue: 1,0:08:29.44,0:08:34.34,Default,,0,0,0,,我们还想定义另一个辅助函数，\N以获取某个类别的所有产品。
+Dialogue: 1,0:08:34.34,0:08:37.61,Default,,0,0,0,,例如，当用户向我们询问电视时，
+Dialogue: 1,0:08:37.61,0:08:42.56,Default,,0,0,0,,我们希望加载所有的不同的电视的所有信息。
+Dialogue: 1,0:08:42.56,0:08:51.22,Default,,0,0,0,,通过输入类别名称来获取类别下的产品。
+Dialogue: 1,0:08:51.22,0:08:57.56,Default,,0,0,0,,为此，我们要遍历产品字典中的所有产品，
+Dialogue: 1,0:08:57.56,0:09:02.50,Default,,0,0,0,,并检查所有离别和要查询类别相同的产品。
+Dialogue: 1,0:09:02.50,0:09:04.84,Default,,0,0,0,,如果是这样，我们想要返回这个。
+Dialogue: 1,0:09:04.84,0:09:07.92,Default,,0,0,0,,我们将按照以下方式进行。
+Dialogue: 1,0:09:07.92,0:09:12.52,Default,,0,0,0,,首先，我们要遍历每个产品，我们\N必须获取值，因为我们需要
+Dialogue: 1,0:09:12.52,0:09:18.30,Default,,0,0,0,,实际访问值中的类别。
+Dialogue: 1,0:09:18.30,0:09:37.6,Default,,0,0,0,,然后，如果产品类别等于我们的输\N入类别，我们将返回此产品。
+Dialogue: 1,0:09:37.6,0:09:42.22,Default,,0,0,0,,让我们为这些辅助函数的每一个做一个例子。
+Dialogue: 1,0:09:42.22,0:09:47.30,Default,,0,0,0,,首先，我们有一个名为\NTechPro Ultrabook的产品。
+Dialogue: 1,0:09:47.30,0:09:51.86,Default,,0,0,0,,让我们通过名称获取产品信息。
+Dialogue: 1,0:09:51.86,0:09:57.26,Default,,0,0,0,,在这里，您可以看到我们刚\N刚获取了所有产品信息。
+Dialogue: 1,0:09:57.26,0:10:00.66,Default,,0,0,0,,让我们举一个例子，获取一个类别的所有产品。
+Dialogue: 1,0:10:00.66,0:10:07.2,Default,,0,0,0,,那么让我们获取计算机和笔记\N本电脑类别中的所有产品。
+Dialogue: 1,0:10:07.2,0:10:17.2,Default,,0,0,0,,在这里你可以看到我们获取了\N这个类别下的所有产品。
+Dialogue: 1,0:10:17.2,0:10:20.98,Default,,0,0,0,,那么让我们继续我们的例子。
+Dialogue: 1,0:10:20.98,0:10:24.42,Default,,0,0,0,,为了记住我们在哪里，让我们打印用户消息。
+Dialogue: 1,0:10:24.42,0:10:30.54,Default,,0,0,0,,用户消息是："告诉我关于SmartX \NPro手机、相机和电视的信息。"
+Dialogue: 1,0:10:30.54,0:10:36.26,Default,,0,0,0,,这就是第一步模型的初始输出。
+Dialogue: 1,0:10:36.26,0:10:41.22,Default,,0,0,0,,还需要做的是阅读模型的这\N个输出，它是一个字符串。
+Dialogue: 1,0:10:41.22,0:10:49.30,Default,,0,0,0,,我们需要将其解析成一个列表，以便\N输入到刚刚编写的辅助函数中。
+Dialogue: 1,0:10:49.30,0:10:54.94,Default,,0,0,0,,让我们编写一个辅助函数来完成这个任务。
+Dialogue: 1,0:10:54.94,0:10:58.42,Default,,0,0,0,,我们将使用Python的JSON模块。
+Dialogue: 1,0:10:58.42,0:11:09.86,Default,,0,0,0,,我们将编写一个名为read_string_to_list的\N函数，这是函数名很直观，读取字符串到列表。
+Dialogue: 1,0:11:09.86,0:11:16.2,Default,,0,0,0,,首先，我们将检查输入字符串是否为空。
+Dialogue: 1,0:11:16.2,0:11:22.30,Default,,0,0,0,,如果前面的步骤中出现了问题，返回空。
+Dialogue: 1,0:11:22.30,0:11:29.52,Default,,0,0,0,,现在我们将加上try except\N块来确保捕获任何错误。
+Dialogue: 1,0:11:29.52,0:11:37.2,Default,,0,0,0,,将输入字符串中的任何单引\N号替换为双引号，以便
+Dialogue: 1,0:11:37.2,0:11:39.18,Default,,0,0,0,,确保我们可以解析JSON。
+Dialogue: 1,0:11:39.18,0:11:47.38,Default,,0,0,0,,然后使用JSON loads函数将输入\N的字符串解析成数组或列表。
+Dialogue: 1,0:11:47.38,0:11:49.58,Default,,0,0,0,,然后将结果返回。
+Dialogue: 1,0:11:49.58,0:11:55.72,Default,,0,0,0,,如果出现解码错误，就打印错误，返回none。
+Dialogue: 1,0:11:55.72,0:11:58.54,Default,,0,0,0,,让我们用之前的例子测试一下。
+Dialogue: 1,0:11:58.54,0:12:07.0,Default,,0,0,0,,我们将使用read_string_to_list\N辅助函数获取类别和产品列表
+Dialogue: 1,0:12:07.0,0:12:10.50,Default,,0,0,0,,并将模型的返回结果传给它。
+Dialogue: 1,0:12:10.50,0:12:13.20,Default,,0,0,0,,然后打印解析出来的列表。
+Dialogue: 1,0:12:13.20,0:12:15.34,Default,,0,0,0,,它应该看起来是一样的。
+Dialogue: 1,0:12:15.34,0:12:17.38,Default,,0,0,0,,让我先运行这个。
+Dialogue: 1,0:12:17.38,0:12:25.86,Default,,0,0,0,,正如你所看到的，两者的内容是一样的，只是现\N在这个变量的类型是列表而不是字符串。
+Dialogue: 1,0:12:25.86,0:12:29.76,Default,,0,0,0,,这么做的目的是用一个列\N表来保存这些产品信息
+Dialogue: 1,0:12:29.76,0:12:34.2,Default,,0,0,0,,接下来将其添加到下一条指令给模型，生成
+Dialogue: 1,0:12:34.2,0:12:36.74,Default,,0,0,0,,回答用户问题的指令。
+Dialogue: 1,0:12:36.74,0:12:41.62,Default,,0,0,0,,为了做到这一点，我们需要将\N产品信息格式化成字符串，
+Dialogue: 1,0:12:41.62,0:12:42.94,Default,,0,0,0,,然后将其添加到Prompt中。
+Dialogue: 1,0:12:42.94,0:12:47.46,Default,,0,0,0,,让我们创建另一个辅助函数来完成这个任务。
+Dialogue: 1,0:12:47.46,0:12:50.46,Default,,0,0,0,,我们将它命名为generate_output_string。
+Dialogue: 1,0:12:50.46,0:12:54.18,Default,,0,0,0,,它将接收我们刚刚生成的数据列表。
+Dialogue: 1,0:12:54.18,0:12:56.62,Default,,0,0,0,,就像这样。
+Dialogue: 1,0:12:56.62,0:13:00.74,Default,,0,0,0,,然后我将复制一些代码，然后来讲解它的功能。
+Dialogue: 1,0:13:00.74,0:13:06.26,Default,,0,0,0,,现在我将粘贴一些代码，给你们看一个例\N子，然后我们将讨论这个函数的作用。
+Dialogue: 1,0:13:06.26,0:13:12.22,Default,,0,0,0,,我们将从第一个用户消息中获取产品信息。
+Dialogue: 1,0:13:12.22,0:13:16.82,Default,,0,0,0,,接下来我们将在类别和产品列表上使用这\N个辅助函数generate_output_string，
+Dialogue: 1,0:13:16.82,0:13:23.60,Default,,0,0,0,,如果你还记得的话，就是这个。
+Dialogue: 1,0:13:23.60,0:13:31.86,Default,,0,0,0,,在这里，我们有了用户消息中提\N到的所有产品的产品信息。
+Dialogue: 1,0:13:31.86,0:13:36.2,Default,,0,0,0,,我们有用户提到的手机，有\N用户提到的相机，还有
+Dialogue: 1,0:13:36.2,0:13:42.22,Default,,0,0,0,,然后我们有所有电视的产品信息。
+Dialogue: 1,0:13:42.22,0:13:49.6,Default,,0,0,0,,这些信息将有助于模型回答用户的初始问题。
+Dialogue: 1,0:13:49.6,0:13:51.35,Default,,0,0,0,,如果您对这个功能的工作原理感兴趣，
+Dialogue: 1,0:13:51.35,0:13:57.26,Default,,0,0,0,,我会简要概述一下，但您可以\N随时暂停视频并仔细阅读。
+Dialogue: 1,0:13:57.26,0:14:03.66,Default,,0,0,0,,它基本上只是遍历这个列表中的所\N有对象，首先检查是否有产品。
+Dialogue: 1,0:14:03.66,0:14:09.26,Default,,0,0,0,,如果有，它会获取每个产品的信\N息，然后检查是否有类别，
+Dialogue: 1,0:14:09.26,0:14:10.46,Default,,0,0,0,,如果没有找到任何产品。
+Dialogue: 1,0:14:10.46,0:14:14.64,Default,,0,0,0,,举例来说，这就是类别的对象。
+Dialogue: 1,0:14:14.64,0:14:22.52,Default,,0,0,0,,然后它获取该类别中所有产品的产品\N信息，并将它们添加到此字符串中。
+Dialogue: 1,0:14:22.52,0:14:24.76,Default,,0,0,0,,然后就是它返回的内容。
+Dialogue: 1,0:14:24.76,0:14:29.96,Default,,0,0,0,,目前为止，我们已经找到了相关的\N产品信息来回答用户的问题。
+Dialogue: 1,0:14:29.96,0:14:32.92,Default,,0,0,0,,现在是时候让模型来正式回复这个问题了。
+Dialogue: 1,0:14:32.92,0:14:36.44,Default,,0,0,0,,那么让我们来看看系统消息。
+Dialogue: 1,0:14:36.44,0:14:38.60,Default,,0,0,0,,这是指示：
+Dialogue: 1,0:14:38.60,0:14:41.72,Default,,0,0,0,,“你是一家大型电子商店的客户服务助手。
+Dialogue: 1,0:14:41.72,0:14:47.0,Default,,0,0,0,,以友好、有帮助的语气回答，我\N们可以说，非常简洁的答案。
+Dialogue: 1,0:14:47.0,0:14:49.20,Default,,0,0,0,,确保向用户提出相关的后续问题。”
+Dialogue: 1,0:14:49.20,0:14:52.82,Default,,0,0,0,,我们希望这对用户来说是一种互动体验。
+Dialogue: 1,0:14:52.82,0:14:56.64,Default,,0,0,0,,那么，作为提醒，这是我们最初的用户消息。
+Dialogue: 1,0:14:56.64,0:15:00.20,Default,,0,0,0,,我再加一次。
+Dialogue: 1,0:15:00.20,0:15:04.56,Default,,0,0,0,,现在有了消息数组。
+Dialogue: 1,0:15:04.56,0:15:06.16,Default,,0,0,0,,就是输入到模型的内容。
+Dialogue: 1,0:15:06.16,0:15:07.20,Default,,0,0,0,,让我们来看看这个。
+Dialogue: 1,0:15:07.20,0:15:11.92,Default,,0,0,0,,第一条消息，像以前一样是系统消息。
+Dialogue: 1,0:15:11.92,0:15:14.80,Default,,0,0,0,,我们有用户消息。
+Dialogue: 1,0:15:14.80,0:15:20.28,Default,,0,0,0,,然后还有这个额外的助手消息。
+Dialogue: 1,0:15:20.28,0:15:24.68,Default,,0,0,0,,这里包含了刚刚找到的所有产品信息的消息。
+Dialogue: 1,0:15:24.68,0:15:32.84,Default,,0,0,0,,这里是相关的产品信息，另起一行，然\N后是刚刚找到的这些产品信息。
+Dialogue: 1,0:15:32.84,0:15:38.36,Default,,0,0,0,,现在模型具有回答用户问\N题所需的相关上下文。
+Dialogue: 1,0:15:38.36,0:15:45.4,Default,,0,0,0,,那么让我们看看最后返回的结果，并打印出来。
+Dialogue: 1,0:15:45.4,0:15:58.16,Default,,0,0,0,,我们希望模型能够利用产品信息\N中的相关信息来帮助用户。
+Dialogue: 1,0:15:58.16,0:16:04.92,Default,,0,0,0,,首先，它告诉用户关于Smart X Pro手机的信\N息，告诉用户关于FotoSnap相机的信息，
+Dialogue: 1,0:16:05.95,0:16:13.92,Default,,0,0,0,,然后谈论我们现有的不同电\N视，最后提出后续问题。
+Dialogue: 1,0:16:13.92,0:16:17.40,Default,,0,0,0,,如您所见，通过将其分解为一系列步骤，
+Dialogue: 1,0:16:17.40,0:16:20.67,Default,,0,0,0,,我们能够加载与用户查询相关的信息
+Dialogue: 1,0:16:20.67,0:16:25.12,Default,,0,0,0,,为模型提供回答问题所需的相关上下文。
+Dialogue: 1,0:16:25.12,0:16:29.32,Default,,0,0,0,,你可能会想，为什么我们只选择一部分\N产品的描述信息加载到Prompt中，
+Dialogue: 1,0:16:29.32,0:16:33.60,Default,,0,0,0,,而不是包含所有产品的描述信息，让\N模型可以从中获取它所需的信息？
+Dialogue: 1,0:16:33.60,0:16:38.52,Default,,0,0,0,,我的意思是，为什么我们不把所有\N产品的信息都包含在Prompt中，
+Dialogue: 1,0:16:39.0,0:16:45.24,Default,,0,0,0,,这样我们就不用费心去做那些中间\N步骤，不用去查找产品信息了？
+Dialogue: 1,0:16:45.24,0:16:47.36,Default,,0,0,0,,这其中有几个原因。
+Dialogue: 1,0:16:47.36,0:16:51.84,Default,,0,0,0,,首先，包含所有产品描述可能会\N使模型的上下文更加混乱，
+Dialogue: 1,0:16:52.0,0:16:57.0,Default,,0,0,0,,就像一个人试图一次处理大量信息。
+Dialogue: 1,0:16:57.0,0:17:01.43,Default,,0,0,0,,我要说的是，对于像GPT-4这样更先进\N的模型，这一点相对不那么重要，
+Dialogue: 1,0:17:01.43,0:17:04.72,Default,,0,0,0,,尤其是当上下文结构良好，\N就像这个例子中一样，
+Dialogue: 1,0:17:04.73,0:17:10.24,Default,,0,0,0,,而且模型足够智能，可以忽略\N那些显然不相关的信息。
+Dialogue: 1,0:17:10.24,0:17:12.8,Default,,0,0,0,,接下来的原因更有说服力。
+Dialogue: 1,0:17:12.8,0:17:15.83,Default,,0,0,0,,第二个原因是，语言模型有上下文限制，
+Dialogue: 1,0:17:15.83,0:17:20.12,Default,,0,0,0,,即允许输入和输出的固定数量的标记。
+Dialogue: 1,0:17:20.12,0:17:24.0,Default,,0,0,0,,如果你有大量的产品，想象一下\N你有一个庞大的产品目录，
+Dialogue: 1,0:17:24.0,0:17:28.0,Default,,0,0,0,,你甚至无法将所有描述放入上下文窗口中。
+Dialogue: 1,0:17:28.0,0:17:32.32,Default,,0,0,0,,最后一个原因是包含所有\N产品描述可能会很昂贵
+Dialogue: 1,0:17:32.32,0:17:35.6,Default,,0,0,0,,因为在使用语言模型时，您需\N要按消耗的Token付费。
+Dialogue: 1,0:17:35.6,0:17:40.88,Default,,0,0,0,,因此，通过有选择地加载部分产品\N信息，可以降低调用的成本。
+Dialogue: 1,0:17:40.88,0:17:44.76,Default,,0,0,0,,总的来说，确定何时将信息动\N态加载到模型的上下文中
+Dialogue: 1,0:17:44.76,0:17:50.88,Default,,0,0,0,,并允许模型决定何时需要更多信息，是\N增强这些模型能力的最佳方法之一。
+Dialogue: 1,0:17:50.88,0:17:54.64,Default,,0,0,0,,再次强调，您应该将语言模型视为一个
+Dialogue: 1,0:17:54.64,0:17:59.32,Default,,0,0,0,,需要必要的上下文来推理出有用\N结论和执行有用任务的代理。
+Dialogue: 1,0:17:59.32,0:18:03.50,Default,,0,0,0,,所以在这个例子中，我们必\N须给模型提供产品信息，
+Dialogue: 1,0:18:03.50,0:18:09.52,Default,,0,0,0,,然后它能够根据该产品信息进行\N推理，为用户创建有用的答案。
+Dialogue: 1,0:18:09.52,0:18:15.45,Default,,0,0,0,,在这个例子中，我们只添加了一个调用特定功\N能或功能的方法，根据产品名称获取产品描述，
+Dialogue: 1,0:18:15.45,0:18:18.52,Default,,0,0,0,,或者根据类别名称获取类别产品。
+Dialogue: 1,0:18:18.52,0:18:23.4,Default,,0,0,0,,但是，这些模型实际上擅长决定\N何时使用各种不同的工具，
+Dialogue: 1,0:18:23.4,0:18:25.40,Default,,0,0,0,,并且可以在有指示的情况下正确使用它们。
+Dialogue: 1,0:18:25.40,0:18:28.16,Default,,0,0,0,,这就是ChatGPT插件背后的原理。
+Dialogue: 1,0:18:28.16,0:18:31.23,Default,,0,0,0,,我们告诉模型它可以使用哪些\N工具以及每个工具的功能，
+Dialogue: 1,0:18:31.23,0:18:37.36,Default,,0,0,0,,当它需要从特定来源获取信息或采取其他\N适当行动时，它会选择使用这些工具。
+Dialogue: 1,0:18:37.36,0:18:42.64,Default,,0,0,0,,在我们的例子中，我们只能通过精确\N的产品和类别名称来查找信息，
+Dialogue: 1,0:18:42.64,0:18:46.0,Default,,0,0,0,,但还有更先进的信息检索技术。
+Dialogue: 1,0:18:46.0,0:18:50.16,Default,,0,0,0,,使用文本嵌入（Text Embedding）是\N检索信息最有效的方法之一。
+Dialogue: 1,0:18:50.16,0:18:56.88,Default,,0,0,0,,嵌入（Embedding）可以用于在大型\N语料库上实现高效的知识检索，以\N找到与给定查询相关的信息。
+Dialogue: 1,0:18:56.88,0:19:02.16,Default,,0,0,0,,使用文本嵌入的一个优势是\N它支持模糊或语义搜索，
+Dialogue: 1,0:19:02.16,0:19:06.28,Default,,0,0,0,,这样你可以使用自然语言而不\N是关键词找到相关信息。
+Dialogue: 1,0:19:06.28,0:19:09.51,Default,,0,0,0,,所以在我们的例子中，不一\N定需要产品的确切名称，
+Dialogue: 1,0:19:09.51,0:19:16.28,Default,,0,0,0,,但我们可以使用更通用的查\N询进行搜索，例如“手机”。
+Dialogue: 1,0:19:16.28,0:19:21.96,Default,,0,0,0,,我们计划不久后开一个关于如何将嵌入\N（Embeddings）应用于各种应用的全面课程，敬\N请期待！
+Dialogue: 1,0:19:21.96,0:19:25.28,Default,,0,0,0,,好了，让我们继续观看下一个\N视频，接下来我们将讨论：
+Dialogue: 1,0:19:25.28,0:19:28.80,Default,,0,0,0,,“如何评估语言模型的输出结果。”

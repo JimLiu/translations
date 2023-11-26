@@ -1,0 +1,154 @@
+1
+00:00:00,000 --> 00:00:10,920
+我很高兴为您介绍这个由Sharon Zhou教授的扩散模型短期课程。
+I'm thrilled to present to you this short course on diffusion models taught by Sharon Zhou.
+
+2
+00:00:10,920 --> 00:00:20,000
+在旅程中途，稳定扩散、DALL-E等等能够仅通过一个提示生成图像，有时甚至是美丽的图像。
+Mid-journey, stable diffusion, DALL-E, and others are able to generate an image, sometimes a beautiful image, given only a prompt.
+
+3
+00:00:20,000 --> 00:00:21,760
+这些算法是如何工作的？
+How do these algorithms work?
+
+4
+00:00:21,760 --> 00:00:27,444
+你可能听过这些算法学会减去噪声来生成图像的模糊描述，
+You may have heard of a vague description of these algorithms learning to subtract noise to generate an image,
+
+5
+00:00:27,644 --> 00:00:35,329
+但在这个短期课程中，Sharon将带领你了解使用扩散模型进行图像生成的具体实现，
+but in this short course, Sharon will step you through a concrete implementation of image generation using a diffusion model
+
+6
+00:00:35,529 --> 00:00:40,320
+这样你就能明白它究竟是如何工作的。
+so that you understand the technical details of exactly how it works.
+
+7
+00:00:40,320 --> 00:00:41,800
+太酷了，谢谢Andrew。
+Cool, thanks Andrew.
+
+8
+00:00:41,800 --> 00:00:46,800
+在这门课程中，你将了解到目前扩散模型的现状和能力。
+In this course, you'll be learning about the current state and capabilities of diffusion models used today.
+
+9
+00:00:46,800 --> 00:00:55,440
+你将从了解采样过程开始，从纯噪声开始，逐步优化，最终获得一个好看的图像。
+You'll start by understanding the sampling process, starting with pure noise and progressively refining it to obtain a final nice-looking image.
+
+10
+00:00:55,440 --> 00:01:00,080
+你将学会训练扩散模型所需的编程技能。
+You'll build the necessary programming skills to train a diffusion model effectively.
+
+11
+00:01:00,080 --> 00:01:04,200
+你将学会如何构建一个能预测图像中噪声的神经网络。
+You'll learn how to build a neural network that can predict noise in an image.
+
+12
+00:01:04,200 --> 00:01:08,160
+你将为模型添加上下文，以便你可以控制想要生成的内容。
+You'll add context to the model so that you can control what you want it to generate.
+
+13
+00:01:08,160 --> 00:01:14,520
+最后，通过实现先进的算法，你将学会如何将采样过程加速10倍。
+And finally, by implementing advanced algorithms, you'll learn how to accelerate the sampling process by a factor of 10.
+
+14
+00:01:14,520 --> 00:01:17,340
+这是一个中级到高级的课程。
+This is an intermediate to advanced course.
+
+15
+00:01:17,340 --> 00:01:21,360
+我们假设你熟悉Python和基本的神经网络训练。
+We assume you're familiar with Python and basic neural network training.
+
+16
+00:01:21,360 --> 00:01:24,560
+所以举个例子，我们会假设你知道什么是反向传播。
+So for example, we'll assume you know what backpropagation is.
+
+17
+00:01:24,560 --> 00:01:26,480
+我们将在整个过程中使用PyTorch。
+We'll use PyTorch throughout.
+
+18
+00:01:26,480 --> 00:01:32,820
+但是，如果你熟悉其他机器学习框架，如TensorFlow，你应该也能跟上进度。
+But if you're familiar with other machine learning frameworks, such as TensorFlow, you should be able to follow along just fine.
+
+19
+00:01:32,820 --> 00:01:42,620
+因此，我们在这个短期课程中使用的实例将是生成16x16的像素精灵，就像那些用在视频游戏中的小8位角色。
+And so the running example we'll use for this short course will be generating 16 by 16 sprites, like those little 8-bit characters used in video games.
+
+20
+00:01:42,620 --> 00:01:47,400
+我们选择这个例子是为了让你不仅能浏览笔记本，
+We chose this example so that it's feasible for you to not just go through the notebooks,
+
+21
+00:01:47,400 --> 00:01:54,040
+还能亲自运行它们，以便在Jupyter笔记本中生成可爱的像素精灵。
+but also run them yourself to generate cute sprites yourself right there in that Jupyter Notebook.
+
+22
+00:01:54,040 --> 00:02:00,200
+扩散模型正成为生命科学等领域尖端研究的基础。
+Diffusion models are becoming a foundation for cutting-edge research in the life sciences and other sectors too.
+
+23
+00:02:00,200 --> 00:02:03,560
+比如，生成用于药物发现的分子。
+For example, generating molecules for drug discovery.
+
+24
+00:02:03,560 --> 00:02:07,146
+所以，当你理解扩散模型的技术细节时，
+So when you understand the technical details of diffusion models,
+
+25
+00:02:07,147 --> 00:02:13,720
+你也会更好地理解并可能自己应用这些模型。
+you'll also be in a better position to understand and perhaps apply such models yourself.
+
+26
+00:02:13,720 --> 00:02:16,680
+很多人共同努力创建了这个短期课程。
+Many people worked together to build this short course.
+
+27
+00:02:16,680 --> 00:02:23,360
+我要感谢Aaron Lou和Mehmet Giray Ogut的重要贡献。
+I want to thank Aaron Lou and Mehmet Giray Ogut for their significant contributions.
+
+28
+00:02:23,360 --> 00:02:29,200
+还有在DeepLearning.ai网站上的Geoff Ladwig和Eddy Shyu。
+And on the DeepLearning.ai site, also Geoff Ladwig and Eddy Shyu.
+
+29
+00:02:29,200 --> 00:02:34,800
+那么，让我把时间交给Sharon，希望你们喜欢这门课程。
+So with that, let me hand it over to Sharon, and I hope you enjoy the course.
+
+30
+00:02:34,800 --> 00:02:35,800
+太好了。
+Great.
+
+31
+00:02:35,800 --> 00:02:36,440
+我们开始吧。
+Let's get started.

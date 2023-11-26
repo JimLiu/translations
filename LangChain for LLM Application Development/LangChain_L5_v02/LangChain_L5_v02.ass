@@ -1,0 +1,466 @@
+[Script Info]
+
+Title: LangChain_L5_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,14,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,8,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs8\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}作者：{\1c&H80FFFF&\2c&H0000FF&}Harrison Chase, Andrew Wu\N{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 0,0:00:00.0,0:00:05.0,Default,,0,0,0,,{\fs14\an8}{\fad(200,200)\c&HFFFFFF&}基于LangChain的大语言模型应用开发6\N评估
+Dialogue: 0,0:00:04.96,0:00:08.13,Secondary,,0,0,0,,When building a complex application using an LLM,
+Dialogue: 0,0:00:08.14,0:00:11.41,Secondary,,0,0,0,,one of the important but sometimes tricky steps is
+Dialogue: 0,0:00:11.43,0:00:14.37,Secondary,,0,0,0,,how do you evaluate how well your application is doing?
+Dialogue: 0,0:00:14.37,0:00:17.15,Secondary,,0,0,0,,Is it meeting some accuracy criteria?
+Dialogue: 0,0:00:17.15,0:00:20.85,Secondary,,0,0,0,,And also, if you decide to change your implementation,
+Dialogue: 0,0:00:20.86,0:00:23.23,Secondary,,0,0,0,,maybe swap in a different LLM
+Dialogue: 0,0:00:23.26,0:00:28.7,Secondary,,0,0,0,,or change the strategy of how you use a vector database or something else to retrieve channels,
+Dialogue: 0,0:00:28.7,0:00:30.59,Secondary,,0,0,0,,or change some other parameter to the system.
+Dialogue: 0,0:00:30.59,0:00:33.78,Secondary,,0,0,0,,How do you know if you're making it better or worse?
+Dialogue: 0,0:00:33.78,0:00:40.36,Secondary,,0,0,0,,In this video, Harrison will dive into some frameworks to how to think about evaluating a LLM based application,
+Dialogue: 0,0:00:40.36,0:00:43.37,Secondary,,0,0,0,,as well as some tools that help you do that.
+Dialogue: 0,0:00:43.37,0:00:47.59,Secondary,,0,0,0,,These applications are really chains and sequences of a lot of different steps.
+Dialogue: 0,0:00:47.59,0:00:50.70,Secondary,,0,0,0,,And so honestly, part of the first thing that you should do is
+Dialogue: 0,0:00:50.70,0:00:54.49,Secondary,,0,0,0,,just understand what exactly is going in and coming out of each step.
+Dialogue: 0,0:00:54.49,0:00:58.93,Secondary,,0,0,0,,And so some of the tools can really just be thought of as visualizers or debuggers in that thing.
+Dialogue: 0,0:00:59.95,0:01:05.42,Secondary,,0,0,0,,But it's often really useful to get a more holistic picture on a lot of different data points of how the model is doing.
+Dialogue: 0,0:01:05.42,0:01:07.80,Secondary,,0,0,0,,And one way to do that is by looking at things by eye.
+Dialogue: 0,0:01:07.80,0:01:15.93,Secondary,,0,0,0,,But there's also this really cool idea of using language models themselves and chains themselves to evaluate other language models and other chains and other applications.
+Dialogue: 0,0:01:15.93,0:01:17.33,Secondary,,0,0,0,,And we'll dive a bunch into that as well.
+Dialogue: 0,0:01:17.98,0:01:19.68,Secondary,,0,0,0,,So lots of cool topics,
+Dialogue: 0,0:01:19.68,0:01:26.94,Secondary,,0,0,0,,and I find that with a lot of development shifting towards prompting-based development, developing applications using LLMs,
+Dialogue: 0,0:01:26.94,0:01:31.33,Secondary,,0,0,0,,this whole workflow evaluation process is being rethought.
+Dialogue: 0,0:01:31.33,0:01:34.27,Secondary,,0,0,0,,So lots of exciting concepts in this video.
+Dialogue: 0,0:01:34.27,0:01:36.57,Secondary,,0,0,0,,Let's dive in.
+Dialogue: 0,0:01:36.57,0:01:38.93,Secondary,,0,0,0,,All right, so let's get set up with evaluation.
+Dialogue: 0,0:01:39.88,0:01:45.92,Secondary,,0,0,0,,First, we need to have the chain or the application that we're going to evaluate in the first place.
+Dialogue: 0,0:01:45.92,0:01:50.58,Secondary,,0,0,0,,And we're going to use the document question answering chain from the previous lesson.
+Dialogue: 0,0:01:50.58,0:01:52.74,Secondary,,0,0,0,,So we're going to import everything we need.
+Dialogue: 0,0:01:52.74,0:01:59.13,Secondary,,0,0,0,,We're going to load the same data that we were using.
+Dialogue: 0,0:01:59.13,0:02:02.27,Secondary,,0,0,0,,We're going to create that index with one line.
+Dialogue: 0,0:02:03.11,0:02:17.27,Secondary,,0,0,0,,And then we're going to create the retrieval QA chain by specifying the language model, the chain type, the retriever, and then the verbosity that we're going to print out.
+Dialogue: 0,0:02:17.27,0:02:18.93,Secondary,,0,0,0,,So we've got this application.
+Dialogue: 0,0:02:18.93,0:02:21.9,Secondary,,0,0,0,,And the first thing we need to do is
+Dialogue: 0,0:02:21.9,0:02:27.46,Secondary,,0,0,0,,we need to really figure out what are some data points that we want to evaluate it on.
+Dialogue: 0,0:02:27.46,0:02:29.98,Secondary,,0,0,0,,And so there's a few different methods that we're going to cover for doing this.
+Dialogue: 0,0:02:30.95,0:02:33.39,Secondary,,0,0,0,,The first is the most simple,
+Dialogue: 0,0:02:33.39,0:02:38.100,Secondary,,0,0,0,,which is basically we're going to come up with data points that we think are good examples ourselves.
+Dialogue: 0,0:02:38.100,0:02:43.57,Secondary,,0,0,0,,And so to do that, we can just look at some of the data and come up with example questions
+Dialogue: 0,0:02:43.57,0:02:49.77,Secondary,,0,0,0,,and then example ground truth answers that we can later use to evaluate.
+Dialogue: 0,0:02:49.77,0:02:51.95,Secondary,,0,0,0,,So if we look at a few of the documents here,
+Dialogue: 0,0:02:53.4,0:02:56.34,Secondary,,0,0,0,,We can kind of get a sense of what's going on inside them.
+Dialogue: 0,0:02:56.34,0:03:00.22,Secondary,,0,0,0,,It looks like the first one, there's this pullover set.
+Dialogue: 0,0:03:00.22,0:03:06.32,Secondary,,0,0,0,,There's this in the second one, there's this jacket as a bunch of details about all of them.
+Dialogue: 0,0:03:08.40,0:03:13.22,Secondary,,0,0,0,,And from these details, we can create some example query and answer pairs.
+Dialogue: 0,0:03:13.22,0:03:19.11,Secondary,,0,0,0,,So the first one, we can ask a simple, "Does the Cozy Comfort Pullover Set have side pockets?"
+Dialogue: 0,0:03:19.11,0:03:25.43,Secondary,,0,0,0,,And we can see by looking above that it does, in fact, have some side pockets in it.
+Dialogue: 0,0:03:25.43,0:03:31.79,Secondary,,0,0,0,,And then for the second one, we can see that this Jacket is from a certain collection, the DownTek collection.
+Dialogue: 0,0:03:31.79,0:03:35.46,Secondary,,0,0,0,,And so we can ask the question, "What collection is this jacket from?"
+Dialogue: 0,0:03:35.46,0:03:37.84,Secondary,,0,0,0,,And have the answer be, "The DownTek collection".
+Dialogue: 0,0:03:37.84,0:03:41.14,Secondary,,0,0,0,,And so here we've created two examples.
+Dialogue: 0,0:03:41.14,0:03:43.68,Secondary,,0,0,0,,But this doesn't really scale that well.
+Dialogue: 0,0:03:43.68,0:03:47.2,Secondary,,0,0,0,,It takes a bit of time to look through each example and figure out what's going on.
+Dialogue: 0,0:03:47.2,0:03:50.14,Secondary,,0,0,0,,And so is there a way that we can automate it?
+Dialogue: 0,0:03:50.14,0:03:54.6,Secondary,,0,0,0,,And one of the really cool ways that we think we can automate it is with language models themselves.
+Dialogue: 0,0:03:55.73,0:03:59.61,Secondary,,0,0,0,,So we have a chain in LangChain that can do exactly that.
+Dialogue: 0,0:03:59.61,0:04:01.40,Secondary,,0,0,0,,So we can import the QAGenerationChain
+Dialogue: 0,0:04:01.40,0:04:08.22,Secondary,,0,0,0,,and this will take in documents and it will create a question answer pair from each document.
+Dialogue: 0,0:04:08.22,0:04:10.64,Secondary,,0,0,0,,It'll do this using a language model itself.
+Dialogue: 0,0:04:10.64,0:04:15.64,Secondary,,0,0,0,,So we need to create this chain by passing in the ChatOpenAI language model.
+Dialogue: 0,0:04:15.64,0:04:18.32,Secondary,,0,0,0,,And then from there, we can create a bunch of examples.
+Dialogue: 0,0:04:19.26,0:04:25.44,Secondary,,0,0,0,,And so we're going to use the apply_and_parse method, because this is applying an output parser to the result.
+Dialogue: 0,0:04:25.44,0:04:30.59,Secondary,,0,0,0,,Because we want to get back a dictionary that has the query and answer pair, not just a single string.
+Dialogue: 0,0:04:38.1,0:04:41.57,Secondary,,0,0,0,,And so now if we look at what exactly is returned here,
+Dialogue: 0,0:04:41.58,0:04:44.43,Secondary,,0,0,0,,we can see a query and we can see an answer.
+Dialogue: 0,0:04:44.43,0:04:49.11,Secondary,,0,0,0,,And let's check the document that this is a question and answer for.
+Dialogue: 0,0:04:49.11,0:04:51.65,Secondary,,0,0,0,,And we can see that it's asking what the weight of this is.
+Dialogue: 0,0:04:51.65,0:04:54.17,Secondary,,0,0,0,,We can see that it's taking the weight from here.
+Dialogue: 0,0:04:54.17,0:04:54.75,Secondary,,0,0,0,,And look at that.
+Dialogue: 0,0:04:54.75,0:04:57.31,Secondary,,0,0,0,,We just generated a bunch of question answer pairs.
+Dialogue: 0,0:04:57.31,0:04:59.47,Secondary,,0,0,0,,We didn't have to write it all ourselves.
+Dialogue: 0,0:04:59.47,0:05:02.48,Secondary,,0,0,0,,Saves us a bunch of time and we can do more exciting things.
+Dialogue: 0,0:05:04.26,0:05:09.60,Secondary,,0,0,0,,And so now let's go ahead and add these examples into the examples that we already created.
+Dialogue: 0,0:05:09.60,0:05:15.34,Secondary,,0,0,0,,So we got these examples now, but how exactly do we evaluate what's going on?
+Dialogue: 0,0:05:15.34,0:05:21.87,Secondary,,0,0,0,,The first thing we want to do is just run an example through the chain and take a look at the output it produces.
+Dialogue: 0,0:05:21.87,0:05:24.51,Secondary,,0,0,0,,So here we pass in a query and we get back.
+Dialogue: 0,0:05:25.97,0:05:32.29,Secondary,,0,0,0,,but this is a little bit limiting in terms of what we can see that's actually happening inside the chain.
+Dialogue: 0,0:05:32.29,0:05:35.1,Secondary,,0,0,0,,What is the actual prompt that's going into the language model?
+Dialogue: 0,0:05:35.1,0:05:37.75,Secondary,,0,0,0,,What are the documents that it retrieves?
+Dialogue: 0,0:05:37.75,0:05:41.96,Secondary,,0,0,0,,If this were a more complex chain with multiple steps in it, what are the intermediate results?
+Dialogue: 0,0:05:42.89,0:05:47.21,Secondary,,0,0,0,,It's oftentimes not enough to just look at the final answer to understand
+Dialogue: 0,0:05:47.24,0:05:51.44,Secondary,,0,0,0,,what is or could be going wrong in the chain.
+Dialogue: 0,0:05:51.44,0:05:59.92,Secondary,,0,0,0,,And to help with that, we have a fun little util in LangChain called LangChain debug.
+Dialogue: 0,0:05:59.92,0:06:03.14,Secondary,,0,0,0,,And so if we set "langchain.debug" equals "True",
+Dialogue: 0,0:06:03.57,0:06:06.82,Secondary,,0,0,0,,and we now rerun the same example as above,
+Dialogue: 0,0:06:08.47,0:06:11.51,Secondary,,0,0,0,,we can see that it starts printing out a lot more information.
+Dialogue: 0,0:06:12.46,0:06:14.73,Secondary,,0,0,0,,And so if we look at what exactly it's printing out,
+Dialogue: 0,0:06:14.73,0:06:18.92,Secondary,,0,0,0,,we can see that it's diving down first into the RetrievalQA chain.
+Dialogue: 0,0:06:18.92,0:06:21.58,Secondary,,0,0,0,,And then it's going down into a StuffDocumentsChain.
+Dialogue: 0,0:06:21.58,0:06:25.1,Secondary,,0,0,0,,And so as mentioned, we were using the "stuff" method.
+Dialogue: 0,0:06:25.1,0:06:29.39,Secondary,,0,0,0,,And now it's entering the LLMChain where we have a few different inputs.
+Dialogue: 0,0:06:29.39,0:06:32.47,Secondary,,0,0,0,,So we can see the original question is right there.
+Dialogue: 0,0:06:32.47,0:06:34.39,Secondary,,0,0,0,,And now we're passing in this context.
+Dialogue: 0,0:06:34.39,0:06:40.12,Secondary,,0,0,0,,And we can see that this context is created from a bunch of the different documents that we've retrieved.
+Dialogue: 0,0:06:40.76,0:06:42.31,Secondary,,0,0,0,,And so when doing question answering,
+Dialogue: 0,0:06:42.32,0:06:48.60,Secondary,,0,0,0,,oftentimes when a wrong result is returned, it's not necessarily the language model itself that's messing up.
+Dialogue: 0,0:06:48.60,0:06:51.50,Secondary,,0,0,0,,It's actually the retrieval step that's messing up.
+Dialogue: 0,0:06:51.50,0:06:54.76,Secondary,,0,0,0,,And so taking a really close look at what exactly the question is
+Dialogue: 0,0:06:54.76,0:06:59.81,Secondary,,0,0,0,,and what exactly the context is can help debug what's going wrong.
+Dialogue: 0,0:06:59.81,0:07:06.53,Secondary,,0,0,0,,We can then step down one more level and see exactly what is entering the language model, ChatOpenAI, itself.
+Dialogue: 0,0:07:07.42,0:07:09.90,Secondary,,0,0,0,,And so here we can see the full prompt that's passed in.
+Dialogue: 0,0:07:09.90,0:07:12.38,Secondary,,0,0,0,,So we've got a system message.
+Dialogue: 0,0:07:12.38,0:07:14.51,Secondary,,0,0,0,,We've got the description of the prompt that's used.
+Dialogue: 0,0:07:14.51,0:07:18.82,Secondary,,0,0,0,,And so this is the prompt that the question answering chain is using under the hood,
+Dialogue: 0,0:07:18.82,0:07:21.24,Secondary,,0,0,0,,which we actually haven't even looked at until now.
+Dialogue: 0,0:07:21.24,0:07:27.14,Secondary,,0,0,0,,And so we can see the prompt printing out, use the following pieces of context to answer the user's question.
+Dialogue: 0,0:07:27.14,0:07:29.30,Secondary,,0,0,0,,If you don't know the answer, just say that you don't know.
+Dialogue: 0,0:07:29.30,0:07:30.64,Secondary,,0,0,0,,Don't try to make up an answer.
+Dialogue: 0,0:07:30.64,0:07:34.18,Secondary,,0,0,0,,And then we see a bunch of the context as inserted before.
+Dialogue: 0,0:07:34.18,0:07:37.12,Secondary,,0,0,0,,And then we see a human question, which is the question that we asked it.
+Dialogue: 0,0:07:37.68,0:07:40.71,Secondary,,0,0,0,,We can also see a lot more information about the actual return type.
+Dialogue: 0,0:07:40.71,0:07:45.51,Secondary,,0,0,0,,So rather than just a string, we get back a bunch of information like the token usage,
+Dialogue: 0,0:07:45.52,0:07:50.95,Secondary,,0,0,0,,so the prompt tokens, the completion tokens, total tokens, and the model name.
+Dialogue: 0,0:07:50.95,0:07:58.1,Secondary,,0,0,0,,And this can be really useful to track the tokens that you're using in your chains or calls to language models over time
+Dialogue: 0,0:07:58.31,0:08:02.54,Secondary,,0,0,0,,and keep track of the total number of tokens, which corresponds very closely to the total cost.
+Dialogue: 0,0:08:03.61,0:08:05.54,Secondary,,0,0,0,,And because this is a relatively simple chain,
+Dialogue: 0,0:08:05.56,0:08:07.94,Secondary,,0,0,0,,we can now see that the final response,
+Dialogue: 0,0:08:07.96,0:08:11.51,Secondary,,0,0,0,,"The Cozy Comfort Pullover Set, Stripe, does have side pockets.",
+Dialogue: 0,0:08:11.52,0:08:16.30,Secondary,,0,0,0,,is getting bubbled up through the chains and getting returned to the user.
+Dialogue: 0,0:08:16.30,0:08:19.39,Secondary,,0,0,0,,So we've just walked through how to look at and debug
+Dialogue: 0,0:08:19.46,0:08:22.44,Secondary,,0,0,0,,what's going on with a single input to this chain.
+Dialogue: 0,0:08:22.44,0:08:24.64,Secondary,,0,0,0,,But what about all the examples we created?
+Dialogue: 0,0:08:24.64,0:08:27.1,Secondary,,0,0,0,,How are we going to evaluate those?
+Dialogue: 0,0:08:27.1,0:08:30.45,Secondary,,0,0,0,,Similarly to when creating them, one way to do it would be manually.
+Dialogue: 0,0:08:31.2,0:08:33.60,Secondary,,0,0,0,,We could run the chain over all the examples,
+Dialogue: 0,0:08:33.60,0:08:39.77,Secondary,,0,0,0,,then look at the outputs and try to figure out what's going on, whether it's correct, incorrect, partially correct.
+Dialogue: 0,0:08:39.77,0:08:44.18,Secondary,,0,0,0,,Similar to creating the examples, that starts to get a little bit tedious over time.
+Dialogue: 0,0:08:44.18,0:08:46.90,Secondary,,0,0,0,,And so let's go back to our favorite solution.
+Dialogue: 0,0:08:46.90,0:08:48.88,Secondary,,0,0,0,,Can we ask a language model to do it?
+Dialogue: 0,0:08:50.22,0:08:53.38,Secondary,,0,0,0,,First, we need to create predictions for all the examples.
+Dialogue: 0,0:08:53.38,0:08:54.30,Secondary,,0,0,0,,Before doing that,
+Dialogue: 0,0:08:54.31,0:09:00.94,Secondary,,0,0,0,,I'm actually going to turn off the debug mode in order to just not print everything out onto the screen,
+Dialogue: 0,0:09:00.94,0:09:06.15,Secondary,,0,0,0,,and then I'm going to create predictions for all the different examples.
+Dialogue: 0,0:09:06.15,0:09:08.74,Secondary,,0,0,0,,And so I think we had seven examples total,
+Dialogue: 0,0:09:08.74,0:09:13.72,Secondary,,0,0,0,,and so we're going to loop through this chain seven times, getting a prediction for each one.
+Dialogue: 0,0:09:31.56,0:09:35.30,Secondary,,0,0,0,,Now that we've got these examples, we can think about evaluating them.
+Dialogue: 0,0:09:35.30,0:09:39.34,Secondary,,0,0,0,,So we're going to import the QA, question answering, eval chain.
+Dialogue: 0,0:09:39.34,0:09:42.60,Secondary,,0,0,0,,We are going to create this chain with a language model,
+Dialogue: 0,0:09:42.60,0:09:51.85,Secondary,,0,0,0,,because again, we're going to be using a language model to help do the evaluation.
+Dialogue: 0,0:09:51.85,0:09:54.45,Secondary,,0,0,0,,And then we're going to call evaluate on this chain.
+Dialogue: 0,0:09:54.45,0:09:57.6,Secondary,,0,0,0,,We're going to pass in examples and predictions,
+Dialogue: 0,0:09:57.7,0:09:59.27,Secondary,,0,0,0,,and we're going to get back a bunch of graded outputs.
+Dialogue: 0,0:10:01.0,0:10:06.66,Secondary,,0,0,0,,And so in order to see what exactly is going on for each example,
+Dialogue: 0,0:10:06.66,0:10:08.52,Secondary,,0,0,0,,we're going to loop through them.
+Dialogue: 0,0:10:08.52,0:10:10.14,Secondary,,0,0,0,,We're going to print out the question.
+Dialogue: 0,0:10:10.14,0:10:13.3,Secondary,,0,0,0,,And again, this was generated by a language model.
+Dialogue: 0,0:10:13.3,0:10:15.1,Secondary,,0,0,0,,We're going to print out the real answer.
+Dialogue: 0,0:10:15.1,0:10:20.23,Secondary,,0,0,0,,And again, this was also generated by a language model when it had the whole document in front of it.
+Dialogue: 0,0:10:20.23,0:10:22.5,Secondary,,0,0,0,,And so it could generate a ground truth answer.
+Dialogue: 0,0:10:23.14,0:10:24.82,Secondary,,0,0,0,,We're going to print out the predicted answer.
+Dialogue: 0,0:10:24.82,0:10:28.13,Secondary,,0,0,0,,And this is generated by a language model when it's doing the QA chain,
+Dialogue: 0,0:10:28.13,0:10:32.93,Secondary,,0,0,0,,when it's doing the retrieval with the embeddings in the vector databases, passing that into a language model,
+Dialogue: 0,0:10:32.93,0:10:36.20,Secondary,,0,0,0,,and then trying to guess the predicted answer.
+Dialogue: 0,0:10:36.20,0:10:38.12,Secondary,,0,0,0,,And then we're also going to print it out the grade.
+Dialogue: 0,0:10:38.12,0:10:40.90,Secondary,,0,0,0,,And again, this is also generated by a language model
+Dialogue: 0,0:10:40.90,0:10:45.57,Secondary,,0,0,0,,when it's asking the eval chain to grade what's going on and whether it's correct or incorrect.
+Dialogue: 0,0:10:45.99,0:10:48.57,Secondary,,0,0,0,,And so when we loop through all these examples and print them out,
+Dialogue: 0,0:10:48.57,0:10:51.69,Secondary,,0,0,0,,we can see those in detail for each example.
+Dialogue: 0,0:10:54.61,0:10:57.47,Secondary,,0,0,0,,And looks like here it got everything correct.
+Dialogue: 0,0:10:57.47,0:11:02.42,Secondary,,0,0,0,,This is a relatively simple retrieval problem, so that is reassuring.
+Dialogue: 0,0:11:02.42,0:11:04.92,Secondary,,0,0,0,,So let's look at the first example.
+Dialogue: 0,0:11:04.92,0:11:09.34,Secondary,,0,0,0,,The question here is, "Does the Cozy Comfort Pullover Set have side pockets?"
+Dialogue: 0,0:11:09.34,0:11:12.37,Secondary,,0,0,0,,The real answer, and we created this, is "Yes".
+Dialogue: 0,0:11:12.37,0:11:16.29,Secondary,,0,0,0,,The predicted answer, which the language model produced, was,
+Dialogue: 0,0:11:16.29,0:11:19.75,Secondary,,0,0,0,,"The Cozy Comfort Pullover Set, Stripe does have side pockets".
+Dialogue: 0,0:11:20.63,0:11:23.77,Secondary,,0,0,0,,And so we can understand that this is a correct answer.
+Dialogue: 0,0:11:23.77,0:11:27.59,Secondary,,0,0,0,,And actually the language model does as well and it creates it correct.
+Dialogue: 0,0:11:27.59,0:11:32.22,Secondary,,0,0,0,,But let's think about why we actually need to use the language model in the first place.
+Dialogue: 0,0:11:32.22,0:11:35.90,Secondary,,0,0,0,,These two strings are actually nothing alike.
+Dialogue: 0,0:11:36.69,0:11:37.45,Secondary,,0,0,0,,They're very different.
+Dialogue: 0,0:11:37.45,0:11:39.51,Secondary,,0,0,0,,One's really short, one's really long.
+Dialogue: 0,0:11:39.51,0:11:42.83,Secondary,,0,0,0,,I don't even think "Yes" doesn't appear anywhere in this string.
+Dialogue: 0,0:11:42.83,0:11:47.66,Secondary,,0,0,0,,So if we were to try to do some string matching or exact matching or even some regexes here,
+Dialogue: 0,0:11:47.99,0:11:50.75,Secondary,,0,0,0,,it wouldn't know what to do.
+Dialogue: 0,0:11:50.75,0:11:51.95,Secondary,,0,0,0,,They're not the same thing.
+Dialogue: 0,0:11:51.95,0:11:56.70,Secondary,,0,0,0,,And that shows off the importance of using the language model to do evaluation here.
+Dialogue: 0,0:11:56.70,0:11:58.6,Secondary,,0,0,0,,You've got these answers.
+Dialogue: 0,0:11:58.72,0:12:01.64,Secondary,,0,0,0,,which are arbitrary strings.
+Dialogue: 0,0:12:01.64,0:12:05.98,Secondary,,0,0,0,,There's no single one-truth string that is the best possible answer.
+Dialogue: 0,0:12:05.98,0:12:07.94,Secondary,,0,0,0,,There's many different variants.
+Dialogue: 0,0:12:07.94,0:12:10.70,Secondary,,0,0,0,,And as long as they have the same semantic meaning,
+Dialogue: 0,0:12:10.70,0:12:13.27,Secondary,,0,0,0,,they should be graded as being similar.
+Dialogue: 0,0:12:13.27,0:12:16.97,Secondary,,0,0,0,,And that's what a language model helps with, as opposed to just doing exact matching.
+Dialogue: 0,0:12:17.53,0:12:24.72,Secondary,,0,0,0,,This difficulty in comparing strings is what makes evaluation of language models so hard in the first place.
+Dialogue: 0,0:12:24.72,0:12:29.6,Secondary,,0,0,0,,We're using them for these really open-ended tasks where they're asked to generate text.
+Dialogue: 0,0:12:29.6,0:12:34.21,Secondary,,0,0,0,,This hasn't really been done before as models until recently weren't really good enough to do this.
+Dialogue: 0,0:12:34.21,0:12:38.57,Secondary,,0,0,0,,And so a lot of the evaluation metrics that did exist up to this point just aren't good enough.
+Dialogue: 0,0:12:38.69,0:12:42.99,Secondary,,0,0,0,,and we're having to invent new ones and invent new heuristics for doing so.
+Dialogue: 0,0:12:42.99,0:12:48.24,Secondary,,0,0,0,,And the most interesting and most popular of those heuristics at the moment is actually
+Dialogue: 0,0:12:48.24,0:12:50.60,Secondary,,0,0,0,,using a language model to do the evaluation.
+Dialogue: 0,0:12:50.60,0:12:56.44,Secondary,,0,0,0,,This finishes the evaluation lesson, but one last thing I want to show you is the LangChain evaluation platform.
+Dialogue: 0,0:12:56.44,0:13:02.38,Secondary,,0,0,0,,This is a way to do everything that we just did in the notebook, but persist it and show it in a UI.
+Dialogue: 0,0:13:02.38,0:13:03.58,Secondary,,0,0,0,,And so let's check it out.
+Dialogue: 0,0:13:04.61,0:13:06.13,Secondary,,0,0,0,,Here, we can see that we have a session.
+Dialogue: 0,0:13:06.13,0:13:08.27,Secondary,,0,0,0,,We called it "deeplearningai".
+Dialogue: 0,0:13:08.27,0:13:14.41,Secondary,,0,0,0,,And we can see here that we've actually persisted all the runs that we ran in the notebook.
+Dialogue: 0,0:13:14.41,0:13:17.89,Secondary,,0,0,0,,And so this is a good way to track the inputs and outputs at a high level,
+Dialogue: 0,0:13:17.94,0:13:22.65,Secondary,,0,0,0,,but it's also a really good way to see what exactly is going on underneath.
+Dialogue: 0,0:13:22.65,0:13:28.26,Secondary,,0,0,0,,So this is the same information that was printed out in the notebook when we turned on debug mode,
+Dialogue: 0,0:13:28.26,0:13:31.92,Secondary,,0,0,0,,but it's just visualized in a UI in a little bit of a nicer way.
+Dialogue: 0,0:13:32.50,0:13:36.8,Secondary,,0,0,0,,And so we can see the inputs to the chain and the outputs to the chain at each step.
+Dialogue: 0,0:13:36.8,0:13:39.29,Secondary,,0,0,0,,And then we can click further and further down into the chain
+Dialogue: 0,0:13:39.49,0:13:43.24,Secondary,,0,0,0,,and see more and more information about what is actually getting passed in.
+Dialogue: 0,0:13:43.24,0:13:45.33,Secondary,,0,0,0,,And so if we go all the way down to the bottom,
+Dialogue: 0,0:13:45.33,0:13:48.46,Secondary,,0,0,0,,we can now see what's getting passed exactly to the chat model.
+Dialogue: 0,0:13:48.46,0:13:50.58,Secondary,,0,0,0,,We've got the system message here.
+Dialogue: 0,0:13:50.58,0:13:52.70,Secondary,,0,0,0,,We've got the human question here.
+Dialogue: 0,0:13:52.70,0:13:54.78,Secondary,,0,0,0,,We've got the response from the Chat Model here.
+Dialogue: 0,0:13:54.78,0:13:56.18,Secondary,,0,0,0,,And we've got some Output Metadata.
+Dialogue: 0,0:13:57.46,0:14:02.38,Secondary,,0,0,0,,One other thing that we've added here is the ability to add these examples to a data set.
+Dialogue: 0,0:14:02.38,0:14:06.17,Secondary,,0,0,0,,So if you remember, when creating those data sets of examples at the start,
+Dialogue: 0,0:14:06.17,0:14:10.57,Secondary,,0,0,0,,we created them partially by hand, partially with a language model.
+Dialogue: 0,0:14:10.57,0:14:13.67,Secondary,,0,0,0,,Here we can add it to a data set by clicking on this little button,
+Dialogue: 0,0:14:13.67,0:14:18.43,Secondary,,0,0,0,,and we now have the input query and the output results.
+Dialogue: 0,0:14:18.43,0:14:20.1,Secondary,,0,0,0,,And so we can create a data set.
+Dialogue: 0,0:14:20.1,0:14:22.43,Secondary,,0,0,0,,We can call it deep learning.
+Dialogue: 0,0:14:25.37,0:14:28.41,Secondary,,0,0,0,,And then we can start adding examples to this data set.
+Dialogue: 0,0:14:28.41,0:14:32.60,Secondary,,0,0,0,,And so again, getting back to the original thing that we tackled at the beginning of the lesson,
+Dialogue: 0,0:14:32.60,0:14:36.36,Secondary,,0,0,0,,we need to create these data sets so that we can do evaluation.
+Dialogue: 0,0:14:36.36,0:14:40.6,Secondary,,0,0,0,,This is a really good way to have this just running in the background
+Dialogue: 0,0:14:40.26,0:14:44.53,Secondary,,0,0,0,,and then add to the example data sets over time and start building up these examples
+Dialogue: 0,0:14:44.53,0:14:49.50,Secondary,,0,0,0,,that you can start using for evaluation and have this flywheel of evaluation start turning.
+Dialogue: 0,0:00:04.96,0:00:08.13,Default,,0,0,0,,当使用LLM构建复杂应用程序时，
+Dialogue: 0,0:00:08.14,0:00:11.41,Default,,0,0,0,,一个重要但有时有点棘手的步骤是
+Dialogue: 0,0:00:11.43,0:00:14.37,Default,,0,0,0,,如何评估应用程序的表现？
+Dialogue: 0,0:00:14.37,0:00:17.15,Default,,0,0,0,,它是否达到了某种验收标准？
+Dialogue: 0,0:00:17.15,0:00:20.85,Default,,0,0,0,,此外，如果你决定换一种实现方式，
+Dialogue: 0,0:00:20.86,0:00:23.23,Default,,0,0,0,,可能换到不同的LLM，
+Dialogue: 0,0:00:23.26,0:00:28.7,Default,,0,0,0,,或者更改如何使用向量数据库的策\N略，或者使用其他方式检索数据，
+Dialogue: 0,0:00:28.7,0:00:30.59,Default,,0,0,0,,或者更改系统中的其他参数。
+Dialogue: 0,0:00:30.59,0:00:33.78,Default,,0,0,0,,你要怎么样知道结果是比以\N前更好了？还是更糟糕了？
+Dialogue: 0,0:00:33.78,0:00:40.36,Default,,0,0,0,,在这个视频中，Harrison将深入探讨一些框\N架，以思考如何评估基于LLM的应用程序，
+Dialogue: 0,0:00:40.36,0:00:43.37,Default,,0,0,0,,同时会介绍一些帮助你评估的工具。
+Dialogue: 0,0:00:43.37,0:00:47.59,Default,,0,0,0,,这些应用实际上是许多不同步骤的链和序列。
+Dialogue: 0,0:00:47.59,0:00:50.70,Default,,0,0,0,,我们的首要任务是
+Dialogue: 0,0:00:50.70,0:00:54.49,Default,,0,0,0,,了解每个步骤的输入和输出到底是什么。
+Dialogue: 0,0:00:54.49,0:00:58.93,Default,,0,0,0,,因此，我们会用到一些可视化工具和调试工具。
+Dialogue: 0,0:00:59.95,0:01:05.42,Default,,0,0,0,,使用大量不同的数据集来测试模型，这\N有助于我们全面了解模型的表现。
+Dialogue: 0,0:01:05.42,0:01:07.80,Default,,0,0,0,,观察事物的一种方法是用肉眼看。
+Dialogue: 0,0:01:07.80,0:01:15.93,Default,,0,0,0,,但还有一个非常酷的想法，就是使\N用语言模型和链来评估其他语言模\N型、其他链和其他应用程序。
+Dialogue: 0,0:01:15.93,0:01:17.33,Default,,0,0,0,,我们也会深入探讨这个想法。
+Dialogue: 0,0:01:17.98,0:01:19.68,Default,,0,0,0,,这个视频中有很多有趣的话题，
+Dialogue: 0,0:01:19.68,0:01:26.94,Default,,0,0,0,,我发现随着越来越多的开发转向基于\NPrompt的开发，使用LLM开发应用程序，
+Dialogue: 0,0:01:26.94,0:01:31.33,Default,,0,0,0,,整个工作流程、评估过程正在被重新思考。
+Dialogue: 0,0:01:31.33,0:01:34.27,Default,,0,0,0,,这个视频里有很多激动人心的概念。
+Dialogue: 0,0:01:34.27,0:01:36.57,Default,,0,0,0,,让我们开始吧。
+Dialogue: 0,0:01:36.57,0:01:38.93,Default,,0,0,0,,好的，让我们开始设置评估所需要的环境。
+Dialogue: 0,0:01:39.88,0:01:45.92,Default,,0,0,0,,首先，我们需要有一个链或应\N用程序，以便进行评估。
+Dialogue: 0,0:01:45.92,0:01:50.58,Default,,0,0,0,,我们将使用上一课的文档问答链。
+Dialogue: 0,0:01:50.58,0:01:52.74,Default,,0,0,0,,所以我们要导入所需的相关库。
+Dialogue: 0,0:01:52.74,0:01:59.13,Default,,0,0,0,,我们将加载上一课中使用过的相同数据。
+Dialogue: 0,0:01:59.13,0:02:02.27,Default,,0,0,0,,我们将用一行代码创建索引。
+Dialogue: 0,0:02:03.11,0:02:17.27,Default,,0,0,0,,然后，我们将通过指定语言模型、链类型、检\N索器以及verbosity（要打印日志的详细程\N度）这些参数来创建RetrievalQA链。
+Dialogue: 0,0:02:17.27,0:02:18.93,Default,,0,0,0,,现在我们有了这个应用程序。
+Dialogue: 0,0:02:18.93,0:02:21.9,Default,,0,0,0,,我们需要做的第一件事就是
+Dialogue: 0,0:02:21.9,0:02:27.46,Default,,0,0,0,,真正搞清楚我们需要用什\N么样的数据集来评估。
+Dialogue: 0,0:02:27.46,0:02:29.98,Default,,0,0,0,,我将介绍几种不同的方法来实现这个目标。
+Dialogue: 0,0:02:30.95,0:02:33.39,Default,,0,0,0,,第一个方法最简单，
+Dialogue: 0,0:02:33.39,0:02:38.100,Default,,0,0,0,,就是自己想出一些好的示例数据集。
+Dialogue: 0,0:02:38.100,0:02:43.57,Default,,0,0,0,,为了做到这一点，我们可以查看\N一些数据并提出示例问题
+Dialogue: 0,0:02:43.57,0:02:49.77,Default,,0,0,0,,然后提供可以用于评估的标准答案。
+Dialogue: 0,0:02:49.77,0:02:51.95,Default,,0,0,0,,让我们看一下这里的几份文档，
+Dialogue: 0,0:02:53.4,0:02:56.34,Default,,0,0,0,,可以了解到文档里面都有什么。
+Dialogue: 0,0:02:56.34,0:03:00.22,Default,,0,0,0,,看起来第一个文档是关于一套连帽衫的。
+Dialogue: 0,0:03:00.22,0:03:06.32,Default,,0,0,0,,第二个文档是关于一件夹克\N的，都有很多详细信息。
+Dialogue: 0,0:03:08.40,0:03:13.22,Default,,0,0,0,,从这些详细信息中，我们可以创\N建若干组示例问题和答案。
+Dialogue: 0,0:03:13.22,0:03:19.11,Default,,0,0,0,,第一个问题，我们可以简单地问：“舒\N适保暖连帽衫套装有侧口袋吗？”
+Dialogue: 0,0:03:19.11,0:03:25.43,Default,,0,0,0,,我们可以通过上面看到，它确实有侧口袋。
+Dialogue: 0,0:03:25.43,0:03:31.79,Default,,0,0,0,,对于第二个，我们可以看到这件夹\N克来自某个系列，DownTek系列。
+Dialogue: 0,0:03:31.79,0:03:35.46,Default,,0,0,0,,所以我们可以问这个问题："\N这件夹克来自哪个系列？"
+Dialogue: 0,0:03:35.46,0:03:37.84,Default,,0,0,0,,答案是："DownTek系列"。
+Dialogue: 0,0:03:37.84,0:03:41.14,Default,,0,0,0,,所以在这里我们创建了两组问答示例。
+Dialogue: 0,0:03:41.14,0:03:43.68,Default,,0,0,0,,但是，这种方式并不易于扩展。
+Dialogue: 0,0:03:43.68,0:03:47.2,Default,,0,0,0,,需要花费一些时间来查看每个\N示例，弄清楚发生了什么。
+Dialogue: 0,0:03:47.2,0:03:50.14,Default,,0,0,0,,那么有没有办法让我们自动化这个过程？
+Dialogue: 0,0:03:50.14,0:03:54.6,Default,,0,0,0,,借助语言模型来自动化这个过\N程是一种非常酷的方式。
+Dialogue: 0,0:03:55.73,0:03:59.61,Default,,0,0,0,,在LangChain中有一个链可以做到这一点。
+Dialogue: 0,0:03:59.61,0:04:01.40,Default,,0,0,0,,我们可以导入QAGenerationChain
+Dialogue: 0,0:04:01.40,0:04:08.22,Default,,0,0,0,,它可以读取文档并从每个文档\N中生成一组问题和答案。
+Dialogue: 0,0:04:08.22,0:04:10.64,Default,,0,0,0,,它将借助语言模型来实现。
+Dialogue: 0,0:04:10.64,0:04:15.64,Default,,0,0,0,,因此，我们需要通过传入\NChatOpenAI语言模型来创建这个\N链。
+Dialogue: 0,0:04:15.64,0:04:18.32,Default,,0,0,0,,然后我们可以用它创建很\N多组问题和答案示例。
+Dialogue: 0,0:04:19.26,0:04:25.44,Default,,0,0,0,,我们将使用apply_and_parse方法，\N应用解析器来解析输出的结果。
+Dialogue: 0,0:04:25.44,0:04:30.59,Default,,0,0,0,,因为我们想要得到一系列包含一组问题和答\N案的字典对象，而不是一个文本字符串。
+Dialogue: 0,0:04:38.1,0:04:41.57,Default,,0,0,0,,现在如果我们看一下返回的内容，
+Dialogue: 0,0:04:41.58,0:04:44.43,Default,,0,0,0,,我们可以看到一个问题和一个答案。
+Dialogue: 0,0:04:44.43,0:04:49.11,Default,,0,0,0,,让我们检查一下这是哪个文档的问题和答案。
+Dialogue: 0,0:04:49.11,0:04:51.65,Default,,0,0,0,,我们可以看到它在问这个的重量是多少。
+Dialogue: 0,0:04:51.65,0:04:54.17,Default,,0,0,0,,我们可以看到它是从这里获取重量的。
+Dialogue: 0,0:04:54.17,0:04:54.75,Default,,0,0,0,,看看这个，
+Dialogue: 0,0:04:54.75,0:04:57.31,Default,,0,0,0,,我们刚刚生成了很多组问题和答案，
+Dialogue: 0,0:04:57.31,0:04:59.47,Default,,0,0,0,,不需要去一个个手动生成。
+Dialogue: 0,0:04:59.47,0:05:02.48,Default,,0,0,0,,这样可以帮我们节省很多时间，可\N以去做更多其他有意思的事情。
+Dialogue: 0,0:05:04.26,0:05:09.60,Default,,0,0,0,,现在让我们把这些示例加入到\N我们已经创建的示例中。
+Dialogue: 0,0:05:09.60,0:05:15.34,Default,,0,0,0,,现在我们有了这些示例数据，但\N是我们如何评估效果如何？
+Dialogue: 0,0:05:15.34,0:05:21.87,Default,,0,0,0,,首先，我们要做的就是将其中某个示例传\N入链并运行，然后观察它输出的结果。
+Dialogue: 0,0:05:21.87,0:05:24.51,Default,,0,0,0,,这里我们输入一个问题，然后得到返回结果。
+Dialogue: 0,0:05:25.97,0:05:32.29,Default,,0,0,0,,但我们无法观察到链的内部到底发生了什么！
+Dialogue: 0,0:05:32.29,0:05:35.1,Default,,0,0,0,,例如传给语言模型中的Prompt是什么？
+Dialogue: 0,0:05:35.1,0:05:37.75,Default,,0,0,0,,它检索到的文档有哪些？
+Dialogue: 0,0:05:37.75,0:05:41.96,Default,,0,0,0,,如果这是一个包含多个步骤的复杂链\N，那么每一步的中间结果是什么？
+Dialogue: 0,0:05:42.89,0:05:47.21,Default,,0,0,0,,仅仅观察最终答案通常不足以理解
+Dialogue: 0,0:05:47.24,0:05:51.44,Default,,0,0,0,,链中哪里出错或可能出错。
+Dialogue: 0,0:05:51.44,0:05:59.92,Default,,0,0,0,,为了解决这个问题，LangChain中提供了一个有\N意思的小工具，叫做“langchain debug”。
+Dialogue: 0,0:05:59.92,0:06:03.14,Default,,0,0,0,,如果我们把 "langchain.\Ndebug" 设为 "True",
+Dialogue: 0,0:06:03.57,0:06:06.82,Default,,0,0,0,,然后把之前的示例再运行一遍，
+Dialogue: 0,0:06:08.47,0:06:11.51,Default,,0,0,0,,就可以看到它输出了更多的信息。
+Dialogue: 0,0:06:12.46,0:06:14.73,Default,,0,0,0,,如果我们看看它到底输出了什么，
+Dialogue: 0,0:06:14.73,0:06:18.92,Default,,0,0,0,,我们可以看到它首先调用了RetrievalQA链，
+Dialogue: 0,0:06:18.92,0:06:21.58,Default,,0,0,0,,然后它又调用了StuffDocumentsChain。
+Dialogue: 0,0:06:21.58,0:06:25.1,Default,,0,0,0,,上一节课讲到过，我们使用了 "stuff" 方法。
+Dialogue: 0,0:06:25.1,0:06:29.39,Default,,0,0,0,,现在它调用了LLMChain，有\N几个不同的输入参数：
+Dialogue: 0,0:06:29.39,0:06:32.47,Default,,0,0,0,,可以看到原始问题，
+Dialogue: 0,0:06:32.47,0:06:34.39,Default,,0,0,0,,传入的上下文，
+Dialogue: 0,0:06:34.39,0:06:40.12,Default,,0,0,0,,可以看到这个上下文是根据问题\N检索到的几个文档块内容。
+Dialogue: 0,0:06:40.76,0:06:42.31,Default,,0,0,0,,在做问答时，
+Dialogue: 0,0:06:42.32,0:06:48.60,Default,,0,0,0,,往往当返回错误的结果时，不一\N定是语言模型本身出了问题。
+Dialogue: 0,0:06:48.60,0:06:51.50,Default,,0,0,0,,实际上，可能是在检索的步骤出了问题。
+Dialogue: 0,0:06:51.50,0:06:54.76,Default,,0,0,0,,仔细查看问题的确切内容
+Dialogue: 0,0:06:54.76,0:06:59.81,Default,,0,0,0,,和上下文的确切内容可以帮\N助调试，找出问题在哪。
+Dialogue: 0,0:06:59.81,0:07:06.53,Default,,0,0,0,,我们可以再深入一层，看看究竟传入语言模\N型（ChatOpenAI）的Prompt究竟是什么。
+Dialogue: 0,0:07:07.42,0:07:09.90,Default,,0,0,0,,这里我们可以看到传入语\N言模型的完整Prompt：
+Dialogue: 0,0:07:09.90,0:07:12.38,Default,,0,0,0,,有一个系统消息。
+Dialogue: 0,0:07:12.38,0:07:14.51,Default,,0,0,0,,有一个对Prompt的描述。
+Dialogue: 0,0:07:14.51,0:07:18.82,Default,,0,0,0,,这就是问答链在底层使用的Prompt，
+Dialogue: 0,0:07:18.82,0:07:21.24,Default,,0,0,0,,我们直到现在才看到。
+Dialogue: 0,0:07:21.24,0:07:27.14,Default,,0,0,0,,我们可以看到Prompt输出：“使用以下\N上下文信息来回答用户的问题，
+Dialogue: 0,0:07:27.14,0:07:29.30,Default,,0,0,0,,如果你不知道答案，就说不知道，
+Dialogue: 0,0:07:29.30,0:07:30.64,Default,,0,0,0,,不要试图编造答案。”
+Dialogue: 0,0:07:30.64,0:07:34.18,Default,,0,0,0,,然后我们看到之前插入的一堆上下文。
+Dialogue: 0,0:07:34.18,0:07:37.12,Default,,0,0,0,,接着我们看到一个人类提出的问\N题，这就是我们问它的问题。
+Dialogue: 0,0:07:37.68,0:07:40.71,Default,,0,0,0,,我们还可以看到更多语言\N模型返回的结果信息。
+Dialogue: 0,0:07:40.71,0:07:45.51,Default,,0,0,0,,所以不仅仅是一个字符串，我们还得到\N了诸如Token使用量这样的信息，
+Dialogue: 0,0:07:45.52,0:07:50.95,Default,,0,0,0,,比如Prompt消耗了多少Token、返回的结果消耗\N了多少Token、总共消耗的Token数和模型名称。
+Dialogue: 0,0:07:50.95,0:07:58.1,Default,,0,0,0,,这些信息对于跟踪在链或调用语言模\N型中使用了多少Token非常有用，
+Dialogue: 0,0:07:58.31,0:08:02.54,Default,,0,0,0,,根据消耗的Token数和模型，可\N以算出来花费了多少成本。
+Dialogue: 0,0:08:03.61,0:08:05.54,Default,,0,0,0,,因为这是一个相对简单的链，
+Dialogue: 0,0:08:05.56,0:08:07.94,Default,,0,0,0,,我们现在可以看到最后的返回结果：
+Dialogue: 0,0:08:07.96,0:08:11.51,Default,,0,0,0,,“舒适保暖连帽衫套装，条纹款，有侧口袋。”，
+Dialogue: 0,0:08:11.52,0:08:16.30,Default,,0,0,0,,通过链传递并返回给用户。
+Dialogue: 0,0:08:16.30,0:08:19.39,Default,,0,0,0,,我们刚刚讲解了如何查看和调试
+Dialogue: 0,0:08:19.46,0:08:22.44,Default,,0,0,0,,这个链中单个输入的情况。
+Dialogue: 0,0:08:22.44,0:08:24.64,Default,,0,0,0,,但是如何输入我们前面创建的所有示例呢？
+Dialogue: 0,0:08:24.64,0:08:27.1,Default,,0,0,0,,我们该如何评估它们呢？
+Dialogue: 0,0:08:27.1,0:08:30.45,Default,,0,0,0,,和创建示例数据的方法类似\N，一种方法是手动操作。
+Dialogue: 0,0:08:31.2,0:08:33.60,Default,,0,0,0,,我们可以在所有示例上运行链，
+Dialogue: 0,0:08:33.60,0:08:39.77,Default,,0,0,0,,然后观察输出，搞清楚发生了什么\N，是否正确、错误或部分正确。
+Dialogue: 0,0:08:39.77,0:08:44.18,Default,,0,0,0,,与创建示例数据类似，手动操作的方法\N随着时间的推移会变得有些繁琐。
+Dialogue: 0,0:08:44.18,0:08:46.90,Default,,0,0,0,,所以让我们回到大家最喜欢的解决方案。
+Dialogue: 0,0:08:46.90,0:08:48.88,Default,,0,0,0,,能让语言模型来完成吗？
+Dialogue: 0,0:08:50.22,0:08:53.38,Default,,0,0,0,,首先，我们需要为所有示例生成实际答案。
+Dialogue: 0,0:08:53.38,0:08:54.30,Default,,0,0,0,,在此之前，
+Dialogue: 0,0:08:54.31,0:09:00.94,Default,,0,0,0,,我实际上要关闭调试模式，以\N免把所有内容都打印出来，
+Dialogue: 0,0:09:00.94,0:09:06.15,Default,,0,0,0,,然后我将为所有不同的示例生成实际答案。
+Dialogue: 0,0:09:06.15,0:09:08.74,Default,,0,0,0,,我想我们总共有七个示例，
+Dialogue: 0,0:09:08.74,0:09:13.72,Default,,0,0,0,,我们将循环七次，为每个示\N例生成一个实际答案。
+Dialogue: 0,0:09:31.56,0:09:35.30,Default,,0,0,0,,现在我们有了这些示例，可以考虑评估它们。
+Dialogue: 0,0:09:35.30,0:09:39.34,Default,,0,0,0,,我们将导入QAEvalChain。
+Dialogue: 0,0:09:39.34,0:09:42.60,Default,,0,0,0,,我们将用语言模型创建这个链，
+Dialogue: 0,0:09:42.60,0:09:51.85,Default,,0,0,0,,因为我们将使用语言模型来帮助评估。
+Dialogue: 0,0:09:51.85,0:09:54.45,Default,,0,0,0,,然后我们将在这个链上调用"evaluate"方法。
+Dialogue: 0,0:09:54.45,0:09:57.6,Default,,0,0,0,,并传入示例列表和实际答案列表，
+Dialogue: 0,0:09:57.7,0:09:59.27,Default,,0,0,0,,然后我们将得到与这组示例列表相\N对应的一组评估打分结果，并保存\N到了"graded_outputs"变量。
+Dialogue: 0,0:10:01.0,0:10:06.66,Default,,0,0,0,,为了查看每个示例的具体情况，
+Dialogue: 0,0:10:06.66,0:10:08.52,Default,,0,0,0,,我们将遍历它们。
+Dialogue: 0,0:10:08.52,0:10:10.14,Default,,0,0,0,,我们要打印出问题。
+Dialogue: 0,0:10:10.14,0:10:13.3,Default,,0,0,0,,再次说明，这是由语言模型生成的。
+Dialogue: 0,0:10:13.3,0:10:15.1,Default,,0,0,0,,我们要打印出标准答案。
+Dialogue: 0,0:10:15.1,0:10:20.23,Default,,0,0,0,,同样，这是语言模型基于整\N个文档的内容生成的，
+Dialogue: 0,0:10:20.23,0:10:22.5,Default,,0,0,0,,所以它生成的标准答案是可靠的。
+Dialogue: 0,0:10:23.14,0:10:24.82,Default,,0,0,0,,我们要打印出实际答案。
+Dialogue: 0,0:10:24.82,0:10:28.13,Default,,0,0,0,,这是在语言模型和问答链生成的，
+Dialogue: 0,0:10:28.13,0:10:32.93,Default,,0,0,0,,先对问题生成Embedding，然后去向\N量数据库检索相似文档，再将检索\N出来的文档传递给语言模型，
+Dialogue: 0,0:10:32.93,0:10:36.20,Default,,0,0,0,,然后语言模型生成实际答案。
+Dialogue: 0,0:10:36.20,0:10:38.12,Default,,0,0,0,,我们还会打印出评分。
+Dialogue: 0,0:10:38.12,0:10:40.90,Default,,0,0,0,,再次强调，这也是由语言模型生成的
+Dialogue: 0,0:10:40.90,0:10:45.57,Default,,0,0,0,,评估链对标准答案和实际答案进行\N对比，判断对错，得出一个评分。
+Dialogue: 0,0:10:45.99,0:10:48.57,Default,,0,0,0,,所以当我们遍历所有这些示例并打印它们时，
+Dialogue: 0,0:10:48.57,0:10:51.69,Default,,0,0,0,,可以详细查看每个示例。
+Dialogue: 0,0:10:54.61,0:10:57.47,Default,,0,0,0,,看起来每一个示例都做对了。
+Dialogue: 0,0:10:57.47,0:11:02.42,Default,,0,0,0,,这是一个相对简单的检索问题，\N所以这结果还是靠得住的。
+Dialogue: 0,0:11:02.42,0:11:04.92,Default,,0,0,0,,那我们来看第一个示例。
+Dialogue: 0,0:11:04.92,0:11:09.34,Default,,0,0,0,,这里的问题是：“舒适保暖套装有侧面口袋吗？”
+Dialogue: 0,0:11:09.34,0:11:12.37,Default,,0,0,0,,我们创建的标准答案是：“是的”。
+Dialogue: 0,0:11:12.37,0:11:16.29,Default,,0,0,0,,语言模型生成的实际答案是：
+Dialogue: 0,0:11:16.29,0:11:19.75,Default,,0,0,0,,“舒适保暖套装，条纹款确实有侧面口袋。”
+Dialogue: 0,0:11:20.63,0:11:23.77,Default,,0,0,0,,所以我们可以认为这个答案是正确的。
+Dialogue: 0,0:11:23.77,0:11:27.59,Default,,0,0,0,,实际上，语言模型也知道，并\N且它把它标记为正确。
+Dialogue: 0,0:11:27.59,0:11:32.22,Default,,0,0,0,,但让我们想想为什么我们需要使用语言模型。
+Dialogue: 0,0:11:32.22,0:11:35.90,Default,,0,0,0,,因为这两个字符串实际上一点都不像。
+Dialogue: 0,0:11:36.69,0:11:37.45,Default,,0,0,0,,它们非常不同。
+Dialogue: 0,0:11:37.45,0:11:39.51,Default,,0,0,0,,一个很短，一个很长。
+Dialogue: 0,0:11:39.51,0:11:42.83,Default,,0,0,0,,“是的”这个词在这个长字符串里都没有出现。
+Dialogue: 0,0:11:42.83,0:11:47.66,Default,,0,0,0,,所以如果我们试图进行字符串匹配、\N精确匹配或者使用正则表达式，
+Dialogue: 0,0:11:47.99,0:11:50.75,Default,,0,0,0,,是无法对两个字符串进行比较的。
+Dialogue: 0,0:11:50.75,0:11:51.95,Default,,0,0,0,,它们不是同一回事。
+Dialogue: 0,0:11:51.95,0:11:56.70,Default,,0,0,0,,这就突显了在这里使用语言\N模型进行评估的重要性。
+Dialogue: 0,0:11:56.70,0:11:58.6,Default,,0,0,0,,你有这些答案，
+Dialogue: 0,0:11:58.72,0:12:01.64,Default,,0,0,0,,它们可能是任意的字符串。
+Dialogue: 0,0:12:01.64,0:12:05.98,Default,,0,0,0,,答案不是唯一的，
+Dialogue: 0,0:12:05.98,0:12:07.94,Default,,0,0,0,,有很多不同的变体。
+Dialogue: 0,0:12:07.94,0:12:10.70,Default,,0,0,0,,只要它们意思相同，
+Dialogue: 0,0:12:10.70,0:12:13.27,Default,,0,0,0,,它们就应该被看做是相似的。
+Dialogue: 0,0:12:13.27,0:12:16.97,Default,,0,0,0,,这就是语言模型的作用，而\N不仅仅是进行精确匹配。
+Dialogue: 0,0:12:17.53,0:12:24.72,Default,,0,0,0,,之所以对语言模型的评估如此困难，\N就是因为很难对字符串进行比较。
+Dialogue: 0,0:12:24.72,0:12:29.6,Default,,0,0,0,,我们将语言模型用于这些非常开\N放的任务，让它们生成文本。
+Dialogue: 0,0:12:29.6,0:12:34.21,Default,,0,0,0,,这在模型上从来没有真正做过，直到最近\N模型变的足够好了，才好来做这个。
+Dialogue: 0,0:12:34.21,0:12:38.57,Default,,0,0,0,,目前为止很多现存的评估指标都不够好。
+Dialogue: 0,0:12:38.69,0:12:42.99,Default,,0,0,0,,我们不得不发明新的指标和新的启发式方法。
+Dialogue: 0,0:12:42.99,0:12:48.24,Default,,0,0,0,,目前最有趣和最受欢迎的启发式方法实际上是
+Dialogue: 0,0:12:48.24,0:12:50.60,Default,,0,0,0,,使用语言模型进行评估。
+Dialogue: 0,0:12:50.60,0:12:56.44,Default,,0,0,0,,这节关于评估的课程到此就结束了，但我还想\N给你们展示一下LangChain的评估平台。
+Dialogue: 0,0:12:56.44,0:13:02.38,Default,,0,0,0,,借助评估平台可以在Notebook中完\N成我们刚做的所有事情，并且可以在\NUI中显示，并对数据持久化。
+Dialogue: 0,0:13:02.38,0:13:03.58,Default,,0,0,0,,那么让我们看看。
+Dialogue: 0,0:13:04.61,0:13:06.13,Default,,0,0,0,,在这里，可以看到有一个会话。
+Dialogue: 0,0:13:06.13,0:13:08.27,Default,,0,0,0,,我们称之为"deeplearningai"。
+Dialogue: 0,0:13:08.27,0:13:14.41,Default,,0,0,0,,可以看到实际上已经保存了我们在\NNotebook中运行的所有记录。
+Dialogue: 0,0:13:14.41,0:13:17.89,Default,,0,0,0,,这是一个跟踪输入和输出的好方法，
+Dialogue: 0,0:13:17.94,0:13:22.65,Default,,0,0,0,,也是一个查看底层究竟发生了什么的好方法。
+Dialogue: 0,0:13:22.65,0:13:28.26,Default,,0,0,0,,这与我们在Notebook中打开调试\N模式时打印出的信息相同，
+Dialogue: 0,0:13:28.26,0:13:31.92,Default,,0,0,0,,但它在UI中以更好的方式呈现。
+Dialogue: 0,0:13:32.50,0:13:36.8,Default,,0,0,0,,我们可以看到链的输入和\N每个步骤中链的输出。
+Dialogue: 0,0:13:36.8,0:13:39.29,Default,,0,0,0,,然后我们可以进一步深入链中，
+Dialogue: 0,0:13:39.49,0:13:43.24,Default,,0,0,0,,了解更多实际传入的信息。
+Dialogue: 0,0:13:43.24,0:13:45.33,Default,,0,0,0,,如果我们一直到最底层，
+Dialogue: 0,0:13:45.33,0:13:48.46,Default,,0,0,0,,可以看到究竟向聊天模型传入了什么内容。
+Dialogue: 0,0:13:48.46,0:13:50.58,Default,,0,0,0,,这里有系统消息。
+Dialogue: 0,0:13:50.58,0:13:52.70,Default,,0,0,0,,这里有人类的问题。
+Dialogue: 0,0:13:52.70,0:13:54.78,Default,,0,0,0,,这里有来自聊天模型的返回结果。
+Dialogue: 0,0:13:54.78,0:13:56.18,Default,,0,0,0,,还有一些元数据的输出。
+Dialogue: 0,0:13:57.46,0:14:02.38,Default,,0,0,0,,我们在这里添加的另一个功能是\N将这些示例添加到数据集中。
+Dialogue: 0,0:14:02.38,0:14:06.17,Default,,0,0,0,,如果你还有印象的话，在一开\N始创建那些示例数据集时，
+Dialogue: 0,0:14:06.17,0:14:10.57,Default,,0,0,0,,我们是通过手工和语言模型部分创建的。
+Dialogue: 0,0:14:10.57,0:14:13.67,Default,,0,0,0,,我们可以通过点击这个小按\N钮将其添加到数据集中，
+Dialogue: 0,0:14:13.67,0:14:18.43,Default,,0,0,0,,现在我们有了输入问题和输出结果。
+Dialogue: 0,0:14:18.43,0:14:20.1,Default,,0,0,0,,这样我们就可以创建一个数据集。
+Dialogue: 0,0:14:20.1,0:14:22.43,Default,,0,0,0,,我们可以给它命名为"deeplearning"。
+Dialogue: 0,0:14:25.37,0:14:28.41,Default,,0,0,0,,然后我们可以开始向这个数据集添加示例。
+Dialogue: 0,0:14:28.41,0:14:32.60,Default,,0,0,0,,回到我们在课程开始时解决的原始问题，
+Dialogue: 0,0:14:32.60,0:14:36.36,Default,,0,0,0,,我们需要创建这些数据集以便进行评估。
+Dialogue: 0,0:14:36.36,0:14:40.6,Default,,0,0,0,,这是一种在后台运行的好方法，
+Dialogue: 0,0:14:40.26,0:14:44.53,Default,,0,0,0,,然后随着时间的推移向示例数据集中\N添加内容并开始积累这些示例，
+Dialogue: 0,0:14:44.53,0:14:49.50,Default,,0,0,0,,这样你就可以开始将这些数据集用于评\N估，并让评估的飞轮开始转动起来。

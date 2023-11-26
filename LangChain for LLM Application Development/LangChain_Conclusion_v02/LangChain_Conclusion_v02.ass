@@ -1,0 +1,52 @@
+[Script Info]
+
+Title: LangChain_Conclusion_v02
+ScriptType: v4.00+
+WrapStyle: 0
+Collisions: Reverse
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+ScaledBorderAndShadow: no
+Last Style Storage: Default
+Video Aspect Ratio: 0
+Video Zoom: 6
+Video Position: 0
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Default,LXGW WenKai,20,&H0080FFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+Style: Secondary,Helvetica,12,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,1,1,6,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.0,0:00:10.0,Secondary,,0,0,0,,{\an7\fs12\pos(9,11)\fad(300,1000)}{\1c&H00FFFFFF&\2c&H0000FF&}作者：{\1c&H80FFFF&\2c&H0000FF&}Harrison Chase, Andrew Wu\N{\1c&H00FFFFFF&\2c&H0000FF&}翻译：{\1c&H80FFFF&\2c&H0000FF&}宝玉 + GPT-4
+Dialogue: 0,0:00:00.0,0:00:05.0,Default,,0,0,0,,{\fs20\an8}{\fad(200,200)\c&HFFFFFF&}基于LangChain的大语言模型应用开发8\N总结
+Dialogue: 0,0:00:05.3,0:00:13.69,Secondary,,0,0,0,,In this short course, you saw a range of applications including processing customer reviews and building an application to answer questions over documents
+Dialogue: 0,0:00:13.69,0:00:21.37,Secondary,,0,0,0,,and even using an LLM to decide when to make a call to an external tool like web search to answer complex questions.
+Dialogue: 0,0:00:22.5,0:00:27.31,Secondary,,0,0,0,,If a week or two ago, someone had asked you, how much work would it be to build all of these applications?
+Dialogue: 0,0:00:27.31,0:00:32.56,Secondary,,0,0,0,,I think a lot of people would have thought, boy, this sounds like weeks, you know, maybe even longer of work.
+Dialogue: 0,0:00:32.56,0:00:41.57,Secondary,,0,0,0,,But you saw in the short course, how with just a pretty reasonable number of lines of code, you can use LangChain to build all of these applications pretty efficiently.
+Dialogue: 0,0:00:41.57,0:00:48.5,Secondary,,0,0,0,,As I hope you take these ideas, maybe you can take some code snippets that you saw on the Jupyter notebooks and use them in your own applications.
+Dialogue: 0,0:00:49.1,0:00:51.17,Secondary,,0,0,0,,And these ideas are really just the start.
+Dialogue: 0,0:00:51.17,0:00:54.81,Secondary,,0,0,0,,There's a lot of other applications that you can use language models for.
+Dialogue: 0,0:00:54.81,0:01:05.60,Secondary,,0,0,0,,These models are so powerful because they're applicable to such a wide range of tasks, whether it be answering questions about CSVs, querying SQL databases, interacting with APIs.
+Dialogue: 0,0:01:06.46,0:01:15.98,Secondary,,0,0,0,,There's a lot of different examples of using chains and the combinations of prompts and output parsers and then more chains to do all these things in LangChain.
+Dialogue: 0,0:01:15.98,0:01:18.12,Secondary,,0,0,0,,And most of that is due to the LangChain community.
+Dialogue: 0,0:01:18.12,0:01:29.81,Secondary,,0,0,0,,So I want to also give a really big thank out to everyone in the community who's contributed, whether it be improvements in the documentation, making it easier for others to get started or new types of chains opening up a whole new world of possibilities.
+Dialogue: 0,0:01:30.29,0:01:38.8,Secondary,,0,0,0,,And so with that, if you have not yet already done so, I hope you go to your laptop or your desktop and run pip install LangChain,
+Dialogue: 0,0:01:38.8,0:01:42.16,Secondary,,0,0,0,,um, and then go use this tool to go build some amazing applications.
+Dialogue: 0,0:00:05.3,0:00:13.69,Default,,0,0,0,,在这门课程中，你看到了各种应用的示例，包括处理\N客户评论，构建一个能够基于文档问答的应用，
+Dialogue: 0,0:00:13.69,0:00:21.37,Default,,0,0,0,,甚至使用语言模型决定何时调用外部工具\N，比如网络搜索，来回答复杂的问题。
+Dialogue: 0,0:00:22.5,0:00:27.31,Default,,0,0,0,,如果在一两周前，有人问你，构建这些应用需要多少工作量？
+Dialogue: 0,0:00:27.31,0:00:32.56,Default,,0,0,0,,我想很多人会觉得，哇，这听起来要花好几周，甚至更长时间。
+Dialogue: 0,0:00:32.56,0:00:41.57,Default,,0,0,0,,但你在这门课程中看到，利用LangChain，只需\N要少量代码就可以高效地构建这些应用。
+Dialogue: 0,0:00:41.57,0:00:48.5,Default,,0,0,0,,我希望你们能把这些知识，也许还有在Jupyter \NNotebook上看到的一些代码片段，应用到自己的项目中。
+Dialogue: 0,0:00:49.1,0:00:51.17,Default,,0,0,0,,而这些想法仅仅是个开始，
+Dialogue: 0,0:00:51.17,0:00:54.81,Default,,0,0,0,,还有很多其他应用可以应用大语言模型。
+Dialogue: 0,0:00:54.81,0:01:05.60,Default,,0,0,0,,这些模型之所以强大，是因为它们适用于如此广泛的任务，无\N论是回答关于CSV的问题，查询SQL数据库，还是与API互动。
+Dialogue: 0,0:01:06.46,0:01:15.98,Default,,0,0,0,,在LangChain里有许多不同的例子，可以用链和Prompt组合，然\N后使用输出解析器，再加上更多的链来完成所有这事情。
+Dialogue: 0,0:01:15.98,0:01:18.12,Default,,0,0,0,,其中大部分归功于LangChain社区。
+Dialogue: 0,0:01:18.12,0:01:29.81,Default,,0,0,0,,我也想对社区中每一位做出贡献的人表示真诚的感谢，无论\N是改进文档，使得其他人更容易上手，还是开发新类型的链，\N都为我们开启了一个充满无数可能性的全新世界。
+Dialogue: 0,0:01:30.29,0:01:38.8,Default,,0,0,0,,如果你还没有开始使用LangChain，希望你打开笔\N记本或台式机，运行 pip install langchain，
+Dialogue: 0,0:01:38.8,0:01:42.16,Default,,0,0,0,,然后用这个LangChain去构建一些惊艳的应用程序。

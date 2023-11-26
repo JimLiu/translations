@@ -1,0 +1,359 @@
+1
+00:00:05,000 --> 00:00:13,640
+在这个视频中，你将了解一种新的采样方法，它比我们迄今为止使用的DDPM高效10倍以上。
+In this video, you'll learn about a new sampling method that is over 10 times   efficient than DDPM, which is what we've been using so far.
+
+2
+00:00:13,640 --> 00:00:16,360
+这种新方法叫做DDIM。
+And this new method is called DDIM.
+
+3
+00:00:16,360 --> 00:00:20,680
+你的目标是想要更多的图片，并且快速得到它们。
+So your goal is that you want more images, and you want them quickly.
+
+4
+00:00:20,680 --> 00:00:26,000
+但是到目前为止，采样速度很慢，因为涉及到很多时间步骤，
+But sampling so far has been slow because, one, there are many time steps involved,
+
+5
+00:00:26,000 --> 00:00:29,960
+比如500个，有时甚至更多才能得到一个好的样本。
+you know, 500, there are even more sometimes to get a good sample.
+
+6
+00:00:29,960 --> 00:00:33,080
+而且每个时间步骤都依赖于前一个。
+And also each time step is dependent on the previous one.
+
+7
+00:00:33,080 --> 00:00:36,600
+它遵循一个马尔可夫链过程。
+It follows a Markov chain process.
+
+8
+00:00:36,600 --> 00:00:43,960
+但幸运的是，有许多新的采样器来解决这个问题，因为这一直是扩散模型的一个长期问题。
+But thankfully, there are many new samplers here to address this problem, since this has been a long standing problem with diffusion models.
+
+9
+00:00:43,960 --> 00:00:49,614
+你可以训练它们，它们可以创造出既多样又逼真的惊人美丽的图像，
+It's that you can train them and they can create amazing, beautiful images that are both diverse and realistic,
+
+10
+00:00:49,615 --> 00:00:52,520
+但从它们那里得到结果的速度非常慢。
+but it's so slow to get something out of them.
+
+11
+00:00:52,520 --> 00:01:01,400
+其中一种非常受欢迎的采样器叫做DDIM，即去噪扩散隐式模型，这只是论文的名字。
+And one of these samplers that has been very popular is called DDIM, or Denoising Diffusion Implicit Models, which is just the name of the paper.
+
+12
+00:01:01,400 --> 00:01:08,120
+这篇论文是由Jiaming Song、Chenlin Meng和我的博士联合导师Stefano Ermon共同完成的。
+And this paper was written by Jiaming Song, Chenlin Meng, and my PhD co-advisor, Stefano Ermon.
+
+13
+00:01:08,120 --> 00:01:12,440
+DDIM之所以更快，是因为它能跳过时间步长。
+DDIM is faster because it's able to skip time steps.
+
+14
+00:01:12,440 --> 00:01:19,280
+所以它不是从500步到499步再到498步，而是能跳过所有这些步骤。
+So instead of going from time step 500 to 499 to 498, it's able to skip all these time steps.
+
+15
+00:01:19,280 --> 00:01:23,840
+它能跳过很多步骤，因为它打破了马尔可夫假设。
+And it's able to skip quite a bit, because it breaks the Markov assumption.
+
+16
+00:01:23,840 --> 00:01:26,760
+马尔可夫链只用于概率过程。
+Markov chains are only used for probabilistic processes.
+
+17
+00:01:26,760 --> 00:01:33,800
+但DDIM实际上从这个采样过程中去除了所有的随机性，因此是确定性的。
+But DDIM actually removes all the randomness from this sampling process, and is therefore deterministic.
+
+18
+00:01:33,800 --> 00:01:40,140
+它所做的，本质上就是预测最终输出的粗略草图。
+And what it does, essentially, is it predicts a rough sketch of the final output.
+
+19
+00:01:40,140 --> 00:01:44,560
+然后用去噪过程对其进行细化。
+And then it refines it with the denoising process.
+
+20
+00:01:44,560 --> 00:01:51,200
+那么让我们比较一下左边的DDPM，这是我们迄今为止一直在做的，和右边的DDIM。
+So let's compare DDPM here on the left, which is what we've been doing so far, and DDIM here on the right.
+
+21
+00:01:51,200 --> 00:01:54,760
+是的，使用DDIM速度快很多。
+Yes, it is much faster with DDIM.
+
+22
+00:01:54,760 --> 00:02:00,560
+在时间步19之后，你立即就能看到一个有形的结果。
+You immediately see a buck there after time step 19.
+
+23
+00:02:00,560 --> 00:02:02,480
+我们还在继续使用DDPM。
+And we're still going for DDPM.
+
+24
+00:02:02,480 --> 00:02:04,240
+我们还在继续。
+We're still going.
+
+25
+00:02:04,240 --> 00:02:08,760
+而且这一直可以用DDPM达到500。
+And this goes all the way up to 500 with DDPM, as you know.
+
+26
+00:02:08,760 --> 00:02:11,760
+好的，这里是实验课。
+Great, so here's the lab.
+
+27
+00:02:11,760 --> 00:02:13,360
+很多设置看起来都一样。
+A lot of the setup will look the same.
+
+28
+00:02:13,360 --> 00:02:22,560
+我只是在这里运行这个单元格，重新设置单位，我们的超参数。
+So I'm just going to run this cell here, set up the unit again, our hyperparameters.
+
+29
+00:02:22,560 --> 00:02:24,360
+这是DDPM噪声计划。
+Here's the DDPM noise schedule.
+
+30
+00:02:24,360 --> 00:02:27,560
+稍后我们会用它来和DDIM进行比较。
+We'll use it to compare it to DDIM later.
+
+31
+00:02:27,560 --> 00:02:30,000
+现在我正在实例化模型。
+Now I'm instantiating the model.
+
+32
+00:02:30,000 --> 00:02:32,600
+这里是用DDIM进行快速采样的地方。
+And here's where fast sampling comes in with DDIM.
+
+33
+00:02:32,600 --> 00:02:35,560
+这是DDIM的功能。
+So here's the function for DDIM.
+
+34
+00:02:35,560 --> 00:02:42,080
+可以查看论文了解细节，但这里实现了相应的缩放因子。
+You can look at the paper for the details, but this implements that with its scaling factors.
+
+35
+00:02:42,080 --> 00:02:44,480
+然后我们在这里加载训练好的模型。
+And then we load up our trained model here.
+
+36
+00:02:44,480 --> 00:02:49,600
+很酷的是，我们可以直接加载训练好的模型，使用DDIM或DDPM。
+So what's cool is that we can actually just load up the trained model and use either DDIM or DDPM.
+
+37
+00:02:49,600 --> 00:02:50,600
+这都没关系。
+It doesn't matter.
+
+38
+00:02:50,600 --> 00:02:53,040
+这只是训练后的采样过程。
+This is just a sampling process after training.
+
+39
+00:02:53,040 --> 00:02:55,360
+这是使用DDIM的采样算法。
+And this is the sampling algorithm using DDIM.
+
+40
+00:02:55,360 --> 00:02:58,480
+需要指出的是，这里涉及到一个步长。
+And the only thing to call out is that there is a step size involved.
+
+41
+00:02:58,480 --> 00:03:00,720
+我们没有逐个时间步骤地进行。
+We're not going through every single time step.
+
+42
+00:03:00,720 --> 00:03:02,800
+实际上我们在这里跳过了一些步骤。
+We're actually skipping steps here.
+
+43
+00:03:02,800 --> 00:03:05,600
+这里的n是20。
+And here is where n is 20.
+
+44
+00:03:05,600 --> 00:03:08,200
+所以这是500除以20。
+So this is 500 over 20.
+
+45
+00:03:08,200 --> 00:03:10,800
+我们将在这里运行。
+We'll run that here.
+
+46
+00:03:10,800 --> 00:03:11,960
+然后我们可以进行采样。
+And then we can sample.
+
+47
+00:03:11,960 --> 00:03:13,240
+这速度快了很多。
+That was much, much faster.
+
+48
+00:03:13,240 --> 00:03:16,040
+我几乎看不到那里。
+I could barely even see that there.
+
+49
+00:03:16,040 --> 00:03:19,080
+现在正在合成GIF。
+And now the GIF is just being composed.
+
+50
+00:03:19,080 --> 00:03:21,440
+我们会加快合成GIF的视频速度。
+We'll speed up the video for the GIF.
+
+51
+00:03:21,440 --> 00:03:22,720
+好了！
+All right.
+
+52
+00:03:22,720 --> 00:03:26,120
+这就是它的样子。
+So here's what that looks like.
+
+53
+00:03:26,120 --> 00:03:31,640
+它能够瞬间变成这些游戏角色，速度非常快。
+And it's very fast that it's able to instantly turn into these sprites.
+
+54
+00:03:31,640 --> 00:03:38,480
+现在用这种更快的采样方法，你并不总能得到和使用DDPM一样的质量。
+Now with this faster sampling method, you don't always get the same level of quality as if you were to run DDPM.
+
+55
+00:03:38,480 --> 00:03:40,560
+但这些实际上看起来相当不错。
+These actually do look quite good.
+
+56
+00:03:40,560 --> 00:03:46,080
+实际上，人们发现，用在这500步上训练的模型，例如，
+Empirically, people have found that with a model trained on these 500 steps, for example,
+
+57
+00:03:46,080 --> 00:03:49,600
+如果你采样500步，DDPM的表现会更好。
+DDPM will perform better if you sample for 500 steps.
+
+58
+00:03:49,600 --> 00:03:54,720
+但对于任何小于500步的数字，DDIM的表现会好得多。
+But for any number under 500 steps, DDIM will do much better.
+
+59
+00:03:54,720 --> 00:03:57,560
+现在这里是相同的，但带有上下文模型。
+And so now here's the same, but with a context model.
+
+60
+00:03:57,560 --> 00:03:58,920
+所以你可以加载那个上下文。
+So you can load in that context.
+
+61
+00:04:02,920 --> 00:04:03,680
+太棒了！
+Great.
+
+62
+00:04:03,680 --> 00:04:05,600
+这些只是随机的上下文。
+So these are just random contexts here.
+
+63
+00:04:05,600 --> 00:04:07,440
+但你们也可以自己设置。
+But you can set them yourselves as well.
+
+64
+00:04:07,440 --> 00:04:10,200
+它们是这样的。
+And this is what they look like.
+
+65
+00:04:10,200 --> 00:04:15,040
+那么现在你们可能会问速度如何对比？
+So now your question is probably, how does the speed compare?
+
+66
+00:04:15,040 --> 00:04:21,440
+我们可以加载原始的DDPM函数和采样算法。
+So we can load up the original DDPM functions and sampling algorithm.
+
+67
+00:04:21,440 --> 00:04:24,120
+然后我们可以在这个Notebook中使用 timeit 进行比较。
+And we can compare it using  timeit  in this notebook.
+
+68
+00:04:24,120 --> 00:04:26,280
+我们将比较DDIM和DDPM。
+So we're going to compare DDIM with DDPM.
+
+69
+00:04:31,280 --> 00:04:32,840
+好了
+All right.
+
+70
+00:04:32,840 --> 00:04:34,040
+看看这个速度提升。
+Look at that speed up.
+
+71
+00:04:34,040 --> 00:04:35,120
+哇！
+Wow.
+
+72
+00:04:35,120 --> 00:04:37,880
+试着在你们自己的Notebook中运行这些，看看结果如何。
+So try running these in your own notebook and see what you get.

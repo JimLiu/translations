@@ -1,0 +1,524 @@
+1
+00:00:04,986 --> 00:00:12,642
+在上个视频中，你看到了如何评估LLM输出，在一个例子中，它给出了正确答案，
+In the last video, you saw how to evaluate an LLM output in an example where it had the right answer
+
+2
+00:00:12,643 --> 00:00:21,280
+我们可以编写一个函数，明确地告诉我们LLM是否输出了正确的类别和产品列表。
+and so could write down a function to explicitly just tell us if the LLM outputs the right categories and list of products.
+
+3
+00:00:21,280 --> 00:00:26,400
+但是，如果LLM用来生成文本，而且并不只有一种正确的文本呢？
+But what if the LLM is used to generate text and there isn't just one right piece of text?
+
+4
+00:00:26,400 --> 00:00:31,840
+让我们看一下如何评估这种类型的LLM输出的方法。
+Let's take a look at an approach for how to evaluate that type of LLM output.
+
+5
+00:00:31,840 --> 00:00:36,286
+这是我常用的一些辅助函数，给出了一个客户消息，
+Here's my usual helper functions and given a customer message,
+
+6
+00:00:36,287 --> 00:00:40,240
+告诉我关于SmartX Pro手机和Fotoshop相机等的信息。
+tell me about the SmartX Pro phone and the Fotoshop camera and so on.
+
+7
+00:00:40,240 --> 00:00:44,600
+这里有一些工具可以帮助我得到助手的答案。
+Here are a few utils to get me the assistant answer.
+
+8
+00:00:44,600 --> 00:00:48,480
+这基本上就是Isa在早期的视频中介绍的过程。
+This is basically the process that Isa has stepped through in earlier videos.
+
+9
+00:00:48,480 --> 00:00:50,040
+这就是助手的答案。
+And so here's the assistant answer.
+
+10
+00:00:50,040 --> 00:00:58,880
+我确信我们有整个智能手机，SmartX Pro手机等等。
+I'm sure we have a whole Smartphone, the SmartX Pro phone and so on and so forth.
+
+11
+00:00:58,880 --> 00:01:04,520
+那么你如何评估这是不是一个好答案呢？
+So how can you evaluate if this is a good answer or not?
+
+12
+00:01:04,520 --> 00:01:07,920
+看起来有很多可能的好答案。
+Seems like there are lots of possible good answers.
+
+13
+00:01:07,920 --> 00:01:18,799
+评估这个的一种方法是编写一个评分标准，也就是一套评估这个答案在不同维度上的指南，
+One way to evaluate this is to write a rubric, meaning a set of guidelines to evaluate this answer on different dimensions
+
+14
+00:01:18,800 --> 00:01:22,600
+然后用它来决定你是否对这个答案满意。
+and then use that to decide whether or not you're satisfied with this answer.
+
+15
+00:01:22,600 --> 00:01:26,080
+让我给你演示一下如何做到这一点。
+Let me show you how to do that.
+
+16
+00:01:26,080 --> 00:01:31,520
+那么让我创建一个小的数据结构来存储客户消息以及产品信息。
+So let me create a little data structure to store the customer message as well as the product info.
+
+17
+00:01:31,520 --> 00:01:39,240
+这里我要指定一个提示（Prompt），用来评估助手答案，使用的是所谓的评分标准。
+So here I'm going to specify a prompt for evaluating the assistant answer using what's called a rubric.
+
+18
+00:01:39,240 --> 00:01:41,260
+我稍后会解释这是什么意思。
+I'll explain in a second what that means.
+
+19
+00:01:41,260 --> 00:01:43,743
+但是这个提示的系统消息中说，
+But this prompt says in the system message,
+
+20
+00:01:43,744 --> 00:01:48,300
+你是一个助手，评估客户服务代表回答用户问题的效果，
+you're an assistant evaluates how well the customer service agent answers the user question,
+
+21
+00:01:48,301 --> 00:01:52,200
+但是看看客户服务代理是如何使用这个生成的回答的。
+but look at the context that the customer service agent is using the generated response.
+
+22
+00:01:52,200 --> 00:01:55,880
+那么这个回答就是我们在Notebook上方看到的。
+So this response is what we had further up the notebook.
+
+23
+00:01:55,880 --> 00:01:58,480
+那是助手的回答。
+That was the assistant answer.
+
+24
+00:01:58,480 --> 00:02:01,760
+我们将在这个提示中指定数据。
+And we're going to specify the data in this prompt.
+
+25
+00:02:01,760 --> 00:02:03,600
+客户的留言是什么？
+What's the customer message?
+
+26
+00:02:03,600 --> 00:02:05,120
+上下文是什么？
+What's the context?
+
+27
+00:02:05,120 --> 00:02:08,760
+也就是说，提供的产品和类别信息是什么？
+That is, what's the product and category information that was provided?
+
+28
+00:02:08,760 --> 00:02:11,240
+然后LLM的输出是什么？
+And then what was the output of the LLM?
+
+29
+00:02:11,240 --> 00:02:12,600
+接下来这是一个评分标准。
+And then this is a rubric.
+
+30
+00:02:12,600 --> 00:02:16,360
+我们希望LLM将事实内容和提交的答案与内容进行比较。
+So we want the LLM to compare the factual content and submitted answer to the content.
+
+31
+00:02:16,360 --> 00:02:19,200
+忽略语音风格、语法、标点的差异。
+Ignore differences in style, grammar, punctuation.
+
+32
+00:02:19,200 --> 00:02:25,200
+然后我们还想检查一些事情，比如，助手的回应是否只基于提供的上下文？
+And then we wanted to check a few things like is the assistant response based only on the context provided?
+
+33
+00:02:25,200 --> 00:02:28,800
+答案是否包含上下文中没有提供的信息？
+Does the answer include information that is not provided in the context?
+
+34
+00:02:28,800 --> 00:02:31,980
+回应和上下文之间有没有任何分歧？
+Is there any disagreement between response and the context?
+
+35
+00:02:31,980 --> 00:02:42,800
+这就是所谓的评分标准，它规定了答案应该达到的正确程度，以便我们判断它是不是一个好答案。
+So this is called a rubric and this specifies what we think the answer should get right for us to consider it a good answer.
+
+36
+00:02:42,800 --> 00:02:47,371
+最后我们想打印出“是”或“否”等等
+Then finally we wanted to print out yes or no and so on.
+
+37
+00:02:50,280 --> 00:02:58,986
+现在如果我们要运行这个评估，这就是你得到的结果。
+And now if we were to run this evaluation, this is what you get.
+
+38
+00:02:59,520 --> 00:03:03,200
+它说，助手的回应是基于提供的上下文。
+So it says the assistant response is based on the context provided.
+
+39
+00:03:03,200 --> 00:03:06,560
+在这种情况下，它似乎没有编造新信息。
+It does not in this case seem to make up new information.
+
+40
+00:03:06,560 --> 00:03:07,560
+没有分歧。
+There isn't disagreements.
+
+41
+00:03:07,560 --> 00:03:10,920
+用户问了两个问题，回答了问题一和问题二。
+The user asked two questions, answered question one and answered question two.
+
+42
+00:03:10,920 --> 00:03:14,120
+它回答了两个问题。
+So it answered both questions.
+
+43
+00:03:14,120 --> 00:03:20,200
+我们会看这个输出，可能会得出这是一个相当好的回应的结论。
+So we would look at this output and maybe conclude that this is a pretty good response.
+
+44
+00:03:20,200 --> 00:03:28,800
+还有一点需要注意，这里我使用的是ChatGPT-3.5-Turbo模型进行评估。
+And one note, here I'm using the ChatGPT-3.5-Turbo model for this evaluation.
+
+45
+00:03:28,800 --> 00:03:33,529
+为了更全面的评估，可以考虑使用GPT-4，
+For a more robust evaluation, it might be worth considering using GPT-4
+
+46
+00:03:33,530 --> 00:03:39,486
+因为即使你在生产环境中用ChatGPT-3.5-Turbo并生成了大量文本，
+because even if you deploy 3.5 Turbo in production and generate a lot of text,
+
+47
+00:03:39,487 --> 00:03:43,786
+如果你的评估并不是太频繁，
+if your evaluation is a more sporadic exercise,
+
+48
+00:03:43,787 --> 00:03:55,280
+那么为了得到一个更严谨的评估结果，使用稍微昂贵一点GPT-4 API还是值得的。
+then it may be prudent to pay for the somewhat more expensive GPT-4 API call to get a more rigorous evaluation of the output.
+
+49
+00:03:55,280 --> 00:03:59,956
+我希望你们能从这里学到的一个设计模式是：当你可以指定一个评分标准时，
+One design pattern that I hope you can take away from this is that when you can specify a rubric,
+
+50
+00:03:59,957 --> 00:04:06,100
+也就是说，列出一系列评估LLM生成结果的标准，
+meaning a list of criteria by which to evaluate an LLM output,
+
+51
+00:04:06,101 --> 00:04:12,400
+你实际上可以使用另一个API调用来评估从LLM获得的结果。
+then you can actually use another API call to evaluate your first LLM output.
+
+52
+00:04:12,400 --> 00:04:22,980
+还有一种设计模式可能对某些应用程序有用，就是如果你能指定一个用来参考的理想标准答案。
+There's one other design pattern that could be useful for some applications, which is if you can specify an ideal response.
+
+53
+00:04:22,980 --> 00:04:27,429
+这里我要指定一个测试示例，其中客户的消息是：
+So here I'm going to specify a test example where the customer message is,
+
+54
+00:04:27,430 --> 00:04:31,080
+“告诉我关于SmartX Pro 手机的信息，”等等。
+"Tell me about the SmartX Pro phone," and so on.
+
+55
+00:04:31,080 --> 00:04:32,800
+这里有一个理想的答案。
+And here's an ideal answer.
+
+56
+00:04:32,800 --> 00:04:39,200
+如果你有一个高水准的人类客服专家，能对客户问题撰写非常专业的回复。
+So this is if you have an expert human customer service representative write a really good answer.
+
+57
+00:04:39,200 --> 00:04:44,160
+专家回复的当然是一个很好的答案。SmartX Pro 手机，等等。
+The expert says, this would be a great answer. Of course, the SmartX Pro Phone, and so on.
+
+58
+00:04:44,160 --> 00:04:47,880
+它后面还有很多有用的信息。
+It goes on to give a lot of helpful information.
+
+59
+00:04:47,880 --> 00:04:54,600
+现在，期望LLM生成这样的答案是不现实的。
+Now it is unreasonable to expect any LLM to generate this exact answer word for word.
+
+60
+00:04:54,600 --> 00:04:57,543
+在经典的自然语言处理技术中，
+And in classical natural language processing techniques,
+
+61
+00:04:57,544 --> 00:05:06,280
+有一些传统的度量标准，用于衡量LLM输出是否与人类专家撰写的结果相似。
+there are some traditional metrics for measuring if the LLM output is similar to this expert human written output.
+
+62
+00:05:06,280 --> 00:05:12,320
+例如，有一种叫做BLEU分数，B-L-E-U，你可以在网上搜索了解更多。
+For example, there's something called the BLEU score, B-L-E-U, that you can search online to read more about.
+
+63
+00:05:12,320 --> 00:05:17,680
+它们可以衡量一段文字与另一段文字的相似程度。
+They can measure how similar one piece of text is from another.
+
+64
+00:05:17,680 --> 00:05:26,885
+但事实证明，还有一个更好的方法，就是你可以使用一个提示（Prompt），我将在这里指定，
+But it turns out there's an even better way, which is you can use a prompt, which I'm going to specify here,
+
+65
+00:05:26,886 --> 00:05:41,280
+让LLM去比较，由AI自动生成的客服回复，与前面展示的人类客服专家的理想答案之间的相似度。
+to ask an LLM to compare how well the automatically generated customer service agent output corresponds to the ideal expert response that was written by a human that I just showed up above.
+
+67
+00:05:41,280 --> 00:05:47,170
+这是我们可以使用的提示，我们将使用LLM并让它充当一个助理，
+Here's the prompt we can use, which is we're going to use an LLM and tell it to be an assistant
+
+68
+00:05:47,171 --> 00:05:58,360
+通过比较自动生成的回复和理想的由人类专家编写的回复，评估客服代表回答用户问题的能力。
+that evaluates how well the customer service agent answers the user question by comparing the response that was the automatically generated one to the ideal expert human written response.
+
+70
+00:05:58,360 --> 00:06:02,900
+所以我们将给它提供数据，也就是客户的请求是什么，
+And so we're going to give it the data, which is what was the customer request,
+
+71
+00:06:02,901 --> 00:06:09,280
+专家编写的理想答案是什么，然后我们的LLM实际上输出了什么。
+what was the expert written ideal response, and then what did our LLM actually output.
+
+72
+00:06:09,280 --> 00:06:13,857
+这个评分标准来自OpenAI的开源评估框架，
+And this rubric comes from the OpenAI open source evals framework,
+
+73
+00:06:13,858 --> 00:06:23,320
+这是一个非常棒的框架，其中包含了许多由OpenAI开发人员和广大开源社区志愿者贡献的评估方法。
+which is a fantastic framework with many evaluation methods contributed both by OpenAI developers and by the broader open source community.
+
+74
+00:06:23,320 --> 00:06:32,840
+事实上，如果你愿意，你也可以为该框架贡献一个评估方法，以帮助其他人评估他们的大型语言模型输出。
+In fact, if you want, you could contribute an eval to that framework yourself to help others evaluate their large language model outputs.
+
+75
+00:06:32,840 --> 00:06:39,499
+在这个评分标准中，我们要求LLM对输入的内容与专家写的理想答案进行比较，
+So in this rubric, we tell the LLM to compare the factual content of the submitted answer with the expert answer,
+
+76
+00:06:39,500 --> 00:06:42,629
+可以忽略风格、语法、标点的差异。
+ignore differences in style, grammar, punctuation,
+
+77
+00:06:42,630 --> 00:06:46,840
+你可以随时暂停视频，详细阅读这个评分标准。
+and feel free to pause the video and read through this in detail.
+
+78
+00:06:46,840 --> 00:06:53,557
+但关键是我们要求它进行比较并输出一个从A到E的分数，
+But the key is we ask it to carry the comparison and output a score from A to E,
+
+79
+00:06:53,558 --> 00:06:59,499
+并根据提交的内容是否包含在专家内容中并完全一致，
+depending on whether the submitted answer is a subset of the expert answer and is fully consistent
+
+80
+00:06:59,500 --> 00:07:05,400
+或者提交的内容是否超越了专家内容，但完全与之一致。
+versus the submitted answer is a superset of the expert answer, but it's fully consistent with it.
+
+82
+00:07:05,400 --> 00:07:08,560
+这可能意味着它产生了幻觉或编造了一些额外的事实。
+This might mean it hallucinated or made up some additional facts.
+
+83
+00:07:08,560 --> 00:07:13,729
+提交的内容包含了所有专家内容的细节，
+Submitted answer contains all the details as a expert answer,
+
+84
+00:07:13,730 --> 00:07:22,840
+无论是否存在分歧，或者内容是否有所不同，但从事实性的角度来看，这些差异并不重要。
+whether there's disagreement or whether the answers differ, but these differences don't matter from the perspective of factuality.
+
+85
+00:07:22,840 --> 00:07:27,040
+而且LLM会选择其中最合适的描述。
+And the LLM will pick whichever of these seems to be the most appropriate description.
+
+86
+00:07:27,040 --> 00:07:29,480
+这就是我们刚才得到的内容。
+So here's the assistant answer that we had just now.
+
+87
+00:07:29,480 --> 00:07:31,000
+我认为这是一个相当不错的内容，
+I think it's a pretty good answer,
+
+88
+00:07:31,001 --> 00:07:35,920
+但现在让我们看看它在将得到的内容与测试集进行比较时的想法。
+but now let's see what the things when it compares the assistant answer to test set ID.
+
+89
+00:07:35,920 --> 00:07:37,729
+哦，看起来它得了个A。
+Ooh, looks like it got an A.
+
+90
+00:07:37,730 --> 00:07:44,400
+它认为提交的内容是专家内容的子集，并且与之完全一致。
+And so it thinks the submitted answer is a subset of the expert answer and is fully consistent with it.
+
+91
+00:07:44,400 --> 00:07:45,400
+我觉得这个说法很对。
+And that sounds right to me.
+
+92
+00:07:45,400 --> 00:07:51,280
+这个LLM生成的答案比上面长篇大论的专家答案要短得多，但希望它是一致的。
+This assistant answer is much shorter than the long expert answer up top, but it does hopefully is consistent.
+
+93
+00:07:51,280 --> 00:07:59,000
+再次说明，我在这个例子中使用的是 GPT-3.5-turbo，但为了更严谨的评估，
+Once again, I'm using GPT-3.5-turbo in this example, but to get a more rigorous evaluation,
+
+94
+00:07:59,000 --> 00:08:04,400
+在你自己的应用中使用 GPT-4 可能更有意义。
+it might make sense to use GPT 4 in your own application.
+
+95
+00:08:04,400 --> 00:08:06,160
+现在让我们尝试一些完全不同的东西。
+Now let's try something totally different.
+
+96
+00:08:06,160 --> 00:08:10,400
+我将用一段完全不同的测试答案。
+I'm going to have a very different assistant answer.
+
+97
+00:08:10,400 --> 00:08:15,520
+“生活就像一盒巧克力”，这句话出自一部名为《阿甘正传》的电影。
+"Life is like a box of chocolate", quote from a movie called "Forrest Gump".
+
+98
+00:08:15,520 --> 00:08:20,214
+如果我们用它来测试，得到的结果是 D
+And if we were to evaluate that, it outputs D
+
+99
+00:08:20,215 --> 00:08:28,320
+并得出提交的答案“生活就像一盒巧克力”与专家答案之间存在分歧的结论。
+and it concludes that there's a disagreement between submitted answer, "life is like a box of chocolate" and the expert answer.
+
+100
+00:08:28,320 --> 00:08:32,120
+所以它正确地判断这是一个非常糟糕的答案。
+So it correctly assesses this to be a pretty terrible answer.
+
+101
+00:08:32,120 --> 00:08:33,320
+就是这样。
+And so that's it.
+
+102
+00:08:33,320 --> 00:08:38,080
+我希望你从这个视频中学到两个设计模式。
+I hope you take away from this video two design patterns.
+
+103
+00:08:38,081 --> 00:08:42,300
+首先，即使没有专家提供的理想答案，
+First is even without an expert provided ideal answer,
+
+104
+00:08:42,301 --> 00:08:48,720
+如果你能编写一个评分标准，你就可以用一个LLM来评估另一个LLM的输出。
+if you can write a rubric, you can use one LLM to evaluate another LLM's output.
+
+105
+00:08:48,720 --> 00:08:53,029
+其次，如果你有专家提供的理想答案，
+And second, if you can provide an expert provided ideal answer,
+
+106
+00:08:53,030 --> 00:09:03,280
+那么这可以帮助你的LLM更好地比较某一段内容是否与专家提供的理想答案相似。
+then that can help your LLM better compare if a specific assistant output is similar to the expert provided ideal answer.
+
+107
+00:09:03,280 --> 00:09:09,343
+我希望这能帮助你评估你的LLM系统的输出，
+I hope that helps you to evaluate your LLM systems outputs,
+
+108
+00:09:09,344 --> 00:09:26,720
+以便在开发过程中和系统运行时，你可以对获得的响应进行持续的监控，并利用这些工具来持续评估和提升你的系统性能。
+so that both during development as well as when the system is running and you're getting responses, you can continue to monitor its performance and also have these tools to continuously evaluate  and keep on improving the performance of your system.

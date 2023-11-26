@@ -1,0 +1,14 @@
+In this short course, you saw a range of applications including processing customer reviews and building an application to answer questions over documents
+and even using an LLM to decide when to make a call to an external tool like web search to answer complex questions.
+If a week or two ago, someone had asked you, how much work would it be to build all of these applications?
+I think a lot of people would have thought, boy, this sounds like weeks, you know, maybe even longer of work.
+But you saw in the short course, how with just a pretty reasonable number of lines of code, you can use LangChain to build all of these applications pretty efficiently.
+As I hope you take these ideas, maybe you can take some code snippets that you saw on the Jupyter notebooks and use them in your own applications.
+And these ideas are really just the start.
+There's a lot of other applications that you can use language models for.
+These models are so powerful because they're applicable to such a wide range of tasks, whether it be answering questions about CSVs, querying SQL databases, interacting with APIs.
+There's a lot of different examples of using chains and the combinations of prompts and output parsers and then more chains to do all these things in LangChain.
+And most of that is due to the LangChain community.
+So I want to also give a really big thank out to everyone in the community who's contributed, whether it be improvements in the documentation, making it easier for others to get started or new types of chains opening up a whole new world of possibilities.
+And so with that, if you have not yet already done so, I hope you go to your laptop or your desktop and run pip install LangChain,
+um, and then go use this tool to go build some amazing applications.

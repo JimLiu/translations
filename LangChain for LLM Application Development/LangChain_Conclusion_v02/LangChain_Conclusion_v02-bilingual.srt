@@ -1,0 +1,69 @@
+1
+00:00:05,028 --> 00:00:13,686
+在这门课程中，你看到了各种应用的示例，包括处理客户评论，构建一个能够基于文档问答的应用，
+In this short course, you saw a range of applications including processing customer reviews and building an application to answer questions over documents
+
+2
+00:00:13,687 --> 00:00:21,367
+甚至使用语言模型决定何时调用外部工具，比如网络搜索，来回答复杂的问题。
+and even using an LLM to decide when to make a call to an external tool like web search to answer complex questions.
+
+3
+00:00:22,048 --> 00:00:27,313
+如果在一两周前，有人问你，构建这些应用需要多少工作量？
+If a week or two ago, someone had asked you, how much work would it be to build all of these applications?
+
+4
+00:00:27,313 --> 00:00:32,557
+我想很多人会觉得，哇，这听起来要花好几周，甚至更长时间。
+I think a lot of people would have thought, boy, this sounds like weeks, you know, maybe even longer of work.
+
+5
+00:00:32,557 --> 00:00:41,565
+但你在这门课程中看到，利用LangChain，只需要少量代码就可以高效地构建这些应用。
+But you saw in the short course, how with just a pretty reasonable number of lines of code, you can use LangChain to build all of these applications pretty efficiently.
+
+6
+00:00:41,565 --> 00:00:48,051
+我希望你们能把这些知识，也许还有在Jupyter Notebook上看到的一些代码片段，应用到自己的项目中。
+As I hope you take these ideas, maybe you can take some code snippets that you saw on the Jupyter notebooks and use them in your own applications.
+
+7
+00:00:49,012 --> 00:00:51,173
+而这些想法仅仅是个开始，
+And these ideas are really just the start.
+
+8
+00:00:51,173 --> 00:00:54,814
+还有很多其他应用可以应用大语言模型。
+There's a lot of other applications that you can use language models for.
+
+9
+00:00:54,814 --> 00:01:05,598
+这些模型之所以强大，是因为它们适用于如此广泛的任务，无论是回答关于CSV的问题，查询SQL数据库，还是与API互动。
+These models are so powerful because they're applicable to such a wide range of tasks, whether it be answering questions about CSVs, querying SQL databases, interacting with APIs.
+
+10
+00:01:06,458 --> 00:01:15,981
+在LangChain里有许多不同的例子，可以用链和Prompt组合，然后使用输出解析器，再加上更多的链来完成所有这事情。
+There's a lot of different examples of using chains and the combinations of prompts and output parsers and then more chains to do all these things in LangChain.
+
+11
+00:01:15,981 --> 00:01:18,122
+其中大部分归功于LangChain社区。
+And most of that is due to the LangChain community.
+
+12
+00:01:18,122 --> 00:01:29,805
+我也想对社区中每一位做出贡献的人表示真诚的感谢，无论是改进文档，使得其他人更容易上手，还是开发新类型的链，都为我们开启了一个充满无数可能性的全新世界。
+So I want to also give a really big thank out to everyone in the community who's contributed, whether it be improvements in the documentation, making it easier for others to get started or new types of chains opening up a whole new world of possibilities.
+
+13
+00:01:30,292 --> 00:01:38,083
+如果你还没有开始使用LangChain，希望你打开笔记本或台式机，运行 pip install langchain，
+And so with that, if you have not yet already done so, I hope you go to your laptop or your desktop and run pip install LangChain,
+
+14
+00:01:38,084 --> 00:01:42,158
+然后用这个LangChain去构建一些惊艳的应用程序。
+um, and then go use this tool to go build some amazing applications.

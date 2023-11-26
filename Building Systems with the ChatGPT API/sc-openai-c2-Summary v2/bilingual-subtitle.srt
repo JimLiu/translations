@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:03,560
+恭喜你完成了这个短期课程，感谢你的参与。
+Congratulations and thank you for getting to the end of this short course.
+
+2
+00:00:03,560 --> 00:00:07,240
+在课程结束之际，让我们回顾一下我们所涵盖的主要话题：
+As we conclude the course, let's recap the main topics we covered.
+
+3
+00:00:07,240 --> 00:00:14,960
+我们详细了解了LM的工作原理，包括诸如分词器之类的细微之处，以及为什么它无法将单词lollipop中的字符翻转。
+We went over details of how an LM works, including subtleties like the tokenizer and why it can't reverse lollipop.
+
+4
+00:00:14,960 --> 00:00:20,570
+我们学习了评估用户输入的方法，以确保系统的质量和安全，
+We learned methods for evaluating user inputs to ensure the quality and safety of the system,
+
+5
+00:00:20,571 --> 00:00:29,200
+使用思维链推理和链式提示将任务切分成子任务来处理输入，并在将结果展示给用户之前检查输出。
+processing inputs using both chain of thought reasoning and splitting tasks into subtasks with chain prompts and checking outputs before showing them to users.
+
+6
+00:00:29,760 --> 00:00:37,000
+我们还研究了随着时间的推移评估系统的方法，以监控和提升其性能。
+We also took a look at methods for evaluating the system over time, so as to monitor and improve its performance.
+
+7
+00:00:37,000 --> 00:00:41,670
+在整个课程中，我们也讨论了负责任地使用这些工具的重要性，
+Throughout the course, we also discussed the importance of building responsibly with these tools,
+
+8
+00:00:41,671 --> 00:00:47,240
+确保模型安全，提供准确、相关，且符合你期望的语调的回答。
+ensuring that the model is safe and provides appropriate responses that are accurate, relevant, and in the tone you want.
+
+9
+00:00:47,240 --> 00:00:53,200
+一如既往，实践是掌握这些概念的关键，所以我们希望你能在自己的项目中应用你所学到的知识。
+As always, practice is key to mastering these concepts, so we hope you'll apply what you've learned in your own projects.
+
+10
+00:00:53,200 --> 00:00:55,560
+就是这样。
+And so that's it.
+
+11
+00:00:55,560 --> 00:00:59,240
+还有许多令人兴奋的应用等待着你去开发。
+There are so many exciting applications that are yet to be built.
+
+12
+00:00:59,640 --> 00:01:03,271
+世界需要更多像你这样的人去构建有价值的应用，
+The world needs more people like you building useful applications,
+
+13
+00:01:03,272 --> 00:01:07,240
+我们期待看到你创造出的了不起的作品。
+and we look forward to hearing about the amazing things you build.

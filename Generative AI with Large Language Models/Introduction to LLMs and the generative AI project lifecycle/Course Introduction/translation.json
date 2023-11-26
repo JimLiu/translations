@@ -1,0 +1,3875 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 0,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 560
+          },
+          "text": "Welcome to this course on"
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 1,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 845
+          },
+          "text": "generative AI with large language models."
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 4,
+            "milliseconds": 845
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 960
+          },
+          "text": "Large language models or LLMs"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 6,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 180
+          },
+          "text": "are a very exciting technology."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 180
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 475
+          },
+          "text": "But despite all the buzz and hype,"
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 475
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 950
+          },
+          "text": "one of the thing that is still underestimated by"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 950
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 940
+          },
+          "text": "many people is their power as a developer too."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 17,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "text": "Specifically, there are"
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 210
+          },
+          "text": "many machine learning and AI"
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 21,
+            "milliseconds": 210
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 40
+          },
+          "text": "applications that used to take me"
+        },
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 23,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 515
+          },
+          "text": "many months to build that you can now build"
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 515
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 395
+          },
+          "text": "in days or maybe even small numbers of weeks."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 28,
+            "milliseconds": 395
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 400
+          },
+          "text": "This course will take a deep dive with you into how"
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 605
+          },
+          "text": "LLM technology actually works"
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 605
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 40
+          },
+          "text": "including going through many of the technical details,"
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 175
+          },
+          "text": "like model training, instruction tuning, fine-tuning,"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 175
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 740
+          },
+          "text": "the generative AI project life cycle framework to"
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 45,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 970
+          },
+          "text": "help you plan and execute your projects and so on."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 49,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 190
+          },
+          "text": "Generative AI and LLMs"
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 190
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 445
+          },
+          "text": "specifically are a general purpose technology."
+        }
+      ],
+      "source": [
+        "Welcome to this course on",
+        "generative AI with large language models.",
+        "Large language models or LLMs",
+        "are a very exciting technology.",
+        "But despite all the buzz and hype,",
+        "one of the thing that is still underestimated by",
+        "many people is their power as a developer too.",
+        "Specifically, there are",
+        "many machine learning and AI",
+        "applications that used to take me",
+        "many months to build that you can now build",
+        "in days or maybe even small numbers of weeks.",
+        "This course will take a deep dive with you into how",
+        "LLM technology actually works",
+        "including going through many of the technical details,",
+        "like model training, instruction tuning, fine-tuning,",
+        "the generative AI project life cycle framework to",
+        "help you plan and execute your projects and so on.",
+        "Generative AI and LLMs",
+        "specifically are a general purpose technology."
+      ],
+      "result": [
+        "欢迎参加这门关于大型语言模型的生成式AI课程。",
+        "",
+        "大型语言模型或LLMs是一项非常令人兴奋的技术。",
+        "",
+        "然而，尽管各种新闻和炒作满天飞，许多人仍然低估了它们作为开发者工具的能力。",
+        "",
+        "",
+        "具体来说，过去我需要花费数月时间构建的许多机器学习和AI应用，现在你可能只需要几天甚至几周就能完成。",
+        "",
+        "",
+        "",
+        "",
+        "这门课程将和你一起深入研究LLM技术的工作原理，",
+        "",
+        "包括详解许多技术细节，如模型训练，指令调整，微调，",
+        "",
+        "以及生成式AI项目生命周期框架，帮助你规划和执行你的项目等等。",
+        "",
+        "生成式AI和LLMs是一种通用技术。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "欢迎参加这门关于",
+          "sources": [
+            "Welcome to this course on"
+          ]
+        },
+        {
+          "translated": "大型语言模型的生成式AI课程。",
+          "sources": [
+            "generative AI with large language models."
+          ]
+        },
+        {
+          "translated": "大型语言模型或LLM",
+          "sources": [
+            "Large language models or LLMs"
+          ]
+        },
+        {
+          "translated": "是一项非常令人兴奋的技术。",
+          "sources": [
+            "are a very exciting technology."
+          ]
+        },
+        {
+          "translated": "但是，尽管有所有的炒作和炒作，",
+          "sources": [
+            "But despite all the buzz and hype,"
+          ]
+        },
+        {
+          "translated": "许多人仍然低估了",
+          "sources": [
+            "one of the thing that is still underestimated by"
+          ]
+        },
+        {
+          "translated": "它们作为开发者工具的力量。",
+          "sources": [
+            "many people is their power as a developer too."
+          ]
+        },
+        {
+          "translated": "具体来说，有",
+          "sources": [
+            "Specifically, there are"
+          ]
+        },
+        {
+          "translated": "许多机器学习和AI",
+          "sources": [
+            "many machine learning and AI"
+          ]
+        },
+        {
+          "translated": "应用程序，过去我需要花费",
+          "sources": [
+            "applications that used to take me"
+          ]
+        },
+        {
+          "translated": "许多个月来构建，现在你可以在",
+          "sources": [
+            "many months to build that you can now build"
+          ]
+        },
+        {
+          "translated": "几天或者甚至几周内完成。",
+          "sources": [
+            "in days or maybe even small numbers of weeks."
+          ]
+        },
+        {
+          "translated": "这门课程将与你深入探讨",
+          "sources": [
+            "This course will take a deep dive with you into how"
+          ]
+        },
+        {
+          "translated": "LLM技术的实际工作方式，",
+          "sources": [
+            "LLM technology actually works"
+          ]
+        },
+        {
+          "translated": "包括许多技术细节，",
+          "sources": [
+            "including going through many of the technical details,"
+          ]
+        },
+        {
+          "translated": "如模型训练，指令调整，微调，",
+          "sources": [
+            "like model training, instruction tuning, fine-tuning,"
+          ]
+        },
+        {
+          "translated": "生成式AI项目生命周期框架，以",
+          "sources": [
+            "the generative AI project life cycle framework to"
+          ]
+        },
+        {
+          "translated": "帮助你规划和执行你的项目等等。",
+          "sources": [
+            "help you plan and execute your projects and so on."
+          ]
+        },
+        {
+          "translated": "生成式AI和LLM",
+          "sources": [
+            "Generative AI and LLMs"
+          ]
+        },
+        {
+          "translated": "特别是一种通用技术。",
+          "sources": [
+            "specifically are a general purpose technology."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 55,
+            "milliseconds": 445
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 320
+          },
+          "text": "That means that similar to"
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 57,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 285
+          },
+          "text": "other general purpose technologies"
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 285
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 940
+          },
+          "text": "like deep learning and electricity,"
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 940
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 640
+          },
+          "text": "is useful not just for a single application,"
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 4,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 690
+          },
+          "text": "but for a lot of"
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 5,
+            "milliseconds": 690
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 550
+          },
+          "text": "different applications that span"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 7,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 10,
+            "milliseconds": 60
+          },
+          "text": "many corners of the economy."
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 10,
+            "milliseconds": 60
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 380
+          },
+          "text": "Similar to the rise of deep learning that"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 380
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 16,
+            "milliseconds": 560
+          },
+          "text": "started maybe 15 years ago or so,"
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 16,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 850
+          },
+          "text": "there's a lot of important where it lies ahead of us that"
+        },
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 90
+          },
+          "text": "needs to be done over many years by many people,"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 90
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 320
+          },
+          "text": "I hope including you,"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 24,
+            "milliseconds": 320
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 900
+          },
+          "text": "to identify use cases and build specific applications."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 28,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 760
+          },
+          "text": "Because a lot of with this technology is so"
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 31,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 855
+          },
+          "text": "new and so few people really know how to use them,"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 34,
+            "milliseconds": 855
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 950
+          },
+          "text": "many companies are also right"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 36,
+            "milliseconds": 950
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 900
+          },
+          "text": "now scrambling to try to find and"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 805
+          },
+          "text": "hire people that actually know"
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 40,
+            "milliseconds": 805
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 160
+          },
+          "text": "how to build applications with LLMs."
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 43,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 415
+          },
+          "text": "I hope that this course will also help you,"
+        },
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 46,
+            "milliseconds": 415
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 48,
+            "milliseconds": 290
+          },
+          "text": "if you wish, better position"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 48,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 525
+          },
+          "text": "yourself to get one of those jobs."
+        }
+      ],
+      "source": [
+        "That means that similar to",
+        "other general purpose technologies",
+        "like deep learning and electricity,",
+        "is useful not just for a single application,",
+        "but for a lot of",
+        "different applications that span",
+        "many corners of the economy.",
+        "Similar to the rise of deep learning that",
+        "started maybe 15 years ago or so,",
+        "there's a lot of important where it lies ahead of us that",
+        "needs to be done over many years by many people,",
+        "I hope including you,",
+        "to identify use cases and build specific applications.",
+        "Because a lot of with this technology is so",
+        "new and so few people really know how to use them,",
+        "many companies are also right",
+        "now scrambling to try to find and",
+        "hire people that actually know",
+        "how to build applications with LLMs.",
+        "I hope that this course will also help you,",
+        "if you wish, better position",
+        "yourself to get one of those jobs."
+      ],
+      "result": [
+        "这意味着它们与其他通用技术（如深度学习和电力）类似，",
+        "",
+        "",
+        "它不仅对单一应用有用，",
+        "而且对许多不同的应用也有用，这些应用覆盖了经济的许多领域。",
+        "",
+        "",
+        "类似于大约15年前深度学习的崛起，",
+        "",
+        "我们面前还有许多重要的工作需要由许多人花费多年的时间来完成，",
+        "",
+        "我希望你也能参与其中，去确定使用案例并构建特定的应用。",
+        "",
+        "因为这项技术还非常新，很少有人真正知道如何使用它，",
+        "",
+        "许多公司现在也在急着寻找和雇佣那些真正懂得如何用LLMs构建应用的人才。",
+        "",
+        "",
+        "",
+        "我希望这门课程也能帮助你，",
+        "如果你愿意的话，可以更好地定位自己去获得一份相关的工作。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "这意味着，与其他通用技术（如深度学习和电力）类似，",
+          "sources": [
+            "That means that similar to",
+            "other general purpose technologies",
+            "like deep learning and electricity,"
+          ]
+        },
+        {
+          "translated": "它不仅对单一应用有用，",
+          "sources": [
+            "is useful not just for a single application,"
+          ]
+        },
+        {
+          "translated": "而且对许多不同的应用也有用，这些应用覆盖了经济的许多角落。",
+          "sources": [
+            "but for a lot of",
+            "different applications that span",
+            "many corners of the economy."
+          ]
+        },
+        {
+          "translated": "类似于大约15年前开始的深度学习的崛起，",
+          "sources": [
+            "Similar to the rise of deep learning that",
+            "started maybe 15 years ago or so,"
+          ]
+        },
+        {
+          "translated": "我们前方有很多重要的工作需要由许多人在许多年里完成，",
+          "sources": [
+            "there's a lot of important where it lies ahead of us that",
+            "needs to be done over many years by many people,"
+          ]
+        },
+        {
+          "translated": "我希望包括你在内，",
+          "sources": [
+            "I hope including you,"
+          ]
+        },
+        {
+          "translated": "来确定使用案例并构建特定的应用。",
+          "sources": [
+            "to identify use cases and build specific applications."
+          ]
+        },
+        {
+          "translated": "因为这项技术是如此新颖，而且真正知道如何使用它们的人如此之少，",
+          "sources": [
+            "Because a lot of with this technology is so",
+            "new and so few people really know how to use them,"
+          ]
+        },
+        {
+          "translated": "许多公司现在也在争先恐后地寻找和雇佣真正知道如何使用LLMs构建应用的人。",
+          "sources": [
+            "many companies are also right",
+            "now scrambling to try to find and",
+            "hire people that actually know",
+            "how to build applications with LLMs."
+          ]
+        },
+        {
+          "translated": "我希望这门课程也能帮助你，",
+          "sources": [
+            "I hope that this course will also help you,"
+          ]
+        },
+        {
+          "translated": "如果你愿意，更好地定位自己，以获得其中的一份工作。",
+          "sources": [
+            "if you wish, better position",
+            "yourself to get one of those jobs."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 50,
+            "milliseconds": 525
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "text": "I'm thrilled to bring you this course along with"
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 53,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 225
+          },
+          "text": "a group of fantastic instructors from the AWS team,"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 225
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 700
+          },
+          "text": "[inaudible] who are here with me today,"
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 1,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 565
+          },
+          "text": "as well as a fourth instructor Chris Freby,"
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 4,
+            "milliseconds": 565
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 515
+          },
+          "text": "who will be presenting sort of adds."
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 515
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 530
+          },
+          "text": "Antje and Mike above generative AI developer advocates."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 11,
+            "milliseconds": 530
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 715
+          },
+          "text": "Shelbee and Chris above"
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 13,
+            "milliseconds": 715
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 130
+          },
+          "text": "generative AI solutions architects."
+        },
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 16,
+            "milliseconds": 130
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 720
+          },
+          "text": "All of them have a lot of"
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 17,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 50
+          },
+          "text": "experience helping many different companies build many,"
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 21,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 480
+          },
+          "text": "many creative applications using LLMs."
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 23,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 300
+          },
+          "text": "I look forward to all of them sharing"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 26,
+            "milliseconds": 300
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 740
+          },
+          "text": "this rich hands-on experience in this course."
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 29,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 400
+          },
+          "text": "We've develop the content for"
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 31,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 230
+          },
+          "text": "this course with inputs from"
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 33,
+            "milliseconds": 230
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 640
+          },
+          "text": "many industry experts and applied scientists at Amazon,"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 37,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 620
+          },
+          "text": "AWS, Hugging Face and"
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 620
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 740
+          },
+          "text": "many top universities around the world."
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 160
+          },
+          "text": "Antje, perhaps you can say a"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 43,
+            "milliseconds": 160
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 600
+          },
+          "text": "bit more about this course."
+        }
+      ],
+      "source": [
+        "I'm thrilled to bring you this course along with",
+        "a group of fantastic instructors from the AWS team,",
+        "[inaudible] who are here with me today,",
+        "as well as a fourth instructor Chris Freby,",
+        "who will be presenting sort of adds.",
+        "Antje and Mike above generative AI developer advocates.",
+        "Shelbee and Chris above",
+        "generative AI solutions architects.",
+        "All of them have a lot of",
+        "experience helping many different companies build many,",
+        "many creative applications using LLMs.",
+        "I look forward to all of them sharing",
+        "this rich hands-on experience in this course.",
+        "We've develop the content for",
+        "this course with inputs from",
+        "many industry experts and applied scientists at Amazon,",
+        "AWS, Hugging Face and",
+        "many top universities around the world.",
+        "Antje, perhaps you can say a",
+        "bit more about this course."
+      ],
+      "result": [
+        "我很高兴能够带来这门课程，一同教授的还有来自AWS团队的一群出色的导师，",
+        "",
+        "他们包括今天在我身边的Antje Barth、Mike Chambers、Shelbee Eigenbrode，以及第四位导师Chris Fregly，",
+        "",
+        "他将会进行一些附加的讲解。",
+        "Antje和Mike是生成式AI开发者倡导者。",
+        "Shelbee和Chris是生成式AI解决方案架构师。",
+        "",
+        "他们都有丰富的经验，",
+        "帮助过许多不同的公司使用LLMs构建了许多创新的应用。",
+        "",
+        "我期待他们在这门课程中分享这些丰富的实践经验。",
+        "",
+        "我们在开发这门课程的内容时，",
+        "",
+        "参考了来自Amazon、AWS、HuggingFace以及世界各地顶级大学的许多行业专家和应用科学家的意见。",
+        "",
+        "",
+        "Antje，也许你可以进一步介绍一下这门课程。",
+        ""
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 20 vs 19, Wed Jun 28 2023 20:13:32 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "我很高兴能和你们一起带来这门课程，",
+          "sources": [
+            "I'm thrilled to bring you this course along with"
+          ]
+        },
+        {
+          "translated": "这门课程是由AWS团队的一群优秀讲师共同教授的，",
+          "sources": [
+            "a group of fantastic instructors from the AWS team,"
+          ]
+        },
+        {
+          "translated": "今天在我身边的是[无法听清]，",
+          "sources": [
+            "[inaudible] who are here with me today,"
+          ]
+        },
+        {
+          "translated": "还有第四位讲师Chris Freby，",
+          "sources": [
+            "as well as a fourth instructor Chris Freby,"
+          ]
+        },
+        {
+          "translated": "他将会进行一些附加的演讲。",
+          "sources": [
+            "who will be presenting sort of adds."
+          ]
+        },
+        {
+          "translated": "Antje和Mike是生成式AI开发者倡导者，",
+          "sources": [
+            "Antje and Mike above generative AI developer advocates."
+          ]
+        },
+        {
+          "translated": "Shelbee和Chris是生成式AI解决方案架构师，",
+          "sources": [
+            "Shelbee and Chris above"
+          ]
+        },
+        {
+          "translated": "他们都有丰富的经验，",
+          "sources": [
+            "All of them have a lot of"
+          ]
+        },
+        {
+          "translated": "帮助过许多不同的公司使用LLMs构建了许多创新的应用。",
+          "sources": [
+            "experience helping many different companies build many,",
+            "many creative applications using LLMs."
+          ]
+        },
+        {
+          "translated": "我期待他们在这门课程中分享这些丰富的实践经验。",
+          "sources": [
+            "I look forward to all of them sharing",
+            "this rich hands-on experience in this course."
+          ]
+        },
+        {
+          "translated": "我们在开发这门课程的内容时，",
+          "sources": [
+            "We've develop the content for",
+            "this course with inputs from"
+          ]
+        },
+        {
+          "translated": "参考了来自Amazon、AWS、Hugging Face以及世界各地顶级大学的许多行业专家和应用科学家的意见。",
+          "sources": [
+            "many industry experts and applied scientists at Amazon,",
+            "AWS, Hugging Face and",
+            "many top universities around the world."
+          ]
+        },
+        {
+          "translated": "Antje，也许你可以多介绍一下这门课程。",
+          "sources": [
+            "Antje, perhaps you can say a",
+            "bit more about this course."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 44,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 905
+          },
+          "text": "Sure. Thanks Andrew."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 905
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 560
+          },
+          "text": "It's a pleasure to work with you again on this course and"
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 290
+          },
+          "text": "the exciting area of generative AI."
+        },
+        {
+          "id": "66",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 460
+          },
+          "text": "With this course on"
+        },
+        {
+          "id": "67",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 52,
+            "milliseconds": 460
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 935
+          },
+          "text": "generative AI with large language models,"
+        },
+        {
+          "id": "68",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 935
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 750
+          },
+          "text": "we've created a series of"
+        },
+        {
+          "id": "69",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 56,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 150
+          },
+          "text": "lessons meant for AI enthusiasts,"
+        },
+        {
+          "id": "70",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 150
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 260
+          },
+          "text": "engineers, or data scientists."
+        },
+        {
+          "id": "71",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 1,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 995
+          },
+          "text": "Looking to learn the technical foundations"
+        },
+        {
+          "id": "72",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 3,
+            "milliseconds": 995
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 750
+          },
+          "text": "of how LLMs work,"
+        },
+        {
+          "id": "73",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 555
+          },
+          "text": "as well as the best practices behind training,"
+        },
+        {
+          "id": "74",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 8,
+            "milliseconds": 555
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 550
+          },
+          "text": "tuning, and deploying them."
+        },
+        {
+          "id": "75",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 10,
+            "milliseconds": 550
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 50
+          },
+          "text": "In terms of prerequisites,"
+        },
+        {
+          "id": "76",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 12,
+            "milliseconds": 50
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 120
+          },
+          "text": "we assume you are already familiar with"
+        },
+        {
+          "id": "77",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 14,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 340
+          },
+          "text": "Python programming and at least"
+        },
+        {
+          "id": "78",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 340
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 445
+          },
+          "text": "basic data science and machine learning concepts."
+        },
+        {
+          "id": "79",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 19,
+            "milliseconds": 445
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 230
+          },
+          "text": "If you have some experience with"
+        },
+        {
+          "id": "80",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 230
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 560
+          },
+          "text": "either Python or TensorFlow, that should be enough."
+        },
+        {
+          "id": "81",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 24,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 520
+          },
+          "text": "In this course, you will explore in detail the steps that"
+        },
+        {
+          "id": "82",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 28,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 305
+          },
+          "text": "make up a typical generative AI project lifecycle,"
+        },
+        {
+          "id": "83",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 32,
+            "milliseconds": 305
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 34,
+            "milliseconds": 40
+          },
+          "text": "from scoping the problem and"
+        },
+        {
+          "id": "84",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 34,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 290
+          },
+          "text": "selecting a language model to"
+        },
+        {
+          "id": "85",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 36,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 490
+          },
+          "text": "optimizing a model for"
+        },
+        {
+          "id": "86",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 490
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 475
+          },
+          "text": "deployment and integrating into your applications."
+        }
+      ],
+      "source": [
+        "Sure. Thanks Andrew.",
+        "It's a pleasure to work with you again on this course and",
+        "the exciting area of generative AI.",
+        "With this course on",
+        "generative AI with large language models,",
+        "we've created a series of",
+        "lessons meant for AI enthusiasts,",
+        "engineers, or data scientists.",
+        "Looking to learn the technical foundations",
+        "of how LLMs work,",
+        "as well as the best practices behind training,",
+        "tuning, and deploying them.",
+        "In terms of prerequisites,",
+        "we assume you are already familiar with",
+        "Python programming and at least",
+        "basic data science and machine learning concepts.",
+        "If you have some experience with",
+        "either Python or TensorFlow, that should be enough.",
+        "In this course, you will explore in detail the steps that",
+        "make up a typical generative AI project lifecycle,",
+        "from scoping the problem and",
+        "selecting a language model to",
+        "optimizing a model for",
+        "deployment and integrating into your applications."
+      ],
+      "result": [
+        "好的。谢谢Andrew。",
+        "很高兴再次与你在这门课程上合作，",
+        "这是一个关于生成式AI的激动人心的领域。",
+        "在这门有关大型语言模型生成人工智能的课程中，",
+        "",
+        "我们为AI爱好者，工程师或数据科学家设计了一系列课程。",
+        "",
+        "",
+        "如果你希望学习LLMs的技术基础，以及训练，调整和部署它们的最佳实践，那么这门课程正适合你。",
+        "",
+        "",
+        "",
+        "我们假设你已经熟悉Python编程，以及基本的数据科学和机器学习概念，这是学习这门课的先决条件。",
+        "",
+        "",
+        "",
+        "如果你已经有一些Python或TensorFlow的经验，那应该足够了。",
+        "",
+        "在这门课程中，你将详细探讨构成典型生成式AI项目生命周期的各个步骤，",
+        "",
+        "从定义问题和选择语言模型，到优化模型部署和集成到你的应用中。",
+        "",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "好的。谢谢安德鲁。",
+          "sources": [
+            "Sure. Thanks Andrew."
+          ]
+        },
+        {
+          "translated": "很高兴再次与你在这门课程上合作，",
+          "sources": [
+            "It's a pleasure to work with you again on this course and"
+          ]
+        },
+        {
+          "translated": "这是一个关于生成式AI的激动人心的领域。",
+          "sources": [
+            "the exciting area of generative AI."
+          ]
+        },
+        {
+          "translated": "在这门关于",
+          "sources": [
+            "With this course on"
+          ]
+        },
+        {
+          "translated": "大型语言模型的生成式AI课程中，",
+          "sources": [
+            "generative AI with large language models,"
+          ]
+        },
+        {
+          "translated": "我们创建了一系列",
+          "sources": [
+            "we've created a series of"
+          ]
+        },
+        {
+          "translated": "为AI爱好者、",
+          "sources": [
+            "lessons meant for AI enthusiasts,"
+          ]
+        },
+        {
+          "translated": "工程师或数据科学家设计的课程。",
+          "sources": [
+            "engineers, or data scientists."
+          ]
+        },
+        {
+          "translated": "希望了解LLMs工作的技术基础，",
+          "sources": [
+            "Looking to learn the technical foundations",
+            "of how LLMs work,"
+          ]
+        },
+        {
+          "translated": "以及训练、",
+          "sources": [
+            "as well as the best practices behind training,"
+          ]
+        },
+        {
+          "translated": "调优和部署它们的最佳实践。",
+          "sources": [
+            "tuning, and deploying them."
+          ]
+        },
+        {
+          "translated": "在先决条件方面，",
+          "sources": [
+            "In terms of prerequisites,"
+          ]
+        },
+        {
+          "translated": "我们假设你已经熟悉",
+          "sources": [
+            "we assume you are already familiar with"
+          ]
+        },
+        {
+          "translated": "Python编程以及至少",
+          "sources": [
+            "Python programming and at least"
+          ]
+        },
+        {
+          "translated": "基本的数据科学和机器学习概念。",
+          "sources": [
+            "basic data science and machine learning concepts."
+          ]
+        },
+        {
+          "translated": "如果你有一些Python或TensorFlow的经验，那应该就足够了。",
+          "sources": [
+            "If you have some experience with",
+            "either Python or TensorFlow, that should be enough."
+          ]
+        },
+        {
+          "translated": "在这门课程中，你将详细探索构成",
+          "sources": [
+            "In this course, you will explore in detail the steps that"
+          ]
+        },
+        {
+          "translated": "典型生成式AI项目生命周期的步骤，",
+          "sources": [
+            "make up a typical generative AI project lifecycle,"
+          ]
+        },
+        {
+          "translated": "从定义问题和",
+          "sources": [
+            "from scoping the problem and"
+          ]
+        },
+        {
+          "translated": "选择语言模型，",
+          "sources": [
+            "selecting a language model to"
+          ]
+        },
+        {
+          "translated": "优化模型以便",
+          "sources": [
+            "optimizing a model for"
+          ]
+        },
+        {
+          "translated": "部署并集成到你的应用程序中。",
+          "sources": [
+            "deployment and integrating into your applications."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "87",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 40,
+            "milliseconds": 475
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 710
+          },
+          "text": "This course covers all of the topics,"
+        },
+        {
+          "id": "88",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 42,
+            "milliseconds": 710
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 44,
+            "milliseconds": 315
+          },
+          "text": "not just at a shallow level,"
+        },
+        {
+          "id": "89",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 44,
+            "milliseconds": 315
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 880
+          },
+          "text": "but we'll take the time to make sure you come"
+        },
+        {
+          "id": "90",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 46,
+            "milliseconds": 880
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 850
+          },
+          "text": "away with a deep technical understanding of"
+        },
+        {
+          "id": "91",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 49,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 240
+          },
+          "text": "all of these technologies and be well-positioned to"
+        },
+        {
+          "id": "92",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 53,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 190
+          },
+          "text": "really know what you're doing when you"
+        },
+        {
+          "id": "93",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 55,
+            "milliseconds": 190
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 260
+          },
+          "text": "build your own generative AI projects."
+        },
+        {
+          "id": "94",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 57,
+            "milliseconds": 260
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 730
+          },
+          "text": "Mike, why don't you tell us"
+        },
+        {
+          "id": "95",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 58,
+            "milliseconds": 730
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 185
+          },
+          "text": "a little bit more details about"
+        },
+        {
+          "id": "96",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 185
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 970
+          },
+          "text": "what the learners will see in each week?"
+        },
+        {
+          "id": "97",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 1,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 275
+          },
+          "text": "Absolutely, Antje. Thank you."
+        },
+        {
+          "id": "98",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 4,
+            "milliseconds": 275
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "text": "In Week 1, you will examine"
+        },
+        {
+          "id": "99",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 450
+          },
+          "text": "the transformer architecture that"
+        },
+        {
+          "id": "100",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 8,
+            "milliseconds": 450
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 10,
+            "milliseconds": 595
+          },
+          "text": "powers large language models,"
+        },
+        {
+          "id": "101",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 10,
+            "milliseconds": 595
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 220
+          },
+          "text": "explore how these models are trained,"
+        },
+        {
+          "id": "102",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 13,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 710
+          },
+          "text": "and understand the compute resources"
+        },
+        {
+          "id": "103",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 15,
+            "milliseconds": 710
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 815
+          },
+          "text": "required to develop these powerful LLMs."
+        },
+        {
+          "id": "104",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 18,
+            "milliseconds": 815
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 600
+          },
+          "text": "You'll also learn about"
+        },
+        {
+          "id": "105",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 20,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 465
+          },
+          "text": "a technique called in-context learning."
+        },
+        {
+          "id": "106",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 23,
+            "milliseconds": 465
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 45
+          },
+          "text": "How to guide the model to output"
+        },
+        {
+          "id": "107",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 26,
+            "milliseconds": 45
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 45
+          },
+          "text": "at inference time with prompt engineering,"
+        },
+        {
+          "id": "108",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 29,
+            "milliseconds": 45
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 680
+          },
+          "text": "and how to tune"
+        },
+        {
+          "id": "109",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 30,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 275
+          },
+          "text": "the most important generation parameters"
+        },
+        {
+          "id": "110",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 33,
+            "milliseconds": 275
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 36,
+            "milliseconds": 350
+          },
+          "text": "of LLMs for tuning your model output."
+        }
+      ],
+      "source": [
+        "This course covers all of the topics,",
+        "not just at a shallow level,",
+        "but we'll take the time to make sure you come",
+        "away with a deep technical understanding of",
+        "all of these technologies and be well-positioned to",
+        "really know what you're doing when you",
+        "build your own generative AI projects.",
+        "Mike, why don't you tell us",
+        "a little bit more details about",
+        "what the learners will see in each week?",
+        "Absolutely, Antje. Thank you.",
+        "In Week 1, you will examine",
+        "the transformer architecture that",
+        "powers large language models,",
+        "explore how these models are trained,",
+        "and understand the compute resources",
+        "required to develop these powerful LLMs.",
+        "You'll also learn about",
+        "a technique called in-context learning.",
+        "How to guide the model to output",
+        "at inference time with prompt engineering,",
+        "and how to tune",
+        "the most important generation parameters",
+        "of LLMs for tuning your model output."
+      ],
+      "result": [
+        "这门课程涵盖了所有的主题，",
+        "不仅是浅层次的，",
+        "我们不仅会浅尝辄止，而且会确保你深入理解所有这些技术，",
+        "",
+        "让你在构建自己的生成式AI项目时真正知道自己在做什么。",
+        "",
+        "",
+        "Mike，你能告诉我们的学员每周将看到什么内容吗？",
+        "",
+        "",
+        "当然，Antje，谢谢。",
+        "在第一周，你将研究驱动大型语言模型的Transformer架构，",
+        "",
+        "",
+        "探索如何训练这些模型，并了解开发这些强大的LLMs所需的计算资源。",
+        "",
+        "",
+        "你还会了解一种叫做上下文学习的技术，",
+        "",
+        "如何通过Prompt工程在推理时引导模型输出，",
+        "",
+        "以及如何调整LLMs的最重要的生成参数以调整你的模型输出。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "这门课程涵盖了所有的主题，",
+          "sources": [
+            "This course covers all of the topics,"
+          ]
+        },
+        {
+          "translated": "不仅是浅层次的，",
+          "sources": [
+            "not just at a shallow level,"
+          ]
+        },
+        {
+          "translated": "我们会花时间确保你深入理解",
+          "sources": [
+            "but we'll take the time to make sure you come"
+          ]
+        },
+        {
+          "translated": "所有这些技术，并且能够",
+          "sources": [
+            "away with a deep technical understanding of"
+          ]
+        },
+        {
+          "translated": "在构建你自己的生成式AI项目时，真正知道你在做什么。",
+          "sources": [
+            "all of these technologies and be well-positioned to",
+            "really know what you're doing when you",
+            "build your own generative AI projects."
+          ]
+        },
+        {
+          "translated": "迈克，你能不能告诉我们",
+          "sources": [
+            "Mike, why don't you tell us"
+          ]
+        },
+        {
+          "translated": "更多关于",
+          "sources": [
+            "a little bit more details about"
+          ]
+        },
+        {
+          "translated": "学员们每周将看到什么的细节？",
+          "sources": [
+            "what the learners will see in each week?"
+          ]
+        },
+        {
+          "translated": "当然，安德烈亚，谢谢你。",
+          "sources": [
+            "Absolutely, Antje. Thank you."
+          ]
+        },
+        {
+          "translated": "在第一周，你将研究",
+          "sources": [
+            "In Week 1, you will examine"
+          ]
+        },
+        {
+          "translated": "驱动大型语言模型的Transformer架构，",
+          "sources": [
+            "the transformer architecture that",
+            "powers large language models,"
+          ]
+        },
+        {
+          "translated": "探索这些模型是如何被训练的，",
+          "sources": [
+            "explore how these models are trained,"
+          ]
+        },
+        {
+          "translated": "并理解开发这些强大LLMs所需的计算资源。",
+          "sources": [
+            "and understand the compute resources",
+            "required to develop these powerful LLMs."
+          ]
+        },
+        {
+          "translated": "你还将学习一种叫做上下文学习的技术。",
+          "sources": [
+            "You'll also learn about",
+            "a technique called in-context learning."
+          ]
+        },
+        {
+          "translated": "如何引导模型在推理时输出",
+          "sources": [
+            "How to guide the model to output"
+          ]
+        },
+        {
+          "translated": "通过Prompt工程，",
+          "sources": [
+            "at inference time with prompt engineering,"
+          ]
+        },
+        {
+          "translated": "以及如何调整",
+          "sources": [
+            "and how to tune"
+          ]
+        },
+        {
+          "translated": "LLMs最重要的生成参数",
+          "sources": [
+            "the most important generation parameters"
+          ]
+        },
+        {
+          "translated": "以调整你的模型输出。",
+          "sources": [
+            "of LLMs for tuning your model output."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "111",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 36,
+            "milliseconds": 350
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 610
+          },
+          "text": "In Week 2,"
+        },
+        {
+          "id": "112",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 37,
+            "milliseconds": 610
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 450
+          },
+          "text": "you'll explore options for adapting pre-trained models to"
+        },
+        {
+          "id": "113",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 41,
+            "milliseconds": 450
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "text": "specific tasks and datasets via"
+        },
+        {
+          "id": "114",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 44,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 270
+          },
+          "text": "a process called instruction fine tuning."
+        },
+        {
+          "id": "115",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 47,
+            "milliseconds": 270
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 680
+          },
+          "text": "Then in Week 3,"
+        },
+        {
+          "id": "116",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 48,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 120
+          },
+          "text": "you'll see how to align"
+        },
+        {
+          "id": "117",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 50,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 445
+          },
+          "text": "the output of language models with"
+        },
+        {
+          "id": "118",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 52,
+            "milliseconds": 445
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 890
+          },
+          "text": "human values in order to increase"
+        },
+        {
+          "id": "119",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 54,
+            "milliseconds": 890
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 850
+          },
+          "text": "helpfulness and decrease potential harm and toxicity."
+        },
+        {
+          "id": "120",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 58,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 25
+          },
+          "text": "Though we don't stop at the theory."
+        },
+        {
+          "id": "121",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 1,
+            "milliseconds": 25
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 680
+          },
+          "text": "Each week includes a hands-on lab"
+        },
+        {
+          "id": "122",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 3,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 80
+          },
+          "text": "where you'll be able to try out these techniques for"
+        },
+        {
+          "id": "123",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 6,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 605
+          },
+          "text": "yourself in an AWS environment that includes"
+        },
+        {
+          "id": "124",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 9,
+            "milliseconds": 605
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 290
+          },
+          "text": "all the resources you need for working with"
+        },
+        {
+          "id": "125",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 12,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 395
+          },
+          "text": "large models at no cost to you."
+        },
+        {
+          "id": "126",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 15,
+            "milliseconds": 395
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 850
+          },
+          "text": "Shelbee, can you tell us a little"
+        },
+        {
+          "id": "127",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 16,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 350
+          },
+          "text": "bit more about the hands-on labs?"
+        },
+        {
+          "id": "128",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 18,
+            "milliseconds": 350
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 665
+          },
+          "text": "Sure thing, Mike. In the first hands-on lab,"
+        },
+        {
+          "id": "129",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 21,
+            "milliseconds": 665
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 970
+          },
+          "text": "you'll construct a compare"
+        },
+        {
+          "id": "130",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 22,
+            "milliseconds": 970
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 745
+          },
+          "text": "different prompts and inputs for a given generative task,"
+        },
+        {
+          "id": "131",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 25,
+            "milliseconds": 745
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 725
+          },
+          "text": "in this case, dialogue summarization."
+        }
+      ],
+      "source": [
+        "In Week 2,",
+        "you'll explore options for adapting pre-trained models to",
+        "specific tasks and datasets via",
+        "a process called instruction fine tuning.",
+        "Then in Week 3,",
+        "you'll see how to align",
+        "the output of language models with",
+        "human values in order to increase",
+        "helpfulness and decrease potential harm and toxicity.",
+        "Though we don't stop at the theory.",
+        "Each week includes a hands-on lab",
+        "where you'll be able to try out these techniques for",
+        "yourself in an AWS environment that includes",
+        "all the resources you need for working with",
+        "large models at no cost to you.",
+        "Shelbee, can you tell us a little",
+        "bit more about the hands-on labs?",
+        "Sure thing, Mike. In the first hands-on lab,",
+        "you'll construct a compare",
+        "different prompts and inputs for a given generative task,",
+        "in this case, dialogue summarization."
+      ],
+      "result": [
+        "在第二周，",
+        "你将探索如何通过一种称为指令微调的过程，将预训练模型适应到特定的任务和数据集。",
+        "",
+        "",
+        "",
+        "然后在第三周，",
+        "你将看到如何将语言模型的输出与人类价值观对齐，",
+        "",
+        "以增加其实用性并减少潜在的伤害和毒性。",
+        "",
+        "我们不仅仅停留在理论上。",
+        "每周都包括一个动手实验，",
+        "你将能够在一个包含所有你需要的大模型工作资源的AWS环境中尝试这些技术，",
+        "",
+        "而且你可以免费实验这些技术。",
+        "Shelbee，你能告诉我们更多关于动手实验的信息吗？",
+        "",
+        "当然可以，Mike。在第一个动手实验中，",
+        "在第一个动手实验中，你将构建并比较给定生成任务的不同Prompt和输入，",
+        "",
+        "在这个案例中，是对话摘要。"
+      ],
+      "status": "success",
+      "errors": [
+        "mismatched: 21 vs 20, Wed Jun 28 2023 20:15:33 GMT-0500 (Central Daylight Time)"
+      ],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "在第二周，",
+          "sources": [
+            "In Week 2,"
+          ]
+        },
+        {
+          "translated": "你将探索如何通过一个叫做指令微调的过程，",
+          "sources": [
+            "you'll explore options for adapting pre-trained models to",
+            "a process called instruction fine tuning."
+          ]
+        },
+        {
+          "translated": "将预训练模型适应到特定的任务和数据集。",
+          "sources": [
+            "specific tasks and datasets via"
+          ]
+        },
+        {
+          "translated": "然后在第三周，",
+          "sources": [
+            "Then in Week 3,"
+          ]
+        },
+        {
+          "translated": "你将看到如何将语言模型的输出与人类价值观对齐，",
+          "sources": [
+            "you'll see how to align",
+            "the output of language models with"
+          ]
+        },
+        {
+          "translated": "以增加其实用性并减少可能的伤害和毒性。",
+          "sources": [
+            "human values in order to increase",
+            "helpfulness and decrease potential harm and toxicity."
+          ]
+        },
+        {
+          "translated": "我们不仅仅停留在理论上。",
+          "sources": [
+            "Though we don't stop at the theory."
+          ]
+        },
+        {
+          "translated": "每周都包括一个动手实验，",
+          "sources": [
+            "Each week includes a hands-on lab"
+          ]
+        },
+        {
+          "translated": "你将能够在一个包含所有你需要的资源的AWS环境中，",
+          "sources": [
+            "yourself in an AWS environment that includes",
+            "all the resources you need for working with"
+          ]
+        },
+        {
+          "translated": "免费尝试这些大型模型的技术。",
+          "sources": [
+            "large models at no cost to you."
+          ]
+        },
+        {
+          "translated": "雪莉，你能告诉我们更多关于动手实验的信息吗？",
+          "sources": [
+            "Shelbee, can you tell us a little",
+            "bit more about the hands-on labs?"
+          ]
+        },
+        {
+          "translated": "当然，迈克。在第一个动手实验中，",
+          "sources": [
+            "Sure thing, Mike. In the first hands-on lab,"
+          ]
+        },
+        {
+          "translated": "你将构建一个比较不同的Prompt和输入的任务，",
+          "sources": [
+            "you'll construct a compare",
+            "different prompts and inputs for a given generative task,"
+          ]
+        },
+        {
+          "translated": "在这个案例中，是对话总结。",
+          "sources": [
+            "in this case, dialogue summarization."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "132",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 27,
+            "milliseconds": 725
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 960
+          },
+          "text": "You'll also explore different inference parameters"
+        },
+        {
+          "id": "133",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 29,
+            "milliseconds": 960
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 670
+          },
+          "text": "and sampling strategies to gain"
+        },
+        {
+          "id": "134",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 31,
+            "milliseconds": 670
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 500
+          },
+          "text": "intuition on how to further"
+        },
+        {
+          "id": "135",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 33,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 36,
+            "milliseconds": 55
+          },
+          "text": "improve the generative model of responses."
+        },
+        {
+          "id": "136",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 36,
+            "milliseconds": 55
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 910
+          },
+          "text": "In the second hands-on lab,"
+        },
+        {
+          "id": "137",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 37,
+            "milliseconds": 910
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 39,
+            "milliseconds": 440
+          },
+          "text": "you'll find tune it existing"
+        },
+        {
+          "id": "138",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 39,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 420
+          },
+          "text": "large language model from Hugging Face,"
+        },
+        {
+          "id": "139",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 41,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 43,
+            "milliseconds": 700
+          },
+          "text": "a popular open-source model hub."
+        },
+        {
+          "id": "140",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 43,
+            "milliseconds": 700
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 310
+          },
+          "text": "You'll play with both full fine-tuning and"
+        },
+        {
+          "id": "141",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 46,
+            "milliseconds": 310
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 49,
+            "milliseconds": 220
+          },
+          "text": "parameter efficient fine tuning or path for short."
+        },
+        {
+          "id": "142",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 49,
+            "milliseconds": 220
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 170
+          },
+          "text": "You'll see how puffed lets you"
+        },
+        {
+          "id": "143",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 51,
+            "milliseconds": 170
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 53,
+            "milliseconds": 530
+          },
+          "text": "make your workflow much more efficient."
+        },
+        {
+          "id": "144",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 53,
+            "milliseconds": 530
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 420
+          },
+          "text": "In the third lab, you get hands-on with reinforcement"
+        },
+        {
+          "id": "145",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 56,
+            "milliseconds": 420
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 59,
+            "milliseconds": 105
+          },
+          "text": "learning from human feedback or RLHF,"
+        },
+        {
+          "id": "146",
+          "startTime": {
+            "hours": 0,
+            "minutes": 5,
+            "seconds": 59,
+            "milliseconds": 105
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 910
+          },
+          "text": "you'll build a reward model classifier to label"
+        },
+        {
+          "id": "147",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 1,
+            "milliseconds": 910
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 865
+          },
+          "text": "model responses as either toxic or non-toxic."
+        },
+        {
+          "id": "148",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 4,
+            "milliseconds": 865
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 290
+          },
+          "text": "Don't worry if you don't understand"
+        },
+        {
+          "id": "149",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 6,
+            "milliseconds": 290
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 250
+          },
+          "text": "all these terms and concepts just yet."
+        },
+        {
+          "id": "150",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 8,
+            "milliseconds": 250
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 100
+          },
+          "text": "You'll dive into each of these topics in"
+        },
+        {
+          "id": "151",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 10,
+            "milliseconds": 100
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 445
+          },
+          "text": "much more detail throughout this course."
+        }
+      ],
+      "source": [
+        "You'll also explore different inference parameters",
+        "and sampling strategies to gain",
+        "intuition on how to further",
+        "improve the generative model of responses.",
+        "In the second hands-on lab,",
+        "you'll find tune it existing",
+        "large language model from Hugging Face,",
+        "a popular open-source model hub.",
+        "You'll play with both full fine-tuning and",
+        "parameter efficient fine tuning or path for short.",
+        "You'll see how puffed lets you",
+        "make your workflow much more efficient.",
+        "In the third lab, you get hands-on with reinforcement",
+        "learning from human feedback or RLHF,",
+        "you'll build a reward model classifier to label",
+        "model responses as either toxic or non-toxic.",
+        "Don't worry if you don't understand",
+        "all these terms and concepts just yet.",
+        "You'll dive into each of these topics in",
+        "much more detail throughout this course."
+      ],
+      "result": [
+        "你也会探索不同的推理参数和采样策略，以了解如何进一步改善生成模型的返回结果。",
+        "",
+        "",
+        "",
+        "在第二个动手实验室中，",
+        "你将微调一个现有的来自HuggingFace（一个流行的开源模型库）的大型语言模型。",
+        "",
+        "",
+        "你将同时使用完全微调和参数有效微调（简称PEFT）。",
+        "",
+        "你将看到PEFT如何让你的工作流程更加高效。",
+        "",
+        "在第三个实验中，你将通过人类反馈进行强化学习（RLHF），",
+        "",
+        "你将构建一个奖励模型分类器来标记模型的返回结果是有害还是无害。",
+        "",
+        "如果你现在还不理解所有这些术语和概念，也不用担心。",
+        "",
+        "你将在这门课程中深入探讨每一个主题。",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "你还将探索不同的推理参数",
+          "sources": [
+            "You'll also explore different inference parameters"
+          ]
+        },
+        {
+          "translated": "和采样策略，以获得",
+          "sources": [
+            "and sampling strategies to gain"
+          ]
+        },
+        {
+          "translated": "如何进一步改进响应的生成模型的直观理解。",
+          "sources": [
+            "intuition on how to further",
+            "improve the generative model of responses."
+          ]
+        },
+        {
+          "translated": "在第二个动手实验室中，",
+          "sources": [
+            "In the second hands-on lab,"
+          ]
+        },
+        {
+          "translated": "你将找到调整现有的",
+          "sources": [
+            "you'll find tune it existing"
+          ]
+        },
+        {
+          "translated": "Hugging Face的大型语言模型，",
+          "sources": [
+            "large language model from Hugging Face,"
+          ]
+        },
+        {
+          "translated": "这是一个流行的开源模型中心。",
+          "sources": [
+            "a popular open-source model hub."
+          ]
+        },
+        {
+          "translated": "你将玩转全面微调和",
+          "sources": [
+            "You'll play with both full fine-tuning and"
+          ]
+        },
+        {
+          "translated": "参数高效微调或简称为路径。",
+          "sources": [
+            "parameter efficient fine tuning or path for short."
+          ]
+        },
+        {
+          "translated": "你会看到puffed如何让你",
+          "sources": [
+            "You'll see how puffed lets you"
+          ]
+        },
+        {
+          "translated": "使你的工作流程更加高效。",
+          "sources": [
+            "make your workflow much more efficient."
+          ]
+        },
+        {
+          "translated": "在第三个实验室中，你将亲手进行强化",
+          "sources": [
+            "In the third lab, you get hands-on with reinforcement"
+          ]
+        },
+        {
+          "translated": "从人类反馈或RLHF中学习，",
+          "sources": [
+            "learning from human feedback or RLHF,"
+          ]
+        },
+        {
+          "translated": "你将构建一个奖励模型分类器来标记",
+          "sources": [
+            "you'll build a reward model classifier to label"
+          ]
+        },
+        {
+          "translated": "模型响应为有毒或无毒。",
+          "sources": [
+            "model responses as either toxic or non-toxic."
+          ]
+        },
+        {
+          "translated": "如果你还不理解",
+          "sources": [
+            "Don't worry if you don't understand"
+          ]
+        },
+        {
+          "translated": "所有这些术语和概念，不用担心。",
+          "sources": [
+            "all these terms and concepts just yet."
+          ]
+        },
+        {
+          "translated": "你将在这门课程中深入探讨这些主题，",
+          "sources": [
+            "You'll dive into each of these topics in"
+          ]
+        },
+        {
+          "translated": "详细了解更多。",
+          "sources": [
+            "much more detail throughout this course."
+          ]
+        }
+      ]
+    },
+    {
+      "items": [
+        {
+          "id": "152",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 12,
+            "milliseconds": 445
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 345
+          },
+          "text": "I'm thrilled to have Antje, Mike,"
+        },
+        {
+          "id": "153",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 15,
+            "milliseconds": 345
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 740
+          },
+          "text": "Shelbee as well as Tris presenting this course to"
+        },
+        {
+          "id": "154",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 18,
+            "milliseconds": 740
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 670
+          },
+          "text": "you that takes a deep technical dive into LLMs."
+        },
+        {
+          "id": "155",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 22,
+            "milliseconds": 670
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 850
+          },
+          "text": "You come away from this course having practice with"
+        },
+        {
+          "id": "156",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 25,
+            "milliseconds": 850
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 27,
+            "milliseconds": 980
+          },
+          "text": "many different concrete code examples"
+        },
+        {
+          "id": "157",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 27,
+            "milliseconds": 980
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 750
+          },
+          "text": "for how to build or use LLMs."
+        },
+        {
+          "id": "158",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 29,
+            "milliseconds": 750
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 390
+          },
+          "text": "I'm sure that many of the code snippets will"
+        },
+        {
+          "id": "159",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 32,
+            "milliseconds": 390
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 35,
+            "milliseconds": 405
+          },
+          "text": "end up being directly useful in your own work."
+        },
+        {
+          "id": "160",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 35,
+            "milliseconds": 405
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 120
+          },
+          "text": "I hope you enjoy the course and use what"
+        },
+        {
+          "id": "161",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 38,
+            "milliseconds": 120
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 41,
+            "milliseconds": 15
+          },
+          "text": "you learn to build some really exciting applications."
+        },
+        {
+          "id": "162",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 41,
+            "milliseconds": 15
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "text": "So that, let's go on to the next video where we start"
+        },
+        {
+          "id": "163",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 44,
+            "milliseconds": 240
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 190
+          },
+          "text": "diving into how LLMs"
+        },
+        {
+          "id": "164",
+          "startTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 46,
+            "milliseconds": 190
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 6,
+            "seconds": 49,
+            "milliseconds": 290
+          },
+          "text": "are being used to build applications."
+        }
+      ],
+      "source": [
+        "I'm thrilled to have Antje, Mike,",
+        "Shelbee as well as Tris presenting this course to",
+        "you that takes a deep technical dive into LLMs.",
+        "You come away from this course having practice with",
+        "many different concrete code examples",
+        "for how to build or use LLMs.",
+        "I'm sure that many of the code snippets will",
+        "end up being directly useful in your own work.",
+        "I hope you enjoy the course and use what",
+        "you learn to build some really exciting applications.",
+        "So that, let's go on to the next video where we start",
+        "diving into how LLMs",
+        "are being used to build applications."
+      ],
+      "result": [
+        "我很高兴有Antje，Mike，Shelbee以及Chris来向你们介绍这门深入探讨LLMs的课程。",
+        "",
+        "",
+        "你将从这门课程中获得很多关于如何构建或使用LLMs的具体代码示例的实践经验。",
+        "",
+        "",
+        "我相信其中许多代码片段将直接用于你自己的工作。",
+        "",
+        "我希望你能喜欢这门课程，并利用你学到的知识构建一些真正令人兴奋的应用。",
+        "",
+        "那么，让我们继续下一个视频，开始深入了解如何使用LLMs构建应用。",
+        "",
+        ""
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false,
+      "output": [
+        {
+          "translated": "我很高兴有Antje，Mike，",
+          "sources": [
+            "I'm thrilled to have Antje, Mike,"
+          ]
+        },
+        {
+          "translated": "Shelbee以及Tris为你们介绍这门深入LLMs的技术课程。",
+          "sources": [
+            "Shelbee as well as Tris presenting this course to",
+            "you that takes a deep technical dive into LLMs."
+          ]
+        },
+        {
+          "translated": "你将从这门课程中获得许多不同的具体代码示例的实践经验，",
+          "sources": [
+            "You come away from this course having practice with",
+            "many different concrete code examples"
+          ]
+        },
+        {
+          "translated": "了解如何构建或使用LLMs。",
+          "sources": [
+            "for how to build or use LLMs."
+          ]
+        },
+        {
+          "translated": "我相信许多代码片段将",
+          "sources": [
+            "I'm sure that many of the code snippets will"
+          ]
+        },
+        {
+          "translated": "直接用于你的工作中。",
+          "sources": [
+            "end up being directly useful in your own work."
+          ]
+        },
+        {
+          "translated": "我希望你喜欢这门课程，并使用你所学的知识",
+          "sources": [
+            "I hope you enjoy the course and use what"
+          ]
+        },
+        {
+          "translated": "来构建一些真正令人兴奋的应用程序。",
+          "sources": [
+            "you learn to build some really exciting applications."
+          ]
+        },
+        {
+          "translated": "那么，让我们继续下一个视频，我们开始",
+          "sources": [
+            "So that, let's go on to the next video where we start"
+          ]
+        },
+        {
+          "translated": "深入研究如何使用LLMs",
+          "sources": [
+            "diving into how LLMs"
+          ]
+        },
+        {
+          "translated": "来构建应用程序。",
+          "sources": [
+            "are being used to build applications."
+          ]
+        }
+      ]
+    }
+  ],
+  "sourcePath": "input/Generative AI with Large Language Models/Introduction to LLMs and the generative AI project lifecycle/Course Introduction.srt",
+  "ouputBasePath": "input/Generative AI with Large Language Models/Introduction to LLMs and the generative AI project lifecycle/Course Introduction",
+  "totalCost": 0.36867,
+  "translationPath": "input/Generative AI with Large Language Models/Introduction to LLMs and the generative AI project lifecycle/Course Introduction/translation.json"
+}

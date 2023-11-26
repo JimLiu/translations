@@ -1,0 +1,888 @@
+1
+00:00:00,000 --> 00:00:10,080
+In this first video, I'd like to share with you an overview of how LLMs, large language
+
+2
+00:00:10,080 --> 00:00:11,080
+models work.
+
+3
+00:00:11,080 --> 00:00:16,480
+We'll go into how they are trained, as well as details like the tokenIsa and how that
+
+4
+00:00:16,480 --> 00:00:20,080
+can affect the output of when you prompt an LLM.
+
+5
+00:00:20,080 --> 00:00:25,800
+And we'll also take a look at the chat format for LLMs, which is a way of specifying both
+
+6
+00:00:25,800 --> 00:00:31,360
+system as well as user messages and understand what you can do with that capability.
+
+7
+00:00:31,360 --> 00:00:32,680
+Let's take a look.
+
+8
+00:00:32,680 --> 00:00:36,280
+First, how does a large language model work?
+
+9
+00:00:36,280 --> 00:00:41,080
+You're probably familiar with the text generation process where you can give a prompt, "I love
+
+10
+00:00:41,080 --> 00:00:47,360
+eating" and ask an LLM to fill in what the things are likely completions given this prompt.
+
+11
+00:00:47,360 --> 00:00:52,560
+And it may say "bagels with cream cheese" or "my mother's meatloaf" or "out with friends".
+
+12
+00:00:52,560 --> 00:00:55,320
+But how did the model learn to do this?
+
+13
+00:00:55,320 --> 00:01:00,800
+The main tool used to train an LLM is actually supervised learning.
+
+14
+00:01:00,800 --> 00:01:06,320
+In supervised learning, a computer learns an input/output or X/Y mapping using labeled
+
+15
+00:01:06,320 --> 00:01:07,320
+training data.
+
+16
+00:01:07,320 --> 00:01:12,480
+So, for example, if you're using supervised learning to learn to classify the sentiment
+
+17
+00:01:12,480 --> 00:01:17,000
+of restaurant reviews, you might collect a training set like this, where a review like
+
+18
+00:01:17,000 --> 00:01:23,320
+"the pastrami sandwich was great" is labeled as a positive sentiment review and so on.
+
+19
+00:01:23,320 --> 00:01:28,320
+And "service was slow, the food was so-so" is negative and "the earl grey tea was fantastic"
+
+20
+00:01:28,320 --> 00:01:30,440
+has a positive label.
+
+21
+00:01:30,440 --> 00:01:35,960
+By the way, both Isa and I were born in the UK and so both of us like our earl grey tea.
+
+22
+00:01:35,960 --> 00:01:41,740
+And so the process for supervised learning is typically to get labeled data and then
+
+23
+00:01:41,740 --> 00:01:47,240
+train a model on data and after training, you can then deploy and call the model and
+
+24
+00:01:47,240 --> 00:01:50,920
+give it a new restaurant review like "best pizza I've ever had".
+
+25
+00:01:50,920 --> 00:01:54,320
+You hopefully output that that has a positive sentiment.
+
+26
+00:01:54,320 --> 00:01:59,280
+It turns out that supervised learning is a core building block for training large language
+
+27
+00:01:59,280 --> 00:02:00,280
+models.
+
+28
+00:02:00,280 --> 00:02:05,840
+Specifically, a large language model can be built by using supervised learning to repeatedly
+
+29
+00:02:05,840 --> 00:02:08,160
+predict the next word.
+
+30
+00:02:08,160 --> 00:02:14,740
+Let's say that in your training set of a lot of text data, you have to sentence "my favorite
+
+31
+00:02:14,740 --> 00:02:17,480
+food is a bagel with cream cheese and lox".
+
+32
+00:02:17,480 --> 00:02:23,480
+Then this sentence is turned into a sequence of training examples where given a sentence
+
+33
+00:02:23,480 --> 00:02:28,800
+fragment "my favorite food is a" if you want to predict the next word in this case was
+
+34
+00:02:28,800 --> 00:02:36,520
+"bagel" or given the sentence fragment or sentence prefix "my favorite food is a bagel",
+
+35
+00:02:36,520 --> 00:02:41,120
+the next word in this case would be "with" and so on.
+
+36
+00:02:41,120 --> 00:02:45,600
+And given a large training set of hundreds of billions or sometimes even more words,
+
+37
+00:02:45,600 --> 00:02:51,520
+you can then create a massive training set where you can start off with part of a sentence
+
+38
+00:02:51,520 --> 00:02:56,600
+or part of a piece of text and repeatedly ask the language model to learn to predict
+
+39
+00:02:56,600 --> 00:02:58,440
+what is the next word.
+
+40
+00:02:58,440 --> 00:03:04,820
+So today there are broadly two major types of large language models.
+
+41
+00:03:04,820 --> 00:03:10,720
+The first is a base LLM and the second which is what is increasingly used is the instruction
+
+42
+00:03:10,720 --> 00:03:12,520
+Tuned LLM.
+
+43
+00:03:12,520 --> 00:03:18,200
+So the base LLM repeatedly predicts the next word based on text training data.
+
+44
+00:03:18,200 --> 00:03:22,720
+And so if I give it a prompt "once upon a time there was a unicorn" then it may by repeatedly
+
+45
+00:03:22,720 --> 00:03:27,200
+predicting one word at a time come up with a completion that tells a story about a unicorn
+
+46
+00:03:27,200 --> 00:03:30,480
+living in a magical forest with all unicorn friends.
+
+47
+00:03:30,480 --> 00:03:35,600
+Now a downside of this is that if you were to prompt it with "what is the capital of
+
+48
+00:03:35,600 --> 00:03:36,600
+France?"
+
+49
+00:03:36,600 --> 00:03:40,600
+quite plausible that on the internet there might be a list of quiz questions about France.
+
+50
+00:03:40,600 --> 00:03:42,920
+So it may complete this with "what is France's largest city?"
+
+51
+00:03:42,920 --> 00:03:46,400
+"what is France's population?" and so on.
+
+52
+00:03:46,400 --> 00:03:50,880
+But what you really want is you want it to tell you what is the capital of France probably
+
+53
+00:03:50,880 --> 00:03:54,360
+rather than list all these questions.
+
+54
+00:03:54,360 --> 00:03:58,800
+So the Instruction Tuned LLM instead tries to follow instructions and will hopefully
+
+55
+00:03:58,800 --> 00:04:02,160
+say the capital of France is Paris.
+
+56
+00:04:02,160 --> 00:04:06,120
+How do you go from a base LLM to an Instruction Tuned LLM?
+
+57
+00:04:06,120 --> 00:04:11,760
+This is what the process of training an Instruction Tuned LLM like ChatGPT looks like.
+
+58
+00:04:11,760 --> 00:04:16,080
+You first train a base LLM on a lot of data so hundreds of billions of words maybe even
+
+59
+00:04:16,080 --> 00:04:22,080
+more and this is a process that can take months on a large supercomputing system.
+
+60
+00:04:22,080 --> 00:04:28,480
+After you've trained the base LLM you would then further train the model by fine tuning
+
+61
+00:04:28,480 --> 00:04:35,820
+it on a smaller set of examples where the output follows an input instruction.
+
+62
+00:04:35,820 --> 00:04:42,600
+And so for example you may have contractors help you write a lot of examples of an instruction
+
+63
+00:04:42,600 --> 00:04:48,040
+and then a good response to an instruction and that creates a training set to carry out
+
+64
+00:04:48,040 --> 00:04:51,920
+this additional fine tuning so that it learns to predict what is the next word if it's trying
+
+65
+00:04:51,920 --> 00:04:55,080
+to follow an instruction.
+
+66
+00:04:55,080 --> 00:05:01,520
+After that to improve the quality of the LLM's output a common process now is to obtain human
+
+67
+00:05:01,520 --> 00:05:07,520
+ratings of the quality of many different LLM outputs on criteria such as whether the output
+
+68
+00:05:07,520 --> 00:05:14,120
+is helpful, honest, and harmless and you can then further tune the LLM to increase the
+
+69
+00:05:14,120 --> 00:05:18,000
+probability of its generating the more highly rated outputs.
+
+70
+00:05:18,000 --> 00:05:22,080
+And the most common technique to do this is RHF which stands for reinforcement learning
+
+71
+00:05:22,080 --> 00:05:24,600
+from human feedback.
+
+72
+00:05:24,600 --> 00:05:29,800
+And whereas training the base LLM can take months the process of going from the base
+
+73
+00:05:29,800 --> 00:05:36,680
+LLM to the instruction tune LLM can be done in maybe days on a much more modest size data
+
+74
+00:05:36,680 --> 00:05:40,360
+set and much more modest size computational resources.
+
+75
+00:05:40,360 --> 00:05:42,560
+So this is how you would use an LLM.
+
+76
+00:05:42,560 --> 00:05:45,560
+I'm going to import a few libraries.
+
+77
+00:05:45,560 --> 00:05:48,840
+I'm going to load my OpenAI key here.
+
+78
+00:05:48,840 --> 00:05:52,620
+I'll say a little bit more about this later in this video.
+
+79
+00:05:52,620 --> 00:05:57,580
+And here's a helper function to get a completion given a prompt.
+
+80
+00:05:57,580 --> 00:06:04,640
+If you have not yet installed the OpenAI package on your computer you might have to run pip
+
+81
+00:06:04,640 --> 00:06:09,960
+install OpenAI but I already have it installed here so I won't run that.
+
+82
+00:06:09,960 --> 00:06:20,280
+And let me hit shift enter to run these and now I can set response equals get completion
+
+83
+00:06:20,280 --> 00:06:34,820
+what is the capital of France and hopefully it will give me a good result.
+
+84
+00:06:34,820 --> 00:06:42,620
+Now about now in the description of the large language model so far I talked about it as
+
+85
+00:06:42,620 --> 00:06:47,940
+predicting one word at a time but there's actually one more important technical detail.
+
+86
+00:06:47,940 --> 00:06:54,980
+If you were to tell it take the letters in the word lollipop and reverse them.
+
+87
+00:06:54,980 --> 00:07:00,380
+This seems like an easy task maybe like a four year old could do this task but if you
+
+88
+00:07:00,380 --> 00:07:09,120
+were to ask chatgpt to do this it actually outputs a somewhat garbled whatever this is.
+
+89
+00:07:09,120 --> 00:07:14,100
+This is not L-O-L-I-P-L-P this is not lollipop's letters reversed.
+
+90
+00:07:14,100 --> 00:07:19,620
+So why is chatgpt unable to do what seems like a relatively simple task.
+
+91
+00:07:19,620 --> 00:07:24,300
+It turns out that there's one more important detail for how a large language model works
+
+92
+00:07:24,300 --> 00:07:30,220
+which is it doesn't actually repeatedly predict the next word it instead repeatedly predicts
+
+93
+00:07:30,220 --> 00:07:36,720
+the next token and what an LLM actually does is it will take a sequence of characters like
+
+94
+00:07:36,720 --> 00:07:43,260
+learning new things is fun and group the characters together to form tokens that comprise commonly
+
+95
+00:07:43,260 --> 00:07:46,580
+occurring sequences of characters.
+
+96
+00:07:46,580 --> 00:07:52,660
+So here learning new things is fun each of them is a fairly common word and so each token
+
+97
+00:07:52,660 --> 00:07:57,980
+corresponds to one word or one word in a space or an exclamation mark.
+
+98
+00:07:57,980 --> 00:08:03,540
+But if you were to give it input with some somewhat less frequently used words like prompting
+
+99
+00:08:03,540 --> 00:08:10,340
+is powerful developer to the word prompting is still not that common in the English language
+
+100
+00:08:10,340 --> 00:08:14,900
+but certainly gaining in popularity and so prompting is actually broken down to three
+
+101
+00:08:14,900 --> 00:08:21,340
+tokens with prompt, pt and ing because those three are commonly occurring sequences of
+
+102
+00:08:21,340 --> 00:08:27,220
+letters and if you were to give it the word lollipop the tokenIsa actually breaks this
+
+103
+00:08:27,220 --> 00:08:34,300
+down into three tokens L and O and Epop and because chatgpt isn't seeing the individual
+
+104
+00:08:34,300 --> 00:08:40,200
+letters is instead seeing these three tokens it's more difficult for it to correctly print
+
+105
+00:08:40,200 --> 00:08:43,420
+out these letters in reverse order.
+
+106
+00:08:43,420 --> 00:08:52,540
+So here's a trick you can use to fix this if I were to add dashes between these letters
+
+107
+00:08:52,540 --> 00:08:56,780
+and spaces would work too or other things would work too and take the letters and lollipop
+
+108
+00:08:56,780 --> 00:09:03,100
+and reverse them then it actually does a much better job this LLIPOP and the reason for
+
+109
+00:09:03,100 --> 00:09:08,740
+that is if you pass it lollipop with dashes in between the letters it tokenizes each of
+
+110
+00:09:08,740 --> 00:09:14,140
+these characters into an individual token making it easier for it to see the individual
+
+111
+00:09:14,140 --> 00:09:17,140
+letters and print them out in reverse order.
+
+112
+00:09:17,140 --> 00:09:23,180
+So if you ever want to use chatgpt to play a word game like wordle or scrap or something
+
+113
+00:09:23,180 --> 00:09:29,460
+this nifty trick helps it to better see the individual letters of the words.
+
+114
+00:09:29,460 --> 00:09:34,700
+For the English language one token roughly on average corresponds to about four characters
+
+115
+00:09:34,700 --> 00:09:40,980
+or about three quarters of a word and so different large language models will often have different
+
+116
+00:09:40,980 --> 00:09:45,780
+limits on the number of input plus output tokens it can accept.
+
+117
+00:09:45,780 --> 00:09:50,700
+The input is often called the context and the output is often called the completion
+
+118
+00:09:50,700 --> 00:09:56,700
+and the model GPT 3.5 turbo for example the most commonly used chatgpt model has a limit
+
+119
+00:09:56,700 --> 00:10:01,700
+of roughly 4000 tokens in the input plus output.
+
+120
+00:10:01,700 --> 00:10:05,660
+So if you try to feed it an input context that's much longer than this so actually throw
+
+121
+00:10:05,660 --> 00:10:08,540
+an exception or generate an error.
+
+122
+00:10:08,540 --> 00:10:17,460
+Next I want to share with you another powerful way to use an LLM API which involves specifying
+
+123
+00:10:17,460 --> 00:10:22,580
+separate system user and assistant messages.
+
+124
+00:10:22,580 --> 00:10:29,900
+Let me show you an example then we can explain in more detail what it's actually doing.
+
+125
+00:10:29,900 --> 00:10:35,660
+Here's a new helper function called get completion from messages and when we prompt this LLM
+
+126
+00:10:35,660 --> 00:10:39,460
+we are going to give it multiple messages.
+
+127
+00:10:39,460 --> 00:10:42,500
+Here's an example of what you can do.
+
+128
+00:10:42,500 --> 00:10:49,860
+I'm going to specify first a message in the role of a system so this assistant message
+
+129
+00:10:49,860 --> 00:10:54,500
+and the content of the system message is you're an assistant who responds in the style of
+
+130
+00:10:54,500 --> 00:10:55,500
+Dr. Seuss.
+
+131
+00:10:56,500 --> 00:11:00,700
+Then I'm going to specify a user message so the role of the second message is role
+
+132
+00:11:00,700 --> 00:11:07,180
+user and the content of this is write me a very short poem about a happy carrot.
+
+133
+00:11:07,180 --> 00:11:12,340
+And so let's run that and with temperature equals one I actually never know what's going
+
+134
+00:11:12,340 --> 00:11:14,740
+to come out but okay that's a cool poem.
+
+135
+00:11:14,740 --> 00:11:19,580
+Oh how jolly is this carrot that I see and it actually rhymes pretty well.
+
+136
+00:11:19,580 --> 00:11:22,420
+All right well done chatgpt.
+
+137
+00:11:22,420 --> 00:11:30,380
+And so in this example the system message specifies the overall tone of what you want
+
+138
+00:11:30,380 --> 00:11:35,500
+the large language model to do and the user message is a specific instruction that you
+
+139
+00:11:35,500 --> 00:11:40,900
+wanted to carry out given this higher level behavior that was specified in the system
+
+140
+00:11:40,900 --> 00:11:41,900
+message.
+
+141
+00:11:41,900 --> 00:11:46,120
+Here's an illustration of how it all works.
+
+142
+00:11:46,120 --> 00:11:51,700
+So this is how the chat format works.
+
+143
+00:11:51,700 --> 00:11:57,100
+The system message sets the overall tone of behavior of the large language model or the
+
+144
+00:11:57,100 --> 00:12:03,140
+assistant and then when you give the user message such as maybe such as a tell me a
+
+145
+00:12:03,140 --> 00:12:10,860
+joke or write me a poem it will then output an appropriate response following what you
+
+146
+00:12:10,860 --> 00:12:16,540
+asked for in the user message and consistent with the overall behavior set in the system
+
+147
+00:12:16,540 --> 00:12:19,220
+message.
+
+148
+00:12:19,220 --> 00:12:24,500
+And by the way although I'm not illustrating it here if you want to use this in a multi-term
+
+149
+00:12:24,500 --> 00:12:33,140
+conversation you can also input assistant messages in this messages format to let chatgpt
+
+150
+00:12:33,140 --> 00:12:38,860
+know what it had previously said if you wanted to continue the conversation based on things
+
+151
+00:12:38,860 --> 00:12:41,820
+that had previously said as well.
+
+152
+00:12:41,820 --> 00:12:45,180
+But here are a few more examples.
+
+153
+00:12:45,180 --> 00:12:52,340
+If you want to set the tone to tell it to have a one sentence long output then in the
+
+154
+00:12:52,340 --> 00:12:58,460
+system message I can say all your responses must be one sentence long and when I execute
+
+155
+00:12:58,460 --> 00:13:03,540
+this it outputs a single sentence is no longer a poem not in the style of Dr. Seuss but this
+
+156
+00:13:03,540 --> 00:13:10,060
+is a single sentence that's a story about the happy carrot.
+
+157
+00:13:10,060 --> 00:13:17,620
+And if we want to combine both specify the style and the length then I can use the system
+
+158
+00:13:17,620 --> 00:13:22,020
+message to say in the system response to style Dr. Seuss all your sentences must be one sentence
+
+159
+00:13:22,020 --> 00:13:32,860
+long and now this generates a nice one sentence poem that was always smiling and never scary.
+
+160
+00:13:32,860 --> 00:13:35,740
+I like that that's a very happy poem.
+
+161
+00:13:35,740 --> 00:13:42,780
+And then lastly just for fun if you are using an LLM and you want to know how many tokens
+
+162
+00:13:42,780 --> 00:13:49,020
+are you using here's a helper function that is a little bit more sophisticated in that
+
+163
+00:13:49,020 --> 00:13:57,500
+it gets a response from the open AI API endpoint and then it uses other values in the response
+
+164
+00:13:57,500 --> 00:14:03,260
+to tell you how many prompt tokens completion tokens and total tokens were used in your
+
+165
+00:14:03,260 --> 00:14:05,060
+API call.
+
+166
+00:14:05,060 --> 00:14:19,260
+Let me define that and if I run this now here's the response and here is a count of how many
+
+167
+00:14:19,260 --> 00:14:20,620
+tokens we use.
+
+168
+00:14:20,620 --> 00:14:27,980
+So this output which had 55 tokens whereas the prompt input had 37 tokens so this used
+
+169
+00:14:27,980 --> 00:14:31,740
+up 92 tokens altogether.
+
+170
+00:14:31,740 --> 00:14:36,260
+When I'm using LLM models in practice I don't worry that much frankly about the number of
+
+171
+00:14:36,260 --> 00:14:38,740
+tokens I'm using.
+
+172
+00:14:38,740 --> 00:14:42,420
+Maybe one case where it might be worth checking the number of tokens is if you're worried
+
+173
+00:14:42,420 --> 00:14:48,100
+that the user might have given you too long an input that exceeds the 4000 or so token
+
+174
+00:14:48,100 --> 00:14:52,940
+limits of Chai GPT in which case you could double check how many tokens it was and truncate
+
+175
+00:14:52,940 --> 00:14:58,380
+it to make sure you're staying within the input token limits of the large language model.
+
+176
+00:14:58,380 --> 00:15:04,780
+Now I want to share with you one more tip for how to use a large language model.
+
+177
+00:15:04,780 --> 00:15:10,900
+Calling the open AI API requires using an API key that's tied to either a free or a
+
+178
+00:15:10,900 --> 00:15:17,940
+paid account and so many developers will write the API key in plain text like this into their
+
+179
+00:15:17,940 --> 00:15:26,460
+Jupyter notebook and this is a less secure way of using API keys that I would not recommend
+
+180
+00:15:26,460 --> 00:15:32,580
+you use because it's just too easy to share this notebook with someone else or check this
+
+181
+00:15:32,580 --> 00:15:38,700
+into GitHub or something and thus end up leaking your API key to someone else.
+
+182
+00:15:38,700 --> 00:15:46,140
+In contrast what you saw me do in the Jupyter notebook was this piece of code where I use
+
+183
+00:15:46,140 --> 00:15:52,900
+a library dot env and then run this command load dot env find dot env to read a local
+
+184
+00:15:52,900 --> 00:15:58,660
+file which is called dot env that contains my secret key.
+
+185
+00:15:58,660 --> 00:16:04,420
+And so with this code snippet I have locally stored a file called dot env that contains
+
+186
+00:16:04,420 --> 00:16:13,140
+my API key and this loads it into the operating systems environmental variable and then os.get
+
+187
+00:16:13,140 --> 00:16:21,180
+env, open AI API key stores it into this variable and in this whole process I don't ever have
+
+188
+00:16:21,180 --> 00:16:27,020
+to enter the API key in plain text in unencrypted plain text into my Jupyter notebook.
+
+189
+00:16:27,020 --> 00:16:33,380
+So this is a relatively more secure and a better way to access the API key and in fact
+
+190
+00:16:33,380 --> 00:16:39,420
+this is a general method for storing different API keys from lots of different online services
+
+191
+00:16:39,420 --> 00:16:44,180
+that you might want to use and call from your Jupyter notebook.
+
+192
+00:16:44,180 --> 00:16:51,580
+The- I think the degree to which prompting is revolutionizing AI application development
+
+193
+00:16:51,580 --> 00:16:54,220
+is still underappreciated.
+
+194
+00:16:54,220 --> 00:16:58,900
+In the traditional supervised machine learning workflow like the restaurant review sentiment
+
+195
+00:16:58,900 --> 00:17:03,340
+classification example that I touched on just now, if you want to build a classifier to
+
+196
+00:17:03,340 --> 00:17:07,900
+classify restaurant review positive or negative sentiments you at first get a bunch of label
+
+197
+00:17:07,900 --> 00:17:13,200
+data maybe hundreds of examples this might take I don't know weeks maybe a month then
+
+198
+00:17:13,200 --> 00:17:18,620
+you would train a model on data and getting an appropriate open source model tuning on
+
+199
+00:17:18,620 --> 00:17:25,540
+the model evaluating it that might take days weeks maybe even a few months and then you
+
+200
+00:17:25,540 --> 00:17:31,140
+might have to find a cloud service to deploy it and then get your model uploaded to the
+
+201
+00:17:31,140 --> 00:17:34,940
+cloud and then run the model and finally be able to call your model and it's again not
+
+202
+00:17:34,940 --> 00:17:39,820
+uncommon for this to take a team a few months to get working.
+
+203
+00:17:39,820 --> 00:17:46,900
+In contrast with prompting based machine learning when you have a text application you can specify
+
+204
+00:17:46,900 --> 00:17:51,780
+a prompt this can take minutes maybe hours if you need to iterate a few times to get
+
+205
+00:17:51,780 --> 00:17:59,880
+an effective prompt and then in hours maybe at most days but frankly more often hours
+
+206
+00:17:59,880 --> 00:18:05,880
+you can have this running using API calls and start making calls to the model and once
+
+207
+00:18:05,880 --> 00:18:11,480
+you've done that in just again maybe minutes or hours you can start calling the model and
+
+208
+00:18:11,480 --> 00:18:17,280
+start making inferences and so there are applications that used to take me maybe six months or a
+
+209
+00:18:17,280 --> 00:18:22,840
+year to build that you can now build in minutes or hours maybe very small numbers of days
+
+210
+00:18:22,840 --> 00:18:29,120
+using prompting and this is revolutionizing what AI applications can be built quickly.
+
+211
+00:18:29,120 --> 00:18:34,680
+One important caveat this applies to many unstructured data applications including specifically
+
+212
+00:18:34,680 --> 00:18:40,600
+text applications and maybe increasingly vision applications although the vision technology
+
+213
+00:18:40,600 --> 00:18:44,520
+is much less mature right now but it's kind of getting there.
+
+214
+00:18:44,520 --> 00:18:49,520
+This recipe doesn't really work for structured data applications meaning machine learning
+
+215
+00:18:49,520 --> 00:18:54,840
+applications on tabular data with lots of numerical values in the Excel spreadsheet
+
+216
+00:18:54,840 --> 00:19:01,120
+say but for applications to which this does apply the fact that AI components can be built
+
+217
+00:19:01,120 --> 00:19:07,480
+so quickly is changing the workflow of how the entire system might be built.
+
+218
+00:19:07,480 --> 00:19:11,080
+Building entire system might still take days or weeks or something but at least this piece
+
+219
+00:19:11,080 --> 00:19:16,880
+of it can be done much faster and so with that let's go on to the next video where Ysa
+
+220
+00:19:16,880 --> 00:19:24,400
+will show how to use these components to evaluate the input to a customer service assistant
+
+221
+00:19:24,400 --> 00:19:29,040
+and this will be part of a bigger example that you see developed through this course
+
+222
+00:19:29,040 --> 00:19:33,760
+for building a customer service assistant for an online retailer.
+

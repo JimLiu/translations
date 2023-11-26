@@ -1,0 +1,300 @@
+1
+00:00:00,000 --> 00:00:09,540
+In this video, you'll learn how to control the model and what it generates.
+
+2
+00:00:09,540 --> 00:00:17,300
+For many, this is the most exciting piece because you get to tell the model what you want and it gets to imagine it for you.
+
+3
+00:00:17,300 --> 00:00:22,660
+When it comes to controlling these models, we actually want to use embeddings.
+
+4
+00:00:22,660 --> 00:00:28,457
+And what embeddings are, which we looked at a little bit in previous videos of a time embedding and a context embedding,
+
+5
+00:00:28,458 --> 00:00:34,340
+what embeddings are is they're vectors, they're numbers that are able to capture a meaning.
+
+6
+00:00:34,340 --> 00:00:40,060
+And here it's capturing the meaning of this sentence or this joke, perhaps, for diffusion models.
+
+7
+00:00:40,060 --> 00:00:42,500
+Brownians often bump into each other.
+
+8
+00:00:42,500 --> 00:00:47,500
+So it encodes that into this embedding, which is this set of numbers in a vector.
+
+9
+00:00:47,500 --> 00:00:53,700
+And what's special about embeddings is because they can capture the semantic meaning, text with similar content will have similar vectors.
+
+10
+00:00:53,700 --> 00:00:59,280
+And one of the kind of magical things about embeddings is you can almost do this vector arithmetic with it.
+
+11
+00:00:59,280 --> 00:01:04,180
+So Paris minus France plus England equals the London embedding, for example.
+
+12
+00:01:04,180 --> 00:01:09,740
+Okay, so how do these embeddings actually become context to the model during training?
+
+13
+00:01:09,740 --> 00:01:14,460
+Well, here you have an avocado image, which you want the neural network to understand.
+
+14
+00:01:14,460 --> 00:01:17,760
+And you also have a caption for it, a ripe avocado.
+
+15
+00:01:17,760 --> 00:01:22,328
+And you can actually pass that through, get an embedding and input that into the neural network
+
+16
+00:01:22,329 --> 00:01:28,940
+to then predict the noise that was added to this avocado image, and then compute the loss and do the same thing as before.
+
+17
+00:01:28,940 --> 00:01:33,220
+And you could do this across a lot of different images with captions.
+
+18
+00:01:33,220 --> 00:01:39,780
+So here is a comfy armchair, you can pass it through an embedding, pass it into the model and have that be part of training.
+
+19
+00:01:39,780 --> 00:01:48,200
+Now the magic of this section is that while you were able to scrape these images of avocados and armchairs off the internet with those captions,
+
+20
+00:01:48,201 --> 00:01:55,140
+you're able to at sample time, be able to generate things that the model has never seen before.
+
+21
+00:01:55,140 --> 00:01:57,280
+And that could be an avocado armchair.
+
+22
+00:01:57,280 --> 00:02:03,099
+And the magic of this is because you can embed the words avocado armchair into this embedding that has, 
+
+23
+00:02:03,100 --> 00:02:05,643
+you know, a bit of avocado in there, a bit of armchair in there,
+
+24
+00:02:05,644 --> 00:02:14,220
+put that through the neural network, have it predict noise, subtract that noise out and get lo and behold, an avocado armchair.
+
+25
+00:02:14,220 --> 00:02:18,180
+So more broadly, context is a vector that can control generation.
+
+26
+00:02:18,180 --> 00:02:23,420
+Context can be just as we have seen now, the text embeddings that of that avocado armchair,
+
+27
+00:02:23,420 --> 00:02:26,900
+that's very long, but context doesn't have to be that long.
+
+28
+00:02:26,900 --> 00:02:30,335
+Context can also be different categories that are five in length, you know,
+
+29
+00:02:30,336 --> 00:02:37,140
+five different dimensions such as having a hero or being a non-hero like these objects of a fireball and a mushroom.
+
+30
+00:02:37,140 --> 00:02:41,140
+It could be food items, you know, apple, orange, watermelon.
+
+31
+00:02:41,140 --> 00:02:44,460
+It could be spells and weapons like this bow and arrow or this candle.
+
+32
+00:02:44,460 --> 00:02:48,360
+And finally, it could be whether these sprites are side facing or not.
+
+33
+00:02:48,360 --> 00:02:52,820
+So now let's take a look at adding context to your model in the next lab.
+
+34
+00:02:52,820 --> 00:03:02,940
+Onto our lab, we can just run the setup here for all these things, just setting up the same things as before.
+
+35
+00:03:02,940 --> 00:03:08,980
+And then down here in context, I want to instantiate our neural network again.
+
+36
+00:03:08,980 --> 00:03:13,700
+And again, we're not training, but I'm going to call out a few places where we do add the context.
+
+37
+00:03:13,700 --> 00:03:21,620
+So when we do load the data here, we now iterate through both the data point and the context factor associated with it.
+
+38
+00:03:21,620 --> 00:03:28,700
+And the context that we do have are these one hot encoded vectors of hero, non-hero, food, spells and weapons and side facing.
+
+39
+00:03:28,700 --> 00:03:30,180
+We create a context mask.
+
+40
+00:03:30,180 --> 00:03:34,660
+And what's important here is that actually with some randomness, we completely mask out
+
+41
+00:03:34,660 --> 00:03:39,460
+the context so that the model is able to learn generally what a sprite is as well.
+
+42
+00:03:39,460 --> 00:03:42,040
+It's pretty common for diffusion models.
+
+43
+00:03:42,040 --> 00:03:45,980
+And then we add context when we call the neural network right here.
+
+44
+00:03:45,980 --> 00:03:49,940
+So let's load a checkpoint where we did train the model with context.
+
+45
+00:03:49,940 --> 00:03:54,580
+So just loading that model here, running that.
+
+46
+00:03:54,580 --> 00:03:56,020
+Running our sampling code again.
+
+47
+00:03:56,020 --> 00:03:58,100
+So we have that for this notebook.
+
+48
+00:03:58,100 --> 00:04:00,464
+And here you can see that when you run this,
+
+49
+00:04:00,465 --> 00:04:05,360
+this is actually choosing completely random context right here, completely randomly.
+
+50
+00:04:05,360 --> 00:04:12,980
+You can see the different types of outputs of objects and people.
+
+51
+00:04:12,980 --> 00:04:16,220
+And now controlling it a bit, you can actually define it here.
+
+52
+00:04:16,220 --> 00:04:20,900
+So here I just defined, oh, hero, a couple heroes, the first two.
+
+53
+00:04:20,900 --> 00:04:21,900
+So these two are heroes.
+
+54
+00:04:21,900 --> 00:04:23,720
+The next two are side facing.
+
+55
+00:04:23,720 --> 00:04:28,580
+So it's one hot with this last value here for side facing.
+
+56
+00:04:28,580 --> 00:04:30,300
+The next two are non-heroes.
+
+57
+00:04:30,300 --> 00:04:31,700
+So kind of beasts.
+
+58
+00:04:32,140 --> 00:04:35,620
+They look very blobby here.
+
+59
+00:04:35,620 --> 00:04:37,660
+And the last two are food items.
+
+60
+00:04:37,660 --> 00:04:40,060
+So this kind of looks like an apple.
+
+61
+00:04:40,060 --> 00:04:42,940
+And this kind of looks like a pear.
+
+62
+00:04:42,940 --> 00:04:48,580
+And now getting into the avocado armchair vibe, we can actually mix and match these a bit.
+
+63
+00:04:48,580 --> 00:04:51,833
+So while we trained it on one hot encoded vectors,
+
+64
+00:04:51,857 --> 00:04:57,780
+we can also provide it with these float numbers between 0 and 1 to get a mix of things.
+
+65
+00:04:57,780 --> 00:05:03,380
+So here for the second one here, it is a hero and partially food.
+
+66
+00:05:03,380 --> 00:05:05,260
+And so now it looks like a potato man.
+
+67
+00:05:05,260 --> 00:05:07,020
+The third one is also a little bit quirky.
+
+68
+00:05:07,020 --> 00:05:08,820
+It is part food and part spells.
+
+69
+00:05:08,820 --> 00:05:10,020
+So it kind of looks like this potion.
+
+70
+00:05:10,020 --> 00:05:12,280
+But yeah, you can play with these yourself.
+
+71
+00:05:12,280 --> 00:05:19,080
+You can try to put in something contradictory, like it's supposed to be a hero, but also side facing, like both front facing and side facing.
+
+72
+00:05:19,080 --> 00:05:21,700
+So this is good fun.
+
+73
+00:05:21,700 --> 00:05:27,529
+Feel free to stop, pause, and play with this a few times and start changing these values up.
+
+74
+00:05:27,530 --> 00:05:30,364
+So now that you can create all these samples, control them,
+
+75
+00:05:30,365 --> 00:05:36,320
+in the next video you'll explore speeding up the sampling process so that you don't have to wait so long to see these amazing samples.
+

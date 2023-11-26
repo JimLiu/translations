@@ -1,0 +1,408 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 520
+          },
+          "text": "Congratulations on learning about the foundations of diffusion models."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 9,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 800
+          },
+          "text": "Now putting it all together, you're able to train a diffusion model to predict noise,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 13,
+            "milliseconds": 800
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 80
+          },
+          "text": "and iteratively subtract the predicted noise from pure noise to get a good image."
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 18,
+            "milliseconds": 80
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 400
+          },
+          "text": "You're able to sample images from that trained neural network, fast too with a more efficient sampler called DDIM."
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 24,
+            "milliseconds": 400
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 140
+          },
+          "text": "You went through the model architecture, a unit."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 27,
+            "milliseconds": 140
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 600
+          },
+          "text": "You put context into the model so that you could decide whether you wanted food or spells or a hero sprite out, or something quirky in between."
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 34,
+            "milliseconds": 600
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "text": "Finally, you explored and ran the code for all of this."
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 520
+          },
+          "text": "Now you can create your own dataset and try to generate new things."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 42,
+            "milliseconds": 520
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 40
+          },
+          "text": "Diffusion models aren't bound to images either, that's just where they've been the most popular."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 47,
+            "milliseconds": 40
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 360
+          },
+          "text": "There are diffusion models for music, where you can give it any prompt and get music out, for proposing new molecules to accelerate drug discovery."
+        }
+      ],
+      "source": [
+        "Congratulations on learning about the foundations of diffusion models.",
+        "Now putting it all together, you're able to train a diffusion model to predict noise,",
+        "and iteratively subtract the predicted noise from pure noise to get a good image.",
+        "You're able to sample images from that trained neural network, fast too with a more efficient sampler called DDIM.",
+        "You went through the model architecture, a unit.",
+        "You put context into the model so that you could decide whether you wanted food or spells or a hero sprite out, or something quirky in between.",
+        "Finally, you explored and ran the code for all of this.",
+        "Now you can create your own dataset and try to generate new things.",
+        "Diffusion models aren't bound to images either, that's just where they've been the most popular.",
+        "There are diffusion models for music, where you can give it any prompt and get music out, for proposing new molecules to accelerate drug discovery."
+      ],
+      "result": [
+        "恭喜你学会了扩散模型的基础知识。",
+        "现在把所有内容整合在一起，\\N你已经能够训练扩散模型来预测噪声，",
+        "并迭代地从纯噪声中减去预测\\N的噪声，得到一幅好的图像。",
+        "你可以从训练好的神经网络中快速\\N采样图像，使用更高效的采样器DDIM。",
+        "你了解了模型结构，一个单元。",
+        "你将上下文融入模型，以便你可以选择想要的食物、\\N魔法、英雄形象，或者介于两者之间的有趣事物。",
+        "最后，你探索并运行了所有这些代码。",
+        "现在你可以创建自己的数据集，尝试生成新的东西。",
+        "扩散模型并不仅限于图像，只是它们在这方面最受欢迎。",
+        "还有用于音乐的扩散模型，你可以给它任何提示，\\N然后得到音乐，还可以提议新的分子来加速药物发现。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 54,
+            "milliseconds": 360
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 900
+          },
+          "text": "You can also try a larger dataset, try a new sampler."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 56,
+            "milliseconds": 900
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 640
+          },
+          "text": "There are actually a ton out there that are even faster and better than DDIM."
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 1,
+            "milliseconds": 640
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 480
+          },
+          "text": "You can do more with these models, such as inpainting, which is letting the diffusion model paint something around an existing image you already have."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 8,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 760
+          },
+          "text": "And textual inversion, which enables the model to capture an entirely new text concept with just a few sample images."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 15,
+            "milliseconds": 760
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 440
+          },
+          "text": "You covered the basics here, the foundations."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 18,
+            "milliseconds": 440
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 680
+          },
+          "text": "There are other important developments in this space."
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 20,
+            "milliseconds": 680
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 560
+          },
+          "text": "For example, Stable Diffusion uses a method called latent diffusion, which operates on image embeddings instead of images directly to make the process even more efficient."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 560
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 720
+          },
+          "text": "Other cool methods to call out are cross-attention text conditioning and classifier-free guidance."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 720
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 840
+          },
+          "text": "And the research community is still working on faster sampling methods because it's still slower than other generative models at inference time."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 41,
+            "milliseconds": 840
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 480
+          },
+          "text": "All in all, this is an extremely exciting time for diffusion models and generative models as a whole, as they improve and their applications become ever more widespread."
+        },
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 51,
+            "milliseconds": 480
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 55,
+            "milliseconds": 840
+          },
+          "text": "Thank you so much for joining me in this course, and I look forward to seeing what you build."
+        }
+      ],
+      "source": [
+        "You can also try a larger dataset, try a new sampler.",
+        "There are actually a ton out there that are even faster and better than DDIM.",
+        "You can do more with these models, such as inpainting, which is letting the diffusion model paint something around an existing image you already have.",
+        "And textual inversion, which enables the model to capture an entirely new text concept with just a few sample images.",
+        "You covered the basics here, the foundations.",
+        "There are other important developments in this space.",
+        "For example, Stable Diffusion uses a method called latent diffusion, which operates on image embeddings instead of images directly to make the process even more efficient.",
+        "Other cool methods to call out are cross-attention text conditioning and classifier-free guidance.",
+        "And the research community is still working on faster sampling methods because it's still slower than other generative models at inference time.",
+        "All in all, this is an extremely exciting time for diffusion models and generative models as a whole, as they improve and their applications become ever more widespread.",
+        "Thank you so much for joining me in this course, and I look forward to seeing what you build."
+      ],
+      "result": [
+        "你也可以尝试更大的数据集，尝试一个新的采样器。",
+        "实际上有很多比DDIM更快更好的。",
+        "你可以用这些模型做更多事情，比如图像修复，\\N让扩散模型在你已有的图像周围绘制一些东西。",
+        "还有文本反演，它可以让模型\\N通过几个样本图像捕捉到全新的文本概念。",
+        "你已经掌握了基础知识，这是基础。",
+        "这个领域还有其他重要的发展。",
+        "例如，Stable Diffusion采用一种\\N名为潜在扩散的方法，它直接在图像嵌入\\N上操作，而不是在图像上操作，使过程更加高效。",
+        "其他值得一提的酷炫方法还有\\N交叉注意力文本调节和无分类器引导。",
+        "研究界还在研究更快的采样方法，\\N因为它在推理时仍然比其他生成模型慢。",
+        "总的来说，对于扩散模型和整个生成模型\\N来说，这是一个非常激动人心的时期，\\N因为它们在改进，并且应用越来越广泛。",
+        "非常感谢你参加这门课程，期待看到你的作品。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/How Diffusion Models Work/DiffusionModels_Conclusion_v02.srt",
+  "ouputBasePath": "input/How Diffusion Models Work/DiffusionModels_Conclusion_v02",
+  "totalCost": 0.06531,
+  "translationPath": "input/How Diffusion Models Work/DiffusionModels_Conclusion_v02/translation.json"
+}

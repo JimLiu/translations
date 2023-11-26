@@ -1,0 +1,260 @@
+1
+00:00:05,000 --> 00:00:08,500
+In this video, your goal is to gain some intuition of diffusion models.
+
+2
+00:00:08,500 --> 00:00:11,000
+First, we'll talk about the goal of the diffusion model,
+
+3
+00:00:11,000 --> 00:00:15,000
+then we'll talk through how the training data that you have of different sprites
+
+4
+00:00:15,000 --> 00:00:16,500
+can be made useful to these models,
+
+5
+00:00:16,500 --> 00:00:19,500
+and then we'll talk about training the models themselves on this data.
+
+6
+00:00:19,500 --> 00:00:22,500
+What is the goal of diffusion models?
+
+7
+00:00:22,500 --> 00:00:25,131
+Well, you have a lot of training data,
+
+8
+00:00:25,331 --> 00:00:30,000
+such as these sprite images that you see down here of video game characters.
+
+9
+00:00:30,000 --> 00:00:32,000
+And this is your training dataset.
+
+10
+00:00:32,000 --> 00:00:38,000
+And what you want is you want even more of these sprites that are not represented in your training dataset.
+
+11
+00:00:38,000 --> 00:00:44,500
+And you can use a neural network that can generate more of these sprites for you following the diffusion model process.
+
+12
+00:00:44,500 --> 00:00:48,000
+So now, how do we make these images useful to the neural network?
+
+13
+00:00:48,000 --> 00:00:52,500
+Well, you want the neural network to learn generally the concept of a sprite, what it is.
+
+14
+00:00:52,500 --> 00:00:59,500
+And that could be finer details, such as, you know, the hair color of the sprite or that it's wearing a buckle for its belt.
+
+15
+00:00:59,500 --> 00:01:06,500
+But it also could be general outlines, like of its head and body, and everything in between that.
+
+16
+00:01:06,500 --> 00:01:12,961
+And one way to do that, one way to kind of take your data and be able to emphasize either finer details
+
+17
+00:01:13,161 --> 00:01:17,000
+or general outlines is actually to add different levels of noise.
+
+18
+00:01:17,000 --> 00:01:19,500
+So this is just adding noise to the image.
+
+19
+00:01:19,500 --> 00:01:22,000
+And it's known as a noising process.
+
+20
+00:01:22,000 --> 00:01:23,500
+And this is inspired by physics.
+
+21
+00:01:23,500 --> 00:01:27,000
+You can imagine an ink drop into a glass of water.
+
+22
+00:01:27,000 --> 00:01:30,000
+Initially, you know exactly where the ink drop landed.
+
+23
+00:01:30,000 --> 00:01:35,000
+But over time, you actually see it diffuse into the water until it disappears.
+
+24
+00:01:35,000 --> 00:01:38,500
+And that's the same idea here, where you start with Bob the sprite,
+
+25
+00:01:38,500 --> 00:01:45,000
+and as you add noise, it will disappear until you have no idea which sprite it actually was.
+
+26
+00:01:45,000 --> 00:01:49,500
+And so what should the neural network really be thinking at each of these levels of noise
+
+27
+00:01:49,500 --> 00:01:52,500
+when you add progressively more noise to the image?
+
+28
+00:01:52,500 --> 00:01:56,500
+Well, when it's Bob the sprite, you want the neural network to say,
+
+29
+00:01:56,500 --> 00:01:59,000
+"Yeah, that's Bob the sprite," to keep Bob as is.
+
+30
+00:01:59,000 --> 00:02:00,500
+That is a sprite.
+
+31
+00:02:00,500 --> 00:02:03,500
+If it's probably Bob, if it's likely to be Bob,
+
+32
+00:02:03,500 --> 00:02:06,500
+then you probably want the neural network to say, you know,
+
+33
+00:02:06,500 --> 00:02:08,000
+"There's some noise on here."
+
+34
+00:02:08,000 --> 00:02:12,500
+Suggest possible details to make it look just like Bob the sprite.
+
+35
+00:02:12,500 --> 00:02:14,500
+And if it's just an outline of a sprite now,
+
+36
+00:02:14,500 --> 00:02:18,500
+here you can only get a sense that this is probably a sprite person,
+
+37
+00:02:18,500 --> 00:02:22,000
+but it could be Bob or Fred or maybe even Nancy,
+
+38
+00:02:22,000 --> 00:02:27,000
+then you want to suggest more general details for possible likely sprites.
+
+39
+00:02:27,000 --> 00:02:30,000
+So maybe you'll suggest some details for Bob based on this,
+
+40
+00:02:30,000 --> 00:02:32,500
+or you'll suggest some details for Fred.
+
+41
+00:02:32,500 --> 00:02:36,500
+And finally, if you have no idea, if it looks like absolutely nothing,
+
+42
+00:02:36,500 --> 00:02:39,000
+you still want it to look more like a sprite.
+
+43
+00:02:39,000 --> 00:02:41,000
+You still want the neural network to say, "You know what?
+
+44
+00:02:41,000 --> 00:02:45,000
+I'm going to still take this completely noisy image,
+
+45
+00:02:45,000 --> 00:02:48,000
+and I'm going to turn this into something that's slightly more sprite-like
+
+46
+00:02:48,000 --> 00:02:51,500
+by proposing an outline of what a sprite might look like."
+
+47
+00:02:51,500 --> 00:02:54,500
+All right, so let's take a look at what that noising process,
+
+48
+00:02:54,500 --> 00:02:59,500
+that process of adding noise progressively, looks like over time.
+
+49
+00:02:59,500 --> 00:03:05,500
+And there it goes, an ink drop that's fully diffused in a glass of water.
+
+50
+00:03:05,500 --> 00:03:07,500
+So now on to training that neural network.
+
+51
+00:03:07,500 --> 00:03:11,500
+So it learns to take different noisy images and turn them back into sprites.
+
+52
+00:03:11,500 --> 00:03:13,000
+That is your goal.
+
+53
+00:03:13,000 --> 00:03:16,500
+And how it does that is it learns to remove the noise you added,
+
+54
+00:03:16,500 --> 00:03:21,500
+starting with the no idea level, where it is just pure noise,
+
+55
+00:03:21,500 --> 00:03:25,500
+to starting to give a semblance of maybe there's a person in there,
+
+56
+00:03:25,500 --> 00:03:30,500
+to looking like Fred, and then finally a sprite that looks like Fred.
+
+57
+00:03:30,500 --> 00:03:37,500
+And I just want to call out that the no idea level of noise is really important because it is normally distributed.
+
+58
+00:03:37,500 --> 00:03:41,500
+And what I mean by that is each of those pixels is sampled from a normal distribution,
+
+59
+00:03:41,500 --> 00:03:45,500
+also known as a Gaussian distribution or a bell-shaped curve.
+
+60
+00:03:45,500 --> 00:03:50,500
+So when you want to ask the neural network for a new sprite, such as Fred here,
+
+61
+00:03:50,500 --> 00:03:54,500
+you can sample noise from that normal distribution,
+
+62
+00:03:54,500 --> 00:04:00,500
+and then you can get a completely new sprite by using the neural network to just remove that noise progressively.
+
+63
+00:04:00,500 --> 00:04:02,500
+So now you've reached your goal.
+
+64
+00:04:02,500 --> 00:04:06,500
+You can get even more sprites beyond all those that you had trained on.
+
+65
+00:04:06,500 --> 00:04:09,500
+In the next video, we'll cover sampling.
+

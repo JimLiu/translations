@@ -1,0 +1,284 @@
+1
+00:00:00,330 --> 00:00:00,996
+欢迎回来。
+Welcome back.
+
+2
+00:00:00,996 --> 00:00:04,907
+本周有很多令人激动的内容要学习讨论，
+There's a lot of exciting material to go over this week, and
+
+3
+00:00:04,907 --> 00:00:13,252
+Mike将在稍后与你分享的第一个主题是：深入了解Transformer网络的工作原理。
+one of the first topics that Mike will share with you in a little bit is a deep dive into how transformer networks actually work.
+
+5
+00:00:13,252 --> 00:00:16,532
+是的，这是一个复杂的话题，对吗？
+Yeah, so look, it's a complicated topic, right?
+
+6
+00:00:16,532 --> 00:00:26,594
+2017年发表的论文《Attension is all You Need》详细阐述了在Transformer架构中会发生的一系列相当复杂的数据处理过程。
+In 2017, the paper came out, Tension is all You Need, and it laid out all of these fairly complex data processes which are going to happen inside the transformer architecture.
+
+9
+00:00:26,594 --> 00:00:31,298
+我们会从高层次的角度进行讨论，但也会深入探究一些内容。
+So we take a little bit of a high level view, but we do go down into some depths.
+
+10
+00:00:31,298 --> 00:00:36,354
+我们会讨论自注意力和多头自注意力机制等内容。
+We talk about things like self-attention and the multi-headed self-attention mechanism.
+
+12
+00:00:36,354 --> 00:00:45,126
+这样我们就能理解这些模型为什么有效，它们是如何理解语言的。
+So we can see why it is that these models actually work, how it is that they actually gain an understanding of language.
+
+14
+00:00:45,126 --> 00:00:51,494
+Transformer已经存在了很长时间，令人惊奇的是，它仍然是许多模型的最先进技术。
+And it's amazing how long the transformer architecture has been around and it's still state of the art for many models.
+
+16
+00:00:51,494 --> 00:00:58,058
+我记得当我第一次看到Transformer论文时，我觉得，是的，我懂这个等式。
+I remember after I saw the transformer paper when it first came out, I thought, yep, I get this equation.
+
+18
+00:00:58,058 --> 00:01:00,538
+我承认这是一个数学等式。
+I acknowledge this is a math equation.
+
+19
+00:01:00,538 --> 00:01:02,500
+但它实际上是做什么的？
+But what's it actually doing?
+
+20
+00:01:02,500 --> 00:01:04,154
+这一直似乎有点神奇。
+And it's always seemed a little bit magical.
+
+21
+00:01:04,154 --> 00:01:08,056
+我花了很长时间去研究它，最后终于明白，这就是它有效的原因。
+It took me a long time playing with it to finally go, okay, this is why it works.
+
+22
+00:01:08,056 --> 00:01:17,102
+所以我认为在第一周，你会学习到一些你可能听过的专业名词背后的知识，比如多头注意力（Multi-headed Attention）。
+And so I think in this first week, you learn the intuitions behind some of these terms you may have heard before, like multi-headed attention.
+
+24
+00:01:17,102 --> 00:01:19,116
+那是什么，它的意义是什么？
+What is that and why does it make sense?
+
+25
+00:01:19,116 --> 00:01:23,276
+为什么Transformer架构真正流行起来？
+And why did the transformer architecture really take off?
+
+26
+00:01:23,276 --> 00:01:32,092
+我认为注意力机制（Attention）已经存在了很长时间，但我认为真正让它流行起来的是，它允许注意力以大规模并行的方式工作。
+I think attention had been around for a long time, but actually thought it was, one of the things that really made to take off was it allowed attention to work in a massively parallel way.
+
+29
+00:01:32,092 --> 00:01:35,628
+所以它使得现代GPU上的工作成为可能，并且可以扩大其规模。
+So it made it work on modern GPUs and could scale it up.
+
+30
+00:01:35,628 --> 00:01:43,188
+我认为很多人并不了解关于Transformer的这些细微之处，所以我期待你们能深入研究这个问题。
+I think these nuances around transformers are not well-understood by many, so looking forward to when you deep dive into that.
+
+32
+00:01:43,188 --> 00:01:47,220
+绝对的，我想说的是，规模是一部分，它能够处理所有的数据。
+Absolutely, I mean, the scale is part of it and how it's able to take in all that data.
+
+34
+00:01:47,220 --> 00:01:53,370
+我只是想说，我们不会在这个问题上深入到让人头疼的程度。
+I just want to say as well, though, that we're not going to go into this at such a level which is going to make people's heads explode.
+
+36
+00:01:53,370 --> 00:01:56,644
+如果他们想这样做，他们可以去阅读那篇论文。
+If they want to do that, then they can go ahead and read that paper too.
+
+37
+00:01:56,644 --> 00:02:00,302
+我们要做的是，我们要看看那个Transformer架构的真正重要的部分，
+What we're going to do is we're going to look at the really important
+
+38
+00:02:00,302 --> 00:02:08,490
+让你得到你需要的知识，这样你就可以实际地利用这些模型。
+parts of that transformer architecture that gives you the intuition you need so that you can actually make practical use out of these models.
+
+40
+00:02:08,490 --> 00:02:17,566
+一件让我感到惊讶和高兴的事情是，虽然这个课程主要关注文本，
+One thing I've been surprised and delighted by is how transformers, even though this course focuses on text, it's been really interesting to see
+
+42
+00:02:17,566 --> 00:02:23,792
+但看到基础的Transformer架构如何为视觉Transformer创建基础实在是非常有趣。
+how that basic transformer architecture is creating a foundation for vision transformers as well.
+
+44
+00:02:23,792 --> 00:02:27,986
+所以，虽然在这门课程中你主要学习的是大语言模型、关于文本的模型，
+So even though in this course you learn mostly about large language models,
+
+45
+00:02:27,986 --> 00:02:37,092
+我认为理解Transformer也有助于人们理解这种非常激动人心的视觉Transformer以及其他形式。
+models about text, I think understanding transformers is also helping people understand this really exciting vision transformer and other modalities as well.
+
+47
+00:02:37,092 --> 00:02:40,660
+这将是很多机器学习的重要基础。
+It's going to be a really critical building block for a lot of machine learning.
+
+49
+00:02:40,660 --> 00:02:41,396
+绝对的。
+Absolutely.
+
+50
+00:02:41,396 --> 00:02:46,688
+然后，除了Transformer，还有第二个主要的话题，
+And then beyond transformers, there's a second major topic that looking forward
+
+51
+00:02:46,688 --> 00:02:51,934
+期待在这第一周覆盖，那就是生成式AI项目生命周期。
+to having this first week cover, which is the Generative AI project Lifecycle.
+
+52
+00:02:51,934 --> 00:02:56,216
+我知道很多人在想，哇，所有这些LLM的项目，我该怎么去构建呢？
+I know a lot of people are thinking, boy, does all this LM stuff, what I do of it?
+
+53
+00:02:56,216 --> 00:03:06,810
+生成式AI项目生命周期，我们稍后会谈到，它可以帮助你规划如何构建你自己的生成式AI项目。
+And the Generative AI project Lifecycle, which will talk about in a little bit, helps you plan out how to think about building your own Generative AI project.
+
+55
+00:03:06,810 --> 00:03:18,140
+没错，生成式AI项目生命周期会引导你了解在开发生成式AI应用时需要做出的各个阶段和决定。
+That's right, and the Generative AI project Lifecycle walks you through the individual stages and decisions you have to make when you're developing Generative AI applications.
+
+58
+00:03:18,140 --> 00:03:26,869
+所以你首先需要决定的是，是选择一个现成的基础模型，还是实际上要预训练你自己的模型，
+So one of the first things you have to decide is whether you're taking a foundation model off the shelf or you're actually pre-training your own model and
+
+60
+00:03:26,869 --> 00:03:32,852
+然后作为后续，你是否希望微调和定制该模型以适应你的特定数据。
+then as a follow up, whether you want to fine tune and customize that model maybe for your specific data.
+
+62
+00:03:32,852 --> 00:03:37,045
+是的，事实上，现在有很多大语言模型可供选择，
+Yeah, in fact, there's so many large language model options out there,
+
+63
+00:03:37,045 --> 00:03:43,752
+有些是开源的，有些不是，我看到很多开发人员在纠结，我应该选择哪些模型？
+some open source, some not open source, that I see many developers wondering, which of these models do I want to use?
+
+65
+00:03:43,752 --> 00:03:48,295
+因此，有一个评估并选择正确模型大小的方式是非常重要的。
+And so having a way to evaluate it and then also choose the right model sizing.
+
+66
+00:03:48,295 --> 00:03:53,313
+我知道在你的其他工作中，你谈到过何时需要一个巨大的模型，比如1000亿甚至更大的模型，
+I know in your other work, you've talked about when do you need a giant model, 100
+
+67
+00:03:53,313 --> 00:04:03,152
+相对的，何时一个1到30亿参数的模型或者小于10亿参数的模型对于特定的应用来说就足够好？
+billion or even much bigger versus when can a 1 to 30 billion parameter model or even sub 1 billion parameter model be just fantastic for a specific application?
+
+69
+00:04:03,152 --> 00:04:07,750
+确实，可能有一些使用场景，你真的需要模型非常全面，
+Exactly, so there might be use cases where you really need the model to be very
+
+70
+00:04:07,750 --> 00:04:11,862
+能够适应很多不同的任务。
+comprehensive and able to generalize to a lot of different tasks.
+
+71
+00:04:11,862 --> 00:04:16,417
+也可能有一些使用场景，你只是为了单一的使用场景进行优化，对吧？
+And there might be use cases where you're just optimizing for a single-use case, right?
+
+73
+00:04:16,417 --> 00:04:21,466
+你可能只需要使用一个小一些的模型就能获得相似甚至非常好的结果。
+And you can potentially work with a smaller model and achieving similar or even very good results.
+
+75
+00:04:21,466 --> 00:04:24,683
+是的，我认为这可能是一些人会感到非常惊讶的事情，
+Yeah, I think that might be one of the really surprising things for
+
+76
+00:04:24,683 --> 00:04:30,488
+那就是你实际上可以使用相当小的模型，仍然能够从中获取很多的能力。
+some people to learn is that you can actually use quite small models and still get quite a lot of capability out of them.
+
+78
+00:04:30,488 --> 00:04:34,420
+是的，我认为当你希望你的大语言模型具有很多关于世界的通用知识，
+Yeah, I think when you want your large language model to have a lot of general
+
+79
+00:04:34,420 --> 00:04:42,060
+当你希望它知道关于历史和哲学的东西，知道大小，知道如何编写Python代码等等时。
+knowledge about the world, when you wanted to know stuff about history and philosophy and the sizes and how to write Python code and so on and so on.
+
+81
+00:04:42,060 --> 00:04:46,543
+拥有一个拥有上千亿参数的巨大模型是有帮助的。
+It helps to have a giant model with hundreds of billions of parameters.
+
+82
+00:04:46,543 --> 00:04:54,833
+但是对于像对话总结或者作为一家公司的客户服务代理这样的单一任务，对于这样的应用，
+But for a single task like summarizing dialogue or acting as a customer service agent for one company, for applications like that,
+
+84
+00:04:54,833 --> 00:04:59,027
+有时候你可以使用上百亿参数的模型。
+sometimes you can use hundreds of billions of parameters models.
+
+85
+00:04:59,027 --> 00:05:01,114
+但这并不总是必要的。
+But that's not always necessary.
+
+86
+00:05:01,114 --> 00:05:05,508
+所以本周有很多真正令人兴奋的材料要深入研究。
+So lots of really exciting material to get into this week.
+
+87
+00:05:05,508 --> 00:05:14,730
+那么，让我们进入下一个视频，Mike将开始深入探讨大语言模型的许多不同使用案例。
+With that, let's go on to the next video when Mike will kick things off with a deep dive into many different use cases of large language models.

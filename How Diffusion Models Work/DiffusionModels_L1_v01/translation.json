@@ -1,0 +1,1244 @@
+{
+  "chunks": [
+    {
+      "items": [
+        {
+          "id": "1",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 5,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 500
+          },
+          "text": "In this video, your goal is to gain some intuition of diffusion models."
+        },
+        {
+          "id": "2",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 8,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "text": "First, we'll talk about the goal of the diffusion model,"
+        },
+        {
+          "id": "3",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 11,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "text": "then we'll talk through how the training data that you have of different sprites"
+        },
+        {
+          "id": "4",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 15,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "text": "can be made useful to these models,"
+        },
+        {
+          "id": "5",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "text": "and then we'll talk about training the models themselves on this data."
+        },
+        {
+          "id": "6",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 500
+          },
+          "text": "What is the goal of diffusion models?"
+        },
+        {
+          "id": "7",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 22,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 131
+          },
+          "text": "Well, you have a lot of training data,"
+        },
+        {
+          "id": "8",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 25,
+            "milliseconds": 331
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "such as these sprite images that you see down here of video game characters."
+        },
+        {
+          "id": "9",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 0
+          },
+          "text": "And this is your training dataset."
+        },
+        {
+          "id": "10",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 32,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "text": "And what you want is you want even more of these sprites that are not represented in your training dataset."
+        }
+      ],
+      "source": [
+        "In this video, your goal is to gain some intuition of diffusion models.",
+        "First, we'll talk about the goal of the diffusion model,",
+        "then we'll talk through how the training data that you have of different sprites",
+        "can be made useful to these models,",
+        "and then we'll talk about training the models themselves on this data.",
+        "What is the goal of diffusion models?",
+        "Well, you have a lot of training data,",
+        "such as these sprite images that you see down here of video game characters.",
+        "And this is your training dataset.",
+        "And what you want is you want even more of these sprites that are not represented in your training dataset."
+      ],
+      "result": [
+        "在这个视频中，你的目标是\\N了解一些扩散模型的基础知识。",
+        "首先，我们将讨论扩散模型的目标，",
+        "然后我们将探讨如何利用你手中的各种\\N游戏角色图片训练数据对这些模型有用，",
+        "",
+        "最后我们会讨论如何在这些数据上训练模型。",
+        "那么，扩散模型的目标是什么呢？",
+        "好吧，你有很多的训练数据，",
+        "比如你在这里看到的视频游戏角色的图像。",
+        "这就是你的训练数据集。",
+        "你想要的是更多\\N在你的训练数据集中没有的角色图片。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "11",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 38,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 500
+          },
+          "text": "And you can use a neural network that can generate more of these sprites for you following the diffusion model process."
+        },
+        {
+          "id": "12",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 44,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "text": "So now, how do we make these images useful to the neural network?"
+        },
+        {
+          "id": "13",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "text": "Well, you want the neural network to learn generally the concept of a sprite, what it is."
+        },
+        {
+          "id": "14",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 500
+          },
+          "text": "And that could be finer details, such as, you know, the hair color of the sprite or that it's wearing a buckle for its belt."
+        },
+        {
+          "id": "15",
+          "startTime": {
+            "hours": 0,
+            "minutes": 0,
+            "seconds": 59,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "text": "But it also could be general outlines, like of its head and body, and everything in between that."
+        },
+        {
+          "id": "16",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 12,
+            "milliseconds": 961
+          },
+          "text": "And one way to do that, one way to kind of take your data and be able to emphasize either finer details"
+        },
+        {
+          "id": "17",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 13,
+            "milliseconds": 161
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "text": "or general outlines is actually to add different levels of noise."
+        },
+        {
+          "id": "18",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 17,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "text": "So this is just adding noise to the image."
+        },
+        {
+          "id": "19",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 19,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "text": "And it's known as a noising process."
+        },
+        {
+          "id": "20",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 500
+          },
+          "text": "And this is inspired by physics."
+        }
+      ],
+      "source": [
+        "And you can use a neural network that can generate more of these sprites for you following the diffusion model process.",
+        "So now, how do we make these images useful to the neural network?",
+        "Well, you want the neural network to learn generally the concept of a sprite, what it is.",
+        "And that could be finer details, such as, you know, the hair color of the sprite or that it's wearing a buckle for its belt.",
+        "But it also could be general outlines, like of its head and body, and everything in between that.",
+        "And one way to do that, one way to kind of take your data and be able to emphasize either finer details",
+        "or general outlines is actually to add different levels of noise.",
+        "So this is just adding noise to the image.",
+        "And it's known as a noising process.",
+        "And this is inspired by physics."
+      ],
+      "result": [
+        "你可以使用一个神经网络，\\N通过扩散模型过程为你生成更多这样的角色。",
+        "那么现在，我们如何\\N让这些图像对神经网络有用呢？",
+        "嗯，你希望神经网络能够\\N学习到游戏角色的一般概念，就是它是什么。",
+        "这可能是更细微的细节，比如，\\N你知道，游戏角色的头发颜色或者它的腰带扣。",
+        "也可能是大概的轮廓，\\N像头和身体的轮廓，以及所有在这之间的东西。",
+        "有一种方法可以做到这一点，\\N就是用你的数据强调细节或者大概轮廓。",
+        "实际上，这就是在不同程度上添加噪声。",
+        "也就是对图像添加噪声，",
+        "这被称为噪声过程。",
+        "这其实是受物理学的启发。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "21",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 23,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "text": "You can imagine an ink drop into a glass of water."
+        },
+        {
+          "id": "22",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "Initially, you know exactly where the ink drop landed."
+        },
+        {
+          "id": "23",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "text": "But over time, you actually see it diffuse into the water until it disappears."
+        },
+        {
+          "id": "24",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 35,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 500
+          },
+          "text": "And that's the same idea here, where you start with Bob the sprite,"
+        },
+        {
+          "id": "25",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 38,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "text": "and as you add noise, it will disappear until you have no idea which sprite it actually was."
+        },
+        {
+          "id": "26",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 500
+          },
+          "text": "And so what should the neural network really be thinking at each of these levels of noise"
+        },
+        {
+          "id": "27",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 49,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "text": "when you add progressively more noise to the image?"
+        },
+        {
+          "id": "28",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 52,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 500
+          },
+          "text": "Well, when it's Bob the sprite, you want the neural network to say,"
+        },
+        {
+          "id": "29",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 56,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "text": "\"Yeah, that's Bob the sprite, to keep Bob as is."
+        },
+        {
+          "id": "30",
+          "startTime": {
+            "hours": 0,
+            "minutes": 1,
+            "seconds": 59,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 500
+          },
+          "text": "That is a sprite.\""
+        }
+      ],
+      "source": [
+        "You can imagine an ink drop into a glass of water.",
+        "Initially, you know exactly where the ink drop landed.",
+        "But over time, you actually see it diffuse into the water until it disappears.",
+        "And that's the same idea here, where you start with Bob the sprite,",
+        "and as you add noise, it will disappear until you have no idea which sprite it actually was.",
+        "And so what should the neural network really be thinking at each of these levels of noise",
+        "when you add progressively more noise to the image?",
+        "Well, when it's Bob the sprite, you want the neural network to say,",
+        "\"Yeah, that's Bob the sprite!\" to keep Bob as is.",
+        "That is a sprite."
+      ],
+      "result": [
+        "你可以想象一滴墨水滴入一杯水中。",
+        "一开始，你确切地知道墨水滴在哪里落下。",
+        "但随着时间的推移，\\N你会看到它在水中扩散，直到消失。",
+        "这里的想法也是一样的，\\N从Bob这个游戏角色开始，",
+        "当你添加噪声时，它会消失，\\N直到你不知道它究竟是哪个游戏角色。",
+        "那么，当你逐渐给图像添加更多的噪声时，\\N神经网络应该在每个噪声级别上想些什么呢？",
+        "",
+        "嗯，当它是角色Bob的时候，\\N你希望神经网络能说，",
+        "“对，这就是角色Bob！\\N保持Bob的原样，",
+        "这是一个角色。”"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "31",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 0,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 500
+          },
+          "text": "If it's probably Bob, if it's likely to be Bob,"
+        },
+        {
+          "id": "32",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 3,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "text": "then you probably want the neural network to say, you know,"
+        },
+        {
+          "id": "33",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "text": "\"There's some noise on here."
+        },
+        {
+          "id": "34",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 8,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 500
+          },
+          "text": "Suggest possible details to make it look just like Bob the sprite.\""
+        },
+        {
+          "id": "35",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 12,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 500
+          },
+          "text": "And if it's just an outline of a sprite now,"
+        },
+        {
+          "id": "36",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 14,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 500
+          },
+          "text": "here you can only get a sense that this is probably a sprite person,"
+        },
+        {
+          "id": "37",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 18,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "text": "but it could be Bob or Fred or maybe even Nancy,"
+        },
+        {
+          "id": "38",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 22,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "text": "then you want to suggest more general details for possible likely sprites."
+        },
+        {
+          "id": "39",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 27,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "text": "So maybe you'll suggest some details for Bob based on this,"
+        },
+        {
+          "id": "40",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 30,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 500
+          },
+          "text": "or you'll suggest some details for Fred."
+        }
+      ],
+      "source": [
+        "If it's probably Bob, if it's likely to be Bob,",
+        "then you probably want the neural network to say, you know,",
+        "\"There's some noise on here.\"",
+        "Suggest possible details to make it look just like Bob the sprite.",
+        "And if it's just an outline of a sprite now,",
+        "here you can only get a sense that this is probably a sprite person,",
+        "but it could be Bob or Fred or maybe even Nancy,",
+        "then you want to suggest more general details for possible likely sprites.",
+        "So maybe you'll suggest some details for Bob based on this,",
+        "or you'll suggest some details for Fred."
+      ],
+      "result": [
+        "如果它可能是Bob，\\N如果它很可能是Bob，",
+        "那么你可能希望神经网络能说：",
+        "“这上面有一些噪声。",
+        "建议可能的细节，\\N使它看起来就像角色Bob。”",
+        "如果它现在只是一个角色的轮廓，",
+        "你只能感觉到这可能是一个角色人物，",
+        "但它可能是Bob，\\N或者Fred，甚至可能是Nancy，",
+        "那么你就想要为\\N可能的角色建议更普遍的细节。",
+        "所以，你可能会\\N根据这个为Bob提供一些细节，",
+        "或者你会为Fred提供一些细节。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "41",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 32,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 500
+          },
+          "text": "And finally, if you have no idea, if it looks like absolutely nothing,"
+        },
+        {
+          "id": "42",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 36,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "text": "you still want it to look more like a sprite."
+        },
+        {
+          "id": "43",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 39,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "text": "You still want the neural network to say, \"You know what?"
+        },
+        {
+          "id": "44",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 41,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "text": "I'm going to still take this completely noisy image,"
+        },
+        {
+          "id": "45",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 45,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "text": "and I'm going to turn this into something that's slightly more sprite-like"
+        },
+        {
+          "id": "46",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 48,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 500
+          },
+          "text": "by proposing an outline of what a sprite might look like.\""
+        },
+        {
+          "id": "47",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 51,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "text": "All right, so let's take a look at what that noising process,"
+        },
+        {
+          "id": "48",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 500
+          },
+          "text": "that process of adding noise progressively, looks like over time."
+        },
+        {
+          "id": "49",
+          "startTime": {
+            "hours": 0,
+            "minutes": 2,
+            "seconds": 59,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 500
+          },
+          "text": "And there it goes, an ink drop that's fully diffused in a glass of water."
+        },
+        {
+          "id": "50",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 5,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 500
+          },
+          "text": "So now on to training that neural network."
+        }
+      ],
+      "source": [
+        "And finally, if you have no idea, if it looks like absolutely nothing,",
+        "you still want it to look more like a sprite.",
+        "You still want the neural network to say, \"You know what?",
+        "I'm going to still take this completely noisy image,",
+        "and I'm going to turn this into something that's slightly more sprite-like",
+        "by proposing an outline of what a sprite might look like.\"",
+        "All right, so let's take a look at what that noising process,",
+        "that process of adding noise progressively, looks like over time.",
+        "And there it goes, an ink drop that's fully diffused in a glass of water.",
+        "So now on to training that neural network."
+      ],
+      "result": [
+        "最后，如果你一点也不清楚，\\N如果它看起来完全不像什么，",
+        "你还是希望它更像一个游戏角色。",
+        "你仍然希望神经网络说：“你知道吗？",
+        "我仍然会拿这个完全有噪声的图像，",
+        "我会把它变成稍微像游戏角色一点的东西，",
+        "我会提出一个游戏角色可能看起来的轮廓。”",
+        "好了，那么让我们看看这个添加噪声的过程，",
+        "随着时间的推移，\\N逐渐添加噪声的过程是什么样子的。",
+        "然后它就消失了，\\N一滴墨水在一杯水里完全扩散开来。",
+        "那么现在让我们\\N开始训练那个神经网络吧。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    },
+    {
+      "items": [
+        {
+          "id": "51",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 7,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 500
+          },
+          "text": "So it learns to take different noisy images and turn them back into sprites."
+        },
+        {
+          "id": "52",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 11,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 0
+          },
+          "text": "That is your goal."
+        },
+        {
+          "id": "53",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 13,
+            "milliseconds": 0
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "text": "And how it does that is it learns to remove the noise you added,"
+        },
+        {
+          "id": "54",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 16,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 500
+          },
+          "text": "starting with the no idea level, where it is just pure noise,"
+        },
+        {
+          "id": "55",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 21,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 500
+          },
+          "text": "to starting to give a semblance of maybe there's a person in there,"
+        },
+        {
+          "id": "56",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 25,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 500
+          },
+          "text": "to looking like Fred, and then finally a sprite that looks like Fred."
+        },
+        {
+          "id": "57",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 30,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 500
+          },
+          "text": "And I just want to call out that the no idea level of noise is really important because it is normally distributed."
+        },
+        {
+          "id": "58",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 37,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 500
+          },
+          "text": "And what I mean by that is each of those pixels is sampled from a normal distribution,"
+        },
+        {
+          "id": "59",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 41,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 500
+          },
+          "text": "also known as a Gaussian distribution or a bell-shaped curve."
+        },
+        {
+          "id": "60",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 45,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 500
+          },
+          "text": "So when you want to ask the neural network for a new sprite, such as Fred here,"
+        },
+        {
+          "id": "61",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 50,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "text": "you can sample noise from that normal distribution,"
+        },
+        {
+          "id": "62",
+          "startTime": {
+            "hours": 0,
+            "minutes": 3,
+            "seconds": 54,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 500
+          },
+          "text": "and then you can get a completely new sprite by using the neural network to just remove that noise progressively."
+        },
+        {
+          "id": "63",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 0,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "text": "So now you've reached your goal."
+        },
+        {
+          "id": "64",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 2,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "text": "You can get even more sprites beyond all those that you had trained on."
+        },
+        {
+          "id": "65",
+          "startTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 6,
+            "milliseconds": 500
+          },
+          "endTime": {
+            "hours": 0,
+            "minutes": 4,
+            "seconds": 9,
+            "milliseconds": 500
+          },
+          "text": "In the next video, we'll cover sampling."
+        }
+      ],
+      "source": [
+        "So it learns to take different noisy images and turn them back into sprites.",
+        "That is your goal.",
+        "And how it does that is it learns to remove the noise you added,",
+        "starting with the no idea level, where it is just pure noise,",
+        "to starting to give a semblance of maybe there's a person in there,",
+        "to looking like Fred, and then finally a sprite that looks like Fred.",
+        "And I just want to call out that the no idea level of noise is really important because it is normally distributed.",
+        "And what I mean by that is each of those pixels is sampled from a normal distribution,",
+        "also known as a Gaussian distribution or a bell-shaped curve.",
+        "So when you want to ask the neural network for a new sprite, such as Fred here,",
+        "you can sample noise from that normal distribution,",
+        "and then you can get a completely new sprite by using the neural network to just remove that noise progressively.",
+        "So now you've reached your goal.",
+        "You can get even more sprites beyond all those that you had trained on.",
+        "In the next video, we'll cover sampling."
+      ],
+      "result": [
+        "它学会将不同的噪声图像变回游戏角色。",
+        "这就是你的目标。",
+        "它是如何做到这一点的呢？\\N它学会移除你添加的噪声，",
+        "从完全没有主意的级别开始，\\N那里只有纯粹的噪声，",
+        "开始让人感觉可能有一个人在里面，",
+        "看起来像Fred，\\N然后最后是一个看起来像Fred的游戏角色。",
+        "我想强调的是，没有主意的噪声级别\\N非常重要，因为它是正态分布的。",
+        "我的意思是，每一个像素\\N都是从一个正态分布中抽样的，",
+        "也被称为高斯分布或者钟形曲线。",
+        "所以当你想要让神经网络\\N给你一个新的角色，比如这里的Fred，",
+        "你可以从那个正态分布中抽样噪声，",
+        "然后你可以通过让神经网络\\N逐渐移除那个噪声来得到一个全新的游戏角色。",
+        "所以现在你达到了你的目标：",
+        "得到更多的、你没有训练过的游戏角色。",
+        "在下一个视频中，我们将介绍抽样。"
+      ],
+      "status": "success",
+      "errors": [],
+      "mismatched": false
+    }
+  ],
+  "sourcePath": "input/How Diffusion Models Work/DiffusionModels_L1_v01.srt",
+  "ouputBasePath": "input/How Diffusion Models Work/DiffusionModels_L1_v01",
+  "totalCost": 0.13632,
+  "translationPath": "input/How Diffusion Models Work/DiffusionModels_L1_v01/translation.json"
+}
